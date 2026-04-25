@@ -8,52 +8,117 @@
   <title>SK가스 사업 지식베이스</title>
   <style>
     :root { --theme-color: #0066cc; }
-    .cover-main h1 { font-size: 2.5rem; }
     .markdown-section h2 { border-bottom: none; padding-bottom: 0.2em; }
-    .markdown-section hr { border: none; border-top: 1px solid #eee; margin: 1.5em 0; }
-    /* 비즈니스 맵 카드 스타일 */
-    .biz-card { border-radius:8px; padding:14px 16px; margin:6px; display:inline-block; vertical-align:top; min-width:140px; text-align:center; }
-    .biz-row { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin:12px 0; }
-    .layer-label { font-size:11px; color:#888; text-align:center; margin-bottom:4px; letter-spacing:1px; text-transform:uppercase; }
-    .arrow-center { text-align:center; font-size:22px; color:#aaa; margin:2px 0; line-height:1; }
-    .highlight-box { background:#fff3cd; border:1px solid #ffc107; border-radius:8px; padding:12px 16px; margin:16px 0; }
-    .mermaid { margin: 20px auto; }
+    .markdown-section hr  { border: none; border-top: 1px solid #eee; margin: 1.5em 0; }
   </style>
 </head>
 <body>
-  <div id="app">불러오는 중...</div>
-  <script src="//cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({ startOnLoad: false, theme: 'neutral', flowchart: { useMaxWidth: true, htmlLabels: true } });
+<div id="app">불러오는 중...</div>
+<script src="//cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<script>
+// ── ECharts 차트 정의 (전사실적 페이지) ─────────────────────────────────────
+function _renderChart(id, option) {
+  var dom = document.getElementById(id);
+  if (!dom || !window.echarts) return;
+  var ex = echarts.getInstanceByDom(dom);
+  if (ex) ex.dispose();
+  var c = echarts.init(dom);
+  c.setOption(option);
+  window.addEventListener('resize', function() { c.resize(); });
+}
 
-    window.$docsify = {
-      name: 'SK가스 사업 지식베이스',
-      repo: '',
-      loadSidebar: true,
-      subMaxLevel: 2,
-      executeScript: true,
-      search: { placeholder: '검색', noData: '검색 결과 없음', depth: 3 },
-      auto2top: true,
-      plugins: [
-        function(hook) {
-          hook.doneEach(function() {
-            // mermaid 코드블록 → 다이어그램 렌더링
-            document.querySelectorAll('pre code.language-mermaid').forEach(function(el) {
-              var div = document.createElement('div');
-              div.className = 'mermaid';
-              div.textContent = el.textContent;
-              el.closest('pre').replaceWith(div);
-            });
-            if (window.mermaid) {
-              mermaid.init(undefined, document.querySelectorAll('.mermaid:not([data-processed])'));
-            }
-          });
+function _initChartAnnual() {
+  _renderChart('chart-annual', {
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' },
+      formatter: function(p) {
+        var s = p[0].name + '<br/>';
+        p.forEach(function(x) {
+          if (x.value != null) s += x.marker + ' ' + x.seriesName + ': <b>' + x.value.toLocaleString() + '억</b><br/>';
+        });
+        return s;
+      }
+    },
+    legend: { bottom: 0, type: 'scroll' },
+    grid: { left: '3%', right: '4%', bottom: '15%', containLabel: true },
+    xAxis: { type: 'category', data: ["'25실적", "'26목표", "'27전망", "'28전망", "'29전망", "'30전망"] },
+    yAxis: { type: 'value', name: '억원',
+      axisLabel: { formatter: function(v) { return v.toLocaleString(); } }
+    },
+    series: [
+      { name: 'GPS (발전)', type: 'bar', stack: 'biz',
+        data: [1304, 1725, null, null, null, null], itemStyle: { color: '#5470c6' } },
+      { name: 'LPG Biz.', type: 'bar', stack: 'biz',
+        data: [2132, 1841, 1571, 1670, 1896, 2063], itemStyle: { color: '#91cc75' } },
+      { name: 'LNG Biz.', type: 'bar', stack: 'biz',
+        data: [null, 143, 277, 540, 859, 1075], itemStyle: { color: '#fac858' } },
+      { name: 'SK가스 연결 세전이익', type: 'line',
+        data: [3142, 3050, null, null, null, null],
+        lineStyle: { type: 'dashed', width: 2, color: '#ee6666' },
+        itemStyle: { color: '#ee6666' }, symbol: 'circle', symbolSize: 8,
+        label: { show: true, position: 'top',
+          formatter: function(p) { return p.value ? p.value.toLocaleString() : ''; } }
+      }
+    ]
+  });
+}
+
+function _initChartQ1() {
+  _renderChart('chart-q1', {
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' },
+      formatter: function(p) {
+        var s = p[0].axisValue + '<br/>';
+        p.forEach(function(x) { s += x.marker + ' ' + x.seriesName + ': <b>' + x.value.toLocaleString() + '억</b><br/>'; });
+        return s;
+      }
+    },
+    legend: { bottom: 0 },
+    grid: { left: '3%', right: '12%', bottom: '12%', containLabel: true },
+    xAxis: { type: 'value', name: '억원',
+      axisLabel: { formatter: function(v) { return v.toLocaleString(); } }
+    },
+    yAxis: { type: 'category', data: ['G&P (LNG Opt.)', 'Trading', 'Eco Energy', 'GPS (발전)'] },
+    series: [
+      { name: '목표', type: 'bar', data: [61, 525, 508, 542],
+        itemStyle: { color: '#ccc' },
+        label: { show: true, position: 'insideRight',
+          formatter: function(p) { return p.value.toLocaleString(); } }
+      },
+      { name: '실적', type: 'bar',
+        data: [272, 933, 150, 554],
+        itemStyle: { color: function(p) {
+          var a = [272, 933, 150, 554], t = [61, 525, 508, 542];
+          return a[p.dataIndex] >= t[p.dataIndex] ? '#5fb552' : '#e05252';
+        }},
+        label: { show: true, position: 'right',
+          formatter: function(p) { return p.value.toLocaleString() + '억'; }
         }
-      ]
+      }
+    ]
+  });
+}
+
+// ── Docsify 설정 ──────────────────────────────────────────────────────────────
+window.$docsify = {
+  name: 'SK가스 사업 지식베이스',
+  repo: '',
+  loadSidebar: true,
+  subMaxLevel: 2,
+  search: { placeholder: '검색', noData: '검색 결과 없음', depth: 3 },
+  auto2top: true,
+  plugins: [
+    function(hook) {
+      hook.doneEach(function() {
+        // 페이지 렌더 후 200ms 대기 후 차트 그리기
+        setTimeout(function() {
+          if (document.getElementById('chart-annual')) _initChartAnnual();
+          if (document.getElementById('chart-q1'))    _initChartQ1();
+        }, 200);
+      });
     }
-  </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  ]
+};
+</script>
+<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>
