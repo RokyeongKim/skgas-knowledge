@@ -9,28 +9,48 @@
   <style>
     :root { --theme-color: #0066cc; }
     .cover-main h1 { font-size: 2.5rem; }
-    /* h2 하단 밑줄 제거 (Docsify Vue 기본 스타일 override) */
     .markdown-section h2 { border-bottom: none; padding-bottom: 0.2em; }
-    /* hr 구분선 스타일 정리 */
     .markdown-section hr { border: none; border-top: 1px solid #eee; margin: 1.5em 0; }
+    /* 비즈니스 맵 카드 스타일 */
+    .biz-card { border-radius:8px; padding:14px 16px; margin:6px; display:inline-block; vertical-align:top; min-width:140px; text-align:center; }
+    .biz-row { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin:12px 0; }
+    .layer-label { font-size:11px; color:#888; text-align:center; margin-bottom:4px; letter-spacing:1px; text-transform:uppercase; }
+    .arrow-center { text-align:center; font-size:22px; color:#aaa; margin:2px 0; line-height:1; }
+    .highlight-box { background:#fff3cd; border:1px solid #ffc107; border-radius:8px; padding:12px 16px; margin:16px 0; }
+    .mermaid { margin: 20px auto; }
   </style>
 </head>
 <body>
   <div id="app">불러오는 중...</div>
   <script src="//cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script>
+    mermaid.initialize({ startOnLoad: false, theme: 'neutral', flowchart: { useMaxWidth: true, htmlLabels: true } });
+
     window.$docsify = {
       name: 'SK가스 사업 지식베이스',
       repo: '',
       loadSidebar: true,
       subMaxLevel: 2,
       executeScript: true,
-      search: {
-        placeholder: '검색',
-        noData: '검색 결과 없음',
-        depth: 3,
-      },
+      search: { placeholder: '검색', noData: '검색 결과 없음', depth: 3 },
       auto2top: true,
+      plugins: [
+        function(hook) {
+          hook.doneEach(function() {
+            // mermaid 코드블록 → 다이어그램 렌더링
+            document.querySelectorAll('pre code.language-mermaid').forEach(function(el) {
+              var div = document.createElement('div');
+              div.className = 'mermaid';
+              div.textContent = el.textContent;
+              el.closest('pre').replaceWith(div);
+            });
+            if (window.mermaid) {
+              mermaid.init(undefined, document.querySelectorAll('.mermaid:not([data-processed])'));
+            }
+          });
+        }
+      ]
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
