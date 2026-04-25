@@ -37,6 +37,52 @@
 
 ---
 
+## 수익 구조 분해 (안) ⚠️ 확인 필요
+
+> **이 섹션은 내부 문서 근거로 작성된 구조(안)입니다. ⚠️ 표시 항목은 회사 가서 확인 후 수정이 필요합니다.**
+
+<div style="font-family:sans-serif;margin:20px 0;">
+<div style="font-size:13px;font-weight:700;color:#333;margin-bottom:6px;">SK가스 Activity 세전이익 = 아래 3개 레이어의 합</div>
+<div style="font-size:11px;color:#888;margin-bottom:16px;">※ 사업별 합산 ≠ 연결 세전이익 (연결조정 별도)</div>
+
+<div style="background:#e3f2fd;border:1px solid #90caf9;border-radius:10px;padding:16px 18px;margin-bottom:10px;">
+<div style="font-weight:700;color:#1565c0;font-size:14px;margin-bottom:8px;">🏛️ Layer 1 — 고정수익 (시황 무관 / 계약 기반)</div>
+<div style="font-size:13px;color:#333;line-height:1.9;">
+  ├ GPS 용량요금(CP): <strong>~1,190억/년</strong> <span style="color:#888;font-size:11px;">(&#39;25 Base · &#39;26 수치 확인 필요 ⚠️)</span><br>
+  └ LNG 터미널 이용료: <strong>미확인</strong> <span style="color:#888;font-size:11px;">(KET/CEC 이용료 별도 집계 여부 확인 필요 ⚠️)</span>
+</div>
+</div>
+
+<div style="background:#e8f5e9;border:1px solid #a5d6a7;border-radius:10px;padding:16px 18px;margin-bottom:10px;">
+<div style="font-weight:700;color:#2e7d32;font-size:14px;margin-bottom:8px;">📈 Layer 2 — 에너지가격 연동수익 (SMP / FEI / JKM 추종)</div>
+<div style="font-size:13px;color:#333;line-height:1.9;">
+  ├ GPS 에너지정산금(SMP×발전량): <strong>&#39;25 Base ~7,331억</strong> (연료비 △5,411억 차감 후 net 마진)<br>
+  ├ Eco Energy (LPG 국내 공급마진): <strong>&#39;26목 508억/분기</strong> <span style="color:#c62828;font-size:11px;">1Q 실적 150억으로 부진</span><br>
+  └ LNG 공급마진 (에너루트 등): <strong>성장 초기단계</strong> (&#39;26 3월 세전익 18.2억)
+</div>
+</div>
+
+<div style="background:#fff8e1;border:1px solid #ffe082;border-radius:10px;padding:16px 18px;margin-bottom:10px;">
+<div style="font-weight:700;color:#e65100;font-size:14px;margin-bottom:8px;">⚡ Layer 3 — 시황·Optionality 초과수익 (Trading·가격차 포착)</div>
+<div style="font-size:13px;color:#333;line-height:1.9;">
+  ├ Trading: <strong>&#39;26 1Q 933억</strong> (목표 525억 대비 +409억) — Physical + USD 강세<br>
+  └ G&amp;P (LNG-LPG Optionality): <strong>&#39;26 1Q 272억</strong> (목표 61억 대비 +211억) — 1.5 Cargo 실행<br>
+  <span style="color:#e65100;font-size:11px;">⚠️ Trading·G&amp;P의 소속 Biz.(LPG vs LNG vs 별도) 확인 필요 — 현재 LPG 페이지에 포함시킨 상태</span>
+</div>
+</div>
+
+<div style="background:#fce4ec;border:1px solid #f48fb1;border-radius:10px;padding:14px 18px;margin-bottom:6px;">
+<div style="font-weight:700;color:#880e4f;font-size:13px;margin-bottom:6px;">❓ Activity vs 재무회계 차이 (~1,576억) — 원인 미확인 ⚠️</div>
+<div style="font-size:12px;color:#555;line-height:1.7;">
+  재무회계 1Q 3,688억 − Activity 1Q 2,112억 = <strong>+1,576억</strong><br>
+  추정 원인: USD 강세에 따른 FX 평가이익 / 파생상품 MTM / 지분법 조정<br>
+  → 재무회계 세전이익 조정내역(주석) 확인 필요
+</div>
+</div>
+</div>
+
+---
+
 ## 연도별 수치 요약
 
 | 구분 | '25 실적 | '26 목표 | '26 1Q 재무회계 |
