@@ -1,215 +1,73 @@
 # 발전 사업 (UGPS)
 
-## 1. 사업 개요
+<div style="background:linear-gradient(135deg,#4527a0,#7c4dff);padding:24px 28px;border-radius:12px;color:white;margin:16px 0 24px;">
+  <div style="font-size:32px;line-height:1;">⚡</div>
+  <div style="font-size:22px;font-weight:700;margin-top:10px;">발전 사업 (UGPS)</div>
+  <div style="font-size:14px;opacity:0.85;margin-top:6px;line-height:1.5;">세계 최초 LNG·LPG 겸용 복합화력발전소 — 1,227MW<br>'24.12 상업운전 개시. Optionality의 물리적 실행 주체</div>
+</div>
 
-**UGPS(울산GPS)** 는 SK가스의 발전 자회사(SK가스 지분 100%)로, 울산에 위치한 **세계 최초 LNG/LPG 겸용 복합화력발전소**이며 총 발전 용량 **1,227MW**(LNG 1,226MW / LPG 1,186MW, 복합효율 57.12%) 규모의 설비를 운영. 총 사업비 약 **1.4조원**. 2024년 12월 상업운전을 개시했고, SK가스 Value Chain의 **Anchoring 자산**이자 **LPG/LNG Optionality 실행의 핵심 주체**로 정의됨 (출처: UGPS 이사회전략세션 2026.03.30).
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">💡 이 사업은 왜 존재하는가</div>
+<div style="background:#ede7f6;border-radius:8px;padding:16px 18px;margin-bottom:20px;font-size:14px;line-height:1.8;">
+GPS는 단순한 발전소가 아닙니다. <strong>LNG와 LPG 두 가지 연료를 모두 태울 수 있는 세계 최초</strong>의 복합화력발전소로, SK가스가 두 가지 가스를 취급하는 이유를 완성시키는 자산입니다.<br>
+연료 선택(Optionality)으로 Trading 수익을 만들고, 안정적인 전력 판매(SMP+CP)로 캐시플로우를 확보합니다.
+</div>
 
-**GPS History** (출처: 이사회전략세션 p.22)
-- '17.12 연료전환 의향서 제출
-- '18.6 부지 확보
-- '19.1 발전사업허가 취득
-- '21.3 부지정지공사 착공
-- '21.11 연료도입계약 체결
-- '22.3 본공사 착공
-- '24.12 상업운전 개시
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">💰 어떻게 돈을 버나</div>
+<div style="display:flex;align-items:stretch;gap:0;flex-wrap:wrap;margin:0 0 20px;"><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">🔥</div>
+    <div style="font-weight:700;font-size:14px;color:#2e7d32;margin:8px 0 4px;">연료 최적화</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">LNG 기본 사용<br>JKM>FEI 시 LPG 전환<br>→ Spread 수익</div>
+  </div><div style="display:flex;align-items:center;font-size:26px;color:#ccc;padding:0 4px;">&rarr;</div><div style="background:#ede7f6;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">⚡</div>
+    <div style="font-weight:700;font-size:14px;color:#4a148c;margin:8px 0 4px;">전력 생산</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">1,227MW CCGT<br>복합효율 57.12%<br>가동률 98.9%</div>
+  </div><div style="display:flex;align-items:center;font-size:26px;color:#ccc;padding:0 4px;">&rarr;</div><div style="background:#fce4ec;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">💵</div>
+    <div style="font-weight:700;font-size:14px;color:#c2185b;margin:8px 0 4px;">전력 판매</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">에너지정산금<br>SMP × 발전량</div>
+  </div><div style="display:flex;align-items:center;font-size:26px;color:#ccc;padding:0 4px;">&rarr;</div><div style="background:#e3f2fd;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">🏢</div>
+    <div style="font-weight:700;font-size:14px;color:#1565c0;margin:8px 0 4px;">용량요금</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">설비 보유만으로<br>고정 수익 확보<br>~1,190억/년</div>
+  </div></div>
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">📊 핵심 수치</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;"><div style="background:#ede7f6;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">세전이익 '26목</div>
+    <div style="font-size:21px;font-weight:700;color:#4a148c;line-height:1.1;">1,725억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;"></div>
+  </div><div style="background:#e3f2fd;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">세전이익 '25실</div>
+    <div style="font-size:21px;font-weight:700;color:#1565c0;line-height:1.1;">1,304억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;"></div>
+  </div><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">가동률</div>
+    <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">98.9%</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">'26.3월 기준</div>
+  </div><div style="background:#ffebee;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">SMP 민감도</div>
+    <div style="font-size:21px;font-weight:700;color:#c62828;line-height:1.1;">Δ360억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">SMP 5원/kWh 하락 시</div>
+  </div></div>
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🔭 지금 뭘 봐야 하나</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin:0 0 20px;"><div style="flex:1;min-width:200px;background:#f1f8f1;border:1px solid #c8e6c9;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#2e7d32;margin-bottom:8px;font-size:13px;">&#x1F4C8; 기회 / 순풍</div><div style="margin:4px 0;font-size:13px;">&#x2705; 1Q 실적 554억 (목표 542억 대비 +12억)</div><div style="margin:4px 0;font-size:13px;">&#x2705; AI DC PPA: GPS ↔ 울산 AI DC 직접 연결 추진 중</div><div style="margin:4px 0;font-size:13px;">&#x2705; CfD 계약으로 변동 SMP → 확정 마진 전환 가능</div><div style="margin:4px 0;font-size:13px;">&#x2705; LPG 기동 성공 시 Optionality 추가 수익</div></div><div style="flex:1;min-width:200px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#c62828;margin-bottom:8px;font-size:13px;">&#x1F4C9; 리스크 / 역풍</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; SMP 하락 구조적 리스크: 재생E 100GW + KOGAS Slope↓</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; LMP(지역별 가격제) 도입 시 도매가 5~10원/kWh 하락 예상</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 계획정비 일수 증가 (18일→43~53일) 가동률 부담</div></div></div>
+<div style="border-top:1px solid #eee;margin:28px 0;"></div>
 
-**세전이익 현황** (출처: UGPS 이사회전략세션 2026.03.30, p.23·24 + 재무수치.md)
+## SMP는 어떻게 결정되나
 
-| 연도 | UGPS(GPS) 세전이익 (억원) | SK가스 연결 세전이익 (억원) | UGPS 비중 |
-|------|---------------------------|-----------------------------|-----------|
-| 2023 | 미확인 | 미확인 | 미확인 |
-| 2024 | 미확인 | 미확인 | 미확인 |
-| 2025 | 1,304 | 3,142 | 약 42% ('25년 가스 이익 대비) |
-| 2026 (목표) | 1,725 | 3,050 | 약 60% ('26년 가스 목표 대비) |
-| 2026 (추정) | 1,891 (연결회사 GPS 기준) | 4,620 (연결 포괄) | 약 41% |
-
-> 주: "'25년 가스 이익 42%", "'26년 가스 목표 60%" 비중은 GPS 의미 슬라이드(p.23)에 명기된 값. 2023/2024년 개별 세전이익은 제공 자료에 미확인.
-
-**'26년 1Q 실적** (출처: 통합S재무회의 2026.04월 확정 결산, 이사회전략세션 p.28)
-- 1Q GPS 세전이익 목표 542억 → 실적 554억 (+12억) ← 최종 결산 기준
-  - (참고) 이사회전략세션 3/30 자료: 목표 539억 vs 잠정 513억 (Δ26억) — 결산 전 Preliminary
-- SMP 하락: △9원/kWh (116원/kWh → 107원/kWh)
-- 낙찰량 증가: +13%p (77% → 90%)
-
-## 2. 사업 구조 & 메커니즘
-
-### 밸류체인
 ```
-연료 도입 (LNG / LPG) → 복합화력 발전 (GT + ST) → 전력 도매시장(KPX) 판매 → SMP 정산 + 용량요금(CP) 수취
+전력 수요 증가  ────────────────────────────────→  SMP ↑
+KOGAS 도입단가 상승  ──────────────────────────→  SMP ↑
+재생에너지 확대 (태양광 100GW 목표)  ──────────→  SMP ↓
+LMP(지역별 가격제) 도입 예정  ────────────────→  SMP ↓
 ```
 
-GPS는 가스 to 파워(Gas to Power) 사업으로, 향후 AI D/C(데이터센터) 전력 직접공급을 통한 **Power to AI** 확장을 지향.
+| 항목 | '25 Base |
+|------|----------|
+| 에너지정산금 (SMP×발전량) | 7,331억 |
+| 용량정산금 (CP) | 1,190억 |
+| 연료비 | △5,411억 |
+| 고정비 | △1,310억 |
+| **세전이익** | **~1,304억** |
 
-### 주요 플레이어 (울산 지역 지리적 연계, 출처: 전략세션 p.21)
-- **GPS 발전소**: SK가스 LPG Storage와 약 3km, KET(Korea Energy Terminal, LNG Terminal)와 약 7km 거리. LPG 파이프라인 700m.
-- **SK가스 울산가스기지**: LPG 원료 공급
-- **KET (Korea Energy Terminal)**: LNG 원료 공급 (SK가스/CEC 합작)
-- **남울산 변전소**: 전력 송출
-- **A I D/C Phase 2 예정부지**: GPS 인근 부지에 AI 데이터센터 건설 예정, 전력 직접공급(PPA) 추진
-
-### 핵심 가격 지표 (Driver)
-**수익(매출) Driver** (출처: 발전손익구조 p.3·4·12)
-1. **에너지정산금 (MEP)**: 발전량 × SMP (혹은 MGO)
-2. **용량정산금 (CP)**: 설비용량 × 기준용량단가(RCP) × 지역계수(TCF)
-3. **부가정산금 (MAP/MWP)**: 용량단가·실시간 차이 보전
-4. **발전정기 (MGO)**: DAOS(Day-Ahead Optimal Schedule) 기준
-5. **기타**: 보험수익, 이자비용, 감가상각비, 유지보수수익, REC 등
-
-**비용 Driver**
-1. **연료비** (가장 큰 비중, LNG Term / LNG Spot / LPG Term / LPG Spot)
-2. **급전비/기타비용**: 터미널·용당용수·부재료·LTSA(Long Term Service Agreement)·지역자원시설세 등
-3. **고정비**: 운영비·수선유지비·감가상각비·이자비용·보험수익·REC 등
-
-### SMP 형성 메커니즘 (출처: 발전손익구조 p.4·6·7·17)
-- **Peak 수요** ↑ + **KOGAS WACOG**(LNG 평균요금) ↑ → **SMP** ↑ (SMP 변동의 Key Driver)
-- Supply Curve 상 가격 순서: 원자력 → 석탄 → LNG → 유류 → UGPS 포지션
-- 계절별 수요 변동: 3월 SMP 79.5~160.8원/kWh, 7월 80.5~155.0원/kWh, 12월 76.3~159.3원/kWh (공급곡선 기준)
-
-## 3. 주요 자산 & 인프라
-
-**발전 설비** (출처: 이사회전략세션 p.22, 발전손익구조 p.9·10)
-- **총 용량**: 1,227MW
-  - LNG 기준: 1,226MW (복합효율 57.12%)
-  - LPG 기준: 1,186MW
-- **설계용량**: 1,198MW (설비용량, CCGT 2:1 발전탱 205GW/일 가정)
-- **발전단(기저 기준)**: 18℃ 기준 1,079MW × 24h = 1,927MWh/일, 여름 15℃ 기준 1,079MW, 겨울 기준 1,013MW 등 계절·온도별 조정
-- **구성**: LNG/LPG 겸용 복합화력 (GT + ST + HRSG)
-- **위치**: 울산 (AI D/C Phase 2 예정부지 인접)
-
-**연료 도입** (출처: 발전손익구조 p.13)
-- LNG Term (Brent 기반, 76.8 $/bbl, HH 4.14 $/MMBtu 기준)
-- LNG Spot (JKM 기반)
-- LPG Term (Aramco CP 연계)
-- LPG Spot (FEI 기반)
-- CP-Rim(일본 평균 CP) 기준 연료 운용 전략, '25년 3월 현재 Term 도입 후 부족 물량 SPOT 구매
-
-**가동률**: '25년 하반기 Outage 후 90% 이상 안정적 가동률 유지 중 (26.3월 기준 가동률 98.9%, 이용률 78.5%)
-
-## 4. 수익 구조
-
-### 손익 항목 구조 (출처: 발전손익구조 p.3, '25년 Base 기준)
-
-**매출**
-| 항목 | 금액(억원) | 비고 |
-|------|-----------|------|
-| 에너지정산금 (SMP) | 7,331 | SMP × 발전량 |
-| 용량정산금 (CP) | 1,190 | 용량단가(RCP) × TCF × 설비용량 |
-| 부가정산금 (MAP/MWP) | 532 | 발전탱·산업용 보전 |
-| 기타 | ~206 | 보험수익·이자비용 등 |
-
-**'25년 Base 전체 매출**: 7,331억(에너지) + 1,190억(CP) + 516~532억(부가) + 기타 ≈ 8,725억 (Base) / 7,019억 (Worst, Revisit p.2 기준)
-
-**비용**
-| 항목 | '25년 Base (억원) | 비고 |
-|------|-------------------|------|
-| 연료비 | 5,411 | 86원/kWh (LNG Term / LPG Spot Optionality 반영) |
-| 연료비 (Worst) | 5,269 | 85원/kWh |
-| 급변비·기타 | ~500 | 터미널·LTSA·지역자원시설세 |
-| 고정비 | 1,306~1,310 | 경영계획 기준 1,396억 |
-| └ 운영비 | 305 | 연간비 112억, 용역비 90억 등 |
-| └ 수선유지비 | 122 | |
-| └ 감가상각비 | 485 | 최사채 4.04%, PF 4.59% |
-| └ 이자비용 | 450 | |
-| └ 보험수익 | △46 | |
-| └ 기타 | △10 | REC 정산단가 / 구매단가 + 5전철 / REC 예상 |
-
-### '25년 세전이익 (출처: 발전손익구조 p.15)
-- **경영계획(24.11) 기준**: 1,959억
-- **Base 전망 (25.3 Revisit)**: 1,524억 (△435억 gap)
-- **Worst 전망 (25.3 Revisit)**: 1,316억 (△643억 gap)
-- **예상 범위**: 약 1,300~1,500억
-
-### 판가·원가 구조 요약
-- **S-Curve**: $80/bbl 기준 S-Curve 적용, 고유가에 유리한 원가 구조 (인프라 마진 확보, 이사회전략세션 p.28)
-- SMP 수준별 손익: '25년 1~5월 연말형 발전 정비를 통해 6~9월 중 차질 없는 발전운영 / 수익 확보 필수 (발전손익구조 p.15)
-
-## 5. 시장 환경
-
-### 전력시장 개요
-- **판매채널**: 전력도매시장(KPX) + 차액거래(CfD) + PPA(Power Purchase Agreement, AI D/C향)
-- **SMP 추세 ('25년 기준, 발전손익구조 p.2·16)**: 연간 누계 Base 542.4TWh (3~12월 449TWh), Worst 544.8TWh, '24년 동월 수준 대비 평균 ±0.6% 수준
-- **신규 자기발전율**: '25년 1~2월 실적 대비 증분량 반영 (AoS 0.6%)
-- **Peak 수요 ('21~'25)**: 2021년 291.3TWh → 2022년 296.0TWh → 2023년 296.6TWh → 2024년 286.2TWh → 2025년 551.4TWh (산업용 판매량 추이)
-
-### 중장기 SMP 하락 요인 (출처: 행복경영캔미팅 2025.11)
-- **전력 수요**: AI/DC·기후변화 등 증가요인에도, 석화산업 침체·경제성장률 둔화로 산업용 수요 감소 → 연도별 전력수요 증가율 1% 이내 전망
-- **신재생 공급**: 정부 정책상 태양광 중심 재생E 비중 확대 ('30년까지 100GW 목표, '24년 기준 35GW)
-- **KOGAS 도입단가**: 기존 대형 장기 계약 만료 + 신규 계약 Slope 하락 (15% 내외 → 12% 수준)
-- **전력시장 제도**: 지역별 가격제(LMP) 및 가격입찰제(PBP) 도입 검토 → 도매요금 5~10원/kWh 하락 Impact 전망
-- **SMP 하락 Impact**: SMP 5원/kWh 하락 시 GPS 세전이익 약 360억 감소
-
-**중앙 집중형 → 지역 분산형 전력시장 패러다임 변화 (기회)**
-- 분산E 지산지소(地産地消) 확대: 분산특구를 통한 규제 완화·PPA 전력망 구축
-- 비수도권 기반 AI/DC 생태계 유도: 울산 산단 내 AI/DC PPA 전력공급 기회
-- GPS SWOT 강점: Dual Fuel(LNG/LPG) 최적화 Optionality, 울산 V/C 연계 Total Utility 공급(전기·스팀·용수)
-
-### '26년 하반기 전력시장 전망 (출처: 이사회전략세션 p.28)
-- **불확실성 증가**: 전력 도매가격 변동과 연료계약 영향이 혼재
-- **(+) 요인**:
-  - KOGAS 도입비 증가로 인한 SMP 상승
-  - LNG-LPG Optionality 기회 증가 (LPG/LNG 현물가격 역전 시 연료 전환)
-- **(-) 요인**:
-  - 기저발전 증가로 SMP 하락 압력
-  - SMP 상한제 or 발전용 도시가스 최고가격제 시행 가능성
-  - 지역별 도매가격 차등 조기 시행
-
-### '26년 SMP/Peak 수요 기대치 변화 ('25.3 Revisit vs '24.11 경영계획, 출처: 발전손익구조 p.16)
-- Peak 수요: 545~547TWh → Revisit 기준 변화폭 △5~△8
-- KOGAS 평균 연료비: 월별 △172~△191 수준 변동
-- LPG Spot 가격: 206KT → 263~243KT (△173~△191)
-- 계획정비(비계획 정지 포함): 18일 → 43~53일(+25~+35)
-
-## 6. 현재 주요 이슈 & 과제
-
-### '26년 주요 과제 — 3대 Pillar (출처: 이사회전략세션 p.24, 유은철 UGPS 대표 보고)
-**목표: 세전이익 1,725억원 달성**
-
-1. **수익성 제고**: Optionality 실행
-2. **유연한 BM(Business Model) 구축**: 차액계약(CfD) + PPA
-3. **생산성 혁신**: AI 활용 O/I (Operation Intelligence)
-
-**기반**
-- [기업문화] 행복한 고성과 조직
-- [안정적 Operation] 가동률 90% 이상
-- [무사고·무재해] 중대재해 Zero + LTIR 1.3% (Lost Time Injury Rate, 근로손실재해울)
-
-### 세부 추진 과제
-
-**(1) LPG/LNG Optionality** (출처: p.26)
-- LNG 현물가격(JKM) 상승으로 '26년 5월 Optionality 이미 실행
-- 하반기 추가 실행 가능 전망 (JKM 20.5 → 19.8 $/MMBtu, FEI 16.2 → 13.4 $/MMBtu)
-
-**(2) LPG 기동 준비** (출처: p.27)
-- 철저한 사전 준비 + 최적 전환 방법 활용으로 LPG 기동 안정성 확보
-- LPG 설비 사전점검 Checklist 운영
-- LPG 직접 기동 대비 안전한 LNG 기동 후 LPG 전환 (30min 내 전환 Mode 적용)
-- Trouble 발생 시 Siemens 엔지니어 + Eng. 비상 대기
-
-**(3) 발전사업 BM Option 확보** (출처: p.29)
-- **AI D/C向 전력직접공급 (PPA)**: PPA 법규 신설·물리적 전력공급·최적 Pricing 추진 중(w/그룹)
-  - 수급지점 변경(전기사용장소 확대), 변전설비 공동이용 허용, 송전설비 공동이용 허용
-  - UGPS 부지 ↔ AI D/C 부지 직접 연결
-  - **재생 확대에도 안정적 이용률 확보**가 목적
-- **차액거래 (CfD)**: 전력직접구매 기업 대상 변동성 Risk Hedge 목적
-  - UGPS (CP + SMP 전력판매) → KPX → 전력직접구매자
-  - SMP 고정 (변동마진 → 확정마진 전환)
-  - **저유가 상황에서도 안정적 수익 구조**
-
-**(4) AI 활용 O/I** (출처: p.30)
-- 발전설비 고장 예방: Siemens, 전력연구원과 발전분야 AI 도입 협업 (가스터빈·시스템 PreVision)
-- 전력시장 분석 Simulation: 자체 AI Agent 구축하여 분석 시간 단축
-- AI Intern: 팀별 반복업무 담당 Agent 개발 (양식제작·안내메일·회의 취합·임원 공유·업무결과·사진 정렬·공지문 작성·구성원 공지 등)
-
-### 안정적 Operation Track Record ('25.1 ~ '26.3, 출처: p.25)
-- '25년 하반기 2차례 Outage(1차 25.4~25.6, 2차 25.10~25.11)
-  - 1차: GT 1개 블레이드 교체, ST 건전성 점검, Condenser Leak 보수
-  - 2차: GT #2 블레이드 교체, 2차 인수성능시험
-- Outage 후 가동률 98~100% 유지 (목표 90% 상회)
-- 이용률은 계절·전력시장 여건에 따라 44~83% 범위
-
-## 7. 출처 자료
-
-- **발전손익구조(경분)** (2025.4.11 자료, 경영기획본부 분석, 18장): '25년 GPS 손익 전망 Revisit + 경영계획(행캔) 대비 주요 차이 분석
-- **SK가스 이사회전략세션 UGPS 주요과제 및 향후계획** (2026.03.30, 유은철 UGPS 대표, 11장)
-- **통합S재무회의** (2026.04월): 1Q GPS 최종 결산 (목표 542억/실적 554억), 연간추정 1,891억
-- **SK가스 행복경영캔미팅** (2025.11.28~29, 46장): 발전 중장기 SMP 환경 변화 (재생E 100GW, KOGAS slope 하락, LMP 도입) 및 GPS SWOT
+---
+> 출처: 이사회전략세션 UGPS (2026.03.30) · S재무보고 (2026.04) · 발전손익구조 (2025.4)

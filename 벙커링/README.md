@@ -1,205 +1,75 @@
 # 벙커링 사업 (EMFS)
 
-## 1. 사업 개요
+<div style="background:linear-gradient(135deg,#006064,#00acc1);padding:24px 28px;border-radius:12px;color:white;margin:16px 0 24px;">
+  <div style="font-size:32px;line-height:1;">🚢</div>
+  <div style="font-size:22px;font-weight:700;margin-top:10px;">벙커링 사업 (EMFS)</div>
+  <div style="font-size:14px;opacity:0.85;margin-top:6px;line-height:1.5;">IMO 탄소중립 규제 대응 — LNG 선박 연료 공급 사업<br>SK가스 100% 자회사 EMFS, COD 2027~2028 목표</div>
+</div>
 
-벙커링(Bunkering)은 **선박에 연료를 공급하는 행위**로, 과거 고유황유(HSFO) 등 유류 위주에서 최근 LNG와 같은 친환경 대체연료로 다변화 중이다. SK가스는 울산 KET(Korea Energy Terminal) 부두를 거점으로 한 **STS(Ship-to-Ship) 방식의 LNG 벙커링 사업**을 추진 중이며, 100% 자회사인 **EMFS(에코마린퓨얼솔루션)**를 통해 2027년 4분기 ~ 2028년 1분기 사업 개시를 목표로 한다.
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">💡 이 사업은 왜 존재하는가</div>
+<div style="background:#e0f7fa;border-radius:8px;padding:16px 18px;margin-bottom:20px;font-size:14px;line-height:1.8;">
+국제해사기구(IMO)가 선박 탄소중립을 강제하면서 <strong>LNG 추진선이 급속히 증가</strong>하고 있습니다. SK가스는 이미 울산에 LNG 터미널(KET)을 보유하고 있어, <strong>추가 대규모 투자 없이</strong> 선박 연료 공급 시장에 진입할 수 있는 유일한 국내 사업자입니다.<br>
+기존 인프라를 활용하는 <strong>'자산 재활용'</strong> 비즈니스 모델입니다.
+</div>
 
-**세전이익** (출처: 26.04 S재무보고)
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">💰 어떻게 돈을 버나</div>
+<div style="display:flex;align-items:stretch;gap:0;flex-wrap:wrap;margin:0 0 20px;"><div style="background:#e0f7fa;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">🔵</div>
+    <div style="font-weight:700;font-size:14px;color:#006064;margin:8px 0 4px;">LNG 조달</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">KET 기존 도입물량<br>과 통합 Pooling<br>→ 단독 Cargo 불필요</div>
+  </div><div style="display:flex;align-items:center;font-size:26px;color:#ccc;padding:0 4px;">&rarr;</div><div style="background:#fff8e1;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">⚓</div>
+    <div style="font-weight:700;font-size:14px;color:#e65100;margin:8px 0 4px;">KET 6번 부두
++ 18K LBV</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">국내 최대 규모<br>벙커링 전용 부두<br>선박 건조 완료 27</div>
+  </div><div style="display:flex;align-items:center;font-size:26px;color:#ccc;padding:0 4px;">&rarr;</div><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">⛽</div>
+    <div style="font-weight:700;font-size:14px;color:#2e7d32;margin:8px 0 4px;">STS 급유</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">Ship-to-Ship<br>해상에서 직접 급유<br>장소 제약 없음</div>
+  </div><div style="display:flex;align-items:center;font-size:26px;color:#ccc;padding:0 4px;">&rarr;</div><div style="background:#e3f2fd;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">💵</div>
+    <div style="font-weight:700;font-size:14px;color:#1565c0;margin:8px 0 4px;">급유 마진</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">Term 70%<br>Spot 30%<br>안정적 수익 구조</div>
+  </div></div>
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">📊 핵심 수치</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;"><div style="background:#e0f7fa;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">COD 목표</div>
+    <div style="font-size:21px;font-weight:700;color:#006064;line-height:1.1;">2027~2028</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">국내 사업 개시</div>
+  </div><div style="background:#e3f2fd;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">벙커링선</div>
+    <div style="font-size:21px;font-weight:700;color:#1565c0;line-height:1.1;">18K CBM</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">국내 최대 LBV</div>
+  </div><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">현대글로비스</div>
+    <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">30척+</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">자동차운반선 계약</div>
+  </div><div style="background:#fff8e1;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">글로벌 LNG추진선</div>
+    <div style="font-size:21px;font-weight:700;color:#f57f17;line-height:1.1;">651→1,322척</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">'24→'28 2배 증가</div>
+  </div></div>
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🔭 지금 뭘 봐야 하나</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin:0 0 20px;"><div style="flex:1;min-width:200px;background:#f1f8f1;border:1px solid #c8e6c9;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#2e7d32;margin-bottom:8px;font-size:13px;">&#x1F4C8; 기회 / 순풍</div><div style="margin:4px 0;font-size:13px;">&#x2705; 현대글로비스 자동차운반선 30척+ Term 계약 확보</div><div style="margin:4px 0;font-size:13px;">&#x2705; LNG 추진선 발주 급증 → 글로벌 수요 성장</div><div style="margin:4px 0;font-size:13px;">&#x2705; 울산 입지: 현대차 공장(자동차선) + 부산신항(컨선) 인접</div><div style="margin:4px 0;font-size:13px;">&#x2705; KET 기존 인프라 활용 → 초기 투자 최소화</div></div><div style="flex:1;min-width:200px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#c62828;margin-bottom:8px;font-size:13px;">&#x1F4C9; 리스크 / 역풍</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 글로벌 컨테이너선사 Anchor 고객 미확보 (CMA-CGM·MSC·Maersk 접촉 중)</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 2nd LBV 추가 확보 방안 미결 (신조 vs 용선)</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; KOLB(통영), 포스코(광양) 경쟁사 사업 개시</div></div></div>
+<div style="border-top:1px solid #eee;margin:28px 0;"></div>
 
-| 연도 | 세전이익 (억원) | SK가스 전체 대비 비중 |
-|------|----------------|----------------------|
-| 2023 | 미확인 | 미확인 |
-| 2024 | 미확인 | 미확인 |
-| 2025 | 미확인 | 미확인 |
+## 추진 타임라인
 
-> 참고: 26.04 S재무보고 상 벙커링(EMFS)은 투자회사 > 지분법 항목에 "+4억" 수준으로 언급되나, 연도별 세전이익 절대값은 별도 분리되지 않아 **미확인**으로 표기. 사업 개시 목표가 2027년 4분기 ~ 2028년 1분기이므로 현재(2026년)까지는 실질 손익 기여 미미.
+| 시점 | 마일스톤 |
+|------|----------|
+| '25.02 | EMFS 설립 |
+| '25.04 | 선박용 천연가스사업자 자격 취득 |
+| '25.07 | 18K LBV 건조 계약 체결 |
+| **'25.09** | **현대글로비스 LNG 공급계약 체결 (자동차운반선 30척+)** |
+| **'27.4Q~'28.1Q** | **COD — 사업 개시** |
 
-## 2. 사업 구조 & 메커니즘
+## 경쟁사 비교
 
-### 글로벌 및 국내 벙커링 시장 규모 (출처: 벙커링사업소개)
-- **글로벌 유류 벙커링**: 약 2.2억톤 규모 (2024년 기준). 싱가폴(54.5백만톤, 25%) / ARA(17.3백만톤, 8%) / 지브롤터(7.9백만톤, 4%)가 3대 벙커링 항구
-- **국내 유류 벙커링**: 연간 약 7백만톤 규모, 부산/울산항 등 동남권이 가장 큰 시장
-  - 한국 벙커링량은 글로벌 M/S 약 3% 수준 (부산 M/S 60%, 울산 M/S 5~10% 수준)
-  - 부산: 국내 1위 물동량, 컨테이너선이 총 물동량의 90% 차지
-  - 울산: 국내 3위, 원유/석유(65%)/화학(15%)/자동차(10%) 선박이 90% 차지
+| | EMFS (당사) | KOLB (KOGAS) | 포스코 (광양) |
+|---|---|---|---|
+| 거점 | **울산** | 통영 | 광양 |
+| 선박 규모 | **18K CBM** | 7.5K CBM | 12.5K CBM |
+| 사업 개시 | '27~'28 | '23 (기개시) | '26 |
 
-### 밸류체인 (LNG 벙커링)
-
-```
-Seller → SKGI(선박용 LNG 공급) → LNG터미널(KET/SKG, #6부두) → 선사(H-Line, 용선계약) → 고객(연료공급계약)
-                                          │
-                                  벙커링 자회사 EMFS (선박용 천연가스 사업자)
-                                  → 일반 벙커링 및 LNG 추진선 시운전/인도출항유
-```
-
-- SKGI가 선박용 LNG를 공급 → KET/SKG 터미널에서 #6부두 이용계약 → H-Line에 용선 → 고객에게 연료공급계약
-
-### LNG 벙커링 공급 방식 3가지
-
-| 방식 | 설명 | 특징 |
-|------|------|------|
-| TTS (Truck to Ship) | 차량 → 선박, 육상에서 탱크로리 운반 | 소규모 벙커링에 효율적 |
-| PTS (Pipe to Ship) | 육상 → 선박, 터미널 접안 후 파이프 | 대용량 가능, 부두 사이즈·점유율 상 제약 |
-| **STS (Ship to Ship)** | **선박 → 선박, 벙커링선박 통해 공급** | **대용량 가능, 해상 급유로 장소 제약 적음. 당사 방식** |
-
-### 주요 플레이어 및 경쟁사
-
-**국내 LNG 벙커링 업체 비교**
-
-| 구분 | EMFS | Korea LNG Bunkering (KOLB) | 포스코그룹(포스코이앤씨터미널) |
-|------|------|---------------------------|------------------|
-| 사업구조 | SK가스 100% 자회사 | KOLB(KOGAS 자회사) 설립 (지분매각 검토) | 벙커링사업부 단독 취득 및 운영 |
-| 운영거점 | 울산 KET (코리아에너지터미널) | 통영기지 (벙커링 전용 부두) | POSCO 광양터미널 |
-| 사업개시 | '27년 4분기 / '28년 1분기 | '23년 2분기(벙커링 전용 인도 기준) | '26년 3/4분기 타겟(터미널 완공 기준) |
-| 도입선형 | 18K CBM LBV (C-Type) | 7.5K CBM LBV (Membrane) | 12.5K CBM급 LBV |
-| 특징 | 물동권 중심·입지(부산/울산), 국내 최대 규모 벙커링 부두 | 국내 최대 선진국 벙커링 사업자 | 포스코그룹 시너지 |
-
-**고객(선종별)**
-
-| 구분 | 컨테이너선 | 자동차선 | 벌크선 |
-|------|-----------|---------|-------|
-| 국내 주요 기항 | 부산 | 울산, 광양 | 광양, 포항 |
-| LNG 추진선 규모 (25.9) | 운항 210척 / 오더북 358척 | 운항 88척 / 오더북 98척 | 운항 54척 / 오더북 22척 |
-| 벙커링 1회 물량 | 2,500 ~ 3,000톤 | 1,000톤 | 1,000톤 |
-
-**글로벌 경쟁 예상**: 부산/울산권 기항하는 Global LNG 추진선이 잠재 고객이며, 해운 고객 특성 상 벙커링 인프라 보유한 글로벌 항구와 경쟁. 아시아권 주요 항만의 벙커링 공급자와 경쟁 예상 (싱가폴 FUELNG, 말레이시아 PETRONAS, 일본 CENTRAL, 중국 ENN 등)
-
-### 핵심 가격 지표
-- **LNG 거래량 중 약 80%는 Oil Linked Term 계약** (Spot은 물동량 적고 가격 예측 불가)
-- **장기계약(Term, Brent/JCC)**: 유가 연동 / 2.6억톤/년 / 한국 VLSFO 연동성 매우 높음 (r²≈96%)
-- **장기계약(HH)**: Henry Hub 연동 / 0.3억톤/년 / 미국 Shale 가스 수출 시사
-- **단기계약(Spot, JKM/TTF)**: 0.8억톤/년 / 연동성 낮음, 수급 따라 가격 변동 매우 큼
-- **주요 Index**
-  - **JKM** (Japan Korea Marker): 동아시아 수입 LNG 도착가
-  - **TTF** (Title Transfer Facility): 유럽 천연가스 가격
-  - **Brent & JCC** (Japan Crude Cocktail): 북해산 원유 & 일본 원유가격 평균
-  - **HH** (Henry Hub): 미국 내수/수출 천연가스 가격
-
-## 3. 주요 자산 & 인프라
-
-### SK가스 자회사 EMFS (에코마린퓨얼솔루션)
-- **설립**: 2025년 2월, SK가스 100% 자회사로 벙커링 사업 목적 설립
-- **자격요건**: 산업부 '선박용 전연가스사업자' 자격 취득 ('25.04)
-- **향후 확장**: 추가 파트너사 지분참여 검토 중 (보도자료 상 K사 10% 이내 언급)
-
-### 울산 KET (코리아에너지터미널) 거점
-- SK가스 LNG 터미널 KET는 **울산 현대자동차 공장과 동일 항만** 내 위치 (해상거리 약 7km)
-- KET는 한국석유공사와 SK가스의 합작법인이나, SK가스가 KET의 LNG 관련 사업 전권을 가짐
-- **LNG 벙커링 전용 부두인 KET 6번 부두**를 활용하여 즉시 안정적 LNG 벙커링 제공 가능
-- 국내 최대 규모의 LNG 벙커링 주목적 부두 및 설비 보유
-
-### 국내 인프라 Spec 비교 (출처: 벙커링사업소개)
-
-| 구분 | KET | 통영터미널 | 광양터미널 |
-|------|-----|------------|-----------|
-| 벙커링 선박 | 18K | 7.5K | 벙커링 부두 없음 (별도 부두 건설 중) |
-| 선적유량 | 2,500 m³/hr | 1,000 m³/hr | - |
-| 선적시간 (7.5K 기준) | 3시간 | 7.5시간 | - |
-| 선적시간 (18K 기준) | 7.2시간 | - | - |
-
-### 18K cbm LNG 벙커링 선박 (LBV)
-- 국내 조선사와 LNG 벙커링 선박 건조 계약 체결 ('25.07)
-- 당사 벙커링 부두에 접안 가능한 최대 규모의 벙커링선 선조 (18K, C-type)
-- 대형 컨테이너선 등 대상 효율적/효과적 벙커링 위해 접안 가능 최대 규모 설계
-
-### 입지 경쟁력 (울산)
-- 울산 거점 **동남권 LNG 벙커링 수요 Target** 가능
-- 국내 최대 규모 자동차 생산공장(현대차 울산공장)이 KET 터미널 인근에 위치 → 자동차선 수요 확보 유리
-- 국내 최대 규모 컨테이너터미널(부산신항)이 KET와 약 4시간 거리 → 컨테이너선 수요 확보 유리
-- 파트너사 운영 중인 LNG추진 벌크선 Captive 수요 有
-
-### 연료 도입 상 Pooling 고려 가능
-- 규모가 작은 LNG 벙커링 초기 시장 형성 특성 상, 벙커링 목적의 단독 LNG Cargo 소싱이 어려움
-- 하지만, 당사의 경우 타 도입 물량과 함께 Pooling 하여 소규모 벙커링용 LNG Cargo 소싱 가능
-
-## 4. 수익 구조
-
-### 사업 기회 요인
-- IMO 규제 대응한 LNG 고객 확대 (**Window of Opportunity**)
-- 울산 입지 경쟁력 (자동차운반선 수요 많은 울산 위치, 컨테이너선 수요 많은 부산 인근, 시장선점/경쟁제한)
-- 벙커링 설비 경쟁력 (울산터미널 벙커링 부두 보유, 국내 최대 규모 벙커링 선박 18K)
-
-### 전략적 의미 (기존 SK가스/SKGI 사업 강화 및 추가 수익 창출)
-- **터미널 활용률 제고**: 터미널 소규모 공실 최적 활용
-- **고객확보 Sustainability**: 소규모이지만 시계적 점진적 증가 + 장기적으로 포트폴리오 내 발전 타 육상향 수요 추이 보완
-- **SKGI LNG 공급마진**: JV가 SKGI 통해 LNG를 조달하므로 LNG 공급마진 창출
-
-### 추진 계획
-- '25년 추가 지분 참여사 참여 여부 결정
-- '27년 벙커링 공급선 본선 인도 예정
-
-### 사업 확장기 (무탄소 연료사업 및 글로벌 진출)
-- **암모니아 등 청정연료 사업 진출의 교두보**
-  - Conventional LNG 이후 Bio-LNG 또는 e-LNG 활용 Net Zero Solution Provider로 도약
-  - 암모니아로 전환 시 고객 기반 및 유관 네트워크 활용, 선제적 진출 교두보로 활용
-- **글로벌 사업으로의 확장 플랫폼**
-  - 북미 등 LNG 벙커링 기회 확보/진출 모색
-  - 글로벌 벙커링 Player와 사업 Connect
-
-## 5. 시장 환경
-
-### IMO 규제 및 친환경 연료 전환
-- IMO(국제해사기구)에서 발표한 온실가스(EEDI, EEXI, CII) 등 절감규제 강화로 친환경 연료로의 전환 가속화
-- IMO는 2050년까지 해운 조선업 전반 탄소중립 과제이며, LNG 벙커링은 물론 울산/광양 등 주요 거점에서 **자동차운반선(PCTC) 운영할 현대글로비스 등 선주가 연료 전환 인프라** 갖추는 변곡점
-
-### LNG 추진선 신조발주/인도 본격화
-- **24년말 기준 전세계 LNG 추진 선박은 약 650척 수준**
-- **28년에는 1,322척으로 약 2배 수준으로 증가 예정** (25년 9월까지 발주된 선박 기준, 선박 추가 발주 예정)
-- LNG 추진선 발주/인도 누적 현황: '24년 651척 → '25년 889척 → '26년 981척 → '27년 1,132척 → '28년 1,322척 → '29년 1,360척 → '30년 1,394척
-
-### LNG가 친환경 연료 중 가장 현실적
-- 연료 경제성, 기술 성숙도, 연료수급 가능성 등 고려 시 LNG가 메탄올/암모니아 대비 우위
-- LNG 외 메탄올, 암모니아 추진선도 발주되고 있으나 여전히 LNG 추진선이 Majority (발주 척수의 80% 이상)
-- 메탄올/암모니아는 연료 경제성, 엔진 기술, 연료수급 가능성, 공급인프라 구비, 독성 등 문제 여전히 존재
-- Bio-Methane, E-Methane, Green Hydrogen, Green Ammonia, Green Methanol 대비 LNG가 연료경제성/선박 엔진 가용기술/공급 인프라 우위
-
-### 가격 변동성
-- 한국 VLSFO 및 Spot LNG 가격은 21~23년 급등 후 24~25년 안정화 추세
-- Brent 원유, Spot LNG(JKM), Spot LNG(TTF), 한국 VLSFO(당일 조정) 간 비교 가능
-
-## 6. 현재 주요 이슈 & 과제
-
-### 사업 추진 현황 (출처: 26년 4월 의장님 보고)
-**사업 의미**: 단독 사업으로도 안정적 수익 구조 확보 + 신규 LNG Short position 확보 + 유연/확장성으로 터미널 공실 최소화 및 활용률 제고
-
-### 수요 확보 (Term 70% + Spot 30%)
-- **1st LBV**: 현대글로비스 기반 Term 수요 확보, 주문/운영 체계 구축과 병행하여 H-Line 용선 계약 완료 후 진행 중
-- **2nd LBV**: 글로벌 컨테이너사 Top3 중 1~2개사 우선적 확보 통하여 안정적 구조로 확장 모색 추진
-  - 추가적으로 한국/일본 선사 등 소규모 Term 물량 확보 추진
-  - 우선 추진 타겟: 글로벌 컨테이너선사(CMA-CGM, MSC, Maersk 등), 한국/일본 선사(HMM, K-Line 등)
-- **Bio-LNG 공급계획**에 대한 선제적 검토 통하여, 환경규제에 민감한 글로벌 고객과 Term 계약 성사 진행 시 활용
-- **Spot 고객 확보 (30% 비중)**: Term 계약과 연계된 주요 고객은 당사 직접 Spot 공급 마케팅 활용(글로비스, H-Line, CMA-CGM 등). 그 외 일회성 Spot 등은 글로벌 벙커 트레이더(Peninsula, Bunker Holding Group, World Fuel Service) 활용해 대상 고객 pool 확보 및 효율적 운영 지원 고려
-
-### 운영 준비 (사업 개시 전 안정적 Operation 준비/점검)
-- **선박**: 1st LBV 건조 감리, 2nd LBV 확보 옵션(신조, 용선) 검토
-- **운영체계**: 주문/운영 시스템 확립, 울산 내부 공급 분업, 관련 제도 개선 등
-- **소상/터미널**: SPA, TUA/IUA 및 부속 계약 체결, 신규/Spot 수요 대응 공급 방안 검토 등
-- **파트너십**: 잠재 파트너사 간 파트너십 구조 및 지분참여 계약 체결, 출자 계획 수립 등
-
-### 주요 마일스톤
-- **25.02**: 벙커링 자회사 EMFS (100% 자회사) 설립
-- **25.04**: '선박용 전연가스사업자' 자격 취득
-- **25.07**: 국내 조선사와 18K LNG 벙커링 선박 건조 계약 체결
-- **25.09**: **SK가스(EMFS)-현대글로비스 자동차운반선 대상 LNG 선박연료 공급계약 체결** - 동남권 중심 LNG 벙커링 인프라 및 시장 확대 목표
-- **25년**: 추가 지분 참여사 참여 여부 결정
-- **27년 4분기 / 28년 1분기**: 벙커링 공급선 본선 인도 및 사업 개시 (COD)
-
-### 현대글로비스 계약 (25.9.3)
-- SK가스(EMFS) - 현대글로비스 - 자동차운반선 대상 LNG 선박연료 공급계약 체결
-- 에코마린퓨얼솔루션(EMFS)과 현대글로비스가 전담 자동차운반선(PCTC) 운영할 LNG 선박 연료공급 인프라 제공
-- 2028년까지 LNG 이중연료 추진 자동차운반선 30척 이상 도입
-- 동남권 해상 물류 기항지 중심으로 LNG 벙커링 생태계 조성
-- 국제해사기구(IMO) 2050년 탄소중립 조선업 반영한 온실가스 감축 목표로 정한 이후, 현대글로비스 LNG 이중연료 추진 자동차운반선 운영 및 안정적 벙커링 인프라 공급 동남권 확대 추진
-
-### 리스크/과제
-- 2nd LBV 추가 확보(신조/용선) 옵션 검토 필요
-- 글로벌 컨테이너사(CMA-CGM, MSC, Maersk 등) Anchor Customer 확보 추진 중
-- 파트너사 지분참여 확정 (추가 10% 이내 검토)
-- 주문/운영 시스템 확립 및 관련 제도 개선
-
-## 7. 출처 자료
-
-- 벙커링사업소개 (2026.04.01, EMFS사업실/조임경)
-- 26년 4월 의장님 보고 (2026.04, 전략본부)
-- 26.04 S재무보고 (2026.04)
-- 참고 보도자료: SK가스-현대글로비스 'LNG 벙커링' 파트너십 구축 (2025.09.03, 아시아경제)
+---
+> 출처: 벙커링사업소개 (2026.04.01, EMFS사업실) · 의장님 보고 (2026.04) · S재무보고 (2026.04)

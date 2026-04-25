@@ -1,172 +1,75 @@
-# SKA (SK Advanced) 사업화팀
+# SKA 석유화학
 
-## 1. 사업 개요
+<div style="background:linear-gradient(135deg,#bf360c,#ff7043);padding:24px 28px;border-radius:12px;color:white;margin:16px 0 24px;">
+  <div style="font-size:32px;line-height:1;">🧪</div>
+  <div style="font-size:22px;font-weight:700;margin-top:10px;">SKA 석유화학</div>
+  <div style="font-size:14px;opacity:0.85;margin-top:6px;line-height:1.5;">프로판(LPG) → 프로필렌 전환 PDH 사업 — 수직계열화 자산<br>SK가스-PIC-AGIC 공동소유, 구조개편 시나리오 검토 중</div>
+</div>
 
-SK Advanced(SKA)는 울산 소재 **PDH(Propane Dehydrogenation) 기반 프로필렌 생산 업체**로, SK가스가 프로판을 공급하고 SKA가 프로필렌으로 전환하는 V/C 통합 구조를 이루는 SK가스 그룹의 핵심 화학 사업이다.
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">💡 이 사업은 왜 존재하는가</div>
+<div style="background:#fbe9e7;border-radius:8px;padding:16px 18px;margin-bottom:20px;font-size:14px;line-height:1.8;">
+SK가스가 수입하는 <strong>프로판(LPG)의 핵심 수요처</strong>입니다. SKA의 PDH 공장이 프로판을 원료로 받아 석화 원료인 프로필렌으로 전환합니다. 즉, SK가스 LPG 판매처이자 가스 수직계열화의 완성입니다.<br>
+수익은 <strong>PDH Spread(프로필렌 가격 − 프로판 가격)</strong>로 결정되며, 납사 대비 LPG 경쟁력이 높을수록 마진이 커집니다.
+</div>
 
-**PDH 설비 규모**
-- 생산 Capa: 60만톤/년 (CB형 기술, 업계 최대 규모 — 타 PDH 업체 대비 1.5~3배)
-- 기술 우위: T사(효성 Oleflex), H사(현대 Oleflex) 대비 프로판 원단위 및 부생수소 생산 우위
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">💰 어떻게 돈을 버나</div>
+<div style="display:flex;align-items:stretch;gap:0;flex-wrap:wrap;margin:0 0 20px;"><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">🟢</div>
+    <div style="font-weight:700;font-size:14px;color:#2e7d32;margin:8px 0 4px;">원료 도입</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">프로판 (C3)<br>SK가스 LPG 기지에서<br>FEI 기반 가격 공급</div>
+  </div><div style="display:flex;align-items:center;font-size:26px;color:#ccc;padding:0 4px;">&rarr;</div><div style="background:#fff8e1;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">⚗️</div>
+    <div style="font-weight:700;font-size:14px;color:#e65100;margin:8px 0 4px;">PDH 공정
+탈수소화</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">C3H8 → C3H6 + H2<br>연산 60만톤<br>울산 위치</div>
+  </div><div style="display:flex;align-items:center;font-size:26px;color:#ccc;padding:0 4px;">&rarr;</div><div style="background:#fbe9e7;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">🏭</div>
+    <div style="font-weight:700;font-size:14px;color:#bf360c;margin:8px 0 4px;">제품 판매</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">프로필렌 (석화원료)<br>UPP (폴리우레탄 원료)</div>
+  </div><div style="display:flex;align-items:center;font-size:26px;color:#ccc;padding:0 4px;">&rarr;</div><div style="background:#ede7f6;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">💵</div>
+    <div style="font-weight:700;font-size:14px;color:#4a148c;margin:8px 0 4px;">PDH Spread</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">프로필렌가<br>− 프로판가<br>= 수익</div>
+  </div></div>
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">📊 핵심 수치</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;"><div style="background:#fbe9e7;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">PDH 연산</div>
+    <div style="font-size:21px;font-weight:700;color:#bf360c;line-height:1.1;">60만톤</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">프로판→프로필렌</div>
+  </div><div style="background:#e3f2fd;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">매출 ('24)</div>
+    <div style="font-size:21px;font-weight:700;color:#1565c0;line-height:1.1;">1.1조원</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;"></div>
+  </div><div style="background:#ffebee;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">부채비율</div>
+    <div style="font-size:21px;font-weight:700;color:#c62828;line-height:1.1;">~200%</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">'24년 기준</div>
+  </div><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">국내 PDH 경쟁</div>
+    <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">1,445→1,027kt</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">'24→'26 Δ418kt</div>
+  </div></div>
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🔭 지금 뭘 봐야 하나</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin:0 0 20px;"><div style="flex:1;min-width:200px;background:#f1f8f1;border:1px solid #c8e6c9;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#2e7d32;margin-bottom:8px;font-size:13px;">&#x1F4C8; 기회 / 순풍</div><div style="margin:4px 0;font-size:13px;">&#x2705; 국내 PDH 공급 Δ418kt 감소 (효성·태광 S/D) → SKA 구조적 수혜 가능</div><div style="margin:4px 0;font-size:13px;">&#x2705; 납사 가격 상승 시 프로필렌 수요 증가 → Spread 확대</div><div style="margin:4px 0;font-size:13px;">&#x2705; 미-이란 전쟁 시 납사 급등 → H사(NCC) 공급비 정상화 기회</div></div><div style="flex:1;min-width:200px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#c62828;margin-bottom:8px;font-size:13px;">&#x1F4C9; 리스크 / 역풍</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; PIC/AGIC Exit 협상 장기화 → 구조개편 불확실성</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 부채비율 ~200% → 재무 부담</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; PDH Spread 회복 시점 불확실 ('26년 저점 가능성)</div></div></div>
+<div style="border-top:1px solid #eee;margin:28px 0;"></div>
 
-**자회사 UPP (울산피피, 울산PP)**
-- PP 생산 법인: SKA 50%-1주, PMC(폴리미래, DL케미칼 50%+LYB 50% JV) 50%+1주
-- SKA에서 생산한 프로필렌의 주요 내수 수요처 역할
+## PDH Spread란?
 
-**세전이익** (출처: SK가스 이사회전략세션 2026.03.30)
+```
+PDH Spread = 프로필렌 판매가 − 프로판 구매가 − 운영비용
 
-| 연도 | EBITDA | 세전이익 | 비고 |
-|------|--------|---------|------|
-| 2024 | (595)억 | 미확인 | BCG 분석 기준 |
-| 2025 | 미확인 | 미확인 | |
-| 2026 (전망) | +346억 | (495)억 | Spread 개선 + O/I 노력 |
+납사 가격 ↑  →  프로필렌 수요 ↑  →  Spread ↑  →  SKA 수익 ↑
+FEI(프로판가) ↓  →  원가 ↓  →  Spread ↑  →  SKA 수익 ↑
+```
 
-> 26년 월별 세전이익: 3월 +95억 (Spread 13/톤), 4월 +175억 (Spread 02/톤) — 중동 사태 영향으로 급등
+## 구조개편 4가지 시나리오
 
----
-
-## 2. 지배구조 & 주주 현황 (최신)
-
-**[핵심 변화] 중동 주주 단계적 Exit — SKG 100% 단독 지배 목표**
-
-| 시점 | 지분 구조 |
-|------|---------|
-| 기존 | SKG 45%, AGIC(아부다비투자공사) 30%, PIC(사우디) 25% |
-| 26.1Q 완료 | PIC Exit → SKG 지분 **70%** 확보 |
-| 26.2Q 목표 | AGIC(30%) Exit → SKG 지분 **100%** (이사회 보고 시점 기준 4월 내 완료 목표) |
-
-> 출처: SK가스 이사회전략세션 SKA 세션 (2026.03.30, 손철승 재무본부장/김철진 SKA 대표)
-
-**UPP 지분 구조**
-- SKA 50%-1주, PMC(폴리미래) 50%+1주
-- PMC 주주구성: DL케미칼 50%, LYB(라이온델바젤) 50%
-
----
-
-## 3. 사업 구조 & 수익 메커니즘
-
-**PDH 밸류체인**
-
-SK가스(SKG) → 프로판 공급 → SKA PDH 설비(60만톤) → 프로필렌 생산 → UPP(PP 생산) / 내수·수출 판매
-
-| 구분 | 내용 |
-|------|------|
-| 원료 | 프로판 (SKG 공급 / 미국산 MB Formula 80% 구매) |
-| 생산 | 프로필렌 60만톤/년 (CB형 PDH, 부생수소도 생산) |
-| 판매처 | UPP(내수 Captive), 태광·효성화학·롯데·동서·SKPG 내수, 수출 |
-
-**핵심 수익 지표: PDH Spread (프로필렌 - 프로판, CFR NEA 기준)**
-
-| 연도 | Spread ($/톤) | 비고 |
-|------|-------------|------|
-| 2020 | 356 | |
-| 2021 | 361 | |
-| 2022 | 200 | 저점 |
-| 2023 | 253 | |
-| 2024 | 241 | |
-| 2025 | 199 | 저점 재진입 |
-| 2026 전망 | 324 | SKA View, 4월 실제 02 급등 |
-| 2027 전망 | 282 | SKA View |
-| 2028 전망 | 301 | SKA View |
-| 2029 전망 | 324 | SKA View |
-| 2030 전망 | 383 | SKA View |
-
-**26년 판매 Portfolio (UPP S/D 이후 5월 기준, 단위: 천톤)**
-
-| 판매처 | 판매량 | D/C (CFR NEA 대비, $/톤) |
-|--------|--------|------------------------|
-| UPP | 26 | N/A |
-| SKPG | 3 | -20 |
-| 태광 | 138 | -23 |
-| 효성화학 | 60 | -20~30 |
-| 롯데 | 84 | -18 |
-| 동서 | 145 | -25 |
-| 수출 | Spot 전환 | -36~42 |
-| **합계** | **660** | **Avg. -29** |
+| 시나리오 | 내용 | 핵심 |
+|---------|------|------|
+| ① 현상유지 | 현 지배구조 유지 | 구조개편 없음 |
+| ② 지분 재조정 | PIC/AGIC Exit + 새 FI 유치 | 재무 부담 완화 |
+| ③ FI 유치 | 재무적투자자 신규 참여 | 부채비율 개선 |
+| ④ 매각 | 사업 전체 Exit | SK가스 LPG 수요처 상실 |
 
 ---
-
-## 4. 재무 성과
-
-**26년 SKA 손익 상세 (출처: SK가스 이사회전략세션 2026.03.30)**
-
-| 항목 | 금액 (억원) | 비고 |
-|------|-----------|------|
-| 매출 | 8,117 | |
-| 변동비 | (7,591) | |
-| 공헌이익 | 526 | 톤당 9 |
-| 고정비 | (180) | |
-| **EBITDA** | **+346** | Spread 개선 + O/I |
-| 이자/감가상비 | (841) | UPP 지분법손실 (325)억 미포함 |
-| **세전이익 (SKA 단독)** | **(495)** | |
-| 프로판 공급이익 (SKG→SKA) | +528 | V/C 통합 기준 |
-| **통합 세전이익 (SKG+SKA)** | **+33** | |
-
-**재무 건전성**
-- 25년 말 기말현금: 1,322억 / 부채비율: 407%
-- 26년 하반기 만기 차입금 합계: 5,159억 (은행 1,220억 + 신보부채권 2,700억 + 시장성 1,239억)
-- 대응: 은행차입 100% R/O 추진 (KDB·농협·신한·우리·하나은행), 시장성 차입 자체 차환 발행
-
----
-
-## 5. 시장 환경
-
-**동북아 PDH Rationalization 전망**
-- 22~25년 Spread 저점: 중국 신규 PDH 과잉 증설 + NCC 가동률 저하 → 프로필렌 공급과잉
-- **27년부터 Rationalization 본격화** (공급 감소 가속화):
-  - 한국: YNCC, GS칼텍스, LG화학, 롯데케미칼, SK지오센트릭, 대한유화 등 감축
-  - 일본: Maruzen NCC 33.6만톤, Idemitsu Kosan NCC 22.4만톤 S/D
-  - 중국: PDH T/A 연장 및 추가 S/D 예상
-- CMA 전망 Spread: 27년 39 → 28년 10 → 29년 82 → 30년 40/톤
-
-**26년 시장 특이사항: 미국-이란 전쟁 영향**
-- 중동산 원료 도입 차질 → 국내 수급 타이트 → Spread 급등
-- 26년 4월 Spread 02/톤 (이란 공습 2/28 이후 급등)
-- 단기 Spread 50~10/톤 (+60) / 연간 56~24/톤 (+8) 영향 추정
-
-**경쟁사 대비 SKA 포지션 (BCG 분석, 2024.12)**
-
-| 항목 | SKA | T사(효성) | H사(현대) |
-|------|-----|---------|---------|
-| Capa | 60만톤 | 45만톤 | 40만톤 |
-| COGS (약) | 30/톤 | 10/톤 | 10/톤 |
-| 원료 | LPG(SK가스) | 100% SK Gas | 100% SK Gas |
-| 전력 | 높음 (약점, 타 업체의 3배) | 자기발전 균형 | 자기발전 無 |
-
-> T사/H사는 적자 공정인 PDH 운휴를 통해 영업적자 110~190억 보전 가능한 구조 → SKA와의 C3 공급 계약 협의 배경
-
----
-
-## 6. 현재 주요 이슈 & 과제
-
-**이슈 1: 사업구조 개편 — 4가지 시나리오 병행 검토**
-
-| 시나리오 | 내용 | 기대 효과 | 현황 |
-|---------|------|---------|------|
-| A. 최적 운영 | AGIC Exit 후 SKG 단독 운영, V/C 통합 최적화 | 이자 절감 (380억→220억/년), 운영 제약 해소 | Base, 지속 추진 |
-| B. H사 통합 | H사(현대) PDH와 C3 공급 협업 (32만톤) | SKA EBITDA +150억, H사·T사 손실 110~190억 보전 | 추진 심의 중 |
-| C. Relocation | 설비 사우디 이전 (AGIC 85%, SKG 15% PF) | 국내 부채 상환, 리스크 최소화 | AGIC와 T/S 협의 중, 26년 말~27년 초 FID 목표 |
-| D. 그룹 구조 개편 | SKGC-SKpicglobal-SKA 3사 통합 (Contingency) | 울산 크래커+PDH 최적화, 정부 지원 기반 확보 | 그룹 석화 TF 구성 중 |
-
-**이슈 2: UPP 구조 개편 (PMC와 논의 중)**
-- UPP 3년 S/D 중, PMC(DL케미칼+LYB)와 공동 구조개편 방향 논의
-- Option I (운영 통합): Capa 감축, 고부가 제품 중심 재편
-- Option II (거버넌스 통합): 3사 통합, Cataloy 고부가 PP 사업 강화
-- 4월 내 방향 의사결정 계획
-
-**이슈 3: 전기료 절감**
-- SKA 전기 사용량이 타 업체 대비 3배 수준 (최초 구축 시 전기 위주 셋업, 산업용 전기요금 3년간 60% 상승)
-- 26.6월부터 MU PPA 전환으로 전기료 약 (50)억 절감 예정
-
-**이슈 4: 26년 하반기 재무/유동성 관리**
-- 만기 차입금 5,159억 집중 (은행+신보부채권+시장성)
-- 상반기 내 GPS 매각 대금 등 활용한 주주 차원 지원 방안 검토 중
-- 100% 자회사화 완료 시 SKA 차입을 SKG 차입으로 전환 → 이자비용 연 160억 절감 기대
-
----
-
-## 7. 출처 자료
-
-- SK가스 이사회전략세션 Session 4. SKA 사업구조 개편 방향 (2026.03.30, 19장)
-- SKA 프로필렌 중장기 전망 보고 (2026.03, SK Advanced, 17장)
-- SK그룹 석유화학 사업의 Sustainability 확보 전략 — BCG 최종보고 (2024.12.05, 74장)
-- 참조: Project 2. 사업내용이해하기/_data/재무수치.md
+> 출처: 이사회전략세션 SKA (2026.03.30) · 행복경영캔미팅 (2025.11)

@@ -1,240 +1,65 @@
 # LPG 사업
 
-## 1. 사업 개요
+<div style="background:linear-gradient(135deg,#2e7d32,#66bb6a);padding:24px 28px;border-radius:12px;color:white;margin:16px 0 24px;">
+  <div style="font-size:32px;line-height:1;">🟢</div>
+  <div style="font-size:22px;font-weight:700;margin-top:10px;">LPG 사업</div>
+  <div style="font-size:14px;opacity:0.85;margin-top:6px;line-height:1.5;">SK가스 최대 수익원 — '25년 세전이익 2,132억<br>Eco Energy(국내 공급) + Trading + G&P(Optionality) 3개 본부</div>
+</div>
 
-SK가스 LPG 사업은 **프로판(C3)·부탄(C4) 도매 공급**을 중심으로 **트레이딩·Origination·Autogas** 까지 포괄하는 SK가스 핵심 수익원. 크게 **Eco Energy 본부**(국내 영업·공급)와 **Trading 본부**(글로벌 트레이딩·소싱)로 구성.
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">💡 이 사업은 왜 존재하는가</div>
+<div style="background:#e8f5e9;border-radius:8px;padding:16px 18px;margin-bottom:20px;font-size:14px;line-height:1.8;">
+SK가스의 <strong>뿌리이자 현금 창출원</strong>. 프로판·부탄을 해외에서 도입해 국내 민수·산업체·차량에 공급하는 도매 사업입니다.<br>
+단순 공급 마진을 넘어, <strong>LNG-LPG 가격 역전 시 GPS 연료를 전환하는 Optionality Trading</strong>이 고수익 레이어를 만들어냅니다.
+</div>
 
-**'26년 LPG Biz. 세전이익 목표: 1,841억원** (vs '25 실적 2,132억)
-- 목표 하향은 PDH Spread 악화(SKA 손실 확대) 및 JKM 하락에 따른 석화·산업체 공급수익 감소 반영
-- LNG-LPG Optionality, Trading 수익 확대, 산업용 도시가스 인상 등 추가 upside 요인 추진 中
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">💰 어떻게 돈을 버나</div>
+<div style="display:flex;align-items:stretch;gap:0;flex-wrap:wrap;margin:0 0 20px;"><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">📦</div>
+    <div style="font-weight:700;font-size:14px;color:#2e7d32;margin:8px 0 4px;">도입</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">FEI (아시아 현물)<br>MB (북미 현물)<br>CP (중동 Term)<br>3원 소싱 구조</div>
+  </div><div style="display:flex;align-items:center;font-size:26px;color:#ccc;padding:0 4px;">&rarr;</div><div style="background:#fff8e1;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">🏭</div>
+    <div style="font-weight:700;font-size:14px;color:#e65100;margin:8px 0 4px;">울산 LPG 기지</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">저장·배관 허브<br>GPS 발전소와<br>700m 파이프 연결</div>
+  </div><div style="display:flex;align-items:center;font-size:26px;color:#ccc;padding:0 4px;">&rarr;</div><div style="background:#fce4ec;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">⚡</div>
+    <div style="font-weight:700;font-size:14px;color:#c2185b;margin:8px 0 4px;">Optionality
+실행</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">JKM > FEI 시<br>GPS에 LPG 공급<br>LNG는 Spot 판매</div>
+  </div><div style="display:flex;align-items:center;font-size:26px;color:#ccc;padding:0 4px;">&rarr;</div><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;flex:1;min-width:120px;text-align:center;">
+    <div style="font-size:28px;line-height:1;">💵</div>
+    <div style="font-weight:700;font-size:14px;color:#2e7d32;margin:8px 0 4px;">3채널 수익</div>
+    <div style="font-size:12px;color:#555;line-height:1.5;">Eco Energy<br>Trading<br>G&P(Opt.)</div>
+  </div></div>
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">📊 핵심 수치</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;"><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">세전이익 '25실</div>
+    <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">2,132억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;"></div>
+  </div><div style="background:#fff8e1;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">세전이익 '26목</div>
+    <div style="font-size:21px;font-weight:700;color:#f57f17;line-height:1.1;">1,841억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">PDH 악화 반영</div>
+  </div><div style="background:#f3e5f5;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">Optionality '26</div>
+    <div style="font-size:21px;font-weight:700;color:#6a1b9a;line-height:1.1;">+300억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">1.5 Cargo 확정</div>
+  </div><div style="background:#e3f2fd;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">Autogas 성장</div>
+    <div style="font-size:21px;font-weight:700;color:#1565c0;line-height:1.1;">+5.1%/년</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">'25~'30 CAGR</div>
+  </div></div>
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🔭 지금 뭘 봐야 하나</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin:0 0 20px;"><div style="flex:1;min-width:200px;background:#f1f8f1;border:1px solid #c8e6c9;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#2e7d32;margin-bottom:8px;font-size:13px;">&#x1F4C8; 기회 / 순풍</div><div style="margin:4px 0;font-size:13px;">&#x2705; Trading 초과 달성 ('26 1Q 목표 525억 → 실적 933억)</div><div style="margin:4px 0;font-size:13px;">&#x2705; Autogas: 1톤 LPG 트럭 급성장 CAGR +5.1%</div><div style="margin:4px 0;font-size:13px;">&#x2705; FEI '26년 저점 후 '27~' 반등 전망</div><div style="margin:4px 0;font-size:13px;">&#x2705; 미-이란 시나리오: 납사 급등 시 TSP 수혜</div></div><div style="flex:1;min-width:200px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#c62828;margin-bottom:8px;font-size:13px;">&#x1F4C9; 리스크 / 역풍</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; Eco Energy 1Q 실적 150억 (목표 508억 대비 Δ358억)</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; KOGAS Slope 15% → 12% 하락 (TSP 마진 압박)</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 국내 PDH 공급 Δ418kt → Eco Energy 기반이익 Δ480억</div></div></div>
+<div style="border-top:1px solid #eee;margin:28px 0;"></div>
 
-**Eco Energy 본부 주요 채널** (출처: 이사회전략세션 경영계획 2026.03.30)
-| 채널 | 내용 |
-|------|------|
-| 프로판 (민수) | 거점 충전소 중심 C3 N/W 공급, 판매량 76만톤 목표 |
-| TSP (산업체) | KOGAS 도시가스 연동 LPG 공급, NCC향 납사 대체 |
-| Autogas | 1톤 트럭·택시 등 차량용 LPG, 판매량 71만톤 목표 |
+## 채널별 '26년 1Q 목표 vs 실적
 
-**Trading 본부 주요 영역**
-| 영역 | 내용 |
-|------|------|
-| 국내 Trading | 시황 변동성 활용 Physical/Paper Trading |
-| 북미 Origination | 하와이·서부 멕시코·서부 캐나다 LPG 소싱 |
-| LNG-LPG Optionality | JKM/FEI 가격 역전 시 GPS 연료 전환으로 수익 창출 |
+| 채널 | 목표 | 실적 | 원인 |
+|------|------|------|------|
+| **Eco Energy** | 508억 | 150억 ❌ | JKM Unwind 기회 상실, 민수 악화 |
+| **Trading** | 525억 | 933억 ✅ | Physical Trading 초과, USD 강세 |
+| **G&P (Opt.)** | 61억 | 272억 ✅ | LNG-LPG Optionality 1.5 Cargo |
 
-## 2. 사업 구조 & 수익
-
-### 밸류체인
-```
-해외 소싱 (MB/FEI/CP 기반) → 국내 도입 (울산 기지) → 채널별 공급
-    ↓                                                      ↓
-Trading Play (Paper/Physical)            민수 / TSP 산업체 / Autogas / GPS 연료 공급
-```
-
-### 핵심 가격 지표
-
-**소싱 가격**
-- **FEI (Far East Index)**: 아시아 LPG 현물 기준가 ($/MMBtu)
-- **MB (Mont Belvieu)**: 북미 LPG 기준가 (¢/gal), 북미 Origination의 경쟁력 지표
-- **CP (Aramco Contract Price)**: 중동 장기계약 기준 ($/MT)
-
-**판매 가격**
-- **민수**: KOGAS 도시가스 연동 (판가 고정·원가 변동 → 디커플링 위험)
-- **TSP 산업체**: KOGAS 공시가 기반, 산업체 LPG 납사 대체 가격경쟁력
-- **Trading**: FEI/MB Spread 활용, Cargo 단위 시황 매매
-
-### LNG-LPG Optionality (GPS 연료 전환 수익)
-- GPS 발전소는 LNG/LPG 겸용 → 가격이 유리한 연료로 전환
-- **Margin**: (JKM - FEI - 전환비용) × 전환량
-- '26년 기실행: JKM 20.50 vs FEI 16.17 → Spread 4.33$/MMBtu (26.3월 기준)
-- '26년 LNG-LPG Optionality 1.5 Cargo 실행으로 **+300억** 수익 확정
-
-## 3. 재무 성과
-
-### '25년 실적 및 '26년 목표 (출처: 경영계획 주요전략과제 2026.03.30)
-
-| 구분 | '25년 실적 | '26년 목표 | 증감 |
-|------|-----------|-----------|------|
-| LPG Biz. 세전이익 | 2,132억 | 1,841억 | △291억 |
-| └ Eco Energy 본부 | 1,639억 | 975억 | △664억 |
-| └ Trading 본부 | - | - | - |
-| └ G&P 본부(LNG/LPG 공통) | - | - | - |
-
-### '26년 1Q 실적 (출처: 통합S재무회의 2026.04월)
-
-| 구분 | 목표 | 실적 | 차이 | 주요 원인 |
-|------|------|------|------|----------|
-| LPG/LNG 세전이익 합산 | 722억 | 1,055억 | +333억 | Trading·Opt 초과 |
-| └ Eco Energy | 508억 | 150억 | △358억 | JKM Unwind 상실 + 민수 손익 악화 |
-| └ Trading | 525억 | 933억 | +409억 | Physical Trading 초과, USD 강세 ($130M→실적 $67.5M) |
-| └ G&P | 61억 | 272억 | +211억 | LNG-LPG Opt. 실행 |
-
-### 중장기 LPG 세전이익 추정 ('26~'30, 출처: 경영계획 주요전략과제 p.9)
-
-| 연도 | LPG Biz. 세전이익 | 비고 |
-|------|------------------|------|
-| '26 | 1,841억 | |
-| '27 | 1,571억 | SKA 구조개편 기여 아직 제한적 |
-| '28 | 1,670억 | 회복 |
-| '29 | 1,896억 | |
-| '30 | 2,063억 | 신규 수요 Lock-in 완성 |
-
-### ROIC 추이 (출처: 통합S재무회의 2026.04월)
-
-| 구분 | '23년 | '24년 | '25년 | '26년 목표 |
-|------|-------|-------|-------|-----------|
-| Eco Energy ROIC | 13.0% | 9.4% | 7.2% | 7.6% |
-| Trading ROIC | 18.7% | 18.3% | 15.5% | 10.5% |
-
-> ROIC 하락 원인: JKM 하락에 따른 산업체·PDH 공급수익 감소. '26년 납사대체 물량 확대 및 PDH 공급비 정상화로 개선 추진.
-
-### '26년 연간 추정 손익 변동 요인
-
-**확정 (+)**
-- LNG-LPG Optionality 1.5 Cargo: **+300억**
-- Trading Volume 14만톤: **+200억**
-- 산업용 도시가스 가격 인상: **+100억**
-
-**확정 (-)**
-- 도시가스 연동가 Hedge Paper 손실 (JKM Sell): **-300억**
-
-**미확정 Upside**
-- SKA Spread 개선 (6월~): +300억
-- 추가 LNG-LPG Optionality (2~3 Cargo): +4~600억
-- 산업용 도시가스 가격 인상 지속시: +α
-
-**Downside Risk**
-- 민수 판가 원가상승분 반영 제한: **Δ300억**
-- 산업체 LPG 공급 판-원가 디커플링: **Δα**
-
-## 4. 시장 환경
-
-### 국내 LPG 수요 구조
-- **민수(충전소)**: 프로판 N/W, 거점 충전소 중심 수송체계 — LPG 차량 감소 추세로 판매량 방어가 핵심
-- **TSP (산업체·발전)**: KOGAS 도시가스 연동 — 석화(NCC)향 납사 대체 LPG 공급이 성장 동력
-- **Autogas**: 1톤 LPG 트럭 수요 성장 지속, 택시 시장은 전기차 전환으로 감소
-
-### 중기 글로벌 LPG 가격 전망 (출처: 행복경영캔미팅 2025.11)
-
-| 연도 | Brent ($/bbl) | MB (cpg) | FEI ($/ton) | MB/Brent | FEI/Brent |
-|------|--------------|----------|-------------|----------|-----------|
-| '25 | 75 | 68 | 544 | 46% | ~98% |
-| '26 | 62 | 59 | 480 | 44% | ~99% |
-| '27 | 65 | 60 | 495 | 46% | ~100% |
-| '28 | 70 | 62 | 515 | 47% | ~101% |
-| '29 | 73 | 64 | 535 | 48% | ~102% |
-| '30 | 75 | 66 | 552 | 48% | ~102% |
-
-> '26년 저점 후 '27년~ 석화 수요 회복으로 FEI 강한 반등 예상. 동고하저 Seasonality는 '22년 10%p → '25년 5%p로 이미 축소 추세.
-
-### 동북아 프로판 수요 구조 변화 (출처: 행복경영캔미팅 2025.11)
-
-| 수요처 | '15년 | '25년 | CAGR |
-|--------|-------|-------|------|
-| 가정/상업용 | 58% | 34% | Δ5% |
-| 기타(산업용·열조용) | 21% | 12% | Δ5% |
-| PDH | 10% | 33% | +13% |
-| Cracker | 11% | 21% | +6% |
-
-> PDH 비중이 빠르게 확대 → 계절성 없는 석화 수요가 지배하면서 동고하저 패턴 약화.
-
-### 국내 PDH 공급 감소 (출처: 행복경영캔미팅 2025.11)
-- **'24년**: SKA 640 + 효성 509 + 태광 295 = **1,445 천톤**
-- **'26년**: 효성 DH1 S/D(24.6~) + 태광 S/D(25.1~) → SKA 727 + 효성 300 = **1,027 천톤** (Δ70만톤)
-- **Eco Energy 기반이익 영향**: '24년 대비 **Δ480억원**
-- '27년~: 666천톤 (T/A 1개월) → '28년 727천톤 (2년 주기 반복)
-
-### 국내 C3/C4 수요 전망 (출처: 행복경영캔미팅 2025.11)
-
-**C3 (프로판)**
-- 민수 총판매량: '25년 210만톤 → '30년 216만톤 (+0.8% CAGR)
-  - 용기: 453→340 천톤 (Δ5%), 벌크: 1,672→1,825 천톤 (+0.8%)
-  - 용기:벌크 비중 '20년 3:7 → '30년 1.5:8.5 (벌크화 가속)
-
-**C4 (부탄 / Autogas)**
-- 총판매량: '25년 259만톤 → '30년 326만톤 (**+5.1% CAGR**)
-  - 1톤 LPG 트럭: '25년 약 18만톤 → '30년 약 36만톤 이상 (빠른 성장)
-  - 택시/승용: 전기차 전환으로 감소 지속
-  - '27년 신형 세미보닛형 LPG 1톤 트럭 출시로 가속 기대
-
-### KOGAS 도시가스 가격 하락 리스크
-- **KOGAS Slope**: '25년 14.2% → '26년 13.8% → '30년 13.0% (기존 고가 계약 만료)
-  - '25년~ 고가 Term 계약(오만/카타르, Slope 15%) 만료
-  - '28년~ 신규 저가 계약(BP, 11~12% 예상) 도입
-- **정산단가**: '25년 37원/kg → '26년 10원 → '27년 2원 → '28년 0원 (소멸)
-- **영향**: LPG 도시가스 대체 경쟁력 악화 → TSP 산업체 판매 마진 압박
-
-### 글로벌 소싱 포트폴리오 (출처: 경영계획 주요전략과제 2026.03.30)
-- **하와이 LPG 공급 사업**: 고정화 추진 중
-- **서부 멕시코**: Ensenada, Topolobampo 지역 진출
-- **서부 캐나다**: REEF 터미널 (Pembina) 1카고/월 추가 소싱
-- **장기 계약**: Aramco CP 기반 중동 Term, 코리아나 FM/SKE 카고 포함
-
-### 미국-이란 전쟁 영향 (출처: 이사회전략세션 미국-이란 시나리오 2026.03.30)
-
-**기회 요인**
-- 납사 가격 급등 → 석화서향 납사 대체 LPG 공급 기회 확대
-- 프로필렌 가격 상승 기반 H사(NCC) 공급비 정상화 추진
-- MB/FEI Spread 확대 → LPG 카고 시장 Trading 수익 확대
-
-**위험 요인**
-- KOGAS 도시가스 판가 미인상 시 산업체 공급 마진 악화
-  - 당사 산업체 LPG 대체 공급량 40만톤/년 노출
-  - 판-원가 디커플링 발생 가능성
-- 전쟁으로 인한 운임 상승 → 소싱 비용 증가
-
-### 시나리오별 LPG 가격 전망 (Platts/WoodMac 등 기관 추정, 출처: 이사회전략세션)
-| 시나리오 | 2Q | 3Q | 4Q |
-|---------|----|----|-----|
-| ①1개월 내 정상화 | 625 | 550 | 550 |
-| ②부분 정상화(카타르 LNG 지연) | 662 | 592 | 545 |
-| ③하반기 갈등 해소 | 992 | 662 | 592 |
-| ④갈등 장기화 | 992 | 1,128 | 1,263 |
-
-단위: $/MT (FEI 기준)
-
-## 5. 주요 이슈 & 과제
-
-### '26년 LPG 사업 3대 주요과제 (출처: 경영계획 주요전략과제 2026.03.30)
-
-**(1) 프로판 Biz. Re-Design** (Eco Energy 본부)
-- C3 N/W 최적화를 통해 판매량 **76만톤 달성** (+1.6만톤)
-- 거점 충전소 중심 수송체계 재편 (비효율 충전소 정리)
-
-**(2) TSP Biz. 모델 Upgrade** (Eco Energy 본부)
-- NCC향 납사 대체 프로판 공급 Term 계약 **40만톤 추가 확보**
-- 신규 산업체 수요 확보 및 자가발전용 LPG 연료공급 추진
-- 안정적 소싱 포트폴리오 구축
-
-**(3) Autogas 확장 전략** (Eco Energy 본부)
-- LPG 1톤 트럭향 판매 수요가 높은 N/W 유치 및 1톤 멤버십 고객 확대
-- 판매량 **71만톤 달성** (+3.7만톤)
-
-**(4) Trading 사업이익 극대화** (Trading 본부)
-- 미국-이란 전쟁 등 시황 변동성 활용 Trading 수익 창출
-- MB/FEI Spread 확대 기회 적시 포지션
-
-**(5) 북미 기반 Origination 확장** (Trading 본부)
-- 하와이 LPG 공급 사업 고정화
-- 서부 멕시코 시장 진출 (Ensenada, Topolobampo)
-- 서부 캐나다 REEF 터미널 Pembina 물량 추가 소싱 (1카고/월)
-
-### 핵심 리스크: 민수 판가 제한
-- KOGAS 도시가스 판가 미인상 시 산업체 공급 마진 악화 (연간 Δ300억 수준)
-- 당사 도시가스 연동가 Hedge Paper 손실(JKM Sell) -300억 이미 확정
-- **대응**: KOGAS 도입비 증가 추세 지속 → 중장기 판가 인상 불가피 판단
-
-### LNG-LPG 연료 최적화 Framework (SWAN 3.0)
-SK가스는 미국-이란 전쟁 이후 SWAN 3.0 전략 체계하에 LNG/LPG 연료를 통합 최적화:
-1. FEI 대비 가격 경쟁력 있는 MB Term 최대 활용
-2. LNG 시황 활용한 LNG/LPG Optionality 실행 (GPS 연료 전환)
-3. 프로필렌/프로판 스프레드 확대 시 SKA 가동수익 개선
-4. 가동수익 vs. 저분이익 vs. MU Bridge 최적화
-5. 코리아나 FM & SKE 카고 부족분 → Cargo Swap 및 LNG/LPG 최적화
-
-## 6. 출처 자료
-
-- **이사회전략세션 경영계획 주요전략과제** (2026.03.30, 송경열 전략본부장, 8장): '26년 전사 세전이익 목표 및 사업별 주요과제
-- **이사회전략세션 미국-이란 전쟁 영향 및 대응방안** (2026.03.30, 송경열 전략본부장, 11장): 시나리오별 에너지 가격 전망 및 사업별 대응
-- **통합S재무회의** (2026.04월, 9장): 1Q 확정 실적, 연간추정, ROIC 추이, 포트폴리오 현황
-- **SK가스 행복경영캔미팅** (2025.11.28~29, 46장): 사업부문별 중장기 경영환경 변화, LPG 시장 전망 (FEI/Brent, 수요구조, PDH 국내공급, KOGAS Slope 등)
+---
+> 출처: 이사회전략세션 경영계획 (2026.03.30) · S재무보고 (2026.04) · 행복경영캔미팅 (2025.11)
