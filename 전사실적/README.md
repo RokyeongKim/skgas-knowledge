@@ -71,12 +71,14 @@
 </div>
 </div>
 
-<div style="background:#fce4ec;border:1px solid #f48fb1;border-radius:10px;padding:14px 18px;margin-bottom:6px;">
-<div style="font-weight:700;color:#880e4f;font-size:13px;margin-bottom:6px;">❓ Activity vs 재무회계 차이 (~1,576억) — 원인 미확인 ⚠️</div>
+<div style="background:#e8f5e9;border:1px solid #a5d6a7;border-radius:10px;padding:14px 18px;margin-bottom:6px;">
+<div style="font-weight:700;color:#1b5e20;font-size:13px;margin-bottom:6px;">&#x2705; Activity vs 재무회계 차이 (~1,576억) — 원인 확인</div>
 <div style="font-size:12px;color:#555;line-height:1.7;">
   재무회계 1Q 3,688억 − Activity 1Q 2,112억 = <strong>+1,576억</strong><br>
-  추정 원인: USD 강세에 따른 FX 평가이익 / 파생상품 MTM / 지분법 조정<br>
-  → 재무회계 세전이익 조정내역(주석) 확인 필요
+  <strong>원인: 파생상품(Paper) MTM 평가손익</strong><br>
+  LPG/LNG 도입 시 마진 고정화를 위해 사전에 Paper(파생상품) 포지션을 잡으며,
+  기말 기준가 변동에 따른 <strong>평가이익·손실이 재무회계에만 반영</strong>됨 (Activity 손익에는 미포함).<br>
+  시황 변동이 클수록 두 기준 간 괴리가 커지며, 실제 현금흐름은 계약 만기 시 확정됨.
 </div>
 </div>
 </div>

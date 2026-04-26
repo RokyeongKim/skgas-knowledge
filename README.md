@@ -14,7 +14,8 @@
 | 사업 | 핵심 한 줄 | 페이지 |
 |------|-----------|--------|
 | LNG | 터미널 확장으로 이익 급성장 (143억→1,300억) | [이동](/LNG/) |
-| LPG | 핵심 수익원, Optionality + Trading | [이동](/LPG/) |
+| LPG (Eco Energy) | 국내 LPG 도매 공급, Optionality 협업 | [이동](/LPG/) |
+| Trading | Paper·현물 포지션 운용, 독립 본부 | [이동](/Trading/) |
 | 발전 (UGPS) | 세계 최초 LNG·LPG 겸용, 1,227MW | [이동](/발전/) |
 | 벙커링 (EMFS) | LNG 선박 연료, COD 2027~2028 | [이동](/벙커링/) |
 | ESS | 자료 준비 중 | [이동](/ESS/) |
