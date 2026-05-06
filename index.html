@@ -1,124 +1,483 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <title>SK가스 사업 지식베이스</title>
-  <style>
-    :root { --theme-color: #0066cc; }
-    .markdown-section h2 { border-bottom: none; padding-bottom: 0.2em; }
-    .markdown-section hr  { border: none; border-top: 1px solid #eee; margin: 1.5em 0; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK가스 Knowledge Base</title>
+<style>
+:root {
+  --sk-blue: #0051a2;
+  --sk-blue-dark: #003980;
+  --sk-blue-light: #e8f0fc;
+  --sk-orange: #f06400;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --green: #16a34a;
+  --green-light: #dcfce7;
+  --amber: #d97706;
+  --amber-light: #fef3c7;
+  --red: #dc2626;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Apple SD Gothic Neo','Malgun Gothic',-apple-system,sans-serif; background: var(--gray-50); color: var(--gray-900); font-size: 14px; }
+.header { background: var(--sk-blue-dark); color: white; padding: 0 24px; display: flex; align-items: center; height: 56px; gap: 16px; }
+.header-logo { font-size: 18px; font-weight: 700; }
+.header-sub { font-size: 12px; opacity: 0.7; }
+.header-date { margin-left: auto; font-size: 12px; opacity: 0.7; }
+.main-tab-bar { background: var(--sk-blue); display: flex; padding: 0 24px; }
+.main-tab { color: rgba(255,255,255,0.7); padding: 14px 24px; cursor: pointer; font-size: 14px; font-weight: 600; border-bottom: 3px solid transparent; border: none; background: none; color: rgba(255,255,255,0.7); }
+.main-tab:hover { color: white; }
+.main-tab.active { color: white; border-bottom: 3px solid #f06400; }
+.sub-tab-bar { background: white; border-bottom: 1px solid var(--gray-200); padding: 0 24px; display: flex; flex-wrap: wrap; }
+.sub-tab { color: var(--gray-700); padding: 12px 18px; cursor: pointer; font-size: 13px; font-weight: 500; border-bottom: 2px solid transparent; border: none; background: none; white-space: nowrap; }
+.sub-tab:hover { color: var(--sk-blue); }
+.sub-tab.active { color: var(--sk-blue); border-bottom: 2px solid var(--sk-blue); font-weight: 700; }
+.content { padding: 24px; max-width: 1200px; margin: 0 auto; }
+.section { display: none; }
+.section.active { display: block; }
+.biz-panel, .div-panel { display: none; }
+.biz-panel.active, .div-panel.active { display: block; }
+.biz-hero { border-radius: 12px; padding: 24px 28px; color: white; margin-bottom: 20px; }
+.biz-hero h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.biz-hero p { font-size: 13px; opacity: 0.88; line-height: 1.6; }
+.hero-lng { background: linear-gradient(135deg,#1565c0,#42a5f5); }
+.hero-lpg { background: linear-gradient(135deg,#2e7d32,#66bb6a); }
+.hero-gen { background: linear-gradient(135deg,#e65100,#ffb300); }
+.hero-bun { background: linear-gradient(135deg,#1a237e,#5c6bc0); }
+.hero-ess { background: linear-gradient(135deg,#004d40,#26a69a); }
+.hero-ska { background: linear-gradient(135deg,#4a148c,#ab47bc); }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 16px; margin-bottom: 20px; }
+.card { background: white; border: 1px solid var(--gray-200); border-radius: 10px; padding: 16px 18px; }
+.card-title { font-size: 11px; color: #6b7280; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+.metric { font-size: 24px; font-weight: 700; color: var(--sk-blue); margin-bottom: 4px; }
+.metric-sub { font-size: 12px; color: #6b7280; }
+.value-chain { display: flex; align-items: stretch; flex-wrap: wrap; margin-bottom: 20px; background: white; border: 1px solid var(--gray-200); border-radius: 10px; padding: 16px; gap: 4px; }
+.vc-step { flex: 1; min-width: 90px; text-align: center; padding: 8px; }
+.vc-step .icon { font-size: 22px; margin-bottom: 6px; }
+.vc-step .name { font-size: 12px; font-weight: 700; color: var(--sk-blue); margin-bottom: 4px; }
+.vc-step .desc { font-size: 11px; color: #6b7280; line-height: 1.4; }
+.vc-arrow { display: flex; align-items: center; color: #d1d5db; font-size: 18px; }
+.section-label { font-size: 13px; font-weight: 700; color: var(--gray-700); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--gray-200); display: flex; align-items: center; gap: 8px; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 11px; font-weight: 600; }
+.badge-blue { background: var(--sk-blue-light); color: var(--sk-blue); }
+.update-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.update-item { background: white; border: 1px solid var(--gray-200); border-radius: 8px; padding: 12px 16px; display: flex; gap: 12px; align-items: flex-start; }
+.update-item .dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+.dot-green { background: var(--green); }
+.dot-amber { background: var(--amber); }
+.dot-blue { background: var(--sk-blue); }
+.update-item .text { font-size: 13px; line-height: 1.6; color: var(--gray-700); }
+.update-item .text strong { color: var(--gray-900); }
+.tbl-wrap { background: white; border: 1px solid var(--gray-200); border-radius: 10px; overflow: auto; margin-bottom: 20px; }
+.tbl-wrap table { width: 100%; border-collapse: collapse; min-width: 700px; }
+.tbl-wrap th { background: var(--sk-blue); color: white; padding: 10px 12px; font-size: 12px; font-weight: 600; text-align: left; white-space: nowrap; }
+.tbl-wrap td { padding: 9px 12px; font-size: 12px; border-bottom: 1px solid var(--gray-100); vertical-align: top; line-height: 1.5; color: var(--gray-700); }
+.tbl-wrap tr:last-child td { border-bottom: none; }
+.tbl-wrap tr:hover td { background: var(--gray-50); }
+.tbl-wrap td:first-child { font-weight: 600; color: var(--gray-900); white-space: nowrap; min-width: 160px; }
+.tbl-wrap td.curr { background: #fffbeb; color: #92400e; font-weight: 600; }
+th.curr { background: #f06400 !important; }
+.div-hero { background: white; border: 1px solid var(--gray-200); border-radius: 10px; padding: 16px 20px; margin-bottom: 16px; display: flex; gap: 16px; align-items: center; }
+.div-hero-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--sk-blue); color: white; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+.div-hero-info h2 { font-size: 16px; font-weight: 700; margin-bottom: 3px; }
+.div-hero-info p { font-size: 12px; color: #6b7280; line-height: 1.5; }
+.issue-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 12px; margin-bottom: 20px; }
+.issue-card { background: var(--sk-blue-light); border: 1px solid #c7d9f8; border-radius: 8px; padding: 12px 14px; }
+.issue-card .issue-title { font-size: 12px; font-weight: 700; color: var(--sk-blue); margin-bottom: 6px; }
+.issue-card .issue-body { font-size: 12px; color: var(--gray-700); line-height: 1.5; }
+</style>
 </head>
 <body>
-<div id="app">불러오는 중...</div>
-<script src="//cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<div class="header">
+  <div class="header-logo">SK가스 Knowledge Base</div>
+  <div class="header-sub">전략기획팀</div>
+  <div class="header-date">2026년 5월 기준</div>
+</div>
+<div class="main-tab-bar">
+  <button class="main-tab active" onclick="switchMain('biz',this)">사업현황</button>
+  <button class="main-tab" onclick="switchMain('div',this)">본부현황</button>
+</div>
+<div class="sub-tab-bar" id="sub-biz" style="display:flex;">
+  <button class="sub-tab active" onclick="switchSub('biz','lng',this)">LNG</button>
+  <button class="sub-tab" onclick="switchSub('biz','lpg',this)">LPG</button>
+  <button class="sub-tab" onclick="switchSub('biz','gen',this)">발전(UGPS)</button>
+  <button class="sub-tab" onclick="switchSub('biz','bun',this)">벙커링(EMFS)</button>
+  <button class="sub-tab" onclick="switchSub('biz','ess',this)">ESS</button>
+  <button class="sub-tab" onclick="switchSub('biz','ska',this)">SKA(PDH)</button>
+</div>
+<div class="sub-tab-bar" id="sub-div" style="display:none;">
+  <button class="sub-tab active" onclick="switchSub('div','ecoenergy',this)">EcoEnergy본부</button>
+  <button class="sub-tab" onclick="switchSub('div','gnp',this)">G&amp;P본부</button>
+  <button class="sub-tab" onclick="switchSub('div','trading',this)">Trading본부</button>
+  <button class="sub-tab" onclick="switchSub('div','gps',this)">GPS발전</button>
+  <button class="sub-tab" onclick="switchSub('div','strategy',this)">전략본부</button>
+  <button class="sub-tab" onclick="switchSub('div','finance',this)">재무본부</button>
+  <button class="sub-tab" onclick="switchSub('div','techinfra',this)">기술인프라본부</button>
+  <button class="sub-tab" onclick="switchSub('div','ska',this)">SKA</button>
+</div>
+
+<div class="section active" id="section-biz">
+ <div class="content">
+
+  <div class="biz-panel active" id="biz-lng">
+   <div class="biz-hero hero-lng"><h1>LNG 사업</h1><p>'25년 사업 원년 · '31년까지 세전이익 9배 성장 목표 (143억 → 1,300억)<br>울산 KET·CEC 터미널 직접 보유 — LNG 도입·공급·Optionality Trading 전 밸류체인</p></div>
+   <div class="card-grid">
+    <div class="card"><div class="card-title">연간 도입량</div><div class="metric">~130만 톤</div><div class="metric-sub">M사 70만t + W사 55만t + Spot</div></div>
+    <div class="card"><div class="card-title">터미널 저장 규모</div><div class="metric">연 200만 톤</div><div class="metric-sub">KET #1~3 운영 · CEC 건설 중</div></div>
+    <div class="card"><div class="card-title">세전이익 목표(2031)</div><div class="metric">1,300억</div><div class="metric-sub">2025년 143억 대비 9배</div></div>
+    <div class="card"><div class="card-title">KET #3 현황</div><div class="metric" style="font-size:18px;">Filling 중</div><div class="metric-sub">Cool-down(2월) → Filling(4월~)</div></div>
+   </div>
+   <div class="section-label">밸류체인</div>
+   <div class="value-chain">
+    <div class="vc-step"><div class="icon">🚢</div><div class="name">도입</div><div class="desc">M사·W사 장기계약<br>Spot 10~20만톤/년</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">🏭</div><div class="name">터미널</div><div class="desc">KET #1~3 가동<br>CEC 건설 중</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">⚡</div><div class="name">Optionality</div><div class="desc">JKM·FEI 가격 차이<br>활용 페이퍼 포지션</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">🏢</div><div class="name">공급</div><div class="desc">산업체·발전소<br>UGPS 연료</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">💵</div><div class="name">수익</div><div class="desc">공급마진<br>Trading 실현익</div></div>
+   </div>
+   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 4일 주간보고</span></div>
+   <div class="update-list">
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>KET #3 Tank Filling 진행 중</strong> — Cool-down(2월) 완료 후 4월부터 Filling 단계 진입. 터미널 저장용량 확대 완료 임박.</div></div>
+    <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>JKM 시황 +85.8% 급등(3월)</strong> — 중동전쟁 영향. FEI/JKM 포지션 Unwind로 실현익 +106억 확보.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>SKGC 수출입업 등록(2/4)</strong> — 동절기 Tank Top 리스크 대응, LNG 재고 유연성 확보.</div></div>
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>동서발전 IUA 5월 체결 예정</strong> — 냉열공급 신사업 연계, 최종 조건 협의 중.</div></div>
+   </div>
+  </div>
+
+  <div class="biz-panel" id="biz-lpg">
+   <div class="biz-hero hero-lpg"><h1>LPG 사업 (EcoEnergy)</h1><p>SK가스 핵심 현금 창출원 — 프로판·부탄 도입·도매 공급<br>FEI·MB·CP 3원 소싱 구조 · Trading·G&amp;P 협업 Optionality 수익 창출</p></div>
+   <div class="card-grid">
+    <div class="card"><div class="card-title">소싱 구조</div><div class="metric" style="font-size:18px;">3원 소싱</div><div class="metric-sub">FEI(아시아) · MB(북미) · CP(중동 Term)</div></div>
+    <div class="card"><div class="card-title">HH Optionality 실현익</div><div class="metric">+6.6억</div><div class="metric-sub">4월 Unwind 완료</div></div>
+    <div class="card"><div class="card-title">고속도로 신규 공급권</div><div class="metric">23개소</div><div class="metric-sub">도로공사 낙찰(2/5), 20년 장기</div></div>
+    <div class="card"><div class="card-title">T사 1공장 계약</div><div class="metric">28천톤/년</div><div class="metric-sub">납사대체 직매, 3월 체결</div></div>
+   </div>
+   <div class="section-label">밸류체인</div>
+   <div class="value-chain">
+    <div class="vc-step"><div class="icon">🚢</div><div class="name">도입</div><div class="desc">FEI·MB·CP<br>3원 소싱</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">🏭</div><div class="name">울산 기지</div><div class="desc">저장·배관 허브<br>GPS 700m 파이프</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">🚚</div><div class="name">국내 공급</div><div class="desc">민수·산업체<br>Autogas·PDH</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">📈</div><div class="name">Optionality</div><div class="desc">HH·LPG 페이퍼<br>Trading·G&amp;P 협업</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">💵</div><div class="name">수익</div><div class="desc">공급마진<br>+ Optionality 이익</div></div>
+   </div>
+   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 4일 주간보고</span></div>
+   <div class="update-list">
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>HH Optionality +6.6억 실현(4월)</strong> — Trading본부 연계 헤지 운용, Unwind 완료. 다음 시즌 구조 검토 중.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>도로공사 23개소 낙찰(2/5)</strong> — 20년 장기 고속도로 공급권, Autogas 네트워크 대폭 확대.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>T사 1공장 계약(3/3, 28천톤/년)</strong> — 납사대체 직매 신규 대형 계약 체결.</div></div>
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>E1 교환계약 협의 진행 중</strong> — 재고 위치 최적화 목적, 조건 최종 협의 단계.</div></div>
+   </div>
+  </div>
+
+  <div class="biz-panel" id="biz-gen">
+   <div class="biz-hero hero-gen"><h1>발전 사업 (UGPS)</h1><p>울산 가스복합발전소(UGPS) — 설비 용량 1,227MW<br>LNG/LPG 혼소 발전 · GPS 지분매각 추진 중</p></div>
+   <div class="card-grid">
+    <div class="card"><div class="card-title">발전 용량</div><div class="metric">1,227 MW</div><div class="metric-sub">울산 가스복합발전 GT 1·2호기</div></div>
+    <div class="card"><div class="card-title">1월 실적</div><div class="metric">221억</div><div class="metric-sub">계획 233억 대비 -12억</div></div>
+    <div class="card"><div class="card-title">GPS 매각 진행</div><div class="metric" style="font-size:16px;">SPA 협의 중</div><div class="metric-sub">MOU(2/6) · 이행보증금 76.5억</div></div>
+    <div class="card"><div class="card-title">LPG Optionality</div><div class="metric">5.3만 톤</div><div class="metric-sub">3월 포지션 진입, 유지 중</div></div>
+   </div>
+   <div class="section-label">밸류체인</div>
+   <div class="value-chain">
+    <div class="vc-step"><div class="icon">🔥</div><div class="name">연료 조달</div><div class="desc">LNG·LPG 혼소<br>울산 기지 직결</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">⚡</div><div class="name">발전</div><div class="desc">GT 1·2호기<br>1,227MW 가동</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">🔌</div><div class="name">전력 판매</div><div class="desc">SMP 기준 판매<br>CfD 계약 협의</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">📈</div><div class="name">Optionality</div><div class="desc">LNG/LPG 연료비<br>헤지 운용</div></div>
+   </div>
+   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 4일 주간보고</span></div>
+   <div class="update-list">
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>GPS 지분매각 SPA 협의 최종 단계</strong> — MOU(2/6), 이행보증금 76.5억. PF Waiver 추진 중.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>BI 완료(4월)</strong> — GT 1호기 +4,000h, 2호기 +8,000h 수명 연장. 중장기 안정 운전 확보.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>EPC 준공 완료(~1/12)</strong> — 발전소 건설 완료, 운영 단계로 전환.</div></div>
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>CfD 계약서 협의 중</strong> — SMP 기준 차액계약, 체결 임박.</div></div>
+    <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>SUPEX SHE 진단 완료</strong> — 개선과제 도출 및 이행 중.</div></div>
+   </div>
+  </div>
+
+  <div class="biz-panel" id="biz-bun">
+   <div class="biz-hero hero-bun"><h1>벙커링 사업 (EMFS)</h1><p>EMFS 자회사 운영 · 2027년 상업운전(COD) 목표<br>LNG 선박 연료 공급 · Maersk 등 글로벌 선사 KAM 구축</p></div>
+   <div class="card-grid">
+    <div class="card"><div class="card-title">COD 목표</div><div class="metric">2027년</div><div class="metric-sub">상업운전 개시 목표</div></div>
+    <div class="card"><div class="card-title">핵심 고객</div><div class="metric" style="font-size:18px;">Maersk</div><div class="metric-sub">4/23 방한 협의 완료</div></div>
+    <div class="card"><div class="card-title">유럽 출장</div><div class="metric" style="font-size:16px;">CMA-CGM</div><div class="metric-sub">2/3~6 전략본부 협의</div></div>
+    <div class="card"><div class="card-title">사업 단계</div><div class="metric" style="font-size:16px;">개발 중</div><div class="metric-sub">계약 구조 협의 단계</div></div>
+   </div>
+   <div class="section-label">밸류체인</div>
+   <div class="value-chain">
+    <div class="vc-step"><div class="icon">🚢</div><div class="name">LNG 조달</div><div class="desc">SK가스 LNG 기반<br>EMFS 연계 공급</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">⛽</div><div class="name">벙커링 선박</div><div class="desc">LNGBV 운용<br>2027 COD</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">🌊</div><div class="name">선사 공급</div><div class="desc">Maersk·CMA-CGM<br>글로벌 KAM</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">💵</div><div class="name">수익</div><div class="desc">연료 공급 마진<br>장기 계약 기반</div></div>
+   </div>
+   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 4일 주간보고</span></div>
+   <div class="update-list">
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>Maersk 방한(4/23) 협의 완료</strong> — G&amp;P + 전략본부 공동 대응. 계약 구조 다음 단계 준비 중.</div></div>
+    <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>CMA-CGM 유럽 출장(2/3~6)</strong> — 전략본부 주관, 벙커링 공급 구조 협의.</div></div>
+    <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>KAM 고객사 재설정</strong> — G&amp;P본부 KAM 목록 재편, 공급 조건 협의 중.</div></div>
+   </div>
+  </div>
+
+  <div class="biz-panel" id="biz-ess">
+   <div class="biz-hero hero-ess"><h1>ESS 사업</h1><p>GK ESS · Raven ESS 운영 — 주파수조정 및 피크 조절 수익<br>G&amp;P본부 주관 · 3월 완전 복구 후 정상 가동 중</p></div>
+   <div class="card-grid">
+    <div class="card"><div class="card-title">GK ESS 상태</div><div class="metric" style="color:var(--green);">정상 가동</div><div class="metric-sub">3월 100% 복구 완료</div></div>
+    <div class="card"><div class="card-title">Raven ESS 상태</div><div class="metric" style="color:var(--green);">정상 가동</div><div class="metric-sub">운영 정상화 유지 중</div></div>
+    <div class="card"><div class="card-title">운영 주체</div><div class="metric" style="font-size:16px;">G&amp;P본부</div><div class="metric-sub">ESS 운영·수익관리 담당</div></div>
+    <div class="card"><div class="card-title">수익 구조</div><div class="metric" style="font-size:16px;">안정화</div><div class="metric-sub">복구 이후 수익 정상화</div></div>
+   </div>
+   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 4일 주간보고</span></div>
+   <div class="update-list">
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>GK ESS 100% 복구(3월)</strong> — 설비 이슈로 수익 감소 → 3월 완전 복구, 수익 정상화.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>Raven ESS 운영 정상화</strong> — 별도 이슈 없음, 안정적 수익 창출 중.</div></div>
+    <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>GK·Raven ESS 통합 관리</strong> — G&amp;P본부 KAM 연계, 수익 구조 안정화.</div></div>
+   </div>
+  </div>
+
+  <div class="biz-panel" id="biz-ska">
+   <div class="biz-hero hero-ska"><h1>SKA (PDH·UPP)</h1><p>프로판탈수소(PDH) → 프로필렌·폴리프로필렌(PP) 생산<br>지분구조 개편 마무리 단계 · Spread 사상 최고 수준</p></div>
+   <div class="card-grid">
+    <div class="card"><div class="card-title">PDH Spread (4월)</div><div class="metric" style="color:var(--green);">$646/톤</div><div class="metric-sub">1월 $174 → 4월 사상 최고</div></div>
+    <div class="card"><div class="card-title">PDH Spread (1월)</div><div class="metric">$174/톤</div><div class="metric-sub">연초 저마진 구간</div></div>
+    <div class="card"><div class="card-title">AGIC Exit</div><div class="metric" style="color:var(--green);">완료</div><div class="metric-sub">4/16 두바이 지분 정리</div></div>
+    <div class="card"><div class="card-title">H사 통합</div><div class="metric" style="font-size:16px;">5월 이사회</div><div class="metric-sub">승인 추진 중</div></div>
+   </div>
+   <div class="section-label">밸류체인</div>
+   <div class="value-chain">
+    <div class="vc-step"><div class="icon">🔬</div><div class="name">원료 조달</div><div class="desc">프로판(LPG)<br>최적 소싱</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">🏭</div><div class="name">PDH 공정</div><div class="desc">프로판 → 프로필렌<br>탈수소 공정</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">🧪</div><div class="name">UPP(PP)</div><div class="desc">프로필렌 → PP<br>폴리프로필렌</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">💵</div><div class="name">수익</div><div class="desc">Spread 기반<br>사상 최고 수준</div></div>
+   </div>
+   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 4일 주간보고</span></div>
+   <div class="update-list">
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>PDH Spread $646/톤 (사상 최고, 4월)</strong> — 중동전쟁(3/6) 계기 Naphtha 급등 → Spread 대폭 확대. 풀가동 유지 중.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>AGIC Exit 완료(4/16)</strong> — 두바이 AGIC 지분 정리. SKA 지배구조 단순화 핵심 퍼즐 완성.</div></div>
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>H사 통합 — 5월 이사회 승인 추진 중</strong> — H사 DD(1/7~), SKA 지배구조 최종 정리 단계.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>PIC Exit 완료(2/10)</strong> — 재무본부 주관, 구조 단순화 완료.</div></div>
+   </div>
+  </div>
+
+ </div>
+</div>
+
+<div class="section" id="section-div">
+ <div class="content">
+
+  <div class="div-panel active" id="div-ecoenergy">
+   <div class="div-hero"><div class="div-hero-icon">🟢</div><div class="div-hero-info"><h2>EcoEnergy본부</h2><p>주요 역할: LPG 대리점·직매·Autogas 사업 운영 및 N/W 최적화 · 사업연계: LPG</p></div></div>
+   <div class="section-label">핵심업무 진척 타임라인</div>
+   <div class="tbl-wrap"><table>
+    <thead><tr><th>과제</th><th>1월</th><th>2월</th><th>3월</th><th>4월</th><th class="curr">최신현황 (5월)</th></tr></thead>
+    <tbody>
+     <tr><td>① 대리점 판매(C3/C4) 물량 관리</td><td>동절기 수요 대응, 재고 조정</td><td>도로공사 입찰 준비 및 가격 경쟁력 검토</td><td>T사 1공장 계약(3/3, 28천톤/년) 체결</td><td>CJ프레시웨이 B2B 계약 추진</td><td class="curr">CJ프레시웨이 계약 진행 중, 직매 볼륨 확대</td></tr>
+     <tr><td>② Autogas 충전소 확장</td><td>익산IC 신규 유치(2/1부 운영) 확정</td><td>도로공사 23개소 낙찰(2/5, 20년 공급권)</td><td>OCB 신규 오픈 준비</td><td>OCB 5/1 오픈 예정</td><td class="curr">OCB 5월 오픈 확정, 고속도로 23개소 추가 완료</td></tr>
+     <tr><td>③ 직매(납사대체·PDH) 확대</td><td>납사대체 직매처 목록 관리</td><td>극동에너비스 계약 협의 착수</td><td>극동에너비스 계약 체결(3/16)</td><td>기존 직매처 볼륨 유지·확대</td><td class="curr">극동에너비스 신규 계약 가동 중</td></tr>
+     <tr><td>④ N/W 최적화(Wego 시스템)</td><td>기지 간 재고 밸런싱 최적화</td><td>E1 교환계약 추진 착수</td><td>교환계약 조건 협의</td><td>최종 협의</td><td class="curr">E1 교환계약 협의 진행 중</td></tr>
+     <tr><td>⑤ 안전·자산관리(SHE)</td><td>정기 점검 계획 수립</td><td>PSM 이슈 점검</td><td>안전관리 강화 조치</td><td>SHE 일상관리</td><td class="curr">이상 없음, 정기 점검 지속</td></tr>
+     <tr><td>⑥ HH Optionality 운용</td><td>구조 설계</td><td>포지션 유지</td><td>포지션 유지</td><td>Unwind → +6.6억 실현</td><td class="curr">4월 Unwind 완료, 다음 시즌 구조 검토</td></tr>
+    </tbody>
+   </table></div>
+   <div class="section-label">주요 이슈</div>
+   <div class="issue-grid">
+    <div class="issue-card"><div class="issue-title">도로공사 23개소 낙찰(2/5)</div><div class="issue-body">20년 장기 공급권. Autogas 네트워크 중장기 성장 기반 확보.</div></div>
+    <div class="issue-card"><div class="issue-title">T사 1공장(28천톤/년)</div><div class="issue-body">납사대체 직매 대형 신규 계약, 3월 체결 완료.</div></div>
+    <div class="issue-card"><div class="issue-title">HH Optionality +6.6억</div><div class="issue-body">Trading본부 연계 헤지 운용 성과, 4월 Unwind 완료.</div></div>
+   </div>
+  </div>
+
+  <div class="div-panel" id="div-gnp">
+   <div class="div-hero"><div class="div-hero-icon">🔵</div><div class="div-hero-info"><h2>G&amp;P본부</h2><p>주요 역할: LNG 시황·재고관리, KET 터미널 운영, 발전 신사업, ESS, 벙커링 KAM</p></div></div>
+   <div class="section-label">핵심업무 진척 타임라인</div>
+   <div class="tbl-wrap"><table>
+    <thead><tr><th>과제</th><th>1월</th><th>2월</th><th>3월</th><th>4월</th><th class="curr">최신현황 (5월)</th></tr></thead>
+    <tbody>
+     <tr><td>① LNG 시황 모니터링·재고관리</td><td>동절기 Tank Top 리스크 관리</td><td>SKGC 수출입업 등록(2/4), 재고 정상화</td><td>JKM +85.8% 급등, 재고 소진 가속</td><td>재고 정상 범위, 시황 안정화</td><td class="curr">KET #3 Filling 진행 중, 재고 적정 수준</td></tr>
+     <tr><td>② KET 평택 터미널 운영·확장</td><td>KAM 고객사 재설정 및 공급조건 협의</td><td>KET #3 Tank Cool-down 착수</td><td>Cool-down 완료, 충전 준비</td><td>KET #3 Filling 진행 중</td><td class="curr">#3 Tank Filling 마무리 단계</td></tr>
+     <tr><td>③ 발전 신사업(구역전기·냉열)</td><td>구역전기 가능성 검토</td><td>냉열공급 사업성 검토</td><td>동서발전 IUA 초안 협의</td><td>동서발전 IUA 5월 체결 예정</td><td class="curr">IUA 체결 D-1개월, 최종 조건 협의 중</td></tr>
+     <tr><td>④ ESS(GK·Raven) 운영·수익관리</td><td>GK ESS 설비 이슈 모니터링</td><td>GK ESS 복구 작업 착수</td><td>GK ESS 100% 복구 완료</td><td>Raven ESS 정상화 유지</td><td class="curr">GK·Raven ESS 정상 가동, 수익 안정화</td></tr>
+     <tr><td>⑤ 벙커링 KAM</td><td>KAM 고객 목록 재설정</td><td>고객별 공급 조건 협의</td><td>Maersk 방한 일정 조율</td><td>Maersk 방한(4/23), 공급 구조 협의</td><td class="curr">Maersk 협의 완료, 계약 구조 검토</td></tr>
+     <tr><td>⑥ LPG Optionality 실행 지원</td><td>포지션 구조 공유</td><td>규모 산정</td><td>LPG Optionality 실행(4.6+2.3만톤)</td><td>포지션 관리</td><td class="curr">포지션 유지, Unwind 시점 검토 중</td></tr>
+    </tbody>
+   </table></div>
+   <div class="section-label">주요 이슈</div>
+   <div class="issue-grid">
+    <div class="issue-card"><div class="issue-title">동절기 Tank Top(1월)</div><div class="issue-body">LNG 재고 상한 위기 → SKGC 수출입업 등록으로 유연성 확보.</div></div>
+    <div class="issue-card"><div class="issue-title">KET #3 Tank 완공 임박</div><div class="issue-body">Cool-down(2월) → Filling(4월). 터미널 저장 용량 확대 완료 단계.</div></div>
+    <div class="issue-card"><div class="issue-title">GK ESS 100% 복구(3월)</div><div class="issue-body">설비 이슈 이후 완전 복구, 수익 정상화.</div></div>
+    <div class="issue-card"><div class="issue-title">Maersk 방한(4/23)</div><div class="issue-body">벙커링 KAM 핵심 고객, G&amp;P+전략 공동 대응.</div></div>
+   </div>
+  </div>
+
+  <div class="div-panel" id="div-trading">
+   <div class="div-hero"><div class="div-hero-icon">📈</div><div class="div-hero-info"><h2>Trading본부</h2><p>주요 역할: LPG·LNG 글로벌 소싱 및 Optionality(페이퍼 포지션) 운용</p></div></div>
+   <div class="section-label">핵심업무 진척 타임라인</div>
+   <div class="tbl-wrap"><table>
+    <thead><tr><th>과제</th><th>1월</th><th>2월</th><th>3월</th><th>4월</th><th class="curr">최신현황 (5월)</th></tr></thead>
+    <tbody>
+     <tr><td>① FEI/Brent/MB 포지션 관리</td><td>FEI/Brent 104%, R/O Unwind 모니터링</td><td>미-이란 갈등, Unwind 80% → 실현익 +106억</td><td>중동전쟁(3/6), JKM +85.8%, 포지션 리밸런싱</td><td>FEI/Brent 91.4%, 변동성 모니터링</td><td class="curr">FEI/Brent 91.4% 수준 유지, 포지션 관리 중</td></tr>
+     <tr><td>② EcoEnergy Sourcing 최적화</td><td>EE 수요 예측 기반 소싱 계획</td><td>HH Optionality 구조 검토</td><td>HH Optionality 실행 검토</td><td>HH Unwind +6.6억 반영</td><td class="curr">4월 수익 확정, 다음 시즌 전략 준비</td></tr>
+     <tr><td>③ G&amp;P Sourcing 지원</td><td>동절기 재고 리스크 공유</td><td>LPG Optionality 구조 검토</td><td>G&amp;P LPG Optionality 실행(4.6+2.3만톤)</td><td>KET #3 Filling 연계 소싱 조율</td><td class="curr">Maersk(4/23) 계기 벙커링 소싱 협의</td></tr>
+     <tr><td>④ 신규 직매처 소싱 계약</td><td>현대케미칼 협의 착수</td><td>직매 볼륨 목표 설정</td><td>시황 급등 대응, 계약 조건 재협의</td><td>현대케미칼 '28년 60천톤 공급계약 추진</td><td class="curr">'28년 60천톤 소싱 계약 추진 중 (체결 임박)</td></tr>
+    </tbody>
+   </table></div>
+   <div class="section-label">주요 이슈</div>
+   <div class="issue-grid">
+    <div class="issue-card"><div class="issue-title">중동전쟁(3/6)</div><div class="issue-body">JKM 급등으로 LNG 포지션 수혜, LPG Spread 동반 상승. Trading 실현익 확대.</div></div>
+    <div class="issue-card"><div class="issue-title">FEI/Brent Unwind +106억</div><div class="issue-body">미-이란 갈등 격화 시점, Unwind 80% 완료 실현익 확보.</div></div>
+    <div class="issue-card"><div class="issue-title">현대케미칼 소싱 계약</div><div class="issue-body">LPG 직매 신규 대형 계약, '28년부터 60천톤. 체결 임박.</div></div>
+   </div>
+  </div>
+
+  <div class="div-panel" id="div-gps">
+   <div class="div-hero"><div class="div-hero-icon">⚡</div><div class="div-hero-info"><h2>GPS발전</h2><p>주요 역할: UGPS 발전소(울산, 1,227MW) 운전·정비, 연료 Optionality 운용, 지분매각 대응</p></div></div>
+   <div class="section-label">핵심업무 진척 타임라인</div>
+   <div class="tbl-wrap"><table>
+    <thead><tr><th>과제</th><th>1월</th><th>2월</th><th>3월</th><th>4월</th><th class="curr">최신현황 (5월)</th></tr></thead>
+    <tbody>
+     <tr><td>① GT 운전·정비(BI)</td><td>EPC 준공 완료(~1/12)</td><td>1월 손익 221억(계획 233억, -12억)</td><td>운전 정상화, BI 일정 관리</td><td>BI 완료(1호기 +4,000h, 2호기 +8,000h)</td><td class="curr">BI 완료, 설비 수명 연장, 안정 운전 체제</td></tr>
+     <tr><td>② SHE 관리(PSM·안전)</td><td>SHE 역량 확보, 전문인력 채용</td><td>PSM TF 발족</td><td>PSM 이행 점검</td><td>SUPEX SHE 진단 수검</td><td class="curr">SUPEX 진단 완료, 개선과제 이행 중</td></tr>
+     <tr><td>③ 연료 Optionality(LNG/LPG 혼소)</td><td>혼소 비율 최적화</td><td>LPG 시황 분석, 진입 검토</td><td>LPG 5월물 Optionality 진입(5.3만톤)</td><td>포지션 유지</td><td class="curr">5.3만톤 포지션 유지, Unwind 시점 모니터링</td></tr>
+     <tr><td>④ CfD(차액계약) 추진</td><td>구조 및 SMP 기준 검토</td><td>계약서 초안 준비</td><td>계약서 검토·협의</td><td>최종 조건 협의</td><td class="curr">계약서 협의 중, 체결 임박</td></tr>
+     <tr><td>⑤ GPS 지분매각 대응</td><td>Binding Offer 접수 준비</td><td>GPS MOU 체결(2/6), 이행보증금 76.5억</td><td>SPA 이견 조율</td><td>PF Waiver 추진, 매각 구조 최종화</td><td class="curr">SPA 최종 단계, PF Waiver 추진 중</td></tr>
+    </tbody>
+   </table></div>
+   <div class="section-label">주요 이슈</div>
+   <div class="issue-grid">
+    <div class="issue-card"><div class="issue-title">EPC 준공(~1/12)</div><div class="issue-body">발전소 건설 완료, 운영 단계로 전환.</div></div>
+    <div class="issue-card"><div class="issue-title">LPG 5.3만톤 Optionality(3월)</div><div class="issue-body">Trading·G&amp;P 연계, 연료비 헤지 목적.</div></div>
+    <div class="issue-card"><div class="issue-title">BI 완료(4월)</div><div class="issue-body">1·2호기 수명 연장, 중장기 발전 안정성 확보.</div></div>
+    <div class="issue-card"><div class="issue-title">GPS 지분매각</div><div class="issue-body">MOU(2/6) → SPA → PF Waiver → 최종 거래 단계.</div></div>
+   </div>
+  </div>
+
+  <div class="div-panel" id="div-strategy">
+   <div class="div-hero"><div class="div-hero-icon">🎯</div><div class="div-hero-info"><h2>전략본부</h2><p>주요 역할: 신사업 개발(에탄·벙커링·하와이), 중동 리스크 대응, Trading AI, 경영분석</p></div></div>
+   <div class="section-label">핵심업무 진척 타임라인</div>
+   <div class="tbl-wrap"><table>
+    <thead><tr><th>과제</th><th>1월</th><th>2월</th><th>3월</th><th>4월</th><th class="curr">최신현황 (5월)</th></tr></thead>
+    <tbody>
+     <tr><td>① 에탄 사업개발(SWAN 3.0)</td><td>공식 착수, FID 6월 목표 설정</td><td>STL/INEOS 에탄 공급 협의</td><td>K-Line 협의(3/4), 해운 구조 검토</td><td>북미 Upstream CEO 보고(4/23)</td><td class="curr">FID 6월 목표 유지, 북미 파트너 협의 중</td></tr>
+     <tr><td>② LNG 벙커링 구조화(EMFS)</td><td>벙커링 3대 핵심업무 정의</td><td>CMA-CGM·Maersk 유럽 출장(2/3~6)</td><td>Maersk 방한 일정 설정</td><td>Maersk 방한(4/23), G&amp;P 공동 대응</td><td class="curr">Maersk 협의 완료, 계약 구조 다음 단계</td></tr>
+     <tr><td>③ 하와이 LPG 발전 사업개발</td><td>타당성 검토 착수</td><td>공급·발전 연계 구조 설계</td><td>기술인프라 FEED 검토</td><td>사업성 검토 계속</td><td class="curr">기술인프라 지원 연계, 검토 진행 중</td></tr>
+     <tr><td>④ 중동 리스크 모니터링</td><td>이란 제재 리스크 모니터링</td><td>미-이란 갈등 심화, 리스크 상향</td><td>중동전쟁(3/6), 경영진 긴급 보고</td><td>시황 안정화 모니터링</td><td class="curr">전쟁 영향 지속 모니터링</td></tr>
+     <tr><td>⑤ Trading AI(AX) 개발</td><td>킥오프, 요구사항 정의</td><td>MI 시스템화 착수</td><td>MI 개발 진행, AI레터 구조 설계</td><td>AI레터 4/29 발송 예정</td><td class="curr">AI레터 운영 개시, AX 단계적 고도화</td></tr>
+     <tr><td>⑥ 경영분석·ZBB</td><td>연간 계획 수립</td><td>월별 경영분석 리포트</td><td>Q1 경영분석 취합</td><td>Q1 실적 분석·보고</td><td class="curr">Q1 분석 완료, Q2 예산 모니터링</td></tr>
+    </tbody>
+   </table></div>
+   <div class="section-label">주요 이슈</div>
+   <div class="issue-grid">
+    <div class="issue-card"><div class="issue-title">SWAN 3.0(에탄 FID 6월)</div><div class="issue-body">LNG/LPG 이후 차세대 원료 핵심 프로젝트. 북미 STL/INEOS/K-Line 협의 병행.</div></div>
+    <div class="issue-card"><div class="issue-title">중동전쟁(3/6)</div><div class="issue-body">전략본부가 경영진 보고 주관, SKA Framework 포함 전사 리스크 대응 총괄.</div></div>
+    <div class="issue-card"><div class="issue-title">Maersk 방한(4/23)</div><div class="issue-body">전략+G&amp;P 공동 대응, 벙커링 대형 고객 계약 구조 협의.</div></div>
+    <div class="issue-card"><div class="issue-title">Trading AI레터 운영 개시</div><div class="issue-body">4/29 첫 발송. AX 시스템 단계적 고도화 중.</div></div>
+   </div>
+  </div>
+
+  <div class="div-panel" id="div-finance">
+   <div class="div-hero"><div class="div-hero-icon">💰</div><div class="div-hero-info"><h2>재무본부</h2><p>주요 역할: 전사 M&amp;A·투자관리(GPS 매각, AGIC Exit), 결산·IFRS, GPIR 공시</p></div></div>
+   <div class="section-label">핵심업무 진척 타임라인</div>
+   <div class="tbl-wrap"><table>
+    <thead><tr><th>과제</th><th>1월</th><th>2월</th><th>3월</th><th>4월</th><th class="curr">최신현황 (5월)</th></tr></thead>
+    <tbody>
+     <tr><td>① GPS 발전소 지분매각</td><td>Binding Offer 준비, 매각 구조 설계</td><td>GPS MOU(2/6), 이행보증금 76.5억 수취</td><td>SPA 협상, 이견 축소</td><td>PF Waiver 추진, SPA 최종화</td><td class="curr">SPA 마무리 단계, PF Waiver 승인 진행 중</td></tr>
+     <tr><td>② AGIC Exit(두바이 지분 정리)</td><td>두바이 AGIC 미팅(1/20~22)</td><td>협상 조건 조율</td><td>SKA Framework 경영진 보고</td><td>AGIC Exit 완료(4/16)</td><td class="curr">완료 — SKA 지배구조 단순화 기여</td></tr>
+     <tr><td>③ PIC Exit 및 후속 처리</td><td>PIC 지분 매각 협의</td><td>PIC Exit 완료(2/10)</td><td>회계 처리·정산</td><td>후속 이슈 없음</td><td class="curr">완료</td></tr>
+     <tr><td>④ APOC Put Option 관리</td><td>행사 조건 모니터링</td><td>조건 검토</td><td>시황 영향 분석</td><td>행사 여부 결정 보류</td><td class="curr">모니터링 지속</td></tr>
+     <tr><td>⑤ 결산·IFRS 대응</td><td>Q4 2025 결산 마무리</td><td>Q1 2026 결산 준비</td><td>Q1 결산 진행</td><td>IFRS18 전환 착수(4/20)</td><td class="curr">IFRS18 전환 준비 중</td></tr>
+     <tr><td>⑥ GPIR 공시 관리</td><td>연간 공시 계획 수립</td><td>분기 공시 자료 준비</td><td>Q1 실적 공시 준비</td><td>Q1 실적 공시 완료</td><td class="curr">차기 공시 일정 준비 중</td></tr>
+    </tbody>
+   </table></div>
+   <div class="section-label">주요 이슈</div>
+   <div class="issue-grid">
+    <div class="issue-card"><div class="issue-title">GPS 매각(M&amp;A 핵심 딜)</div><div class="issue-body">MOU(2/6) → SPA → PF Waiver → 최종 거래. 재무본부 주관.</div></div>
+    <div class="issue-card"><div class="issue-title">AGIC Exit 완료(4/16)</div><div class="issue-body">두바이 AGIC 지분 정리. SKA 구조개편 핵심 퍼즐 완성.</div></div>
+    <div class="issue-card"><div class="issue-title">IFRS18 착수(4/20)</div><div class="issue-body">새 수익 공시 기준 전환, 결산 체계 변경 수반.</div></div>
+   </div>
+  </div>
+
+  <div class="div-panel" id="div-techinfra">
+   <div class="div-hero"><div class="div-hero-icon">🔧</div><div class="div-hero-info"><h2>기술인프라본부</h2><p>주요 역할: 설비안전(SHE), CEC·KET EPC 관리, 에탄 FEED, 평택기지 준설, 품질관리</p></div></div>
+   <div class="section-label">핵심업무 진척 타임라인</div>
+   <div class="tbl-wrap"><table>
+    <thead><tr><th>과제</th><th>1월</th><th>2월</th><th>3월</th><th>4월</th><th class="curr">최신현황 (5월)</th></tr></thead>
+    <tbody>
+     <tr><td>① SHE·설비안전 관리</td><td>정기 점검 계획 수립</td><td>PSM 이행 점검</td><td>CEC-KET HAZOP 착수</td><td>설비안전 O/I팀 신설(5/1 예정)</td><td class="curr">O/I팀 신설 준비 완료, 5/1부 운영</td></tr>
+     <tr><td>② CEC 2단계 EPC(LNG 저장탱크)</td><td>EPC 진행률 80.89%</td><td>C3 배관 착공(2/19)</td><td>CEC-KET HAZOP 착수</td><td>CEC #3 Tank Filling 진행</td><td class="curr">#3 Tank Filling 진행 중, EPC 완료 임박</td></tr>
+     <tr><td>③ 에탄 FEED(SWAN 3.0 연계)</td><td>FEED 착수</td><td>FEED 진행, STL/INEOS 설비 요건 협의</td><td>FEED 진행</td><td>에탄 FEED Case 3개 병행 검토</td><td class="curr">Case 3개 검토 중, 6월 FID 목표 진행</td></tr>
+     <tr><td>④ 냉열공급 EPC</td><td>냉열 FEED 완료(12/24 기완)</td><td>EPC 발주 준비</td><td>EPC 착수 준비</td><td>냉열 EPC 진행</td><td class="curr">EPC 초기 단계 진행 중</td></tr>
+     <tr><td>⑤ 평택기지 준설</td><td>공사 계획 수립</td><td>착공 준비</td><td>준설 공사 준비 완료</td><td>평택 준설 착공</td><td class="curr">착공 완료, 공사 진행 중</td></tr>
+     <tr><td>⑥ SKA 수전점·충전소 EPC</td><td>착공 준비</td><td>SKA 수전점 착공(2/9)</td><td>SKA 인력 4명 기술인프라 이동(3/3)</td><td>공사 정상 진행</td><td class="curr">SKA 수전점 공사 진행 중</td></tr>
+    </tbody>
+   </table></div>
+   <div class="section-label">주요 이슈</div>
+   <div class="issue-grid">
+    <div class="issue-card"><div class="issue-title">CEC #3 Tank 완공 임박</div><div class="issue-body">EPC 80.89%(1월) → Filling(4월). 완공 직전.</div></div>
+    <div class="issue-card"><div class="issue-title">에탄 FEED Case 3개(4월)</div><div class="issue-body">SWAN 3.0 FID 옵션 다각화, 6월 FID 전 기술 검토 병행.</div></div>
+    <div class="issue-card"><div class="issue-title">O/I팀 신설(5/1)</div><div class="issue-body">기술인프라 설비안전 조직 강화. 발전소·터미널 복합 운영 대응.</div></div>
+    <div class="issue-card"><div class="issue-title">평택 준설 착공(4월)</div><div class="issue-body">기지 접안 능력 확보, LNG 수송 최적화 기여.</div></div>
+   </div>
+  </div>
+
+  <div class="div-panel" id="div-ska">
+   <div class="div-hero"><div class="div-hero-icon">🧪</div><div class="div-hero-info"><h2>SKA</h2><p>주요 역할: PDH(프로판탈수소) 운영, UPP(PP 생산), 지분구조 개편</p></div></div>
+   <div class="section-label">핵심업무 진척 타임라인</div>
+   <div class="tbl-wrap"><table>
+    <thead><tr><th>과제</th><th>1월</th><th>2월</th><th>3월</th><th>4월</th><th class="curr">최신현황 (5월)</th></tr></thead>
+    <tbody>
+     <tr><td>① PDH 운영(프로판→프로필렌)</td><td>Spread $174/톤, 정상 운영</td><td>PIC Exit 완료(2/10), 공헌이익 저마진</td><td>중동전쟁(3/6) → Spread $310/톤</td><td>Spread $646/톤 (사상 최고), 풀가동</td><td class="curr">Spread $646/톤 유지, 수익성 극대화</td></tr>
+     <tr><td>② UPP(폴리프로필렌 생산)</td><td>PP 판매 계획, 재고 관리</td><td>PP 마진 저조 구간</td><td>PP Spread 회복</td><td>PP 생산 정상화</td><td class="curr">UPP 연계 PP 생산·판매 정상 운영</td></tr>
+     <tr><td>③ 지분구조 개편(H사·PMC·AGIC)</td><td>H사 DD Kick-off(1/7)</td><td>H사 DD 진행, PMC 협의 착수</td><td>SKA Framework 경영진 보고(3/6)</td><td>AGIC Exit 완료(4/16), 5월 이사회 목표</td><td class="curr">AGIC Exit 완료, H사 통합 5월 이사회 승인 추진</td></tr>
+     <tr><td>④ 에탄·프로판 원료 조달</td><td>수급 계획 수립</td><td>소싱 구조 최적화</td><td>시황 급등 원료비 영향 점검</td><td>고마진 구간 원료 Lock-in 전략</td><td class="curr">원료 조달 안정적, Spread 유지 전략 유효</td></tr>
+    </tbody>
+   </table></div>
+   <div class="section-label">주요 이슈</div>
+   <div class="issue-grid">
+    <div class="issue-card"><div class="issue-title">Spread 흐름 (사상 최고)</div><div class="issue-body">$174(1월) → $310(3월, 중동전쟁) → $646(4월). 연초 저마진에서 사상 최고로 전환.</div></div>
+    <div class="issue-card"><div class="issue-title">AGIC Exit 완료(4/16)</div><div class="issue-body">재무+전략본부 공동 추진. SKA 구조 개편 핵심 완료.</div></div>
+    <div class="issue-card"><div class="issue-title">H사 통합 — 5월 이사회</div><div class="issue-body">H사 DD(1/7~), SKA 지배구조 최종 정리 단계.</div></div>
+   </div>
+  </div>
+
+ </div>
+</div>
+
 <script>
-// ── ECharts 차트 정의 (전사실적 페이지) ─────────────────────────────────────
-function _renderChart(id, option) {
-  var dom = document.getElementById(id);
-  if (!dom || !window.echarts) return;
-  var ex = echarts.getInstanceByDom(dom);
-  if (ex) ex.dispose();
-  var c = echarts.init(dom);
-  c.setOption(option);
-  window.addEventListener('resize', function() { c.resize(); });
+function switchMain(id, btn) {
+  document.querySelectorAll('.section').forEach(function(s){s.classList.remove('active');});
+  document.getElementById('section-'+id).classList.add('active');
+  document.getElementById('sub-biz').style.display = id==='biz' ? 'flex' : 'none';
+  document.getElementById('sub-div').style.display = id==='div' ? 'flex' : 'none';
+  document.querySelectorAll('.main-tab').forEach(function(t){t.classList.remove('active');});
+  btn.classList.add('active');
 }
-
-function _initChartAnnual() {
-  _renderChart('chart-annual', {
-    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' },
-      formatter: function(p) {
-        var s = p[0].name + '<br/>';
-        p.forEach(function(x) {
-          if (x.value != null) s += x.marker + ' ' + x.seriesName + ': <b>' + x.value.toLocaleString() + '억</b><br/>';
-        });
-        return s;
-      }
-    },
-    legend: { bottom: 0, type: 'scroll' },
-    grid: { left: '3%', right: '4%', bottom: '15%', containLabel: true },
-    xAxis: { type: 'category', data: ["'25실적", "'26목표", "'27전망", "'28전망", "'29전망", "'30전망"] },
-    yAxis: { type: 'value', name: '억원',
-      axisLabel: { formatter: function(v) { return v.toLocaleString(); } }
-    },
-    series: [
-      { name: 'GPS (발전)', type: 'bar', stack: 'biz',
-        data: [1304, 1725, null, null, null, null], itemStyle: { color: '#5470c6' } },
-      { name: 'LPG Biz.', type: 'bar', stack: 'biz',
-        data: [2132, 1841, 1571, 1670, 1896, 2063], itemStyle: { color: '#91cc75' } },
-      { name: 'LNG Biz.', type: 'bar', stack: 'biz',
-        data: [null, 143, 277, 540, 859, 1075], itemStyle: { color: '#fac858' } },
-      { name: 'SK가스 연결 세전이익', type: 'line',
-        data: [3142, 3050, null, null, null, null],
-        lineStyle: { type: 'dashed', width: 2, color: '#ee6666' },
-        itemStyle: { color: '#ee6666' }, symbol: 'circle', symbolSize: 8,
-        label: { show: true, position: 'top',
-          formatter: function(p) { return p.value ? p.value.toLocaleString() : ''; } }
-      }
-    ]
-  });
+function switchSub(section, id, btn) {
+  var pClass = section==='biz' ? '.biz-panel' : '.div-panel';
+  var prefix = section==='biz' ? 'biz-' : 'div-';
+  document.querySelectorAll(pClass).forEach(function(p){p.classList.remove('active');});
+  document.getElementById(prefix+id).classList.add('active');
+  document.getElementById('sub-'+section).querySelectorAll('.sub-tab').forEach(function(t){t.classList.remove('active');});
+  btn.classList.add('active');
 }
-
-function _initChartQ1() {
-  _renderChart('chart-q1', {
-    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' },
-      formatter: function(p) {
-        var s = p[0].axisValue + '<br/>';
-        p.forEach(function(x) { s += x.marker + ' ' + x.seriesName + ': <b>' + x.value.toLocaleString() + '억</b><br/>'; });
-        return s;
-      }
-    },
-    legend: { bottom: 0 },
-    grid: { left: '3%', right: '12%', bottom: '12%', containLabel: true },
-    xAxis: { type: 'value', name: '억원',
-      axisLabel: { formatter: function(v) { return v.toLocaleString(); } }
-    },
-    yAxis: { type: 'category', data: ['G&P (LNG Opt.)', 'Trading', 'Eco Energy', 'GPS (발전)'] },
-    series: [
-      { name: '목표', type: 'bar', data: [61, 525, 508, 542],
-        itemStyle: { color: '#ccc' },
-        label: { show: true, position: 'insideRight',
-          formatter: function(p) { return p.value.toLocaleString(); } }
-      },
-      { name: '실적', type: 'bar',
-        data: [272, 933, 150, 554],
-        itemStyle: { color: function(p) {
-          var a = [272, 933, 150, 554], t = [61, 525, 508, 542];
-          return a[p.dataIndex] >= t[p.dataIndex] ? '#5fb552' : '#e05252';
-        }},
-        label: { show: true, position: 'right',
-          formatter: function(p) { return p.value.toLocaleString() + '억'; }
-        }
-      }
-    ]
-  });
-}
-
-// ── Docsify 설정 ──────────────────────────────────────────────────────────────
-window.$docsify = {
-  name: 'SK가스 사업 지식베이스',
-  repo: '',
-  loadSidebar: true,
-  subMaxLevel: 2,
-  search: { placeholder: '검색', noData: '검색 결과 없음', depth: 3 },
-  auto2top: true,
-  plugins: [
-    function(hook) {
-      hook.doneEach(function() {
-        // 페이지 렌더 후 200ms 대기 후 차트 그리기
-        setTimeout(function() {
-          if (document.getElementById('chart-annual')) _initChartAnnual();
-          if (document.getElementById('chart-q1'))    _initChartQ1();
-        }, 200);
-      });
-    }
-  ]
-};
 </script>
-<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>
