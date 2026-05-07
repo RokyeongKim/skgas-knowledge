@@ -49,6 +49,32 @@ body { font-family: 'Apple SD Gothic Neo','Malgun Gothic',-apple-system,sans-ser
 .hero-bun { background: linear-gradient(135deg,#1a237e,#5c6bc0); }
 .hero-ess { background: linear-gradient(135deg,#004d40,#26a69a); }
 .hero-ska { background: linear-gradient(135deg,#4a148c,#ab47bc); }
+.hero-trading { background: linear-gradient(135deg,#b45309,#f59e0b); }
+/* CEO Letter styles */
+.ceo-date-badge { background: var(--sk-orange); color: white; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 12px; }
+.ceo-market { display: grid; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); gap: 12px; margin-bottom: 20px; }
+.ceo-market-card { background: white; border: 1px solid var(--gray-200); border-radius: 10px; padding: 14px 16px; }
+.ceo-market-card .label { font-size: 11px; color: #6b7280; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 8px; }
+.ceo-market-card .value { font-size: 22px; font-weight: 700; color: var(--gray-900); margin-bottom: 3px; }
+.ceo-market-card .sub { font-size: 11px; color: #6b7280; line-height: 1.4; }
+.ceo-market-card.alert { border-left: 4px solid var(--red); }
+.ceo-market-card.alert .value { color: var(--red); }
+.ceo-market-card.good { border-left: 4px solid var(--green); }
+.ceo-market-card.good .value { color: var(--green); font-size: 16px; }
+.ceo-market-card.neutral { border-left: 4px solid var(--sk-blue); }
+.ceo-priority { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 14px; margin-bottom: 20px; }
+.ceo-priority-item { background: white; border: 1px solid var(--gray-200); border-radius: 10px; padding: 14px 16px; display: flex; gap: 12px; }
+.ceo-priority-num { width: 28px; height: 28px; border-radius: 50%; background: var(--sk-blue); color: white; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+.ceo-priority-content h4 { font-size: 13px; font-weight: 700; color: var(--gray-900); margin-bottom: 5px; }
+.ceo-priority-content p { font-size: 12px; color: var(--gray-700); line-height: 1.6; }
+.ceo-toggle { background: none; border: 1px solid var(--gray-200); border-radius: 6px; padding: 6px 14px; font-size: 12px; color: var(--gray-700); cursor: pointer; margin-bottom: 12px; }
+.ceo-toggle:hover { background: var(--gray-100); }
+.ceo-letter-text { background: white; border: 1px solid var(--gray-200); border-radius: 10px; padding: 20px 24px; font-size: 13px; line-height: 2.0; color: var(--gray-700); white-space: pre-wrap; }
+.ceo-letter-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.ceo-letter-item { background: white; border: 1px solid var(--gray-200); border-radius: 8px; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.ceo-letter-item .letter-date { font-size: 13px; font-weight: 600; color: var(--sk-blue); }
+.ceo-letter-item .letter-preview { font-size: 12px; color: #6b7280; flex: 1; min-width: 160px; }
+.ceo-letter-badge { font-size: 11px; padding: 2px 8px; border-radius: 9999px; background: var(--sk-orange); color: white; font-weight: 600; white-space: nowrap; }
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 16px; margin-bottom: 20px; }
 .card { background: white; border: 1px solid var(--gray-200); border-radius: 10px; padding: 16px 18px; }
 .card-title { font-size: 11px; color: #6b7280; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
@@ -99,6 +125,7 @@ th.curr { background: #f06400 !important; }
 <div class="main-tab-bar">
   <button class="main-tab active" onclick="switchMain('biz',this)">사업현황</button>
   <button class="main-tab" onclick="switchMain('div',this)">본부현황</button>
+  <button class="main-tab" onclick="switchMain('ceo',this)">CEO Letter</button>
 </div>
 <div class="sub-tab-bar" id="sub-biz" style="display:flex;">
   <button class="sub-tab active" onclick="switchSub('biz','lng',this)">LNG</button>
@@ -107,6 +134,7 @@ th.curr { background: #f06400 !important; }
   <button class="sub-tab" onclick="switchSub('biz','bun',this)">벙커링(EMFS)</button>
   <button class="sub-tab" onclick="switchSub('biz','ess',this)">ESS</button>
   <button class="sub-tab" onclick="switchSub('biz','ska',this)">SKA(PDH)</button>
+  <button class="sub-tab" onclick="switchSub('biz','trading',this)">Trading</button>
 </div>
 <div class="sub-tab-bar" id="sub-div" style="display:none;">
   <button class="sub-tab active" onclick="switchSub('div','ecoenergy',this)">EcoEnergy본부</button>
@@ -274,6 +302,35 @@ th.curr { background: #f06400 !important; }
     <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>AGIC Exit 완료(4/16)</strong> — 두바이 AGIC 지분 정리. SKA 지배구조 단순화 핵심 퍼즐 완성.</div></div>
     <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>H사 통합 — 5월 이사회 승인 추진 중</strong> — H사 DD(1/7~), SKA 지배구조 최종 정리 단계.</div></div>
     <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>PIC Exit 완료(2/10)</strong> — 재무본부 주관, 구조 단순화 완료.</div></div>
+   </div>
+  </div>
+
+  <div class="biz-panel" id="biz-trading">
+   <div class="biz-hero hero-trading"><h1>Trading 사업</h1><p>LPG·LNG Optionality 운용 핵심 엔진 — FEI·MB·Brent 기반 페이퍼 포지션<br>1분기 Trading position 수익이 전사 우수 성과의 핵심 동인 · MB 북미 물량 가격 경쟁력으로 SKA 기여</p></div>
+   <div class="card-grid">
+    <div class="card"><div class="card-title">1분기 실현익 (FEI/Brent)</div><div class="metric">+106억</div><div class="metric-sub">2월 Unwind 80% 완료</div></div>
+    <div class="card"><div class="card-title">HH Optionality 실현익</div><div class="metric">+6.6억</div><div class="metric-sub">4월 Unwind 완료</div></div>
+    <div class="card"><div class="card-title">MB 수입 경쟁력</div><div class="metric" style="font-size:16px;">CP 대비 우위</div><div class="metric-sub">LPG CP 40% 급등 시 MB 인상폭 적어 → SKA 성과개선 기여</div></div>
+    <div class="card"><div class="card-title">현재 포지션 수준</div><div class="metric" style="font-size:16px;">FEI/Brent 91.4%</div><div class="metric-sub">고변동성 시황 모니터링 중</div></div>
+   </div>
+   <div class="section-label">밸류체인</div>
+   <div class="value-chain">
+    <div class="vc-step"><div class="icon">🌍</div><div class="name">시황 분석</div><div class="desc">JKM·FEI·MB·Brent<br>글로벌 가격 모니터링</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">📊</div><div class="name">포지션 진입</div><div class="desc">페이퍼 포지션 구성<br>물리·파이낸셜 헤지</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">🔗</div><div class="name">사업 연계</div><div class="desc">LPG·LNG 사업 연계<br>Optionality 실행 지원</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">💹</div><div class="name">Unwind</div><div class="desc">최적 시점 포지션 해소<br>실현익 확정</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">💵</div><div class="name">수익</div><div class="desc">Trading 실현익<br>전사 수익 기여</div></div>
+   </div>
+   <div class="section-label">최신 업데이트 <span class="badge badge-blue">CEO Letter 5/7 · 주간보고 5/4</span></div>
+   <div class="update-list">
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>1분기 Trading position 수익으로 전사 목표 대비 우수한 성과 (CEO Letter)</strong> — 연초부터 준비한 포지션이 중동전쟁(3/6) 시황 수혜로 기여. 1분기 성과의 핵심 동인.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>MB 북미 수입 물량 가격 경쟁력 확보</strong> — LPG CP 40% 급등 시 MB 인상폭 상대적으로 작아 → SKA 원료비 절감 및 흑자전환 기여.</div></div>
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>2분기 포지션 전략 수립 중</strong> — 브렌트유 $110, JKM $17/MMBtu 고가 지속. 에너지 가격 변동성 구간, 최적 의사결정 시기. CEO: "우리가 선택할 수 있는 Option들이 많은 것은 큰 힘".</div></div>
+    <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>현대케미칼 LPG 소싱 계약 추진 중</strong> — '28년부터 60천톤. 직매 신규 대형 계약, 체결 임박.</div></div>
    </div>
   </div>
 
@@ -461,6 +518,122 @@ th.curr { background: #f06400 !important; }
  </div>
 </div>
 
+<div class="section" id="section-ceo">
+ <div class="content">
+  <div style="margin-bottom:20px;">
+   <span class="ceo-date-badge">최신 · 2026년 5월 7일</span>
+   <h2 style="font-size:18px;font-weight:700;color:var(--gray-900);margin-bottom:4px;">CEO Letter — 계절의 여왕 5월, 위기를 기회로</h2>
+   <p style="font-size:12px;color:#6b7280;">Chief Enabling Officer 윤병석 · 미-이란 전쟁 장기화, 브렌트 $110, 1분기 우수성과 · 2분기 리스크 관리 당부</p>
+  </div>
+
+  <div class="section-label">현재 시황 <span class="badge badge-blue">CEO Letter 기준</span></div>
+  <div class="ceo-market">
+   <div class="ceo-market-card alert">
+    <div class="label">브렌트유</div>
+    <div class="value">$110/배럴</div>
+    <div class="sub">미-이란 전쟁·호르무즈 봉쇄 2달+ 지속<br>당분간 고유가 유지 전망</div>
+   </div>
+   <div class="ceo-market-card alert">
+    <div class="label">LNG JKM</div>
+    <div class="value">$17/MMBtu</div>
+    <div class="sub">에너지 가격 연동 상승<br>LPG 동반급등으로 Optionality Spread 미확보</div>
+   </div>
+   <div class="ceo-market-card alert">
+    <div class="label">LPG CP (5월)</div>
+    <div class="value">4월 대비 동결</div>
+    <div class="sub">3월 대비 40% 급등 후 유지<br>민수 원가 회수 어려움 → 2분기 손익 부담</div>
+   </div>
+   <div class="ceo-market-card good">
+    <div class="label">MB (미국 Mont Belvieu)</div>
+    <div class="value">상대적 우위</div>
+    <div class="sub">CP 대비 인상폭 적음<br>→ 북미 수입물량 가격경쟁력 · SKA 성과기여</div>
+   </div>
+  </div>
+
+  <div class="section-label">사업 성과 · 리스크 요약</div>
+  <div class="update-list">
+   <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>1분기 목표 대비 우수한 성과</strong> — Trading position 수익 + SKA 흑자전환이 핵심 동인. 연초부터 준비한 전략 포지션이 중동 시황 수혜로 기여.</div></div>
+   <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>SKA 흑자전환</strong> — MB 가격 경쟁력(CP 대비) + PDH Spread $646/톤 (사상 최고). 수년간 적자 탈피.</div></div>
+   <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>2분기 리스크 — 민수가격 원가 부담</strong> — LPG CP 급등분이 민수 판매가에 즉시 반영 어려움. 고객 affordability 보호 방침으로 2분기 손익 네거티브 불가피.</div></div>
+   <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>LNG JKM·LPG 동반 급등 → Optionality Spread 충분치 않음</strong> — LNG-LPG 간 Spread 미확보. 2분기 시황 의사결정이 연간 성과에 큰 영향.</div></div>
+   <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>일본 출장 인사이트 (4월말)</strong> — LNG 상황·석유화학 구조조정 사례 청취. 일본 상사 LNG 모델 벤치마킹. CEO: "일본 업체와의 협력은 선택이 아닌 필수".</div></div>
+  </div>
+
+  <div class="section-label">CEO 집중사항 — 5월 4가지 당부</div>
+  <div class="ceo-priority">
+   <div class="ceo-priority-item">
+    <div class="ceo-priority-num">1</div>
+    <div class="ceo-priority-content">
+     <h4>SKA·GPS 소정수 안전완료 및 정상 가동</h4>
+     <p>SKA: SKMU 전력 수전 위한 소정수 진행 중. GPS: 법정검사 대비 사전 작업. 수년 적자 탈피한 지금, 하절기 Peak 전 안전한 적기 재가동이 도약의 필수 조건.</p>
+    </div>
+   </div>
+   <div class="ceo-priority-item">
+    <div class="ceo-priority-num">2</div>
+    <div class="ceo-priority-content">
+     <h4>고객과의 상생</h4>
+     <p>CP 급등에도 고객 affordability 보호. LPG 고객 중 경제적 약자 비중 고려. 2분기 손익 희생하더라도 에너지 공급자 사회적 책임 이행.</p>
+    </div>
+   </div>
+   <div class="ceo-priority-item">
+    <div class="ceo-priority-num">3</div>
+    <div class="ceo-priority-content">
+     <h4>중기 수익구조 확보</h4>
+     <p>에너지가격 안정 시 Optionality 수익 감소 대비. 기존 사업 규모 확대 + 경제적 해자 사업모델 확장. G&amp;P본부: 울산 구조적 장점 활용 추가 고객 확보 총력.</p>
+    </div>
+   </div>
+   <div class="ceo-priority-item">
+    <div class="ceo-priority-num">4</div>
+    <div class="ceo-priority-content">
+     <h4>SHE · 공정거래 · Operation Excellency</h4>
+     <p>모든 전략의 기반. "아무리 좋은 전략과 사업모델이 있어도 기본이 무너지면 아무것도 남지 않는다." 안전·공정경쟁·안정운영 최우선.</p>
+    </div>
+   </div>
+  </div>
+
+  <div class="section-label">CEO Letter 원문</div>
+  <button class="ceo-toggle" onclick="toggleLetter(this)">원문 펼치기 ▼</button>
+  <div id="ceo-letter-body" style="display:none;">
+   <div class="ceo-letter-text">구성원 여러분,
+
+어느덧 봄을 알리는 4월이 지나고 계절의 여왕이라고 부르는 5월을 맞이하였습니다. 지난 며칠간의 연휴를 많은 구성원들이 즐기셨기 바라고, 연휴에도 현장을 지켜주신 구성원 분들에게는 진심으로 감사의 말씀을 전합니다. 미국과 이란 전쟁이 1달의 휴전 기간에도 불구하고 다시 상황이 악화될 수도 있는 어디로 갈지 모르는 예측 불가의 상황으로 가고 있습니다. 아마도 5월 한달 간의 상황이 우리 사업에 큰 영향을 줄 것으로 예상되고, 상황에 따라 우리에게 최적의 해답을 찾는 작업이 필요한 시기가 될 것으로 보입니다.
+
+2달 이상의 전쟁과 호르므즈 해협의 봉쇄로 에너지 시장은 고유가와 이에 따른 전체 에너지 가격이 높은 상황이 계속되고 있습니다. 오늘 현재 브렌트유는 배럴 당 110불 수준으로 계속 높게 유지되고 있고, LNG JKM 가격은 mmbtu 당 17불 수준에서 형성되고 있습니다. LPG 가격도 4월 CP가 3월 대비 40% 가까이 급등 후 5월 CP도 동결되면서 우리에게 원가 부담이 가중되고 있습니다. 현재 가격 수준은 CP의 단기 급등으로 민수 가격은 원가 반영이 어려워 원가 회수가 어려운 상황이고, LNG 가격은 LPG 가격의 동반 급등으로 Optionality에 충분한 spread는 확보되지 않는 수준입니다. LPG의 또다른 가격인 미국 MB는 상대적으로 인상 폭이 적어서 우리의 미국에서의 수입 물량은 상대적으로 가격 경쟁력을 가지고 있고, 이는 SKA의 성과개선에 큰 도움이 되고 있습니다. 1분기에는 작년부터 준비한 trading position의 도움과 SKA의 흑자 전환으로 목표 대비 우수한 성과가 예상되지만, 민수 가격의 원가 부담과 유가 및 JKM의 상승이 가스공사의 공급 가격에 영향을 주는데 시차가 있기 때문에 2분기의 성과는 리스크 관리가 필요한 상황입니다. 하지만, 에너지 가격의 변동이 큰 시장에서 우리가 선택할 수 있는 Option들이 많은 것은 큰 힘으로 작용할 수 있으므로, 리더들과 머리를 맞대고 시황에 따른 최적의 의사 결정을 통하여 "위기를 기회로" 만드는 한 해가 되도록 최선을 다하겠습니다.
+
+올해 좋은 성과를 내기 위해, 그리고 이 성과의 지속 가능성을 확보하기 위해서 지금 시점에서 중요한 몇 가지를 구성원 여러분들과 공유하고 일부 당부도 드리겠습니다.
+
+1. SKA와 GPS의 안정적 소정수 및 정상 가동: 현재 GPS는 법정검사에 대비한 사전 작업을 위하여, SKA는 SKMU로부터 전력을 받아 전력 비용을 절감하기 위한 소정수가 진행 중입니다. 어떻게 보면 큰 공사가 아니라고 볼 수 있지만, 생소한 작업도 있고, 익숙한 작업은 익숙함에서 오는 실수가 있기 때문에 반드시 리더들을 중심으로 안전하고 일정에 차질이 없도록 진행해주시기 바랍니다. 특히, 수년 간의 적자를 벗어난 지금 시황에서 안전한 적기 작업 완료 후 재가동은 SKA의 새로운 도약을 위해 반드시 필요한 요소입니다. 법정검사 준비와 일부 부품의 보완 작업이 이루어지고 있는 GPS의 안전한 outage도 꼭 부탁드립니다. 이번 준비를 통하여 전력 사업의 peak인 하절기에 비계획 정지가 없는 GPS의 운영을 기대합니다.
+
+2. 고객과의 상생: 위에서 말씀드린 것처럼, CP의 급등으로 민수 판매에서 수익 확보가 어려운 상황입니다. 단기 성과를 고려하면 빠르게 원가 상승 분을 가격에 반영해야 하지만, 우리가 한가지 더 고려해야 하는 것은 우리 "고객의 affordability" 입니다. 즉, 고객의 급격하고 과도한 비용 상승을 막아주는 역할을 우리가 해야 합니다. 특히, LPG 고객 중 많은 분들이 상대적으로 경제적 약자에 계신 분들이 많다는 점을 고려하면, 지금과 같이 어려운 시기에 우리는 에너지 공급자로서의 책임을 잊지 않아야 합니다. 2분기 손익에는 많은 네거티브 영향이 있겠지만, 고객과 함께 이 어려운 시기를 지나야 한다는 점을 우리 모두 명심해야 합니다.
+
+3. 단기 성과를 넘는 중기 수익 구조의 확보: 올해는 단기 유가의 상승과 LNG spot 가격의 상승으로 좋은 재무 성과가 가능하더라도 에너지 가격이 안정되면 우리의 독특한 수익 창출 모델인 Optionality 기회가 사라지는 등 수익창출 능력이 떨어질 수 있습니다. 이에 대한 대비는 "기존 사업의 규모 확대와 경제적 해자를 보유한 사업모델의 확장"입니다. 특히, G&amp;P본부는 울산에서 우리의 구조적 장점을 활용한 추가 고객 확보에 총력을 다해주시고 가시적인 성과를 만들어 주기 바랍니다.
+
+4. SHE/공정거래/ Operation Excellency: 위의 3가지 강조된 지금 시점에 이루어야 하는 것들을 확보하기 위한 기반이 이 3가지 요소입니다. 안전하고 안정적인 Operation을 유지하는 것과 공정한 경쟁 하에 우리 사업을 발전시켜 나가야 하는 점들은 구성원 여러분 모두가 한시라도 잊지 말아야 하는 요소들입니다. 아무리 좋은 전략과 사업모델이 있어도 기본이 무너지면 아무것도 남지 않는다는 점을 여러분 모두가 명심해 주시기 바랍니다.
+
+4월말에 일본 출장을 가서 일본의 LNG 상황과 석유화학 업계의 상황을 살펴보고 사업 기회를 논의하는 시간을 가졌습니다. 우리보다 앞서서 구조조정 시기를 겪고 있는 일본의 상황에서 많은 것을 배우고, 또한 그곳에서 협력의 기회를 찾아야 하고, LNG 사업도 앞서 나간 일본 상사들의 모델에서 많은 점들을 배웠습니다. 그리고, 다양한 분야에서 일본 업체들과의 협력은 선택이 아닌 필수라는 생각도 더욱 강하게 느끼는 기회였습니다.
+
+1분기의 우수한 성과를 이어가고, 3분기 수익 창출을 위한 준비가 이루어지는 2분기가 '26년 한해 성과의 크기 중 많은 부분이 정해지는 시기입니다. 아마도 에너지 가격은 당분간 높게 유지되면서 변동성이 계속 생기는 다이나믹한 상황이 일정 기간 유지될 것입니다. 이 시기에 우리의 몇 개의 의사결정이 전체 성과에 큰 영향을 주므로, 리더들과 한마음으로 한곳을 바라보면서 최선의 선택을 해 나가겠습니다. 여러분들은 각자 맡은 업무들을 안전하고 안정적으로 수행해 주면서 SK가스의 기본이 지켜지는 것을 최우선 순위로 삼고 하루 하루 최선을 다해주시기 바랍니다.
+
+가정의 달에 일 뿐 아니라 가까운 분들과의 관계도 강하게 만드는 기회들을 만드시기 바랍니다. 또한, 회사에서 준비하고 있는 5월 30일 Family Day에 재미있고 의미있는 프로그램들을 준비하고 있으니, 많은 참여를 부탁 드립니다.
+
+감사합니다.
+
+2026년 5월 7일
+Chief Enabling Officer 윤병석 올림</div>
+  </div>
+
+  <div class="section-label" style="margin-top:24px;">Letter 히스토리</div>
+  <div class="ceo-letter-list">
+   <div class="ceo-letter-item">
+    <span class="letter-date">2026년 5월 7일</span>
+    <span class="letter-preview">계절의 여왕 5월 · 브렌트 $110 · JKM $17 · 1분기 우수성과 · SKA 흑자전환 · 2분기 리스크 관리</span>
+    <span class="ceo-letter-badge">최신</span>
+   </div>
+  </div>
+
+ </div>
+</div>
+
 <script>
 function switchMain(id, btn) {
   document.querySelectorAll('.section').forEach(function(s){s.classList.remove('active');});
@@ -477,6 +650,16 @@ function switchSub(section, id, btn) {
   document.getElementById(prefix+id).classList.add('active');
   document.getElementById('sub-'+section).querySelectorAll('.sub-tab').forEach(function(t){t.classList.remove('active');});
   btn.classList.add('active');
+}
+function toggleLetter(btn) {
+  var body = document.getElementById('ceo-letter-body');
+  if (body.style.display === 'none') {
+    body.style.display = 'block';
+    btn.textContent = '원문 접기 ▲';
+  } else {
+    body.style.display = 'none';
+    btn.textContent = '원문 펼치기 ▼';
+  }
 }
 </script>
 </body>
