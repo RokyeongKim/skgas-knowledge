@@ -114,6 +114,30 @@ th.curr { background: #f06400 !important; }
 .issue-card { background: var(--sk-blue-light); border: 1px solid #c7d9f8; border-radius: 8px; padding: 12px 14px; }
 .issue-card .issue-title { font-size: 12px; font-weight: 700; color: var(--sk-blue); margin-bottom: 6px; }
 .issue-card .issue-body { font-size: 12px; color: var(--gray-700); line-height: 1.5; }
+.dot-red { background: var(--red); }
+.tank-terminal-section { background: white; border: 1px solid var(--gray-200); border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+.terminal-group { margin-bottom: 16px; }
+.terminal-group:last-child { margin-bottom: 0; }
+.terminal-label { font-size: 12px; font-weight: 700; color: white; background: var(--sk-blue); display: inline-block; padding: 4px 12px; border-radius: 4px; margin-bottom: 12px; }
+.tank-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.tank-card { flex: 1; min-width: 170px; border: 2px solid var(--gray-200); border-radius: 10px; padding: 14px; }
+.tank-num { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+.tank-status-badge { display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 10px; font-weight: 700; margin-bottom: 8px; }
+.tank-operating { border-color: var(--green); background: var(--green-light); }
+.tank-operating .tank-num { color: var(--green); }
+.tank-operating .tank-status-badge { background: var(--green); color: white; }
+.tank-imminent { border-color: var(--amber); background: var(--amber-light); }
+.tank-imminent .tank-num { color: var(--amber); }
+.tank-imminent .tank-status-badge { background: var(--amber); color: white; }
+.tank-pre-cod { border-color: #9ca3af; background: #f9fafb; }
+.tank-pre-cod .tank-num { color: #6b7280; }
+.tank-pre-cod .tank-status-badge { background: #6b7280; color: white; }
+.tank-alert { border-color: var(--red); background: #fef2f2; }
+.tank-alert .tank-num { color: var(--red); }
+.tank-alert .tank-status-badge { background: var(--red); color: white; }
+.tank-meta { font-size: 11px; color: #6b7280; margin-bottom: 6px; }
+.tank-tenant { font-size: 12px; font-weight: 600; color: var(--gray-900); margin-bottom: 8px; line-height: 1.5; }
+.tank-issue { font-size: 11px; color: var(--gray-700); line-height: 1.6; border-top: 1px solid var(--gray-200); padding-top: 8px; }
 </style>
 </head>
 <body>
@@ -152,17 +176,82 @@ th.curr { background: #f06400 !important; }
 
   <div class="biz-panel active" id="biz-lng">
    <div class="biz-hero hero-lng"><h1>LNG 사업</h1><p>'25년 사업 원년 · '31년까지 세전이익 9배 성장 목표 (143억 → 1,300억)<br>울산 KET·CEC 터미널 직접 보유 — LNG 도입·공급·Optionality Trading 전 밸류체인</p></div>
-   <div class="card-grid">
-    <div class="card"><div class="card-title">연간 도입량</div><div class="metric">~130만 톤</div><div class="metric-sub">M사 70만t + W사 55만t + Spot</div></div>
-    <div class="card"><div class="card-title">터미널 저장 규모</div><div class="metric">연 200만 톤</div><div class="metric-sub">KET #1~3 운영 · CEC 건설 중</div></div>
-    <div class="card"><div class="card-title">세전이익 목표(2031)</div><div class="metric">1,300억</div><div class="metric-sub">2025년 143억 대비 9배</div></div>
-    <div class="card"><div class="card-title">KET #3 현황</div><div class="metric" style="font-size:18px;">Filling 중</div><div class="metric-sub">Cool-down(2월) → Filling(4월~)</div></div>
+
+   <div class="section-label">📦 LNG 조달 구조</div>
+   <div class="tbl-wrap" style="margin-bottom:20px;">
+    <table>
+     <thead><tr><th>소싱처</th><th>계약 물량</th><th>계약 유형</th><th>공급 용도</th></tr></thead>
+     <tbody>
+      <tr><td>M사</td><td>70만 톤/년</td><td>장기 계약</td><td>GPS(UGPS) 발전용, 산업체 공급</td></tr>
+      <tr><td>W사</td><td>55만 톤/년</td><td>장기 계약</td><td>MU(SK무역) 연계, 산업체 공급</td></tr>
+      <tr><td>SPOT</td><td>10~20만 톤/년</td><td>현물 조달</td><td>시황 최적화, 재고 탄력 운용</td></tr>
+     </tbody>
+    </table>
    </div>
+
+   <div class="section-label">🏭 CEC-KET 터미널 탱크 현황 <span style="font-size:11px;color:#6b7280;font-weight:400;">'26년 #3 · '27년 #4 · '31년 #5로 순차 확장</span></div>
+   <div class="tank-terminal-section">
+    <div class="terminal-group">
+     <span class="terminal-label">KET (Korea Energy Terminal)</span>
+     <div class="tank-row">
+      <div class="tank-card tank-operating">
+       <div class="tank-num">#1</div>
+       <div class="tank-status-badge">운영 중</div>
+       <div class="tank-meta">COD '24.10 | 100만 톤/년</div>
+       <div class="tank-tenant">UGPS (SK가스)</div>
+       <div class="tank-issue">약 1.5년간 무사고·무재해 안정 운영 중</div>
+      </div>
+      <div class="tank-card tank-operating">
+       <div class="tank-num">#2</div>
+       <div class="tank-status-badge">운영 중</div>
+       <div class="tank-meta">COD '24.10 | 115만 톤/년</div>
+       <div class="tank-tenant">SK발전솔루션 / 고려아연 / SK에너지</div>
+       <div class="tank-issue">복수 테넌트 안정 운영 중</div>
+      </div>
+      <div class="tank-card tank-imminent">
+       <div class="tank-num">#3</div>
+       <div class="tank-status-badge">COD '26.07 (시운전 중)</div>
+       <div class="tank-meta">COD '26.07 | 105만 톤/년</div>
+       <div class="tank-tenant">S-OIL (샤힌 PJT) / 벙커링 / 소규모 수요처</div>
+       <div class="tank-issue">'26.04 시운전 → 하반기 이용 개시 예정. Cool-down 완료 후 Filling 진행 중.</div>
+      </div>
+     </div>
+    </div>
+    <div class="terminal-group" style="margin-top:16px;">
+     <span class="terminal-label">CEC (Cheong Energy Corporation)</span>
+     <div class="tank-row">
+      <div class="tank-card tank-pre-cod">
+       <div class="tank-num">#4</div>
+       <div class="tank-status-badge">COD '27.07</div>
+       <div class="tank-meta">COD '27.07 | 110만 톤/년 (20kl)</div>
+       <div class="tank-tenant">한국동서발전(주)</div>
+       <div class="tank-issue">
+        <strong>단계적 수요 확보:</strong> 27년 6kl → 28년 7kl → 29년 10kl → 30년 20kl (신울산발전소 COD 후)<br>
+        <strong>환상망 연결 추진:</strong> 음성#2 COD '30년 2월 이연 → 불확실성 대비 환상망 추진 지속<br>
+        <strong>리스크:</strong> 30년 신울산 발전소 허가 불확실성. 분쟁 대비 확정매출 조기 확보 전략 필요<br>
+        <strong>IUA:</strong> 동서발전 IUA 5월 체결 예정 (냉열공급 신사업 연계)
+       </div>
+      </div>
+      <div class="tank-card tank-alert">
+       <div class="tank-num">#5</div>
+       <div class="tank-status-badge">COD '31 (계획)</div>
+       <div class="tank-meta">COD '31 (계획) | 100만 톤/년</div>
+       <div class="tank-tenant">⚠️ 앵커 테넌트 미확보<br><span style="color:#6b7280;font-weight:400;">(한주·고려아연 후보군)</span></div>
+       <div class="tank-issue">
+        [산업체] 중소형 수요 통합 유치 목표 — 고려아연·한주·한화임팩트 등 소형 수요처 마케팅 중<br>
+        [발전] 500MW 구역전기 사업 추진 병행 中<br>
+        ⚠️ 정기 업데이트 필요 — 앵커 테넌트 확보 여부 모니터링
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+
    <div class="section-label">밸류체인</div>
    <div class="value-chain">
     <div class="vc-step"><div class="icon">🚢</div><div class="name">도입</div><div class="desc">M사·W사 장기계약<br>Spot 10~20만톤/년</div></div>
     <div class="vc-arrow">›</div>
-    <div class="vc-step"><div class="icon">🏭</div><div class="name">터미널</div><div class="desc">KET #1~3 가동<br>CEC 건설 중</div></div>
+    <div class="vc-step"><div class="icon">🏭</div><div class="name">터미널</div><div class="desc">KET #1~3 가동<br>CEC #4~5 건설 중</div></div>
     <div class="vc-arrow">›</div>
     <div class="vc-step"><div class="icon">⚡</div><div class="name">Optionality</div><div class="desc">JKM·FEI 가격 차이<br>활용 페이퍼 포지션</div></div>
     <div class="vc-arrow">›</div>
@@ -170,12 +259,14 @@ th.curr { background: #f06400 !important; }
     <div class="vc-arrow">›</div>
     <div class="vc-step"><div class="icon">💵</div><div class="name">수익</div><div class="desc">공급마진<br>Trading 실현익</div></div>
    </div>
-   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 4일 주간보고</span></div>
+
+   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 8일 기준</span></div>
    <div class="update-list">
-    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>KET #3 Tank Filling 진행 중</strong> — Cool-down(2월) 완료 후 4월부터 Filling 단계 진입. 터미널 저장용량 확대 완료 임박.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>KET #3 Tank Filling 진행 중</strong> — Cool-down(2월) 완료 후 4월 Filling 단계 진입. '26.07 COD 목표, 하반기 이용 개시 예정.</div></div>
     <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>JKM 시황 +85.8% 급등(3월)</strong> — 중동전쟁 영향. FEI/JKM 포지션 Unwind로 실현익 +106억 확보.</div></div>
     <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>SKGC 수출입업 등록(2/4)</strong> — 동절기 Tank Top 리스크 대응, LNG 재고 유연성 확보.</div></div>
-    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>동서발전 IUA 5월 체결 예정</strong> — 냉열공급 신사업 연계, 최종 조건 협의 중.</div></div>
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>CEC #4 동서발전 IUA 5월 체결 예정</strong> — 냉열공급 신사업 연계. 음성#2 COD '30년 2월 이연. 환상망 불확실성 대비 확정매출 조기확보 전략 지속.</div></div>
+    <div class="update-item"><div class="dot dot-red"></div><div class="text"><strong>CEC #5 앵커 테넌트 미확보</strong> — 중소형 수요처 마케팅 및 500MW 구역전기 사업 병행 추진. 진행상황 정기 모니터링 필요.</div></div>
    </div>
   </div>
 
@@ -237,12 +328,19 @@ th.curr { background: #f06400 !important; }
   </div>
 
   <div class="biz-panel" id="biz-bun">
-   <div class="biz-hero hero-bun"><h1>벙커링 사업 (EMFS)</h1><p>EMFS 자회사 운영 · 2027년 상업운전(COD) 목표<br>LNG 선박 연료 공급 · Maersk 등 글로벌 선사 KAM 구축</p></div>
+   <div class="biz-hero hero-bun"><h1>벙커링 사업 (EMFS)</h1><p>EMFS 자회사 운영 · 2027년 상업운전(COD) 목표 · <strong>담당: 전략본부</strong><br>LNG 선박 연료 공급 · 현대글로비스 10만톤 확정 · 머스크 등 글로벌 선사 2nd LBV 협의 중</p></div>
    <div class="card-grid">
     <div class="card"><div class="card-title">COD 목표</div><div class="metric">2027년</div><div class="metric-sub">상업운전 개시 목표</div></div>
-    <div class="card"><div class="card-title">핵심 고객</div><div class="metric" style="font-size:18px;">Maersk</div><div class="metric-sub">4/23 방한 협의 완료</div></div>
-    <div class="card"><div class="card-title">유럽 출장</div><div class="metric" style="font-size:16px;">CMA-CGM</div><div class="metric-sub">2/3~6 전략본부 협의</div></div>
-    <div class="card"><div class="card-title">사업 단계</div><div class="metric" style="font-size:16px;">개발 중</div><div class="metric-sub">계약 구조 협의 단계</div></div>
+    <div class="card"><div class="card-title">1st LBV 확정</div><div class="metric" style="font-size:16px;">현대글로비스</div><div class="metric-sub">10만톤 확정 · '28년 초 공급 개시 예정</div></div>
+    <div class="card"><div class="card-title">2nd LBV 협의 중</div><div class="metric" style="font-size:14px;">머스크 · MSC<br>CMA-CGM</div><div class="metric-sub">H-Line 5만톤 적극 관심</div></div>
+    <div class="card"><div class="card-title">담당본부</div><div class="metric" style="font-size:16px;">전략본부</div><div class="metric-sub">임경매니저 담당</div></div>
+   </div>
+   <div class="section-label">AMS 핵심 과제</div>
+   <div class="update-list">
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>① 자회사 구조 확립</strong> — 울산항만공사(UPA)·KH 합계 10% 이내 지분 참여 검토 중. UPA는 5월 이후 협의 가능, 실질 논의는 하반기 예상. KH는 관계관리 단계.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>② 2nd LBV 수요확보</strong> — 1st Tranche(17~19만톤=3 Cargo): 현대글로비스 10만톤 확정(1st LBV). 잔여 7~9만톤은 머스크(가장 적극적, 방한 완료)·MSC·CMA-CGM·H-Line(5만톤 희망)에 Proposal 발송. 머스크 계약 구조 검토 중.</div></div>
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>③ Base Operation 준비 (벙커링 통합운영체계)</strong> — 부산·울산·인천·광양 4대 항만공사 협의 착수. 과제: ① 부산 친환경 인센티브 도입 ② 울산·부산 공급 유연성 확보 ③ E-BDN 데이터 공유체계 구축(싱가포르 벤치마킹). 올해 중 4대 PA 공동 미팅 예정.</div></div>
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>④ Bio LNG 조달 준비</strong> — 머스크 Bio LNG 구매 관심 확인. 당사 소싱·가격책정 미수립 상태 → 도입 준비 착수 중. 국내 최초 판매 기회. 글로벌 선사 계약 필수 해결 과제.</div></div>
    </div>
    <div class="section-label">밸류체인</div>
    <div class="value-chain">
@@ -250,15 +348,16 @@ th.curr { background: #f06400 !important; }
     <div class="vc-arrow">›</div>
     <div class="vc-step"><div class="icon">⛽</div><div class="name">벙커링 선박</div><div class="desc">LNGBV 운용<br>2027 COD</div></div>
     <div class="vc-arrow">›</div>
-    <div class="vc-step"><div class="icon">🌊</div><div class="name">선사 공급</div><div class="desc">Maersk·CMA-CGM<br>글로벌 KAM</div></div>
+    <div class="vc-step"><div class="icon">🌊</div><div class="name">선사 공급</div><div class="desc">현대글로비스·머스크<br>글로벌 KAM</div></div>
     <div class="vc-arrow">›</div>
     <div class="vc-step"><div class="icon">💵</div><div class="name">수익</div><div class="desc">연료 공급 마진<br>장기 계약 기반</div></div>
    </div>
-   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 4일 주간보고</span></div>
+   <div class="section-label">최신 업데이트 <span class="badge badge-blue">4월 28일 Notion 기준</span></div>
    <div class="update-list">
-    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>Maersk 방한(4/23) 협의 완료</strong> — G&amp;P + 전략본부 공동 대응. 계약 구조 다음 단계 준비 중.</div></div>
-    <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>CMA-CGM 유럽 출장(2/3~6)</strong> — 전략본부 주관, 벙커링 공급 구조 협의.</div></div>
-    <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>KAM 고객사 재설정</strong> — G&amp;P본부 KAM 목록 재편, 공급 조건 협의 중.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>현대글로비스 10만톤 확정 (1st LBV)</strong> — '28년 초 공급 개시 예정. 계약서 상 '28년 명시, 선박 건조 일정에 따라 구체화.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>Maersk 방한(4/23) 협의 완료</strong> — 전략본부 주관. 현재 가장 적극적인 2nd LBV 후보. 계약 구조 다음 단계 검토 중.</div></div>
+    <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>CMA-CGM 유럽 출장(2/3~6)</strong> — 전략본부 주관, 벙커링 공급 구조 협의. 현재 머스크가 더 적극적.</div></div>
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>Bio LNG — 글로벌 선사 계약 필수 요건</strong> — 머스크 Bio LNG 니즈 확인. 당사 조달 준비 필요. 국내 최초 판매 기회.</div></div>
    </div>
   </div>
 
@@ -363,7 +462,7 @@ th.curr { background: #f06400 !important; }
   </div>
 
   <div class="div-panel" id="div-gnp">
-   <div class="div-hero"><div class="div-hero-icon">🔵</div><div class="div-hero-info"><h2>G&amp;P본부</h2><p>주요 역할: LNG 시황·재고관리, KET 터미널 운영, 발전 신사업, ESS, 벙커링 KAM</p></div></div>
+   <div class="div-hero"><div class="div-hero-icon">🔵</div><div class="div-hero-info"><h2>G&amp;P본부</h2><p>주요 역할: LNG 시황·재고관리, KET 터미널 운영, 발전 신사업(구역전기·냉열), ESS 운영</p></div></div>
    <div class="section-label">핵심업무 진척 타임라인</div>
    <div class="tbl-wrap"><table>
     <thead><tr><th>과제</th><th>1월</th><th>2월</th><th>3월</th><th>4월</th><th class="curr">최신현황 (5월)</th></tr></thead>
@@ -372,7 +471,6 @@ th.curr { background: #f06400 !important; }
      <tr><td>② KET 평택 터미널 운영·확장</td><td>KAM 고객사 재설정 및 공급조건 협의</td><td>KET #3 Tank Cool-down 착수</td><td>Cool-down 완료, 충전 준비</td><td>KET #3 Filling 진행 중</td><td class="curr">#3 Tank Filling 마무리 단계</td></tr>
      <tr><td>③ 발전 신사업(구역전기·냉열)</td><td>구역전기 가능성 검토</td><td>냉열공급 사업성 검토</td><td>동서발전 IUA 초안 협의</td><td>동서발전 IUA 5월 체결 예정</td><td class="curr">IUA 체결 D-1개월, 최종 조건 협의 중</td></tr>
      <tr><td>④ ESS(GK·Raven) 운영·수익관리</td><td>GK ESS 설비 이슈 모니터링</td><td>GK ESS 복구 작업 착수</td><td>GK ESS 100% 복구 완료</td><td>Raven ESS 정상화 유지</td><td class="curr">GK·Raven ESS 정상 가동, 수익 안정화</td></tr>
-     <tr><td>⑤ 벙커링 KAM</td><td>KAM 고객 목록 재설정</td><td>고객별 공급 조건 협의</td><td>Maersk 방한 일정 조율</td><td>Maersk 방한(4/23), 공급 구조 협의</td><td class="curr">Maersk 협의 완료, 계약 구조 검토</td></tr>
      <tr><td>⑥ LPG Optionality 실행 지원</td><td>포지션 구조 공유</td><td>규모 산정</td><td>LPG Optionality 실행(4.6+2.3만톤)</td><td>포지션 관리</td><td class="curr">포지션 유지, Unwind 시점 검토 중</td></tr>
     </tbody>
    </table></div>
@@ -381,7 +479,6 @@ th.curr { background: #f06400 !important; }
     <div class="issue-card"><div class="issue-title">동절기 Tank Top(1월)</div><div class="issue-body">LNG 재고 상한 위기 → SKGC 수출입업 등록으로 유연성 확보.</div></div>
     <div class="issue-card"><div class="issue-title">KET #3 Tank 완공 임박</div><div class="issue-body">Cool-down(2월) → Filling(4월). 터미널 저장 용량 확대 완료 단계.</div></div>
     <div class="issue-card"><div class="issue-title">GK ESS 100% 복구(3월)</div><div class="issue-body">설비 이슈 이후 완전 복구, 수익 정상화.</div></div>
-    <div class="issue-card"><div class="issue-title">Maersk 방한(4/23)</div><div class="issue-body">벙커링 KAM 핵심 고객, G&amp;P+전략 공동 대응.</div></div>
    </div>
   </div>
 
@@ -434,7 +531,7 @@ th.curr { background: #f06400 !important; }
     <thead><tr><th>과제</th><th>1월</th><th>2월</th><th>3월</th><th>4월</th><th class="curr">최신현황 (5월)</th></tr></thead>
     <tbody>
      <tr><td>① 에탄 사업개발(SWAN 3.0)</td><td>공식 착수, FID 6월 목표 설정</td><td>STL/INEOS 에탄 공급 협의</td><td>K-Line 협의(3/4), 해운 구조 검토</td><td>북미 Upstream CEO 보고(4/23)</td><td class="curr">FID 6월 목표 유지, 북미 파트너 협의 중</td></tr>
-     <tr><td>② LNG 벙커링 구조화(EMFS)</td><td>벙커링 3대 핵심업무 정의</td><td>CMA-CGM·Maersk 유럽 출장(2/3~6)</td><td>Maersk 방한 일정 설정</td><td>Maersk 방한(4/23), G&amp;P 공동 대응</td><td class="curr">Maersk 협의 완료, 계약 구조 다음 단계</td></tr>
+     <tr><td>② 벙커링 사업 추진(EMFS) — <strong>주관</strong></td><td>벙커링 3대 핵심업무 정의, 자회사 구조 착수</td><td>CMA-CGM·Maersk 유럽 출장(2/3~6), UPA 지분 참여 협의</td><td>Maersk 방한 일정 설정, H-Line 5만톤 협의</td><td>Maersk 방한(4/23) 완료. 현대글로비스 10만톤 확정(1st LBV)</td><td class="curr">2nd LBV 수요확보 협의(머스크 계약 구조 검토). Bio LNG 조달 준비 착수. 4대 항만공사 벙커링 통합운영체계 협의 시작</td></tr>
      <tr><td>③ 하와이 LPG 발전 사업개발</td><td>타당성 검토 착수</td><td>공급·발전 연계 구조 설계</td><td>기술인프라 FEED 검토</td><td>사업성 검토 계속</td><td class="curr">기술인프라 지원 연계, 검토 진행 중</td></tr>
      <tr><td>④ 중동 리스크 모니터링</td><td>이란 제재 리스크 모니터링</td><td>미-이란 갈등 심화, 리스크 상향</td><td>중동전쟁(3/6), 경영진 긴급 보고</td><td>시황 안정화 모니터링</td><td class="curr">전쟁 영향 지속 모니터링</td></tr>
      <tr><td>⑤ Trading AI(AX) 개발</td><td>킥오프, 요구사항 정의</td><td>MI 시스템화 착수</td><td>MI 개발 진행, AI레터 구조 설계</td><td>AI레터 4/29 발송 예정</td><td class="curr">AI레터 운영 개시, AX 단계적 고도화</td></tr>
@@ -445,7 +542,8 @@ th.curr { background: #f06400 !important; }
    <div class="issue-grid">
     <div class="issue-card"><div class="issue-title">SWAN 3.0(에탄 FID 6월)</div><div class="issue-body">LNG/LPG 이후 차세대 원료 핵심 프로젝트. 북미 STL/INEOS/K-Line 협의 병행.</div></div>
     <div class="issue-card"><div class="issue-title">중동전쟁(3/6)</div><div class="issue-body">전략본부가 경영진 보고 주관, SKA Framework 포함 전사 리스크 대응 총괄.</div></div>
-    <div class="issue-card"><div class="issue-title">Maersk 방한(4/23)</div><div class="issue-body">전략+G&amp;P 공동 대응, 벙커링 대형 고객 계약 구조 협의.</div></div>
+    <div class="issue-card"><div class="issue-title">현대글로비스 10만톤 확정(1st LBV)</div><div class="issue-body">'28년 초 공급 개시. 2nd LBV(머스크 등) 계약 구조 협의 중.</div></div>
+    <div class="issue-card"><div class="issue-title">Bio LNG — 선사 계약 필수 요건</div><div class="issue-body">머스크 Bio LNG 니즈 확인. 국내 최초 판매 기회. 당사 조달 준비 착수.</div></div>
     <div class="issue-card"><div class="issue-title">Trading AI레터 운영 개시</div><div class="issue-body">4/29 첫 발송. AX 시스템 단계적 고도화 중.</div></div>
    </div>
   </div>
