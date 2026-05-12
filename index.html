@@ -180,11 +180,12 @@ th.curr { background: #f06400 !important; }
    <div class="section-label">📦 LNG 조달 구조</div>
    <div class="tbl-wrap" style="margin-bottom:20px;">
     <table>
-     <thead><tr><th>소싱처</th><th>계약 물량</th><th>계약 유형</th><th>공급 용도</th></tr></thead>
+     <thead><tr><th>소싱처</th><th>계약 물량</th><th>카고</th><th>계약 유형</th><th>공급 용도 · 해당 탱크</th></tr></thead>
      <tbody>
-      <tr><td>M사</td><td>70만 톤/년</td><td>장기 계약</td><td>GPS(UGPS) 발전용, 산업체 공급</td></tr>
-      <tr><td>W사</td><td>55만 톤/년</td><td>장기 계약</td><td>MU(SK무역) 연계, 산업체 공급</td></tr>
-      <tr><td>SPOT</td><td>10~20만 톤/년</td><td>현물 조달</td><td>시황 최적화, 재고 탄력 운용</td></tr>
+      <tr><td>M사 (Mitsui · 미쓰이)</td><td>70만 톤/년</td><td>Term 10카고</td><td>장기 계약</td><td>GPS(UGPS) 발전용 100% — KET #1 탱크 전용</td></tr>
+      <tr><td>W사 (Woodside Energy)</td><td>55만 톤/년</td><td>8카고</td><td>장기 계약</td><td>SKMU 4카고(≈28만톤) · 벙커링 3카고(≈21만톤) · 여분 1카고 — KET #2·#3 탱크</td></tr>
+      <tr><td>SPOT</td><td>10~20만 톤/년</td><td>시황 따라 조절</td><td>현물 조달</td><td>시황 최적화, 재고 탄력 운용</td></tr>
+      <tr><td colspan="5" style="background:var(--gray-50);font-size:11px;color:#6b7280;font-weight:400;">※ 1카고 = 350만 MMBtu ≈ 6.75만톤(약 7만톤) · LNG 1톤 = 51.87 MMBtu (환산 시 약 50 MMBtu 적용) · 총 130만톤/년 조달</td></tr>
      </tbody>
     </table>
    </div>
@@ -197,23 +198,23 @@ th.curr { background: #f06400 !important; }
       <div class="tank-card tank-operating">
        <div class="tank-num">#1</div>
        <div class="tank-status-badge">운영 중</div>
-       <div class="tank-meta">COD '24.10 | 100만 톤/년</div>
+       <div class="tank-meta">COD '24.10 | 100만 톤/년 | 21.5만 KL (만재 약 9.6만톤)</div>
        <div class="tank-tenant">UGPS (SK가스)</div>
-       <div class="tank-issue">약 1.5년간 무사고·무재해 안정 운영 중</div>
+       <div class="tank-issue">약 1.5년간 무사고·무재해 안정 운영 중<br><span style="color:var(--sk-blue);font-weight:700;">[소싱]</span> M사(Mitsui) Term 10카고 ≈ 70만톤/년 — 100% GPS 발전용</div>
       </div>
       <div class="tank-card tank-operating">
        <div class="tank-num">#2</div>
        <div class="tank-status-badge">운영 중</div>
-       <div class="tank-meta">COD '24.10 | 115만 톤/년</div>
-       <div class="tank-tenant">SK발전솔루션 / 고려아연 / SK에너지</div>
-       <div class="tank-issue">복수 테넌트 안정 운영 중</div>
+       <div class="tank-meta">COD '24.10 | 115만 톤/년 | 21.5만 KL (만재 약 9.6만톤)</div>
+       <div class="tank-tenant">SKMU(멀티유틸리티) / 고려아연 / SK에너지</div>
+       <div class="tank-issue">복수 테넌트 안정 운영 중<br><span style="color:var(--sk-blue);font-weight:700;">[소싱]</span> W사(Woodside) 4카고 → SKMU 공급 ≈ 28만톤/년</div>
       </div>
       <div class="tank-card tank-imminent">
        <div class="tank-num">#3</div>
        <div class="tank-status-badge">COD '26.07 (시운전 중)</div>
-       <div class="tank-meta">COD '26.07 | 105만 톤/년</div>
+       <div class="tank-meta">COD '26.07 | 105만 톤/년 | 21.5만 KL (만재 약 9.6만톤)</div>
        <div class="tank-tenant">S-OIL (샤힌 PJT) / 벙커링 / 소규모 수요처</div>
-       <div class="tank-issue">'26.04 시운전 → 하반기 이용 개시 예정. Cool-down 완료 후 Filling 진행 중.</div>
+       <div class="tank-issue">'26.04 시운전 → 하반기 이용 개시 예정. Filling 진행 중.<br><span style="color:var(--sk-blue);font-weight:700;">[소싱]</span> W사(Woodside) 벙커링 3카고 + 여분 1카고 ≈ 28만톤/년</div>
       </div>
      </div>
     </div>
@@ -223,7 +224,7 @@ th.curr { background: #f06400 !important; }
       <div class="tank-card tank-pre-cod">
        <div class="tank-num">#4</div>
        <div class="tank-status-badge">COD '27.07</div>
-       <div class="tank-meta">COD '27.07 | 110만 톤/년 (20kl)</div>
+       <div class="tank-meta">COD '27.07 | 110만 톤/년 | 21.5만 KL</div>
        <div class="tank-tenant">한국동서발전(주)</div>
        <div class="tank-issue">
         <strong>단계적 수요 확보:</strong> 27년 6kl → 28년 7kl → 29년 10kl → 30년 20kl (신울산발전소 COD 후)<br>
@@ -232,17 +233,90 @@ th.curr { background: #f06400 !important; }
         <strong>IUA:</strong> 동서발전 IUA 5월 체결 예정 (냉열공급 신사업 연계)
        </div>
       </div>
-      <div class="tank-card tank-alert">
+      <div class="tank-card tank-imminent">
        <div class="tank-num">#5</div>
        <div class="tank-status-badge">COD '31 (계획)</div>
-       <div class="tank-meta">COD '31 (계획) | 100만 톤/년</div>
-       <div class="tank-tenant">⚠️ 앵커 테넌트 미확보<br><span style="color:#6b7280;font-weight:400;">(한주·고려아연 후보군)</span></div>
+       <div class="tank-meta">COD '31 | 100만 톤/년 | 21.5만 KL (Total 수요 12.5만 kl 확보)</div>
+       <div class="tank-tenant">한주 (19만톤) · 고려아연 (27만톤)<br>롯데정밀 (8만톤) · 한화임팩트 (5만톤) · LS MnM (8만톤)</div>
        <div class="tank-issue">
-        [산업체] 중소형 수요 통합 유치 목표 — 고려아연·한주·한화임팩트 등 소형 수요처 마케팅 중<br>
-        [발전] 500MW 구역전기 사업 추진 병행 中<br>
-        ⚠️ 정기 업데이트 필요 — 앵커 테넌트 확보 여부 모니터링
+        <strong>수요 확보 현황</strong><br>
+        · 한주 3.5만kl→19만톤 · 고려아연 5만kl→27만톤<br>
+        · 롯데정밀 1.5만kl→8만톤 · 한화임팩트 1.0만kl→5만톤 · LS MnM 1.5만kl→8만톤<br>
+        [발전] 500MW 구역전기 사업 추진 병행 中
        </div>
       </div>
+     </div>
+    </div>
+   </div>
+
+   <div class="section-label">📖 LNG 사업 시작 배경</div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.9;">
+    <p style="margin-bottom:10px;"><strong style="color:var(--gray-900);">원래 한국석유공사(KNOC)는 울산에 오일터미널 사업만 하려 했으나</strong>, 사업성이 안 나와 2000년대 중반부터 10년 넘게 사업화를 못 한 상황이었습니다.</p>
+    <p style="margin-bottom:10px;"><strong style="color:var(--sk-blue);">2017~2018년 SK가스가 석유공사에 제안</strong>: "우리랑 같이할래? 우리는 LNG사업을 하고 싶어. 근처에 GPS 지을 건데 LNG 탱크가 필요하거든" → 공동 진행 합의.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0;">
+     <div style="background:var(--gray-50);border-radius:6px;padding:10px 12px;">
+      <div style="font-weight:700;color:var(--gray-900);margin-bottom:4px;">KET (Korea Energy Terminal)</div>
+      <div style="color:#6b7280;">오일탱크 12개 + LNG탱크 #1·#2 (기존 계획) + #3 증설 (수요 확대로 추가)</div>
+     </div>
+     <div style="background:var(--gray-50);border-radius:6px;padding:10px 12px;">
+      <div style="font-weight:700;color:var(--gray-900);margin-bottom:4px;">CEC (부지 내 추가 확장)</div>
+      <div style="color:#6b7280;">CEC 잔여부지에 LNG탱크 #4·#5 건설 — 원래 수소사업 예정이었으나 전환</div>
+     </div>
+    </div>
+    <p><strong style="color:var(--gray-900);">주요 일정:</strong> JV 체결 '19년 → TUA·EPC 계약 '20년 → 착공 '20년 초 → 완공 '24년 → 상업운행 '24.11월</p>
+   </div>
+
+   <div class="section-label">📋 Master TUA 계약 구조</div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.9;">
+    <p style="margin-bottom:12px;"><strong style="color:var(--sk-blue);">Master TUA = SKG가 KET에게 LNG 터미널을 빌린 계약</strong>. LNG 탱크를 지은 곳은 KET이며, SKG가 이를 빌려 운영합니다. 그리고 SKG가 다시 고객사에 <strong>전대(재임대)</strong>하는 구조입니다.</p>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:10px 0;padding:12px;background:var(--sk-blue-light);border-radius:8px;">
+     <div style="background:var(--sk-blue);color:white;border-radius:6px;padding:8px 12px;text-align:center;min-width:80px;font-size:11px;font-weight:700;">KET<br>(터미널 소유)</div>
+     <div style="color:var(--sk-blue);font-size:18px;font-weight:700;">→</div>
+     <div style="background:white;border:2px solid var(--sk-blue);border-radius:6px;padding:8px 12px;text-align:center;min-width:80px;font-size:11px;font-weight:700;">SK가스<br>(Master TUA)</div>
+     <div style="color:var(--sk-blue);font-size:18px;font-weight:700;">→</div>
+     <div style="background:white;border:1px solid var(--gray-200);border-radius:6px;padding:8px 12px;text-align:center;min-width:120px;font-size:11px;">
+      <div style="font-weight:700;margin-bottom:2px;">전대 (고객사)</div>
+      <div style="color:#6b7280;">고려아연 · GPS · SK에너지 등</div>
+     </div>
+    </div>
+    <p style="margin-top:8px;"><strong style="color:var(--gray-900);">3자 계약 구조</strong> (KET에 책임관계 부여 목적):</p>
+    <ul style="padding-left:16px;margin-top:4px;">
+     <li>고려아연 — SKG — KET</li>
+     <li>GPS — SKG — KET</li>
+     <li>SK에너지 — SKG — KET</li>
+    </ul>
+   </div>
+
+   <div class="section-label">💰 총괄원가 구조</div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.9;">
+    <div style="background:#fffbeb;border-left:4px solid var(--amber);border-radius:0 8px 8px 0;padding:12px 14px;margin-bottom:12px;">
+     <strong style="color:#92400e;">총괄원가 = LNG터미널 투자비 + 운영비용 + 고정 마진율(KET 이윤보장)</strong><br>
+     <span style="font-size:11px;color:#92400e;">인프라를 돌리기 위해 소요된 모든 원가를 SK가스가 KET에 보상해주는 개념</span>
+    </div>
+    <p style="margin-bottom:8px;"><strong style="color:var(--gray-900);">계약 조건:</strong> 20년 장기 계약. KET·석유공사 측 요청으로 <strong>매년 균등화된 기준이용료</strong>로 지급.</p>
+    <p style="margin-bottom:8px;">투자보수(감가상각)는 시간이 갈수록 감소하고, 영업비용은 물가상승률 반영하여 증가 → 이를 평균화한 연간 기준이용료 지급. 실적 차이는 매년 정산.</p>
+    <p style="color:#6b7280;font-size:11px;">※ 이용료 산정 용역: 삼일회계법인 (KET와 공동발주, 보수 총 5,000만원)</p>
+   </div>
+
+   <div class="section-label">📌 기타 사항</div>
+   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-bottom:20px;">
+    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
+     <div style="font-size:12px;font-weight:700;color:var(--gray-900);margin-bottom:8px;">분쟁 배경 (EPC 공사비)</div>
+     <div style="font-size:11px;color:var(--gray-700);line-height:1.7;">
+      EPC 건설사 컨소(SK에코엔지니어링 49% + 대우건설 51% = DSJV)가 턴키 계약으로 공사비 상한이 정해진 상태에서, 코로나·러-우 전쟁으로 물가 급등 → 추가 공사비 청구 분쟁.<br>
+      최초 청구 1,264억 → 44억 인정 → 잔여 1,220억 분쟁.<br>
+      현재 합의+중재 혼합 방식, MAX 240억 CAP으로 진행 중.
+     </div>
+    </div>
+    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
+     <div style="font-size:12px;font-weight:700;color:var(--gray-900);margin-bottom:8px;">부두 현황</div>
+     <div style="font-size:11px;color:var(--gray-700);line-height:1.7;">
+      <strong>#2부두</strong> — LNG/LPG (운영 중)<br>
+      <strong>#4부두</strong> — OIL/LNG (운영 중)<br>
+      <strong>#6부두</strong> — 벙커링 전용<br>
+      <strong>#1·#3·#5부두</strong> — 미개발<br>
+      <br>
+      LPG Coolant 선적(가스 트라이얼 서비스): 현대중공업 계약 체결, 1회당 약 1.3만불, 연 2~4회 예상 (연 5억 절감효과). 5월부터 진행 예정.
      </div>
     </div>
    </div>
@@ -266,7 +340,7 @@ th.curr { background: #f06400 !important; }
     <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>JKM 시황 +85.8% 급등(3월)</strong> — 중동전쟁 영향. FEI/JKM 포지션 Unwind로 실현익 +106억 확보.</div></div>
     <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>SKGC 수출입업 등록(2/4)</strong> — 동절기 Tank Top 리스크 대응, LNG 재고 유연성 확보.</div></div>
     <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>CEC #4 동서발전 IUA 5월 체결 예정</strong> — 냉열공급 신사업 연계. 음성#2 COD '30년 2월 이연. 환상망 불확실성 대비 확정매출 조기확보 전략 지속.</div></div>
-    <div class="update-item"><div class="dot dot-red"></div><div class="text"><strong>CEC #5 앵커 테넌트 미확보</strong> — 중소형 수요처 마케팅 및 500MW 구역전기 사업 병행 추진. 진행상황 정기 모니터링 필요.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>CEC #5 수요 확보 진행 중 (Total 12.5만 kl)</strong> — 한주 19만톤·고려아연 27만톤·롯데정밀 8만톤·한화임팩트 5만톤·LS MnM 8만톤 확보. 500MW 구역전기 사업 병행 추진 中.</div></div>
    </div>
   </div>
 
@@ -300,12 +374,60 @@ th.curr { background: #f06400 !important; }
   </div>
 
   <div class="biz-panel" id="biz-gen">
-   <div class="biz-hero hero-gen"><h1>발전 사업 (UGPS)</h1><p>울산 가스복합발전소(UGPS) — 설비 용량 1,227MW<br>LNG/LPG 혼소 발전 · GPS 지분매각 추진 중</p></div>
-   <div class="card-grid">
-    <div class="card"><div class="card-title">발전 용량</div><div class="metric">1,227 MW</div><div class="metric-sub">울산 가스복합발전 GT 1·2호기</div></div>
-    <div class="card"><div class="card-title">1월 실적</div><div class="metric">221억</div><div class="metric-sub">계획 233억 대비 -12억</div></div>
+   <div class="biz-hero hero-gen"><h1>발전 사업 (UGPS)</h1><p>울산 가스복합발전소(UGPS) — 설비 용량 1,227MW<br>LNG/LPG 혼소 발전 · GPS 지분매각 추진 중 · 500MW 구역전기 사업 개발 중</p></div>
+
+   <div class="section-label">GPS 사업 현황</div>
+   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:20px;">
+    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
+     <div style="font-size:11px;font-weight:700;color:white;background:var(--gray-700);display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:10px;">'25년 실적</div>
+     <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">매출</span><span style="font-weight:700;">7,601억</span></div>
+     <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">세전이익</span><span style="font-weight:700;color:var(--green);">1,304억</span></div>
+     <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">가동준비율</span><span style="font-weight:700;">73%</span></div>
+     <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;"><span style="color:#6b7280;">낙찰률</span><span style="font-weight:700;">76%</span></div>
+    </div>
+    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
+     <div style="font-size:11px;font-weight:700;color:white;background:var(--amber);display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:10px;">'26년 계획</div>
+     <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">매출</span><span style="font-weight:700;">8,393억</span></div>
+     <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">세전이익</span><span style="font-weight:700;color:var(--green);">1,725억</span></div>
+     <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">가동준비율</span><span style="font-weight:700;">90%</span></div>
+     <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;"><span style="color:#6b7280;">낙찰률</span><span style="font-weight:700;">68%</span></div>
+    </div>
+    <div class="card"><div class="card-title">발전 용량</div><div class="metric">1,227 MW</div><div class="metric-sub">GT 1·2호기 · LNG/LPG 혼소</div></div>
     <div class="card"><div class="card-title">GPS 매각 진행</div><div class="metric" style="font-size:16px;">SPA 협의 중</div><div class="metric-sub">MOU(2/6) · 이행보증금 76.5억</div></div>
-    <div class="card"><div class="card-title">LPG Optionality</div><div class="metric">5.3만 톤</div><div class="metric-sub">3월 포지션 진입, 유지 중</div></div>
+   </div>
+
+   <div class="section-label">⚡ 500MW 구역전기 사업</div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.8;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:14px;">
+     <div style="background:var(--sk-blue-light);border-radius:8px;padding:12px 14px;">
+      <div style="font-weight:700;color:var(--sk-blue);margin-bottom:6px;">구역전기란?</div>
+      <div>정부 허가를 받아 특정 구역 내에서 SK가스가 <strong>전기를 직접 생산·판매</strong>하는 사업. 현재 UGPS는 SMP 기준으로 한전에 팔지만, 구역전기 사업자가 되면 <strong>데이터센터·공장에 장기 PPA로 직접 판매</strong> 가능 → 마진 대폭 개선.</div>
+     </div>
+     <div style="background:#fef3c7;border-radius:8px;padding:12px 14px;">
+      <div style="font-weight:700;color:#92400e;margin-bottom:6px;">왜 하나?</div>
+      <div>① LNG #5 탱크 물량(발전용) 확보<br>② 전기·스팀 동시 판매로 이중 수익<br>③ 울산 석화단지·AI DC 고객을 SK가스 생태계에 Lock-in</div>
+     </div>
+    </div>
+    <div style="background:var(--gray-50);border-radius:8px;padding:12px 14px;margin-bottom:10px;">
+     <div style="font-weight:700;color:var(--gray-900);margin-bottom:6px;">현황 (5/11 G&amp;P본부 주간보고)</div>
+     <ul style="padding-left:16px;">
+      <li>AI DC 및 PIC·CEC 부지 중심 <strong>Hybrid 모델 구체화 작업 본격화</strong></li>
+      <li>집단에너지 선행사례 분석 + 외부 전문기관 검증 병행 중</li>
+      <li>동서발전 협력: 울산 #1~#3 정압소/배관 통합계약 마무리 단계</li>
+      <li>냉열사업: 이용자 동의 확보 위한 Communication 작업 중</li>
+      <li>KNOC 동해가스전 배관(14.1km) 인수 검토 — 롯데이네오스·온산산단 LNG 직공급 인프라 활용 방안</li>
+     </ul>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;">
+     <div style="background:white;border:1px solid var(--gray-200);border-radius:6px;padding:10px 12px;font-size:11px;">
+      <div style="font-weight:700;color:var(--red);margin-bottom:4px;">주요 리스크</div>
+      <div style="color:var(--gray-700);">① 집단에너지 인허가 복잡<br>② CLX→AI DC 고객 전환 미확정<br>③ 스팀 수요처 충분 확보 필요<br>④ LCOE가 한전요금 이하여야 수요처 유치 가능</div>
+     </div>
+     <div style="background:white;border:1px solid var(--gray-200);border-radius:6px;padding:10px 12px;font-size:11px;">
+      <div style="font-weight:700;color:var(--green);margin-bottom:4px;">홈그라운드 이점</div>
+      <div style="color:var(--gray-700);">울산 LNG 터미널 + 배관 인프라 기보유<br>동서발전 협력 구조 활용<br>석화단지 고객 기존 관계</div>
+     </div>
+    </div>
    </div>
    <div class="section-label">밸류체인</div>
    <div class="value-chain">
@@ -333,7 +455,7 @@ th.curr { background: #f06400 !important; }
     <div class="card"><div class="card-title">COD 목표</div><div class="metric">2027년</div><div class="metric-sub">상업운전 개시 목표</div></div>
     <div class="card"><div class="card-title">1st LBV 확정</div><div class="metric" style="font-size:16px;">현대글로비스</div><div class="metric-sub">10만톤 확정 · '28년 초 공급 개시 예정</div></div>
     <div class="card"><div class="card-title">2nd LBV 협의 중</div><div class="metric" style="font-size:14px;">머스크 · MSC<br>CMA-CGM</div><div class="metric-sub">H-Line 5만톤 적극 관심</div></div>
-    <div class="card"><div class="card-title">담당본부</div><div class="metric" style="font-size:16px;">전략본부</div><div class="metric-sub">임경매니저 담당</div></div>
+    <div class="card"><div class="card-title">담당본부</div><div class="metric" style="font-size:16px;">전략본부</div><div class="metric-sub">전략본부 담당</div></div>
    </div>
    <div class="section-label">AMS 핵심 과제</div>
    <div class="update-list">
@@ -378,7 +500,62 @@ th.curr { background: #f06400 !important; }
   </div>
 
   <div class="biz-panel" id="biz-ska">
-   <div class="biz-hero hero-ska"><h1>SKA (PDH·UPP)</h1><p>프로판탈수소(PDH) → 프로필렌·폴리프로필렌(PP) 생산<br>지분구조 개편 마무리 단계 · Spread 사상 최고 수준</p></div>
+   <div class="biz-hero hero-ska"><h1>SKA (PDH·UPP)</h1><p>프로판탈수소(PDH) → 프로필렌·폴리프로필렌(PP) 생산<br>SK가스 100% 지배구조 완성 · Spread 사상 최고 수준</p></div>
+
+   <div class="section-label">SKA / UPP 지분구조</div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;flex-wrap:wrap;">
+     <!-- SKA 주주 구조 -->
+     <div>
+      <div style="font-size:12px;font-weight:700;color:var(--gray-700);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--gray-200);">SKA 주주 구조</div>
+      <div style="display:flex;justify-content:center;gap:6px;margin-bottom:6px;flex-wrap:wrap;">
+       <div style="background:var(--gray-100);border:1px dashed #9ca3af;border-radius:6px;padding:6px 10px;text-align:center;font-size:11px;min-width:80px;">
+        <div style="font-weight:700;color:#6b7280;">PIC 25%</div>
+        <div style="color:var(--red);font-size:10px;">'26.02 EXIT ✓</div>
+       </div>
+       <div style="background:var(--gray-100);border:1px dashed #9ca3af;border-radius:6px;padding:6px 10px;text-align:center;font-size:11px;min-width:80px;">
+        <div style="font-weight:700;color:#6b7280;">AGIC 30%</div>
+        <div style="color:var(--red);font-size:10px;">'26.04 EXIT ✓</div>
+       </div>
+      </div>
+      <div style="text-align:center;font-size:16px;color:#9ca3af;">↓ 지분 인수</div>
+      <div style="background:var(--sk-blue);color:white;border-radius:8px;padding:10px 14px;text-align:center;margin:6px 0;">
+       <div style="font-size:13px;font-weight:700;">SK가스 (SKG)</div>
+       <div style="font-size:22px;font-weight:800;margin:4px 0;">100%</div>
+       <div style="font-size:10px;opacity:0.85;">기존 45% → PIC인수(70%) → AGIC인수(100%)</div>
+      </div>
+      <div style="text-align:center;font-size:16px;color:#9ca3af;">↓</div>
+      <div style="background:#ede9fe;border:2px solid #7c3aed;border-radius:8px;padding:10px 14px;text-align:center;margin:6px 0;">
+       <div style="font-size:12px;font-weight:700;color:#5b21b6;">SKA (울산PDH)</div>
+       <div style="font-size:11px;color:#7c3aed;margin-top:3px;">프로판 → 프로필렌</div>
+      </div>
+     </div>
+     <!-- UPP 주주 구조 -->
+     <div>
+      <div style="font-size:12px;font-weight:700;color:var(--gray-700);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--gray-200);">UPP (울산피피) 주주 구조</div>
+      <div style="display:flex;gap:6px;margin-bottom:6px;">
+       <div style="flex:1;background:#ede9fe;border:2px solid #7c3aed;border-radius:8px;padding:8px;text-align:center;">
+        <div style="font-size:11px;font-weight:700;color:#5b21b6;">SKA</div>
+        <div style="font-size:18px;font-weight:800;color:#5b21b6;">50%-1주</div>
+       </div>
+       <div style="flex:1;background:#fef3c7;border:2px solid var(--amber);border-radius:8px;padding:8px;text-align:center;">
+        <div style="font-size:11px;font-weight:700;color:#92400e;">PMC (폴리미래)</div>
+        <div style="font-size:18px;font-weight:800;color:#92400e;">50+1주</div>
+        <div style="font-size:10px;color:#92400e;margin-top:2px;">DL케미칼 50%<br>LYB 50%</div>
+       </div>
+      </div>
+      <div style="text-align:center;font-size:16px;color:#9ca3af;">↓</div>
+      <div style="background:#d1fae5;border:2px solid var(--green);border-radius:8px;padding:10px 14px;text-align:center;margin:6px 0;">
+       <div style="font-size:12px;font-weight:700;color:#065f46;">UPP (울산피피)</div>
+       <div style="font-size:11px;color:#059669;margin-top:3px;">프로필렌 → 폴리프로필렌(PP)</div>
+      </div>
+      <div style="background:var(--gray-50);border-radius:6px;padding:8px 10px;margin-top:8px;font-size:11px;color:#6b7280;">
+       ※ SKA의 정상화/구조 개편 노력에도 중동주주 견해 차이로 의사결정 지연. 증자·영구채·신용보강 등 대책에 미동의 → Controllability 확보를 위해 AGIC·PIC 지분 전량 인수
+      </div>
+     </div>
+    </div>
+   </div>
+
    <div class="card-grid">
     <div class="card"><div class="card-title">PDH Spread (4월)</div><div class="metric" style="color:var(--green);">$646/톤</div><div class="metric-sub">1월 $174 → 4월 사상 최고</div></div>
     <div class="card"><div class="card-title">PDH Spread (1월)</div><div class="metric">$174/톤</div><div class="metric-sub">연초 저마진 구간</div></div>
@@ -462,23 +639,48 @@ th.curr { background: #f06400 !important; }
   </div>
 
   <div class="div-panel" id="div-gnp">
-   <div class="div-hero"><div class="div-hero-icon">🔵</div><div class="div-hero-info"><h2>G&amp;P본부</h2><p>주요 역할: LNG 시황·재고관리, KET 터미널 운영, 발전 신사업(구역전기·냉열), ESS 운영</p></div></div>
-   <div class="section-label">핵심업무 진척 타임라인</div>
+   <div class="div-hero"><div class="div-hero-icon">🔵</div><div class="div-hero-info"><h2>G&amp;P본부 (LNG사업본부)</h2><p>주요 역할: LNG 소싱·시황관리, KET 터미널 운영, 신규수요개발(#4·#5), 500MW 구역전기, ESS 운영</p></div></div>
+
+   <div class="section-label">5대 추진과제 진척 현황 <span class="badge badge-blue">5월 11일 주간보고 기준</span></div>
    <div class="tbl-wrap"><table>
-    <thead><tr><th>과제</th><th>1월</th><th>2월</th><th>3월</th><th>4월</th><th class="curr">최신현황 (5월)</th></tr></thead>
+    <thead><tr><th>추진과제</th><th>1~2월</th><th>3~4월</th><th class="curr">최신현황 (5월)</th></tr></thead>
     <tbody>
-     <tr><td>① LNG 시황 모니터링·재고관리</td><td>동절기 Tank Top 리스크 관리</td><td>SKGC 수출입업 등록(2/4), 재고 정상화</td><td>JKM +85.8% 급등, 재고 소진 가속</td><td>재고 정상 범위, 시황 안정화</td><td class="curr">KET #3 Filling 진행 중, 재고 적정 수준</td></tr>
-     <tr><td>② KET 평택 터미널 운영·확장</td><td>KAM 고객사 재설정 및 공급조건 협의</td><td>KET #3 Tank Cool-down 착수</td><td>Cool-down 완료, 충전 준비</td><td>KET #3 Filling 진행 중</td><td class="curr">#3 Tank Filling 마무리 단계</td></tr>
-     <tr><td>③ 발전 신사업(구역전기·냉열)</td><td>구역전기 가능성 검토</td><td>냉열공급 사업성 검토</td><td>동서발전 IUA 초안 협의</td><td>동서발전 IUA 5월 체결 예정</td><td class="curr">IUA 체결 D-1개월, 최종 조건 협의 중</td></tr>
-     <tr><td>④ ESS(GK·Raven) 운영·수익관리</td><td>GK ESS 설비 이슈 모니터링</td><td>GK ESS 복구 작업 착수</td><td>GK ESS 100% 복구 완료</td><td>Raven ESS 정상화 유지</td><td class="curr">GK·Raven ESS 정상 가동, 수익 안정화</td></tr>
-     <tr><td>⑥ LPG Optionality 실행 지원</td><td>포지션 구조 공유</td><td>규모 산정</td><td>LPG Optionality 실행(4.6+2.3만톤)</td><td>포지션 관리</td><td class="curr">포지션 유지, Unwind 시점 검토 중</td></tr>
+     <tr><td>① JKM 시황 모니터링</td><td>동절기 Tank Top 리스크 관리. SKGC 수출입업 등록(2/4) — 재고 유연성 확보</td><td>JKM +85.8% 급등(중동전쟁 3/6). FEI/JKM 포지션 Unwind +106억. 재고 소진 가속</td><td class="curr">KET #3 Filling 진행 중. JKM $17/MMBtu 고수준 모니터링 중. 재고 적정 수준 유지</td></tr>
+     <tr><td>② LNG 신규수요개발 (#5·#4)</td><td>#5 앵커 수요처 협의 착수 (한주·고려아연). #4 동서발전 IUA 협의 개시</td><td>#5 수요 확보 진행 (한주·고려아연·롯데정밀·한화임팩트·LS MnM). #4 동서발전 IUA 5월 체결 목표</td><td class="curr">#5 Total 12.5만kl 확보 진행 중. #4 동서발전 IUA 최종 조건 협의 중. 냉열공급 신사업 연계</td></tr>
+     <tr><td>③ LNG Base Operation (#3 시운전·소싱)</td><td>KET #3 Cool-down 착수(2월). M사·W사 카고 스케줄 관리</td><td>Cool-down 완료 → Filling 시작(4월). 석화단지 NG 배관 공사 진행</td><td class="curr">#3 Filling 진행 중, COD '26.07 목표. 석화단지 NG 배관 공정률 34.4% On-Schedule. KNOC 동해가스전 배관 인수 검토 중 (롯데이네오스·온산산단 LNG 직공급)</td></tr>
+     <tr><td>④ 500MW 구역전기사업</td><td>구역전기 사업 가능성 검토. 냉열공급 사업성 분석</td><td>Hybrid 모델 설계. 동서발전 협력 확대. 집단에너지 인허가 전략 수립</td><td class="curr">AI DC·PIC·CEC 부지 중심 Hybrid 모델 구체화 본격화. 외부 전문기관 검증 병행. 동서발전 #1~#3 정압소/배관 통합계약 마무리 단계. C3 배관 KGS 안전성 평가 협의 중</td></tr>
+     <tr><td>⑤ 롯데SK에너루트</td><td>협력 구조 검토</td><td>사업 협의 진행</td><td class="curr">진행 중 — 상세 내용 업데이트 필요</td></tr>
     </tbody>
    </table></div>
+
+   <div class="section-label">⚡ 500MW 구역전기 사업 상세</div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.8;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:14px;">
+     <div style="background:var(--sk-blue-light);border-radius:8px;padding:12px 14px;">
+      <div style="font-weight:700;color:var(--sk-blue);margin-bottom:6px;">집단에너지 vs 구역전기</div>
+      <div><strong>집단에너지</strong>: 한 발전소에서 전기+스팀 동시 생산 → 주변 공장·건물에 공급<br><strong>구역전기</strong>: 정부 허가 구역 내 SK가스가 전기를 <strong>직접 판매</strong> (한전 거치지 않음)</div>
+     </div>
+     <div style="background:#fef3c7;border-radius:8px;padding:12px 14px;">
+      <div style="font-weight:700;color:#92400e;margin-bottom:6px;">지금(UGPS)과 달라지는 점</div>
+      <div>현재: UGPS → 한전 전력망 → SMP 기준 판매<br>구역전기: UGPS → 데이터센터·공장에 장기 PPA 직접 판매<br>→ 마진 대폭 개선, 수익 안정화</div>
+     </div>
+     <div style="background:#d1fae5;border-radius:8px;padding:12px 14px;">
+      <div style="font-weight:700;color:#065f46;margin-bottom:6px;">SK가스가 하려는 이유</div>
+      <div>① LNG #5 탱크 물량 확보<br>② 전기+스팀 이중 수익<br>③ 울산 고객 Lock-in<br>④ 500MW ≈ 16만 가정에 공급 가능 규모</div>
+     </div>
+    </div>
+    <div style="background:var(--gray-50);border-radius:8px;padding:10px 14px;">
+     <div style="font-weight:700;color:var(--gray-900);margin-bottom:6px;">현황 (5/11 주간보고)</div>
+     AI DC·PIC·CEC 부지 중심 Hybrid 모델 구체화 작업 본격화. 동서발전과 AI DC향 전력공급, LNG-LPG Dual Fuel 기반 청정발전 신규 협업 논의. 석화단지 NG 배관 34.4% 공정률 On-Schedule. KNOC 동해가스전 배관(14.1km) 인수 검토로 직공급 인프라 확보 방안 검토 중.
+    </div>
+   </div>
+
    <div class="section-label">주요 이슈</div>
    <div class="issue-grid">
-    <div class="issue-card"><div class="issue-title">동절기 Tank Top(1월)</div><div class="issue-body">LNG 재고 상한 위기 → SKGC 수출입업 등록으로 유연성 확보.</div></div>
-    <div class="issue-card"><div class="issue-title">KET #3 Tank 완공 임박</div><div class="issue-body">Cool-down(2월) → Filling(4월). 터미널 저장 용량 확대 완료 단계.</div></div>
-    <div class="issue-card"><div class="issue-title">GK ESS 100% 복구(3월)</div><div class="issue-body">설비 이슈 이후 완전 복구, 수익 정상화.</div></div>
+    <div class="issue-card"><div class="issue-title">KET #3 Filling (5월)</div><div class="issue-body">Cool-down(2월) → Filling(4월~). COD '26.07 목표. 터미널 저장용량 확대 완료 단계.</div></div>
+    <div class="issue-card"><div class="issue-title">#5 수요 확보 12.5만kl</div><div class="issue-body">한주·고려아연·롯데정밀·한화임팩트·LS MnM 5개사. COD '31 목표.</div></div>
+    <div class="issue-card"><div class="issue-title">500MW 구역전기 Hybrid 모델화</div><div class="issue-body">AI DC·PIC·CEC 부지 중심. 외부 전문기관 검증 병행. 인허가 전략 수립 중.</div></div>
+    <div class="issue-card"><div class="issue-title">동해가스전 배관 인수 검토</div><div class="issue-body">14.1km 배관 인수로 롯데이네오스·온산산단 LNG 직공급 인프라 활용 방안 검토. 차주 석유공사 협의 예정.</div></div>
    </div>
   </div>
 
