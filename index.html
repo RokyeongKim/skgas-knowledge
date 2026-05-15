@@ -191,68 +191,89 @@ th.curr { background: #f06400 !important; }
    </div>
 
    <div class="section-label">🏭 CEC-KET 터미널 탱크 현황 <span style="font-size:11px;color:#6b7280;font-weight:400;">'26년 #3 · '27년 #4 · '31년 #5로 순차 확장</span></div>
-   <div class="tank-terminal-section">
-    <div class="terminal-group">
-     <span class="terminal-label">KET (Korea Energy Terminal)</span>
-     <div class="tank-row">
-      <div class="tank-card tank-operating">
-       <div class="tank-num">#1</div>
-       <div class="tank-status-badge">운영 중</div>
-       <div class="tank-meta">COD '24.10 | 100만 톤/년 | 21.5만 KL (만재 약 9.6만톤)</div>
-       <div class="tank-tenant">UGPS (SK가스)</div>
-       <div class="tank-issue">약 1.5년간 무사고·무재해 안정 운영 중<br><span style="color:var(--sk-blue);font-weight:700;">[소싱]</span> M사(Mitsui) Term 10카고 ≈ 70만톤/년 — 100% GPS 발전용</div>
-      </div>
-      <div class="tank-card tank-operating">
-       <div class="tank-num">#2</div>
-       <div class="tank-status-badge">운영 중</div>
-       <div class="tank-meta">COD '24.10 | 115만 톤/년 | 21.5만 KL (만재 약 9.6만톤)</div>
-       <div class="tank-tenant">SKMU(멀티유틸리티) / 고려아연 / SK에너지</div>
-       <div class="tank-issue">복수 테넌트 안정 운영 중<br><span style="color:var(--sk-blue);font-weight:700;">[소싱]</span> W사(Woodside) 4카고 → SKMU 공급 ≈ 28만톤/년</div>
-      </div>
-      <div class="tank-card tank-imminent">
-       <div class="tank-num">#3</div>
-       <div class="tank-status-badge">COD '26.07 (시운전 중)</div>
-       <div class="tank-meta">COD '26.07 | 105만 톤/년 | 21.5만 KL (만재 약 9.6만톤)</div>
-       <div class="tank-tenant">S-OIL (샤힌 PJT) / 벙커링 / 소규모 수요처</div>
-       <div class="tank-issue">'26.04 시운전 → 하반기 이용 개시 예정. Filling 진행 중.<br><span style="color:var(--sk-blue);font-weight:700;">[소싱]</span> W사(Woodside) 벙커링 3카고 + 여분 1카고 ≈ 28만톤/년</div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:12px;padding:20px;margin-bottom:20px;">
+    <!-- 범례 -->
+    <div style="display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap;font-size:11px;color:var(--gray-700);">
+     <span><span style="display:inline-block;width:10px;height:10px;background:var(--sk-blue);border-radius:2px;margin-right:4px;vertical-align:middle;"></span>주요 임차인</span>
+     <span><span style="display:inline-block;width:10px;height:10px;border:2px dashed #9ca3af;border-radius:2px;margin-right:4px;vertical-align:middle;"></span>탱크전용(LNG도입 없음)</span>
+     <span><span style="display:inline-block;width:10px;height:10px;background:#d1fae5;border:1px solid #6ee7b7;border-radius:2px;margin-right:4px;vertical-align:middle;"></span>개발 중</span>
+    </div>
+    <!-- 탱크 레이아웃 -->
+    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+
+     <!-- #1 -->
+     <div style="flex:1;min-width:160px;border:2px solid var(--sk-blue);border-radius:10px;overflow:hidden;">
+      <div style="background:var(--sk-blue);color:white;text-align:center;padding:6px 10px;font-size:13px;font-weight:700;">#1 탱크 · 19만 KL</div>
+      <div style="padding:12px;">
+       <div style="background:var(--sk-blue-light);border-radius:6px;padding:8px 10px;text-align:center;font-size:12px;font-weight:700;color:var(--sk-blue);">UGPS<br><span style="font-size:11px;font-weight:400;color:var(--gray-700);">19만 KL</span></div>
       </div>
      </div>
-    </div>
-    <div class="terminal-group" style="margin-top:16px;">
-     <span class="terminal-label">CEC (Cheong Energy Corporation)</span>
-     <div class="tank-row">
-      <div class="tank-card tank-pre-cod">
-       <div class="tank-num">#4</div>
-       <div class="tank-status-badge">COD '27.07</div>
-       <div class="tank-meta">COD '27.07 | 110만 톤/년 | 21.5만 KL</div>
-       <div class="tank-tenant">한국동서발전(주)</div>
-       <div class="tank-issue">
-        <strong>단계적 수요 확보:</strong> 27년 6kl → 28년 7kl → 29년 10kl → 30년 20kl (신울산발전소 COD 후)<br>
-        <strong>환상망 연결 추진:</strong> 음성#2 COD '30년 2월 이연 → 불확실성 대비 환상망 추진 지속<br>
-        <strong>리스크:</strong> 30년 신울산 발전소 허가 불확실성. 분쟁 대비 확정매출 조기 확보 전략 필요<br>
-        <strong>IUA:</strong> 동서발전 IUA 5월 체결 예정 (냉열공급 신사업 연계)
-       </div>
+
+     <!-- #2 -->
+     <div style="flex:1;min-width:200px;border:2px solid var(--sk-blue);border-radius:10px;overflow:hidden;">
+      <div style="background:var(--sk-blue);color:white;text-align:center;padding:6px 10px;font-size:13px;font-weight:700;">#2 탱크</div>
+      <div style="padding:12px;display:flex;flex-direction:column;gap:6px;">
+       <div style="background:var(--sk-blue-light);border-radius:6px;padding:8px 10px;text-align:center;font-size:12px;font-weight:700;color:var(--sk-blue);">SKMU<br><span style="font-size:11px;font-weight:400;color:var(--gray-700);">8만 KL</span></div>
+       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">고려아연<br>5.5만 KL</div>
+       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">SKE<br>10만 KL</div>
       </div>
-      <div class="tank-card tank-imminent">
-       <div class="tank-num">#5</div>
-       <div class="tank-status-badge">COD '31 (계획)</div>
-       <div class="tank-meta">COD '31 | 100만 톤/년 | 21.5만 KL (Total 수요 12.5만 kl 확보)</div>
-       <div class="tank-tenant">한주 (19만톤) · 고려아연 (27만톤)<br>롯데정밀 (8만톤) · 한화임팩트 (5만톤) · LS MnM (8만톤)</div>
-       <div class="tank-issue">
-        <strong>수요 확보 현황</strong><br>
-        · 한주 3.5만kl→19만톤 · 고려아연 5만kl→27만톤<br>
-        · 롯데정밀 1.5만kl→8만톤 · 한화임팩트 1.0만kl→5만톤 · LS MnM 1.5만kl→8만톤<br>
-        [발전] 500MW 구역전기 사업 추진 병행 中
-       </div>
+      <div style="background:#fef9ec;border-top:1px dashed #fbbf24;padding:10px 12px;font-size:11px;color:#78350f;line-height:1.7;">
+       <strong>▶ 고려아연·SKE는 왜 탱크전용?</strong><br>
+       LNG 사업 초기 Minimum Scale 확보 위해, 기존 보령 터미널 이용 중이던 고려아연·SKE를 탱크터미널만 이용하는 조건으로 <strong>매우 싸게 계약</strong> 체결. 사업 개시는 됐으나 그 과정에서 <span style="color:var(--red);font-weight:700;">출혈 발생.</span>
       </div>
      </div>
-    </div>
+
+     <!-- #3 -->
+     <div style="flex:1;min-width:200px;border:2px solid var(--amber);border-radius:10px;overflow:hidden;">
+      <div style="background:var(--amber);color:white;text-align:center;padding:6px 10px;font-size:13px;font-weight:700;">#3 탱크 <span style="font-size:11px;font-weight:400;">COD '26.07</span></div>
+      <div style="padding:12px;display:flex;flex-direction:column;gap:6px;">
+       <div style="background:#d1fae5;border:1px solid #6ee7b7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;font-weight:700;color:#065f46;">소규모 수요처<br><span style="font-weight:400;">(개발 중)</span></div>
+       <div style="background:var(--sk-blue-light);border-radius:6px;padding:8px 10px;text-align:center;font-size:12px;font-weight:700;color:var(--sk-blue);">벙커링<br><span style="font-size:11px;font-weight:400;color:var(--gray-700);">3.5만 KL</span></div>
+       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">S-Oil<br>14.7만 KL</div>
+      </div>
+      <div style="background:#fef9ec;border-top:1px dashed #fbbf24;padding:10px 12px;font-size:11px;color:#78350f;line-height:1.7;">
+       <strong>▶ S-Oil은 왜 탱크전용?</strong><br>
+       예비타당성 인가 기한 내에 #3 운영개시를 서두르다 보니 당장 계약 가능한 업체를 찾았고, S-Oil·동서발전이 잡힘. <strong>적당히 싸게 계약</strong> 체결. (동서발전은 #4 탱크)
+      </div>
+     </div>
+
+     <!-- #4 -->
+     <div style="flex:1;min-width:180px;border:2px solid #9ca3af;border-radius:10px;overflow:hidden;">
+      <div style="background:#6b7280;color:white;text-align:center;padding:6px 10px;font-size:13px;font-weight:700;">#4 탱크 <span style="font-size:11px;font-weight:400;">COD '27.07</span></div>
+      <div style="padding:12px;display:flex;flex-direction:column;gap:6px;">
+       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">동서발전<br>20만 KL (±1)</div>
+      </div>
+      <div style="background:#fef9ec;border-top:1px dashed #fbbf24;padding:10px 12px;font-size:11px;color:#78350f;line-height:1.7;">
+       <strong>▶ 동서발전도 탱크전용?</strong><br>
+       #3과 동일한 예비타당성 기한 이슈로 계약. 탱크만 빌려주는 구조라 마진 매우 적음.
+      </div>
+     </div>
+
+     <!-- #5 -->
+     <div style="flex:1;min-width:220px;border:2px solid #6ee7b7;border-radius:10px;overflow:hidden;">
+      <div style="background:#059669;color:white;text-align:center;padding:6px 10px;font-size:13px;font-weight:700;">#5 탱크 <span style="font-size:11px;font-weight:400;">COD '31 (계획)</span></div>
+      <div style="padding:12px;display:flex;flex-direction:column;gap:6px;">
+       <div style="background:#d1fae5;border:1px solid #6ee7b7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#065f46;font-weight:700;">고려아연 5만kl (27만톤)</div>
+       <div style="background:#d1fae5;border:1px solid #6ee7b7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#065f46;font-weight:700;">한주 3.5만kl (19만톤)</div>
+       <div style="background:#d1fae5;border:1px solid #6ee7b7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#065f46;font-weight:700;">LS MnM 1.5만kl (8만톤)</div>
+       <div style="background:#d1fae5;border:1px solid #6ee7b7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#065f46;font-weight:700;">롯데정밀 1.5만kl (8만톤)</div>
+       <div style="background:#d1fae5;border:1px solid #6ee7b7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#065f46;font-weight:700;">한화임팩트 1만kl (5만톤)</div>
+      </div>
+      <div style="background:#ecfdf5;border-top:1px solid #6ee7b7;padding:10px 12px;font-size:11px;color:#065f46;line-height:1.7;">
+       <strong>▶ #5는 터미널 + LNG 직도입 세트 수요처 위주</strong><br>
+       경제성 확보를 위해 탱크 이용 + LNG 직도입 수요가 있는 업체 중심 개발 중.<br>
+       <span style="color:var(--red);font-weight:700;">직도입 설득 어려움:</span> 자가발전 설비투자비 300억~1조원, 단순 전기료 절감 효과만 존재(Upside 없음) → 고객사 투자 의사결정 부담 큼.
+      </div>
+     </div>
+
+    </div><!-- /탱크 레이아웃 -->
    </div>
 
    <div class="section-label">📖 LNG 사업 시작 배경</div>
    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.9;">
     <p style="margin-bottom:10px;"><strong style="color:var(--gray-900);">원래 한국석유공사(KNOC)는 울산에 오일터미널 사업만 하려 했으나</strong>, 사업성이 안 나와 2000년대 중반부터 10년 넘게 사업화를 못 한 상황이었습니다.</p>
     <p style="margin-bottom:10px;"><strong style="color:var(--sk-blue);">2017~2018년 SK가스가 석유공사에 제안</strong>: "우리랑 같이할래? 우리는 LNG사업을 하고 싶어. 근처에 GPS 지을 건데 LNG 탱크가 필요하거든" → 공동 진행 합의.</p>
+    <p style="margin-bottom:10px;">LNG 사업 진입에는 <strong>Minimum Scale 확보</strong>가 필수 조건. UGPS·SKMU Captive 수요만으로는 부족해, 고려아연·SKE를 탱크전용(매우 싸게) 계약으로 끌어들여 스케일을 맞췄고, 사업 개시는 했지만 그 과정에서 출혈이 발생했습니다.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0;">
      <div style="background:var(--gray-50);border-radius:6px;padding:10px 12px;">
       <div style="font-weight:700;color:var(--gray-900);margin-bottom:4px;">KET (Korea Energy Terminal)</div>
@@ -266,40 +287,88 @@ th.curr { background: #f06400 !important; }
     <p><strong style="color:var(--gray-900);">주요 일정:</strong> JV 체결 '19년 → TUA·EPC 계약 '20년 → 착공 '20년 초 → 완공 '24년 → 상업운행 '24.11월</p>
    </div>
 
-   <div class="section-label">📋 Master TUA 계약 구조</div>
+   <div class="section-label">🏗️ 터미널 사업 특징</div>
    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.9;">
-    <p style="margin-bottom:12px;"><strong style="color:var(--sk-blue);">Master TUA = SKG가 KET에게 LNG 터미널을 빌린 계약</strong>. LNG 탱크를 지은 곳은 KET이며, SKG가 이를 빌려 운영합니다. 그리고 SKG가 다시 고객사에 <strong>전대(재임대)</strong>하는 구조입니다.</p>
-    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:10px 0;padding:12px;background:var(--sk-blue-light);border-radius:8px;">
-     <div style="background:var(--sk-blue);color:white;border-radius:6px;padding:8px 12px;text-align:center;min-width:80px;font-size:11px;font-weight:700;">KET<br>(터미널 소유)</div>
-     <div style="color:var(--sk-blue);font-size:18px;font-weight:700;">→</div>
-     <div style="background:white;border:2px solid var(--sk-blue);border-radius:6px;padding:8px 12px;text-align:center;min-width:80px;font-size:11px;font-weight:700;">SK가스<br>(Master TUA)</div>
-     <div style="color:var(--sk-blue);font-size:18px;font-weight:700;">→</div>
-     <div style="background:white;border:1px solid var(--gray-200);border-radius:6px;padding:8px 12px;text-align:center;min-width:120px;font-size:11px;">
-      <div style="font-weight:700;margin-bottom:2px;">전대 (고객사)</div>
-      <div style="color:#6b7280;">고려아연 · GPS · SK에너지 등</div>
+    <div style="background:#fef3c7;border-left:4px solid var(--amber);border-radius:0 8px 8px 0;padding:12px 14px;margin-bottom:14px;">
+     <strong style="color:#92400e;">연료 도입은 Optionality·Trading으로 Upside가 있지만, 탱크 인프라 사업은 마진이 매우 적음</strong>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
+     <div style="background:var(--sk-blue-light);border-radius:8px;padding:12px 14px;">
+      <div style="font-weight:700;color:var(--sk-blue);margin-bottom:6px;">연료 도입 (LNG Trading)</div>
+      <div>JKM·FEI 가격 차이를 활용한 페이퍼 포지션 운용, Spot 조달 최적화 → <strong>Upside 존재</strong></div>
+     </div>
+     <div style="background:#fff7ed;border-radius:8px;padding:12px 14px;">
+      <div style="font-weight:700;color:#c2410c;margin-bottom:6px;">탱크 터미널 (인프라)</div>
+      <div>마진이 매우 적음. 현재 G&amp;P가 탱크터미널로 버는 돈:<br>
+       <div style="margin-top:8px;background:white;border-radius:6px;padding:8px 10px;font-size:11px;">
+        <div style="display:flex;justify-content:space-between;padding:2px 0;"><span style="color:#6b7280;">SKG → KET 임대료</span><span style="font-weight:700;color:var(--red);">△840억/년</span></div>
+        <div style="display:flex;justify-content:space-between;padding:2px 0;"><span style="color:#6b7280;">탱크이용자 → SKG 이용료</span><span style="font-weight:700;color:var(--green);">870억/년</span></div>
+        <div style="display:flex;justify-content:space-between;border-top:1px solid var(--gray-200);padding-top:4px;margin-top:4px;"><span style="color:#6b7280;">G&amp;P 순이익</span><span style="font-weight:700;">≈ 30억/년</span></div>
+       </div>
+       <div style="font-size:11px;color:#c2410c;margin-top:6px;">경영지원 인건비·서비스피 내고 나면 사실상 적자</div>
+      </div>
      </div>
     </div>
-    <p style="margin-top:8px;"><strong style="color:var(--gray-900);">3자 계약 구조</strong> (KET에 책임관계 부여 목적):</p>
-    <ul style="padding-left:16px;margin-top:4px;">
-     <li>고려아연 — SKG — KET</li>
-     <li>GPS — SKG — KET</li>
-     <li>SK에너지 — SKG — KET</li>
-    </ul>
    </div>
 
-   <div class="section-label">💰 총괄원가 구조</div>
+   <div class="section-label">⚡ LNG 연료도입 자가발전 특징</div>
    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.9;">
-    <div style="background:#fffbeb;border-left:4px solid var(--amber);border-radius:0 8px 8px 0;padding:12px 14px;margin-bottom:12px;">
-     <strong style="color:#92400e;">총괄원가 = LNG터미널 투자비 + 운영비용 + 고정 마진율(KET 이윤보장)</strong><br>
-     <span style="font-size:11px;color:#92400e;">인프라를 돌리기 위해 소요된 모든 원가를 SK가스가 KET에 보상해주는 개념</span>
+    <div style="background:var(--sk-blue-light);border-radius:8px;padding:12px 14px;margin-bottom:14px;">
+     <strong style="color:var(--sk-blue);">LNG를 발전원으로 쓰면 → 전기 50% + 열(스팀) 50%로 전환됨</strong>
     </div>
-    <p style="margin-bottom:8px;"><strong style="color:var(--gray-900);">계약 조건:</strong> 20년 장기 계약. KET·석유공사 측 요청으로 <strong>매년 균등화된 기준이용료</strong>로 지급.</p>
-    <p style="margin-bottom:8px;">투자보수(감가상각)는 시간이 갈수록 감소하고, 영업비용은 물가상승률 반영하여 증가 → 이를 평균화한 연간 기준이용료 지급. 실적 차이는 매년 정산.</p>
-    <p style="color:#6b7280;font-size:11px;">※ 이용료 산정 용역: 삼일회계법인 (KET와 공동발주, 보수 총 5,000만원)</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:14px;">
+     <div style="background:#ecfdf5;border:1px solid #6ee7b7;border-radius:8px;padding:12px 14px;">
+      <div style="font-weight:700;color:#059669;margin-bottom:6px;">① 전력수요 &lt; 스팀수요 → 설득 쉬움</div>
+      <div>스팀이 부족하면 보일러로 추가 생산 가능(단순히 가스 틀어 물 끓이면 됨). 수요 대응이 훨씬 용이 → <strong>경제성 확보 용이</strong></div>
+     </div>
+     <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:12px 14px;">
+      <div style="font-weight:700;color:#c2410c;margin-bottom:6px;">② 전력수요 &gt; 스팀수요 → 설득 어려움</div>
+      <div>발전량만큼 스팀도 같이 나오는데 스팀 수요가 적으면 잉여 스팀을 버려야 함 → 에너지 손실, 경제성 악화</div>
+     </div>
+    </div>
+    <div style="background:var(--gray-50);border-radius:8px;padding:12px 14px;font-size:11px;color:var(--gray-700);">
+     <strong style="color:var(--gray-900);">수요처 설득이 어려운 이유</strong><br>
+     전기료 20% 절감을 위해 300억~1조원 규모의 자가발전 설비에 투자해야 함. 본업(아연 채굴, 석화 등)에 투자하면 사업 Upside가 열리지만, 자가발전 설비투자는 단순 전기료 cost saving만 존재 — <strong>고객사 입장에서 투자 우선순위가 낮음.</strong>
+    </div>
    </div>
 
    <div class="section-label">📌 기타 사항</div>
    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-bottom:20px;">
+    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
+     <div style="font-size:12px;font-weight:700;color:var(--gray-900);margin-bottom:8px;">📋 Master TUA 계약구조</div>
+     <div style="font-size:11px;color:var(--gray-700);line-height:1.7;">
+      <strong style="color:var(--sk-blue);">SKG가 KET에 LNG 터미널을 빌린 계약.</strong> KET가 탱크를 짓고 SKG가 빌려 운영, SKG가 다시 고객사에 전대(재임대).<br><br>
+      <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:8px;background:var(--sk-blue-light);border-radius:6px;font-size:10px;text-align:center;">
+       <span style="background:var(--sk-blue);color:white;border-radius:4px;padding:4px 8px;font-weight:700;">KET<br>소유</span>
+       <span style="color:var(--sk-blue);font-weight:700;">→</span>
+       <span style="border:2px solid var(--sk-blue);border-radius:4px;padding:4px 8px;font-weight:700;">SK가스<br>Master TUA</span>
+       <span style="color:var(--sk-blue);font-weight:700;">→</span>
+       <span style="border:1px solid var(--gray-200);border-radius:4px;padding:4px 8px;">고객사<br>전대</span>
+      </div>
+      <div style="margin-top:8px;"><strong>3자 계약 구조:</strong> 고려아연·GPS·SK에너지 — SKG — KET</div>
+     </div>
+    </div>
+    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
+     <div style="font-size:12px;font-weight:700;color:var(--gray-900);margin-bottom:8px;">💰 총괄원가 구조</div>
+     <div style="font-size:11px;color:var(--gray-700);line-height:1.7;">
+      <div style="background:#fffbeb;border-left:3px solid var(--amber);padding:6px 8px;border-radius:0 4px 4px 0;margin-bottom:8px;font-size:10px;color:#92400e;">총괄원가 = 터미널 투자비 + 운영비용 + 고정 마진율(KET 이윤보장)</div>
+      20년 장기 계약. KET 요청으로 매년 균등화된 기준이용료 지급. 투자보수는 시간이 갈수록 감소, 운영비는 물가상승 반영 증가 → 평균화 후 지급, 매년 정산.<br>
+      <span style="color:#6b7280;font-size:10px;">※ 이용료 산정: 삼일회계법인 (공동발주, 5,000만원)</span>
+     </div>
+    </div>
+    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
+     <div style="font-size:12px;font-weight:700;color:var(--gray-900);margin-bottom:8px;">🔗 한주의 사업구조 (= 우리가 추진 중인 500MW 구역전기 사업 모델)</div>
+     <div style="font-size:11px;color:var(--gray-700);line-height:1.7;">
+      지역난방공사·도시가스처럼 <strong>공단 입주업체에 전기·난방·온수를 공급하는 사업권</strong>을 가진 회사. 입주업체는 의무적으로 한주에 종속.<br><br>
+      <div style="background:var(--gray-50);border-radius:6px;padding:8px 10px;margin:6px 0;font-size:10px;">
+       <strong>SKG 전략:</strong><br>
+       ① SKG → 한주에 LNG 공급 시도<br>
+       ② 동시에 한주 이용 고객사에게 LNG 직도입+자가발전 설득<br>
+       → 한주가 빠지면: SKG는 LNG를 10~15% 더 비싸게 팔 수 있고, 유니드 같은 고객사는 전기료가 더 싸짐<br>
+       <strong style="color:var(--sk-blue);">"한주야, 우리꺼 안 사면 너네 고객사에 직접 팔거야~"</strong>
+      </div>
+     </div>
+    </div>
     <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
      <div style="font-size:12px;font-weight:700;color:var(--gray-900);margin-bottom:8px;">분쟁 배경 (EPC 공사비)</div>
      <div style="font-size:11px;color:var(--gray-700);line-height:1.7;">
