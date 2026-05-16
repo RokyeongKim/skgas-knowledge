@@ -194,74 +194,82 @@ th.curr { background: #f06400 !important; }
    <div style="background:white;border:1px solid var(--gray-200);border-radius:12px;padding:20px;margin-bottom:20px;">
     <!-- 범례 -->
     <div style="display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap;font-size:11px;color:var(--gray-700);">
-     <span><span style="display:inline-block;width:10px;height:10px;background:var(--sk-blue);border-radius:2px;margin-right:4px;vertical-align:middle;"></span>주요 임차인</span>
-     <span><span style="display:inline-block;width:10px;height:10px;border:2px dashed #9ca3af;border-radius:2px;margin-right:4px;vertical-align:middle;"></span>탱크전용(LNG도입 없음)</span>
-     <span><span style="display:inline-block;width:10px;height:10px;background:#d1fae5;border:1px solid #6ee7b7;border-radius:2px;margin-right:4px;vertical-align:middle;"></span>개발 중</span>
+     <span style="display:flex;align-items:center;gap:4px;"><span style="display:inline-block;width:10px;height:10px;background:#e5e7eb;border:1px solid #9ca3af;border-radius:2px;"></span>주요 Captive 수요</span>
+     <span style="display:flex;align-items:center;gap:4px;"><span style="display:inline-block;width:10px;height:10px;background:var(--sk-blue-light);border:1px solid var(--sk-blue);border-radius:2px;"></span>탱크전용 계약 (LNG 도입 없음)</span>
+     <span style="display:flex;align-items:center;gap:4px;"><span style="display:inline-block;width:10px;height:10px;border:2px dashed #9ca3af;border-radius:2px;"></span>개발 중</span>
+     <span style="display:flex;align-items:center;gap:4px;"><span style="display:inline-block;width:10px;height:10px;background:var(--sk-blue);border-radius:2px;"></span>KET 탱크</span>
+     <span style="display:flex;align-items:center;gap:4px;"><span style="display:inline-block;width:10px;height:10px;background:#0e7490;border-radius:2px;"></span>CEC 탱크</span>
     </div>
     <!-- 탱크 레이아웃 -->
     <div style="display:flex;gap:14px;flex-wrap:wrap;">
 
-     <!-- #1 -->
-     <div style="flex:1;min-width:160px;border:2px solid var(--sk-blue);border-radius:10px;overflow:hidden;">
+     <!-- #1 KET -->
+     <div style="flex:1;min-width:150px;border:2px solid var(--sk-blue);border-radius:10px;overflow:hidden;">
       <div style="background:var(--sk-blue);color:white;text-align:center;padding:6px 10px;font-size:13px;font-weight:700;">#1 탱크 · 19만 KL</div>
-      <div style="padding:12px;">
-       <div style="background:var(--sk-blue-light);border-radius:6px;padding:8px 10px;text-align:center;font-size:12px;font-weight:700;color:var(--sk-blue);">UGPS<br><span style="font-size:11px;font-weight:400;color:var(--gray-700);">19만 KL</span></div>
+      <div style="padding:12px;display:flex;flex-direction:column;gap:4px;">
+       <div style="font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px;">주요 Captive 수요</div>
+       <div style="background:#f3f4f6;border:1px solid #d1d5db;border-radius:6px;padding:8px 10px;text-align:center;font-size:12px;font-weight:700;color:#374151;">UGPS<br><span style="font-size:11px;font-weight:400;">19만 KL</span></div>
       </div>
      </div>
 
-     <!-- #2 -->
+     <!-- #2 KET -->
      <div style="flex:1;min-width:200px;border:2px solid var(--sk-blue);border-radius:10px;overflow:hidden;">
       <div style="background:var(--sk-blue);color:white;text-align:center;padding:6px 10px;font-size:13px;font-weight:700;">#2 탱크</div>
-      <div style="padding:12px;display:flex;flex-direction:column;gap:6px;">
-       <div style="background:var(--sk-blue-light);border-radius:6px;padding:8px 10px;text-align:center;font-size:12px;font-weight:700;color:var(--sk-blue);">SKMU<br><span style="font-size:11px;font-weight:400;color:var(--gray-700);">8만 KL</span></div>
-       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">고려아연<br>5.5만 KL</div>
-       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">SKE<br>10만 KL</div>
+      <div style="padding:12px;display:flex;flex-direction:column;gap:4px;">
+       <div style="font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px;">주요 Captive 수요</div>
+       <div style="background:#f3f4f6;border:1px solid #d1d5db;border-radius:6px;padding:8px 10px;text-align:center;font-size:12px;font-weight:700;color:#374151;">SKMU<br><span style="font-size:11px;font-weight:400;">8만 KL</span></div>
+       <div style="height:6px;"></div>
+       <div style="background:var(--sk-blue-light);border:1px solid var(--sk-blue);border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;font-weight:700;color:var(--sk-blue);">고려아연<br><span style="font-weight:400;">5.5만 KL</span></div>
+       <div style="background:var(--sk-blue-light);border:1px solid var(--sk-blue);border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;font-weight:700;color:var(--sk-blue);">SKE<br><span style="font-weight:400;">10만 KL</span></div>
       </div>
-      <div style="background:#fef9ec;border-top:1px dashed #fbbf24;padding:10px 12px;font-size:11px;color:#78350f;line-height:1.7;">
-       <strong>▶ 고려아연·SKE는 왜 탱크전용?</strong><br>
-       LNG 사업 초기 Minimum Scale 확보 위해, 기존 보령 터미널 이용 중이던 고려아연·SKE를 탱크터미널만 이용하는 조건으로 <strong>매우 싸게 계약</strong> 체결. 사업 개시는 됐으나 그 과정에서 <span style="color:var(--red);font-weight:700;">출혈 발생.</span>
+      <div style="background:var(--sk-blue-light);border-top:1px solid var(--sk-blue);padding:10px 12px;font-size:11px;color:var(--sk-blue-dark);line-height:1.7;">
+       <strong>▶ 고려아연·SKE는 왜 LNG 도입 없이 탱크만?</strong><br>
+       LNG 사업 초기 Minimum Scale 확보 위해, 기존 보령 터미널 이용 중이던 고려아연·SKE를 탱크만 이용하는 조건으로 <strong>매우 싸게 계약</strong> 체결. 사업 개시는 됐으나 그 과정에서 <span style="color:var(--red);font-weight:700;">출혈 발생.</span>
       </div>
      </div>
 
-     <!-- #3 -->
-     <div style="flex:1;min-width:200px;border:2px solid var(--amber);border-radius:10px;overflow:hidden;">
-      <div style="background:var(--amber);color:white;text-align:center;padding:6px 10px;font-size:13px;font-weight:700;">#3 탱크 <span style="font-size:11px;font-weight:400;">COD '26.07</span></div>
-      <div style="padding:12px;display:flex;flex-direction:column;gap:6px;">
-       <div style="background:#d1fae5;border:1px solid #6ee7b7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;font-weight:700;color:#065f46;">소규모 수요처<br><span style="font-weight:400;">(개발 중)</span></div>
-       <div style="background:var(--sk-blue-light);border-radius:6px;padding:8px 10px;text-align:center;font-size:12px;font-weight:700;color:var(--sk-blue);">벙커링<br><span style="font-size:11px;font-weight:400;color:var(--gray-700);">3.5만 KL</span></div>
-       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">S-Oil<br>14.7만 KL</div>
+     <!-- #3 KET -->
+     <div style="flex:1;min-width:200px;border:2px solid var(--sk-blue);border-radius:10px;overflow:hidden;">
+      <div style="background:var(--sk-blue);color:white;text-align:center;padding:6px 10px;font-size:13px;font-weight:700;">#3 탱크 <span style="font-size:11px;font-weight:400;">COD '26.07</span></div>
+      <div style="padding:12px;display:flex;flex-direction:column;gap:4px;">
+       <div style="font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px;">주요 Captive 수요</div>
+       <div style="background:#f3f4f6;border:1px solid #d1d5db;border-radius:6px;padding:8px 10px;text-align:center;font-size:12px;font-weight:700;color:#374151;">벙커링<br><span style="font-size:11px;font-weight:400;">3.5만 KL</span></div>
+       <div style="height:6px;"></div>
+       <div style="background:var(--sk-blue-light);border:1px solid var(--sk-blue);border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;font-weight:700;color:var(--sk-blue);">S-Oil<br><span style="font-weight:400;">14.7만 KL</span></div>
+       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">소규모 수요처<br><span style="font-size:10px;">(개발 중)</span></div>
       </div>
-      <div style="background:#fef9ec;border-top:1px dashed #fbbf24;padding:10px 12px;font-size:11px;color:#78350f;line-height:1.7;">
-       <strong>▶ S-Oil은 왜 탱크전용?</strong><br>
+      <div style="background:var(--sk-blue-light);border-top:1px solid var(--sk-blue);padding:10px 12px;font-size:11px;color:var(--sk-blue-dark);line-height:1.7;">
+       <strong>▶ S-Oil은 왜 LNG 도입 없이 탱크만?</strong><br>
        예비타당성 인가 기한 내에 #3 운영개시를 서두르다 보니 당장 계약 가능한 업체를 찾았고, S-Oil·동서발전이 잡힘. <strong>적당히 싸게 계약</strong> 체결. (동서발전은 #4 탱크)
       </div>
      </div>
 
-     <!-- #4 -->
-     <div style="flex:1;min-width:180px;border:2px solid #9ca3af;border-radius:10px;overflow:hidden;">
-      <div style="background:#6b7280;color:white;text-align:center;padding:6px 10px;font-size:13px;font-weight:700;">#4 탱크 <span style="font-size:11px;font-weight:400;">COD '27.07</span></div>
-      <div style="padding:12px;display:flex;flex-direction:column;gap:6px;">
-       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">동서발전<br>20만 KL (±1)</div>
+     <!-- #4 CEC -->
+     <div style="flex:1;min-width:180px;border:2px solid #0e7490;border-radius:10px;overflow:hidden;">
+      <div style="background:#0e7490;color:white;text-align:center;padding:6px 10px;font-size:13px;font-weight:700;">#4 탱크 <span style="font-size:11px;font-weight:400;">COD '27.07</span></div>
+      <div style="padding:12px;display:flex;flex-direction:column;gap:4px;">
+       <div style="background:var(--sk-blue-light);border:1px solid var(--sk-blue);border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;font-weight:700;color:var(--sk-blue);">동서발전<br><span style="font-weight:400;">20만 KL (±1)</span></div>
       </div>
-      <div style="background:#fef9ec;border-top:1px dashed #fbbf24;padding:10px 12px;font-size:11px;color:#78350f;line-height:1.7;">
-       <strong>▶ 동서발전도 탱크전용?</strong><br>
+      <div style="background:var(--sk-blue-light);border-top:1px solid var(--sk-blue);padding:10px 12px;font-size:11px;color:var(--sk-blue-dark);line-height:1.7;">
+       <strong>▶ 동서발전도 LNG 도입 없이 탱크만?</strong><br>
        #3과 동일한 예비타당성 기한 이슈로 계약. 탱크만 빌려주는 구조라 마진 매우 적음.
       </div>
      </div>
 
-     <!-- #5 -->
-     <div style="flex:1;min-width:220px;border:2px solid #6ee7b7;border-radius:10px;overflow:hidden;">
-      <div style="background:#059669;color:white;text-align:center;padding:6px 10px;font-size:13px;font-weight:700;">#5 탱크 <span style="font-size:11px;font-weight:400;">COD '31 (계획)</span></div>
-      <div style="padding:12px;display:flex;flex-direction:column;gap:6px;">
-       <div style="background:#d1fae5;border:1px solid #6ee7b7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#065f46;font-weight:700;">고려아연 5만kl (27만톤)</div>
-       <div style="background:#d1fae5;border:1px solid #6ee7b7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#065f46;font-weight:700;">한주 3.5만kl (19만톤)</div>
-       <div style="background:#d1fae5;border:1px solid #6ee7b7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#065f46;font-weight:700;">LS MnM 1.5만kl (8만톤)</div>
-       <div style="background:#d1fae5;border:1px solid #6ee7b7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#065f46;font-weight:700;">롯데정밀 1.5만kl (8만톤)</div>
-       <div style="background:#d1fae5;border:1px solid #6ee7b7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#065f46;font-weight:700;">한화임팩트 1만kl (5만톤)</div>
+     <!-- #5 CEC -->
+     <div style="flex:1;min-width:220px;border:2px solid #0e7490;border-radius:10px;overflow:hidden;">
+      <div style="background:#0e7490;color:white;text-align:center;padding:6px 10px;font-size:13px;font-weight:700;">#5 탱크 <span style="font-size:11px;font-weight:400;">COD '31 (계획)</span></div>
+      <div style="background:#fef3c7;border-bottom:1px solid #fbbf24;padding:6px 12px;text-align:center;font-size:11px;color:#92400e;font-weight:700;">⚠ FID 미발령 — 수요 절반 이상 확보 후 투자의사결정</div>
+      <div style="padding:12px;display:flex;flex-direction:column;gap:4px;">
+       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">고려아연 5만kl (27만톤)</div>
+       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">한주 3.5만kl (19만톤)</div>
+       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">LS MnM 1.5만kl (8만톤)</div>
+       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">롯데정밀 1.5만kl (8만톤)</div>
+       <div style="border:2px dashed #9ca3af;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;color:#6b7280;">한화임팩트 1만kl (5만톤)</div>
       </div>
-      <div style="background:#ecfdf5;border-top:1px solid #6ee7b7;padding:10px 12px;font-size:11px;color:#065f46;line-height:1.7;">
-       <strong>▶ #5는 터미널 + LNG 직도입 세트 수요처 위주</strong><br>
-       경제성 확보를 위해 탱크 이용 + LNG 직도입 수요가 있는 업체 중심 개발 중.<br>
+      <div style="background:#fef9ec;border-top:1px dashed #fbbf24;padding:10px 12px;font-size:11px;color:#78350f;line-height:1.7;">
+       <strong>▶ #5는 터미널 + LNG 직도입 세트 수요처 위주로 개발 중</strong><br>
+       경제성 확보 위해 탱크 이용 + LNG 직도입 수요 업체 중심.<br>
        <span style="color:var(--red);font-weight:700;">직도입 설득 어려움:</span> 자가발전 설비투자비 300억~1조원, 단순 전기료 절감 효과만 존재(Upside 없음) → 고객사 투자 의사결정 부담 큼.
       </div>
      </div>
