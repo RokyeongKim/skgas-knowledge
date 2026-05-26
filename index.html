@@ -49,6 +49,7 @@ body { font-family: 'Apple SD Gothic Neo','Malgun Gothic',-apple-system,sans-ser
 .hero-bun { background: linear-gradient(135deg,#1a237e,#5c6bc0); }
 .hero-ess { background: linear-gradient(135deg,#004d40,#26a69a); }
 .hero-ska { background: linear-gradient(135deg,#4a148c,#ab47bc); }
+.hero-energy { background: linear-gradient(135deg,#1b5e20,#43a047); }
 .hero-trading { background: linear-gradient(135deg,#b45309,#f59e0b); }
 /* CEO Letter styles */
 .ceo-date-badge { background: var(--sk-orange); color: white; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 12px; }
@@ -151,14 +152,17 @@ th.curr { background: #f06400 !important; }
   <button class="main-tab" onclick="switchMain('div',this)">본부현황</button>
   <button class="main-tab" onclick="switchMain('ceo',this)">CEO Letter</button>
 </div>
-<div class="sub-tab-bar" id="sub-biz" style="display:flex;">
+<div class="sub-tab-bar" id="sub-biz" style="display:flex;align-items:center;flex-wrap:wrap;">
+  <span style="font-size:10px;color:#9ca3af;padding:4px 8px 4px 4px;font-weight:600;white-space:nowrap;border-right:2px solid #e5e7eb;margin-right:6px;">기존사업</span>
   <button class="sub-tab active" onclick="switchSub('biz','lng',this)">LNG</button>
   <button class="sub-tab" onclick="switchSub('biz','lpg',this)">LPG</button>
   <button class="sub-tab" onclick="switchSub('biz','gen',this)">발전(UGPS)</button>
-  <button class="sub-tab" onclick="switchSub('biz','bun',this)">벙커링(EMFS)</button>
   <button class="sub-tab" onclick="switchSub('biz','ess',this)">ESS</button>
   <button class="sub-tab" onclick="switchSub('biz','ska',this)">SKA(PDH)</button>
   <button class="sub-tab" onclick="switchSub('biz','trading',this)">Trading</button>
+  <span style="font-size:10px;color:#16a34a;padding:4px 8px 4px 8px;font-weight:700;white-space:nowrap;border-left:2px solid #e5e7eb;border-right:2px solid #e5e7eb;margin:0 6px;">신사업</span>
+  <button class="sub-tab" onclick="switchSub('biz','bun',this)">벙커링(EMFS)</button>
+  <button class="sub-tab" onclick="switchSub('biz','energy',this)">집단에너지</button>
 </div>
 <div class="sub-tab-bar" id="sub-div" style="display:none;">
   <button class="sub-tab active" onclick="switchSub('div','ecoenergy',this)">EcoEnergy본부</button>
@@ -473,7 +477,31 @@ th.curr { background: #f06400 !important; }
     <div class="card"><div class="card-title">GPS 매각 진행</div><div class="metric" style="font-size:16px;">SPA 협의 중</div><div class="metric-sub">MOU(2/6) · 이행보증금 76.5억</div></div>
    </div>
 
-   <div class="section-label">⚡ 500MW 구역전기 사업</div>
+   <div class="section-label">밸류체인</div>
+   <div class="value-chain">
+    <div class="vc-step"><div class="icon">🔥</div><div class="name">연료 조달</div><div class="desc">LNG·LPG 혼소<br>울산 기지 직결</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">⚡</div><div class="name">발전</div><div class="desc">GT 1·2호기<br>1,227MW 가동</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">🔌</div><div class="name">전력 판매</div><div class="desc">SMP 기준 판매<br>CfD 계약 협의</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">📈</div><div class="name">Optionality</div><div class="desc">LNG/LPG 연료비<br>헤지 운용</div></div>
+   </div>
+   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 4일 주간보고</span></div>
+   <div class="update-list">
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>GPS 지분매각 SPA 협의 최종 단계</strong> — MOU(2/6), 이행보증금 76.5억. PF Waiver 추진 중.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>BI 완료(4월)</strong> — GT 1호기 +4,000h, 2호기 +8,000h 수명 연장. 중장기 안정 운전 확보.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>EPC 준공 완료(~1/12)</strong> — 발전소 건설 완료, 운영 단계로 전환.</div></div>
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>CfD 계약서 협의 중</strong> — SMP 기준 차액계약, 체결 임박.</div></div>
+    <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>SUPEX SHE 진단 완료</strong> — 개선과제 도출 및 이행 중.</div></div>
+   </div>
+  </div>
+
+
+  <div class="biz-panel" id="biz-energy">
+   <div class="biz-hero hero-energy"><h1>집단에너지 (500MW 구역전기)</h1><p>울산 AI DC·석화단지 전기·스팀 직판매 신사업 — 500MW 규모 구역전기 사업자 허가 추진<br>동서발전 협력 · LNG #5 탱크 물량 연계 · AI DC 장기 PPA 목표</p></div>
+
+   <div class="section-label">⚡ 사업 개요</div>
    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.8;">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:14px;">
      <div style="background:var(--sk-blue-light);border-radius:8px;padding:12px 14px;">
@@ -506,23 +534,11 @@ th.curr { background: #f06400 !important; }
      </div>
     </div>
    </div>
-   <div class="section-label">밸류체인</div>
-   <div class="value-chain">
-    <div class="vc-step"><div class="icon">🔥</div><div class="name">연료 조달</div><div class="desc">LNG·LPG 혼소<br>울산 기지 직결</div></div>
-    <div class="vc-arrow">›</div>
-    <div class="vc-step"><div class="icon">⚡</div><div class="name">발전</div><div class="desc">GT 1·2호기<br>1,227MW 가동</div></div>
-    <div class="vc-arrow">›</div>
-    <div class="vc-step"><div class="icon">🔌</div><div class="name">전력 판매</div><div class="desc">SMP 기준 판매<br>CfD 계약 협의</div></div>
-    <div class="vc-arrow">›</div>
-    <div class="vc-step"><div class="icon">📈</div><div class="name">Optionality</div><div class="desc">LNG/LPG 연료비<br>헤지 운용</div></div>
-   </div>
-   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 4일 주간보고</span></div>
-   <div class="update-list">
-    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>GPS 지분매각 SPA 협의 최종 단계</strong> — MOU(2/6), 이행보증금 76.5억. PF Waiver 추진 중.</div></div>
-    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>BI 완료(4월)</strong> — GT 1호기 +4,000h, 2호기 +8,000h 수명 연장. 중장기 안정 운전 확보.</div></div>
-    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>EPC 준공 완료(~1/12)</strong> — 발전소 건설 완료, 운영 단계로 전환.</div></div>
-    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>CfD 계약서 협의 중</strong> — SMP 기준 차액계약, 체결 임박.</div></div>
-    <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>SUPEX SHE 진단 완료</strong> — 개선과제 도출 및 이행 중.</div></div>
+
+   <div class="section-label">집단에너지 vs 구역전기</div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 18px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.8;">
+    <strong style="color:var(--sk-blue);">집단에너지</strong>: 한 발전소에서 전기+스팀 동시 생산 → 주변 공장·건물에 공급<br>
+    <strong style="color:var(--sk-blue);">구역전기</strong>: 정부 허가 구역 내 SK가스가 전기를 <strong>직접 판매</strong> (한전 거치지 않음)
    </div>
   </div>
 
@@ -618,7 +634,7 @@ th.curr { background: #f06400 !important; }
        <div style="flex:1;background:#fef3c7;border:2px solid var(--amber);border-radius:8px;padding:8px;text-align:center;">
         <div style="font-size:11px;font-weight:700;color:#92400e;">PMC (폴리미래)</div>
         <div style="font-size:18px;font-weight:800;color:#92400e;">50+1주</div>
-        <div style="font-size:10px;color:#92400e;margin-top:2px;">DL케미칼 50%<br>LYB 50%</div>
+        <div style="font-size:10px;color:#92400e;margin-top:2px;">대림(DL케미칼) 50%<br>LYB(라이온델바젤) 50%</div>
        </div>
       </div>
       <div style="text-align:center;font-size:16px;color:#9ca3af;">↓</div>
@@ -637,7 +653,7 @@ th.curr { background: #f06400 !important; }
     <div class="card"><div class="card-title">PDH Spread (4월)</div><div class="metric" style="color:var(--green);">$646/톤</div><div class="metric-sub">1월 $174 → 4월 사상 최고</div></div>
     <div class="card"><div class="card-title">PDH Spread (1월)</div><div class="metric">$174/톤</div><div class="metric-sub">연초 저마진 구간</div></div>
     <div class="card"><div class="card-title">AGIC Exit</div><div class="metric" style="color:var(--green);">완료</div><div class="metric-sub">4/16 두바이 지분 정리</div></div>
-    <div class="card"><div class="card-title">H사 통합</div><div class="metric" style="font-size:16px;">5월 이사회</div><div class="metric-sub">승인 추진 중</div></div>
+    <div class="card"><div class="card-title">구조개편 옵션</div><div class="metric" style="font-size:16px;">3가지</div><div class="metric-sub">Option A/B/C 협의 중 (2026.05)</div></div>
    </div>
    <div class="section-label">밸류체인</div>
    <div class="value-chain">
@@ -649,12 +665,58 @@ th.curr { background: #f06400 !important; }
     <div class="vc-arrow">›</div>
     <div class="vc-step"><div class="icon">💵</div><div class="name">수익</div><div class="desc">Spread 기반<br>사상 최고 수준</div></div>
    </div>
-   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 4일 주간보고</span></div>
+   <div class="section-label">최신 업데이트 <span class="badge badge-blue">2026년 5월</span></div>
    <div class="update-list">
     <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>PDH Spread $646/톤 (사상 최고, 4월)</strong> — 중동전쟁(3/6) 계기 Naphtha 급등 → Spread 대폭 확대. 풀가동 유지 중.</div></div>
     <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>AGIC Exit 완료(4/16)</strong> — 두바이 AGIC 지분 정리. SKA 지배구조 단순화 핵심 퍼즐 완성.</div></div>
-    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>H사 통합 — 5월 이사회 승인 추진 중</strong> — H사 DD(1/7~), SKA 지배구조 최종 정리 단계.</div></div>
     <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>PIC Exit 완료(2/10)</strong> — 재무본부 주관, 구조 단순화 완료.</div></div>
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>PMC-UPP 구조개편 협의 진행 중</strong> — Option A(SKA 통합)/B(Hard Exit)/C(Relocation) 3가지 옵션 검토 중. 조건 이견으로 합의 지연.</div></div>
+   </div>
+
+   <div class="section-label">🔧 구조개편 진행상황 <span class="badge badge-blue">2026년 5월 기준</span></div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;">
+
+    <div style="background:#e8f5e9;border:1px solid #a5d6a7;border-radius:8px;padding:14px 16px;margin-bottom:12px;">
+     <div style="font-size:13px;font-weight:700;color:#1b5e20;margin-bottom:8px;">Option A — UPP 지분 무상이관 + SKA-SK가스 통합</div>
+     <div style="font-size:12px;color:var(--gray-700);line-height:1.8;">
+      UPP의 일반주식 지분 무상이관 → <strong>UPP는 PMC의 100% 자회사</strong>로 변경 → <strong>SKA는 SK가스와 흡수합병</strong><br>
+      <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-top:8px;font-size:11px;border-left:3px solid #f59e0b;">
+       <strong>쟁점 — UPP 금융부채 2,400억 부담 이견:</strong><br>
+       • PMC 주장: SKG·PMC 각 1,200억 분담 + SKA 미지급 PP대금(매출채권) 600억도 반씩 → SK가스 총 1,500억 부담<br>
+       • SK가스 입장: 금융부채 1,200억만 부담 → 양측 이견 지속 중
+      </div>
+      <div style="background:#f0fdf4;border-radius:6px;padding:10px 12px;margin-top:8px;font-size:11px;border-left:3px solid #16a34a;">
+       <strong>LYB(라이온델바젤)이 Option A를 검토하는 이유:</strong><br>
+       PMC PP라인 4개(70만톤) 중 #4라인(20만톤, 현재 범용PP) → 고부가PP 설비로 전환 계획<br>
+       → #4라인 20만톤 생산을 UPP로 이관 → UPP 범용PP 중심 / PMC 고부가PP 중심으로 재편 추진
+      </div>
+     </div>
+    </div>
+
+    <div style="background:#fff3e0;border:1px solid #ffcc80;border-radius:8px;padding:14px 16px;margin-bottom:12px;">
+     <div style="font-size:13px;font-weight:700;color:#e65100;margin-bottom:8px;">Option B — Hard Exit (UPP 청산)</div>
+     <div style="font-size:12px;color:var(--gray-700);line-height:1.8;">
+      PMC와 협의 결렬 시 UPP 유상증자 미진행 → <strong>UPP 청산 검토</strong><br>
+      <div style="background:#fff;border-radius:6px;padding:8px 12px;margin-top:8px;font-size:11px;border-left:3px solid var(--red);">
+       ⚠️ UPP 청산 시 Relocation(Option C) 진행이 어려워짐 — Relocation 시 UPP를 데려가지 못하기 때문
+      </div>
+     </div>
+    </div>
+
+    <div style="background:#e3f2fd;border:1px solid #90caf9;border-radius:8px;padding:14px 16px;margin-bottom:12px;">
+     <div style="font-size:13px;font-weight:700;color:#1565c0;margin-bottom:8px;">Option C — Relocation (중동 이전)</div>
+     <div style="font-size:12px;color:var(--gray-700);line-height:1.8;">
+      경제성 확보 위해 <strong>사우디 정부의 프로판 저가 공급 허가</strong> 필요 → 현재 지연 중<br>
+      → 가격 메리트 확보 어려운 상황. APC(아람코 석화)와 진행 중
+      <div style="background:#fff;border-radius:6px;padding:8px 12px;margin-top:8px;font-size:11px;border-left:3px solid #1565c0;">
+       ⚠️ 세부 조건(Relocation 규모, 파트너십 구조 등)은 추가 확인 필요
+      </div>
+     </div>
+    </div>
+
+    <div style="background:#fafafa;border:1px dashed #d1d5db;border-radius:6px;padding:10px 14px;font-size:11px;color:#6b7280;">
+     ⚠️ 금액 조건, 매출채권 처리 방식 등 세부 조건은 협의 중으로 향후 업데이트 필요
+    </div>
    </div>
   </div>
 
