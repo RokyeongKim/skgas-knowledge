@@ -187,14 +187,24 @@ th.curr { background: #f06400 !important; }
      <thead><tr><th>소싱처</th><th>계약 물량</th><th>카고</th><th>계약 유형</th><th>공급 용도 · 해당 탱크</th></tr></thead>
      <tbody>
       <tr><td>M사 (Mitsui · 미쓰이)</td><td>70만 톤/년</td><td>Term 10카고</td><td>장기 계약</td><td>GPS(UGPS) 발전용 100% — KET #1 탱크 전용</td></tr>
-      <tr><td>W사 (Woodside Energy)</td><td>55만 톤/년</td><td>8카고</td><td>장기 계약</td><td>SKMU 4카고(≈28만톤) · 벙커링 3카고(≈21만톤) · 여분 1카고 — KET #2·#3 탱크</td></tr>
+      <tr><td>W사 (Woodside Energy)</td><td>55만 톤/년</td><td>8카고</td><td>장기 계약</td><td>SKMU 4카고(≈28만톤) · 벙커링 3카고(≈21만톤) · 여분 1카고 — KET #2·#3 탱크<br><span style="display:inline-block;margin-top:4px;padding:2px 8px;background:#fef3c7;border:1px solid #fcd34d;border-radius:4px;font-size:11px;font-weight:700;color:#92400e;">▶ '27년 하반기부터 공급 개시 예정</span></td></tr>
       <tr><td>SPOT</td><td>10~20만 톤/년</td><td>시황 따라 조절</td><td>현물 조달</td><td>시황 최적화, 재고 탄력 운용</td></tr>
       <tr><td colspan="5" style="background:var(--gray-50);font-size:11px;color:#6b7280;font-weight:400;">※ 1카고 = 350만 MMBtu ≈ 6.75만톤(약 7만톤) · LNG 1톤 = 51.87 MMBtu (환산 시 약 50 MMBtu 적용) · 총 130만톤/년 조달</td></tr>
      </tbody>
     </table>
    </div>
 
-   <div class="section-label">🏭 CEC-KET 터미널 탱크 현황 <span style="font-size:11px;color:#6b7280;font-weight:400;">'26년 #3 · '27년 #4 · '31년 #5로 순차 확장</span></div>
+   <div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:16px 18px;margin-bottom:20px;">
+    <div style="font-size:13px;font-weight:700;color:#92400e;margin-bottom:10px;">⚠️ '27년 하반기 전 SKMU향 LNG 조달 이슈</div>
+    <div style="font-size:12px;color:var(--gray-700);line-height:1.9;">
+     <div style="margin-bottom:10px;"><strong style="color:var(--gray-900);">배경</strong> — Woodside 계약물량은 '27년 하반기부터 공급 개시 예정. 그 전까지 SKMU향 LNG를 별도 조달해야 하는 상황.</div>
+     <div style="margin-bottom:10px;"><strong style="color:var(--sk-blue);">현재 대응: Mitsui UQT/DQT 조항 활용</strong><br>
+     Mitsui 계약에는 <strong>UQT(Upward Quantity Tolerance)</strong>·<strong>DQT(Downward Quantity Tolerance)</strong> 조항이 있어, 필요 시 최대 +6카고 추가 수취 또는 감량 가능. 현재 <span style="color:var(--sk-blue);font-weight:700;">UQT 조항을 활용해 SKMU용 LNG를 추가 수취</span> 중.</div>
+     <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:12px 14px;"><strong style="color:var(--red);">긴급 이슈 — Mitsui '26년 2Q·3Q 공급 불가 통보</strong><br>
+     Mitsui가 '26년 2분기·3분기 공급이 불가하다고 통보 → 해당 기간 SKMU향 LNG를 <strong style="color:var(--red);">Spot 시장에서 조달</strong>할 수밖에 없는 상황.</div>
+    </div>
+   </div>
+      <div class="section-label">🏭 CEC-KET 터미널 탱크 현황 <span style="font-size:11px;color:#6b7280;font-weight:400;">'26년 #3 · '27년 #4 · '31년 #5로 순차 확장</span></div>
    <div style="background:white;border:1px solid var(--gray-200);border-radius:12px;padding:20px;margin-bottom:20px;">
     <!-- 범례 -->
     <div style="display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap;font-size:11px;color:var(--gray-700);">
@@ -433,6 +443,116 @@ th.curr { background: #f06400 !important; }
     <div class="card"><div class="card-title">고속도로 신규 공급권</div><div class="metric">23개소</div><div class="metric-sub">도로공사 낙찰(2/5), 20년 장기</div></div>
     <div class="card"><div class="card-title">T사 1공장 계약</div><div class="metric">28천톤/년</div><div class="metric-sub">납사대체 직매, 3월 체결</div></div>
    </div>
+   
+   <!-- LPG 조달구조 -->
+   <div class="section-label">📦 LPG 조달구조</div>
+   <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;">
+    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px;">
+     <div style="font-size:11px;font-weight:700;background:#1d4ed8;color:white;display:inline-block;padding:2px 10px;border-radius:4px;margin-bottom:10px;">Term 70% — 274만톤</div>
+     <div style="font-size:12px;color:#374151;">
+      <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #f3f4f6;"><span>Enterprise Products</span><span style="font-weight:700;">216만톤</span></div>
+      <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #f3f4f6;"><span>AltaGas</span><span style="font-weight:700;">10만톤</span></div>
+      <div style="display:flex;justify-content:space-between;padding:5px 0;"><span>맥쿼리</span><span style="font-weight:700;">48만톤</span></div>
+     </div>
+    </div>
+    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px;">
+     <div style="font-size:11px;font-weight:700;background:#7c3aed;color:white;display:inline-block;padding:2px 10px;border-radius:4px;margin-bottom:10px;">Spot 30% — 약 120만톤</div>
+     <div style="font-size:13px;color:#6b7280;margin-bottom:10px;">전량 미국(MB) 조달</div>
+     <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:6px;padding:10px 12px;text-align:center;">
+      <div style="font-size:13px;font-weight:700;color:#1d4ed8;">총 도입량 400만톤/년</div>
+      <div style="font-size:11px;color:#6b7280;margin-top:2px;">전량 미국 조달</div>
+     </div>
+    </div>
+   </div>
+   <!-- LPG 판매믹스 -->
+   <div class="section-label">📊 LPG 판매 믹스 <span style="font-size:11px;font-weight:400;color:#6b7280;">(약 389만톤/년)</span></div>
+   <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:16px;margin-bottom:20px;align-items:start;">
+    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px;">
+     <div style="height:300px;display:flex;flex-direction:column;border-radius:6px;overflow:hidden;font-size:11px;">
+      <div style="flex:50;background:#1e3a5f;display:flex;align-items:center;justify-content:space-between;padding:0 10px;color:white;"><span>중개</span><span>50만톤</span></div>
+      <div style="flex:150;background:#1d4ed8;display:flex;align-items:center;justify-content:space-between;padding:0 10px;color:white;"><span>민수</span><span>150만톤</span></div>
+      <div style="flex:100;background:#3b82f6;display:flex;align-items:center;justify-content:space-between;padding:0 10px;color:white;"><span>석화</span><span>100만톤</span></div>
+      <div style="flex:40;background:#60a5fa;display:flex;align-items:center;justify-content:space-between;padding:0 10px;color:white;"><span>산업체</span><span>40만톤</span></div>
+      <div style="flex:40;background:#93c5fd;display:flex;align-items:center;justify-content:space-between;padding:0 10px;color:#1e3a5f;"><span>납사대체</span><span>40만톤</span></div>
+      <div style="flex:5;background:#bfdbfe;display:flex;align-items:center;justify-content:space-between;padding:0 10px;color:#1e3a5f;font-size:10px;"><span>열조</span><span>5만</span></div>
+      <div style="flex:4;background:#dbeafe;display:flex;align-items:center;justify-content:space-between;padding:0 10px;color:#1e3a5f;font-size:10px;"><span>직매</span><span>4만</span></div>
+     </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+     <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;">
+      <div style="font-size:11px;font-weight:700;color:#1d4ed8;margin-bottom:8px;">산업체 가격</div>
+      <div style="font-size:12px;color:#374151;background:#f8fafc;border-radius:6px;padding:8px 10px;">CP + 운임/보험 + 관세 + <strong style="color:#1d4ed8;">$6/ton</strong></div>
+     </div>
+     <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;">
+      <div style="font-size:11px;font-weight:700;color:#1d4ed8;margin-bottom:8px;">민수 이체가 (EE 공급가)</div>
+      <div style="font-size:11px;color:#374151;background:#f8fafc;border-radius:6px;padding:8px 10px;line-height:1.8;">[CP + 보험료(0.0094%) + 운임 + 관세] × (1 + 0.43%) + <strong style="color:#1d4ed8;">$8/ton</strong></div>
+     </div>
+     <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;">
+      <div style="font-size:11px;font-weight:700;color:#1d4ed8;margin-bottom:8px;">납사대체 마진</div>
+      <div style="font-size:12px;color:#374151;background:#f8fafc;border-radius:6px;padding:8px 10px;">(판가 &#8722; 구매가) × <strong style="color:#1d4ed8;">50%</strong></div>
+     </div>
+     <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;">
+      <div style="font-size:11px;font-weight:700;color:#1d4ed8;margin-bottom:8px;">석화 가격</div>
+      <div style="font-size:12px;color:#374151;background:#f8fafc;border-radius:6px;padding:8px 10px;">MB + 보험료 + 관세 <span style="color:#6b7280;font-size:11px;">(월물 기준, M&#8722;2 MB)</span></div>
+     </div>
+    </div>
+   </div>
+   <!-- Trading→EE 이체가 -->
+   <div class="section-label">🔄 Trading → EcoEnergy 이체가 구조</div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:20px;margin-bottom:20px;">
+    <div style="display:flex;align-items:stretch;gap:0;margin-bottom:16px;">
+     <div style="flex:1;text-align:center;background:#1e3a5f;color:white;border-radius:8px 0 0 8px;padding:14px 10px;">
+      <div style="font-size:11px;opacity:0.8;margin-bottom:4px;">MARKET</div>
+      <div style="font-size:13px;font-weight:700;">미국 MB 시장</div>
+     </div>
+     <div style="display:flex;align-items:center;padding:0 4px;color:#6b7280;font-size:18px;">&#8250;</div>
+     <div style="flex:1.2;text-align:center;background:#1d4ed8;color:white;padding:14px 10px;">
+      <div style="font-size:11px;opacity:0.8;margin-bottom:4px;">Trading 본부</div>
+      <div style="font-size:12px;font-weight:700;">조달가격<br>&#8776; 1,150원/kg</div>
+     </div>
+     <div style="display:flex;align-items:center;padding:0 4px;color:#6b7280;font-size:18px;">&#8250;</div>
+     <div style="flex:1.3;text-align:center;background:#2563eb;color:white;padding:14px 10px;">
+      <div style="font-size:11px;opacity:0.8;margin-bottom:4px;">EcoEnergy 공급가</div>
+      <div style="font-size:12px;font-weight:700;">이체가<br>= 조달가 + 17~30원/kg</div>
+     </div>
+     <div style="display:flex;align-items:center;padding:0 4px;color:#6b7280;font-size:18px;">&#8250;</div>
+     <div style="flex:1.3;text-align:center;background:#16a34a;color:white;border-radius:0 8px 8px 0;padding:14px 10px;">
+      <div style="font-size:11px;opacity:0.8;margin-bottom:4px;">충전소 판매가 (MP)</div>
+      <div style="font-size:12px;font-weight:700;">MP가격<br>= 이체가 + EE마진 224원/kg</div>
+     </div>
+    </div>
+    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;padding:10px 14px;font-size:12px;color:#374151;">
+     <span style="font-weight:700;color:#15803d;">핵심:</span> EE가 충전소에 판매하는 MP가격은 이체가(&#8776;1,150~1,180원/kg)에 EE마진 224원/kg을 더한 수준. TMC 관리로 실질 마진 제어.
+    </div>
+   </div>
+   <!-- TMC -->
+   <div class="section-label">&#128176; TMC (Total Marketing Cost)</div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:20px;margin-bottom:20px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+     <div style="background:#fef3c7;border:1px solid #fcd34d;border-radius:8px;padding:10px 18px;text-align:center;">
+      <div style="font-size:11px;color:#92400e;font-weight:700;">관리 목표</div>
+      <div style="font-size:20px;font-weight:700;color:#92400e;">224원/kg 이하</div>
+     </div>
+     <div style="font-size:12px;color:#6b7280;flex:1;">EE가 충전소 네트워크에 투입하는 총 마케팅 비용. 이 금액이 이체가와 MP가격의 차이이며, 목표 224원/kg 이하로 관리.</div>
+    </div>
+    <table style="width:100%;border-collapse:collapse;font-size:12px;">
+     <thead>
+      <tr style="background:#f8fafc;">
+       <th style="text-align:left;padding:8px 10px;border-bottom:2px solid #e5e7eb;color:#374151;">구성 항목</th>
+       <th style="text-align:left;padding:8px 10px;border-bottom:2px solid #e5e7eb;color:#374151;">내용</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:7px 10px;font-weight:600;">&#9312; 할인단가</td><td style="padding:7px 10px;color:#6b7280;">충전소별 단가 할인분</td></tr>
+      <tr style="border-bottom:1px solid #f3f4f6;background:#fafafa;"><td style="padding:7px 10px;font-weight:600;">&#9313; 대여금</td><td style="padding:7px 10px;color:#6b7280;">충전소 운영 대여금 기회비용</td></tr>
+      <tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:7px 10px;font-weight:600;">&#9314; 외상채권</td><td style="padding:7px 10px;color:#6b7280;">외상 매출 채권 기회비용</td></tr>
+      <tr style="border-bottom:1px solid #f3f4f6;background:#fafafa;"><td style="padding:7px 10px;font-weight:600;">&#9315; 시설지원잔액</td><td style="padding:7px 10px;color:#6b7280;">충전소 시설 지원 미상각 잔액</td></tr>
+      <tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:7px 10px;font-weight:600;">&#9316; 임대차보증금 기회비용</td><td style="padding:7px 10px;color:#6b7280;">임대차보증금 운용 기회비용</td></tr>
+      <tr style="border-bottom:1px solid #f3f4f6;background:#fafafa;"><td style="padding:7px 10px;font-weight:600;">&#9317; 임대료 (차감)</td><td style="padding:7px 10px;color:#6b7280;">수취 임대료 — TMC 절감 요인</td></tr>
+      <tr><td style="padding:7px 10px;font-weight:600;">&#9318; 임차료</td><td style="padding:7px 10px;color:#6b7280;">EE 직영 충전소 임차료</td></tr>
+     </tbody>
+    </table>
+   </div>
    <div class="section-label">밸류체인</div>
    <div class="value-chain">
     <div class="vc-step"><div class="icon">🚢</div><div class="name">도입</div><div class="desc">FEI·MB·CP<br>3원 소싱</div></div>
@@ -535,6 +655,184 @@ th.curr { background: #f06400 !important; }
     </div>
    </div>
 
+   
+   <!-- 전력수급 대안 비교 -->
+   <div class="section-label">&#128202; 전력 수급 대안 비교 <span style="font-size:11px;font-weight:400;color:#6b7280;">(G&amp;P본부 브레인스토밍, 2026-05 기준)</span></div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;overflow:hidden;margin-bottom:20px;">
+    <table style="width:100%;border-collapse:collapse;font-size:12px;">
+     <thead>
+      <tr style="background:#f8fafc;">
+       <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #e5e7eb;color:#374151;width:22%;">대안</th>
+       <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #e5e7eb;color:#374151;width:40%;">내용</th>
+       <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #e5e7eb;color:#374151;width:38%;">검토 결과</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr style="border-bottom:1px solid #f3f4f6;">
+       <td style="padding:9px 12px;font-weight:600;color:#374151;">&#9312; 전력 직접구매 + CfD</td>
+       <td style="padding:9px 12px;color:#6b7280;">전력 직접 구매 후 CfD와 연결하여 전력 가격 헤징</td>
+       <td style="padding:9px 12px;color:#6b7280;">안정적 요금제 가능하나 부대비용 높아 절감 필요</td>
+      </tr>
+      <tr style="border-bottom:1px solid #f3f4f6;background:#fafafa;">
+       <td style="padding:9px 12px;font-weight:600;color:#374151;">&#9313; 신규 구역형 집단에너지</td>
+       <td style="padding:9px 12px;color:#6b7280;">LNG 수요 창출 → 매력적</td>
+       <td style="padding:9px 12px;color:#dc2626;">기후부 반대 입장으로 추진 난항</td>
+      </tr>
+      <tr style="border-bottom:1px solid #f3f4f6;background:#eff6ff;">
+       <td style="padding:9px 12px;font-weight:700;color:#1d4ed8;">&#9314; Hybrid 모델 &#9733;</td>
+       <td style="padding:9px 12px;color:#1d4ed8;font-weight:600;">가스터빈(발전) + 스팀터빈(수요처 자가발전) 분리<br>500MW 이상 / 자가발전 포함 시 약 600MW<br>초기 LCOE 약 120원대</td>
+       <td style="padding:9px 12px;"><span style="display:inline-block;background:#1d4ed8;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">가장 유력한 대안</span></td>
+      </tr>
+      <tr style="border-bottom:1px solid #f3f4f6;">
+       <td style="padding:9px 12px;font-weight:600;color:#374151;">&#9315; 기존 사업자 활용</td>
+       <td style="padding:9px 12px;color:#6b7280;">기존 집단에너지 사업자와 협력</td>
+       <td style="padding:9px 12px;color:#dc2626;">공급 가능 전력량 부족 — 현실성 낮음</td>
+      </tr>
+      <tr>
+       <td style="padding:9px 12px;font-weight:600;color:#374151;">&#9316; 자가발전</td>
+       <td style="padding:9px 12px;color:#6b7280;">법적으로 가능하나 LNG 기반 제약 다수</td>
+       <td style="padding:9px 12px;color:#d97706;">솔루션으로 미확정</td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <!-- 기존모델 vs Hybrid 모델 다이어그램 -->
+   <div class="section-label">&#128295; 기존 모델 vs Hybrid 모델 구조 비교</div>
+   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+    <!-- 기존 모델 -->
+    <div style="background:white;border:2px solid #e5e7eb;border-radius:12px;padding:18px;">
+     <div style="font-size:12px;font-weight:700;color:#6b7280;margin-bottom:14px;text-align:center;background:#f3f4f6;padding:6px;border-radius:6px;">&#9940; 기존 집단에너지 모델 (500MW 한계)</div>
+     <!-- 발전소 박스 -->
+     <div style="border:2px solid #9ca3af;border-radius:8px;padding:12px;margin-bottom:10px;background:#f9fafb;">
+      <div style="font-size:11px;font-weight:700;color:#374151;margin-bottom:8px;text-align:center;">SK가스 발전사업자 (1 Package)</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:4px;flex-wrap:wrap;">
+       <div style="background:#374151;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#128293;<br>가스터빈<br>430MW</div>
+       <div style="font-size:16px;color:#9ca3af;">+</div>
+       <div style="background:#374151;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#128167;<br>보일러<br></div>
+       <div style="font-size:16px;color:#9ca3af;">+</div>
+       <div style="background:#374151;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#9881;<br>스팀터빈<br>200MW</div>
+      </div>
+     </div>
+     <!-- 출력 -->
+     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+      <div style="background:#dbeafe;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;">
+       <div style="font-weight:700;color:#1d4ed8;">&#9889; 전기 판매</div>
+       <div style="color:#1e3a5f;margin-top:2px;">500MW 제한</div>
+       <div style="font-size:10px;color:#dc2626;margin-top:2px;">&#9888; 630MW CAPA인데<br>500MW만 가능</div>
+      </div>
+      <div style="background:#fef3c7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;">
+       <div style="font-weight:700;color:#92400e;">&#127747; 스팀 공급</div>
+       <div style="color:#78350f;margin-top:2px;">스팀 수요처 필요</div>
+       <div style="font-size:10px;color:#dc2626;margin-top:2px;">&#9888; 대형 수요처<br>확보 난항</div>
+      </div>
+     </div>
+    </div>
+    <!-- Hybrid 모델 -->
+    <div style="background:white;border:2px solid #1d4ed8;border-radius:12px;padding:18px;">
+     <div style="font-size:12px;font-weight:700;color:white;margin-bottom:14px;text-align:center;background:#1d4ed8;padding:6px;border-radius:6px;">&#9989; Hybrid 모델 (630MW 풀 CAPA)</div>
+     <!-- SK가스 발전 -->
+     <div style="border:2px solid #1d4ed8;border-radius:8px;padding:10px;margin-bottom:8px;background:#eff6ff;">
+      <div style="font-size:11px;font-weight:700;color:#1d4ed8;margin-bottom:6px;text-align:center;">SK가스 발전사업자</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:4px;">
+       <div style="background:#1d4ed8;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#128293;<br>가스터빈<br>430MW</div>
+       <div style="font-size:16px;color:#3b82f6;">+</div>
+       <div style="background:#1d4ed8;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#128167;<br>보일러<br></div>
+      </div>
+     </div>
+     <!-- 스팀 화살표 -->
+     <div style="text-align:center;font-size:12px;color:#1d4ed8;margin:4px 0;">&#8595; 스팀 전량 공급</div>
+     <!-- 수요처 -->
+     <div style="border:2px solid #16a34a;border-radius:8px;padding:10px;margin-bottom:8px;background:#f0fdf4;">
+      <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;text-align:center;">수요처 (AI DC / 석화단지)</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:4px;">
+       <div style="background:#16a34a;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#9881;<br>스팀터빈<br>자가발전 200MW</div>
+       <div style="font-size:14px;color:#16a34a;">&#8594;</div>
+       <div style="font-size:11px;color:#15803d;font-weight:600;">전기<br>자가소비</div>
+      </div>
+     </div>
+     <!-- 효과 -->
+     <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+      <div style="background:#dbeafe;border-radius:6px;padding:8px;text-align:center;font-size:11px;">
+       <div style="font-weight:700;color:#1d4ed8;">&#9889; 전기 판매</div>
+       <div style="color:#1e3a5f;font-weight:600;margin-top:2px;">630MW</div>
+       <div style="font-size:10px;color:#15803d;">500MW 제한 극복&#10003;</div>
+      </div>
+      <div style="background:#dcfce7;border-radius:6px;padding:8px;text-align:center;font-size:11px;">
+       <div style="font-weight:700;color:#15803d;">&#9660; LCOE</div>
+       <div style="color:#15803d;font-weight:600;margin-top:2px;">120원대</div>
+       <div style="font-size:10px;color:#15803d;">기존 대비 15원 &#9660;</div>
+      </div>
+     </div>
+    </div>
+   </div>
+
+   <!-- Hybrid 모델 핵심 메커니즘 -->
+   <div class="section-label">&#128161; Hybrid 모델 핵심 메커니즘</div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px;margin-bottom:20px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:14px;">
+     <div style="background:#eff6ff;border-left:3px solid #1d4ed8;padding:12px 14px;border-radius:0 8px 8px 0;">
+      <div style="font-size:11px;font-weight:700;color:#1d4ed8;margin-bottom:6px;">문제 해결 &#9312; 스팀 수요처 확보</div>
+      <div style="font-size:12px;color:#374151;">수요처가 스팀터빈 자가발전소 설치 → 전기수요를 스팀수요로 전환. <strong>전기가 필요한 곳은 어디든 잠재 수요처</strong>가 됨.</div>
+     </div>
+     <div style="background:#eff6ff;border-left:3px solid #1d4ed8;padding:12px 14px;border-radius:0 8px 8px 0;">
+      <div style="font-size:11px;font-weight:700;color:#1d4ed8;margin-bottom:6px;">문제 해결 &#9313; 500MW 용량 제한</div>
+      <div style="font-size:12px;color:#374151;">스팀터빈(200MW)을 수요처 자가발전으로 분리 → 발전사업자 허가 범위 외로 처리. <strong>630MW 풀 CAPA 가동 가능</strong>.</div>
+     </div>
+     <div style="background:#eff6ff;border-left:3px solid #1d4ed8;padding:12px 14px;border-radius:0 8px 8px 0;">
+      <div style="font-size:11px;font-weight:700;color:#1d4ed8;margin-bottom:6px;">문제 해결 &#9314; 복잡한 수요처 개발</div>
+      <div style="font-size:12px;color:#374151;">복수 스팀 수요처 동시 개발 복잡성 제거. SKG가 스팀터빈 투자 지원(5,000억 SAVE분 저리 대출) + 운영 서비스 계약 병행.</div>
+     </div>
+    </div>
+    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:12px 14px;font-size:12px;line-height:1.7;">
+     <strong style="color:#15803d;">SKG 재무 논리:</strong> 기존 모델(가스터빈+보일러+스팀터빈 3-package) 투자비 ≈ 1.3조 → Hybrid(가스터빈+보일러만) ≈ 8,000~9,000억. 절감 5,000억을 수요처에 저리 대출로 스팀터빈 설치 지원 → LCOE 약 120원대(기존 대비 15원 감소) 달성.
+    </div>
+   </div>
+
+   <!-- 도전요소 -->
+   <div class="section-label">&#9888;&#65039; 도전 요소</div>
+   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:20px;">
+    <div style="background:white;border:1px solid #fca5a5;border-radius:10px;padding:14px;">
+     <div style="font-size:11px;font-weight:700;color:#dc2626;margin-bottom:6px;">&#9312; 정부 기조 — LNG 중심 사업</div>
+     <div style="font-size:12px;color:#374151;">기본 구조가 LNG 중심. 재생에너지 Must 요구 환경에서 정부 설득 필요. &quot;자연스럽게 준비된 수혜자&quot; 전략 구사 필요.</div>
+    </div>
+    <div style="background:white;border:1px solid #fca5a5;border-radius:10px;padding:14px;">
+     <div style="font-size:11px;font-weight:700;color:#dc2626;margin-bottom:6px;">&#9313; 스팀 자가발전 인정 여부</div>
+     <div style="font-size:12px;color:#374151;">핵심인 고객사의 스팀 수요 자체 창출(자가발전) 인정 여부 불확실. 법·제도 검토 필요.</div>
+    </div>
+    <div style="background:white;border:1px solid #fca5a5;border-radius:10px;padding:14px;">
+     <div style="font-size:11px;font-weight:700;color:#dc2626;margin-bottom:6px;">&#9314; 기술적 실현 가능성</div>
+     <div style="font-size:12px;color:#374151;">가스터빈·스팀터빈 분리 연계 운영의 기술적 실현 가능성 검토 필요. 원거리 스팀 배관의 열 손실 관리.</div>
+    </div>
+    <div style="background:white;border:1px solid #fca5a5;border-radius:10px;padding:14px;">
+     <div style="font-size:11px;font-weight:700;color:#dc2626;margin-bottom:6px;">&#9315; 특혜성 정책 리스크</div>
+     <div style="font-size:12px;color:#374151;">SK만을 위한 특혜성 정책으로 비칠 수 있음. 전기본 AI DC 반영 + 준비 선행으로 자연스럽게 수혜자 포지셔닝.</div>
+    </div>
+   </div>
+
+   <!-- CEO 코멘트 -->
+   <div style="background:#1e3a5f;border-radius:10px;padding:16px 20px;margin-bottom:20px;">
+    <div style="font-size:11px;font-weight:700;color:#93c5fd;margin-bottom:8px;">CEO 코멘트 (2026-05 C-Team Weekly)</div>
+    <div style="font-size:12px;color:white;line-height:1.8;">"이거는 우리가 울산 GPS하고 LNG 터미널 한 것만큼의 효익이 있다. 어려운 점이 있기 때문에 도전하지 않겠다라고 할 수는 없잖아요. 어떻게든 돌파하다가 하나라도 해야지."</div>
+    <div style="font-size:11px;color:#60a5fa;margin-top:8px;">&#128073; 사업 성사 시 → 울산 GPS·LNG 터미널급 효익 / 미래 전력거래시장 우위 선점</div>
+   </div>
+
+   <!-- 정부 지원 필요사항 -->
+   <div class="section-label">&#128203; 추진을 위한 정부 지원 사항</div>
+   <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:180px;background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;text-align:center;">
+     <div style="font-size:22px;font-weight:700;color:#1d4ed8;">&#9312;</div>
+     <div style="font-size:12px;font-weight:700;color:#374151;margin:6px 0;">신규 집단에너지<br>사업 허가 취득</div>
+    </div>
+    <div style="flex:1;min-width:180px;background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;text-align:center;">
+     <div style="font-size:22px;font-weight:700;color:#1d4ed8;">&#9313;</div>
+     <div style="font-size:12px;font-weight:700;color:#374151;margin:6px 0;">전력 수급 기본 계획<br>반영</div>
+    </div>
+    <div style="flex:1;min-width:180px;background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;text-align:center;">
+     <div style="font-size:22px;font-weight:700;color:#1d4ed8;">&#9314;</div>
+     <div style="font-size:12px;font-weight:700;color:#374151;margin:6px 0;">인허가 패스트트랙<br>추진</div>
+    </div>
+   </div>
    <div class="section-label">집단에너지 vs 구역전기</div>
    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 18px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.8;">
     <strong style="color:var(--sk-blue);">집단에너지</strong>: 한 발전소에서 전기+스팀 동시 생산 → 주변 공장·건물에 공급<br>
