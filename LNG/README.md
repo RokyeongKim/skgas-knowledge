@@ -51,6 +51,46 @@ SK가스는 <strong>울산에 LNG 터미널(KET/CEC)을 직접 보유</strong>�
   </div></div>
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🔭 지금 뭘 봐야 하나</div>
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin:0 0 20px;"><div style="flex:1;min-width:200px;background:#f1f8f1;border:1px solid #c8e6c9;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#2e7d32;margin-bottom:8px;font-size:13px;">&#x1F4C8; 기회 / 순풍</div><div style="margin:4px 0;font-size:13px;">&#x2705; KET #3 탱크 Cool-down 4/17~20 예정 → 7월 상업개시 임박</div><div style="margin:4px 0;font-size:13px;">&#x2705; 에너루트 울산1호 4/12 상업운전 개시 (3월 매출 128.6억, 세전익 18.2억)</div><div style="margin:4px 0;font-size:13px;">&#x2705; Trading 초과 달성 추세 ('26 1Q +409억)</div><div style="margin:4px 0;font-size:13px;">&#x2705; 울산 석화단지 80만톤 잠재 고객, AIDC 냉열 공급 투자 검토</div></div><div style="flex:1;min-width:200px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#c62828;margin-bottom:8px;font-size:13px;">&#x1F4C9; 리스크 / 역풍</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; JKM $16.53 하락 (미-이란 휴전 기대감) — 변동성 높은 장세 지속</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; #5 Tank Anchoring 수요 미확보 (고려아연·한주 협의 중)</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 이란 실질 공급 정상화 지연 → 추가 협상 불확실성</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; LNG 공급 과잉 리스크 (미국 터미널 초과 건설)</div></div></div>
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🚢 LNG 조달구조</div>
+<div style="overflow-x:auto;margin:0 0 20px;">
+<table style="width:100%;border-collapse:collapse;font-size:13px;">
+  <tr style="background:#1565c0;color:white;text-align:left;">
+    <th style="padding:8px 12px;width:12%;">구분</th>
+    <th style="padding:8px 12px;width:22%;">공급사</th>
+    <th style="padding:8px 12px;width:14%;">물량</th>
+    <th style="padding:8px 12px;">계약 조건</th>
+  </tr>
+  <tr style="background:#e3f2fd;">
+    <td style="padding:8px 12px;">Term (장기)</td>
+    <td style="padding:8px 12px;"><strong>Mitsui (M사)</strong></td>
+    <td style="padding:8px 12px;">70만톤/년</td>
+    <td style="padding:8px 12px;">UQT·DQT 조항 보유 (±6카고 물량 조정 가능)</td>
+  </tr>
+  <tr style="background:#f5f5f5;">
+    <td colspan="4" style="padding:4px 14px 8px;color:#888;font-size:12px;">
+      ※ 1카고 = 350만 MMBtu ≈ 6.75만톤(약 7만톤). UQT 조항 활용해 SKMU향 LNG 수급 중 ('26년 2Q·3Q는 M사 공급 일시 불가 → Spot으로 보완)
+    </td>
+  </tr>
+  <tr style="background:#fff8e1;">
+    <td style="padding:8px 12px;">Term (장기)</td>
+    <td style="padding:8px 12px;"><strong>Woodside (W사)</strong></td>
+    <td style="padding:8px 12px;">55만톤/년</td>
+    <td style="padding:8px 12px;">—</td>
+  </tr>
+  <tr style="background:#fff8e1;">
+    <td colspan="4" style="padding:2px 14px 10px;">
+      <span style="background:#ffc107;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:700;">▶ Woodside 계약물량 '27년 하반기부터 공급 개시 예정</span>
+    </td>
+  </tr>
+  <tr style="background:#f9f9f9;">
+    <td style="padding:8px 12px;">Spot</td>
+    <td style="padding:8px 12px;">시장 조달</td>
+    <td style="padding:8px 12px;">10~20만톤</td>
+    <td style="padding:8px 12px;">M사 공급 공백 보완, 기회물량 확보</td>
+  </tr>
+</table>
+</div>
+
 <div style="border-top:1px solid #eee;margin:28px 0;"></div>
 
 ## 성장 로드맵 (세전이익 기준)
