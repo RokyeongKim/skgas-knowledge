@@ -1144,71 +1144,78 @@ th.curr { background: #f06400 !important; }
 
    <div class="section-label">🔗 부생수소 공급망 구조</div>
    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;">
+    <div style="display:flex;gap:18px;align-items:flex-start;">
 
-    <!-- 지도 이미지 -->
-    <div style="position:relative;margin-bottom:14px;">
-     <img src="에너루트.jpg" alt="롯데SK에너루트 수소 연료전지 발전사업 배관 현황도" style="width:75%;border-radius:8px;display:block;margin:0 auto;">
-    </div>
+     <!-- 좌: 지도 이미지 -->
+     <div style="flex:0 0 45%;">
+      <img src="에너루트.jpg" alt="롯데SK에너루트 수소 연료전지 발전사업 배관 현황도" style="width:100%;border-radius:8px;display:block;">
+     </div>
 
-    <!-- 범례 -->
-    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;padding:10px 12px;background:#f8fafc;border-radius:8px;">
-     <div style="display:flex;align-items:center;gap:5px;font-size:11px;">
-      <div style="width:28px;height:3px;background:#2563eb;border-radius:2px;"></div>
-      <span style="color:#374151;font-weight:600;">LFC 배관</span>
-      <span style="color:#6b7280;">(롯데정밀화학)</span>
-     </div>
-     <div style="display:flex;align-items:center;gap:5px;font-size:11px;">
-      <div style="width:28px;height:3px;background:#60a5fa;border-radius:2px;"></div>
-      <span style="color:#374151;font-weight:600;">LIC 배관</span>
-      <span style="color:#6b7280;">(롯데이네오스화학)</span>
-     </div>
-     <div style="display:flex;align-items:center;gap:5px;font-size:11px;">
-      <div style="width:28px;height:3px;background:#dc2626;border-radius:2px;"></div>
-      <span style="color:#374151;font-weight:600;">SKA 배관</span>
-      <span style="color:#6b7280;">(SK어드밴스드)</span>
-     </div>
-     <div style="display:flex;align-items:center;gap:5px;font-size:11px;">
-      <div style="width:28px;height:2px;border-top:2px dashed #dc2626;"></div>
-      <span style="color:#374151;font-weight:600;">양사배관 연결구간</span>
-     </div>
-    </div>
+     <!-- 우: 범례 + 표 + 셧다운 -->
+     <div style="flex:1;min-width:0;">
 
-    <!-- 공급사별 연결 설명 -->
-    <table style="width:100%;border-collapse:collapse;font-size:12px;">
-     <thead>
-      <tr style="background:#f8fafc;">
-       <th style="text-align:left;padding:7px 10px;border-bottom:2px solid #e5e7eb;color:#374151;">공급사</th>
-       <th style="text-align:left;padding:7px 10px;border-bottom:2px solid #e5e7eb;color:#374151;">위치</th>
-       <th style="text-align:left;padding:7px 10px;border-bottom:2px solid #e5e7eb;color:#374151;">공급 대상</th>
-       <th style="text-align:left;padding:7px 10px;border-bottom:2px solid #e5e7eb;color:#374151;">배관 특징</th>
-      </tr>
-     </thead>
-     <tbody>
-      <tr style="border-bottom:1px solid #f3f4f6;">
-       <td style="padding:7px 10px;font-weight:700;color:#2563eb;">LIC<br><span style="font-size:10px;font-weight:400;color:#6b7280;">롯데이네오스화학</span></td>
-       <td style="padding:7px 10px;color:#374151;">울산 좌측 (연료전지 인근)</td>
-       <td style="padding:7px 10px;color:#374151;">울산 1·2·3호</td>
-       <td style="padding:7px 10px;color:#374151;">단거리 직결 — 가장 가까운 공급원</td>
-      </tr>
-      <tr style="border-bottom:1px solid #f3f4f6;background:#fafafa;">
-       <td style="padding:7px 10px;font-weight:700;color:#2563eb;">LFC<br><span style="font-size:10px;font-weight:400;color:#6b7280;">롯데정밀화학</span></td>
-       <td style="padding:7px 10px;color:#374151;">울산 우측 상단 (태화 지역)</td>
-       <td style="padding:7px 10px;color:#374151;">태화 1·2호 + 울산 1·2·3호</td>
-       <td style="padding:7px 10px;color:#374151;">장거리 — 울산 도심부를 가로질러 연결</td>
-      </tr>
-      <tr style="background:#fafafa;">
-       <td style="padding:7px 10px;font-weight:700;color:#dc2626;">SKA<br><span style="font-size:10px;font-weight:400;color:#6b7280;">SK어드밴스드</span></td>
-       <td style="padding:7px 10px;color:#374151;">울산 하단 (KET·CEC 인근)</td>
-       <td style="padding:7px 10px;color:#374151;">울산 1·2·3호</td>
-       <td style="padding:7px 10px;color:#374151;">UGPS 경유 — 양사배관 연결구간 포함</td>
-      </tr>
-     </tbody>
-    </table>
+      <!-- 범례 -->
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;padding:8px 10px;background:#f8fafc;border-radius:8px;">
+       <div style="display:flex;align-items:center;gap:5px;font-size:11px;">
+        <div style="width:24px;height:3px;background:#2563eb;border-radius:2px;"></div>
+        <span style="color:#374151;font-weight:600;">LFC 배관</span>
+        <span style="color:#6b7280;">(롯데정밀화학)</span>
+       </div>
+       <div style="display:flex;align-items:center;gap:5px;font-size:11px;">
+        <div style="width:24px;height:3px;background:#60a5fa;border-radius:2px;"></div>
+        <span style="color:#374151;font-weight:600;">LIC 배관</span>
+        <span style="color:#6b7280;">(롯데이네오스화학)</span>
+       </div>
+       <div style="display:flex;align-items:center;gap:5px;font-size:11px;">
+        <div style="width:24px;height:3px;background:#dc2626;border-radius:2px;"></div>
+        <span style="color:#374151;font-weight:600;">SKA 배관</span>
+        <span style="color:#6b7280;">(SK어드밴스드)</span>
+       </div>
+       <div style="display:flex;align-items:center;gap:5px;font-size:11px;">
+        <div style="width:24px;height:2px;border-top:2px dashed #dc2626;"></div>
+        <span style="color:#374151;font-weight:600;">양사배관 연결구간</span>
+       </div>
+      </div>
 
-    <!-- 셧다운 사례 -->
-    <div style="margin-top:12px;background:#fef3c7;border:1px solid #fcd34d;border-radius:6px;padding:10px 12px;font-size:11px;color:#92400e;line-height:1.8;">
-     <strong>⚠ 5/2 셧다운 사례</strong> — 한주(구역전기사업자) Trip → LIC 전원 차단 → 부생수소 생산 중단 → 에너루트 전체 S/D<br>
-     설비 자체 문제가 아닌 <strong>외부 도미노</strong> — 3일간 순차 재가동, 매출 손실 약 3.6억원
+      <!-- 공급사별 연결 설명 -->
+      <table style="width:100%;border-collapse:collapse;font-size:11px;margin-bottom:10px;">
+       <thead>
+        <tr style="background:#f8fafc;">
+         <th style="text-align:left;padding:6px 8px;border-bottom:2px solid #e5e7eb;color:#374151;">공급사</th>
+         <th style="text-align:left;padding:6px 8px;border-bottom:2px solid #e5e7eb;color:#374151;">위치</th>
+         <th style="text-align:left;padding:6px 8px;border-bottom:2px solid #e5e7eb;color:#374151;">공급 대상</th>
+         <th style="text-align:left;padding:6px 8px;border-bottom:2px solid #e5e7eb;color:#374151;">배관 특징</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr style="border-bottom:1px solid #f3f4f6;">
+         <td style="padding:6px 8px;font-weight:700;color:#2563eb;">LIC<br><span style="font-size:10px;font-weight:400;color:#6b7280;">롯데이네오스화학</span></td>
+         <td style="padding:6px 8px;color:#374151;">울산 좌측 (연료전지 인근)</td>
+         <td style="padding:6px 8px;color:#374151;">울산 1·2·3호</td>
+         <td style="padding:6px 8px;color:#374151;">단거리 직결 — 가장 가까운 공급원</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f3f4f6;background:#fafafa;">
+         <td style="padding:6px 8px;font-weight:700;color:#2563eb;">LFC<br><span style="font-size:10px;font-weight:400;color:#6b7280;">롯데정밀화학</span></td>
+         <td style="padding:6px 8px;color:#374151;">울산 우측 상단 (태화 지역)</td>
+         <td style="padding:6px 8px;color:#374151;">태화 1·2호 + 울산 1·2·3호</td>
+         <td style="padding:6px 8px;color:#374151;">장거리 — 울산 도심부를 가로질러 연결</td>
+        </tr>
+        <tr style="background:#fafafa;">
+         <td style="padding:6px 8px;font-weight:700;color:#dc2626;">SKA<br><span style="font-size:10px;font-weight:400;color:#6b7280;">SK어드밴스드</span></td>
+         <td style="padding:6px 8px;color:#374151;">울산 하단 (KET·CEC 인근)</td>
+         <td style="padding:6px 8px;color:#374151;">울산 1·2·3호</td>
+         <td style="padding:6px 8px;color:#374151;">UGPS 경유 — 양사배관 연결구간 포함</td>
+        </tr>
+       </tbody>
+      </table>
+
+      <!-- 셧다운 사례 -->
+      <div style="background:#fef3c7;border:1px solid #fcd34d;border-radius:6px;padding:10px 12px;font-size:11px;color:#92400e;line-height:1.8;">
+       <strong>⚠ 5/2 셧다운 사례</strong> — 한주(구역전기사업자) Trip → LIC 전원 차단 → 부생수소 생산 중단 → 에너루트 전체 S/D<br>
+       설비 자체 문제가 아닌 <strong>외부 도미노</strong> — 3일간 순차 재가동, 매출 손실 약 3.6억원
+      </div>
+
+     </div>
     </div>
    </div>
 
