@@ -6,7 +6,210 @@
   <div style="font-size:14px;opacity:0.85;margin-top:6px;line-height:1.5;">IMO 탄소중립 규제 대응 — LNG 선박 연료 공급 사업<br>SK가스 100% 자회사 EMFS, 1st LBV (에코프런티어) COD 2027 목표</div>
 </div>
 
-<div style="background:#e8f5e9;border:1px solid #66bb6a;border-radius:8px;padding:10px 16px;margin:0 0 20px;font-size:13px;">🎤 <strong>최신 업데이트 (2026.06.02 포럼 — DCC 홍종범 실장 발표 내용 반영)</strong></div>
+<div style="background:#e8f5e9;border:1px solid #66bb6a;border-radius:8px;padding:10px 16px;margin:0 0 20px;font-size:13px;">🎤 <strong>최신 업데이트 (2026.05.28 경영진 보고 — 암스테르담 컨퍼런스 findings + 2nd LBV 의사결정 프레임 반영)</strong></div>
+
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #006064;padding-left:10px;">📋 추진 현황 업데이트 (2026.05.28 보고)</div>
+
+<details open>
+<summary style="font-size:14px;font-weight:700;color:#006064;cursor:pointer;padding:8px 0;">▶ I. 암스테르담 컨퍼런스 주요 Findings (Global Maritime Decarbonization 2026, 5/3~5/9)</summary>
+
+<div style="background:#e0f7fa;border-radius:8px;padding:14px 18px;margin:10px 0;font-size:13px;line-height:1.8;">
+<strong>암스테르담 'Global Maritime Decarbonization 2026'</strong> 참가 — 부스 운영, 아시아 LNG 벙커링 시장 패널 토의, 다수 고객 미팅 진행. 시장 내 Eco Marine의 인지도를 높이고 아시아 지역 선도 LNG 벙커링 공급자로서의 입지 강화. Bio-LNG 업체·해외 공급사/Trader와 협의를 통해 시장·규제 동향과 고객 니즈를 입체적으로 점검.
+</div>
+
+**고객별 미팅 결과**
+
+<div style="display:flex;flex-direction:column;gap:10px;margin:12px 0 20px;">
+  <div style="background:#fff8e1;border-left:4px solid #ffa000;border-radius:6px;padding:12px 16px;font-size:13px;line-height:1.7;">
+    <strong style="color:#e65100;">🚢 CMA-CGM</strong> — Brent 기반 ~5년 계약에 여전히 관심 있으나, 계약 개시 시점이 '28년인 점으로 내부 우선순위 다소 낮아질 가능성 언급.<br>
+    → 당사의 경쟁력 있는 Brent 1st Tranche 기반 제안가 금년 8월까지 유효함 고지, 조속한 내부 검토 및 협의 가속화 유도 중.
+  </div>
+  <div style="background:#e8f5e9;border-left:4px solid #43a047;border-radius:6px;padding:12px 16px;font-size:13px;line-height:1.7;">
+    <strong style="color:#2e7d32;">🚢 Maersk</strong> — Bio-LNG 관련 업데이트 사항에 지속 관심. '28년 한국 시운전/인도출항 물량 관련, 인도출항 Route 확정 예정인 '27년 초부터 본격 협의 희망.<br>
+    → 금년 중 선박 간 기술적 Compatibility 먼저 진행하며, 물량/가격 협의 지속 계획.
+  </div>
+  <div style="background:#e3f2fd;border-left:4px solid #1e88e5;border-radius:6px;padding:12px 16px;font-size:13px;line-height:1.7;">
+    <strong style="color:#1565c0;">🚢 K-Line</strong> — 기존 벌크선 1척 논의에서 <strong>추가 벌크선 3~4척 및 한국 기항 PCTC까지 범위 확대.</strong> Brent + JKM 포트폴리오의 장점에 관심 표명.<br>
+    → 금년 6~8월 중 울산 터미널 견학 추진, 현실적 물량 수준 기반 Multi-year 계약 협의 추진 예정.
+  </div>
+  <div style="background:#fce4ec;border-left:4px solid #e53935;border-radius:6px;padding:12px 16px;font-size:13px;line-height:1.7;">
+    <strong style="color:#880e4f;">🚢 MSC</strong> — 글로벌 최저가 전략 유지. JKM +$0~1/mmbtu 수준 가격 가능 여부 문의.<br>
+    → 대형 고객이나 요구 가격 수준이 과도하게 낮아, <strong>관계는 유지하되 무리한 저가 판매 지양</strong> 검토.
+  </div>
+  <div style="background:#f3e5f5;border-left:4px solid #8e24aa;border-radius:6px;padding:12px 16px;font-size:13px;line-height:1.7;">
+    <strong style="color:#4a148c;">🚢 윌헴슨</strong> — 현재 LNG DF 비중은 크지 않으나 성장 가능성·한국 기항 가능성 높음 (현대차 PCTC 등).<br>
+    → 우선 기술적 Compatibility 검토 진행, 향후 선대 확대 시점에 맞춰 점진적 물량 확대 추진.
+  </div>
+</div>
+
+**Bio-LNG 동향**
+<div style="background:#e8f5e9;border-radius:8px;padding:14px 16px;margin:8px 0 16px;font-size:13px;line-height:1.8;">
+  <strong>시장:</strong> FuelEU 발효로 '25년 급속 증가 → '29년까지 소폭 감소 추이 → FuelEU Phase 2 ('30~) 시 다시 급격 증가 전망.<br>
+  <strong>규제 불확실성:</strong> UDB 발효 시 비EU 생산 Bio-LNG는 유럽 내 효력 인정 불가 우려. 시행 시점은 정치적 이슈와 맞물려 비확정적 (1~2년 후 언급).<br>
+  <strong>시장 규모:</strong> 글로벌 LNG 벙커링 '25년 약 400만톤/년 → '30년 약 2,200만톤/년으로 5배 성장 전망.
+</div>
+
+**글로벌 Alliance 구축**
+<div style="background:#e8eaf6;border-radius:8px;padding:14px 16px;margin:8px 0 16px;font-size:13px;line-height:1.8;">
+  유럽/싱가폴 공급사 등과 협력 의향 확인. Shell 등 글로벌 메이저에 대응하여, 각 지역 주요 LNG 벙커링 공급사와 동일 GTC 기반 상호 공급 back-up 및 고객 pool 확장을 위한 <strong>글로벌 Bunkering Alliance 구축 협의 진행 中</strong> (Titan(유럽), ExxonMobil(싱가폴) 등).
+</div>
+
+</details>
+
+<details>
+<summary style="font-size:14px;font-weight:700;color:#006064;cursor:pointer;padding:8px 0;">▶ Marketing Framework — 접촉 대상 분류</summary>
+
+<div style="overflow-x:auto;margin:12px 0 16px;">
+<table style="width:100%;border-collapse:collapse;font-size:12px;">
+  <thead>
+    <tr style="background:#006064;color:white;">
+      <th style="padding:8px 10px;text-align:left;border:1px solid #004d52;min-width:80px;">구분</th>
+      <th style="padding:8px 10px;text-align:left;border:1px solid #004d52;min-width:160px;">1st BV (국내, 20만톤)</th>
+      <th style="padding:8px 10px;text-align:left;border:1px solid #004d52;min-width:180px;">2nd &amp; 3rd BV (아시아/글로벌, 30만톤)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#f1f8f1;">
+      <td style="padding:8px 10px;border:1px solid #ddd;font-weight:700;color:#2e7d32;vertical-align:top;">Term 판매<br><span style="font-weight:400;color:#555;">(50만톤)</span></td>
+      <td style="padding:8px 10px;border:1px solid #ddd;vertical-align:top;">• 글로비스<br>• H-Line<br>• HMM</td>
+      <td style="padding:8px 10px;border:1px solid #ddd;vertical-align:top;">• CMA CGM<br>• MSC<br>• Maersk<br>• K-Line<br>• ONE<br>• MOL 등</td>
+    </tr>
+    <tr>
+      <td colspan="3" style="padding:4px 10px;border:1px solid #ddd;background:#e0f7fa;font-size:11px;color:#555;">
+        <span style="margin-right:16px;">직접 마케팅 (국내/외)</span>
+        <span>벙커 트레이더 활용 (아시아/글로벌)</span>
+      </td>
+    </tr>
+    <tr style="background:#fff8e1;">
+      <td style="padding:8px 10px;border:1px solid #ddd;font-weight:700;color:#e65100;vertical-align:top;">Spot 판매<br><span style="font-weight:400;color:#555;">(30만톤)</span></td>
+      <td style="padding:8px 10px;border:1px solid #ddd;vertical-align:top;">직접 마케팅:<br>• 글로비스<br>• HMM<br>• 윌헴슨<br>• EPS</td>
+      <td style="padding:8px 10px;border:1px solid #ddd;vertical-align:top;">벙커 트레이더 활용:<br>• Peninsula<br>• Bunker Holding<br>• World Fuel Service</td>
+    </tr>
+    <tr>
+      <td colspan="3" style="padding:4px 10px;border:1px solid #ddd;background:#e0f7fa;font-size:11px;color:#555;">
+        <span style="margin-right:16px;">신조 (조선사)</span>
+        <span style="margin-right:16px;">용선 (브로커)</span>
+        <span>LBV 운영사 (국내/외)</span>
+      </td>
+    </tr>
+    <tr style="background:#e8eaf6;">
+      <td style="padding:8px 10px;border:1px solid #ddd;font-weight:700;color:#283593;vertical-align:top;">LBV 확보</td>
+      <td style="padding:8px 10px;border:1px solid #ddd;vertical-align:top;">신조 (조선사):<br>• 현대미포조선<br>• HJ 중공업<br>• CIMC SOE (中) 등<br><br>용선 (브로커):<br>• Clarksons<br>• SSY<br>• Braemar<br>• Fearnleys</td>
+      <td style="padding:8px 10px;border:1px solid #ddd;vertical-align:top;">LBV 운영사 (국내/외):<br>• H-Line<br>• 팬오션<br>• 대한해운<br>• BSM<br>• WSM</td>
+    </tr>
+    <tr>
+      <td colspan="3" style="padding:4px 10px;border:1px solid #ddd;background:#e0f7fa;font-size:11px;color:#555;">
+        Decarbonization 협력 (Bio-LNG 해외 도입)
+      </td>
+    </tr>
+    <tr style="background:#e8f5e9;">
+      <td style="padding:8px 10px;border:1px solid #ddd;font-weight:700;color:#2e7d32;vertical-align:top;">Bio-LNG</td>
+      <td style="padding:8px 10px;border:1px solid #ddd;vertical-align:top;">• Centrica Energy (영국/유럽)<br>• Fortis BC (캐나다)<br>• Anew Climate (북미)</td>
+      <td style="padding:8px 10px;border:1px solid #ddd;vertical-align:top;">• STX Group (유럽)<br>• Straits Bio (동남아)<br>• BAC Renew. (동남아)</td>
+    </tr>
+    <tr>
+      <td colspan="3" style="padding:4px 10px;border:1px solid #ddd;background:#e0f7fa;font-size:11px;color:#555;">
+        Multi-ports 협력 (유럽/싱가폴/한국)
+      </td>
+    </tr>
+    <tr style="background:#f3e5f5;">
+      <td style="padding:8px 10px;border:1px solid #ddd;font-weight:700;color:#4a148c;vertical-align:top;">파트너십</td>
+      <td colspan="2" style="padding:8px 10px;border:1px solid #ddd;">• Titan Clean Fuels (유럽)<br>• ExxonMobil (싱가폴)</td>
+    </tr>
+    <tr style="background:#fce4ec;">
+      <td style="padding:8px 10px;border:1px solid #ddd;font-weight:700;color:#880e4f;vertical-align:top;">컨설팅</td>
+      <td colspan="2" style="padding:8px 10px;border:1px solid #ddd;">LNG 벙커링 시장/고객/판가 컨설팅<br>• Lansdowne Moritz (유럽)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div style="text-align:center;margin:8px 0 16px;">
+  <img src="./marketing_framework.jpg" alt="Marketing Framework 원본" style="max-width:100%;border-radius:8px;border:1px solid #ddd;">
+</div>
+
+</details>
+
+<details>
+<summary style="font-size:14px;font-weight:700;color:#006064;cursor:pointer;padding:8px 0;">▶ Key Takeaways (2026.05.28 보고)</summary>
+
+<div style="display:flex;flex-direction:column;gap:10px;margin:12px 0 20px;">
+  <div style="background:#fff3e0;border-left:4px solid #ffa000;border-radius:6px;padding:12px 16px;font-size:13px;line-height:1.7;">
+    <strong style="color:#e65100;">① Term 수요 — Brent 연동 선사 pool 제한적</strong><br>
+    전쟁 후 유류 연동가에 대한 일부 고객 선호도 하락으로 Brent 연동 Term 계약 논의 희망 선사가 제한적.<br>
+    계약 기간 감소 추세이며, 공급 개시 1년 전 논의 희망 트렌드 (현 시점 '27년 상반기 → 상세 논의 가능).<br>
+    <strong>Brent 연동 Term 지속 희망 선사: CMA-CGM (~8만톤/년 × 3년~), K-Line (~1만톤/년 × 5년~)</strong>
+  </div>
+  <div style="background:#e3f2fd;border-left:4px solid #1e88e5;border-radius:6px;padding:12px 16px;font-size:13px;line-height:1.7;">
+    <strong style="color:#1565c0;">② Spot 수요 — 아시아 시장 경쟁가 JKM +$1.5~2.0/mmbtu</strong><br>
+    JKM Back-to-back 외, 타 Index 매칭 기반 저가 판매 사례 존재.<br>
+    (예. 중국 남부 HH→JKM 매칭, MSC 등에 JKM +~$1/mmbtu 미만 판매)<br>
+    <strong>당사 제공 가능가: JKM +$1.5/mmbtu 이상. Spot 판매 시 마진 약 +$0.02/mmbtu</strong> (고정비 전략적 비배분 고려)
+  </div>
+  <div style="background:#e8f5e9;border-left:4px solid #43a047;border-radius:6px;padding:12px 16px;font-size:13px;line-height:1.7;">
+    <strong style="color:#2e7d32;">③ Bio-LNG — '30년 이후 수요 확장성 명확하나, 규제 불확실성 높음</strong><br>
+    EU 규제 강화 후 ('30~) 수요 확장성은 명확하나, UDB 시행 시 비EU 생산 물량 비인정 가능성 높음.<br>
+    → '27년 규제 모니터링 후 한국 내 Mass balance 기반 사업 준비 여부 결정 필요.
+  </div>
+</div>
+
+</details>
+
+<details>
+<summary style="font-size:14px;font-weight:700;color:#006064;cursor:pointer;padding:8px 0;">▶ 주요 시사점 및 고민사항 (2026.05.28 보고)</summary>
+
+**1. 2nd LBV 및 사업 확장 관련**
+
+<div style="display:flex;flex-direction:column;gap:10px;margin:10px 0 16px;">
+  <div style="background:#f3e5f5;border-radius:6px;padding:12px 16px;font-size:13px;line-height:1.7;">
+    <strong style="color:#4a148c;">성장 vs. 수익성</strong><br>
+    • 2nd LBV 투입 시 고객 커버리지·운영 안정성 강화 vs. BEP 물량 미달 시 초기 손실 부담<br>
+    • 선가/소싱가 상승에 따라 1st vs 2nd LBV Economics 차이 (BEP 물량 상승)
+  </div>
+  <div style="background:#e8f5e9;border-radius:6px;padding:12px 16px;font-size:13px;line-height:1.7;">
+    <strong style="color:#2e7d32;">물량 확보 vs. 마진 Quality</strong><br>
+    • JKM 기반 Short-Term(1~3년)/Spot 병행 필요하나, JKM+α 경쟁 심화로 마진 축소 우려<br>
+    • Brent 연동 판매 시 마진 약 $0.5~3.0/mmbtu 수준<br>
+    • Spot JKM+$1.5~2.0/mmbtu 판매 시, 마진 약 +$0.02/mmbtu (고정비 전략적 비배분 고려)<br>
+    • 자회사 마진은 제한적이나, 물량 확장 제한 시 본사 전체의 터미널/소싱 수익기회 상실과 연계
+  </div>
+  <div style="background:#e3f2fd;border-radius:6px;padding:12px 16px;font-size:13px;line-height:1.7;">
+    <strong style="color:#1565c0;">자회사 단독 P&L vs. Value-chain 통합 관점</strong><br>
+    • 2nd BV BEP 상승으로 Eco Marine 단독 초기 적자 가능성이나, 소싱/터미널 합산 시 흑자 구조 가능<br>
+    • 2nd BV 확장을 위한 누적 총 수요: <strong>자회사 단독 ~35만톤/년 vs. Value Chain 통합 ~19만톤/년</strong><br>
+    • Brent Term 수요 희망 선사 제한적 (누적 최대 ~24만톤 추정)<br>
+    • <strong>24만톤 확보 시: 단독 기준 BEP 대비 16만톤 부족, VC 통합 기준 5만톤 초과 (흑자 전환 가능)</strong>
+  </div>
+</div>
+
+<div style="text-align:center;margin:8px 0 16px;">
+  <img src="./2nd_bv_economics.jpg" alt="2nd BV 경제성 분석" style="max-width:100%;border-radius:8px;border:1px solid #ddd;">
+  <div style="font-size:11px;color:#888;margin-top:4px;">Stand-alone vs. Value-chain 통합 기준 BEP 비교</div>
+</div>
+
+**2. Bio-LNG 관련**
+
+<div style="background:#e8f5e9;border-radius:6px;padding:12px 16px;font-size:13px;line-height:1.8;margin:8px 0 16px;">
+  유럽 규제 가시성 확보 시까지 <strong>Wait &amp; See</strong>하며, Interim Solution 활용 고려.<br>
+  • 한국 내 Mass balance 기반 사업 준비는 내년 유럽 규제 발효 상황 면밀 모니터링 후 결정<br>
+  • <strong>Interim Solution</strong>: 당사 Grey LNG Cargo 운송 과정에서 유럽산 Bio-LNG를 일부 Top-up 하는 Physical 방식<br>
+  → (예) Centrica 제안: US Grey LNG Cargo (85~90%) 선적 → 운송 중 유럽에서 유럽산 Bio-LNG Top-up (10~15%) 후 당사에 인도. 초기 제안가 검토 가능 범위로 파악, 추가 협의 진행 예정.
+</div>
+
+<div style="text-align:center;margin:8px 0 16px;">
+  <img src="./bio_lng_timeline.jpg" alt="Bio-LNG 타임라인" style="max-width:100%;border-radius:8px;border:1px solid #ddd;">
+  <div style="font-size:11px;color:#888;margin-top:4px;">Bio-LNG 규제 일정 및 Centrica Bio-LNG Top-up 제안 구조</div>
+</div>
+
+**핵심 질문 (의사결정 Framework)**
+<div style="background:#fff3e0;border:1px solid #ffb300;border-radius:8px;padding:14px 18px;margin:8px 0 16px;font-size:13px;line-height:1.8;">
+  <strong style="color:#e65100;">2nd LBV가 SK가스/Eco Marine Value Chain에서 창출하는 "추가 가치"가, 리스크와 자본을 감수할 만큼 충분한가?</strong><br>
+  → Go/No-go 조건: ① CMA-CGM 8만톤 확보 여부 ② 최소 IRR/NPV 기준 충족 ③ Value Chain 통합 기준 BEP 도달 가능성 ④ 초기 손실 허용 한도 내 여부
+</div>
+
+</details>
+
+<div style="border-top:2px dashed #e0e0e0;margin:28px 0 24px;"></div>
 
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">💡 이 사업은 왜 존재하는가</div>
 <div style="background:#e0f7fa;border-radius:8px;padding:16px 18px;margin-bottom:20px;font-size:14px;line-height:1.8;">
@@ -211,4 +414,4 @@
 </div>
 
 ---
-> 출처: 벙커링사업소개 (2026.04.01) · 주간업무보고 (2026.04.13) · **DCC 홍종범 실장 포럼 발표 (2026.06.02)**
+> 출처: 벙커링사업소개 (2026.04.01) · 주간업무보고 (2026.04.13) · DCC 홍종범 실장 포럼 발표 (2026.06.02) · **경영진 보고 — 암스테르담 컨퍼런스 Findings + 2nd LBV 의사결정 Framework (2026.05.28)**
