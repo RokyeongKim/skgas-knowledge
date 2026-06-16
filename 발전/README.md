@@ -6,7 +6,7 @@
   <div style="font-size:14px;opacity:0.85;margin-top:6px;line-height:1.5;">세계 최초 LNG·LPG 겸용 복합화력발전소 — 1,227MW<br>'24.12 상업운전 개시. Optionality의 물리적 실행 주체</div>
 </div>
 
-<div style="background:#fff8e1;border:1px solid #ffc107;border-radius:8px;padding:10px 16px;margin:0 0 20px;font-size:13px;">&#x1F4CA; <strong>최신 업데이트 (4월 13일 주간보고 기준)</strong> — 아래 내용은 Notion 주간업무보고를 반영하여 업데이트되었습니다.</div><div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;"<div style="display:flex;gap:16px;flex-wrap:wrap;margin:0 0 4px;">
+<div style="background:#fff8e1;border:1px solid #ffc107;border-radius:8px;padding:10px 16px;margin:0 0 20px;font-size:13px;">&#x1F4CA; <strong>최신 업데이트 (4월 13일 주간보고 기준)</strong> — 아래 내용은 Notion 주간업무보고를 반영하여 업데이트되었습니다.</div><div style="display:flex;gap:16px;flex-wrap:wrap;margin:0 0 4px;">
 <div style="flex:1;min-width:200px;background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:20px 20px 16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
   <div style="display:inline-block;background:#1a237e;color:white;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px;">'26년 상반기 실적</div>
   <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;"><span style="color:#888;">목표</span><span style="font-weight:700;color:#333;">725억</span></div>
@@ -23,7 +23,7 @@
 </div>
 </div>
 <div style="font-size:11px;color:#bbb;margin:0 0 24px;text-align:right;">출처: 26.06.05 2Q Progress 미팅</div>
->💡 이 사업은 왜 존재하는가</div>
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">💡 이 사업은 왜 존재하는가</div>
 <div style="background:#ede7f6;border-radius:8px;padding:16px 18px;margin-bottom:20px;font-size:14px;line-height:1.8;">
 GPS는 단순한 발전소가 아닙니다. <strong>LNG와 LPG 두 가지 연료를 모두 태울 수 있는 세계 최초</strong>의 복합화력발전소로, SK가스가 두 가지 가스를 취급하는 이유를 완성시키는 자산입니다.<br>
 연료 선택(Optionality)으로 Trading 수익을 만들고, 안정적인 전력 판매(SMP+CP)로 캐시플로우를 확보합니다.
@@ -65,7 +65,6 @@ GPS는 단순한 발전소가 아닙니다. <strong>LNG와 LPG 두 가지 연료
     <div style="font-size:21px;font-weight:700;color:#c62828;line-height:1.1;">Δ360억</div>
     <div style="font-size:11px;color:#999;margin-top:4px;">SMP 5원/kWh 하락 시</div>
   </div></div>
-<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.05 2Q Progress 미팅</div>
 <div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.05 2Q Progress 미팅</div>
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🔭 지금 뭘 봐야 하나</div>
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin:0 0 20px;"><div style="flex:1;min-width:200px;background:#f1f8f1;border:1px solid #c8e6c9;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#2e7d32;margin-bottom:8px;font-size:13px;">&#x1F4C8; 기회 / 순풍</div><div style="margin:4px 0;font-size:13px;">&#x2705; 1Q 실적 554억 (목표 542억 대비 +12억) — 목표 달성</div><div style="margin:4px 0;font-size:13px;">&#x2705; 한전 시장운영처 4/9 현장방문 — LNG/LPG 겸용발전 우호적 이해 확인</div><div style="margin:4px 0;font-size:13px;">&#x2705; AI DC PPA: GPS ↔ 울산 AI DC 직접 연결 추진 중</div><div style="margin:4px 0;font-size:13px;">&#x2705; CfD 계약: LG화학·현대제철 재검토 의사 확인 (고유가 계기로 관심 증가)</div></div><div style="flex:1;min-width:200px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#c62828;margin-bottom:8px;font-size:13px;">&#x1F4C9; 리스크 / 역풍</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; SMP 하락 구조적 리스크: 재생E 100GW + KOGAS Slope↓</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 4~5월 계획정비 증가 (6일→16일) — 가동률 다소 낮아질 전망</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; LPG 연료전환 지연 → Optionality 추가 수익 시기 순연</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; LMP(지역별 가격제) 도입 시 도매가 5~10원/kWh 하락 예상</div></div></div>
