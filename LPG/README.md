@@ -36,23 +36,25 @@ Eco Energy는 국내 공급마진이 핵심이며, LNG-LPG 가격 역전 시 Tra
     <div style="font-size:12px;color:#555;line-height:1.5;">도입가 vs<br>판매가 차이<br>= Eco Energy P&L</div>
   </div></div>
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">📊 핵심 수치</div>
-<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;"><div style="background:#ffebee;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
-    <div style="font-size:11px;color:#888;margin-bottom:6px;">Eco Energy '26 1Q 실적</div>
-    <div style="font-size:21px;font-weight:700;color:#c62828;line-height:1.1;">150억</div>
-    <div style="font-size:11px;color:#999;margin-top:4px;">목표 508억 대비 Δ358억 ❌</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 8px;"><div style="background:#ffebee;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">상반기 실적 ('26, 추정)</div>
+    <div style="font-size:21px;font-weight:700;color:#c62828;line-height:1.1;">△60억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">목표 891억 대비 △951억 미달 ❌</div>
   </div><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
     <div style="font-size:11px;color:#888;margin-bottom:6px;">세전이익 '25실 (LPG Biz)</div>
     <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">2,132억</div>
     <div style="font-size:11px;color:#999;margin-top:4px;">구성 확인 중 ⚠️</div>
-  </div><div style="background:#fff8e1;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
-    <div style="font-size:11px;color:#888;margin-bottom:6px;">세전이익 '26목 (LPG Biz)</div>
-    <div style="font-size:21px;font-weight:700;color:#f57f17;line-height:1.1;">1,841억</div>
-    <div style="font-size:11px;color:#999;margin-top:4px;">PDH 악화 반영</div>
+  </div><div style="background:#ffebee;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">연간 실적(추정) '26</div>
+    <div style="font-size:21px;font-weight:700;color:#c62828;line-height:1.1;">1,012억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">달성율 61.7% (목표 1,639억) ❌</div>
   </div><div style="background:#e3f2fd;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
     <div style="font-size:11px;color:#888;margin-bottom:6px;">Autogas 1톤 트럭</div>
     <div style="font-size:21px;font-weight:700;color:#1565c0;line-height:1.1;">7,237대</div>
     <div style="font-size:11px;color:#999;margin-top:4px;">3월 출고 — 전년 수준 회복</div>
   </div></div>
+<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.15 2Q Progress 미팅</div>
+<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.15 2Q Progress 미팅</div>
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🔭 지금 뭘 봐야 하나</div>
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin:0 0 20px;"><div style="flex:1;min-width:200px;background:#f1f8f1;border:1px solid #c8e6c9;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#2e7d32;margin-bottom:8px;font-size:13px;">&#x1F4C8; 기회 / 순풍</div><div style="margin:4px 0;font-size:13px;">&#x2705; Eco Energy 민수 회복 모니터링 — 1Q 저점 후 반등 여부</div><div style="margin:4px 0;font-size:13px;">&#x2705; MB 중장기 소싱 (NV 37%대, 공헌이익 50원/kg~)</div><div style="margin:4px 0;font-size:13px;">&#x2705; Autogas 1톤 트럭 3월 7,237대 출고 — 전년 수준 회복</div><div style="margin:4px 0;font-size:13px;">&#x2705; Trading 본부 1Q 933억 · G&P 272억 — 관련 협업 수익 지속</div></div><div style="flex:1;min-width:200px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#c62828;margin-bottom:8px;font-size:13px;">&#x1F4C9; 리스크 / 역풍</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; Eco Energy 1Q 150억 (목표 508억 대비 Δ358억) — 민수 악화 지속</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; KOGAS Slope 15%→12% 하락 (TSP 마진 압박)</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; SKE 가동률 급감 (50% 수준) → 4~5월 공급 물량 감소</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 국내 PDH 공급 Δ418kt → Eco Energy 기반이익 Δ480억</div></div></div>
 
@@ -283,59 +285,58 @@ Eco Energy는 국내 공급마진이 핵심이며, LNG-LPG 가격 역전 시 Tra
 <div style="overflow-x:auto;margin:0 0 14px;">
 <table style="width:100%;border-collapse:collapse;font-size:12px;">
   <tr style="background:#2e7d32;color:white;">
-    <th style="padding:7px 10px;text-align:left;">구분</th>
-    <th style="padding:7px 10px;text-align:left;">세부 항목</th>
-    <th style="padding:7px 10px;text-align:center;">TMC 부호</th>
+    <th style="padding:7px 10px;text-align:left;">항목</th>
+    <th style="padding:7px 10px;text-align:center;">부호</th>
     <th style="padding:7px 10px;text-align:left;">설명</th>
   </tr>
   <tr style="background:#fff8e1;">
-    <td style="padding:7px 10px;" rowspan="2"><strong>할인단가</strong></td>
-    <td style="padding:7px 10px;">가격할인</td>
-    <td style="padding:7px 10px;text-align:center;color:#c62828;font-weight:700;">+</td>
-    <td style="padding:7px 10px;">충전소별 고정 kg당 할인 금액</td>
+    <td style="padding:7px 10px;font-weight:700;">할인단가</td>
+    <td style="padding:7px 10px;text-align:center;"></td>
+    <td style="padding:7px 10px;">= ① 가격할인 + ② 매출할인</td>
   </tr>
   <tr style="background:#fff8e1;">
-    <td style="padding:7px 10px;">매출할인</td>
+    <td style="padding:7px 10px;padding-left:20px;">　① 가격할인</td>
     <td style="padding:7px 10px;text-align:center;color:#c62828;font-weight:700;">+</td>
-    <td style="padding:7px 10px;">총 매출대금 정산 시 정액 할인 (대형 충전소 유지를 위한 추가 할인)</td>
+    <td style="padding:7px 10px;">충전소마다 각자 다르게 고정적으로 kg당 할인해주는 금액</td>
   </tr>
-  <tr style="background:#f1f8e9;">
-    <td style="padding:7px 10px;" rowspan="4"><strong>금융지원<br>기회비용</strong></td>
+  <tr style="background:#fff8e1;">
+    <td style="padding:7px 10px;padding-left:20px;">　② 매출할인</td>
+    <td style="padding:7px 10px;text-align:center;color:#c62828;font-weight:700;">+</td>
+    <td style="padding:7px 10px;">총 매출대금 2천만원~1억원 산정 후 마지막 정산단계에서 정액 차감 (대형 충전소 유지용 추가 할인)</td>
+  </tr>
+  <tr>
     <td style="padding:7px 10px;">대여금</td>
     <td style="padding:7px 10px;text-align:center;color:#c62828;font-weight:700;">+</td>
-    <td style="padding:7px 10px;">무이자 대여 원금을 은행에 예치했을 때의 이자 기회비용</td>
+    <td style="padding:7px 10px;">무이자로 대출해주는 금액 → 은행예치 이자 상당 기회비용</td>
   </tr>
-  <tr style="background:#f1f8e9;">
+  <tr style="background:#f5f5f5;">
     <td style="padding:7px 10px;">외상채권</td>
     <td style="padding:7px 10px;text-align:center;color:#c62828;font-weight:700;">+</td>
-    <td style="padding:7px 10px;">미회수 매출채권의 기회비용</td>
+    <td style="padding:7px 10px;">매출채권 → 기회비용</td>
   </tr>
-  <tr style="background:#f1f8e9;">
+  <tr>
     <td style="padding:7px 10px;">시설지원잔액</td>
     <td style="padding:7px 10px;text-align:center;color:#c62828;font-weight:700;">+</td>
-    <td style="padding:7px 10px;">충전소 시설지원 후 남은 장부가의 기회비용</td>
+    <td style="padding:7px 10px;">충전소 시설지원해주고 남은 장부가 → 기회비용</td>
   </tr>
-  <tr style="background:#f1f8e9;">
-    <td style="padding:7px 10px;">임대차보증금 기회비용</td>
+  <tr style="background:#f5f5f5;">
+    <td style="padding:7px 10px;">임대차보증금기회비용</td>
     <td style="padding:7px 10px;text-align:center;color:#c62828;font-weight:700;">+</td>
-    <td style="padding:7px 10px;">임대차보증금을 운용했을 때의 기회비용</td>
+    <td style="padding:7px 10px;">위 4개 항목 — 미지원 시 은행예치 이자 상당의 기회비용손실 개념</td>
   </tr>
-  <tr style="background:#e3f2fd;">
-    <td style="padding:7px 10px;"><strong>임대수익</strong></td>
+  <tr>
     <td style="padding:7px 10px;">임대료</td>
     <td style="padding:7px 10px;text-align:center;color:#1565c0;font-weight:700;">−</td>
-    <td style="padding:7px 10px;">SK가스 소유 충전소에서 임차인으로부터 받는 임대료 수입 (비용 감소 효과)</td>
+    <td style="padding:7px 10px;">SK가스 소유 충전소에서 임차인에게 받는 임대료 → TMC에서 차감</td>
   </tr>
-  <tr style="background:#e8eaf6;">
-    <td style="padding:7px 10px;"><strong>임차비용</strong></td>
+  <tr style="background:#f5f5f5;">
     <td style="padding:7px 10px;">임차료</td>
     <td style="padding:7px 10px;text-align:center;color:#c62828;font-weight:700;">+</td>
-    <td style="padding:7px 10px;">위탁 충전소(사장님 충전소)에 SK가스가 지급하는 임차료</td>
+    <td style="padding:7px 10px;">SK가스가 위탁 충전소(사장님 충전소)에 지급하는 임차료 → TMC에 가산</td>
   </tr>
   <tr style="background:#2e7d32;color:white;font-weight:700;">
     <td style="padding:8px 10px;" colspan="2">TMC 합계</td>
-    <td style="padding:8px 10px;text-align:center;">Σ</td>
-    <td style="padding:8px 10px;">EE마진(224원)보다 낮아야 + 충전소 / 초과 시 − 충전소</td>
+    <td style="padding:8px 10px;">위 항목의 합 → EE마진(224원)보다 낮아야 + 충전소 / 초과 시 − 충전소</td>
   </tr>
 </table>
 </div>

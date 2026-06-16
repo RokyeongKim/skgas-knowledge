@@ -32,23 +32,25 @@ SK가스는 <strong>울산에 LNG 터미널(KET/CEC)을 직접 보유</strong>�
     <div style="font-size:12px;color:#555;line-height:1.5;">이용료+Trading<br>143억('26목)<br>→1,300억('31목)</div>
   </div></div>
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">📊 핵심 수치</div>
-<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;"><div style="background:#e3f2fd;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
-    <div style="font-size:11px;color:#888;margin-bottom:6px;">세전이익 '26목</div>
-    <div style="font-size:21px;font-weight:700;color:#1565c0;line-height:1.1;">143억</div>
-    <div style="font-size:11px;color:#999;margin-top:4px;">사업 2년차</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 8px;"><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">상반기 실적 ('26, 추정)</div>
+    <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">332억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">목표 79억 대비 +253억 초과달성 ✅ (달성율 461%)</div>
   </div><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
     <div style="font-size:11px;color:#888;margin-bottom:6px;">세전이익 '31목</div>
     <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">1,300억</div>
     <div style="font-size:11px;color:#999;margin-top:4px;">9배 성장</div>
-  </div><div style="background:#f3e5f5;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
-    <div style="font-size:11px;color:#888;margin-bottom:6px;">Trading 1Q 실적</div>
-    <div style="font-size:21px;font-weight:700;color:#6a1b9a;line-height:1.1;">933억</div>
-    <div style="font-size:11px;color:#999;margin-top:4px;">목표 525억 대비 +409억</div>
+  </div><div style="background:#ffebee;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">연간 실적(추정) '26</div>
+    <div style="font-size:21px;font-weight:700;color:#c62828;line-height:1.1;">6억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">목표 143억 대비 △137억 미달 ❌</div>
   </div><div style="background:#fff8e1;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
     <div style="font-size:11px;color:#888;margin-bottom:6px;">KET #3 탱크</div>
     <div style="font-size:21px;font-weight:700;color:#e65100;line-height:1.1;">Cool-down</div>
     <div style="font-size:11px;color:#999;margin-top:4px;">4/17~20 예정</div>
   </div></div>
+<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.15 2Q Progress 미팅</div>
+<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.15 2Q Progress 미팅</div>
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🔭 지금 뭘 봐야 하나</div>
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin:0 0 20px;"><div style="flex:1;min-width:200px;background:#f1f8f1;border:1px solid #c8e6c9;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#2e7d32;margin-bottom:8px;font-size:13px;">&#x1F4C8; 기회 / 순풍</div><div style="margin:4px 0;font-size:13px;">&#x2705; KET #3 탱크 Cool-down 4/17~20 예정 → 7월 상업개시 임박</div><div style="margin:4px 0;font-size:13px;">&#x2705; 에너루트 울산1호 4/12 상업운전 개시 (3월 매출 128.6억, 세전익 18.2억)</div><div style="margin:4px 0;font-size:13px;">&#x2705; Trading 초과 달성 추세 ('26 1Q +409억)</div><div style="margin:4px 0;font-size:13px;">&#x2705; 울산 석화단지 80만톤 잠재 고객, AIDC 냉열 공급 투자 검토</div></div><div style="flex:1;min-width:200px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#c62828;margin-bottom:8px;font-size:13px;">&#x1F4C9; 리스크 / 역풍</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; JKM $16.53 하락 (미-이란 휴전 기대감) — 변동성 높은 장세 지속</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; #5 Tank Anchoring 수요 미확보 (고려아연·한주 협의 중)</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 이란 실질 공급 정상화 지연 → 추가 협상 불확실성</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; LNG 공급 과잉 리스크 (미국 터미널 초과 건설)</div></div></div>
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🚢 LNG 조달구조</div>

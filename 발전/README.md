@@ -31,14 +31,14 @@ GPS는 단순한 발전소가 아닙니다. <strong>LNG와 LPG 두 가지 연료
     <div style="font-size:12px;color:#555;line-height:1.5;">설비 보유만으로<br>고정 수익 확보<br>~1,190억/년</div>
   </div></div>
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">📊 핵심 수치</div>
-<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;"><div style="background:#ede7f6;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
-    <div style="font-size:11px;color:#888;margin-bottom:6px;">세전이익 '26목</div>
-    <div style="font-size:21px;font-weight:700;color:#4a148c;line-height:1.1;">1,725억</div>
-    <div style="font-size:11px;color:#999;margin-top:4px;"></div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 8px;"><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">연간 실적(추정) '26</div>
+    <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">1,963억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">목표 1,725억 대비 +238억 초과달성 ✅</div>
   </div><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
-    <div style="font-size:11px;color:#888;margin-bottom:6px;">1Q 실적</div>
-    <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">554억</div>
-    <div style="font-size:11px;color:#999;margin-top:4px;">목표 542억 대비 +12억</div>
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">상반기 실적 ('26, 추정)</div>
+    <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">927억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">달성율 128% (목표 725억 대비 +202억 ✅)</div>
   </div><div style="background:#e3f2fd;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
     <div style="font-size:11px;color:#888;margin-bottom:6px;">가동률</div>
     <div style="font-size:21px;font-weight:700;color:#1565c0;line-height:1.1;">98.9%</div>
@@ -48,9 +48,47 @@ GPS는 단순한 발전소가 아닙니다. <strong>LNG와 LPG 두 가지 연료
     <div style="font-size:21px;font-weight:700;color:#c62828;line-height:1.1;">Δ360억</div>
     <div style="font-size:11px;color:#999;margin-top:4px;">SMP 5원/kWh 하락 시</div>
   </div></div>
+<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.15 2Q Progress 미팅</div>
+<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.15 2Q Progress 미팅</div>
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🔭 지금 뭘 봐야 하나</div>
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin:0 0 20px;"><div style="flex:1;min-width:200px;background:#f1f8f1;border:1px solid #c8e6c9;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#2e7d32;margin-bottom:8px;font-size:13px;">&#x1F4C8; 기회 / 순풍</div><div style="margin:4px 0;font-size:13px;">&#x2705; 1Q 실적 554억 (목표 542억 대비 +12억) — 목표 달성</div><div style="margin:4px 0;font-size:13px;">&#x2705; 한전 시장운영처 4/9 현장방문 — LNG/LPG 겸용발전 우호적 이해 확인</div><div style="margin:4px 0;font-size:13px;">&#x2705; AI DC PPA: GPS ↔ 울산 AI DC 직접 연결 추진 중</div><div style="margin:4px 0;font-size:13px;">&#x2705; CfD 계약: LG화학·현대제철 재검토 의사 확인 (고유가 계기로 관심 증가)</div></div><div style="flex:1;min-width:200px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#c62828;margin-bottom:8px;font-size:13px;">&#x1F4C9; 리스크 / 역풍</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; SMP 하락 구조적 리스크: 재생E 100GW + KOGAS Slope↓</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 4~5월 계획정비 증가 (6일→16일) — 가동률 다소 낮아질 전망</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; LPG 연료전환 지연 → Optionality 추가 수익 시기 순연</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; LMP(지역별 가격제) 도입 시 도매가 5~10원/kWh 하락 예상</div></div></div>
 <div style="border-top:1px solid #eee;margin:28px 0;"></div>
+
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #7c4dff;padding-left:10px;">📖 용어정리</div>
+<div style="overflow-x:auto;margin:0 0 20px;">
+<table style="width:100%;border-collapse:collapse;font-size:13px;">
+  <tr style="background:#4527a0;color:white;">
+    <th style="padding:8px 12px;text-align:left;width:25%;">용어</th>
+    <th style="padding:8px 12px;text-align:left;">정의</th>
+  </tr>
+  <tr>
+    <td style="padding:8px 12px;font-weight:700;">MGO</td>
+    <td style="padding:8px 12px;">= 발전량 = 연료사용량 = 연료소비량 (모두 같은 의미로 사용)</td>
+  </tr>
+  <tr style="background:#f5f5f5;">
+    <td style="padding:8px 12px;font-weight:700;">DAOS</td>
+    <td style="padding:8px 12px;">하루 전 계획 발전량</td>
+  </tr>
+</table>
+</div>
+
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #7c4dff;padding-left:10px;">📖 용어정리</div>
+<div style="overflow-x:auto;margin:0 0 20px;">
+<table style="width:100%;border-collapse:collapse;font-size:13px;">
+  <tr style="background:#4527a0;color:white;">
+    <th style="padding:8px 12px;text-align:left;width:25%;">용어</th>
+    <th style="padding:8px 12px;text-align:left;">정의</th>
+  </tr>
+  <tr>
+    <td style="padding:8px 12px;font-weight:700;">MGO</td>
+    <td style="padding:8px 12px;">= 발전량 = 연료사용량 = 연료소비량 (모두 같은 의미로 사용)</td>
+  </tr>
+  <tr style="background:#f5f5f5;">
+    <td style="padding:8px 12px;font-weight:700;">DAOS</td>
+    <td style="padding:8px 12px;">하루 전 계획 발전량</td>
+  </tr>
+</table>
+</div>
 
 ## SMP는 어떻게 결정되나
 

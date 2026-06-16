@@ -32,7 +32,7 @@ SK가스가 수입하는 <strong>프로판(LPG)의 핵심 수요처</strong>입�
     <div style="font-size:12px;color:#555;line-height:1.5;">프로필렌가<br>− 프로판가<br>= 수익</div>
   </div></div>
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">📊 핵심 수치</div>
-<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;"><div style="background:#fbe9e7;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 8px;"><div style="background:#fbe9e7;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
     <div style="font-size:11px;color:#888;margin-bottom:6px;">프로필렌 현재가</div>
     <div style="font-size:21px;font-weight:700;color:#bf360c;line-height:1.1;">$1,315/톤</div>
     <div style="font-size:11px;color:#999;margin-top:4px;">4월 13일 기준</div>
@@ -40,15 +40,17 @@ SK가스가 수입하는 <strong>프로판(LPG)의 핵심 수요처</strong>입�
     <div style="font-size:11px;color:#888;margin-bottom:6px;">4월 Spread</div>
     <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">$646/톤</div>
     <div style="font-size:11px;color:#999;margin-top:4px;">세전이익 246억 전망</div>
-  </div><div style="background:#e3f2fd;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
-    <div style="font-size:11px;color:#888;margin-bottom:6px;">1Q 영업이익</div>
-    <div style="font-size:21px;font-weight:700;color:#1565c0;line-height:1.1;">+53억</div>
-    <div style="font-size:11px;color:#999;margin-top:4px;">18분기만 흑자전환 ✅</div>
-  </div><div style="background:#ffebee;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
-    <div style="font-size:11px;color:#888;margin-bottom:6px;">1Q 세전손실</div>
-    <div style="font-size:21px;font-weight:700;color:#c62828;line-height:1.1;">-81억</div>
-    <div style="font-size:11px;color:#999;margin-top:4px;">지분법 손실 포함</div>
+  </div><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">상반기 실적 ('26, 추정)</div>
+    <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">391억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">목표 △788억 대비 +1,179억 초과달성 ✅</div>
+  </div><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">연간 실적(추정) '26</div>
+    <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">△66억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">목표 △1,262억 대비 +1,196억 초과달성 ✅</div>
   </div></div>
+<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.15 2Q Progress 미팅</div>
+<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.15 2Q Progress 미팅</div>
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🔭 지금 뭘 봐야 하나</div>
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin:0 0 20px;"><div style="flex:1;min-width:200px;background:#f1f8f1;border:1px solid #c8e6c9;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#2e7d32;margin-bottom:8px;font-size:13px;">&#x1F4C8; 기회 / 순풍</div><div style="margin:4px 0;font-size:13px;">&#x2705; 1Q 영업이익 53억 흑자 전환 — 18분기만 (2021년 3Q 이후 처음)</div><div style="margin:4px 0;font-size:13px;">&#x2705; 프로필렌 $1,315 강세 유지 (중동 공급 차질 + 국내 NCC 감산)</div><div style="margin:4px 0;font-size:13px;">&#x2705; 4월 세전이익 246억 전망 (Spread $646/톤)</div><div style="margin:4px 0;font-size:13px;">&#x2705; 국내 PDH 공급 Δ418kt 감소 → SKA 구조적 수혜 가능</div></div><div style="flex:1;min-width:200px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#c62828;margin-bottom:8px;font-size:13px;">&#x1F4C9; 리스크 / 역풍</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; AGIC Exit 이슈: 주식 실물 분실 가능성 → 4/16 Closing 불확실</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; PMC/UPP 통합 4월 내 확정 목표지만 세부 조건 협의 중</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 5월 S/D 반영 시 세전이익 -9억 (S/D 비용 부담)</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 부채비율 ~200% — 재무 부담 지속</div></div></div>
 <div style="border-top:1px solid #eee;margin:28px 0;"></div>

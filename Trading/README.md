@@ -38,14 +38,14 @@ Trading 본부는 단순 헤지를 넘어 <strong>FEI/MB/JKM 가격 Spread와 �
 </div>
 
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">📊 핵심 수치</div>
-<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;"><div style="background:#e8eaf6;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
-    <div style="font-size:11px;color:#888;margin-bottom:6px;">1Q 실적</div>
-    <div style="font-size:21px;font-weight:700;color:#1a237e;line-height:1.1;">933억</div>
-    <div style="font-size:11px;color:#999;margin-top:4px;">목표 대비 +409억 ✅</div>
-  </div><div style="background:#e3f2fd;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
-    <div style="font-size:11px;color:#888;margin-bottom:6px;">1Q 목표</div>
-    <div style="font-size:21px;font-weight:700;color:#1565c0;line-height:1.1;">525억</div>
-    <div style="font-size:11px;color:#999;margin-top:4px;">'26년 분기 목표</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin:0 0 8px;"><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">상반기 실적 ('26, 추정)</div>
+    <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">1,741억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">달성율 227% (목표 766억 대비 +975억 초과달성 ✅)</div>
+  </div><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
+    <div style="font-size:11px;color:#888;margin-bottom:6px;">연간 실적(추정) '26</div>
+    <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">2,294억</div>
+    <div style="font-size:11px;color:#999;margin-top:4px;">달성율 164% (목표 1,319억 대비 +975억 초과달성 ✅)</div>
   </div><div style="background:#e8f5e9;border-radius:10px;padding:16px 14px;text-align:center;flex:1;min-width:110px;">
     <div style="font-size:11px;color:#888;margin-bottom:6px;">초과달성 요인</div>
     <div style="font-size:21px;font-weight:700;color:#2e7d32;line-height:1.1;">Physical
@@ -56,6 +56,8 @@ Trading 본부는 단순 헤지를 넘어 <strong>FEI/MB/JKM 가격 Spread와 �
     <div style="font-size:21px;font-weight:700;color:#e65100;line-height:1.1;">272억</div>
     <div style="font-size:11px;color:#999;margin-top:4px;">수익분배 확인 중 ⚠️</div>
   </div></div>
+<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.15 2Q Progress 미팅</div>
+<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.15 2Q Progress 미팅</div>
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🔭 지금 뭘 봐야 하나</div>
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin:0 0 20px;"><div style="flex:1;min-width:200px;background:#f1f8f1;border:1px solid #c8e6c9;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#2e7d32;margin-bottom:8px;font-size:13px;">&#x1F4C8; 기회 / 순풍</div><div style="margin:4px 0;font-size:13px;">&#x2705; 1Q 실적 933억 — 목표 525억 대비 +409억 (역대급 달성)</div><div style="margin:4px 0;font-size:13px;">&#x2705; USD 강세 기조 지속 → FX 포지션 수혜</div><div style="margin:4px 0;font-size:13px;">&#x2705; Physical Trading 물량 확대 추세</div><div style="margin:4px 0;font-size:13px;">&#x2705; LNG-LPG Optionality 실행 시 G&P(LNG본부)와 협업 수익 발생</div></div><div style="flex:1;min-width:200px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#c62828;margin-bottom:8px;font-size:13px;">&#x1F4C9; 리스크 / 역풍</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 미-이란 관계 변화로 JKM 변동성 확대 — Paper 포지션 MTM 리스크</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; Paper 파생상품 평가손익 → 재무회계 실적과 Activity 괴리 발생</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; G&P(LNG 소속)와 수익분배 구조 정리 필요 ⚠️ (확인 중)</div></div></div>
 <div style="border-top:1px solid #eee;margin:28px 0;"></div>
