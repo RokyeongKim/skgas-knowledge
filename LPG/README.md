@@ -10,7 +10,24 @@
 &#x2139;&#xFE0F; <strong>조직 구조 참고</strong>: Trading(별도 독립 본부)·G&P(LNG 사업 소속)는 각자 별도 조직입니다. LPG Optionality 실행 시 3개 본부가 협업하며, 수익분배 구조는 확인 중입니다 ⚠️
 </div>
 
-<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">💡 이 사업은 왜 존재하는가</div>
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;"<div style="display:flex;gap:16px;flex-wrap:wrap;margin:0 0 4px;">
+<div style="flex:1;min-width:200px;background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:20px 20px 16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+  <div style="display:inline-block;background:#1a237e;color:white;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px;">'26년 상반기 실적</div>
+  <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;"><span style="color:#888;">목표</span><span style="font-weight:700;color:#333;">891억</span></div>
+    <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;"><span style="color:#888;">실적</span><span style="font-weight:700;color:#c62828;">△60억</span></div>
+    <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;"><span style="color:#888;">vs 목표</span><span style="font-weight:700;color:#c62828;">△951억 미달</span></div>
+    <div style="display:flex;justify-content:space-between;padding:8px 0;font-size:13px;"><span style="color:#888;">달성율</span><span style="font-weight:700;color:#c62828;">(적자)</span></div>
+</div>
+<div style="flex:1;min-width:200px;background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:20px 20px 16px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+  <div style="display:inline-block;background:#e65100;color:white;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px;">'26년 연간 추정</div>
+  <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;"><span style="color:#888;">목표</span><span style="font-weight:700;color:#333;">1,639억</span></div>
+    <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;"><span style="color:#888;">실적(추정)</span><span style="font-weight:700;color:#c62828;">1,012억</span></div>
+    <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;"><span style="color:#888;">vs 목표</span><span style="font-weight:700;color:#c62828;">△627억 미달</span></div>
+    <div style="display:flex;justify-content:space-between;padding:8px 0;font-size:13px;"><span style="color:#888;">달성율</span><span style="font-weight:700;color:#c62828;">61.7%</span></div>
+</div>
+</div>
+<div style="font-size:11px;color:#bbb;margin:0 0 24px;text-align:right;">출처: 26.06.05 2Q Progress 미팅</div>
+>💡 이 사업은 왜 존재하는가</div>
 <div style="background:#e8f5e9;border-radius:8px;padding:16px 18px;margin-bottom:20px;font-size:14px;line-height:1.8;">
 SK가스의 <strong>뿌리이자 현금 창출원</strong>. 프로판·부탄을 해외에서 도입해 국내 민수·산업체·차량에 공급하는 도매 사업입니다.<br>
 Eco Energy는 국내 공급마진이 핵심이며, LNG-LPG 가격 역전 시 Trading·G&P와 협업해 Optionality 추가수익을 만들어냅니다.
@@ -53,8 +70,8 @@ Eco Energy는 국내 공급마진이 핵심이며, LNG-LPG 가격 역전 시 Tra
     <div style="font-size:21px;font-weight:700;color:#1565c0;line-height:1.1;">7,237대</div>
     <div style="font-size:11px;color:#999;margin-top:4px;">3월 출고 — 전년 수준 회복</div>
   </div></div>
-<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.15 2Q Progress 미팅</div>
-<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.15 2Q Progress 미팅</div>
+<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.05 2Q Progress 미팅</div>
+<div style="font-size:11px;color:#bbb;margin:-12px 0 20px;text-align:right;">출처: 26.06.05 2Q Progress 미팅</div>
 <div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🔭 지금 뭘 봐야 하나</div>
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin:0 0 20px;"><div style="flex:1;min-width:200px;background:#f1f8f1;border:1px solid #c8e6c9;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#2e7d32;margin-bottom:8px;font-size:13px;">&#x1F4C8; 기회 / 순풍</div><div style="margin:4px 0;font-size:13px;">&#x2705; Eco Energy 민수 회복 모니터링 — 1Q 저점 후 반등 여부</div><div style="margin:4px 0;font-size:13px;">&#x2705; MB 중장기 소싱 (NV 37%대, 공헌이익 50원/kg~)</div><div style="margin:4px 0;font-size:13px;">&#x2705; Autogas 1톤 트럭 3월 7,237대 출고 — 전년 수준 회복</div><div style="margin:4px 0;font-size:13px;">&#x2705; Trading 본부 1Q 933억 · G&P 272억 — 관련 협업 수익 지속</div></div><div style="flex:1;min-width:200px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:14px 16px;"><div style="font-weight:700;color:#c62828;margin-bottom:8px;font-size:13px;">&#x1F4C9; 리스크 / 역풍</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; Eco Energy 1Q 150억 (목표 508억 대비 Δ358억) — 민수 악화 지속</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; KOGAS Slope 15%→12% 하락 (TSP 마진 압박)</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; SKE 가동률 급감 (50% 수준) → 4~5월 공급 물량 감소</div><div style="margin:4px 0;font-size:13px;">&#x26A0;&#xFE0F; 국내 PDH 공급 Δ418kt → Eco Energy 기반이익 Δ480억</div></div></div>
 
