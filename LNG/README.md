@@ -111,6 +111,50 @@ SK가스는 <strong>울산에 LNG 터미널(KET/CEC)을 직접 보유</strong>�
 
 <div style="border-top:1px solid #eee;margin:28px 0;"></div>
 
+<div style="font-size:15px;font-weight:700;color:#333;margin:28px 0 12px;border-left:4px solid #0066cc;padding-left:10px;">🏢 SKE 직도입 계약 ('26년 사용량 상향)</div>
+
+<div style="background:#e8f5e9;border:1px solid #4caf50;border-radius:8px;padding:14px 18px;margin:0 0 16px;font-size:13px;">
+<strong>📌 핵심:</strong> '26년부터 SKE 연간 사용량 <strong>50만톤 → 60만톤</strong>으로 상향 (합의서 체결 완료). 이에 따라 탱크 임대 용량도 <strong>10만KL → 11만KL</strong>로 1만KL 추가 계약.
+</div>
+
+<div style="background:#fffde7;border:1px solid #fbc02d;border-radius:8px;padding:14px 18px;margin:0 0 20px;font-size:13px;line-height:1.8;">
+<strong>⚠️ 용량(KL) vs 사용량(톤) — 개념 구분이 중요</strong><br>
+SKE 사용량이 10만톤 늘었다고 해서 우리 수수료가 비례해서 증가하는 구조가 <strong>아님</strong>. 우리 터미널 수수료는 <strong>고객사가 임대한 탱크 저장공간(KL)</strong>을 기준으로 수취되며, 사용량(톤)과 용량(KL)의 관계는 <strong>법적으로 정해진 환산 기준</strong>이 존재함.
+</div>
+
+<div style="overflow-x:auto;margin:0 0 16px;">
+<table style="width:100%;border-collapse:collapse;font-size:13px;">
+  <tr style="background:#1565c0;color:white;text-align:left;">
+    <th style="padding:8px 12px;width:18%;">구분</th>
+    <th style="padding:8px 12px;width:22%;">연간 사용량 (톤)</th>
+    <th style="padding:8px 12px;width:22%;">법정 최소 필요 용량 (KL)</th>
+    <th style="padding:8px 12px;">실제 임대 용량 (KL)</th>
+  </tr>
+  <tr style="background:#e3f2fd;">
+    <td style="padding:8px 12px;"><strong>기존 ('25 이전)</strong></td>
+    <td style="padding:8px 12px;">50만톤</td>
+    <td style="padding:8px 12px;">9.1만KL</td>
+    <td style="padding:8px 12px;">10만KL (여유분 약 0.9만KL)</td>
+  </tr>
+  <tr style="background:#fff8e1;">
+    <td style="padding:8px 12px;"><strong>'26년부터</strong></td>
+    <td style="padding:8px 12px;">60만톤 (+10만톤)</td>
+    <td style="padding:8px 12px;">11만KL</td>
+    <td style="padding:8px 12px;">11만KL (1만KL 추가 임대 계약 체결)</td>
+  </tr>
+</table>
+</div>
+
+<div style="background:#f5f5f5;border-radius:8px;padding:14px 18px;margin:0 0 20px;font-size:13px;line-height:1.8;">
+<strong>💡 해석</strong><br>
+&middot; 기존에는 9.1만KL만 확보하면 됐는데 10만KL를 계약 → 그동안 약 <strong>0.9만KL의 여분</strong>이 있었음<br>
+&middot; SKE가 10만톤(50만→60만) 추가 사용 → 법적으로 <strong>11만KL 필요</strong> → 우리 터미널에서 <strong>1만KL 추가 임대 계약 체결</strong><br>
+&middot; 즉, "사용량 10만톤 증가 = 탱크저장공간 1만KL 추가 임대 + 연간 12개월 × 10회전" 구조로 환산됨<br>
+&middot; 우리 수수료 증가분은 <strong>추가 임대된 1만KL × 임대단가</strong>로 산정되며, 사용량(톤) 증가분 자체와는 직접 연동되지 않음
+</div>
+
+<div style="border-top:1px solid #eee;margin:28px 0;"></div>
+
 ## 성장 로드맵 (세전이익 기준)
 
 | 연도 | 세전이익 | 핵심 이벤트 |
