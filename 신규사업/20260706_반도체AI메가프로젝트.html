@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>정부 3대 메가프로젝트 & SK가스 사업기회 초기 검토 | SK가스 Knowledge</title>
+<style>
+:root {
+  --sk-blue: #0051a2;
+  --sk-blue-dark: #003980;
+  --sk-blue-light: #e8f0fc;
+  --sk-orange: #f06400;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-500: #6b7280;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --green: #16a34a;
+  --green-light: #dcfce7;
+  --amber: #d97706;
+  --amber-light: #fef3c7;
+  --red: #dc2626;
+  --red-light: #fee2e2;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Apple SD Gothic Neo','Malgun Gothic',-apple-system,sans-serif; background: var(--gray-50); color: var(--gray-900); font-size: 14px; line-height: 1.55; }
+.header { background: var(--sk-blue-dark); color: white; padding: 18px 32px; }
+.header .breadcrumb { font-size: 12px; opacity: 0.7; margin-bottom: 6px; }
+.header .breadcrumb a { color: white; text-decoration: none; }
+.header .breadcrumb a:hover { text-decoration: underline; }
+.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.header .sub { font-size: 12px; opacity: 0.85; }
+.container { max-width: 1180px; margin: 0 auto; padding: 24px 32px 60px; }
+.section { margin-bottom: 32px; }
+.section-title { font-size: 16px; font-weight: 800; color: var(--sk-blue); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--sk-blue); display: flex; align-items: center; gap: 8px; }
+.section-title .tag { font-size: 11px; padding: 2px 8px; background: var(--sk-blue); color: white; border-radius: 4px; font-weight: 600; }
+.bluf { background: linear-gradient(135deg, #0051a2, #003980); color: white; padding: 24px 28px; border-radius: 12px; margin-bottom: 28px; }
+.bluf h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.bluf ul { list-style: none; padding-left: 0; }
+.bluf ul li { padding: 6px 0; padding-left: 20px; position: relative; font-size: 13.5px; line-height: 1.6; }
+.bluf ul li::before { content: "▸"; position: absolute; left: 0; color: var(--sk-orange); font-weight: 700; }
+.bluf strong { color: #fbbf24; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-bottom: 16px; }
+.card { background: white; border: 1px solid var(--gray-200); border-radius: 10px; padding: 16px; }
+.card-label { font-size: 11px; color: var(--gray-500); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 8px; }
+.card-value { font-size: 22px; font-weight: 800; color: var(--sk-blue); margin-bottom: 4px; }
+.card-sub { font-size: 12px; color: var(--gray-500); line-height: 1.5; }
+.tbl-wrap { background: white; border: 1px solid var(--gray-200); border-radius: 10px; overflow: hidden; margin-bottom: 16px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { background: var(--sk-blue); color: white; text-align: left; padding: 10px 14px; font-weight: 700; font-size: 12px; }
+td { padding: 10px 14px; border-top: 1px solid var(--gray-100); vertical-align: top; }
+tr:hover td { background: var(--gray-50); }
+.pill { display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 11px; font-weight: 600; }
+.pill-blue { background: var(--sk-blue-light); color: var(--sk-blue); }
+.pill-green { background: var(--green-light); color: var(--green); }
+.pill-amber { background: var(--amber-light); color: var(--amber); }
+.pill-red { background: var(--red-light); color: var(--red); }
+.pill-gray { background: var(--gray-100); color: var(--gray-700); }
+.map-wrap { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+.map-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; font-size: 12px; color: var(--gray-700); }
+.map-legend span { display: flex; align-items: center; gap: 6px; }
+.map-dot { width: 12px; height: 12px; border-radius: 50%; }
+.map-dot.semi { background: #dc2626; }
+.map-dot.aidc { background: #0051a2; }
+.map-dot.phyai { background: #7c3aed; }
+.map-dot.sk { background: #f06400; border: 2px solid #fbbf24; }
+.map-svg { width: 100%; max-height: 520px; display: block; margin: 0 auto; }
+.map-svg text { font-family: 'Apple SD Gothic Neo','Malgun Gothic',sans-serif; }
+.opp-card { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; margin-bottom: 14px; border-left: 4px solid var(--sk-orange); }
+.opp-card h3 { font-size: 15px; font-weight: 800; color: var(--gray-900); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+.opp-card h3 .num { background: var(--sk-orange); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
+.opp-card .lead { font-size: 13px; color: var(--gray-700); margin-bottom: 12px; line-height: 1.6; }
+.opp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+.opp-grid > div { background: var(--gray-50); border-radius: 6px; padding: 8px 12px; }
+.opp-grid .k { font-size: 10px; color: var(--gray-500); font-weight: 700; text-transform: uppercase; margin-bottom: 3px; }
+.opp-grid .v { font-size: 12px; color: var(--gray-900); font-weight: 600; }
+.callout { background: var(--amber-light); border-left: 4px solid var(--amber); padding: 12px 16px; border-radius: 6px; margin-bottom: 16px; font-size: 13px; color: #78350f; }
+.callout.good { background: var(--green-light); border-left-color: var(--green); color: #14532d; }
+.callout.bad { background: var(--red-light); border-left-color: var(--red); color: #7f1d1d; }
+.src-list { display: flex; flex-direction: column; gap: 6px; }
+.src-list a { color: var(--sk-blue); text-decoration: none; font-size: 12.5px; padding: 6px 10px; background: white; border: 1px solid var(--gray-200); border-radius: 6px; display: flex; gap: 8px; align-items: flex-start; }
+.src-list a:hover { background: var(--sk-blue-light); }
+.src-list a .src-tag { display: inline-block; padding: 1px 6px; background: var(--gray-100); color: var(--gray-700); border-radius: 3px; font-size: 10px; font-weight: 700; white-space: nowrap; margin-top: 1px; }
+.warn-box { background: #fef2f2; border: 1px dashed #fca5a5; border-radius: 8px; padding: 10px 14px; font-size: 12px; color: #7f1d1d; margin-bottom: 14px; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 780px) { .two-col { grid-template-columns: 1fr; } }
+.sub-note { font-size: 11px; color: var(--gray-500); font-weight: 400; margin-left: 6px; }
+.footnote { font-size: 11px; color: var(--gray-500); margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="breadcrumb"><a href="../index.html">SK가스 Knowledge</a> › 신규사업 검토 › 정부 3대 메가프로젝트 & SK가스 기회</div>
+  <h1>정부 3대 메가프로젝트 & SK가스 사업기회 초기 검토</h1>
+  <div class="sub">이재명 정부 '대한민국 대도약 3대 메가프로젝트'(2026.6.29 발표) — 반도체 · 피지컬 AI · AI 데이터센터 · 총 4,755조원 · SK가스 관점 초기 사업검토</div>
+</div>
+
+<div class="container">
+
+<div class="bluf">
+  <h2>🎯 Executive Summary (BLUF)</h2>
+  <ul>
+    <li><strong>정부 메가프로젝트</strong>: 10년간 <strong>총 4,755조원</strong> 규모, 반도체 · 피지컬 AI · AI 데이터센터 3축. 지역 배분 = 수도권 2,030조 / 서남권(호남) 800조 / 영남권 312조 / 충청권 140조 / 강원 동해 GS 120조</li>
+    <li><strong>호남 반도체 부지 확정</strong>: 광주 군공항 (250만평, 26.7.6 확정). 삼성 2기 + SK하이닉스 2기 = 팹 4기, 800조 투자</li>
+    <li><strong>전력 GAP이 곧 사업기회</strong>: 호남 필요 6.3GW / 정부 1단계 안 = <strong>LNG 발전소 3GW 신규 건설</strong> (동서·남부·서부발전 각 1GW) + 2단계 호남↔용인 송전선로 6GW. 삼성이 직접 "원전·LNG 열병합 필수" 요청.</li>
+    <li><strong>SK가스 3대 초기 기회 가설</strong>: ① 호남 신규 LNG 발전소 3GW+ 지분 참여/LNG 공급 ② 울산 KET·UGPS·확장부지 900MW를 앵커로 SK-AWS AI DC 성장에 편승 ③ 평택 LPG기지 자산 → 수도권 남부 반도체·DC 수요 대응 LNG 발전 진출</li>
+    <li><strong>SK그룹 내 참고 자산</strong>: 베트남 응에안 <strong>AI DC + LNG 발전 결합</strong> 프로젝트(20억달러). LNG 냉열 → DC 냉각 활용 모델. 국내 이식 가능성 매우 큼</li>
+    <li><strong>주의</strong>: 서남권 5년 내 조성 목표는 용인 사례(물·전기 계획만 2년) 감안 시 <strong>현실적 지연 리스크 有</strong>. 단, LNG 발전소 3GW 안은 SK가스가 즉시 개입 가능한 가장 확실한 계획</li>
+  </ul>
+</div>
+
+<!-- SECTION 1: 정부 3대 메가프로젝트 -->
+<div class="section">
+  <div class="section-title"><span class="tag">1</span> 정부 3대 메가프로젝트 이해 <span class="sub-note">— 2026.6.29 청와대 발표</span></div>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label">공식 명칭</div>
+      <div class="card-value" style="font-size:14px;">대한민국 대도약 3대 메가프로젝트</div>
+      <div class="card-sub">청와대 영빈관, 대통령 주재 국민보고회</div>
+    </div>
+    <div class="card">
+      <div class="card-label">3대 축</div>
+      <div class="card-value" style="font-size:15px;">반도체 · 피지컬AI · AI DC</div>
+      <div class="card-sub">"초격차 산업강국 대도약"</div>
+    </div>
+    <div class="card">
+      <div class="card-label">총 규모 (10년)</div>
+      <div class="card-value">4,755조원</div>
+      <div class="card-sub">국가예산 6.5배 · 삼성 + SK 주도</div>
+    </div>
+    <div class="card">
+      <div class="card-label">거버넌스</div>
+      <div class="card-value" style="font-size:15px;">청와대 직할 담당관</div>
+      <div class="card-sub">대통령 직접 챙김 · 인허가 병행</div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>지역</th>
+          <th>투자규모</th>
+          <th>주도 축 / 세부 내용</th>
+          <th>주요 사업자</th>
+          <th>진행 상태</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>수도권</strong><br><span class="pill pill-blue">용인·평택·화성</span></td>
+          <td><strong>2,030조원</strong></td>
+          <td>반도체 팹 집중 (기존 최대 클러스터)</td>
+          <td>삼성전자, SK하이닉스</td>
+          <td><span class="pill pill-green">진행중</span></td>
+        </tr>
+        <tr>
+          <td><strong>서남권 (호남)</strong><br><span class="pill pill-red">광주 군공항</span></td>
+          <td><strong>800~895조원</strong></td>
+          <td>반도체 팹 4기 (삼성2·SK2) + AI DC 1GW+</td>
+          <td>삼성전자 400조, SK하이닉스 400조, 삼성 별도 425조 (반·AI·에너지)</td>
+          <td><span class="pill pill-green">부지 확정 (26.7.6)</span></td>
+        </tr>
+        <tr>
+          <td><strong>영남권</strong><br><span class="pill pill-blue">구미·울산·부산</span></td>
+          <td><strong>312조원</strong></td>
+          <td>피지컬 AI + AI DC 허브<br>· 구미 삼성전자·SDS 19조 (휴머노이드/AI DC)<br>· 울산 삼성SDI 16조 (전고체·ESS)<br>· 부산 삼성전기 15조 (AI서버 기판/MLCC)<br>· SK그룹 영남권 AI DC 2GW+</td>
+          <td>삼성전자·SDS·SDI·전기, SK그룹, SKT</td>
+          <td><span class="pill pill-amber">계획 공개</span></td>
+        </tr>
+        <tr>
+          <td><strong>충청권</strong></td>
+          <td>140조원</td>
+          <td>반도체 후공정 (패키징/테스트)</td>
+          <td>미공개</td>
+          <td><span class="pill pill-gray">추진예정</span></td>
+        </tr>
+        <tr>
+          <td><strong>강원 동해</strong><br><span class="pill pill-blue">북평제2산단</span></td>
+          <td>120조원 (장비포함)</td>
+          <td><strong>AI 데이터센터 2.4GW</strong><br>(2028년 1.2GW + 2029년 1.2GW)</td>
+          <td>GS그룹 (30조 인프라)</td>
+          <td><span class="pill pill-green">부지 확정</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout good">
+    <strong>정부 AI DC 1단계 목표: 총 8.4GW (SK·GS·네이버 합작 참여).</strong> SKT는 울산 1호를 시작으로 영남권 2GW + 서남권 1GW 등 <strong>국내 5GW 규모 AI DC</strong>를 2029년부터 단계 오픈.
+  </div>
+
+</div>
+
+<!-- SECTION 2: 위치 지도 -->
+<div class="section">
+  <div class="section-title"><span class="tag">2</span> 투자 위치 지도 <span class="sub-note">— 개괄 위치도 (지리적 상대위치 참고용)</span></div>
+
+  <div class="map-wrap">
+    <div class="map-legend">
+      <span><span class="map-dot semi"></span>반도체 클러스터</span>
+      <span><span class="map-dot aidc"></span>AI 데이터센터</span>
+      <span><span class="map-dot phyai"></span>피지컬 AI</span>
+      <span><span class="map-dot sk"></span>SK가스 보유 인프라</span>
+    </div>
+
+    <svg class="map-svg" viewBox="0 0 700 620" xmlns="http://www.w3.org/2000/svg">
+      <!-- 한반도 간략 실루엣 -->
+      <path d="M 320 30 Q 380 20 430 45 Q 470 70 465 110 Q 470 145 445 175 Q 465 200 470 240 Q 475 285 445 320 Q 465 355 460 400 Q 440 440 400 475 Q 380 520 340 555 Q 290 585 250 570 Q 210 545 200 505 Q 190 460 200 420 Q 180 385 195 350 Q 170 315 190 285 Q 165 245 195 210 Q 175 175 210 150 Q 220 115 250 90 Q 275 55 320 30 Z"
+            fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+
+      <!-- 도(지역) 구분 참고선 -->
+      <line x1="250" y1="180" x2="440" y2="180" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="4,4"/>
+      <line x1="220" y1="320" x2="465" y2="320" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="4,4"/>
+      <line x1="200" y1="430" x2="460" y2="430" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+      <!-- 서울 참조 -->
+      <circle cx="310" cy="150" r="3" fill="#9ca3af"/>
+      <text x="318" y="154" font-size="11" fill="#6b7280">서울</text>
+
+      <!-- 수도권 반도체 (용인·평택·화성) -->
+      <circle cx="315" cy="180" r="14" fill="#dc2626" opacity="0.85"/>
+      <text x="335" y="184" font-size="12" font-weight="700" fill="#111827">용인·평택·화성 (2,030조)</text>
+      <text x="335" y="199" font-size="10" fill="#6b7280">수도권 반도체 (기존 최대)</text>
+
+      <!-- 평택 SK가스 자산 -->
+      <circle cx="298" cy="200" r="8" fill="#f06400" stroke="#fbbf24" stroke-width="2"/>
+      <text x="205" y="204" font-size="11" font-weight="700" fill="#7c2d12" text-anchor="end">SK가스 평택 LPG기지 ▶</text>
+
+      <!-- 충청권 후공정 -->
+      <circle cx="290" cy="255" r="10" fill="#dc2626" opacity="0.5"/>
+      <text x="240" y="260" font-size="11" font-weight="700" fill="#111827" text-anchor="end">충청권 (140조)</text>
+      <text x="240" y="273" font-size="9.5" fill="#6b7280" text-anchor="end">반도체 후공정</text>
+
+      <!-- 강원 동해 GS AI DC -->
+      <circle cx="415" cy="180" r="13" fill="#0051a2" opacity="0.9"/>
+      <text x="435" y="184" font-size="12" font-weight="700" fill="#111827">동해 (GS)</text>
+      <text x="435" y="198" font-size="10" fill="#6b7280">AI DC 2.4GW · 120조</text>
+
+      <!-- 광주 군공항 (호남 반도체) -->
+      <circle cx="260" cy="440" r="17" fill="#dc2626"/>
+      <text x="205" y="438" font-size="12" font-weight="700" fill="#111827" text-anchor="end">광주 군공항</text>
+      <text x="205" y="452" font-size="10" fill="#6b7280" text-anchor="end">호남 반도체 800조 · 250만평</text>
+      <text x="205" y="465" font-size="10" fill="#dc2626" text-anchor="end">▶ 팹 4기 (삼성2+SK2) · 26.7.6 확정</text>
+
+      <!-- 호남 AI DC -->
+      <circle cx="285" cy="480" r="11" fill="#0051a2" opacity="0.8"/>
+      <text x="300" y="484" font-size="10.5" font-weight="700" fill="#111827">서남권 AI DC 1GW+ (SKT)</text>
+
+      <!-- 한빛원전 (영광) -->
+      <circle cx="220" cy="410" r="8" fill="#16a34a" stroke="#059669" stroke-width="1.5"/>
+      <text x="205" y="395" font-size="10" font-weight="700" fill="#059669" text-anchor="end">한빛원전 5GW</text>
+
+      <!-- 태양광 호남 -->
+      <text x="230" y="510" font-size="10" fill="#eab308" font-weight="700">☀ 호남 태양광 11GW (전국 1/3)</text>
+
+      <!-- 구미 -->
+      <circle cx="380" cy="330" r="11" fill="#7c3aed"/>
+      <text x="396" y="334" font-size="11" font-weight="700" fill="#111827">구미 (삼성 19조)</text>
+      <text x="396" y="347" font-size="9.5" fill="#6b7280">휴머노이드·AI DC·AI팩토리</text>
+
+      <!-- 부산 -->
+      <circle cx="435" cy="440" r="11" fill="#7c3aed"/>
+      <text x="450" y="444" font-size="11" font-weight="700" fill="#111827">부산 (삼성전기 15조)</text>
+      <text x="450" y="457" font-size="9.5" fill="#6b7280">AI서버 기판·MLCC</text>
+
+      <!-- 울산 SK/삼성 -->
+      <circle cx="435" cy="395" r="15" fill="#0051a2"/>
+      <circle cx="435" cy="395" r="15" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="3,2"/>
+      <text x="453" y="392" font-size="12" font-weight="700" fill="#111827">울산 (허브)</text>
+      <text x="453" y="405" font-size="9.5" fill="#6b7280">SK-AWS AI DC · 삼성SDI 16조</text>
+      <text x="453" y="418" font-size="9.5" fill="#6b7280">SKT AI DC 1호 · 영남 2GW+</text>
+
+      <!-- SK가스 울산 자산 -->
+      <circle cx="425" cy="410" r="8" fill="#f06400" stroke="#fbbf24" stroke-width="2"/>
+      <text x="453" y="435" font-size="10.5" font-weight="700" fill="#7c2d12">SK가스 KET+UGPS 1.2GW +900MW 확장</text>
+
+      <!-- 지역 이름 라벨 -->
+      <text x="330" y="330" font-size="18" font-weight="800" fill="#d1d5db" opacity="0.6">중부권</text>
+      <text x="270" y="405" font-size="16" font-weight="800" fill="#d1d5db" opacity="0.6">호남권</text>
+      <text x="400" y="360" font-size="16" font-weight="800" fill="#d1d5db" opacity="0.6">영남권</text>
+
+      <!-- 송전선로 표시 (호남↔용인) -->
+      <path d="M 265 435 Q 300 320 315 195" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,5"/>
+      <text x="290" y="335" font-size="9" fill="#dc2626" font-weight="700" transform="rotate(-70 290 335)">2단계: 호남↔용인 송전 6GW</text>
+
+    </svg>
+
+    <div class="footnote">※ 위 지도는 지리적 상대위치 이해를 위한 개략도임. 실제 부지경계·좌표와 다를 수 있음.<br>※ 라벨의 투자금액·GW는 발표 시점(2026.6~7월) 기준. 정부·기업 후속 발표에 따라 변동 가능.</div>
+  </div>
+</div>
+
+<!-- SECTION 3: 전력 인프라 & GAP -->
+<div class="section">
+  <div class="section-title"><span class="tag">3</span> 지역별 전력 인프라 현황 & GAP <span class="sub-note">— 정부·기업 발표 기반 정량 추정</span></div>
+
+  <div class="warn-box">
+    <strong>추정 근거 원칙</strong>: 정부·기업이 공식 발표한 GW 수치는 <strong>굵게</strong> 표기. 팹 1기당 필요 전력은 용인 클러스터 벤치마크(삼성 9GW/2기 = 팹당 4~5GW, SK 6GW/2기 = 팹당 3GW)를 준용해 <em>추정</em>. AI DC는 SKT/GS 공식 발표치 활용.
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:14%;">지역</th>
+          <th style="width:20%;">필요 전력 (Demand)</th>
+          <th style="width:26%;">현재 인프라 (Supply)</th>
+          <th style="width:22%;">정부·기업 계획 (Plan)</th>
+          <th style="width:18%;">GAP / 시사점</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>서남권 (호남)</strong><br>광주 군공항<br>반도체 팹 4기<br>+ AI DC 1GW+</td>
+          <td><strong>정부 발표: 6.3GW</strong><br><span class="pill pill-gray">1일 용수 65만톤</span><br><span class="footnote">※ 팹 4기 기준. AI DC 1GW 별도</span></td>
+          <td>· 한빛원전 (영광) <strong>약 5GW</strong><br>· 호남 태양광 <strong>약 11GW</strong> (전국 32GW의 1/3)<br>· 기저(원전·석탄) 부족</td>
+          <td>· <strong>1단계: LNG 발전 3GW 신설</strong><br>&nbsp;&nbsp;(동서·남부·서부 각 1GW)<br>· 2단계: 호남↔용인 송전선로 <strong>6GW</strong><br>· 3단계 (2044~): 원전 신설 거론</td>
+          <td><span class="pill pill-red">전력공급이 최대 병목</span><br>· LNG 3GW = <strong>SK가스 최대 진입 포인트</strong><br>· 태양광은 간헐성 → 기저부하 필요</td>
+        </tr>
+        <tr>
+          <td><strong>수도권</strong><br>용인·평택 반도체</td>
+          <td>용인 클러스터 <strong>15GW</strong><br>(삼성 9 · SK하이닉스 6)<br><span class="footnote">평택 별도 15.6조 라인 가동중</span></td>
+          <td>· 삼성 9GW 중 <strong>6GW만 확보</strong><br>· SK 6GW 중 <strong>3GW만 확보</strong><br>· 평택 기존 발전소(민간 LNG 등)</td>
+          <td>· SK이노 E&amp;S: 용인 LNG 열병합 착공 임박 (SK하이닉스 팹 공급)<br>· 호남→용인 송전 (2단계)<br>· 서부발전 평택본부 중유→LNG 전환 검토</td>
+          <td><span class="pill pill-amber">6GW+ 미확보</span><br>· 평택 재개발·확장 유효<br>· SK가스 평택 LPG기지 재조명 필요</td>
+        </tr>
+        <tr>
+          <td><strong>강원 동해</strong><br>GS AI DC</td>
+          <td><strong>2.4GW</strong><br>(2028년 1.2GW + 2029년 1.2GW)</td>
+          <td>· 북평제2산단 (수소특화단지, 24년11월 지정)<br>· 기존 화력·수력 발전소 산재</td>
+          <td>· GS그룹 자체 인프라 구축<br>· 수소 활용 검토</td>
+          <td><span class="pill pill-blue">GS 주도</span><br>· SK가스 개입 여지 제한적<br>· 수소 관점 협업 가능성만</td>
+        </tr>
+        <tr>
+          <td><strong>영남권</strong><br>울산·구미·부산</td>
+          <td>SKT AI DC <strong>영남 2GW+</strong><br>SK그룹 5GW('29~단계오픈)<br>구미 삼성 AI DC 별도</td>
+          <td>· <strong>SK가스 KET</strong> LNG터미널 (64.5만kl)<br>· <strong>UGPS 1.2GW</strong> (LNG/LPG 복합)<br>· 삼성SDI·전기 자가공급 일부</td>
+          <td>· SK-AWS 울산 AI DC 시공중 <strong>900MW 확장부지</strong><br>· 삼성SDI 16조 (전고체·ESS)<br>· 삼성전기 15조 (부산)</td>
+          <td><span class="pill pill-green">SK가스 최적 포지션</span><br>· KET-UGPS 확장 즉시 가능<br>· AI DC 앵커 수요 확보</td>
+        </tr>
+        <tr>
+          <td><strong>충청권</strong></td>
+          <td>반도체 후공정 (팹 대비 저강도)</td>
+          <td>세부 미공개</td>
+          <td>140조 투자만 공지</td>
+          <td><span class="pill pill-gray">저우선</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="two-col">
+    <div class="callout">
+      <strong>왜 호남이 SK가스에 가장 중요한가</strong><br>
+      정부가 명시적으로 <strong>LNG 발전 3GW</strong>를 공식 대안으로 확정 발표. 발전공기업(동서·남부·서부발전) 각 1GW 신설 → 각 프로젝트마다 LNG 도입계약·터미널 활용·발전소 지분·EPC 참여 등 여러 사업기회층 형성.
+    </div>
+    <div class="callout good">
+      <strong>왜 울산이 즉시 실현 가능한가</strong><br>
+      SK-AWS AI DC의 <strong>900MW 확장부지</strong>가 이미 확보. KET(LNG 터미널) + UGPS(1.2GW 복합발전) + 확장가능 부지 = SK가스가 이미 보유한 인프라만으로 AI DC 성장 스케일업 가능.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4: SK가스 사업기회 -->
+<div class="section">
+  <div class="section-title"><span class="tag">4</span> SK가스 사업기회 (초기 가설) <span class="sub-note">— 3개 지역 균형 관점</span></div>
+
+  <div class="opp-card">
+    <h3><span class="num">1</span> 호남 신규 LNG 발전 3GW+ 참여 (최우선)</h3>
+    <div class="lead">정부 확정안 = <strong>동서·남부·서부발전 각 1GW LNG 발전소 신설</strong>. 발전공기업이 주도하지만 (1) LNG 도입계약·마케팅, (2) LNG 터미널 활용, (3) SPC 지분 참여, (4) O&amp;M, (5) 열병합 시 반도체 팹 대상 스팀 판매까지 다층 진입 가능. 광주·전남 부지는 서해안 접근성이 있어 도입 인프라도 신규 검토 필요.</div>
+    <div class="opp-grid">
+      <div><div class="k">규모</div><div class="v">3GW × 3사 (~15조원)</div></div>
+      <div><div class="k">타이밍</div><div class="v">'30년 초기 가동 목표</div></div>
+      <div><div class="k">파트너</div><div class="v">동서·남부·서부발전, 삼성전자</div></div>
+      <div><div class="k">난이도</div><div class="v"><span class="pill pill-amber">中 (公 주도, 사업권 경쟁)</span></div></div>
+      <div><div class="k">SK가스 활용자산</div><div class="v">LNG 도입·트레이딩 역량, KET Debottleneck 노하우</div></div>
+      <div><div class="k">Next Action</div><div class="v">3社 발전공기업 접촉 · 광주 인근 LNG 인프라 조사</div></div>
+    </div>
+  </div>
+
+  <div class="opp-card">
+    <h3><span class="num">2</span> 울산 KET-UGPS 확장 → AI DC 앵커 공급자화</h3>
+    <div class="lead">SK-AWS AI DC의 <strong>900MW 확장부지</strong>를 앵커로, UGPS 1.2GW를 넘어서는 <strong>제2 복합발전(1GW급)</strong> 신설 검토. KET 5호 탱크(앵커 미확보)에 <strong>SK-AWS DC를 앵커 테넌트</strong>로 유치하는 방안도 함께 검토. LNG 냉열 활용해 DC 냉각 효율 극대화(SK 베트남 응에안 모델 국내 이식).</div>
+    <div class="opp-grid">
+      <div><div class="k">규모</div><div class="v">추가 1GW급 발전 + KET#5</div></div>
+      <div><div class="k">타이밍</div><div class="v">'27~'29년 (즉시 착수 가능)</div></div>
+      <div><div class="k">파트너</div><div class="v">SKT, SK에코플랜트, AWS, SK하이닉스</div></div>
+      <div><div class="k">난이도</div><div class="v"><span class="pill pill-green">下 (기존자산 활용)</span></div></div>
+      <div><div class="k">SK가스 활용자산</div><div class="v">KET, UGPS, 900MW 부지, LNG-LPG 복합 노하우</div></div>
+      <div><div class="k">Next Action</div><div class="v">SKT AI DC 사업본부와 앵커 계약 협의 · KET#5 앵커 후보로 SK-AWS DC 제안</div></div>
+    </div>
+  </div>
+
+  <div class="opp-card">
+    <h3><span class="num">3</span> 평택 LPG기지 자산 재편 → 수도권 남부 LNG/DC 진출 교두보</h3>
+    <div class="lead">SK가스 평택기지는 LPG 중심이나, 서부발전이 <strong>평택본부 중유탱크 → LNG터미널 전환</strong>을 검토 중이라는 흐름과 겹침. 평택은 삼성전자 반도체 15.6조 라인 + 향후 확장 예정지 인접. <strong>평택 LNG 발전 + 소형 DC 앵커</strong>로 LPG→LNG·전력 사업으로 자산 가치 재평가 가능. 다만 E1이 '평택에너지서비스'를 통해 이미 LNG 발전 사업 중 → 경쟁구도 사전 정리 필요.</div>
+    <div class="opp-grid">
+      <div><div class="k">규모</div><div class="v">500MW~1GW급 발전 + DC 검토</div></div>
+      <div><div class="k">타이밍</div><div class="v">'28~'32년 (자산평가·기획 선행)</div></div>
+      <div><div class="k">파트너</div><div class="v">서부발전, 삼성전자, 지자체</div></div>
+      <div><div class="k">난이도</div><div class="v"><span class="pill pill-amber">中~上 (E1 선점, 부지 협소)</span></div></div>
+      <div><div class="k">SK가스 활용자산</div><div class="v">평택 LPG기지 (30주년 무재해)</div></div>
+      <div><div class="k">Next Action</div><div class="v">평택기지 인근 LNG 인프라·경쟁구도 스캔 · 서부발전 협업 여지 타진</div></div>
+    </div>
+  </div>
+
+  <div class="opp-card">
+    <h3><span class="num">4</span> LNG+AI DC 결합 모델 국내 최초 상용화 (플래그십)</h3>
+    <div class="lead">SK그룹이 베트남 응에안에서 추진하는 <strong>LNG 발전 + AI DC 결합 (20억달러)</strong> 모델을 국내(울산 or 호남)로 이식. LNG 기화 시 나오는 <strong>-162℃ 냉열</strong>을 DC 냉각에 활용 → PUE 획기적 개선 + LNG 재기화 에너지 절감. SK가스가 국내 유일 LNG+LPG 복합발전 노하우 보유 → SK그룹 내 자연스러운 리딩 포지션.</div>
+    <div class="opp-grid">
+      <div><div class="k">규모</div><div class="v">300~500MW 파일럿</div></div>
+      <div><div class="k">타이밍</div><div class="v">'27~'30년 (해외 사례 수렴 후)</div></div>
+      <div><div class="k">파트너</div><div class="v">SK이노 E&amp;S, SKT, SK에코플랜트</div></div>
+      <div><div class="k">난이도</div><div class="v"><span class="pill pill-amber">中 (기술·조합 신규성)</span></div></div>
+      <div><div class="k">차별 요소</div><div class="v">냉열 활용 = SK가스 KET 인접 부지에서 자연스럽게 구현</div></div>
+      <div><div class="k">Next Action</div><div class="v">응에안 사업 벤치마킹 · 냉열 활용 P/L 시뮬레이션</div></div>
+    </div>
+  </div>
+
+  <div class="opp-card">
+    <h3><span class="num">5</span> 호남 재생E + LNG 하이브리드 & Peaker (선택적)</h3>
+    <div class="lead">호남 태양광 11GW 존재 → 간헐성 백업으로 <strong>LNG Peaker + BESS</strong> 하이브리드 수요. 반도체·DC는 100% 무정전 필수 → 재생E 위주 계통이 곧 LNG 조정력 발전소 신설 필요성으로 직결. 정부 3GW 신설 외 <strong>추가 Peaker</strong> 기회 존재 가능.</div>
+    <div class="opp-grid">
+      <div><div class="k">규모</div><div class="v">500MW × 2~3기</div></div>
+      <div><div class="k">타이밍</div><div class="v">'30년 이후 (2단계 이후)</div></div>
+      <div><div class="k">파트너</div><div class="v">태양광 IPP, 발전공기업</div></div>
+      <div><div class="k">난이도</div><div class="v"><span class="pill pill-amber">中 (제도·요금체계 변수)</span></div></div>
+      <div><div class="k">SK가스 활용자산</div><div class="v">LPG-LNG 듀얼 연료 유연성 (UGPS 노하우)</div></div>
+      <div><div class="k">Next Action</div><div class="v">제11차 전력수급계획 반영 여부 모니터링</div></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- SECTION 5: 리스크 & 다음 단계 -->
+<div class="section">
+  <div class="section-title"><span class="tag">5</span> 리스크 & 다음 단계</div>
+
+  <div class="two-col">
+    <div class="callout bad">
+      <strong>주요 리스크</strong>
+      <ul style="margin-top:6px;padding-left:20px;font-size:12.5px;line-height:1.7;">
+        <li>정치·정책 리스크: 5년 내 완공 목표는 용인 사례 대비 매우 공격적. 정권 교체 시 재조정 가능</li>
+        <li>수요 리스크: 삼성·SK 공시에서 "시장상황·경영환경 따라 변동" 명시 → 팹 4기 계획 후퇴 시 전력 GAP도 축소</li>
+        <li>공기업 우선주의: 발전 3GW는 발전공기업 3사 우선 → SK가스는 서브 롤에 그칠 가능성</li>
+        <li>E1·SK이노 E&amp;S 등 SK 내부 경쟁: 평택·용인은 이미 계열사 선점 → 사전 정리 필수</li>
+      </ul>
+    </div>
+    <div class="callout good">
+      <strong>Next Steps (7~8월)</strong>
+      <ul style="margin-top:6px;padding-left:20px;font-size:12.5px;line-height:1.7;">
+        <li><strong>[사업]</strong> 3사 발전공기업 담당자 접촉 → LNG 도입·터미널 활용 타진</li>
+        <li><strong>[사업]</strong> SKT AI DC 사업본부에 KET#5 앵커 제안</li>
+        <li><strong>[기획]</strong> 광주 인근 LNG 도입 인프라 (서해안 터미널) 스캔</li>
+        <li><strong>[기획]</strong> 응에안 LNG+DC 모델 국내 P/L 시뮬레이션 (SK이노 E&amp;S 협업)</li>
+        <li><strong>[모니터링]</strong> 제11차 전력수급기본계획 개정안, 청와대 담당관 발표 추적</li>
+        <li><strong>[의사결정 상신]</strong> 3대 기회(호남 발전/울산 확장/평택 재편) 우선순위 확정</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6: 출처 -->
+<div class="section">
+  <div class="section-title"><span class="tag">S</span> 출처 (Sources)</div>
+
+  <div class="src-list">
+    <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148967301" target="_blank"><span class="src-tag">정책브리핑</span>이 대통령 "반도체·피지컬AI·데이터센터 삼각축으로 초격차 산업강국 대도약"</a>
+    <a href="https://www.fnnews.com/news/202606291456004445" target="_blank"><span class="src-tag">파이낸셜뉴스</span>이 대통령 "반도체, 서남권 등 대규모 신규 투자…3대 메가프로젝트 직할 담당관"</a>
+    <a href="https://www.fnnews.com/news/202606291705529918" target="_blank"><span class="src-tag">파이낸셜뉴스</span>'4655조원' 삼성·SK, 국가예산의 6.5배 투자</a>
+    <a href="https://www.e-biztimes.com/news/444377" target="_blank"><span class="src-tag">이비즈타임즈</span>800조는 서남권, 2030조는 수도권…4,755조 반도체 지도가 바뀐다</a>
+    <a href="https://kr.investing.com/news/stock-market-news/article-2001650" target="_blank"><span class="src-tag">Investing.com</span>SK하이닉스, 호남에 825조원 투자…반도체·AI 거점 키운다</a>
+    <a href="https://www.mt.co.kr/politics/2026/07/06/2026070614135668209" target="_blank"><span class="src-tag">머니투데이</span>호남권 제2 반도체 클러스터 '광주 군 공항'에 짓는다</a>
+    <a href="https://www.khan.co.kr/article/202607061655001" target="_blank"><span class="src-tag">경향신문</span>호남 반도체 클러스터, 광주 군 공항 부지에 짓는다···"250만평 부지"</a>
+    <a href="https://www.hankookilbo.com/news/article/A2026070616400000956" target="_blank"><span class="src-tag">한국일보</span>호남 반도체 클러스터, 광주군공항 부지에 건설…李 "모든 절차 병행"</a>
+    <a href="https://www.fnnews.com/news/202606300604323125" target="_blank"><span class="src-tag">파이낸셜뉴스</span>호남 반도체에 800조 투자…하루 65만t 용수 확보가 성패</a>
+    <a href="https://www.imaeil.com/page/view/2026063015060121631" target="_blank"><span class="src-tag">매일신문</span>서남권 반도체 하루 전력 6.3GW·용수 65만t 어떻게?</a>
+    <a href="https://www.fnnews.com/news/202607010620521782" target="_blank"><span class="src-tag">파이낸셜뉴스</span>서남권 800조 반도체 5년내 조성?…용인 보니 '물·전기' 계획만 최소 2년</a>
+    <a href="https://www.hankyung.com/article/2026070564041" target="_blank"><span class="src-tag">한국경제</span>호남에 원전 신설 거론한 정부, 반도체만큼 속도 내길 (사설)</a>
+    <a href="https://www.ebn.co.kr/news/articleView.html?idxno=1714539" target="_blank"><span class="src-tag">EBN</span>삼성, 반도체 호남행 425조원 베팅…전영현 "안정적 전력 공급, 원전·LNG 필수"</a>
+    <a href="https://www.fnnews.com/news/202606301701358707" target="_blank"><span class="src-tag">파이낸셜뉴스</span>삼성, 호남 425조 투자로 반도체·AI데이터센터·에너지 육성</a>
+    <a href="https://www.fnnews.com/news/202607041700271885" target="_blank"><span class="src-tag">파이낸셜뉴스</span>호남 반도체 팹·영남 피지컬AI·충청 후공정…전국 첨단 밸류체인 시동</a>
+    <a href="https://www.hankookilbo.com/news/article/A2026070316320002795" target="_blank"><span class="src-tag">한국일보</span>삼성·SK, 영남권에 200조 원 투자... 피지컬AI·데이터센터 허브</a>
+    <a href="https://www.etnews.com/20260703000292" target="_blank"><span class="src-tag">전자신문</span>삼성, 영남에 피지컬 AI 60조원 투자...일자리 20만개</a>
+    <a href="https://www.asiae.co.kr/article/2026070509003112853" target="_blank"><span class="src-tag">아시아경제</span>SKT, 15GW 규모 AI 데이터센터 구축…"아시아 AI 인프라 허브"</a>
+    <a href="https://www.insight.co.kr/news/560757" target="_blank"><span class="src-tag">인사이트</span>GS 동해 AI센터, 2029년 2.4GW 준공 목표...투자액 장비 포함 120조</a>
+    <a href="https://zdnet.co.kr/view/?no=20260629165024" target="_blank"><span class="src-tag">ZDNet</span>GS, 30조 AI 데이터센터 승부수…전력·건설 역량 총동원</a>
+    <a href="https://greened.kr/news/articleView.html?idxno=344212" target="_blank"><span class="src-tag">녹색경제</span>GS, 동해 2.4GW AI데이터센터 낙점…"메가프로젝트 1호 완공" 노린다</a>
+    <a href="https://www.newsis.com/view/NISX20250829_0003308496" target="_blank"><span class="src-tag">뉴시스</span>SK가 울산에 AI 데이터센터 짓는 이유 (콜로세움 같은 LNG탱크)</a>
+    <a href="https://news.sktelecom.com/213316" target="_blank"><span class="src-tag">SKT뉴스룸</span>SK-AWS 울산 AI 데이터센터, AI 고속도로의 거점으로</a>
+    <a href="https://www.g-enews.com/article/Global-Biz/2026/04/2026042808213330980c8c1c064d_1" target="_blank"><span class="src-tag">글로벌이코노믹</span>SK그룹, 베트남 응에안에 20억 달러 규모 'AI 데이터센터-LNG 발전' 건설</a>
+    <a href="https://www.sedaily.com/article/20044650" target="_blank"><span class="src-tag">서울경제</span>용인 열병합발전소 착공 임박…SK 'AI 밸류체인' 속도낸다</a>
+    <a href="https://www.electimes.com/news/articleView.html?idxno=206102" target="_blank"><span class="src-tag">일렉트릭타임스</span>서부발전, 전남 여수에 500㎿급 LNG발전소 건설 추진</a>
+    <a href="https://www.sisajournal-e.com/news/articleView.html?idxno=403882" target="_blank"><span class="src-tag">시사저널e</span>LPG 공급업체 SK가스·E1, LNG 사업 확장 나선 이유는</a>
+    <a href="https://www.newdaily.co.kr/site/data/html/2026/06/30/2026063000034.html" target="_blank"><span class="src-tag">뉴데일리</span>[단독] 靑은 '2030년 완공' … 삼전닉스는 "시장·경영따라 변동" 공시</a>
+  </div>
+
+  <div class="footnote" style="margin-top:14px;">
+    ⚠️ 본 문서의 정량치·계획은 2026년 6~7월 발표 시점 기준. 인허가·설계 진행에 따라 변동 가능. 특히 팹 수·GW 필요량·발전소 신설 시기 등은 확정 전 단계.<br>
+    ⚠️ SK가스 사업기회 카드는 <strong>초기 가설</strong>이며, 사업본부 협의·경쟁구도 실사·경제성 검토 이후 확정 필요.
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>

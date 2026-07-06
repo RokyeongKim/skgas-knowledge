@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>발전사업 신규모델 Ideation | SK가스 Knowledge</title>
+<style>
+:root {
+  --sk-blue: #0051a2;
+  --sk-blue-dark: #003980;
+  --sk-blue-light: #e8f0fc;
+  --sk-orange: #f06400;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-500: #6b7280;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --green: #16a34a;
+  --green-light: #dcfce7;
+  --amber: #d97706;
+  --amber-light: #fef3c7;
+  --red: #dc2626;
+  --red-light: #fee2e2;
+  --purple: #7c3aed;
+  --purple-light: #ede9fe;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Apple SD Gothic Neo','Malgun Gothic',-apple-system,sans-serif; background: var(--gray-50); color: var(--gray-900); font-size: 14px; line-height: 1.55; }
+.header { background: linear-gradient(135deg, #e65100, #f06400); color: white; padding: 18px 32px; }
+.header .breadcrumb { font-size: 12px; opacity: 0.9; margin-bottom: 6px; }
+.header .breadcrumb a { color: white; text-decoration: none; }
+.header .breadcrumb a:hover { text-decoration: underline; }
+.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.header .sub { font-size: 12px; opacity: 0.9; }
+.container { max-width: 1180px; margin: 0 auto; padding: 24px 32px 60px; }
+.section { margin-bottom: 32px; }
+.section-title { font-size: 16px; font-weight: 800; color: var(--sk-blue); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--sk-blue); }
+.bluf { background: white; border: 1px solid var(--gray-200); border-left: 6px solid var(--sk-orange); padding: 18px 22px; border-radius: 10px; margin-bottom: 28px; }
+.bluf h2 { font-size: 15px; font-weight: 800; color: var(--sk-orange); margin-bottom: 10px; }
+.bluf p { font-size: 13.5px; color: var(--gray-700); line-height: 1.7; }
+.bluf .kw { background: var(--amber-light); padding: 1px 6px; border-radius: 4px; font-weight: 700; color: #78350f; }
+.axis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 20px; }
+.axis-card { background: white; border: 1px solid var(--gray-200); border-radius: 10px; padding: 16px 18px; border-top: 4px solid var(--sk-blue); }
+.axis-card h3 { font-size: 14px; font-weight: 800; color: var(--sk-blue); margin-bottom: 6px; }
+.axis-card p { font-size: 12px; color: var(--gray-500); line-height: 1.5; }
+.axis-card ul { list-style: none; padding: 8px 0 0; }
+.axis-card ul li { font-size: 12px; padding: 3px 0 3px 14px; position: relative; color: var(--gray-700); }
+.axis-card ul li::before { content: "•"; position: absolute; left: 4px; color: var(--sk-orange); font-weight: 700; }
+.idea-card { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px 22px; margin-bottom: 14px; position: relative; }
+.idea-card.hi { border-left: 5px solid var(--green); }
+.idea-card.mid { border-left: 5px solid var(--amber); }
+.idea-card.exp { border-left: 5px solid var(--purple); }
+.idea-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; gap: 12px; flex-wrap: wrap; }
+.idea-title { display: flex; gap: 10px; align-items: center; }
+.idea-num { background: var(--sk-blue); color: white; width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; flex-shrink: 0; }
+.idea-h { font-size: 15.5px; font-weight: 800; color: var(--gray-900); }
+.idea-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+.b { display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 10.5px; font-weight: 700; }
+.b-green { background: var(--green-light); color: var(--green); }
+.b-amber { background: var(--amber-light); color: var(--amber); }
+.b-red { background: var(--red-light); color: var(--red); }
+.b-purple { background: var(--purple-light); color: var(--purple); }
+.b-blue { background: var(--sk-blue-light); color: var(--sk-blue); }
+.b-gray { background: var(--gray-100); color: var(--gray-700); }
+.idea-lead { font-size: 13px; color: var(--gray-700); line-height: 1.65; margin-bottom: 12px; }
+.idea-lead strong { color: var(--gray-900); }
+.idea-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; margin-bottom: 10px; }
+.idea-grid > div { background: var(--gray-50); border-radius: 6px; padding: 8px 12px; }
+.idea-grid .k { font-size: 10px; color: var(--gray-500); font-weight: 700; text-transform: uppercase; margin-bottom: 3px; }
+.idea-grid .v { font-size: 12px; color: var(--gray-900); font-weight: 600; line-height: 1.4; }
+.callout { padding: 12px 16px; border-radius: 6px; margin-bottom: 16px; font-size: 12.5px; line-height: 1.65; }
+.callout.info { background: var(--sk-blue-light); border-left: 4px solid var(--sk-blue); color: var(--sk-blue-dark); }
+.callout.good { background: var(--green-light); border-left: 4px solid var(--green); color: #14532d; }
+.callout.warn { background: var(--amber-light); border-left: 4px solid var(--amber); color: #78350f; }
+.matrix-wrap { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+.matrix-title { font-size: 13px; font-weight: 700; color: var(--gray-700); margin-bottom: 12px; text-align: center; }
+.matrix { position: relative; height: 380px; margin: 20px 40px 40px; border-left: 2px solid var(--gray-300); border-bottom: 2px solid var(--gray-300); }
+.matrix .quad-label { position: absolute; font-size: 10px; color: var(--gray-500); font-weight: 700; }
+.matrix .x-label { position: absolute; bottom: -30px; width: 100%; text-align: center; font-size: 12px; color: var(--gray-700); font-weight: 700; }
+.matrix .y-label { position: absolute; left: -100px; top: 50%; transform: rotate(-90deg) translateX(50%); transform-origin: right; font-size: 12px; color: var(--gray-700); font-weight: 700; }
+.matrix .arrow-x { position: absolute; right: -8px; bottom: -8px; font-size: 14px; color: var(--gray-500); }
+.matrix .arrow-y { position: absolute; left: -8px; top: -8px; font-size: 14px; color: var(--gray-500); }
+.matrix .dot { position: absolute; width: 30px; height: 30px; border-radius: 50%; background: var(--sk-blue); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; transform: translate(-50%, 50%); border: 2px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+.matrix .dot.hi { background: var(--green); }
+.matrix .dot.mid { background: var(--amber); }
+.matrix .dot.exp { background: var(--purple); }
+.matrix .dot .tt { position: absolute; bottom: 34px; left: 50%; transform: translateX(-50%); background: var(--gray-900); color: white; padding: 4px 8px; border-radius: 4px; font-size: 10px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; font-weight: 600; }
+.matrix .dot:hover .tt { opacity: 1; }
+.matrix-legend { display: flex; gap: 16px; justify-content: center; margin-top: 20px; font-size: 12px; }
+.matrix-legend .dot-mini { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+.footer-note { font-size: 11px; color: var(--gray-500); background: var(--gray-100); padding: 12px 16px; border-radius: 6px; margin-top: 20px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="breadcrumb"><a href="../index.html">SK가스 Knowledge</a> › 신규사업 검토 › 발전사업 신규모델 Ideation</div>
+  <h1>발전사업 신규모델 Ideation</h1>
+  <div class="sub">SK가스 발전사업 확장을 위한 신규 비즈니스 모델 초기 아이디어 뱅크 — 2026.7.6 v1.0</div>
+</div>
+
+<div class="container">
+
+<div class="bluf">
+  <h2>💡 이 페이지의 목적</h2>
+  <p>정부 3대 메가프로젝트(반도체·피지컬AI·AI DC)로 <span class="kw">전력 수요가 향후 10년간 폭발</span>. 국내 클러스터 인프라 부족은 사업기회의 신호. 본 페이지는 SK가스가 UGPS를 넘어 <span class="kw">다음 발전 사업모델</span>을 찾기 위한 초기 아이디어 뱅크. 10개 모델을 <strong>실현가능성 × 임팩트</strong> 매트릭스로 우선순위화하고, 각 모델마다 활용 자산·파트너·리스크·다음 액션을 정리.</p>
+</div>
+
+<!-- 4대 축 -->
+<div class="section">
+  <div class="section-title">🧭 신규 발전모델의 4대 축</div>
+  <div class="axis-grid">
+    <div class="axis-card">
+      <h3>1. Anchor Demand</h3>
+      <p>불특정 계통 판매 → 특정 대형 소비자(반도체 팹, AI DC, 산업단지)에 <strong>고정 수요 확보</strong></p>
+      <ul>
+        <li>BTM (Behind-the-Meter)</li>
+        <li>Corporate PPA</li>
+        <li>DC 앵커 테넌트</li>
+      </ul>
+    </div>
+    <div class="axis-card">
+      <h3>2. Fuel Optionality</h3>
+      <p>LPG·LNG 듀얼 연료로 시황·연료가격 대응. UGPS 노하우 = SK가스 <strong>고유 차별화</strong></p>
+      <ul>
+        <li>LNG-LPG 복합</li>
+        <li>수소 혼소 (Blue/Green)</li>
+        <li>Bio LNG 활용</li>
+      </ul>
+    </div>
+    <div class="axis-card">
+      <h3>3. Integrated Value</h3>
+      <p>전력만 팔지 않고 <strong>열·냉·CO₂·데이터</strong>까지 묶어 판매. 부가가치 극대화</p>
+      <ul>
+        <li>LNG 냉열 → DC 냉각</li>
+        <li>열병합 → Steam sale</li>
+        <li>CCUS 통합</li>
+      </ul>
+    </div>
+    <div class="axis-card">
+      <h3>4. Flexibility</h3>
+      <p>재생E 확대·간헐성 심화로 <strong>조정력 발전</strong> 프리미엄 상승. Peaker + BESS 시장 개화</p>
+      <ul>
+        <li>Peaker Plant</li>
+        <li>Hybrid (LNG+BESS)</li>
+        <li>SMR (선택적)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 실현가능성 × 임팩트 매트릭스 -->
+<div class="section">
+  <div class="section-title">📊 실현가능성 × 임팩트 매트릭스</div>
+
+  <div class="matrix-wrap">
+    <div class="matrix-title">10개 신규모델 포지셔닝 (원 위에 마우스 올리면 이름 표시)</div>
+
+    <div class="matrix">
+      <span class="quad-label" style="top: 10px; right: 20px;">🌟 Quick Win + 임팩트大</span>
+      <span class="quad-label" style="top: 10px; left: 10px;">⚙️ 임팩트大 · 준비필요</span>
+      <span class="quad-label" style="bottom: 10px; right: 20px;">✓ 손쉬운 실행</span>
+      <span class="quad-label" style="bottom: 10px; left: 10px;">🔬 실험적</span>
+
+      <span class="arrow-x">▶</span>
+      <span class="arrow-y">▲</span>
+      <span class="x-label">→ 실현가능성 (기존 자산·조직 활용도 高)</span>
+      <span class="y-label">↑ 임팩트 (사업규모 · 전략가치)</span>
+
+      <!-- 좌표: left = 실현가능성(x), bottom = 임팩트(y) -->
+      <div class="dot hi" style="left: 88%; bottom: 78%;">1<span class="tt">1. UGPS 확장 (900MW)</span></div>
+      <div class="dot hi" style="left: 78%; bottom: 88%;">2<span class="tt">2. KET#5 앵커 = AI DC</span></div>
+      <div class="dot mid" style="left: 42%; bottom: 82%;">3<span class="tt">3. 호남 LNG 3GW 참여</span></div>
+      <div class="dot exp" style="left: 55%; bottom: 68%;">4<span class="tt">4. LNG 냉열 + DC 결합</span></div>
+      <div class="dot mid" style="left: 60%; bottom: 55%;">5<span class="tt">5. 평택 자산 재편</span></div>
+      <div class="dot mid" style="left: 45%; bottom: 45%;">6<span class="tt">6. Peaker + BESS 하이브리드</span></div>
+      <div class="dot exp" style="left: 22%; bottom: 62%;">7<span class="tt">7. 반도체 팹 열병합 (Steam sale)</span></div>
+      <div class="dot exp" style="left: 15%; bottom: 42%;">8<span class="tt">8. 수소 혼소 발전</span></div>
+      <div class="dot exp" style="left: 12%; bottom: 78%;">9<span class="tt">9. SMR 지분참여</span></div>
+      <div class="dot hi" style="left: 72%; bottom: 30%;">10<span class="tt">10. Bio LNG Peaker</span></div>
+    </div>
+
+    <div class="matrix-legend">
+      <span><span class="dot-mini" style="background: var(--green);"></span>실행 즉시</span>
+      <span><span class="dot-mini" style="background: var(--amber);"></span>중기 (2~4년)</span>
+      <span><span class="dot-mini" style="background: var(--purple);"></span>실험/장기</span>
+    </div>
+  </div>
+
+  <div class="callout info">
+    <strong>우선순위 해석</strong>: 우상단(1·2·3)은 <strong>즉시 착수 후보</strong>. 특히 ①②는 기존 자산만으로 실행 가능. ④⑤⑦은 그룹 협업·파트너십 필요. ⑧⑨는 실험적 R&amp;D 트랙.
+  </div>
+</div>
+
+<!-- 10개 아이디어 카드 -->
+<div class="section">
+  <div class="section-title">🎯 10개 발전 신규모델</div>
+
+  <div class="idea-card hi">
+    <div class="idea-header">
+      <div class="idea-title"><div class="idea-num">1</div><div class="idea-h">울산 UGPS 확장 — 900MW 추가 복합발전</div></div>
+      <div class="idea-badges"><span class="b b-green">Quick Win</span><span class="b b-blue">Anchor Demand</span></div>
+    </div>
+    <div class="idea-lead">SK-AWS AI DC의 <strong>900MW 확장부지 이미 확보</strong>. UGPS 1.2GW 옆에 제2 복합발전(1GW급) 신설 → SK-AWS·SKT AI DC 앵커 수요와 세트로 사업화. LNG-LPG 듀얼 연료 = 시황·정책 리스크 헤지.</div>
+    <div class="idea-grid">
+      <div><div class="k">활용 자산</div><div class="v">KET, UGPS, 900MW 부지</div></div>
+      <div><div class="k">타겟 고객</div><div class="v">SK-AWS DC, SKT AI DC, SK하이닉스</div></div>
+      <div><div class="k">투자규모</div><div class="v">약 1.5조원 (1GW급)</div></div>
+      <div><div class="k">타이밍</div><div class="v">'27~'29년 (즉시 착수)</div></div>
+      <div><div class="k">Next Action</div><div class="v">SKT AI DC 사업본부와 앵커 계약 협의</div></div>
+    </div>
+  </div>
+
+  <div class="idea-card hi">
+    <div class="idea-header">
+      <div class="idea-title"><div class="idea-num">2</div><div class="idea-h">KET #5 탱크 앵커 = SK-AWS AI DC</div></div>
+      <div class="idea-badges"><span class="b b-green">Quick Win</span><span class="b b-blue">Integrated Value</span></div>
+    </div>
+    <div class="idea-lead">KET #5 탱크는 <strong>앵커 테넌트 미확보 상태</strong>('26.5월 기준 경보 표시). SK-AWS 울산 AI DC의 <strong>비상 발전용 LNG + 냉열 활용</strong>을 앵커로 유치하면 KET#5 자산 활용률 상승 + DC 냉각 효율 개선의 이중 시너지. 그룹 시너지 최대의 케이스.</div>
+    <div class="idea-grid">
+      <div><div class="k">활용 자산</div><div class="v">KET #5 (개발 중)</div></div>
+      <div><div class="k">타겟 고객</div><div class="v">SK-AWS DC (SK에코플랜트 시공)</div></div>
+      <div><div class="k">투자규모</div><div class="v">냉열회수 EPC 수백억~1천억</div></div>
+      <div><div class="k">타이밍</div><div class="v">'27년 (KET#5 준공 시점)</div></div>
+      <div><div class="k">Next Action</div><div class="v">SK-AWS DC 냉각시스템 설계 인입 협의</div></div>
+    </div>
+  </div>
+
+  <div class="idea-card mid">
+    <div class="idea-header">
+      <div class="idea-title"><div class="idea-num">3</div><div class="idea-h">호남 신규 LNG 발전 3GW 참여 (동서·남부·서부발전 3사)</div></div>
+      <div class="idea-badges"><span class="b b-amber">중기</span><span class="b b-blue">Fuel Optionality</span><span class="b b-blue">Anchor Demand</span></div>
+    </div>
+    <div class="idea-lead">정부가 명시 확정한 최대 신규 발전사업. <strong>발전공기업 3사가 주도</strong>하지만 (a) LNG 도입 마케팅, (b) LNG 터미널 활용 계약, (c) SPC 소수지분, (d) O&amp;M 서비스, (e) 열병합 시 반도체 팹 향 스팀 판매까지 다층 접근 가능. 광주 인근 서해안 LNG 도입 인프라 신규 검토 여지도.</div>
+    <div class="idea-grid">
+      <div><div class="k">활용 자산</div><div class="v">LNG 도입·트레이딩, KET 노하우</div></div>
+      <div><div class="k">타겟 고객</div><div class="v">발전공기업 3사, 삼성전자·SK하이닉스</div></div>
+      <div><div class="k">투자규모</div><div class="v">3GW ≈ 15조원 (3사 합산, 지분 참여 시 소액)</div></div>
+      <div><div class="k">타이밍</div><div class="v">'30년 초기 가동</div></div>
+      <div><div class="k">Next Action</div><div class="v">3社 발전공기업 접촉 · 광주 인근 LNG 인프라 사전 조사</div></div>
+    </div>
+  </div>
+
+  <div class="idea-card exp">
+    <div class="idea-header">
+      <div class="idea-title"><div class="idea-num">4</div><div class="idea-h">LNG 냉열 + AI DC 결합 (베트남 응에안 모델의 국내 이식)</div></div>
+      <div class="idea-badges"><span class="b b-purple">플래그십</span><span class="b b-blue">Integrated Value</span></div>
+    </div>
+    <div class="idea-lead">SK그룹이 베트남 응에안에서 추진하는 <strong>LNG 발전 + AI DC 결합 (20억달러)</strong>. LNG 기화 시 -162℃ 냉열을 DC 냉각에 활용 → PUE(전력사용효율) 획기적 개선. 국내에서는 <strong>KET 인접 부지</strong>가 자연스러운 후보. SK가스가 국내 유일 LNG-LPG 복합발전 운영사 = 그룹 내 리딩 자격.</div>
+    <div class="idea-grid">
+      <div><div class="k">활용 자산</div><div class="v">KET 인접 부지, UGPS O&amp;M</div></div>
+      <div><div class="k">타겟 고객</div><div class="v">SK-AWS DC 확장, 신규 하이퍼스케일러</div></div>
+      <div><div class="k">투자규모</div><div class="v">300~500MW 파일럿 4~6천억</div></div>
+      <div><div class="k">타이밍</div><div class="v">'27~'30년 (베트남 P/L 수렴 후)</div></div>
+      <div><div class="k">Next Action</div><div class="v">응에안 프로젝트 벤치마크 스터디 착수 · 냉열 회수 P/L</div></div>
+    </div>
+  </div>
+
+  <div class="idea-card mid">
+    <div class="idea-header">
+      <div class="idea-title"><div class="idea-num">5</div><div class="idea-h">평택 LPG기지 → LNG·전력 사업 자산 재편</div></div>
+      <div class="idea-badges"><span class="b b-amber">중기</span><span class="b b-red">경쟁 존재</span></div>
+    </div>
+    <div class="idea-lead">평택 LPG기지는 30주년 무재해 운영 중이나 수송용 LPG 감소로 <strong>자산 가치 재평가 필요</strong>. 서부발전이 <strong>평택본부 중유탱크 → LNG터미널 전환</strong>을 검토 → 이 흐름과 결합해 평택 LNG 발전 진출 교두보로 활용. 삼성전자 반도체 15.6조 라인 인접 = 수요는 확실. 다만 E1 컨소시엄이 '평택에너지서비스'로 이미 LNG 발전 사업 중 = <strong>내·외 경쟁구도</strong> 사전 정리 필요.</div>
+    <div class="idea-grid">
+      <div><div class="k">활용 자산</div><div class="v">평택 LPG기지</div></div>
+      <div><div class="k">타겟 고객</div><div class="v">삼성전자 평택, SK하이닉스 용인</div></div>
+      <div><div class="k">투자규모</div><div class="v">500MW~1GW급 시 5천억~1.5조</div></div>
+      <div><div class="k">타이밍</div><div class="v">'28~'32년 (자산평가 선행)</div></div>
+      <div><div class="k">Next Action</div><div class="v">평택 인근 LNG 인프라 스캔 · 서부발전 협업 여지 타진</div></div>
+    </div>
+  </div>
+
+  <div class="idea-card mid">
+    <div class="idea-header">
+      <div class="idea-title"><div class="idea-num">6</div><div class="idea-h">Peaker Plant + BESS 하이브리드 (호남 재생E 백업)</div></div>
+      <div class="idea-badges"><span class="b b-amber">중기</span><span class="b b-blue">Flexibility</span></div>
+    </div>
+    <div class="idea-lead">호남 태양광 11GW 존재 → 간헐성 심화 → <strong>조정력 시장 프리미엄 상승</strong>. 반도체·AI DC는 100% 무정전 필수. LNG Peaker + BESS 하이브리드는 짧은 가동시간 대비 높은 kWh 마진 확보. UGPS 듀얼 연료(LNG-LPG) 노하우 = <strong>Peaker에 최적</strong>. 정부 3GW 외 <strong>추가</strong> 발주 여지.</div>
+    <div class="idea-grid">
+      <div><div class="k">활용 자산</div><div class="v">LPG-LNG 듀얼 연료, UGPS 운영</div></div>
+      <div><div class="k">타겟 고객</div><div class="v">전력시장, 반도체 클러스터</div></div>
+      <div><div class="k">투자규모</div><div class="v">500MW × 2~3기 (기당 5~7천억)</div></div>
+      <div><div class="k">타이밍</div><div class="v">'30년 이후</div></div>
+      <div><div class="k">Next Action</div><div class="v">제11차 전력수급기본계획 Peaker 배정 모니터링</div></div>
+    </div>
+  </div>
+
+  <div class="idea-card exp">
+    <div class="idea-header">
+      <div class="idea-title"><div class="idea-num">7</div><div class="idea-h">반도체 팹 열병합 발전 (Steam Sale to Fab)</div></div>
+      <div class="idea-badges"><span class="b b-purple">파트너 필요</span><span class="b b-blue">Integrated Value</span></div>
+    </div>
+    <div class="idea-lead">반도체 팹은 대량의 스팀·순수 필요. <strong>LNG 열병합발전소 + 팹 인접 배치</strong> → 전력·열·순수·CO₂ 통합 공급 모델. SK이노 E&amp;S가 용인 열병합(SK하이닉스 팹 공급)으로 선점 → <strong>계열사 경쟁</strong>. 호남 신규 팹 4기(광주 군공항)에서는 후발 참여 여지 有.</div>
+    <div class="idea-grid">
+      <div><div class="k">활용 자산</div><div class="v">발전 O&amp;M, LNG 조달</div></div>
+      <div><div class="k">타겟 고객</div><div class="v">삼성전자 광주, SK하이닉스 광주</div></div>
+      <div><div class="k">투자규모</div><div class="v">500MW~1GW 열병합 1~1.5조</div></div>
+      <div><div class="k">타이밍</div><div class="v">'29~'31년</div></div>
+      <div><div class="k">Next Action</div><div class="v">SK이노 E&amp;S와 역할 분담 사전 조율</div></div>
+    </div>
+  </div>
+
+  <div class="idea-card exp">
+    <div class="idea-header">
+      <div class="idea-title"><div class="idea-num">8</div><div class="idea-h">수소 혼소 발전 (Blue/Green H₂ 30~50% 혼소)</div></div>
+      <div class="idea-badges"><span class="b b-purple">실험</span><span class="b b-blue">Fuel Optionality</span></div>
+    </div>
+    <div class="idea-lead">UGPS 등 기존 LNG 발전소에 <strong>수소 혼소 도입</strong> → RE100·탄소중립 규제 대응. 삼성·SK하이닉스 RE100 조달 압박 강화 → 저탄소 발전 수요 상승. 에너루트(SK가스 수소 자회사)와 <strong>Value Chain 통합</strong> 가능. 단, 수소 조달 경제성이 여전히 병목.</div>
+    <div class="idea-grid">
+      <div><div class="k">활용 자산</div><div class="v">UGPS, 에너루트 수소 사업</div></div>
+      <div><div class="k">타겟 고객</div><div class="v">RE100 수요 대기업</div></div>
+      <div><div class="k">투자규모</div><div class="v">Retrofit 수백억 + 수소 조달비</div></div>
+      <div><div class="k">타이밍</div><div class="v">'30년 이후 (수소 경제성 확보 시)</div></div>
+      <div><div class="k">Next Action</div><div class="v">CHPS(청정수소발전) 입찰 참여 검토</div></div>
+    </div>
+  </div>
+
+  <div class="idea-card exp">
+    <div class="idea-header">
+      <div class="idea-title"><div class="idea-num">9</div><div class="idea-h">SMR (소형모듈원전) 지분참여 (선택적)</div></div>
+      <div class="idea-badges"><span class="b b-purple">장기</span><span class="b b-gray">간접 참여</span></div>
+    </div>
+    <div class="idea-lead">호남 3단계 계획에서 <strong>원전 신설</strong> 거론. 반도체·DC는 24/7 무탄소 기저 필수 → SMR 수요 강함. 두산에너빌리티(SMR 핵심 소재)와 협업 여지. SK가스가 직접 원전을 짓기는 어렵지만 <strong>SPC 소수지분·연료 조달·부지 협업</strong> 등 간접 참여 검토 가치.</div>
+    <div class="idea-grid">
+      <div><div class="k">활용 자산</div><div class="v">발전 사업 노하우, 부지 옵션</div></div>
+      <div><div class="k">타겟 고객</div><div class="v">국가 주도 SMR SPC</div></div>
+      <div><div class="k">투자규모</div><div class="v">지분 참여 시 수천억</div></div>
+      <div><div class="k">타이밍</div><div class="v">'32년 이후 (기술 검증 후)</div></div>
+      <div><div class="k">Next Action</div><div class="v">두산에너빌리티·한수원 관계 채널 확보</div></div>
+    </div>
+  </div>
+
+  <div class="idea-card hi">
+    <div class="idea-header">
+      <div class="idea-title"><div class="idea-num">10</div><div class="idea-h">Bio LNG Peaker (벙커링 사업 연계)</div></div>
+      <div class="idea-badges"><span class="b b-green">전략시너지</span><span class="b b-blue">Fuel Optionality</span></div>
+    </div>
+    <div class="idea-lead">벙커링 사업에서 추진 중인 <strong>Bio LNG 조달 채널</strong>을 발전용으로 확장. Bio LNG는 카본크레딧 창출 가능 → RE100 수요처에 프리미엄 판매. 500MW 미만 Peaker 시 자본 부담 최소. 벙커링·발전 간 <strong>Cross-Fuel 시너지</strong>.</div>
+    <div class="idea-grid">
+      <div><div class="k">활용 자산</div><div class="v">벙커링 Bio LNG 조달망</div></div>
+      <div><div class="k">타겟 고객</div><div class="v">RE100 요구 반도체·DC</div></div>
+      <div><div class="k">투자규모</div><div class="v">300~500MW 3~5천억</div></div>
+      <div><div class="k">타이밍</div><div class="v">'29~'31년</div></div>
+      <div><div class="k">Next Action</div><div class="v">벙커링본부와 Bio LNG 공급 이원화 협의</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 리스크 -->
+<div class="section">
+  <div class="section-title">⚠️ 공통 리스크 & 원칙</div>
+
+  <div class="callout warn">
+    <strong>공통 리스크</strong><br>
+    ① 정부·정책 리스크: 정권 교체·전력수급기본계획 개정 시 GW 배분 변동<br>
+    ② SK 내부 경쟁: SK이노 E&amp;S(용인), E1(평택) 등 계열사 선점 지역 존재 → <strong>사전 역할 정리 필수</strong><br>
+    ③ 발전공기업 우선주의: 신규 대형 발전은 공기업 주도 → SK가스는 서브 롤 리스크<br>
+    ④ 재생E·SMR 확대 시 LNG 발전 부하율 감소 → 회수 기간 장기화 가능<br>
+    ⑤ 반도체 다운사이클 시 팹 완공 지연 → 수요 리스크 (SK하이닉스 공시 명시)
+  </div>
+
+  <div class="callout good">
+    <strong>추진 원칙 (제안)</strong><br>
+    ① <strong>Anchor First</strong>: 계통 판매만 하는 발전소는 지양. 반드시 앵커 수요(팹·DC·산단) 계약 선행<br>
+    ② <strong>Asset Leverage</strong>: KET·UGPS·평택 기존 자산 100% 활용 후 신규 부지 검토<br>
+    ③ <strong>Group Sync</strong>: SK이노 E&amp;S·SKT·SK에코플랜트와 <strong>역할 분담 사전 정리</strong>. 내부 경쟁 최소화<br>
+    ④ <strong>Optionality</strong>: LNG-LPG 듀얼, 수소·Bio LNG 대응 등 SK가스만의 연료 유연성을 차별화 요소로<br>
+    ⑤ <strong>Speed to Market</strong>: 정부가 속도전을 강조하는 시기 → 인허가·부지·연료 확보 <strong>3박자 동시 진행</strong>
+  </div>
+</div>
+
+<!-- 다음 단계 -->
+<div class="section">
+  <div class="section-title">🚀 다음 단계 (30·60·90일)</div>
+
+  <div class="idea-card hi">
+    <div class="idea-header">
+      <div class="idea-title"><div class="idea-num">D30</div><div class="idea-h">30일 (Discovery)</div></div>
+    </div>
+    <div class="idea-lead">
+      · SKT AI DC 사업본부 미팅 → 울산 900MW 확장 앵커 협의 (①②)<br>
+      · SK이노 E&amp;S와 발전사업 <strong>역할 분담 협의</strong> (③④⑤⑦)<br>
+      · 광주 인근 서해안 LNG 도입 인프라 스캔 (③)<br>
+      · 응에안 프로젝트 브리핑 청취 (④)
+    </div>
+  </div>
+
+  <div class="idea-card mid">
+    <div class="idea-header">
+      <div class="idea-title"><div class="idea-num">D60</div><div class="idea-h">60일 (Feasibility)</div></div>
+    </div>
+    <div class="idea-lead">
+      · 상위 3개 모델(①②③) 사업성 P/L 초안<br>
+      · 발전공기업 3사(동서·남부·서부발전) 접촉 및 협업 형태 스캔 (③)<br>
+      · 평택 LPG기지 자산 가치 재평가 & 서부발전 협업 여지 조사 (⑤)<br>
+      · CHPS 참여 여부 결정 (⑧)
+    </div>
+  </div>
+
+  <div class="idea-card exp">
+    <div class="idea-header">
+      <div class="idea-title"><div class="idea-num">D90</div><div class="idea-h">90일 (Decision)</div></div>
+    </div>
+    <div class="idea-lead">
+      · 3대 우선 사업 <strong>이사회 상신안</strong> (①② 즉시 착수, ③ 준비 착수)<br>
+      · 청와대 3대 메가프로젝트 담당관·산업부와 소통 채널 확보<br>
+      · '27~'30년 발전사업 로드맵 초안 확정<br>
+      · 제11차 전력수급기본계획 반영 여부 최종 확인
+    </div>
+  </div>
+</div>
+
+<div class="footer-note">
+  ⚠️ 본 페이지는 <strong>초기 아이디어 뱅크</strong>이며, 각 모델의 사업성·경쟁구도·규제 리스크는 사업본부 심층 실사 필요.<br>
+  ⚠️ 정량치(투자규모·GW·타이밍)는 유사 프로젝트 벤치마크 기반 추정. 확정치가 아님.<br>
+  📎 관련 문서: <a href="20260706_반도체AI메가프로젝트.html" style="color:var(--sk-blue);font-weight:600;">정부 3대 메가프로젝트 & SK가스 사업기회 초기 검토</a>
+</div>
+
+</div>
+
+</body>
+</html>
