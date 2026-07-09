@@ -5,6 +5,7 @@
 - [LNG 사업](/LNG/)
 - [LPG 사업 (Eco Energy)](/LPG/)
 - [Trading 사업](/Trading/)
+- [📊 Paper Scheme (Hedge)](/)
 - [발전 사업 (UGPS)](/발전/)
 - [ESS 사업](/ESS/)
 - [SKA 석유화학](/SKA/)
