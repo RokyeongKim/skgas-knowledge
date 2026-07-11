@@ -2718,20 +2718,28 @@ th.curr { background: #f06400 !important; }
     </div>
    </div>
 
-   <!-- 유형 3: FEI/Brent -->
+   <!-- 유형 3: FEI/Brent — 산업체 도시가스 연동가 판매 (EE본부 핵심) -->
    <div style="background:white;border:2px solid #d97706;border-radius:12px;padding:18px 20px;margin-bottom:20px;">
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;">
      <span style="background:#d97706;color:white;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;">유형 3</span>
-     <span style="font-size:16px;font-weight:700;color:#78350f;">FEI / Brent</span>
-     <span style="font-size:12px;color:#6b7280;">— FEI 구매 → 산업체 도시가스연동가 판매 (LNG 대체)</span>
+     <span style="font-size:16px;font-weight:700;color:#78350f;">FEI / Brent · HH · JKM</span>
+     <span style="font-size:12px;color:#6b7280;">— FEI 구매 → 산업체 도시가스 연동가 판매 (LPG로 LNG 대체)</span>
+     <span style="background:#fef3c7;color:#92400e;font-size:10px;font-weight:700;padding:3px 8px;border-radius:10px;margin-left:auto;">출처: '26.7월 Small DCC · 박재범 팀장</span>
     </div>
 
+    <!-- 배경/도입 배너 -->
+    <div style="background:#fffbeb;border-left:4px solid #d97706;border-radius:0 8px 8px 0;padding:12px 14px;margin-bottom:12px;font-size:12px;line-height:1.7;color:#78350f;">
+     <strong>📌 사업 배경:</strong> 셰일혁명으로 LPG 가격경쟁력 확보 → SK가스가 도시가스 사용 산업체에 <strong>"도시가스 대비 5% 싸게 드릴게요"</strong>로 진입 → 판가(도시가스, KOGAS 도입가에 원유·LNG 연동) ≠ 원가(FEI) <strong>Index 미스매치</strong> 발생 → Hedge 필수.
+     <div style="margin-top:6px;font-size:11px;color:#92400e;">Hedge 시작: <strong>'14년</strong> · Optionality 시작: <strong>'20년</strong> (미공급옵션 계약 반영)</div>
+    </div>
+
+    <!-- 1) 거래 구조 -->
     <div style="background:#fffbeb;border-radius:8px;padding:12px 14px;margin-bottom:12px;font-size:12px;line-height:1.7;">
      <div style="font-weight:700;color:#d97706;margin-bottom:6px;">1) 거래 구조</div>
      <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:8px;align-items:center;margin:8px 0;">
       <div style="background:white;border:1px solid #fcd34d;border-radius:6px;padding:8px 10px;text-align:center;">
        <div style="font-size:10px;color:#6b7280;font-weight:600;">구매처</div>
-       <div style="font-size:12px;font-weight:700;color:#78350f;">Buyer</div>
+       <div style="font-size:12px;font-weight:700;color:#78350f;">글로벌 LPG Trader</div>
        <div style="font-size:11px;color:#374151;">가격: <strong>FEI</strong></div>
       </div>
       <div style="font-size:16px;color:#d97706;">→</div>
@@ -2742,46 +2750,112 @@ th.curr { background: #f06400 !important; }
       <div style="font-size:16px;color:#d97706;">→</div>
       <div style="background:white;border:1px solid #fcd34d;border-radius:6px;padding:8px 10px;text-align:center;">
        <div style="font-size:10px;color:#6b7280;font-weight:600;">판매처</div>
-       <div style="font-size:11px;color:#374151;">가격: <strong>도시가스 연동가 − 할인액</strong></div>
+       <div style="font-size:11px;color:#374151;">TSP 산업체 30여社<br>(울산 앞마당)</div>
       </div>
      </div>
      <div style="background:#fef3c7;border-radius:4px;padding:6px 10px;font-size:11px;color:#92400e;margin-top:6px;">
-      LNG 사용 산업체 입장: 도시가스 대비 할인해야 LPG 사용 유인 有 → <strong>FEI Buy / Brent(+JKM, HH) Sell</strong>
+      LNG 사용 산업체 입장: 도시가스 대비 <strong>~5% 할인</strong>해야 LPG 사용 유인 有 → Paper: <strong>FEI Buy / Brent(+HH, JKM) Sell</strong>
      </div>
      <div style="font-size:10px;color:#6b7280;margin-top:6px;line-height:1.5;">
-      • 도시가스 판가 = KOGAS 도매요금(원료비: <strong>JCC 55% + HH 10% + JKM 35%</strong>) + 소매공급비 + 기타<br>
-      • JCC 비중이 가장 크므로 <strong>Brent Proxy Hedge</strong> 활용
+      • 도시가스 판가 = KOGAS 도매요금(원료비: <strong>JCC 55% + HH 10% + JKM 35%</strong>) + 지역별 소매공급비 + 기타<br>
+      • 과거에는 JCC(원유) 비중 커서 <strong>Brent 위주로 Paper Hedge</strong>했으나, 최근 KOGAS 포트폴리오 내 LNG 비중 확대 → <strong>JKM·HH Paper도 필수적으로 Hedge</strong>
      </div>
     </div>
 
+    <!-- 2) 판가 로직 — KOGAS 도매요금 정밀 추정 -->
     <div style="background:#fffbeb;border-radius:8px;padding:12px 14px;margin-bottom:12px;font-size:12px;line-height:1.7;">
-     <div style="font-weight:700;color:#d97706;margin-bottom:6px;">2) 실물 판/구매가 로직</div>
-     <ul style="margin-left:16px;color:#374151;font-size:11.5px;line-height:1.7;">
-      <li>편의상 판가 로직을 <strong>Brent에 대해 정리</strong> (HH, JKM은 상수 반영)</li>
-      <li>판가 = <strong>Brent × 3.75<sup>1)</sup> + $189</strong> (Hedge Ratio = 3.75)</li>
-     </ul>
-     <div style="margin-top:8px;background:white;border:1px solid #fcd34d;border-radius:6px;padding:8px 10px;">
+     <div style="font-weight:700;color:#d97706;margin-bottom:6px;">2) 판가 로직 — KOGAS 도매요금 정밀 추정 (Hedge 성공 조건 ①)</div>
+
+     <div style="background:white;border:1px dashed #fcd34d;border-radius:6px;padding:8px 12px;margin-bottom:10px;font-size:11.5px;color:#78350f;">
+      <strong>💡 헷지 성공의 2대 조건</strong><br>
+      ① <strong>KOGAS 판가 정밀 추정</strong> (본 섹션) · ② 판가 대비 <strong>경쟁력 있는 FEI 소싱</strong> (다음 섹션)
+     </div>
+
+     <div style="margin-top:8px;background:white;border:1px solid #fcd34d;border-radius:6px;padding:8px 10px;margin-bottom:10px;">
       <div style="font-size:11px;font-weight:700;color:#78350f;margin-bottom:4px;">도시가스 연동 판가 구조</div>
       <div style="display:flex;font-size:10px;">
        <div style="flex:5;padding:0;">
-        <div style="background:#fcd34d;padding:4px 6px;text-align:center;color:#78350f;font-weight:700;border-radius:3px 0 0 0;">KOGAS 도매요금<sup>2)</sup></div>
+        <div style="background:#fcd34d;padding:4px 6px;text-align:center;color:#78350f;font-weight:700;border-radius:3px 0 0 0;">KOGAS 도매요금 (도입가 + 도입부대비 + 공급비)</div>
         <div style="display:flex;">
-         <div style="flex:55;background:#fde68a;padding:3px 4px;text-align:center;color:#78350f;font-size:9px;">JCC (55%)</div>
+         <div style="flex:55;background:#fde68a;padding:3px 4px;text-align:center;color:#78350f;font-size:9px;">JCC/Brent (55%)</div>
          <div style="flex:10;background:#fcd34d;padding:3px 4px;text-align:center;color:#78350f;font-size:9px;">HH (10%)</div>
          <div style="flex:35;background:#fde68a;padding:3px 4px;text-align:center;color:#78350f;font-size:9px;">JKM (35%)</div>
         </div>
        </div>
-       <div style="flex:1;background:#f59e0b;padding:4px 6px;color:white;font-weight:700;text-align:center;">소매<br>공급비<sup>3)</sup></div>
-       <div style="flex:1;background:#d97706;padding:4px 6px;border-radius:0 3px 3px 0;color:white;font-weight:700;text-align:center;">기타<sup>4)</sup></div>
+       <div style="flex:1;background:#f59e0b;padding:4px 6px;color:white;font-weight:700;text-align:center;">소매<br>공급비</div>
+       <div style="flex:1;background:#d97706;padding:4px 6px;border-radius:0 3px 3px 0;color:white;font-weight:700;text-align:center;">개소세<br>·정산단가</div>
       </div>
       <div style="font-size:9px;color:#6b7280;margin-top:4px;line-height:1.5;">
-       <sup>1)</sup> Brent에 연동하는 당사 판가의 기울기 (Hedge Ratio) · <sup>2)</sup> KOGAS 도입비(원료비/JCC·HH·JKM 연동) + 도입부대비 + KOGAS 공급비(마진) · <sup>3)</sup> 지역 도시가스사 공급비(마진) · <sup>4)</sup> 개소세, 추가 정액할인 등
+       판가 = <strong>Brent × 3.75 + $189</strong> (편의상 Brent에 대해 정리, HH·JKM은 상수 반영, Hedge Ratio 3.75)
+      </div>
+     </div>
+
+     <div style="background:white;border:1px solid #fcd34d;border-radius:6px;padding:10px 12px;margin-bottom:8px;">
+      <div style="font-size:11.5px;font-weight:700;color:#78350f;margin-bottom:6px;">🔎 EE본부의 KOGAS Formula 추정 로직</div>
+      <ul style="margin-left:16px;color:#374151;font-size:11.5px;line-height:1.75;">
+       <li>KOGAS 도입 계약: <strong>Term 계약 15~20개 (10~20년)</strong> + Spot 조합. Term 계약의 <strong>대부분을 사전 파악</strong> (자체 리서치 + 글로벌 에너지 기관 정보)</li>
+       <li>계약 당시 예상되는 LNG·원유 가격 조합 → <strong>KOGAS LNG 도입가 추정</strong></li>
+       <li><strong>정산단가·도입부대비·공급비</strong> 각각 별도 로직으로 추정 중</li>
+       <li><strong>미수금 반영 로직</strong>: KOGAS는 원가를 판가에 다 전가 못함(공사 특성) → 미수금 발생 → 향후 정산단가에 반영되는 방식까지 자체 모델링</li>
+       <li>KOGAS는 <strong>매월 도매요금</strong>을 발표하지만, EE본부는 <strong>'30년까지</strong>의 도매요금을 사전 추정 중</li>
+       <li><strong>Formula Gap</strong> (실제 vs 추정) 발생 불가피 → KOGAS 내부 정책 개입 때문. 다행히 <strong>보수적 추정으로 손익상 양(+)의 gap</strong> 발생</li>
+      </ul>
+     </div>
+
+     <div style="background:#fef2f2;border-left:3px solid #dc2626;border-radius:0 6px 6px 0;padding:10px 12px;font-size:11.5px;color:#7f1d1d;line-height:1.7;">
+      <strong>⚠️ 리스크 요인 — 도시가스 판가 하락 압력</strong><br>
+      ① KOGAS의 <strong>장기계약 갱신 시 가격 협상력 강화</strong> (과거 "글로벌 호구" → 최근 방점을 가격에도 둠) → 더 좋은 조건으로 갱신 중<br>
+      ② <strong>산업용 미수금 대부분 소진</strong> (민수용은 여전히 13조원 잔존) → 산업용 KOGAS 가격 추가 하락 여지<br>
+      → 그럼에도 <strong>도입부대비 등 상수 절편</strong> 때문에 아직 LPG 경쟁력 유지 중
+     </div>
+    </div>
+
+    <!-- 3) 원가 로직 — 상대가(CV) 기반 소싱 -->
+    <div style="background:#fffbeb;border-radius:8px;padding:12px 14px;margin-bottom:12px;font-size:12px;line-height:1.7;">
+     <div style="font-weight:700;color:#d97706;margin-bottom:6px;">3) 원가 로직 — 상대가(CV) 기반 소싱 (Hedge 성공 조건 ②)</div>
+
+     <div style="background:white;border:1px solid #fcd34d;border-radius:6px;padding:10px 12px;margin-bottom:10px;">
+      <div style="font-size:11.5px;font-weight:700;color:#78350f;margin-bottom:6px;">📐 상대가(CV) 개념</div>
+      <div style="font-size:11.5px;color:#374151;line-height:1.75;">
+       <strong>CV = FEI ÷ (Brent × 8.2)</strong> — LPG 가격이 원유 대비 상대적으로 얼마나 경쟁력 있는지 나타내는 지표<br>
+       → LPG 자체 절대가 아니라 <strong>"유가 대비 LPG의 상대적 저렴함"</strong>이 소싱 의사결정의 핵심 (FEI로 사서 유가 연동 도시가스가로 팔기 때문)
+      </div>
+     </div>
+
+     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+      <div style="background:#ecfdf5;border:1px solid #86efac;border-radius:6px;padding:10px 12px;">
+       <div style="font-size:11.5px;font-weight:700;color:#15803d;margin-bottom:4px;">🟢 상대가 약세(↓) = 소싱 타이밍</div>
+       <div style="font-size:11px;color:#374151;line-height:1.6;">
+        Brent↑ (판가↑) + FEI↓ (원가↓) → 마진 확대 구간<br>
+        → <strong>대량 소싱 + Hedge Fix</strong>
+       </div>
+      </div>
+      <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:6px;padding:10px 12px;">
+       <div style="font-size:11.5px;font-weight:700;color:#b91c1c;margin-bottom:4px;">🔴 상대가 강세(↑) = Optionality 타이밍</div>
+       <div style="font-size:11px;color:#374151;line-height:1.6;">
+        FEI가 상대적으로 비싸진 상태<br>
+        → <strong>기존 Paper Unwind로 차익 실현</strong>
+       </div>
+      </div>
+     </div>
+
+     <div style="background:white;border:1px solid #fcd34d;border-radius:6px;padding:10px 12px;">
+      <div style="font-size:11.5px;font-weight:700;color:#78350f;margin-bottom:6px;">📊 소싱 적정 CV Range</div>
+      <ul style="margin-left:16px;color:#374151;font-size:11.5px;line-height:1.75;">
+       <li>통상 <strong>CV 90% Under</strong>면 적정 소싱 구간</li>
+       <li><strong>유가 낮으면 CV 양보 가능</strong> (Brent가 낮으면 판가가 구조적으로 낮음 → CV 분모↓ → 평시 대비 CV 자체가 높을 수밖에 없음)</li>
+       <li><strong>유가 높으면 CV 타이트하게</strong> (Brent↑ → 판가 여유↑ → 더 낮은 CV로 확실한 이익)</li>
+       <li><strong>동고하저 완화</strong> 시장 → 현재는 소싱 CV 대비 <strong>+5% 추가</strong>를 Optionality 목표로 설정</li>
+      </ul>
+      <div style="font-size:10px;color:#6b7280;margin-top:6px;line-height:1.5;">
+       ※ MB 물량은 CV 관점 소싱 대상이 아닌 <strong>공급 안정성 확보</strong> 목적 (Shipping cost로 완벽 Hedge 불가)
       </div>
      </div>
     </div>
 
+    <!-- 4) Paper 거래 예시 및 결과 -->
     <div style="background:#fffbeb;border-radius:8px;padding:12px 14px;font-size:12px;line-height:1.7;">
-     <div style="font-weight:700;color:#d97706;margin-bottom:6px;">3) Paper 거래 예시 및 결과</div>
+     <div style="font-weight:700;color:#d97706;margin-bottom:6px;">4) Paper 거래 예시 및 결과</div>
      <div style="background:white;border:1px solid #fcd34d;border-radius:6px;padding:8px 10px;margin-bottom:8px;overflow-x:auto;">
       <table style="width:100%;font-size:11px;border-collapse:collapse;">
        <thead>
@@ -2796,11 +2870,20 @@ th.curr { background: #f06400 !important; }
        </tbody>
       </table>
       <div style="font-size:10px;color:#6b7280;margin-top:6px;line-height:1.5;">
-       <sup>1)</sup> Brent 물량 = FEI × HR(3.75) → 10,000ton × 3.75 = 37,500bbl · <sup>2)</sup> Brent × 3.75 + $300 반영
+       <sup>1)</sup> Brent 물량 = FEI × HR(3.75) → 10,000ton × 3.75 = 37,500bbl · <sup>2)</sup> Brent × 3.75 + $300 반영 · 예시는 Brent만 표기 (실제는 JKM·HH Sell도 동시 실행)
       </div>
      </div>
+
+     <div style="background:#eef2ff;border:1px solid #c7d2fe;border-left:4px solid #4338ca;border-radius:0 6px 6px 0;padding:10px 12px;margin-bottom:8px;font-size:11.5px;color:#312e81;line-height:1.7;">
+      <strong>⏱️ Paper 잡는 시점 원칙</strong><br>
+      • <strong>FEI Buy / Brent Sell</strong>: <strong>동시에 Fix</strong> — 상대가(CV)가 하루하루 변하므로 시차 발생 시 목표 CV 변형 → speculation 됨<br>
+      • <strong>JKM·HH Sell</strong>: <strong>따로 잡음</strong> — LNG는 동절기 비쌀 때 팔아야 유리 vs LPG는 하절기 쌀 때 사야 유리 → 엇박자 존재<br>
+      • 근월물·원월물 모두 <strong>Buy/Sell 시차 배제</strong> 원칙 동일 적용
+     </div>
+
      <div style="background:#ecfccb;border-radius:6px;padding:8px 12px;text-align:center;color:#365314;font-size:12px;font-weight:700;">
-      ▶ FEI, Brent 가격이 어떻게 변해도 손익 = <strong style="color:#15803d;font-size:14px;">$51/ton (Fix 마진)</strong>으로 고정
+      ▶ FEI, Brent 가격이 어떻게 변해도 손익 = <strong style="color:#15803d;font-size:14px;">$51/ton (Fix 마진)</strong>으로 고정<br>
+      <span style="font-weight:400;font-size:11px;color:#4d7c0f;">+ Formula Gap (KOGAS 실제-추정 차) 통상 양(+) 발생 → 예상 대비 추가 이익</span>
      </div>
     </div>
    </div>
@@ -2848,6 +2931,284 @@ th.curr { background: #f06400 !important; }
       </tr>
      </tbody>
     </table>
+   </div>
+
+   <!-- ═══════════════════════════════════════════════════ -->
+   <!-- Optionality (옵셔널리티) 상세 섹션                   -->
+   <!-- ═══════════════════════════════════════════════════ -->
+   <div class="section-label">🎯 Optionality (옵셔널리티) — Hedge 위 얹는 Upside 이익 창출 모델 <span style="font-size:11px;font-weight:400;color:#6b7280;">출처: '26.7월 Small DCC · 박재범 팀장 · '25년 홍종범 실장 · 이미령M 설명</span></div>
+
+   <!-- Hedge vs Optionality 비교 배너 -->
+   <div style="background:linear-gradient(135deg,#f5f3ff,#eef2ff);border:1px solid #c7d2fe;border-radius:10px;padding:14px 18px;margin-bottom:20px;font-size:12.5px;line-height:1.75;color:#312e81;">
+    <strong style="color:#4338ca;font-size:13px;">💡 Hedge vs Optionality</strong><br>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px;">
+     <div style="background:white;border:1px solid #c7d2fe;border-radius:6px;padding:10px 12px;">
+      <div style="font-weight:700;color:#4338ca;margin-bottom:4px;">Hedge</div>
+      <div style="font-size:11.5px;color:#374151;">Buy/Sell Paper 동시 Fix → <strong>마진 확정</strong>. 하방 방어 목적.</div>
+     </div>
+     <div style="background:white;border:1px solid #c7d2fe;border-radius:6px;padding:10px 12px;">
+      <div style="font-weight:700;color:#7c3aed;margin-bottom:4px;">Optionality</div>
+      <div style="font-size:11.5px;color:#374151;">Hedge 포지션을 <strong>기회 발생 시 Unwind</strong>해 Upside 이익 실현 후 재소싱.</div>
+     </div>
+    </div>
+    <div style="margin-top:8px;font-size:11.5px;padding:8px 10px;background:#fef3c7;border-radius:4px;color:#78350f;">
+     <strong>💰 성과</strong>: '20년부터 본격 시작 → '24~'25년 성숙기 · <strong>연 300억원 이상</strong>의 Optionality 이익 창출
+    </div>
+   </div>
+
+   <!-- Optionality Workflow -->
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px 20px;margin-bottom:20px;">
+    <div style="font-size:13px;font-weight:700;color:#4338ca;margin-bottom:12px;">📋 Optionality Workflow (6단계)</div>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;font-size:10.5px;">
+     <div style="background:#eef2ff;border-radius:6px;padding:8px;text-align:center;">
+      <div style="font-weight:700;color:#4338ca;font-size:11px;">① 판가 추정</div>
+      <div style="color:#6b7280;margin-top:4px;">KOGAS 도시가스<br>정밀 추정</div>
+     </div>
+     <div style="background:#eef2ff;border-radius:6px;padding:8px;text-align:center;">
+      <div style="font-weight:700;color:#4338ca;font-size:11px;">② 수요 확보</div>
+      <div style="color:#6b7280;margin-top:4px;">"도시가스 -5%"<br>산업체 연동 판매</div>
+     </div>
+     <div style="background:#eef2ff;border-radius:6px;padding:8px;text-align:center;">
+      <div style="font-weight:700;color:#4338ca;font-size:11px;">③ 사전 소싱</div>
+      <div style="color:#6b7280;margin-top:4px;">판가 대비 낮은<br>CV로 FEI Buy Fix</div>
+     </div>
+     <div style="background:#fef3c7;border-radius:6px;padding:8px;text-align:center;border:1px dashed #d97706;">
+      <div style="font-weight:700;color:#92400e;font-size:11px;">④ 옵션 비교</div>
+      <div style="color:#6b7280;margin-top:4px;">공급마진 vs<br>Unwind 이익</div>
+     </div>
+     <div style="background:#f3e8ff;border-radius:6px;padding:8px;text-align:center;">
+      <div style="font-weight:700;color:#7c3aed;font-size:11px;">⑤ Unwind → 재잡기</div>
+      <div style="color:#6b7280;margin-top:4px;">차익 실현 후<br>Paper 재소싱</div>
+     </div>
+     <div style="background:#ecfdf5;border-radius:6px;padding:8px;text-align:center;">
+      <div style="font-weight:700;color:#15803d;font-size:11px;">⑥ 공급이익 확보</div>
+      <div style="color:#6b7280;margin-top:4px;">재소싱 물량으로<br>공급마진 실현</div>
+     </div>
+    </div>
+    <div style="background:#eef2ff;border-left:3px solid #4338ca;border-radius:0 6px 6px 0;padding:10px 12px;margin-top:12px;font-size:11.5px;color:#312e81;line-height:1.7;">
+     <strong>🔁 반복 구조</strong>: Hedge 후 상대가 상승 → Unwind (Upside 이익) → 재소싱 → 상대가 상승 시 다시 Unwind... → 만기 시 공급으로 마무리<br>
+     → 사서 그냥 공급하면 <strong>공급이익 1번</strong>, Optionality 활용하면 <strong>Unwind 차익 + 공급이익</strong> 다중 확보
+    </div>
+   </div>
+
+   <!-- 4대 요소 -->
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px 20px;margin-bottom:20px;">
+    <div style="font-size:13px;font-weight:700;color:#4338ca;margin-bottom:12px;">🎛️ Optionality 4대 요소 & 확장 방향</div>
+    <table style="width:100%;font-size:11.5px;border-collapse:collapse;">
+     <thead>
+      <tr style="background:#4338ca;color:white;">
+       <th style="padding:7px 10px;text-align:left;width:12%;">요소</th>
+       <th style="padding:7px 10px;text-align:left;width:38%;">As-Was (초기)</th>
+       <th style="padding:7px 10px;text-align:left;width:50%;">As-Is (확장)</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr style="border-bottom:1px solid #e5e7eb;">
+       <td style="padding:7px 10px;font-weight:700;color:#4338ca;">① 제품</td>
+       <td style="padding:7px 10px;color:#6b7280;">LPG 연료용만</td>
+       <td style="padding:7px 10px;">연료용 + <strong>석화 원료용(납사대체)</strong> + <strong>LNG</strong>까지 확대</td>
+      </tr>
+      <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb;">
+       <td style="padding:7px 10px;font-weight:700;color:#4338ca;">② 가격</td>
+       <td style="padding:7px 10px;color:#6b7280;">단순 CV 관리</td>
+       <td style="padding:7px 10px;">CV 소싱가를 <strong>더 낮게 확보</strong> → Optionality 마진 폭 극대화</td>
+      </tr>
+      <tr style="border-bottom:1px solid #e5e7eb;">
+       <td style="padding:7px 10px;font-weight:700;color:#4338ca;">③ 물량</td>
+       <td style="padding:7px 10px;color:#6b7280;">산업체 1社 단위</td>
+       <td style="padding:7px 10px;">TSP <strong>30여社 통합 1년치 물량</strong> + 석화사 Term 물량 전체 대상</td>
+      </tr>
+      <tr style="background:#f9fafb;">
+       <td style="padding:7px 10px;font-weight:700;color:#4338ca;">④ 기간</td>
+       <td style="padding:7px 10px;color:#6b7280;">당년, y+1 근월물 Spot 위주</td>
+       <td style="padding:7px 10px;"><strong>당년 + y+1 + y+2 + y+3 원월물</strong> (Backwardation 활용, R/O 횟수 증가)</td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <!-- 실행 대상 -->
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px 20px;margin-bottom:20px;">
+    <div style="font-size:13px;font-weight:700;color:#4338ca;margin-bottom:12px;">🎯 Optionality 실행 대상 & 상대가 Index</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+     <div style="background:#ecfdf5;border:1px solid #86efac;border-radius:6px;padding:10px 12px;">
+      <div style="font-size:11.5px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ 대상 (대체재 有)</div>
+      <ul style="margin-left:16px;color:#374151;font-size:11.5px;line-height:1.7;">
+       <li><strong>산업체 (TSP 30여社)</strong> — 도시가스 대체재 존재</li>
+       <li><strong>석화사 납사대체 물량</strong> — 납사 대체재 존재 (현대케미칼, SKGC)</li>
+       <li><strong>Dual Fuel 소형발전</strong> — LPG+도시가스 연료전지·자가발전</li>
+      </ul>
+     </div>
+     <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:6px;padding:10px 12px;">
+      <div style="font-size:11.5px;font-weight:700;color:#b91c1c;margin-bottom:6px;">❌ 제외 (대체재 無)</div>
+      <ul style="margin-left:16px;color:#374151;font-size:11.5px;line-height:1.7;">
+       <li><strong>민수용</strong> — Back-to-Back 거래 (구매·판매 동일 Index) + 대체재 부재</li>
+       <li><strong>PDH(SKA 등)</strong> — LPG 원료로 밖에 못 씀. 갑자기 미공급 불가</li>
+       <li><strong>정유사 공급 물량</strong></li>
+      </ul>
+     </div>
+    </div>
+
+    <div style="background:white;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;">
+     <div style="font-size:11.5px;font-weight:700;color:#4338ca;margin-bottom:6px;">📊 대상별 상대가 Index</div>
+     <table style="width:100%;font-size:11.5px;border-collapse:collapse;">
+      <tbody>
+       <tr style="border-bottom:1px solid #e5e7eb;background:#fef3c7;">
+        <td style="padding:6px 10px;font-weight:700;color:#92400e;width:22%;">산업체 (주력)</td>
+        <td style="padding:6px 10px;"><strong>FEI/Brent</strong> — LPG 사서 원유연동 도시가스가로 판매 시나리오. <strong>가장 많이 사용</strong></td>
+       </tr>
+       <tr style="border-bottom:1px solid #e5e7eb;">
+        <td style="padding:6px 10px;font-weight:700;color:#92400e;">산업체 (JKM·HH)</td>
+        <td style="padding:6px 10px;">최근 KOGAS 포트폴리오 내 LNG 비중 확대 → <strong>JKM Sell, HH Sell</strong>도 Hedge/Optionality 대상 (하지 않으면 Risk 노출)</td>
+       </tr>
+       <tr style="border-bottom:1px solid #e5e7eb;background:#fffbeb;">
+        <td style="padding:6px 10px;font-weight:700;color:#92400e;">산업체 (MB)</td>
+        <td style="padding:6px 10px;"><strong>MB/Brent</strong> — Shipping cost로 완벽 Hedge 어렵지만 <strong>중장기 공급 안정성 확보용 소싱</strong> (Optionality 대상 X)</td>
+       </tr>
+       <tr>
+        <td style="padding:6px 10px;font-weight:700;color:#92400e;">석화 (납사대체)</td>
+        <td style="padding:6px 10px;"><strong>FEI/MOPJ</strong> — 유가와 상관관계 커서 계절성 약함. LPG 동고하저에 따라 Play</td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+
+   <!-- 원월물 R/O -->
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px 20px;margin-bottom:20px;">
+    <div style="font-size:13px;font-weight:700;color:#4338ca;margin-bottom:12px;">🔄 원월물 R/O (Roll-Over) — 근월물 대비 유리한 이유</div>
+    <div style="background:#f5f3ff;border-left:4px solid #7c3aed;border-radius:0 6px 6px 0;padding:10px 12px;margin-bottom:10px;font-size:11.5px;color:#4c1d95;line-height:1.7;">
+     <strong>R/O 개념</strong>: 원월물(y+2, y+3)로 미리 낮은 CV에 Hedge 잡아두고 → 상대가 상승 시 Unwind → 다시 잡기 → 만기 도래 전 <strong>여러 번 Play</strong>. 만기 도래하면 모두 price-out.
+    </div>
+
+    <div style="background:white;border:1px solid #ddd6fe;border-radius:6px;padding:10px 12px;margin-bottom:10px;">
+     <div style="font-size:11.5px;font-weight:700;color:#4c1d95;margin-bottom:6px;">💡 예시 (Notion 원문 시나리오)</div>
+     <div style="font-size:11px;color:#374151;line-height:1.7;">
+      1️⃣ 원월물 <strong>CV 85.6%</strong>에 Paper Buy Fix (미리 소싱)<br>
+      2️⃣ 동절기 도래 → LPG 강세로 <strong>CV 95.6% 도달</strong> → <strong>Unwind → 옵셔널리티 차익 실현</strong><br>
+      3️⃣ 같은 물량 <strong>CV 91.6%</strong>에 재소싱<br>
+      4️⃣ 이듬해 <strong>공급이익 = 판가 − 91.6% 원가</strong> 확보<br>
+      → 초기 CV 85.6% 대비 91.6%로 재소싱해 공급마진은 다소 축소되지만, <strong>Unwind 차익이 훨씬 큼</strong>
+     </div>
+    </div>
+
+    <div style="background:#ecfdf5;border-left:3px solid #15803d;border-radius:0 6px 6px 0;padding:10px 12px;font-size:11.5px;color:#14532d;line-height:1.7;">
+     <strong>왜 원월물이 유리?</strong><br>
+     ① <strong>Backwardation</strong> 시장에서 원월물(y+2, y+3) 가격이 더 낮음 → <strong>더 낮은 CV로 소싱</strong> 가능<br>
+     ② 공급 Deadline까지 <strong>시간적 여유</strong> → 상대가 상승 기회 여러 번 노림<br>
+     ③ 근월물은 Unwind 후 재소싱 실패 시 즉시 공급손실 → <strong>원월물은 회복 시간 확보</strong>
+    </div>
+   </div>
+
+   <!-- 미공급 옵션 & 리스크 -->
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px 20px;margin-bottom:20px;">
+    <div style="font-size:13px;font-weight:700;color:#4338ca;margin-bottom:12px;">🛡️ 미공급 옵션 & Optionality 리스크 관리</div>
+
+    <div style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:6px;padding:10px 12px;margin-bottom:10px;font-size:11.5px;color:#312e81;line-height:1.7;">
+     <strong>공급기반 Hedge가 필수 (하방 방어)</strong><br>
+     Optionality는 <strong>공급이 하방을 막아주는 구조</strong>여야만 가능. 공급 없이 하면 speculation. <strong>공급옵션 = kg당 마진 fix</strong> (예: +20원, +38원). Optionality 실행이 애매한 시장에서는 그냥 공급으로 <strong>Bottom 확보</strong> → Optionality는 공급옵션보다 큰 이익 확신 시에만 실행.
+    </div>
+
+    <div style="background:white;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;margin-bottom:10px;">
+     <div style="font-size:11.5px;font-weight:700;color:#4338ca;margin-bottom:6px;">📝 미공급 옵션 계약 구조</div>
+     <div style="font-size:11px;color:#374151;line-height:1.7;">
+      "저희가 도시가스 대비 92%로 LPG 드릴게요. 근데 나중에 파생상품 거래 때문에 못 드릴 수도 있어요. 그때는 도시가스 쓰세요. <strong>손해 보는 부분은 보상해드릴게요</strong>" — '20년부터 이 컨셉으로 시작<br>
+      → 실행 판단: <strong>공급마진 &lt; 파생상품 처분 이익</strong>일 때 옵셔널리티 실행
+     </div>
+     <div style="font-size:10.5px;color:#6b7280;margin-top:6px;">
+      ※ 미공급 옵션은 <strong>TSP 30여社 중 일부에만 반영</strong> — 대부분은 공급 의무 존재 → 그래서 원월물 R/O가 안전한 확장 경로
+     </div>
+    </div>
+
+    <div style="background:#fef2f2;border-left:3px solid #dc2626;border-radius:0 6px 6px 0;padding:10px 12px;font-size:11.5px;color:#7f1d1d;line-height:1.7;">
+     <strong>⚠️ Unwind 이후 재소싱 리스크</strong><br>
+     Unwind하면 Index 미스매치 Risk 부활 → <strong>즉시 재소싱 필요</strong>. 상대가 계속 상승 시 재소싱가↑ → 공급손실 가능. 그럼에도 지금까지 실제 손실 사례 없음 (MI 뷰 기반 실행)<br>
+     <span style="color:#991b1b;">→ <strong>기회이익 상실 감수 원칙</strong>: Unwind 이후 상대가가 더 올라가도 "정수리에서 팔고 발바닥에서 잡기 어렵다"고 봄</span>
+    </div>
+   </div>
+
+   <!-- LNG Optionality -->
+   <div style="background:white;border:2px solid #1e40af;border-radius:12px;padding:18px 20px;margin-bottom:20px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;">
+     <span style="background:#1e40af;color:white;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;">LNG Optionality</span>
+     <span style="font-size:14px;font-weight:700;color:#1e3a8a;">JKM Sell 단독 관리 (실물 미동반)</span>
+    </div>
+
+    <div style="background:#eff6ff;border-radius:6px;padding:10px 12px;margin-bottom:10px;font-size:11.5px;color:#1e3a8a;line-height:1.7;">
+     <strong>💡 산업체 Hedge와의 차이</strong>: 도시가스 연동 판매지만 실제로는 <strong>LPG를 사서 LPG로 공급</strong>. 도시가스는 <strong>가격 로직일 뿐, 실물 미동반</strong>. 따라서 <strong>Brent Sell, JKM Sell, HH Sell은 Paper only</strong>.
+    </div>
+
+    <div style="background:white;border:1px solid #bfdbfe;border-radius:6px;padding:10px 12px;margin-bottom:10px;">
+     <div style="font-size:11.5px;font-weight:700;color:#1e40af;margin-bottom:6px;">🕒 FEI/Brent는 동시, JKM/HH는 따로 잡는 이유</div>
+     <table style="width:100%;font-size:11px;border-collapse:collapse;">
+      <thead>
+       <tr style="background:#1e40af;color:white;">
+        <th style="padding:6px 8px;">Position</th><th style="padding:6px 8px;">유리한 시점</th><th style="padding:6px 8px;">동절기 특성</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:6px 8px;font-weight:600;text-align:center;">FEI Buy (원가)</td><td style="padding:6px 8px;text-align:center;color:#15803d;">싸게 사기 = 여름철 유리</td><td style="padding:6px 8px;text-align:center;color:#6b7280;">LPG 동고하저</td></tr>
+       <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb;"><td style="padding:6px 8px;font-weight:600;text-align:center;">JKM Sell (판가)</td><td style="padding:6px 8px;text-align:center;color:#dc2626;">비싸게 팔기 = 동절기 유리</td><td style="padding:6px 8px;text-align:center;color:#6b7280;">LNG 동고하저</td></tr>
+      </tbody>
+     </table>
+     <div style="font-size:10.5px;color:#6b7280;margin-top:6px;">→ FEI/Brent(원유는 계절성 약함)는 동시, JKM·HH는 <strong>비쌀 때 별도 Sell Fix</strong>. 예: JKM $15 Sell Fix → 시가 $12 하락 시 <strong>Unwind 차익 $3</strong> 실현</div>
+    </div>
+
+    <div style="background:#fef3c7;border-left:3px solid #d97706;border-radius:0 6px 6px 0;padding:10px 12px;font-size:11.5px;color:#78350f;line-height:1.7;">
+     <strong>Q. JKM Sell만 걸면 Spec 아닌가?</strong><br>
+     A. 이제는 <strong>JKM/HH Paper 안 잡는 것이 오히려 Risk</strong>. 과거엔 KOGAS 원료비 중 JKM 비중 작아 무시했지만, 현재 <strong>LNG 비중 확대로 필수 Hedge</strong>. FEI/JKM 짝궁으로 안 잡는 이유는 <strong>진입 시점 엇박자</strong> 때문 (여름 FEI Buy vs 겨울 JKM Sell).
+    </div>
+   </div>
+
+   <!-- 최근 사례 -->
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px 20px;margin-bottom:20px;">
+    <div style="font-size:13px;font-weight:700;color:#4338ca;margin-bottom:12px;">📌 최근 Optionality 실행 사례 ('22 · '25 · '26)</div>
+
+    <div style="display:grid;grid-template-columns:1fr;gap:10px;">
+     <div style="background:#f9fafb;border-left:3px solid #7c3aed;border-radius:0 6px 6px 0;padding:10px 12px;font-size:11.5px;color:#374151;line-height:1.7;">
+      <strong style="color:#4c1d95;">'22년 러-우 전쟁 시</strong> — JKM Hedge 후 Unwind로 포지션 Open 상태에서 실물가 폭등 → <strong>실물 이익 크게 확보</strong> (재Hedge 상태였다면 Fix 마진만 확보 가능)
+     </div>
+     <div style="background:#f9fafb;border-left:3px solid #7c3aed;border-radius:0 6px 6px 0;padding:10px 12px;font-size:11.5px;color:#374151;line-height:1.7;">
+      <strong style="color:#4c1d95;">'26년 초 (미-이란 위기 대응)</strong> — '27년 물량 전체 <strong>Unwind → 포지션 Open</strong> 상태에서 미-이란 전쟁 발발 위기 → 재소싱 어려움 우려. 최근 미-이란 MOU 체결 화해모드 진입 → <strong>물량 재소싱 완료</strong>
+     </div>
+     <div style="background:#f9fafb;border-left:3px solid #7c3aed;border-radius:0 6px 6px 0;padding:10px 12px;font-size:11.5px;color:#374151;line-height:1.7;">
+      <strong style="color:#4c1d95;">LNG Paper $14 진입 사례</strong> — $14에 Buy 진입 후 가격 하락 시 Unwind로 차익 실현. <strong>실물 미동반</strong> (LPG 실물만 공급, LNG/Brent는 순수 Paper Play)
+     </div>
+     <div style="background:#f9fafb;border-left:3px solid #7c3aed;border-radius:0 6px 6px 0;padding:10px 12px;font-size:11.5px;color:#374151;line-height:1.7;">
+      <strong style="color:#4c1d95;">JKM 전략적 노출</strong> — JKM 펀더멘털 상승 확률 높다고 판단 시 <strong>의도적으로 Hedge 안 걸어</strong> 실물 가격 상승 이익 추구. 사장님·관련 팀 협의 후 실행
+     </div>
+    </div>
+   </div>
+
+   <!-- 환경 악화 & 대응 -->
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px 20px;margin-bottom:20px;">
+    <div style="font-size:13px;font-weight:700;color:#4338ca;margin-bottom:12px;">🌊 Optionality 실행 환경 악화 & SK가스 대응</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+     <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:6px;padding:10px 12px;">
+      <div style="font-size:11.5px;font-weight:700;color:#b91c1c;margin-bottom:6px;">📉 악화 요인 — 동고하저 패턴 약화</div>
+      <ul style="margin-left:16px;color:#374151;font-size:11px;line-height:1.7;">
+       <li>중국 PDH·석화사 대규모 증설 → 공급과잉</li>
+       <li>과거 민수용 비중 큰 중국 → 동절기 수요 집중 (강한 동고하저)</li>
+       <li>이제는 <strong>석화 원료용 수요가 연중 균등</strong> → 계절성 약화</li>
+       <li>납사크래커 가격탄력 소비 → LPG 가격 <strong>박스권화</strong></li>
+      </ul>
+     </div>
+
+     <div style="background:#ecfdf5;border:1px solid #86efac;border-radius:6px;padding:10px 12px;">
+      <div style="font-size:11.5px;font-weight:700;color:#15803d;margin-bottom:6px;">🎯 SK가스 대응 — 4대 요소 극대화</div>
+      <ul style="margin-left:16px;color:#374151;font-size:11px;line-height:1.7;">
+       <li><strong>원월물 확대</strong> (당년·y+1 → y+2·y+3): Backwardation 활용, R/O 횟수↑</li>
+       <li><strong>물량 확대</strong>: 산업체 통합 물량 + 석화 Term 물량</li>
+       <li><strong>상품 확대</strong>: 연료용 + 원료용 + LNG Paper</li>
+       <li><strong>수익 목표</strong>: 소싱 CV 대비 <strong>+5% 추가</strong> Optionality 실현</li>
+      </ul>
+     </div>
+    </div>
+
+    <div style="background:#eef2ff;border-left:3px solid #4338ca;border-radius:0 6px 6px 0;padding:10px 12px;margin-top:12px;font-size:11.5px;color:#312e81;line-height:1.7;">
+     <strong>'27~'29 사업 전망</strong>: '29년까지 공급이익 확보 가능 (사전 소싱 완료). '30년도 KOGAS 판가 구조 큰 변화 없을 것으로 판단 → TSP 사업 지속 유효
+    </div>
    </div>
 
    <!-- ═══ LNG Paper Hedge ═══ -->
