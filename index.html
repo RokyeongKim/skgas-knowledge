@@ -49,7 +49,7 @@ body { font-family: 'Apple SD Gothic Neo','Malgun Gothic',-apple-system,sans-ser
 .hero-bun { background: linear-gradient(135deg,#1a237e,#5c6bc0); }
 .hero-ess { background: linear-gradient(135deg,#004d40,#26a69a); }
 .hero-ska { background: linear-gradient(135deg,#4a148c,#ab47bc); }
-.hero-energy { background: linear-gradient(135deg,#1b5e20,#43a047); }
+.hero-energy { background: linear-gradient(135deg,#1D3958,#7C95B2); }
 .hero-hydrogen { background: linear-gradient(135deg,#0d47a1,#1976d2); }
 .hero-trading { background: linear-gradient(135deg,#b45309,#f59e0b); }
 /* CEO Letter styles */
@@ -117,6 +117,26 @@ th.curr { background: #f06400 !important; }
 .issue-card .issue-title { font-size: 12px; font-weight: 700; color: var(--sk-blue); margin-bottom: 6px; }
 .issue-card .issue-body { font-size: 12px; color: var(--gray-700); line-height: 1.5; }
 .dot-red { background: var(--red); }
+/* 쉽게 이해하기 포스트잇 (generic) */
+.ez-toggle { margin-left:auto; border:1px solid #E0B000; background:#FFEE8A; color:#142446; font-size:11px; font-weight:700; padding:3px 10px; border-radius:9999px; cursor:pointer; font-family:inherit; white-space:nowrap; }
+.ez-wrap { display:grid; grid-template-columns:minmax(0,1fr) 400px; gap:18px; align-items:start; margin-bottom:16px; }
+.ez-wrap.hide-note { grid-template-columns:minmax(0,1fr); }
+.ez-wrap.hide-note .ez-note { display:none; }
+.ez-formal { position:sticky; top:12px; }
+.ez-note { position:relative; background:#FFF8B8; border:1px solid #E0B000; box-shadow:4px 5px 12px rgba(0,0,0,0.16); padding:16px 16px 20px; font-size:12px; line-height:1.75; color:#142446; transform:rotate(0.5deg); border-radius:2px; }
+.ez-note::before { content:''; position:absolute; top:-7px; left:50%; width:90px; height:18px; margin-left:-45px; background:rgba(255,255,255,0.55); border:1px solid rgba(0,0,0,0.07); transform:rotate(-2deg); border-radius:2px; }
+.ez-title { font-size:14px; font-weight:800; color:#142446; margin-bottom:2px; }
+.ez-sub { font-size:10.5px; color:#8E9398; margin-bottom:6px; }
+.ez-note h4 { font-size:12.5px; font-weight:800; color:#142446; margin:14px 0 6px; padding-bottom:3px; border-bottom:1px dashed #D4D6D9; }
+.ez-note p { margin:4px 0 6px; }
+.ez-note table { width:100%; border-collapse:collapse; font-size:11px; margin:6px 0 8px; background:rgba(255,255,255,0.45); }
+.ez-note th, .ez-note td { border:1px solid #D4D6D9; padding:4px 6px; vertical-align:top; text-align:left; line-height:1.5; }
+.ez-note th { background:#FFEE8A; color:#142446; font-weight:700; }
+.ez-note .quote { background:rgba(255,255,255,0.6); border-left:3px solid #E0B000; padding:6px 10px; margin:6px 0 8px; font-style:italic; color:#142446; }
+.ez-note .ez-box { background:rgba(255,255,255,0.6); border:1px dashed #E0B000; border-radius:4px; padding:7px 10px; margin:6px 0 8px; }
+.ez-note .ez-final { background:#FFEE8A; border:1px solid #E0B000; font-size:12.5px; }
+.ez-note .est { display:inline-block; background:#FFEE8A; border:1px solid #E0B000; border-radius:3px; font-size:10px; padding:0 4px; color:#142446; font-style:normal; }
+@media (max-width: 1000px) { .ez-wrap { grid-template-columns:minmax(0,1fr); } .ez-note { transform:none; } .ez-formal { position:static; } }
 /* 경동 Conflict — 쉽게 정리 포스트잇 */
 .kd-toggle { margin-left:auto; border:1px solid #E0B000; background:#FFEE8A; color:#142446; font-size:11px; font-weight:700; padding:3px 10px; border-radius:9999px; cursor:pointer; font-family:inherit; white-space:nowrap; }
 .kd-toggle:hover { background:#FFEE8A; }
@@ -212,7 +232,7 @@ th.curr { background: #f06400 !important; }
   <button class="sub-tab" onclick="switchSub('biz','paper',this)">📊 Paper Scheme</button>
   <span style="font-size:10px;color:#16a34a;padding:4px 8px 4px 8px;font-weight:700;white-space:nowrap;border-left:2px solid #e5e7eb;border-right:2px solid #e5e7eb;margin:0 6px;">신사업</span>
   <button class="sub-tab" onclick="switchSub('biz','bun',this)">벙커링(EMFS)</button>
-  <button class="sub-tab" onclick="switchSub('biz','energy',this)">집단에너지</button>
+  <button class="sub-tab" onclick="switchSub('biz','energy',this)">AI/반도체향 신규 LNG 발전사업</button>
   <button class="sub-tab" onclick="switchSub('biz','hydrogen',this)">수소사업(에너루트)</button>
 </div>
 <div class="sub-tab-bar" id="sub-div" style="display:none;">
@@ -2746,93 +2766,393 @@ th.curr { background: #f06400 !important; }
 
 
   <div class="biz-panel" id="biz-energy">
-   <div class="biz-hero hero-energy"><h1>집단에너지 (500MW 구역전기)</h1><p>울산 AI DC·석화단지 전기·스팀 직판매 신사업 — 500MW 규모 구역전기 사업자 허가 추진<br>동서발전 협력 · LNG #5 탱크 물량 연계 · AI DC 장기 PPA 목표</p></div>
+   <div class="biz-hero hero-energy"><h1>AI/반도체향 신규 LNG 발전사업</h1><p>울산 500MW 신규 LNG 발전(집단에너지 기반) — AI DC·석화단지에 전기·스팀 공급<br>신규 LNG 허가 제한 下, 열수요·대체사업권·재생e·Grid Solution으로 허가 기반 마련 + 우회 대안 3개 검토</p></div>
+   <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#DBE6F1;border:1px solid #A9C8E8;border-radius:8px;padding:8px 14px;margin:-8px 0 20px;font-size:12px;color:#142446;">
+    <span style="background:#172A55;color:white;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;">최종 업데이트: '26.11 (행캔 '27 기준)</span>
+    <span>탭 명칭 <strong>집단에너지(500MW 구역전기) → AI/반도체향 신규 LNG 발전사업</strong>으로 변경. 구역전기 중심 '26.05 내용은 [기타] 탭 아카이브에 보존.</span>
+   </div>
 
+   <div class="lng-book">
+    <nav class="lng-tabs" aria-label="신규 LNG 발전사업 섹션 탭">
+     <button class="lng-tab lt-0 active" id="en-tab-hist" onclick="switchEn('hist',this)">📜 사업추진 히스토리<small>구역전기 → 제약 → 허가 조건 4개 + 우회로</small></button>
+     <button class="lng-tab lt-1" id="en-tab-alt" onclick="switchEn('alt',this)">🔀 대안 3개와 고민 ('26.11)<small>용량시장 · 자가발전 · GGP 대체사업권</small></button>
+     <button class="lng-tab lt-2" id="en-tab-pol" onclick="switchEn('pol',this)">🏛️ 정책 동향 &amp; 허가 확보방안<small>집단e · 대체사업권 · LNG+재생e</small></button>
+     <button class="lng-tab lt-3" id="en-tab-task" onclick="switchEn('task',this)">🧭 4대 추진 과제 현황<small>스팀 335t/h · 동서 MOU · 태양광 100MW · Grid</small></button>
+     <button class="lng-tab lt-4" id="en-tab-econ" onclick="switchEn('econ',this)">💹 경제성 Revisit<small>P-IRR 3.6~8.4% · 유가 민감도</small></button>
+     <button class="lng-tab lt-5" id="en-tab-etc" onclick="switchEn('etc',this)">📁 기타<small>기초 개념 · '26.05 기존 모델 아카이브</small></button>
+    </nav>
+    <div class="lng-pages">
+     <div class="lng-page active" id="en-page-hist">
+   <div class="section-label">📜 사업추진 히스토리 — 구역전기에서 "허가 조건 채우기 + 우회로"까지 <span style="font-size:10px;font-weight:400;color:#8E9398;">Source: '26.05 G&amp;P 브레인스토밍 · '26.11 행캔 Discussion Agenda</span></div>
+   <div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:4px;box-shadow:4px 5px 12px rgba(0,0,0,0.14);padding:18px 20px 16px;margin-bottom:16px;font-size:12px;color:#142446;line-height:1.75;position:relative;">
+    <div style="position:absolute;top:-7px;left:50%;width:90px;height:18px;margin-left:-45px;background:rgba(255,255,255,0.55);border:1px solid rgba(0,0,0,0.07);transform:rotate(-2deg);border-radius:2px;"></div>
+    <div style="background:#FFEE8A;border:1px solid #E0B000;border-radius:4px;padding:8px 12px;margin-bottom:14px;font-size:12.5px;">
+     <strong>한 줄 요약:</strong> 울산에 500MW짜리 LNG 발전소를 새로 짓고 싶은데, 정부가 <strong style="color:#C62828;">"LNG 발전소 새로 짓지 마"</strong>라고 해서, <strong>허가받을 수 있는 조건 4개</strong>를 하나씩 채워가는 중. 그래도 안 되면 <strong>우회로 3개</strong>를 고민 중.
+    </div>
+
+    <div style="display:grid;grid-template-columns:28px 1fr;gap:0 12px;">
+     <!-- step 1 -->
+     <div style="display:flex;flex-direction:column;align-items:center;"><div style="width:26px;height:26px;border-radius:50%;background:#172A55;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">1</div><div style="flex:1;width:2px;background:#7C95B2;margin:2px 0;"></div></div>
+     <div style="padding-bottom:14px;">
+      <div style="font-weight:800;font-size:13px;">출발점 — 울산 500MW 구역전기 구상 <span style="font-size:10px;font-weight:400;color:#8E9398;">~'26.上</span></div>
+      집단에너지 면허 + 의제 구역전기(500MW 이하)로 <strong>AI DC·석화단지에 전기·스팀을 직접 판매</strong>하는 모델. 목적은 ① LNG #5 탱크 발전용 물량 확보 ② 울산 고객을 SK가스 생태계에 Lock-in. 동서발전 협력, AI DC 장기 PPA가 목표였음.
+     </div>
+     <!-- step 2 -->
+     <div style="display:flex;flex-direction:column;align-items:center;"><div style="width:26px;height:26px;border-radius:50%;background:#C62828;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">2</div><div style="flex:1;width:2px;background:#7C95B2;margin:2px 0;"></div></div>
+     <div style="padding-bottom:14px;">
+      <div style="font-weight:800;font-size:13px;color:#C62828;">제약 ① — 정부가 신규 LNG 발전 문을 거의 닫음</div>
+      · 기후부: <strong>신규 LNG 구역전기 불가</strong> 기조. '25.3 포스코 광양 이후 허가 사례 제한, 구역전기는 <strong>'LNG+재생e' 결합 모델</strong>만 검토<br>
+      · 신규 LNG는 <strong>CO2 순증가 금지 → 대체사업권 필수</strong>. 민간은 집단에너지 사업으로만 추진 가능<br>
+      · '26 분산특구는 '재생e 100% 소규모 커뮤니티형'만 공모 → '27 기류 모니터링
+     </div>
+     <!-- step 3 -->
+     <div style="display:flex;flex-direction:column;align-items:center;"><div style="width:26px;height:26px;border-radius:50%;background:#C62828;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">3</div><div style="flex:1;width:2px;background:#7C95B2;margin:2px 0;"></div></div>
+     <div style="padding-bottom:14px;">
+      <div style="font-weight:800;font-size:13px;color:#C62828;">제약 ② — 500MW 상한과 대형 스팀 수요처 부족 → Hybrid 모델 검토 <span style="font-size:10px;font-weight:400;color:#8E9398;">'26.05</span></div>
+      집단에너지법상 전기 판매 500MW 상한 + 스팀 수요처 확보 난항. 대안 5개를 놓고 <strong>Hybrid 모델</strong>(가스터빈 430MW 집단e + 수요처가 스팀터빈 200MW를 자가발전으로 설치, 630MW)이 유력안으로 올라옴. <span style="color:#8E9398;">→ 원문은 [기타] 탭 아카이브</span>
+     </div>
+     <!-- step 4 -->
+     <div style="display:flex;flex-direction:column;align-items:center;"><div style="width:26px;height:26px;border-radius:50%;background:#172A55;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">4</div><div style="flex:1;width:2px;background:#7C95B2;margin:2px 0;"></div></div>
+     <div style="padding-bottom:14px;">
+      <div style="font-weight:800;font-size:13px;">전환 — "허가 조건 4개 채우기"로 재정렬 <span style="font-size:10px;font-weight:400;color:#8E9398;">'26.11 행캔</span></div>
+      정부 기준(열수요·탄소중립)에 맞춰 <strong>① 스팀수요 335 t/h 확보 · ② 동서발전 노후복합 대체사업권 · ③ 재생e(태양광 100MW) · +α Grid Solution(AI DC 유연성 Package)</strong>을 병행 추진. 기존 Hybrid의 "수요처 자가발전"은 <strong>우회 대안 ②</strong>로 격하되고 Key Hurdle이 붙음. 전력 수요는 500MW(LFC 160 / PIC 25 / AI DC 315)로 Revisit.
+     </div>
+     <!-- step 5 -->
+     <div style="display:flex;flex-direction:column;align-items:center;"><div style="width:26px;height:26px;border-radius:50%;background:#E0B000;color:#142446;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">?</div></div>
+     <div>
+      <div style="font-weight:800;font-size:13px;">지금의 질문 — "조건 4개 다 채워도 허가 안 나면?"</div>
+      우회로 3개(<strong>용량시장 참여 · 자가발전 · GGP 대체사업권</strong>)를 올려놓고 각각의 걸림돌과 논의 포인트를 검토 중. <a href="javascript:void(0)" onclick="switchEn('alt',document.getElementById('en-tab-alt'))" style="color:#172A55;font-weight:700;">→ 다음 탭 [대안 3개와 고민]</a>
+     </div>
+    </div>
+   </div>
+   <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:10px 14px;margin-bottom:16px;font-size:11px;color:#385269;line-height:1.7;">
+    <strong style="color:#142446;">📌 탭 안내</strong> — ② 대안 3개와 고민 → ③ 정책 동향·허가 확보방안 → ④ 4대 추진 과제 현황 → ⑤ 경제성 Revisit → ⑥ 기타(기초 개념 · '26.05 아카이브). 각 탭 우측의 노란 메모는 구어체 "쉽게 이해하기"입니다.
+   </div>
+     </div>
+     <div class="lng-page" id="en-page-alt">
+   <div class="section-label">🔀 '26.11 검토 중인 대안 3개와 각각의 고민 — "다른 대안은 없는가?" <span style="font-size:10px;font-weight:400;color:#8E9398;">Source: 행캔 '27 Discussion Agenda [인허가 확보 방안]</span>
+    <button type="button" class="ez-toggle" onclick="toggleEz('en-alt-wrap',this)">💬 쉽게 이해하기 숨기기</button>
+   </div>
+   <div class="ez-wrap" id="en-alt-wrap">
+   <div class="ez-formal" style="min-width:0;">
+    <div style="background:#385269;color:white;border-radius:8px;padding:10px 14px;text-align:center;font-size:13px;font-weight:800;margin-bottom:8px;">신규 LNG 허가 제한 下, 기존 사업개발 전략으로 충분한가?</div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;justify-content:center;margin-bottom:8px;font-size:11px;font-weight:700;">
+     <span style="background:#DBE6F1;border:1px solid #5A86B8;border-radius:20px;padding:4px 12px;color:#142446;">① 스팀수요 확보</span><span style="color:#8E9398;">+</span>
+     <span style="background:#DBE6F1;border:1px solid #5A86B8;border-radius:20px;padding:4px 12px;color:#142446;">② 대체사업권 확보</span><span style="color:#8E9398;">+</span>
+     <span style="background:#DBE6F1;border:1px solid #5A86B8;border-radius:20px;padding:4px 12px;color:#142446;">③ 재생e 확보</span><span style="color:#8E9398;">+</span>
+     <span style="background:#FFEE8A;border:1px solid #E0B000;border-radius:20px;padding:4px 12px;color:#142446;">+α Grid Solution</span>
+    </div>
+    <div style="text-align:center;color:#7C95B2;font-size:18px;line-height:1;margin-bottom:6px;">︾</div>
+    <div style="background:#142446;color:white;border-radius:8px;padding:10px 14px;text-align:center;font-size:13px;font-weight:800;margin-bottom:14px;">다른 대안은 없는가?</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-bottom:14px;">
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;">
+      <div style="background:#172A55;color:white;padding:10px 12px;"><div style="font-size:13px;font-weight:800;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>[용량 시장 참여]</div><div style="font-size:10.5px;opacity:0.9;margin-top:2px;">중앙급전 낙찰 → 전기본 반영</div></div>
+      <div style="padding:10px 12px;font-size:11px;line-height:1.7;flex:1;">
+       <div style="font-weight:800;color:#142446;border-bottom:1px dashed #D4D6D9;margin-bottom:4px;">대안 논리</div>· 공고 물량(1.3GW) 내 허가 확보<br>· 낙찰 후 구역형 집단e 전환, 기존 VPP 전략 시도
+       <div style="font-weight:800;color:#C62828;border-bottom:1px dashed #D4D6D9;margin:10px 0 4px;">Key Hurdle</div>· <strong>[입찰]</strong> 공고 물량(1.3GW) 내 경쟁 치열<br>· <strong>[LMP]</strong> 수도권 신규사업(광명시흥, 호매실 등) 대비 CP 가격 경쟁력 열위 (SMP 하락 → CP 증액 필요)<br>· <strong>[기후부]</strong> 구역형 집단e 참여여부 미정
+      </div>
+      <div style="background:#FFF8B8;border-top:1px solid #E0B000;padding:8px 12px;font-size:11px;"><span style="display:inline-block;background:#E0B000;color:#142446;font-size:9px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">논의 포인트 · 미결</span><strong>구역전기 전환이 불가해도 중앙급전으로 경쟁력을 갖출 수 있는가?</strong></div>
+     </div>
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;">
+      <div style="background:#172A55;color:white;padding:10px 12px;"><div style="font-size:13px;font-weight:800;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span>[자가발전]</div><div style="font-size:10.5px;opacity:0.9;margin-top:2px;">2단계 전력 수요 일부를 구역전기로 전환</div></div>
+      <div style="padding:10px 12px;font-size:11px;line-height:1.7;flex:1;">
+       <div style="font-weight:800;color:#142446;border-bottom:1px dashed #D4D6D9;margin-bottom:4px;">대안 논리</div>· 자가용 설비는 발전사업 허가 대상 外 → 허가 제한 우회<br>· 자가발전을 VPP 자원으로 편입 (자금 대여형)
+       <div style="font-weight:800;color:#C62828;border-bottom:1px dashed #D4D6D9;margin:10px 0 4px;">Key Hurdle</div>· <strong>[Tenant]</strong> 한전 전기품질 신뢰 — 동등 이상 신뢰도 입증 필요<br>· <strong>[하이퍼]</strong> 설득 명분 부족 — 연료비 Pass-through로 유인 부재, DC 법인 부채 증가 수용 여부, 한전수전 진행 중·자가발전 계획 無<br>· <strong>[정부]</strong> 자가발전도 환평 등으로 제한
+      </div>
+      <div style="background:#FFF8B8;border-top:1px solid #E0B000;padding:8px 12px;font-size:11px;"><span style="display:inline-block;background:#E0B000;color:#142446;font-size:9px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">논의 포인트 · 미결</span><strong>Tenant 및 하이퍼가 자가발전을 택할 유인이 있는가?</strong></div>
+     </div>
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;">
+      <div style="background:#172A55;color:white;padding:10px 12px;"><div style="font-size:13px;font-weight:800;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span>[GGP 대체 사업권]</div><div style="font-size:10.5px;opacity:0.9;margin-top:2px;">GGP '40년 조기폐쇄 수용 ↔ 투자비 인정 + 500MW 사업권</div></div>
+      <div style="padding:10px 12px;font-size:11px;line-height:1.7;flex:1;">
+       <div style="font-weight:800;color:#142446;border-bottom:1px dashed #D4D6D9;margin-bottom:4px;">대안 논리</div>· 석탄 조기폐쇄 대가로 LNG 사업권 확보<br>· 단, 주주 원금 회수 수준 투자비(약 4.5조 이상) 인정 필요
+       <div style="font-weight:800;color:#C62828;border-bottom:1px dashed #D4D6D9;margin:10px 0 4px;">Key Hurdle</div>· <strong>GGP 조기폐쇄·투자비 인정에 대한 정부·주주 설득 필요</strong><br>· [정부] 투자비 확정 및 사업권 부여<br>· [KDB] 원금손실 보상·기대수익 요구 가능<br>· [SKEP] EPC 불인정분·설계변경 등 분쟁 가능성 存
+      </div>
+      <div style="background:#FFF8B8;border-top:1px solid #E0B000;padding:8px 12px;font-size:11px;"><span style="display:inline-block;background:#E0B000;color:#142446;font-size:9px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">논의 포인트 · 미결</span><strong>상업운전 및 PF 상환 중인데, SI 및 대주단이 동의할 수 있는가?</strong></div>
+     </div>
+    </div>
+    <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:10px 14px;font-size:11px;color:#385269;line-height:1.7;">
+     <strong style="color:#142446;">📌 읽는 법</strong> — 위 4개 조건(스팀·대체사업권·재생e·Grid)은 "정문"으로 허가를 받는 길이고, 아래 3개는 정문이 안 열릴 때의 "옆문"입니다. 3개 모두 아직 결론이 아니라 <strong>임원회의 논의 포인트</strong>입니다. 조건 4개의 진행 상황은 <a href="javascript:void(0)" onclick="switchEn('task',document.getElementById('en-tab-task'))" style="color:#172A55;font-weight:700;">[4대 추진 과제 현황]</a> 탭 참조.
+    </div>
+   </div>
+   <aside class="ez-note">
+    <div class="ez-title">📌 대안 3개, 쉽게 이해하기</div>
+    <div class="ez-sub">"조건 4개 다 채워도 허가 안 나면?"에 대한 우회로 3개예요. <span class="est">[추정]</span> 표시는 장표에 없는 해석입니다.</div>
+    <table>
+     <tr><th style="width:22%;">대안</th><th>논리</th><th>걸림돌</th><th>논의 질문</th></tr>
+     <tr><td><strong>① 용량시장 참여</strong></td><td>중앙급전 입찰(1.3GW 공고)에서 낙찰받고 나중에 구역형으로 전환</td><td>경쟁 치열, 수도권 신규사 대비 가격 열위, 기후부가 구역형 전환 허용할지 미정</td><td>구역전기 전환이 안 돼도 중앙급전으로 경쟁력 있나?</td></tr>
+     <tr><td><strong>② 자가발전</strong></td><td>손님(AI DC)이 자기 발전소로 짓게 해서 허가 우회</td><td>손님 입장에선 한전 전기가 더 믿음직하고, 부채 늘리기 싫고, 정부도 환평으로 제한</td><td>Tenant·하이퍼스케일러가 자가발전 택할 이유가 있나?</td></tr>
+     <tr><td><strong>③ GGP 대체사업권</strong></td><td>우리 석탄발전소 GGP를 '40년 조기폐쇄하는 대신 500MW LNG 사업권 받기</td><td>투자비 4.5조 이상 인정받아야 하고, 대주단·KDB·SKEP(EPC) 설득 필요</td><td>상업운전·PF 상환 중인데 SI·대주단이 동의할까?</td></tr>
+    </table>
+    <div class="quote">비유: 정문이 안 열리면 ① 옆 건물 통해 들어가기 ② 손님더러 직접 문 만들라 하기 ③ 우리 집 헐고 그 자리에 짓기.</div>
+
+    <h4>용량시장 참여가 뭔지 — 용어부터</h4>
+    <table>
+     <tr><th style="width:24%;">용어</th><th>쉽게 말하면</th></tr>
+     <tr><td><strong>용량시장</strong></td><td>정부가 "앞으로 LNG 발전소 이만큼(1.3GW) 더 필요해"라고 공고하고, 짓고 싶은 회사들이 입찰하는 것. 낙찰되면 전기본(전력수급기본계획)에 이름이 올라가고 허가가 나와요.</td></tr>
+     <tr><td><strong>중앙급전</strong></td><td>낙찰된 발전소는 전력거래소(KPX)가 시키는 대로 돌리는 발전소가 돼요. 전기를 한전에 도매로 팔고, 가격은 SMP로 정해지고, 거기에 <strong>용량요금(CP)</strong>을 더 받아요.</td></tr>
+     <tr><td><strong>구역전기</strong></td><td>특정 구역(울산 산단) 안의 손님(AI DC, LFC, PIC)에게 직접 전기와 스팀을 팔아요. 가격도 손님과 직접 협상.</td></tr>
+    </table>
+    <div class="quote">비유: 중앙급전은 급식업체예요. 학교(KPX)가 "오늘 몇 인분 해" 하면 그만큼 만들고, 정해진 단가로 받아요. 구역전기는 동네 식당이에요. 손님을 직접 받고 메뉴 가격도 내가 정해요.</div>
+    <p><strong>대안 ①의 논리</strong><br>1. 용량시장 입찰로 허가부터 따고 (정문이 안 열리니 옆문으로)<br>2. 나중에 "우리 구역전기로 바꿀게요"라고 전환 신청<br>3. 안 되면 가상발전소(VPP) 전략으로 보완<br>핵심은 <strong>"허가만 받으면 나중에 원래 하고 싶던 사업(구역전기)으로 돌릴 수 있지 않을까"</strong>라는 기대예요.</p>
+
+    <h4>구역전기 전환이 안 되면 생기는 리스크</h4>
+    <p>이 사업의 <strong>수익 모델이 통째로 바뀝니다.</strong></p>
+    <table>
+     <tr><th style="width:18%;"></th><th>구역전기 (원래 계획)</th><th>중앙급전에 갇히면</th></tr>
+     <tr><td><strong>손님</strong></td><td>AI DC·LFC·PIC와 직접 계약</td><td>한전 하나. 직접 손님 못 받음</td></tr>
+     <tr><td><strong>전기 가격</strong></td><td>협상가 (산업용 158.7원 수준)</td><td>SMP (시장가, 하락 추세)</td></tr>
+     <tr><td><strong>스팀</strong></td><td>팔 수 있음 → IRR 6.9~8.4%</td><td><span class="est">[추정]</span> 중앙급전 구조에선 스팀 판매가 사업 모델에 안 맞음 → IRR 3.6%(전기 단독)에 가까워짐</td></tr>
+     <tr><td><strong>발전량</strong></td><td>손님 수요만큼 안정적으로</td><td>KPX가 싼 발전소부터 돌려서, 우리 원가가 비싸면 안 돌아감</td></tr>
+     <tr><td><strong>수도권 신규사와 경쟁</strong></td><td>해당 없음</td><td>LMP(지역별 가격) 도입되면 수도권 발전소가 유리. 울산은 불리 → 낙찰량 더 감소</td></tr>
+    </table>
+    <div class="ez-box">정리하면 <strong>"스팀 못 팔고, 전기도 싸게 팔고, 그마저도 잘 안 돌아가는 발전소"</strong>가 될 수 있어요. 그래서 Key Hurdle에 <strong>"SMP 하락 → CP 증액 필요"</strong>라고 쓴 거예요. 전기 팔아서 못 버니까 용량요금(CP)을 더 받아야 버티는데, 입찰이 치열해서 CP를 높게 부르면 떨어집니다.</div>
+    <p><strong>그래서 논의 질문이 저렇게 적힌 것</strong></p>
+    <div class="quote">"구역전기 전환이 불가해도 중앙급전으로 경쟁력을 갖출 수 있는가?" = "최악의 경우 동네 식당 못 하고 급식업체로만 살아야 하는데, 그래도 할 만한 사업이냐?"</div>
+    <p><span class="est">[추정]</span> 답이 "아니오"면 대안 ①은 허가는 따도 돈 안 되는 발전소를 떠안는 길이에요. 그래서 이 대안을 밀려면 <strong>"전환 가능성이 얼마나 되나"</strong>를 기후부에 미리 확인하는 게 전제가 돼야 할 것 같습니다.</p>
+
+    <h4>임원회의에서 결정할 것 <span class="est">[추정]</span></h4>
+    <p>· <strong>기존 전략(조건 4개 채우기)을 계속 밀 건지</strong> — 스팀 110t/h 부족, 동서발전 구조 미확정, 태양광 부지 이슈가 다 열려 있음<br>
+    · <strong>3개 대안 중 병행 검토할 걸 고를 건지</strong> — 특히 ③ GGP 조기폐쇄는 회사 전체 포트폴리오를 건드리는 결정이라 G&amp;P본부 혼자 못 정함<br>
+    · <strong>Go/No-Go 기준</strong> — 유가 $80 이상이면 IRR 3.8%인데, 이 사업을 계속 끌고 갈 최소 수익률이 얼마인지</p>
+    <div class="ez-box ez-final">③번 GGP 대안은 투자회사 관리 쪽 시각에서도 보셔야 할 것 같아요. GGP 조기폐쇄는 LNG 사업권 하나로 끝나는 게 아니라 GPS 자체 가치와 PF 구조가 걸린 문제라서요.</div>
+   </aside>
+   </div>
+     </div>
+     <div class="lng-page" id="en-page-pol">
+   <div class="section-label">🏛️ 정책 동향 &amp; 신규 집단e 허가 확보방안 <span style="font-size:10px;font-weight:400;color:#8E9398;">Source: 행캔 '27 Discussion Agenda [정책동향]</span>
+    <button type="button" class="ez-toggle" onclick="toggleEz('en-pol-wrap',this)">💬 쉽게 이해하기 숨기기</button>
+   </div>
+   <div class="ez-wrap" id="en-pol-wrap">
+   <div class="ez-formal" style="min-width:0;">
+    <div style="background:#DBE6F1;border-left:4px solid #172A55;border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:14px;font-size:12.5px;font-weight:700;color:#142446;">정부 기준에 부합하는 <strong style="color:#C62828;">열수요 확보</strong>와 <strong style="color:#C62828;">탄소중립 기여</strong>를 기반으로 집단E 중심의 신규 LNG 사업기회 모색</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;">
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:12px 14px;font-size:11px;line-height:1.7;color:#385269;">
+      <div style="text-align:center;font-weight:800;font-size:13px;color:#142446;border-bottom:2px solid #142446;padding-bottom:5px;margin-bottom:10px;">신규 발전사업 허가 정책 동향</div>
+      <div style="margin-bottom:10px;"><strong style="color:#142446;">• (집단e) 12차 전기본에서 집단e 허용물량 검토 중</strong><br>⇒ 업계 '열공급 필요성' 건의, 기후부도 일부 허가 검토<br><span style="color:#8E9398;">– 반도체 Fab(평택, 서남권), 3기 신도시(광명, 왕숙 등) 열공급 시급</span></div>
+      <div style="margin-bottom:10px;"><strong style="color:#142446;">• (신규 LNG) CO2 순증가 없도록 대체사업권 필수</strong><br>⇒ <strong style="color:#C62828;">민간은 집단e 사업으로만 추진 가능</strong><br><span style="color:#8E9398;">– 중앙급전은 석탄 대체 필요 (공기업은 대부분 완료)<br>– 신규 추진 시 노후복합 사업권 활용 필요</span></div>
+      <div><strong style="color:#142446;">• (구역전기) 'LNG+재생e' 결합 모델로 검토</strong><br><span style="color:#8E9398;">– '25.3 포스코 광양 허가 이후, 허가사례 제한<br>– '27 분산특구에서 LNG+재생e 결합 모델 검토 예정<br>※ '26 분산특구는 '재생e 100% 소규모 커뮤니티형'만 공모 → '27 기류 모니터링 지속</span></div>
+     </div>
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:12px 14px;font-size:11px;line-height:1.7;">
+      <div style="text-align:center;font-weight:800;font-size:13px;color:#142446;border-bottom:2px solid #142446;padding-bottom:5px;margin-bottom:10px;">신규 집단e 허가 확보방안</div>
+     <div style="background:#DBE6F1;border-left:4px solid #5A86B8;border-radius:0 6px 6px 0;padding:8px 12px;margin-bottom:8px;"><div style="font-weight:800;font-size:12.5px;color:#142446;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>정부 기준을 충족하는 열수요처 확보</div><div style="font-size:11px;color:#385269;margin-top:3px;">• 기후부는 열수요 중심 선별 허가, 열 평가 강화¹⁾</div></div>
+     <div style="background:#DBE6F1;border-left:4px solid #5A86B8;border-radius:0 6px 6px 0;padding:8px 12px;margin-bottom:8px;"><div style="font-weight:800;font-size:12.5px;color:#142446;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span>노후대체권 활용, CO2 순증가 해소</div><div style="font-size:11px;color:#385269;margin-top:3px;">• 기후부는 노후전원 대체 시, 탄소중립 기여 가점 부여²⁾</div></div>
+     <div style="background:#DBE6F1;border-left:4px solid #5A86B8;border-radius:0 6px 6px 0;padding:8px 12px;margin-bottom:8px;"><div style="font-weight:800;font-size:12.5px;color:#142446;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span>재생e 결합한 새로운 가스복합 모델 확보</div><div style="font-size:11px;color:#385269;margin-top:3px;">• 기후부는 분산특구 2기에 재생e 100% 모델 제시</div></div>
+     <div style="background:#FFF8B8;border-left:4px solid #E0B000;border-radius:0 6px 6px 0;padding:8px 12px;margin-bottom:8px;"><div style="font-weight:800;font-size:12.5px;color:#142446;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">+α</span>Grid Solution 결합 AIDC 솔루션 확보</div><div style="font-size:11px;color:#385269;margin-top:3px;">• AIDC 부하변동 대응 유연성 발전 Package(ESS-LNG-재생e) 제시로 계통 안정성 기여</div></div>
+     </div>
+    </div>
+    <div style="font-size:10px;color:#8E9398;margin-top:10px;line-height:1.6;">1) (열수요 평가상향) '26 LNG용량시장 열부문 평가 상향(25점 → 40점); 열평가항목(열공급 시급성, 열수요 신뢰성, 설비구성·규모 적정성, 최대열수요 수용가 비중)<br>2) (노후전원 대체 우대) LNG용량시장 비가격 평가 요소 중 탄소중립 기여부문 내 가점 부여</div>
+   </div>
+   <aside class="ez-note">
+    <div class="ez-title">📌 왜 어려운가: 정부가 문을 거의 닫았어요</div>
+    <div class="ez-sub">정책동향을 구어체로 풀어쓴 메모예요.</div>
+    <p>정부(기후부)는 탄소를 줄여야 해서 <strong>LNG 발전소를 새로 허가하는 걸 꺼려요.</strong> 그래도 열리는 문이 세 개 있습니다.</p>
+    <table>
+     <tr><th style="width:22%;">열린 문</th><th>조건</th><th>쉽게 말하면</th></tr>
+     <tr><td><strong>집단에너지</strong></td><td>전기만 말고 열(스팀)도 같이 공급하는 발전소면 허가 검토</td><td>"전기 공장"은 안 되고 <strong>"전기+뜨거운 물 공장"</strong>이면 됨</td></tr>
+     <tr><td><strong>대체사업권</strong></td><td>낡은 석탄발전소를 닫는 대신 LNG로 바꾸는 건 허가</td><td>새로 짓는 게 아니라 <strong>헌 걸 바꾸는 것</strong>으로 포장</td></tr>
+     <tr><td><strong>구역전기</strong></td><td>LNG + 재생에너지 결합 모델이면 검토</td><td>가스 발전만 하면 안 되고 <strong>태양광을 같이 끼워야</strong> 함</td></tr>
+    </table>
+    <div class="quote">비유: 동네에 새 가게 못 열게 하는데, "식당 겸 빵집"이거나 "폐업 가게 자리를 이어받는" 경우만 예외로 해주는 거예요.</div>
+    <div class="ez-box">그래서 우리가 채우려는 조건 4개가 바로 이 세 문 + α예요: ① 스팀 손님(집단에너지) ② 동서발전 헌 발전소 자리(대체사업권) ③ 태양광(구역전기) + α AI DC용 Grid Solution(허가 명분).</div>
+   </aside>
+   </div>
+     </div>
+     <div class="lng-page" id="en-page-task">
+   <div class="section-label">🧭 4대 추진 과제 현황 — 스팀수요 · 대체사업권 · 재생e · Grid Solution <span style="font-size:10px;font-weight:400;color:#8E9398;">Source: 행캔 '27 Discussion Agenda [추진 현황]</span>
+    <button type="button" class="ez-toggle" onclick="toggleEz('en-task-wrap',this)">💬 쉽게 이해하기 숨기기</button>
+   </div>
+   <div class="ez-wrap" id="en-task-wrap">
+   <div class="ez-formal" style="min-width:0;">
+    <div style="background:#DBE6F1;border-left:4px solid #172A55;border-radius:0 6px 6px 0;padding:8px 14px;margin-bottom:12px;font-size:12px;font-weight:700;color:#142446;">스팀수요 Gap 보완과 동서 CHPS 사업권의 가스복합 전환 협력 추진 · 재생e 확보 및 Grid Solution 제시로 신규 LNG 발전사업 허가 기반 마련</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;">
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:12px 14px;">
+      <div style="font-weight:800;font-size:13px;color:#142446;margin-bottom:2px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>스팀수요 확보</div>
+      <div style="text-align:center;font-size:10.5px;color:#8E9398;border-bottom:1px dashed #D4D6D9;padding-bottom:5px;margin-bottom:10px;">【 구역형 집단e 허가 요건 및 경제성 개선 】</div>
+      <div style="display:grid;grid-template-columns:56px 1fr;gap:8px;margin-bottom:8px;"><div style="background:#DBE6F1;border:1px solid #D4D6D9;border-radius:4px;text-align:center;font-weight:800;font-size:11px;color:#142446;padding:6px 2px;align-self:start;">목표</div><div style="font-size:11px;line-height:1.65;color:#385269;">• 구역형 집단e 허가 요건 수준 스팀 수요 확보<br><span style="color:#8E9398;">– 효율 75% 이상 충족 위해 <strong style="color:#C62828;">335 t/h 필요</strong></span></div></div>
+      <div style="display:grid;grid-template-columns:56px 1fr;gap:8px;margin-bottom:8px;"><div style="background:#DBE6F1;border:1px solid #D4D6D9;border-radius:4px;text-align:center;font-weight:800;font-size:11px;color:#142446;padding:6px 2px;align-self:start;">현황</div><div style="font-size:11px;line-height:1.65;color:#385269;">• LFC / PIC 수요 확보 공감대 형성<br><span style="color:#8E9398;">– 최대 LFC 105 / PIC 120 t/h 공급의향<br>– 열/전기 공급 인프라 구축 Study 중</span><br>• SKE : 동절기만 수요 → 필요 시 수급 선호<br>• 추가 열수요처 조사 (태광 등)</div></div>
+      <div style="display:grid;grid-template-columns:56px 1fr;gap:8px;margin-bottom:8px;"><div style="background:#DBE6F1;border:1px solid #D4D6D9;border-radius:4px;text-align:center;font-weight:800;font-size:11px;color:#142446;padding:6px 2px;align-self:start;">향후 과제</div><div style="font-size:11px;line-height:1.65;color:#385269;">• 필요 스팀 수요 확보<br><span style="color:#8E9398;">– SKE : 부족분 (약 110 t/h) 공급 협의 예정</span><br>• 사업성 개선 위한 추가 수요처 확보<br><span style="color:#8E9398;">– 태광 (20 t/h), 한화솔루션 (60 t/h) Tapping</span><br>• LFC / PIC : 에너지 비용 절감 MOU 연내 체결</div></div>
+     </div>
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:12px 14px;">
+      <div style="font-weight:800;font-size:13px;color:#142446;margin-bottom:2px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span>대체사업권 확보 (동서발전)</div>
+      <div style="text-align:center;font-size:10.5px;color:#8E9398;border-bottom:1px dashed #D4D6D9;padding-bottom:5px;margin-bottom:10px;">【 노후 사업권 연계 신규 허가 확보 】</div>
+      <div style="display:grid;grid-template-columns:56px 1fr;gap:8px;margin-bottom:8px;"><div style="background:#DBE6F1;border:1px solid #D4D6D9;border-radius:4px;text-align:center;font-weight:800;font-size:11px;color:#142446;padding:6px 2px;align-self:start;">목표</div><div style="font-size:11px;line-height:1.65;color:#385269;">• 동서발전 노후 사업권 활용 가스복합 확보<br><span style="color:#8E9398;">– 울산 #2,3 복합 대체 (각 450MW, CHPS 조건부 승인)</span></div></div>
+      <div style="display:grid;grid-template-columns:56px 1fr;gap:8px;margin-bottom:8px;"><div style="background:#DBE6F1;border:1px solid #D4D6D9;border-radius:4px;text-align:center;font-weight:800;font-size:11px;color:#142446;padding:6px 2px;align-self:start;">현황</div><div style="font-size:11px;line-height:1.65;color:#385269;">• <strong>[당사 제안]</strong> CHPS 진입 난항 → 당사 수요 기반 구역형 집단e 공동 추진<br>• <strong>[동서발전]</strong> 울산 內 신규 사업 협력 의지 存<br><span style="color:#8E9398;">– 당사 연료공급 전체, 자체 사업 추진 선호<br>– 울산 사업장 유지 측면에서 협력 긍정적</span><br>• <strong>[기후부]</strong> 노후복합 사업권 전환 사례 존재<br><span style="color:#8E9398;">– 용인집단e(중부 보령) 및 신규 삼성 평택(중부, 남부) 등</span></div></div>
+      <div style="display:grid;grid-template-columns:56px 1fr;gap:8px;margin-bottom:8px;"><div style="background:#DBE6F1;border:1px solid #D4D6D9;border-radius:4px;text-align:center;font-weight:800;font-size:11px;color:#142446;padding:6px 2px;align-self:start;">향후 과제</div><div style="font-size:11px;line-height:1.65;color:#385269;">• AI DC 및 산업체 전력/열 수요 확보 + 동서 협력 구체화<br><span style="color:#8E9398;">– 동서발전 울산 신규사업 <strong style="color:#C62828;">MOU 추진 (11월 內)</strong><br>– 기후부 확인 : CHPS 조건부 승인 → 구역형 집단e 전환 가능 여부</span></div></div>
+     </div>
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:12px 14px;">
+      <div style="font-weight:800;font-size:13px;color:#142446;margin-bottom:2px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span>재생 e (태양광 개발)</div>
+      <div style="text-align:center;font-size:10.5px;color:#8E9398;border-bottom:1px dashed #D4D6D9;padding-bottom:5px;margin-bottom:10px;">【 정부 인허가 요구 조건 충족 】</div>
+      <div style="display:grid;grid-template-columns:56px 1fr;gap:8px;margin-bottom:8px;"><div style="background:#DBE6F1;border:1px solid #D4D6D9;border-radius:4px;text-align:center;font-weight:800;font-size:11px;color:#142446;padding:6px 2px;align-self:start;">목표</div><div style="font-size:11px;line-height:1.65;color:#385269;">• 허가 요건 충족용 재생e(태양광) 확보<br><span style="color:#8E9398;">– 울산기지 등 유휴부지 Captive 태양광 발전 구축<br>– 지붕형·타 지역 태양광 실적 인정 추진 (외부 협력)</span></div></div>
+      <div style="display:grid;grid-template-columns:56px 1fr;gap:8px;margin-bottom:8px;"><div style="background:#DBE6F1;border:1px solid #D4D6D9;border-radius:4px;text-align:center;font-weight:800;font-size:11px;color:#142446;padding:6px 2px;align-self:start;">경과</div><div style="font-size:11px;line-height:1.65;color:#385269;">• 울산 기지 내 태양광 설치 검토<br><span style="color:#8E9398;">– 최대 100MW 설치 가능. 단, 토지 용도 변경 필요<br>– 미포 산단 녹지 부족 → 대체녹지 요구 가능성 (해소방안 필요)<br>– Cavern 운영안정성 기술 검토 中</span></div></div>
+      <div style="display:grid;grid-template-columns:56px 1fr;gap:8px;margin-bottom:8px;"><div style="background:#DBE6F1;border:1px solid #D4D6D9;border-radius:4px;text-align:center;font-weight:800;font-size:11px;color:#142446;padding:6px 2px;align-self:start;">추진 계획</div><div style="font-size:11px;line-height:1.65;color:#385269;">• 울산기지 태양광 추진 방안 강구<br>• 민간·산단공 협력, 지붕형 태양광 및 신규 유휴부지 확보</div></div>
+     </div>
+     <div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:10px;padding:12px 14px;">
+      <div style="font-weight:800;font-size:13px;color:#142446;margin-bottom:2px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">+α</span>Grid Solution</div>
+      <div style="text-align:center;font-size:10.5px;color:#8E9398;border-bottom:1px dashed #D4D6D9;padding-bottom:5px;margin-bottom:10px;">【 신규 LNG 발전 당위성 확보 】</div>
+      <div style="display:grid;grid-template-columns:56px 1fr;gap:8px;margin-bottom:8px;"><div style="background:#DBE6F1;border:1px solid #D4D6D9;border-radius:4px;text-align:center;font-weight:800;font-size:11px;color:#142446;padding:6px 2px;align-self:start;">목표</div><div style="font-size:11px;line-height:1.65;color:#385269;">• AI DC 부하변동 대응 유연성 발전 Package 개발<br><span style="color:#8E9398;">– 계통 안정성 고려 부하 변동 최소화 필요<br>– ESS-LNG발전-재생e 다층 구조 적용</span></div></div>
+      <div style="display:grid;grid-template-columns:56px 1fr;gap:8px;margin-bottom:8px;"><div style="background:#DBE6F1;border:1px solid #D4D6D9;border-radius:4px;text-align:center;font-weight:800;font-size:11px;color:#142446;padding:6px 2px;align-self:start;">경과</div><div style="font-size:11px;line-height:1.65;color:#385269;">• 전문 용역으로 계통영향 분석 및 최적 구성안 도출 中<br><span style="color:#8E9398;">– 미국·국내 대규모 부하 계통 규정 및 사례 조사 완료<br>– AI DC 운영 Profile 방법론·파라미터 구성 완료<br>– 설비 제원·EMS/제약조건 초안 설정</span></div></div>
+      <div style="display:grid;grid-template-columns:56px 1fr;gap:8px;margin-bottom:8px;"><div style="background:#DBE6F1;border:1px solid #D4D6D9;border-radius:4px;text-align:center;font-weight:800;font-size:11px;color:#142446;padding:6px 2px;align-self:start;">추진 계획</div><div style="font-size:11px;line-height:1.65;color:#385269;">• 최적 Package 구성 및 계통영향 완화 검증<br><span style="color:#8E9398;">– Package 유무별 연계점 부하 변동성·망 적정성 비교<br>– 유연성 기여도·시나리오별 경제성 분석 → 최적안 도출</span></div></div>
+     </div>
+    </div>
+    <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:8px 14px;margin-top:12px;font-size:11px;color:#385269;line-height:1.7;">
+     ※ 동서발전과의 기존 CEC #4 탱크 계약·부속합의 현황은 <a href="javascript:void(0)" onclick="switchSub('biz','lng',document.querySelector('#sub-biz .sub-tab'));switchLng('ewp',document.getElementById('lng-tab-ewp'))" style="color:#172A55;font-weight:700;">LNG 탭 [동서발전 수요 불확실성 및 대응]</a> 참조. (LNG 탭은 '26.6 기준이라 CHPS 관련 서술이 본 자료와 다를 수 있음)
+    </div>
+   </div>
+   <aside class="ez-note">
+    <div class="ez-title">📌 그래서 뭘 하고 있나: 조건 4개 채우기</div>
+    <div class="ez-sub">추진현황을 구어체로 풀어쓴 메모예요.</div>
+    <h4>① 스팀 수요 확보 — "뜨거운 물 사줄 손님 찾기"</h4>
+    <p>· 집단에너지 허가를 받으려면 <strong>스팀 335t/h</strong>를 팔아야 해요(효율 75% 기준).<br>· 지금 확보: LFC 105 + PIC 120 = <strong>225t/h. 110t/h 부족.</strong><br>· 부족분은 SKE(겨울에만 필요), 태광(20), 한화솔루션(60)에 영업 중.</p>
+    <h4>② 대체사업권 확보 — "동서발전 헌 발전소 자리 빌리기"</h4>
+    <p>· 동서발전 울산 #2·#3 노후 복합(각 450MW)을 닫고 가스복합으로 바꾸는 사업권을 같이 쓰자는 것.<br>· 동서발전은 울산에 뭔가 계속 하고 싶어서 협력 의지 있음. <strong>11월 중 MOU 목표.</strong><br>· 다만 동서발전은 <strong>"연료는 네가 다 대고, 사업은 내가 할래"</strong>라는 입장이라 구조 협상이 필요해요.</p>
+    <h4>③ 재생에너지 확보 — "태양광 끼워 넣기"</h4>
+    <p>· 울산 기지 유휴부지에 <strong>최대 100MW 태양광</strong> 가능.<br>· 걸림돌: 토지 용도 변경, 미포산단 녹지 부족으로 대체녹지 요구 가능성, Cavern(지하 저장소) 위 안전성.</p>
+    <h4>+α Grid Solution — "AI 데이터센터용 똑똑한 발전 패키지"</h4>
+    <p>· AI 데이터센터는 전기를 확 썼다 확 줄였다 해서 전력망에 부담을 줘요.<br>· ESS + LNG + 재생에너지를 묶어서 부하 변동을 흡수하는 패키지를 제안하면 <strong>"우리 발전소는 계통에 도움이 된다"</strong>는 허가 명분이 생깁니다. 지금 전문 용역 진행 중.</p>
+   </aside>
+   </div>
+     </div>
+     <div class="lng-page" id="en-page-econ">
+   <div class="section-label">💹 경제성 Revisit — 추가 스팀수요처 확보 필수 <span style="font-size:10px;font-weight:400;color:#8E9398;">Source: 행캔 '27 [참고] Discussion Agenda (경제성 Revisit)</span>
+    <button type="button" class="ez-toggle" onclick="toggleEz('en-econ-wrap',this)">💬 쉽게 이해하기 숨기기</button>
+   </div>
+   <div class="ez-wrap" id="en-econ-wrap">
+   <div class="ez-formal" style="min-width:0;">
+    <div style="background:#DBE6F1;border-left:4px solid #172A55;border-radius:0 6px 6px 0;padding:8px 14px;margin-bottom:12px;font-size:12px;font-weight:700;color:#142446;">신규 LNG 발전사업 경제성 확보를 위해 <strong style="color:#C62828;">추가 스팀수요처 확보 필수</strong> — 스팀 판매 수준에 따라 P-IRR 3.6% ~ 8.4%</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;">
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:12px 14px;font-size:11px;line-height:1.65;color:#385269;">
+      <div style="font-weight:800;color:#142446;font-size:12.5px;margin-bottom:4px;">전력/스팀 주요 가정사항 Update</div>
+      <div style="margin-bottom:4px;"><strong style="color:#142446;">스팀</strong> — 수요처 최신 스팀수요 Update (LFC/PIC)<br><span style="color:#8E9398;">– LFC, 에코비트 CO₂ Free 스팀 미 대체 가정 (약 60t/hr)<br>– 부족 스팀 수요는 SKE 및 타 수요처 (태광, 한화솔루션) 확보 추진</span></div>
+      <div style="background:#EEF3F8;border:1px dashed #D4D6D9;border-radius:6px;padding:6px 10px;margin-bottom:10px;"><div style="font-size:10px;color:#8E9398;text-align:right;">스팀 수요¹⁾ · 단위: t/hr</div><div style="display:flex;align-items:center;gap:10px;margin:6px 0;"><div style="width:52px;font-weight:700;font-size:11px;color:#142446;">Revisit</div><div style="flex:1;display:flex;height:30px;border-radius:4px;overflow:hidden;background:#EDEDED;"><div title="LFC 76" style="width:38.8%;background:#5A86B8;color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;">LFC 76</div><div title="PIC 120" style="width:61.2%;background:#A9C8E8;color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;">PIC 120</div></div><div style="width:70px;font-weight:800;font-size:13px;color:#142446;">196 <span style="font-size:10px;font-weight:400;color:#8E9398;">t/hr</span></div></div><div style="font-size:10px;color:#8E9398;text-align:right;margin-top:2px;">LFC 76 · PIC 120 = 196 t/hr</div></div>
+      <div style="margin-bottom:4px;"><strong style="color:#142446;">전기</strong> — 전력 판가 (LMP효과, AI DC) Update<br><span style="color:#8E9398;">– LMP (15원/kWh 할인 – 5%) + AI DC(일반용 – 3.7%)</span></div>
+      <div style="background:#EEF3F8;border:1px dashed #D4D6D9;border-radius:6px;padding:6px 10px;"><div style="font-size:10px;color:#8E9398;text-align:right;">전력 수요 · 단위: MW</div><div style="display:flex;align-items:center;gap:10px;margin:6px 0;"><div style="width:52px;font-weight:700;font-size:11px;color:#142446;">Revisit</div><div style="flex:1;display:flex;height:30px;border-radius:4px;overflow:hidden;background:#EDEDED;"><div title="LFC 160" style="width:32.0%;background:#172A55;color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;">LFC 160</div><div title="PIC 25" style="width:5.0%;background:#5A86B8;color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;">PIC 25</div><div title="AI DC 315" style="width:63.0%;background:#A9C8E8;color:white;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;">AI DC 315</div></div><div style="width:70px;font-weight:800;font-size:13px;color:#142446;">500 <span style="font-size:10px;font-weight:400;color:#8E9398;">MW</span></div></div><div style="font-size:10px;color:#8E9398;text-align:right;margin-top:2px;">LFC 160 · PIC 25 · AI DC 315 = 500 MW</div></div>
+     </div>
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:12px 14px;font-size:11px;line-height:1.65;color:#385269;">
+      <div style="font-weight:800;color:#142446;font-size:12.5px;margin-bottom:4px;">경제성 Revisit²⁾</div>
+      <div style="margin-bottom:6px;"><strong style="color:#142446;">P-IRR</strong> — 스팀 판매 수준에 따라 <strong style="color:#C62828;">P-IRR 3.6% ~ 8.4%</strong> 수준 예상<br><span style="color:#8E9398;">– 부분부하 운전 등의 비효율 개선을 위해 스팀수요처 확보 필수</span></div>
+      <table style="width:100%;border-collapse:collapse;font-size:11px;text-align:center;margin-bottom:10px;">
+       <tr style="background:#DBE6F1;"><th style="padding:5px;border:1px solid #D4D6D9;">시나리오</th><th style="padding:5px;border:1px solid #D4D6D9;">생산량</th><th style="padding:5px;border:1px solid #D4D6D9;">P-IRR</th><th style="padding:5px;border:1px solid #D4D6D9;">LCOE (원/kWh)</th></tr>
+       <tr><td style="padding:5px;border:1px solid #D4D6D9;font-weight:700;">Best</td><td style="padding:5px;border:1px solid #D4D6D9;">스팀 최대 판매<br><span style="color:#8E9398;">500MW+274t/hr</span></td><td style="padding:5px;border:1px solid #D4D6D9;font-weight:800;color:#172A55;">8.4%</td><td style="padding:5px;border:1px solid #D4D6D9;">136.6</td></tr>
+       <tr style="background:#FFF8B8;"><td style="padding:5px;border:1px solid #D4D6D9;font-weight:700;">Base</td><td style="padding:5px;border:1px solid #D4D6D9;">기본 수요처 공급 (LFC/PIC)<br><span style="color:#8E9398;">500MW+161t/hr</span></td><td style="padding:5px;border:1px solid #D4D6D9;font-weight:800;color:#172A55;">6.9%</td><td style="padding:5px;border:1px solid #D4D6D9;">143.8</td></tr>
+       <tr><td style="padding:5px;border:1px solid #D4D6D9;font-weight:700;">Worst</td><td style="padding:5px;border:1px solid #D4D6D9;">전기 단독 판매<br><span style="color:#8E9398;">500MW</span></td><td style="padding:5px;border:1px solid #D4D6D9;font-weight:800;color:#C62828;">3.6%</td><td style="padding:5px;border:1px solid #D4D6D9;">156.3</td></tr>
+      </table>
+      <div style="margin-bottom:4px;"><strong style="color:#142446;">민감도</strong> — 유가 $10 증가 시, <strong style="color:#C62828;">P-IRR 약 3%p 감소</strong> (유가 $70 기준)</div>
+      <div style="background:#EEF3F8;border:1px dashed #D4D6D9;border-radius:6px;padding:6px 8px;"><div style="font-size:10px;color:#8E9398;text-align:center;">【 Base 시나리오 유가 민감도 】 <span style="font-weight:400;">(가로축: 유가 $/bbl)</span></div><svg viewBox="0 0 520 185" style="width:100%;height:auto;display:block;font-family:inherit;"><line x1="60" y1="150" x2="500" y2="150" stroke="#D4D6D9"/><line x1="60" y1="30" x2="60" y2="150" stroke="#D4D6D9"/><text x="12" y="90" transform="rotate(-90 12 90)" text-anchor="middle" font-size="10" fill="#8E9398">Project IRR</text><polyline points="60.0,35.6 148.0,53.2 236.0,73.2 324.0,94.8 412.0,119.6 500.0,150.0" fill="none" stroke="#5A86B8" stroke-width="2.5" stroke-dasharray="0"/><circle cx="60.0" cy="35.6" r="4" fill="white" stroke="#172A55" stroke-width="2"/><text x="60.0" y="25.6" text-anchor="middle" font-size="11" font-weight="700" fill="#142446">14.3%</text><circle cx="148.0" cy="53.2" r="4" fill="white" stroke="#172A55" stroke-width="2"/><text x="148.0" y="43.2" text-anchor="middle" font-size="11" font-weight="700" fill="#142446">12.1%</text><circle cx="236.0" cy="73.2" r="4" fill="white" stroke="#172A55" stroke-width="2"/><text x="236.0" y="63.2" text-anchor="middle" font-size="11" font-weight="700" fill="#142446">9.6%</text><circle cx="324.0" cy="94.8" r="4" fill="white" stroke="#172A55" stroke-width="2"/><text x="324.0" y="84.8" text-anchor="middle" font-size="11" font-weight="700" fill="#142446">6.9%</text><circle cx="412.0" cy="119.6" r="4" fill="white" stroke="#172A55" stroke-width="2"/><text x="412.0" y="109.6" text-anchor="middle" font-size="11" font-weight="700" fill="#142446">3.8%</text><circle cx="500.0" cy="150.0" r="4" fill="#D4D6D9" stroke="#8E9398" stroke-width="2"/><text x="500.0" y="140.0" text-anchor="middle" font-size="11" font-weight="700" fill="#C62828">n/a</text><text x="60.0" y="172" text-anchor="middle" font-size="11" fill="#8E9398">$40</text><text x="148.0" y="172" text-anchor="middle" font-size="11" fill="#8E9398">$50</text><text x="236.0" y="172" text-anchor="middle" font-size="11" fill="#8E9398">$60</text><text x="324.0" y="172" text-anchor="middle" font-size="11" fill="#8E9398">$70</text><text x="412.0" y="172" text-anchor="middle" font-size="11" fill="#8E9398">$80</text><text x="500.0" y="172" text-anchor="middle" font-size="11" fill="#8E9398">$90</text><line x1="324.0" y1="30" x2="324.0" y2="150" stroke="#E0B000" stroke-dasharray="4 3"/><text x="324.0" y="24" text-anchor="middle" font-size="10" fill="#142446">Base $70</text></svg></div>
+     </div>
+    </div>
+    <div style="font-size:10px;color:#8E9398;margin-top:10px;line-height:1.6;">1) 동절기 기준, 계절별 스팀 공급량 (PIC/LFC, t/h): 동절기 120 / 76, 하절기 80 / 59, 춘추계 90 / 65<br>2) 가정사항: 유가 $70/bbl, Slope 13.2%, Constant 0.2$, 전기요금(산업용) 158.7원/kWh (=(182원-LMP 효과 15원)*95%), 전기요금(일반용) 149.3원(=155원-기금 2.7%-할인 1%), 배출권 3만원/톤, WACC 5.5%, CAPEX 1.4조, 환율 1,384원/$, LNG 단독 경제성 기준이며 태양광 및 ESS 미포함 기준</div>
+   </div>
+   <aside class="ez-note">
+    <div class="ez-title">📌 돈은 되나: 스팀을 얼마나 파느냐에 달림</div>
+    <div class="ez-sub">경제성을 구어체로 풀어쓴 메모예요.</div>
+    <table>
+     <tr><th style="width:20%;">시나리오</th><th>뭘 파나</th><th style="width:18%;">IRR</th></tr>
+     <tr><td><strong>Best</strong></td><td>전기 500MW + 스팀 274t/h (최대)</td><td><strong>8.4%</strong></td></tr>
+     <tr><td><strong>Base</strong></td><td>전기 500MW + 스팀 161t/h (LFC/PIC)</td><td><strong>6.9%</strong></td></tr>
+     <tr><td><strong>Worst</strong></td><td>전기만 500MW</td><td><strong style="color:#C62828;">3.6%</strong></td></tr>
+    </table>
+    <p>스팀 손님이 많을수록 수익이 좋아져요. <strong>전기만 팔면 3.6%라 사실상 안 되는 사업.</strong></p>
+    <p><strong>유가 민감도:</strong> 유가 $10 오를 때마다 IRR 약 3%p 하락. $90이면 계산 불가(n/a).</p>
+    <div class="ez-box">[참고] 전력 수요 500MW 중 <strong>AI DC가 315MW로 제일 커요.</strong> 그래서 제목이 "AI/반도체향"인 겁니다.</div>
+   </aside>
+   </div>
+     </div>
+     <div class="lng-page" id="en-page-etc">
    <div class="section-label">🧩 집단에너지사업 기초 개념</div>
-   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.8;">
-    <div style="background:#e8f5e9;border-radius:8px;padding:12px 16px;margin-bottom:14px;">
+   <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:#385269;line-height:1.8;">
+    <div style="background:#EEF3F8;border-radius:8px;padding:12px 16px;margin-bottom:14px;">
      <strong>집단에너지사업</strong>이란 하나의 발전소에서 <strong>전기와 스팀(열)을 동시에 생산</strong>하여 인근 산업단지에 공급하는 에너지 사업입니다.<br>
      일반 발전소는 열(약 60~70%)을 냉각탑으로 낭비하지만, 열병합발전(CHP)은 폐열을 스팀으로 공급 → <strong>종합효율 80~90%</strong> (일반 발전 35~45% 대비)
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
-     <div style="background:#e3f2fd;border-radius:8px;padding:10px 12px;">
-      <div style="font-weight:700;color:#1565c0;margin-bottom:4px;">집단에너지 면허만 보유</div>
+     <div style="background:#DBE6F1;border-radius:8px;padding:10px 12px;">
+      <div style="font-weight:700;color:#172A55;margin-bottom:4px;">집단에너지 면허만 보유</div>
       <div style="font-size:11px;line-height:1.7;">✅ 열 공급 의무<br>✅ 전기는 부수적 생산 가능<br>❌ 전기 직접 판매 불가 (KPX 통해 도매만)</div>
       <div style="font-size:10px;color:#888;margin-top:4px;">예: 한국지역난방공사</div>
      </div>
-     <div style="background:#e8f0fc;border-radius:8px;padding:10px 12px;">
-      <div style="font-weight:700;color:var(--sk-blue);margin-bottom:4px;">집단에너지 + 구역전기 (두 면허)</div>
+     <div style="background:#DBE6F1;border-radius:8px;padding:10px 12px;">
+      <div style="font-weight:700;color:#172A55;margin-bottom:4px;">집단에너지 + 구역전기 (두 면허)</div>
       <div style="font-size:11px;line-height:1.7;">✅ 열 공급 의무<br>✅ <strong>구역 내 전기 직접 판매 권한</strong><br>✅ AIDC·공장에 장기 PPA 직판</div>
       <div style="font-size:10px;color:#888;margin-top:4px;">예: SKMU, 한주 (SK가스 목표 모델)</div>
      </div>
     </div>
-    <div style="background:#fef3c7;border-radius:6px;padding:8px 12px;font-size:11px;color:#92400e;">
+    <div style="background:#FFF8B8;border-radius:6px;padding:8px 12px;font-size:11px;color:#C62828;">
      ※ SK가스가 추진하는 것은 <strong>의제 구역전기</strong> (500MW 이하) — 집단에너지 사업자가 추가로 받는 전기 직판 허가
     </div>
    </div>
 
+
+   <details id="en-lookback-26" style="background:white;border:1px solid #D4D6D9;border-radius:10px;margin-bottom:20px;">
+    <summary style="cursor:pointer;padding:14px 18px;font-size:13px;font-weight:700;color:#385269;display:flex;align-items:center;gap:8px;flex-wrap:wrap;list-style:none;">
+     <span style="font-size:14px;">📂</span> '26.05 기존 모델 아카이브 — 구역전기 사업 개요 · 전력 수급 대안 비교 · Hybrid 모델(가스터빈 430 + 스팀터빈 200 자가발전)
+     <span style="display:inline-block;background:#8E9398;color:white;border-radius:9999px;padding:1px 8px;font-size:10px;font-weight:700;">참고용 · 현재 주전략 아님</span>
+     <span style="font-size:11px;font-weight:400;color:#8E9398;margin-left:auto;">▼ 클릭하여 펼치기</span>
+    </summary>
+    <div style="padding:4px 18px 18px;font-size:12px;color:#385269;line-height:1.7;border-top:1px solid #EDEDED;">
+     <div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:6px;padding:8px 12px;margin:12px 0;font-size:11px;color:#142446;">⚠ 아래는 <strong>'26.05 G&amp;P 브레인스토밍 기준</strong> 원문입니다. 이후 '26.11 행캔에서 전략이 "허가 조건 4개 채우기 + 우회 대안 3개"로 재편되었고, Hybrid 모델의 <strong>"수요처 스팀터빈 자가발전"은 우회 대안 ②(자가발전)로 격하</strong>되어 Key Hurdle(Tenant 신뢰·하이퍼 설득 명분·정부 환평 제한)이 붙었습니다. 전력 가정도 630MW → 500MW(LFC 160/PIC 25/AI DC 315)로 바뀌었습니다.</div>
+<div style="background:#EDEDED;border:1px dashed #8E9398;border-radius:6px;padding:6px 12px;margin:14px 0 8px;font-size:10px;color:#8E9398;">📦 아카이브 원문 — '26.05 구역전기 사업 개요 · 전력 수급 대안 비교 · Hybrid 모델 구조 · AIDC向 Hybrid Model · 핵심 메커니즘 · 도전 요소 · 정부 지원 사항</div>
    <div class="section-label">⚡ 사업 개요</div>
-   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.8;">
+   <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:#385269;line-height:1.8;">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:14px;">
-     <div style="background:var(--sk-blue-light);border-radius:8px;padding:12px 14px;">
-      <div style="font-weight:700;color:var(--sk-blue);margin-bottom:6px;">구역전기란?</div>
+     <div style="background:#DBE6F1;border-radius:8px;padding:12px 14px;">
+      <div style="font-weight:700;color:#172A55;margin-bottom:6px;">구역전기란?</div>
       <div>정부 허가를 받아 특정 구역 내에서 SK가스가 <strong>전기를 직접 생산·판매</strong>하는 사업. 현재 UGPS는 SMP 기준으로 한전에 팔지만, 구역전기 사업자가 되면 <strong>데이터센터·공장에 장기 PPA로 직접 판매</strong> 가능 → 마진 대폭 개선.</div>
      </div>
-     <div style="background:#fef3c7;border-radius:8px;padding:12px 14px;">
-      <div style="font-weight:700;color:#92400e;margin-bottom:6px;">왜 하나?</div>
+     <div style="background:#FFF8B8;border-radius:8px;padding:12px 14px;">
+      <div style="font-weight:700;color:#C62828;margin-bottom:6px;">왜 하나?</div>
       <div>① LNG #5 탱크 물량(발전용) 확보<br>② 울산 석화단지·AI DC 고객을 SK가스 생태계에 Lock-in</div>
      </div>
     </div>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;">
-     <div style="background:white;border:1px solid var(--gray-200);border-radius:6px;padding:10px 12px;font-size:11px;">
-      <div style="font-weight:700;color:var(--red);margin-bottom:4px;">주요 리스크</div>
-      <div style="color:var(--gray-700);">① 집단에너지 인허가 절차 복잡 (Step 1~8, KEA 검토·기후에너지환경부 허가)<br>② 대형 스팀 수요처 확보 (Hybrid 모델의 핵심 — 충분한 수요처 없으면 사업 성립 어려움)<br>④ LCOE 경쟁력 (경쟁력 있는 LCOE 확보가 어려울 경우 마진폭 제한)</div>
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:6px;padding:10px 12px;font-size:11px;">
+      <div style="font-weight:700;color:#C62828;margin-bottom:4px;">주요 리스크</div>
+      <div style="color:#385269;">① 집단에너지 인허가 절차 복잡 (Step 1~8, KEA 검토·기후에너지환경부 허가)<br>② 대형 스팀 수요처 확보 (Hybrid 모델의 핵심 — 충분한 수요처 없으면 사업 성립 어려움)<br>④ LCOE 경쟁력 (경쟁력 있는 LCOE 확보가 어려울 경우 마진폭 제한)</div>
      </div>
-     <div style="background:white;border:1px solid var(--gray-200);border-radius:6px;padding:10px 12px;font-size:11px;">
-      <div style="font-weight:700;color:var(--green);margin-bottom:4px;">홈그라운드 이점</div>
-      <div style="color:var(--gray-700);">울산 LNG 터미널 + 배관인프라 기보유</div>
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:6px;padding:10px 12px;font-size:11px;">
+      <div style="font-weight:700;color:#172A55;margin-bottom:4px;">홈그라운드 이점</div>
+      <div style="color:#385269;">울산 LNG 터미널 + 배관인프라 기보유</div>
      </div>
     </div>
    </div>
 
    
    <!-- 전력수급 대안 비교 -->
-   <div class="section-label">&#128202; 전력 수급 대안 비교 <span style="font-size:11px;font-weight:400;color:#6b7280;">(G&amp;P본부 브레인스토밍, 2026-05 기준)</span></div>
-   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;overflow:hidden;margin-bottom:20px;">
+   <div class="section-label">&#128202; 전력 수급 대안 비교 <span style="font-size:11px;font-weight:400;color:#8E9398;">(G&amp;P본부 브레인스토밍, 2026-05 기준)</span></div>
+   <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;overflow:hidden;margin-bottom:20px;">
     <table style="width:100%;border-collapse:collapse;font-size:12px;">
      <thead>
       <tr style="background:#f8fafc;">
-       <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #e5e7eb;color:#374151;width:22%;">대안</th>
-       <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #e5e7eb;color:#374151;width:40%;">내용</th>
-       <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #e5e7eb;color:#374151;width:38%;">검토 결과</th>
+       <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #D4D6D9;color:#385269;width:22%;">대안</th>
+       <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #D4D6D9;color:#385269;width:40%;">내용</th>
+       <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #D4D6D9;color:#385269;width:38%;">검토 결과</th>
       </tr>
      </thead>
      <tbody>
-      <tr style="border-bottom:1px solid #f3f4f6;">
-       <td style="padding:9px 12px;font-weight:600;color:#374151;">&#9312; 전력 직접구매 + CfD</td>
-       <td style="padding:9px 12px;color:#6b7280;">전력 직접 구매 후 CfD와 연결하여 전력 가격 헤징</td>
-       <td style="padding:9px 12px;color:#6b7280;">안정적 요금제 가능하나 부대비용 높아 절감 필요</td>
+      <tr style="border-bottom:1px solid #A9C8E8;">
+       <td style="padding:9px 12px;font-weight:600;color:#385269;">&#9312; 전력 직접구매 + CfD</td>
+       <td style="padding:9px 12px;color:#8E9398;">전력 직접 구매 후 CfD와 연결하여 전력 가격 헤징</td>
+       <td style="padding:9px 12px;color:#8E9398;">안정적 요금제 가능하나 부대비용 높아 절감 필요</td>
       </tr>
-      <tr style="border-bottom:1px solid #f3f4f6;background:#fafafa;">
-       <td style="padding:9px 12px;font-weight:600;color:#374151;">&#9313; 신규 구역형 집단에너지</td>
-       <td style="padding:9px 12px;color:#6b7280;">LNG 수요 창출 → 매력적</td>
-       <td style="padding:9px 12px;color:#dc2626;">기후부 반대 입장으로 추진 난항</td>
+      <tr style="border-bottom:1px solid #A9C8E8;background:#EEF3F8;">
+       <td style="padding:9px 12px;font-weight:600;color:#385269;">&#9313; 신규 구역형 집단에너지</td>
+       <td style="padding:9px 12px;color:#8E9398;">LNG 수요 창출 → 매력적</td>
+       <td style="padding:9px 12px;color:#C62828;">기후부 반대 입장으로 추진 난항</td>
       </tr>
-      <tr style="border-bottom:1px solid #f3f4f6;background:#eff6ff;">
-       <td style="padding:9px 12px;font-weight:700;color:#1d4ed8;">&#9314; Hybrid 모델 &#9733;</td>
-       <td style="padding:9px 12px;color:#1d4ed8;font-weight:600;">가스터빈(발전) + 스팀터빈(수요처 자가발전) 분리<br>500MW 이상 / 자가발전 포함 시 약 600MW<br>초기 LCOE 약 120원대</td>
-       <td style="padding:9px 12px;"><span style="display:inline-block;background:#1d4ed8;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">가장 유력한 대안</span></td>
+      <tr style="border-bottom:1px solid #A9C8E8;background:#DBE6F1;">
+       <td style="padding:9px 12px;font-weight:700;color:#172A55;">&#9314; Hybrid 모델 &#9733;</td>
+       <td style="padding:9px 12px;color:#172A55;font-weight:600;">가스터빈(발전) + 스팀터빈(수요처 자가발전) 분리<br>500MW 이상 / 자가발전 포함 시 약 600MW<br>초기 LCOE 약 120원대</td>
+       <td style="padding:9px 12px;"><span style="display:inline-block;background:#172A55;color:white;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">가장 유력한 대안</span></td>
       </tr>
-      <tr style="border-bottom:1px solid #f3f4f6;">
-       <td style="padding:9px 12px;font-weight:600;color:#374151;">&#9315; 기존 사업자 활용</td>
-       <td style="padding:9px 12px;color:#6b7280;">기존 집단에너지 사업자와 협력</td>
-       <td style="padding:9px 12px;color:#dc2626;">공급 가능 전력량 부족 — 현실성 낮음</td>
+      <tr style="border-bottom:1px solid #A9C8E8;">
+       <td style="padding:9px 12px;font-weight:600;color:#385269;">&#9315; 기존 사업자 활용</td>
+       <td style="padding:9px 12px;color:#8E9398;">기존 집단에너지 사업자와 협력</td>
+       <td style="padding:9px 12px;color:#C62828;">공급 가능 전력량 부족 — 현실성 낮음</td>
       </tr>
       <tr>
-       <td style="padding:9px 12px;font-weight:600;color:#374151;">&#9316; 자가발전</td>
-       <td style="padding:9px 12px;color:#6b7280;">법적으로 가능하나 LNG 기반 제약 다수</td>
-       <td style="padding:9px 12px;color:#d97706;">솔루션으로 미확정</td>
+       <td style="padding:9px 12px;font-weight:600;color:#385269;">&#9316; 자가발전</td>
+       <td style="padding:9px 12px;color:#8E9398;">법적으로 가능하나 LNG 기반 제약 다수</td>
+       <td style="padding:9px 12px;color:#C62828;">솔루션으로 미확정</td>
       </tr>
      </tbody>
     </table>
@@ -2842,67 +3162,67 @@ th.curr { background: #f06400 !important; }
    <div class="section-label">&#128295; 기존 모델 vs Hybrid 모델 구조 비교</div>
    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
     <!-- 기존 모델 -->
-    <div style="background:white;border:2px solid #e5e7eb;border-radius:12px;padding:18px;">
-     <div style="font-size:12px;font-weight:700;color:#6b7280;margin-bottom:14px;text-align:center;background:#f3f4f6;padding:6px;border-radius:6px;">&#9940; 기존 집단에너지 모델 (500MW 한계)</div>
+    <div style="background:white;border:2px solid #D4D6D9;border-radius:12px;padding:18px;">
+     <div style="font-size:12px;font-weight:700;color:#8E9398;margin-bottom:14px;text-align:center;background:#DBE6F1;padding:6px;border-radius:6px;">&#9940; 기존 집단에너지 모델 (500MW 한계)</div>
      <!-- 발전소 박스 -->
-     <div style="border:2px solid #9ca3af;border-radius:8px;padding:12px;margin-bottom:10px;background:#f9fafb;">
-      <div style="font-size:11px;font-weight:700;color:#374151;margin-bottom:8px;text-align:center;">SK가스 발전사업자 (1 Package)</div>
+     <div style="border:2px solid #D4D6D9;border-radius:8px;padding:12px;margin-bottom:10px;background:#EEF3F8;">
+      <div style="font-size:11px;font-weight:700;color:#385269;margin-bottom:8px;text-align:center;">SK가스 발전사업자 (1 Package)</div>
       <div style="display:flex;align-items:center;justify-content:center;gap:4px;flex-wrap:wrap;">
-       <div style="background:#374151;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#128293;<br>가스터빈<br>430MW</div>
-       <div style="font-size:16px;color:#9ca3af;">+</div>
-       <div style="background:#374151;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#128167;<br>보일러<br></div>
-       <div style="font-size:16px;color:#9ca3af;">+</div>
-       <div style="background:#374151;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#9881;<br>스팀터빈<br>200MW</div>
+       <div style="background:#385269;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#128293;<br>가스터빈<br>430MW</div>
+       <div style="font-size:16px;color:#8E9398;">+</div>
+       <div style="background:#385269;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#128167;<br>보일러<br></div>
+       <div style="font-size:16px;color:#8E9398;">+</div>
+       <div style="background:#385269;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#9881;<br>스팀터빈<br>200MW</div>
       </div>
      </div>
      <!-- 출력 -->
      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-      <div style="background:#dbeafe;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;">
-       <div style="font-weight:700;color:#1d4ed8;">&#9889; 전기 판매</div>
+      <div style="background:#EEF3F8;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;">
+       <div style="font-weight:700;color:#172A55;">&#9889; 전기 판매</div>
        <div style="color:#1e3a5f;margin-top:2px;">500MW 제한</div>
-       <div style="font-size:10px;color:#dc2626;margin-top:2px;">&#9888; 630MW CAPA인데<br>500MW만 가능</div>
+       <div style="font-size:10px;color:#C62828;margin-top:2px;">&#9888; 630MW CAPA인데<br>500MW만 가능</div>
       </div>
-      <div style="background:#fef3c7;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;">
-       <div style="font-weight:700;color:#92400e;">&#127747; 스팀 공급</div>
-       <div style="color:#78350f;margin-top:2px;">스팀 수요처 필요</div>
-       <div style="font-size:10px;color:#dc2626;margin-top:2px;">&#9888; 대형 수요처<br>확보 난항</div>
+      <div style="background:#FFF8B8;border-radius:6px;padding:8px 10px;text-align:center;font-size:11px;">
+       <div style="font-weight:700;color:#C62828;">&#127747; 스팀 공급</div>
+       <div style="color:#142446;margin-top:2px;">스팀 수요처 필요</div>
+       <div style="font-size:10px;color:#C62828;margin-top:2px;">&#9888; 대형 수요처<br>확보 난항</div>
       </div>
      </div>
     </div>
     <!-- Hybrid 모델 -->
-    <div style="background:white;border:2px solid #1d4ed8;border-radius:12px;padding:18px;">
-     <div style="font-size:12px;font-weight:700;color:white;margin-bottom:14px;text-align:center;background:#1d4ed8;padding:6px;border-radius:6px;">&#9989; Hybrid 모델 (630MW 풀 CAPA)</div>
+    <div style="background:white;border:2px solid #5A86B8;border-radius:12px;padding:18px;">
+     <div style="font-size:12px;font-weight:700;color:white;margin-bottom:14px;text-align:center;background:#172A55;padding:6px;border-radius:6px;">&#9989; Hybrid 모델 (630MW 풀 CAPA)</div>
      <!-- SK가스 발전 -->
-     <div style="border:2px solid #1d4ed8;border-radius:8px;padding:10px;margin-bottom:8px;background:#eff6ff;">
-      <div style="font-size:11px;font-weight:700;color:#1d4ed8;margin-bottom:6px;text-align:center;">SK가스 발전사업자</div>
+     <div style="border:2px solid #5A86B8;border-radius:8px;padding:10px;margin-bottom:8px;background:#DBE6F1;">
+      <div style="font-size:11px;font-weight:700;color:#172A55;margin-bottom:6px;text-align:center;">SK가스 발전사업자</div>
       <div style="display:flex;align-items:center;justify-content:center;gap:4px;">
-       <div style="background:#1d4ed8;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#128293;<br>가스터빈<br>430MW</div>
+       <div style="background:#172A55;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#128293;<br>가스터빈<br>430MW</div>
        <div style="font-size:16px;color:#3b82f6;">+</div>
-       <div style="background:#1d4ed8;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#128167;<br>보일러<br></div>
+       <div style="background:#172A55;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#128167;<br>보일러<br></div>
       </div>
      </div>
      <!-- 스팀 화살표 -->
-     <div style="text-align:center;font-size:12px;color:#1d4ed8;margin:4px 0;">&#8595; 스팀 전량 공급</div>
+     <div style="text-align:center;font-size:12px;color:#172A55;margin:4px 0;">&#8595; 스팀 전량 공급</div>
      <!-- 수요처 -->
-     <div style="border:2px solid #16a34a;border-radius:8px;padding:10px;margin-bottom:8px;background:#f0fdf4;">
-      <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;text-align:center;">수요처 (AI DC / 석화단지)</div>
+     <div style="border:2px solid #5A86B8;border-radius:8px;padding:10px;margin-bottom:8px;background:#EEF3F8;">
+      <div style="font-size:11px;font-weight:700;color:#172A55;margin-bottom:6px;text-align:center;">수요처 (AI DC / 석화단지)</div>
       <div style="display:flex;align-items:center;justify-content:center;gap:4px;">
-       <div style="background:#16a34a;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#9881;<br>스팀터빈<br>자가발전 200MW</div>
-       <div style="font-size:14px;color:#16a34a;">&#8594;</div>
-       <div style="font-size:11px;color:#15803d;font-weight:600;">전기<br>자가소비</div>
+       <div style="background:#172A55;color:white;font-size:11px;font-weight:600;padding:6px 10px;border-radius:6px;text-align:center;">&#9881;<br>스팀터빈<br>자가발전 200MW</div>
+       <div style="font-size:14px;color:#172A55;">&#8594;</div>
+       <div style="font-size:11px;color:#172A55;font-weight:600;">전기<br>자가소비</div>
       </div>
      </div>
      <!-- 효과 -->
      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
-      <div style="background:#dbeafe;border-radius:6px;padding:8px;text-align:center;font-size:11px;">
-       <div style="font-weight:700;color:#1d4ed8;">&#9889; 전기 판매</div>
+      <div style="background:#EEF3F8;border-radius:6px;padding:8px;text-align:center;font-size:11px;">
+       <div style="font-weight:700;color:#172A55;">&#9889; 전기 판매</div>
        <div style="color:#1e3a5f;font-weight:600;margin-top:2px;">630MW</div>
-       <div style="font-size:10px;color:#15803d;">500MW 제한 극복&#10003;</div>
+       <div style="font-size:10px;color:#172A55;">500MW 제한 극복&#10003;</div>
       </div>
-      <div style="background:#dcfce7;border-radius:6px;padding:8px;text-align:center;font-size:11px;">
-       <div style="font-weight:700;color:#15803d;">&#9660; LCOE</div>
-       <div style="color:#15803d;font-weight:600;margin-top:2px;">120원대</div>
-       <div style="font-size:10px;color:#15803d;">기존 대비 15원 &#9660;</div>
+      <div style="background:#EEF3F8;border-radius:6px;padding:8px;text-align:center;font-size:11px;">
+       <div style="font-weight:700;color:#172A55;">&#9660; LCOE</div>
+       <div style="color:#172A55;font-weight:600;margin-top:2px;">120원대</div>
+       <div style="font-size:10px;color:#172A55;">기존 대비 15원 &#9660;</div>
       </div>
      </div>
     </div>
@@ -2910,7 +3230,7 @@ th.curr { background: #f06400 !important; }
 
    <!-- AIDC向 Hybrid Model 다이어그램 -->
    <div class="section-label">&#127981; AIDC向 Hybrid Model (案)</div>
-   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:20px;margin-bottom:20px;">
+   <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:20px;margin-bottom:20px;">
 
     <!-- 부제목 -->
     <div style="border:2px dashed #94a3b8;border-radius:8px;padding:8px 16px;text-align:center;margin-bottom:16px;">
@@ -2920,31 +3240,31 @@ th.curr { background: #f06400 !important; }
     <!-- 범례 -->
     <div style="display:flex;gap:18px;margin-bottom:16px;justify-content:flex-end;">
      <div style="display:flex;align-items:center;gap:5px;font-size:11px;">
-      <div style="width:28px;height:3px;background:#dc2626;border-radius:2px;"></div>
-      <span style="color:#374151;font-weight:600;">전기</span>
+      <div style="width:28px;height:3px;background:#1D3958;border-radius:2px;"></div>
+      <span style="color:#385269;font-weight:600;">전기</span>
      </div>
      <div style="display:flex;align-items:center;gap:5px;font-size:11px;">
       <div style="width:28px;height:3px;background:#2563eb;border-radius:2px;"></div>
-      <span style="color:#374151;font-weight:600;">스팀</span>
+      <span style="color:#385269;font-weight:600;">스팀</span>
      </div>
     </div>
 
     <!-- 상단 헤더 2열 -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
      <!-- ① 집단e 사업자 -->
-     <div style="background:#eff6ff;border:2px solid #3b82f6;border-radius:8px;padding:12px;">
-      <div style="font-size:12px;font-weight:700;color:#1d4ed8;margin-bottom:8px;">① 집단e 사업자 (가스터빈+HRSG)</div>
-      <div style="font-size:11px;color:#374151;line-height:1.8;">
-       <div style="margin-bottom:4px;padding:4px 8px;background:#dbeafe;border-radius:4px;font-size:10px;color:#1e40af;font-weight:600;">조건: 열 수요처 2개↑ · 효율 75%↑</div>
+     <div style="background:#DBE6F1;border:2px solid #3b82f6;border-radius:8px;padding:12px;">
+      <div style="font-size:12px;font-weight:700;color:#172A55;margin-bottom:8px;">① 집단e 사업자 (가스터빈+HRSG)</div>
+      <div style="font-size:11px;color:#385269;line-height:1.8;">
+       <div style="margin-bottom:4px;padding:4px 8px;background:#EEF3F8;border-radius:4px;font-size:10px;color:#172A55;font-weight:600;">조건: 열 수요처 2개↑ · 효율 75%↑</div>
        <div>• 가스터빈 430MW → HRSG → 스팀 600T/H 생산</div>
        <div>• 전력 430MW 생산 · 계통 공급</div>
       </div>
      </div>
      <!-- ② AI DC 자가발전 사업자 -->
-     <div style="background:#f0fdf4;border:2px solid #22c55e;border-radius:8px;padding:12px;">
-      <div style="font-size:12px;font-weight:700;color:#15803d;margin-bottom:8px;">② AI DC 자가발전 사업자 (증기터빈)</div>
-      <div style="font-size:11px;color:#374151;line-height:1.8;">
-       <div style="margin-bottom:4px;padding:4px 8px;background:#dcfce7;border-radius:4px;font-size:10px;color:#166534;font-weight:600;">사업허가 불필요 · 전력수요→열수요 전환</div>
+     <div style="background:#EEF3F8;border:2px solid #22c55e;border-radius:8px;padding:12px;">
+      <div style="font-size:12px;font-weight:700;color:#172A55;margin-bottom:8px;">② AI DC 자가발전 사업자 (증기터빈)</div>
+      <div style="font-size:11px;color:#385269;line-height:1.8;">
+       <div style="margin-bottom:4px;padding:4px 8px;background:#EEF3F8;border-radius:4px;font-size:10px;color:#172A55;font-weight:600;">사업허가 불필요 · 전력수요→열수요 전환</div>
        <div>• 증기터빈 200MW → 전력 200MW → AI DC</div>
        <div>• 폐열 → 흡수식냉동기 → 냉각</div>
       </div>
@@ -2957,7 +3277,7 @@ th.curr { background: #f06400 !important; }
      <!-- 전력 430MW 위 화살표 (좌측) -->
      <div style="display:flex;margin-bottom:6px;">
       <div style="width:100px;"></div>
-      <div style="font-size:10px;color:#dc2626;font-weight:700;display:flex;align-items:center;gap:4px;">
+      <div style="font-size:10px;color:#C62828;font-weight:700;display:flex;align-items:center;gap:4px;">
        <span style="font-size:13px;">↑</span> 전력 430MW (계통)
       </div>
      </div>
@@ -2967,15 +3287,15 @@ th.curr { background: #f06400 !important; }
 
       <!-- 가스터빈 -->
       <div style="text-align:center;min-width:90px;">
-       <div style="background:#dbeafe;border:2px solid #3b82f6;border-radius:50%;width:80px;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto;">
-        <div style="font-size:10px;font-weight:700;color:#1d4ed8;line-height:1.3;">가스터빈</div>
-        <div style="font-size:12px;font-weight:700;color:#1d4ed8;">430MW</div>
+       <div style="background:#EEF3F8;border:2px solid #3b82f6;border-radius:50%;width:80px;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto;">
+        <div style="font-size:10px;font-weight:700;color:#172A55;line-height:1.3;">가스터빈</div>
+        <div style="font-size:12px;font-weight:700;color:#172A55;">430MW</div>
        </div>
       </div>
 
       <!-- 화살표: HRSG → 스팀 -->
       <div style="flex:1;display:flex;flex-direction:column;align-items:center;padding:0 6px;">
-       <div style="font-size:9px;color:#6b7280;margin-bottom:3px;white-space:nowrap;">→ HRSG<sup>1)</sup> →</div>
+       <div style="font-size:9px;color:#8E9398;margin-bottom:3px;white-space:nowrap;">→ HRSG<sup>1)</sup> →</div>
        <div style="width:100%;height:3px;background:linear-gradient(to right, #3b82f6, #2563eb);border-radius:2px;position:relative;">
         <div style="position:absolute;right:0;top:-4px;font-size:10px;color:#2563eb;">▶</div>
        </div>
@@ -2984,23 +3304,23 @@ th.curr { background: #f06400 !important; }
 
       <!-- 증기터빈 -->
       <div style="text-align:center;min-width:90px;">
-       <div style="background:#dcfce7;border:2px solid #22c55e;border-radius:50%;width:80px;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto;">
-        <div style="font-size:10px;font-weight:700;color:#15803d;line-height:1.3;">증기터빈</div>
-        <div style="font-size:12px;font-weight:700;color:#15803d;">200MW</div>
+       <div style="background:#EEF3F8;border:2px solid #22c55e;border-radius:50%;width:80px;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto;">
+        <div style="font-size:10px;font-weight:700;color:#172A55;line-height:1.3;">증기터빈</div>
+        <div style="font-size:12px;font-weight:700;color:#172A55;">200MW</div>
        </div>
       </div>
 
       <!-- 화살표: 전력 200MW -->
       <div style="flex:1;display:flex;flex-direction:column;align-items:center;padding:0 6px;">
-       <div style="width:100%;height:3px;background:linear-gradient(to right, #dc2626, #b91c1c);border-radius:2px;position:relative;">
-        <div style="position:absolute;right:0;top:-4px;font-size:10px;color:#dc2626;">▶</div>
+       <div style="width:100%;height:3px;background:linear-gradient(to right, #C62828, #C62828);border-radius:2px;position:relative;">
+        <div style="position:absolute;right:0;top:-4px;font-size:10px;color:#C62828;">▶</div>
        </div>
-       <div style="font-size:10px;color:#dc2626;margin-top:3px;font-weight:700;white-space:nowrap;">전력 200MW</div>
+       <div style="font-size:10px;color:#C62828;margin-top:3px;font-weight:700;white-space:nowrap;">전력 200MW</div>
       </div>
 
       <!-- AI DC -->
-      <div style="background:#fef3c7;border:2px solid #f59e0b;border-radius:8px;padding:10px 14px;text-align:center;min-width:64px;">
-       <div style="font-size:11px;font-weight:700;color:#92400e;">AI DC</div>
+      <div style="background:#FFF8B8;border:2px solid #f59e0b;border-radius:8px;padding:10px 14px;text-align:center;min-width:64px;">
+       <div style="font-size:11px;font-weight:700;color:#C62828;">AI DC</div>
       </div>
 
      </div>
@@ -3016,16 +3336,16 @@ th.curr { background: #f06400 !important; }
 
     <!-- 하단 캡션 -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
-     <div style="background:#dbeafe;border:1px solid #93c5fd;border-radius:6px;padding:9px;text-align:center;font-size:11px;font-weight:700;color:#1d4ed8;">
+     <div style="background:#EEF3F8;border:1px solid #93c5fd;border-radius:6px;padding:9px;text-align:center;font-size:11px;font-weight:700;color:#172A55;">
       집단에너지 사업법상 최대 500MW
      </div>
-     <div style="background:#dcfce7;border:1px solid #86efac;border-radius:6px;padding:9px;text-align:center;font-size:11px;font-weight:700;color:#15803d;">
+     <div style="background:#EEF3F8;border:1px solid #86efac;border-radius:6px;padding:9px;text-align:center;font-size:11px;font-weight:700;color:#172A55;">
       총 630MW 전력 공급 가능
      </div>
     </div>
 
     <!-- 각주 -->
-    <div style="margin-top:10px;font-size:10px;color:#9ca3af;padding-top:8px;border-top:1px solid #f3f4f6;">
+    <div style="margin-top:10px;font-size:10px;color:#8E9398;padding-top:8px;border-top:1px solid #A9C8E8;">
      1) HRSG : Heat Recovery Steam Generator
     </div>
 
@@ -3036,19 +3356,19 @@ th.curr { background: #f06400 !important; }
    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px;">
     <div style="background:#f1f5f9;border-left:4px solid #64748b;border-radius:0 8px 8px 0;padding:12px 16px;">
      <div style="font-weight:700;color:#334155;font-size:13px;margin-bottom:4px;">① 스팀 수요처 확보 문제 해결</div>
-     <div style="font-size:12px;color:#333;line-height:1.7;">수요처가 <strong>스팀터빈 자가발전소</strong>를 설치 → 전기수요를 스팀수요로 전환. 전기가 필요한 곳은 어디든 잠재 수요처가 됨. 당사는 <strong>AIDC를 스팀 수요처로 개발</strong> 예정.</div>
+     <div style="font-size:12px;color:#142446;line-height:1.7;">수요처가 <strong>스팀터빈 자가발전소</strong>를 설치 → 전기수요를 스팀수요로 전환. 전기가 필요한 곳은 어디든 잠재 수요처가 됨. 당사는 <strong>AIDC를 스팀 수요처로 개발</strong> 예정.</div>
     </div>
     <div style="background:#f1f5f9;border-left:4px solid #64748b;border-radius:0 8px 8px 0;padding:12px 16px;">
      <div style="font-weight:700;color:#334155;font-size:13px;margin-bottom:4px;">② 500MW 용량 제한 해결</div>
-     <div style="font-size:12px;color:#333;line-height:1.7;">스팀터빈(200MW)을 수요처 자가발전으로 분리 → 발전사업자 허가 범위 외로 처리. <strong>630MW 풀 CAPA 가동 가능</strong> (기존 집단E 500MW max 4.1TWh/년 → Hybrid 4.6TWh/년)</div>
+     <div style="font-size:12px;color:#142446;line-height:1.7;">스팀터빈(200MW)을 수요처 자가발전으로 분리 → 발전사업자 허가 범위 외로 처리. <strong>630MW 풀 CAPA 가동 가능</strong> (기존 집단E 500MW max 4.1TWh/년 → Hybrid 4.6TWh/년)</div>
     </div>
     <div style="background:#f1f5f9;border-left:4px solid #64748b;border-radius:0 8px 8px 0;padding:12px 16px;">
      <div style="font-weight:700;color:#334155;font-size:13px;margin-bottom:4px;">③ 발전효율 증가</div>
-     <div style="font-size:12px;color:#333;line-height:1.7;">상시 최대출력 운전이 가능하여 효율 약 <strong>1% 증가</strong> — 기존 집단에너지 54.2% → Hybrid Model <strong>55.4%</strong></div>
+     <div style="font-size:12px;color:#142446;line-height:1.7;">상시 최대출력 운전이 가능하여 효율 약 <strong>1% 증가</strong> — 기존 집단에너지 54.2% → Hybrid Model <strong>55.4%</strong></div>
     </div>
     <div style="background:#f1f5f9;border-left:4px solid #64748b;border-radius:0 8px 8px 0;padding:12px 16px;">
      <div style="font-weight:700;color:#334155;font-size:13px;margin-bottom:4px;">④ 에너지 최적화</div>
-     <div style="font-size:12px;color:#333;line-height:1.7;">폐열을 <strong>흡수식 냉동기</strong>에 활용 → AIDC 전력 사용량 감소 (PUE 개선)</div>
+     <div style="font-size:12px;color:#142446;line-height:1.7;">폐열을 <strong>흡수식 냉동기</strong>에 활용 → AIDC 전력 사용량 감소 (PUE 개선)</div>
     </div>
    </div>
 
@@ -3056,12 +3376,12 @@ th.curr { background: #f06400 !important; }
    <div class="section-label">&#9888;&#65039; 도전 요소</div>
    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:20px;">
     <div style="background:white;border:1px solid #fca5a5;border-radius:10px;padding:14px;">
-     <div style="font-size:11px;font-weight:700;color:#dc2626;margin-bottom:6px;">&#9312; 정부 기조 — LNG 중심 사업</div>
-     <div style="font-size:12px;color:#374151;">기본 구조가 LNG 중심. 재생에너지 Must 요구 환경에서 정부 설득 필요.</div>
+     <div style="font-size:11px;font-weight:700;color:#C62828;margin-bottom:6px;">&#9312; 정부 기조 — LNG 중심 사업</div>
+     <div style="font-size:12px;color:#385269;">기본 구조가 LNG 중심. 재생에너지 Must 요구 환경에서 정부 설득 필요.</div>
     </div>
     <div style="background:white;border:1px solid #fca5a5;border-radius:10px;padding:14px;">
-     <div style="font-size:11px;font-weight:700;color:#dc2626;margin-bottom:6px;">&#9313; 초기 CAPEX</div>
-     <div style="font-size:12px;color:#374151;">대규모 발전설비 투자 + 수요처 스팀터빈 자가발전 설치 지원.</div>
+     <div style="font-size:11px;font-weight:700;color:#C62828;margin-bottom:6px;">&#9313; 초기 CAPEX</div>
+     <div style="font-size:12px;color:#385269;">대규모 발전설비 투자 + 수요처 스팀터빈 자가발전 설치 지원.</div>
     </div>
    </div>
 
@@ -3070,20 +3390,25 @@ th.curr { background: #f06400 !important; }
    <!-- 정부 지원 필요사항 -->
    <div class="section-label">&#128203; 추진을 위한 정부 지원 사항</div>
    <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;">
-    <div style="flex:1;min-width:180px;background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;text-align:center;">
-     <div style="font-size:22px;font-weight:700;color:#1d4ed8;">&#9312;</div>
-     <div style="font-size:12px;font-weight:700;color:#374151;margin:6px 0;">신규 집단에너지<br>사업 허가 취득</div>
+    <div style="flex:1;min-width:180px;background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px;text-align:center;">
+     <div style="font-size:22px;font-weight:700;color:#172A55;">&#9312;</div>
+     <div style="font-size:12px;font-weight:700;color:#385269;margin:6px 0;">신규 집단에너지<br>사업 허가 취득</div>
     </div>
-    <div style="flex:1;min-width:180px;background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;text-align:center;">
-     <div style="font-size:22px;font-weight:700;color:#1d4ed8;">&#9313;</div>
-     <div style="font-size:12px;font-weight:700;color:#374151;margin:6px 0;">전력 수급 기본 계획<br>반영</div>
+    <div style="flex:1;min-width:180px;background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px;text-align:center;">
+     <div style="font-size:22px;font-weight:700;color:#172A55;">&#9313;</div>
+     <div style="font-size:12px;font-weight:700;color:#385269;margin:6px 0;">전력 수급 기본 계획<br>반영</div>
     </div>
-    <div style="flex:1;min-width:180px;background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px;text-align:center;">
-     <div style="font-size:22px;font-weight:700;color:#1d4ed8;">&#9314;</div>
-     <div style="font-size:12px;font-weight:700;color:#374151;margin:6px 0;">인허가 패스트트랙<br>추진</div>
+    <div style="flex:1;min-width:180px;background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px;text-align:center;">
+     <div style="font-size:22px;font-weight:700;color:#172A55;">&#9314;</div>
+     <div style="font-size:12px;font-weight:700;color:#385269;margin:6px 0;">인허가 패스트트랙<br>추진</div>
     </div>
    </div>
 
+    </div>
+   </details>
+     </div>
+    </div>
+   </div>
   </div>
 
   <div class="biz-panel" id="biz-hydrogen">
@@ -4945,6 +5270,19 @@ function switchLng(id, btn) {
   btn.classList.add('active');
   var book = document.querySelector('#biz-lng .lng-book');
   if (book && book.getBoundingClientRect().top < 0) { book.scrollIntoView({behavior:'smooth', block:'start'}); }
+}
+function switchEn(id, btn) {
+  document.querySelectorAll('#biz-energy .lng-page').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('en-page-'+id).classList.add('active');
+  document.querySelectorAll('#biz-energy .lng-tab').forEach(function(x){x.classList.remove('active');});
+  btn.classList.add('active');
+  var book = document.querySelector('#biz-energy .lng-book');
+  if (book && book.getBoundingClientRect().top < 0) { book.scrollIntoView({behavior:'smooth', block:'start'}); }
+}
+function toggleEz(wrapId, btn) {
+  var w = document.getElementById(wrapId);
+  w.classList.toggle('hide-note');
+  btn.textContent = w.classList.contains('hide-note') ? '💬 쉽게 이해하기 보기' : '💬 쉽게 이해하기 숨기기';
 }
 function toggleKdNote(btn) {
   var w = document.getElementById('kd-wrap');
