@@ -117,6 +117,26 @@ th.curr { background: #f06400 !important; }
 .issue-card .issue-title { font-size: 12px; font-weight: 700; color: var(--sk-blue); margin-bottom: 6px; }
 .issue-card .issue-body { font-size: 12px; color: var(--gray-700); line-height: 1.5; }
 .dot-red { background: var(--red); }
+/* LNG 섹션 — 포스트잇 탭 레이아웃 */
+.lng-book { display:flex; align-items:flex-start; margin-bottom:20px; }
+.lng-tabs { width:200px; flex-shrink:0; position:sticky; top:12px; display:flex; flex-direction:column; gap:10px; padding:16px 0 16px 4px; }
+.lng-tab { position:relative; border:none; text-align:left; padding:10px 10px 10px 14px; border-radius:8px 0 0 8px; font-size:12.5px; font-weight:700; cursor:pointer; color:#374151; font-family:inherit; line-height:1.3; box-shadow:-2px 2px 6px rgba(0,0,0,0.12); transform:translateX(8px) rotate(-1.2deg); transition:transform .15s, box-shadow .15s; }
+.lng-tab::before { content:''; position:absolute; top:-6px; left:14px; width:34px; height:12px; background:rgba(255,255,255,0.55); border:1px solid rgba(0,0,0,0.06); transform:rotate(-4deg); border-radius:2px; }
+.lng-tab small { display:block; font-size:10px; font-weight:400; color:#4b5563; margin-top:3px; line-height:1.35; }
+.lng-tab:hover { transform:translateX(2px) rotate(0deg); }
+.lng-tab.active { transform:translateX(1px) rotate(0deg); box-shadow:-3px 3px 8px rgba(0,0,0,0.2); color:#111827; z-index:2; }
+.lng-tab.active::after { content:''; position:absolute; right:-3px; top:0; bottom:0; width:6px; background:inherit; }
+.lt-1 { background:#fde68a; } .lt-2 { background:#bfdbfe; } .lt-3 { background:#fecaca; } .lt-4 { background:#bbf7d0; } .lt-5 { background:#e9d5ff; }
+.lng-pages { flex:1; min-width:0; background:white; border:1px solid var(--gray-200); border-radius:0 12px 12px 12px; padding:22px 24px 8px; box-shadow:0 2px 10px rgba(0,0,0,0.06); }
+.lng-page { display:none; } .lng-page.active { display:block; }
+@media (max-width: 800px) {
+  .lng-book { flex-direction:column; }
+  .lng-tabs { position:static; width:100%; flex-direction:row; flex-wrap:wrap; padding:8px 0; gap:6px; }
+  .lng-tab { transform:none; border-radius:8px 8px 0 0; flex:1 1 150px; }
+  .lng-tab::before { display:none; }
+  .lng-tab.active::after { display:none; }
+  .lng-pages { border-radius:0 0 12px 12px; padding:16px 14px 4px; }
+}
 .tank-terminal-section { background: white; border: 1px solid var(--gray-200); border-radius: 10px; padding: 20px; margin-bottom: 20px; }
 .terminal-group { margin-bottom: 16px; }
 .terminal-group:last-child { margin-bottom: 0; }
@@ -188,45 +208,21 @@ th.curr { background: #f06400 !important; }
 
    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:8px 14px;margin:-8px 0 20px;font-size:12px;color:#1e3a8a;">
     <span style="background:#1d4ed8;color:white;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;">최종 업데이트: '26.11 (행캠 '27 기준)</span>
-    <span>신규수요개발 섹션 전면 개편 — <strong>자가발전 중심 → 연료대체(보일러·히터) 중심</strong>으로 전략 전환 반영. 구 내용은 하단 <a href="#lng-lookback-26" style="color:#1d4ed8;font-weight:700;">'26년 Look-back(아카이브)</a>에 보존.</span>
+    <span>신규수요개발 섹션 전면 개편 — <strong>자가발전 중심 → 연료대체(보일러·히터) 중심</strong>으로 전략 전환 반영. 구 내용은 [LNG 신규수요 개발] 탭 하단 <a href="javascript:void(0)" onclick="lngGoLookback()" style="color:#1d4ed8;font-weight:700;">'26년 Look-back(아카이브)</a>에 보존.</span>
    </div>
 
    
-   <div class="section-label">📊 '26년 실적 현황 <span style="font-size:11px;font-weight:400;color:#6b7280;">출처: 26.06.05 2Q Progress 미팅(세전이익 기준)</span> <span style="display:inline-block;background:#fef3c7;border:1px solid #fcd34d;color:#92400e;border-radius:4px;padding:1px 8px;font-size:11px;font-weight:700;">⚠ 수치 확인 필요</span></div>
-   <div style="background:#fffbeb;border:1px dashed #fbbf24;border-radius:6px;padding:8px 14px;margin-bottom:12px;font-size:11px;color:#92400e;line-height:1.7;">
-    ⚠ <strong>수치 확인 필요 ('26.11 검수 메모):</strong> 상반기 실적 <strong>332억 (달성율 461%)</strong>과 연간 추정 <strong>6억 (달성율 4.2%)</strong> 간 정합성이 확인되지 않음 (상반기 실적만으로 연간 추정을 크게 상회). 원자료(2Q Progress 미팅) 재확인 전까지 <strong>수치는 수정하지 않고 보존</strong>.
-   </div>
-   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:20px;">
-  <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
-   <div style="font-size:11px;font-weight:700;color:white;background:#1a237e;display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:10px;">'26년 상반기 실적</div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">목표</span><span style="font-weight:700;color:#111827;">79억</span></div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">실적</span><span style="font-weight:700;color:#2e7d32;">332억</span></div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">vs 목표</span><span style="font-weight:700;color:#2e7d32;">+253억 초과달성</span></div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;"><span style="color:#6b7280;">달성율</span><span style="font-weight:700;color:#2e7d32;">461%</span></div>
-  </div>
-  <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
-   <div style="font-size:11px;font-weight:700;color:white;background:#e65100;display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:10px;">'26년 연간 추정</div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">목표</span><span style="font-weight:700;color:#111827;">143억</span></div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">실적(추정)</span><span style="font-weight:700;color:#c62828;">6억</span></div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">vs 목표</span><span style="font-weight:700;color:#c62828;">△137억 미달</span></div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;"><span style="color:#6b7280;">달성율</span><span style="font-weight:700;color:#c62828;">4.2%</span></div>
-  </div>
-   </div>
-   <div class="section-label">📦 LNG 조달 구조</div>
-   <div class="tbl-wrap" style="margin-bottom:20px;">
-    <table>
-     <thead><tr><th>소싱처</th><th>계약 물량</th><th>카고</th><th>계약 유형</th><th>공급 용도 · 해당 탱크</th></tr></thead>
-     <tbody>
-      <tr><td>M사 (Mitsui · 미쓰이)</td><td>70만 톤/년</td><td>Term 10카고</td><td>장기 계약</td><td>GPS(UGPS) 발전용 100% — KET #1 탱크 전용</td></tr>
-      <tr><td>W사 (Woodside Energy)</td><td>55만 톤/년</td><td>8카고</td><td>장기 계약</td><td>SKMU 4카고(≈28만톤) · 벙커링 3카고(≈21만톤) · 여분 1카고 — KET #2·#3 탱크</td></tr>
-      <tr><td colspan="5" style="background:#fffbeb;padding:6px 14px;"><span style="display:inline-block;padding:2px 8px;background:#fef3c7;border:1px solid #fcd34d;border-radius:4px;font-size:11px;font-weight:700;color:#92400e;">▶ Woodside 계약물량 '27년 하반기부터 공급 개시 예정</span></td></tr>
-      <tr><td>SPOT</td><td>10~20만 톤/년</td><td>시황 따라 조절</td><td>현물 조달</td><td>시황 최적화, 재고 탄력 운용</td></tr>
-      <tr><td colspan="5" style="background:var(--gray-50);font-size:11px;color:#6b7280;font-weight:400;">※ 1카고 = 350만 MMBtu ≈ 6.75만톤(약 7만톤) · LNG 1톤 = 51.87 MMBtu (환산 시 약 50 MMBtu 적용) · 총 130만톤/년 조달</td></tr>
-     </tbody>
-    </table>
-   </div>
 
-   <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;padding:8px 14px;margin-bottom:20px;font-size:12px;color:#6b7280;">※ Mitsui '26년 2Q·3Q 공급 불가 통보 — 해당 기간 SKMU향 LNG Spot 조달 대응. Woodside 계약('27년 하반기 개시) 전까지 Mitsui UQT 조항 활용 또는 Spot으로 보완.</div>
+   <div class="lng-book">
+    <nav class="lng-tabs" aria-label="LNG 섹션 탭">
+     <button class="lng-tab lt-1 active" id="lng-tab-terminal" onclick="switchLng('terminal',this)">🏭 탱크터미널 현황<small>CEC-KET 탱크 · 이용자 · SKE 직도입 계약</small></button>
+     <button class="lng-tab lt-2" id="lng-tab-units" onclick="switchLng('units',this)">📐 단위환산 가이드<small>kta vs KL · 환산 공식</small></button>
+     <button class="lng-tab lt-3" id="lng-tab-ewp" onclick="switchLng('ewp',this)">⚠️ 동서발전 수요 불확실성 및 대응<small>TUA · 부속합의 · '30년 이후 계획</small></button>
+     <button class="lng-tab lt-4" id="lng-tab-demand" onclick="switchLng('demand',this)">🎯 LNG 신규수요 개발<small>'26.11.05 행캠 ver · Pivoting 이력 · 연료대체 7개사 · 경동</small></button>
+     <button class="lng-tab lt-5" id="lng-tab-etc" onclick="switchLng('etc',this)">📁 기타<small>실적 · 조달 구조 · 사업 배경 · 계약구조 · 최신 업데이트</small></button>
+    </nav>
+    <div class="lng-pages">
+     <div class="lng-page active" id="lng-page-terminal">
       <div class="section-label">🏭 CEC-KET 터미널 탱크 현황 <span style="font-size:11px;color:#6b7280;font-weight:400;">'24.10 #1·#2 가동 · '26.6 #3 준공 · '26.10 #4 · '30.7 #5 순차 확장 · 전탱크 21.5만 KL 통일 <span style="color:#9ca3af;">(출처: '25.3월 이사회전략세션 자료)</span></span></div>
    <div style="background:white;border:1px solid var(--gray-200);border-radius:12px;padding:20px;margin-bottom:20px;">
     <!-- 범례 -->
@@ -293,7 +289,7 @@ th.curr { background: #f06400 !important; }
       <div style="background:#fef9ec;border-top:1px dashed #fbbf24;padding:10px 12px;font-size:11px;color:#78350f;line-height:1.7;">
        <strong>⚠ 동서발전 수요 불확실성 잔존</strong> — 발전소 인허가 지연으로 <strong>울산 노후복합 1~3호기(1.2GW)</strong> 임시 활용 합의. ‘27~’29년은 일부만 사용(6→7→10만 KL), ‘30년부터 20만 KL 본격 사용 예정.<br>
        <span style="color:#7c2d12;">📌 노후복합 <strong>연료 사용 예상량 10~20만톤/년</strong> (발전효율 낮아 SPOT 소량 도입, 1~2만톤씩 카고 편승)</span><br>
-       <span style="color:#92400e;font-weight:700;">자세한 내용은 ↓ "동서발전 수요의 불확실성" 섹션 참조</span>
+       <a href="javascript:void(0)" onclick="switchLng('ewp',document.getElementById('lng-tab-ewp'))" style="color:#92400e;font-weight:700;">자세한 내용은 [동서발전 수요 불확실성 및 대응] 탭 참조 →</a>
       </div>
      </div>
 
@@ -310,10 +306,10 @@ th.curr { background: #f06400 !important; }
         유니드 0.4 · 한화임팩트 0.4 · LS MnM 0.6<br>
         금호석화 0.4 · 이수화학 0.4만kl
        </div>
-       <div style="font-size:9px;color:#6b7280;line-height:1.5;">★ = '27년 1호 사례(Success Story) 대상 · 상세는 ↓ "연료대체 타깃 7개사" 표</div>
+       <div style="font-size:9px;color:#6b7280;line-height:1.5;">★ = '27년 1호 사례(Success Story) 대상 · 상세는 <a href="javascript:void(0)" onclick="switchLng('demand',document.getElementById('lng-tab-demand'))" style="color:#0e7490;font-weight:700;">[LNG 신규수요 개발] 탭</a></div>
       </div>
       <div style="background:#fef9ec;border-top:1px dashed #fbbf24;padding:10px 12px;font-size:10px;color:#78350f;line-height:1.6;">
-       <strong style="font-size:11px;">※ FID 미결 상태는 유지</strong> — 다만 근거 수요가 '26.5월 자가발전 Anchor(고려아연 #2·한주 #2·LS MnM·유니드·SK PIC, 13.6만kl)에서 <strong>연료대체 7개사(3만kl)</strong>로 교체됨. 구 Anchor 수요는 ↓ "'26년 Look-back(아카이브)" 참조.<br>
+       <strong style="font-size:11px;">※ FID 미결 상태는 유지</strong> — 다만 근거 수요가 '26.5월 자가발전 Anchor(고려아연 #2·한주 #2·LS MnM·유니드·SK PIC, 13.6만kl)에서 <strong>연료대체 7개사(3만kl)</strong>로 교체됨. 구 Anchor 수요는 <a href="javascript:void(0)" onclick="lngGoLookback()" style="color:#78350f;font-weight:700;">'26년 Look-back(아카이브)</a> 참조.<br>
        <span style="color:#9ca3af;font-style:italic;">※ 수요개발 현황은 실시간 변동 — 본 내용은 행캠 '27('26.11) 기준</span>
       </div>
      </div>
@@ -340,6 +336,70 @@ th.curr { background: #f06400 !important; }
     </div>
    </div>
 
+   <div class="section-label">🏢 SKE 직도입 계약 — '26년 사용량 상향 <span style="font-size:11px;font-weight:400;color:#6b7280;">합의서 체결 완료</span></div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.8;">
+
+    <div style="background:#ecfdf5;border-left:4px solid #16a34a;border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:14px;font-size:12px;">
+     <strong style="color:#065f46;">📌 핵심:</strong> '26년부터 SKE 연간 사용량 <strong>50만톤 → 60만톤</strong>으로 상향. 이에 따라 탱크 임대 용량도 <strong>10만 KL → 11만 KL</strong>로 1만 KL 추가 계약 체결.
+    </div>
+
+    <div style="background:var(--amber-light);border-left:4px solid var(--amber);border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:14px;font-size:12px;line-height:1.8;">
+     <strong style="color:#92400e;">⚠️ 용량(KL) vs 사용량(톤) — 개념 구분이 중요</strong><br>
+     SKE 사용량이 10만톤 늘었다고 해서 우리 수수료가 비례해서 증가하는 구조가 <strong>아님</strong>. 우리 터미널 수수료는 <strong>고객사가 임대한 탱크 저장공간(KL)</strong>을 기준으로 수취되며, 사용량(톤)↔용량(KL)의 환산 비율은 <strong>법적으로 정해진 기준</strong>이 존재함.
+    </div>
+
+    <div class="tbl-wrap" style="margin-bottom:14px;">
+     <table>
+      <thead><tr><th style="width:20%;">구분</th><th style="width:22%;">연간 사용량(톤)</th><th style="width:26%;">법정 최소 필요 용량(KL)</th><th>실제 임대 용량(KL)</th></tr></thead>
+      <tbody>
+       <tr><td><strong>기존 ('25 이전)</strong></td><td>50만 톤</td><td>9.1만 KL</td><td>10만 KL <span style="color:#6b7280;">(여유분 약 0.9만 KL)</span></td></tr>
+       <tr style="background:#fffbeb;"><td><strong>'26년부터</strong></td><td>60만 톤 <span style="color:#16a34a;font-weight:700;">(+10만 톤)</span></td><td>11만 KL</td><td>11만 KL <span style="color:#16a34a;font-weight:700;">(1만 KL 추가 임대)</span></td></tr>
+      </tbody>
+     </table>
+    </div>
+
+    <div style="background:var(--gray-50);border-radius:8px;padding:12px 14px;font-size:12px;line-height:1.8;">
+     <strong style="color:var(--gray-900);">💡 해석</strong><br>
+     · 기존엔 9.1만 KL만 확보하면 됐는데 10만 KL를 계약 → 그동안 약 <strong>0.9만 KL의 여분</strong>이 있었음<br>
+     · SKE가 10만톤(50→60만) 추가 사용 → 법적으로 <strong>11만 KL 필요</strong> → 우리 터미널에서 <strong>1만 KL 추가 임대</strong><br>
+     · 즉, <strong>"사용량 10만톤 증가 = 탱크저장공간 1만 KL 추가 + 12개월 × 10회전"</strong> 구조로 환산<br>
+     · 우리 수수료 증가분 = <strong>추가 임대 1만 KL × 임대단가</strong>로 산정, 사용량(톤) 증가분 자체와는 직접 연동되지 않음
+    </div>
+   </div>
+
+     </div>
+     <div class="lng-page" id="lng-page-units">
+   <!-- ============================================================== -->
+   <!-- 단위 환산 가이드 (kta vs KL) -->
+   <!-- ============================================================== -->
+   <div class="section-label">📐 단위 환산 가이드 — kta(연간 물량) vs KL(탱크 부피)</div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.8;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+     <div style="background:#e3f2fd;border-radius:8px;padding:12px 14px;">
+      <div style="font-weight:700;color:#0d47a1;margin-bottom:6px;font-size:13px;">kta = kilo tonne annual = 천톤/년</div>
+      <div style="font-size:11px;">연간 소비량(물량)을 천톤 단위로 표기. <strong>연간 물량 수요사이징</strong>에 사용.</div>
+     </div>
+     <div style="background:#fff3e0;border-radius:8px;padding:12px 14px;">
+      <div style="font-weight:700;color:#e65100;margin-bottom:6px;font-size:13px;">KL = 1,000L = 1㎥</div>
+      <div style="font-size:11px;">저장 탱크의 부피(사이즈). <strong>탱크 용량</strong>을 의미.</div>
+     </div>
+    </div>
+    <div style="background:#fef3c7;border-left:4px solid var(--amber);border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:12px;">
+     <strong style="color:#92400e;">💡 환산 공식</strong>: <span style="font-family:monospace;background:white;padding:2px 8px;border-radius:4px;border:1px solid #fcd34d;">탱크 LNG 질량(톤) = 탱크 용량(KL) × 0.45</span>
+    </div>
+    <div style="background:var(--gray-50);border-radius:8px;padding:12px 14px;font-size:11px;line-height:1.9;font-family:monospace;">
+     <strong style="color:var(--gray-900);font-family:inherit;">📝 환산 예시</strong><br>
+     <span style="color:#1565c0;">▸ (예시) 탱크 6만 KL 임대 시 <span style="font-size:10px;color:#9ca3af;">— 구 고려아연 #2 검토안 기준</span></span><br>
+     &nbsp;&nbsp; 60,000 × 0.45 = <strong>27,000톤 저장</strong> → 연간 환산 시 27,000 × 12개월 = <strong>32.4만톤/년</strong><br><br>
+     <span style="color:#1565c0;">▸ SKE 연간 60만톤 사용</span><br>
+     &nbsp;&nbsp; 60만톤 ÷ 12개월 = 5만톤/월 → 50,000 ÷ 0.45 = <strong>11.11만 KL</strong><br><br>
+     <span style="color:#1565c0;">▸ SKE 연간 50만톤 사용 (기존)</span><br>
+     &nbsp;&nbsp; 50만톤 ÷ 12개월 = 4.16만톤/월 → 41,666 ÷ 0.45 = <strong>9.25만 KL</strong> → 그래서 <strong>10만 KL 계약</strong>이었음
+    </div>
+   </div>
+
+     </div>
+     <div class="lng-page" id="lng-page-ewp">
    <!-- ============================================================== -->
    <!-- 동서발전 수요의 불확실성 -->
    <!-- ============================================================== -->
@@ -562,33 +622,93 @@ th.curr { background: #f06400 !important; }
     </div>
    </div>
 
-   <!-- ============================================================== -->
-   <!-- 단위 환산 가이드 (kta vs KL) -->
-   <!-- ============================================================== -->
-   <div class="section-label">📐 단위 환산 가이드 — kta(연간 물량) vs KL(탱크 부피)</div>
-   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.8;">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
-     <div style="background:#e3f2fd;border-radius:8px;padding:12px 14px;">
-      <div style="font-weight:700;color:#0d47a1;margin-bottom:6px;font-size:13px;">kta = kilo tonne annual = 천톤/년</div>
-      <div style="font-size:11px;">연간 소비량(물량)을 천톤 단위로 표기. <strong>연간 물량 수요사이징</strong>에 사용.</div>
      </div>
-     <div style="background:#fff3e0;border-radius:8px;padding:12px 14px;">
-      <div style="font-weight:700;color:#e65100;margin-bottom:6px;font-size:13px;">KL = 1,000L = 1㎥</div>
-      <div style="font-size:11px;">저장 탱크의 부피(사이즈). <strong>탱크 용량</strong>을 의미.</div>
-     </div>
+     <div class="lng-page" id="lng-page-demand">
+   <div class="section-label">📈 LNG 수요개발 Pivoting 이력 — '26년 Look-back <span style="font-size:11px;font-weight:400;color:#6b7280;">출처: Discussion Agenda – 울산 LNG 수요 확보 ('26.11.05 행캠)</span></div>
+   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px 18px 10px;margin-bottom:20px;">
+    <div style="text-align:center;font-size:15px;font-weight:700;color:#111827;margin-bottom:10px;">외부 제약 발생 시 지속적인 Pivoting을 하며 사업 추진, 현재 <span style="color:#c62828;">경동과의 M/S Conflict</span>에 도달</div>
+    <div style="overflow-x:auto;">
+    <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:760px;height:auto;display:block;font-family:inherit;">
+     <defs>
+      <marker id="pvArrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 z" fill="#1f2937"/></marker>
+      <marker id="pvArrowBlue" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4.5 L0,9 z" fill="#374a6b"/></marker>
+     </defs>
+     <!-- axes -->
+     <line x1="90" y1="545" x2="1160" y2="545" stroke="#1f2937" stroke-width="2" marker-end="url(#pvArrow)"/>
+     <line x1="90" y1="545" x2="90" y2="60" stroke="#1f2937" stroke-width="2" marker-end="url(#pvArrow)"/>
+     <text x="40" y="310" transform="rotate(-90 40 310)" text-anchor="middle" font-size="13" fill="#374151">조기 사업화 가능성 (계약까지 기간 단축) →</text>
+     <text x="215" y="575" text-anchor="middle" font-size="13" fill="#6b7280">1Q</text>
+     <text x="470" y="575" text-anchor="middle" font-size="13" fill="#6b7280">2Q</text>
+     <text x="730" y="575" text-anchor="middle" font-size="13" fill="#6b7280">3Q</text>
+     <text x="985" y="575" text-anchor="middle" font-size="13" fill="#6b7280">4Q</text>
+     <text x="1160" y="575" text-anchor="end" font-size="13" font-weight="700" fill="#374151">'26년 추진 경과</text>
+
+     <!-- step 1 -->
+     <line x1="112" y1="470" x2="338" y2="470" stroke="#1f2937" stroke-width="3"/>
+     <circle cx="112" cy="470" r="8" fill="#1f2937"/>
+     <rect x="332" y="440" width="12" height="100" fill="#374a6b"/>
+     <foreignObject x="118" y="372" width="214" height="96">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="background:#f3f4f6;border-left:4px solid #1f2937;padding:8px 10px;font-size:12px;line-height:1.5;color:#374151;height:96px;box-sizing:border-box;">
+       <div style="font-weight:700;color:#111827;font-size:13px;margin-bottom:3px;">① 대형 발전수요 <span style="font-size:11px;font-weight:600;">(#5 Tank Anchor)</span></div>
+       · 고려아연·한주·LIC·LS MnM<br>· 발전사업 투자·터미널 이전 마케팅
+      </div>
+     </foreignObject>
+     <foreignObject x="350" y="476" width="230" height="70">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:12px;line-height:1.5;color:#374151;">
+       <div style="font-weight:700;color:#111827;">제약 ①</div>· 구역전기 인허가 보류<br>· 전쟁·고유가로 투자 지연
+      </div>
+     </foreignObject>
+     <!-- pivot 1 -->
+     <line x1="338" y1="436" x2="338" y2="358" stroke="#374a6b" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#pvArrowBlue)"/>
+     <text x="350" y="415" font-size="12" font-weight="700" fill="#374a6b">Pivot</text>
+
+     <!-- step 2 -->
+     <line x1="338" y1="345" x2="603" y2="345" stroke="#1f2937" stroke-width="3"/>
+     <circle cx="338" cy="345" r="8" fill="#1f2937"/>
+     <rect x="597" y="315" width="12" height="105" fill="#374a6b"/>
+     <foreignObject x="346" y="247" width="250" height="96">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="background:#f3f4f6;border-left:4px solid #1f2937;padding:8px 10px;font-size:12px;line-height:1.5;color:#374151;height:96px;box-sizing:border-box;">
+       <div style="font-weight:700;color:#111827;font-size:13px;margin-bottom:3px;">② 소형 자가발전 Package</div>
+       · 자가발전 Total Solution<br>· 계약 간소화(통합 인프라계약)<br>· 석화·온산 30여 업체 Pipeline 확보
+      </div>
+     </foreignObject>
+     <foreignObject x="615" y="425" width="250" height="90">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:12px;line-height:1.5;color:#374151;">
+       <div style="font-weight:700;color:#111827;">제약 ②</div>· 지역별 차등요금제 → 자가발전 경제성 하락<br>· 석화 침체·장기계약 부담
+      </div>
+     </foreignObject>
+     <!-- pivot 2 -->
+     <line x1="603" y1="311" x2="603" y2="236" stroke="#374a6b" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#pvArrowBlue)"/>
+     <text x="615" y="292" font-size="12" font-weight="700" fill="#374a6b">Pivot</text>
+
+     <!-- step 3 -->
+     <line x1="603" y1="222" x2="862" y2="222" stroke="#1f2937" stroke-width="3"/>
+     <circle cx="603" cy="222" r="8" fill="#1f2937"/>
+     <rect x="856" y="190" width="12" height="100" fill="#374a6b"/>
+     <foreignObject x="611" y="118" width="244" height="102">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="background:#f3f4f6;border-left:4px solid #1f2937;padding:8px 10px;font-size:12px;line-height:1.5;color:#374151;height:102px;box-sizing:border-box;">
+       <div style="font-weight:700;color:#111827;font-size:13px;margin-bottom:3px;">③ 연료대체·LPG Bridge</div>
+       · 보일러·히터 연료대체<br>&nbsp;&nbsp;– 롯데케미칼·한화솔루션 등<br>· 도시가스 → LPG → LNG 전환
+      </div>
+     </foreignObject>
+     <!-- pivot 3 → box 4 -->
+     <polyline points="862,186 862,150 886,150" fill="none" stroke="#374a6b" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#pvArrowBlue)"/>
+     <text x="874" y="212" font-size="12" font-weight="700" fill="#374a6b">Pivot</text>
+
+     <!-- step 4 : conflict -->
+     <foreignObject x="896" y="92" width="270" height="96">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="background:#f3f4f6;border-left:4px solid #1f2937;padding:8px 10px;font-size:12px;line-height:1.5;color:#374151;height:96px;box-sizing:border-box;">
+       <div style="font-weight:700;color:#111827;font-size:13px;margin-bottom:3px;">④ 경동과의 Conflict</div>
+       · 경동 공급권·기득권 (계약 Lock-in)<br>· 조건부 등록 지연 (도시가스 사용 이력)
+      </div>
+     </foreignObject>
+     <polygon points="990,210 1031,232 1072,210 1072,226 1031,248 990,226" fill="#9ca3af"/>
+     <rect x="896" y="262" width="270" height="72" rx="3" fill="#374a6b"/>
+     <text x="1031" y="291" text-anchor="middle" font-size="14" font-weight="700" fill="white">'27년</text>
+     <text x="1031" y="314" text-anchor="middle" font-size="14" font-weight="700" fill="white">경동 협력 구조 도출로 돌파</text>
+    </svg>
     </div>
-    <div style="background:#fef3c7;border-left:4px solid var(--amber);border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:12px;">
-     <strong style="color:#92400e;">💡 환산 공식</strong>: <span style="font-family:monospace;background:white;padding:2px 8px;border-radius:4px;border:1px solid #fcd34d;">탱크 LNG 질량(톤) = 탱크 용량(KL) × 0.45</span>
-    </div>
-    <div style="background:var(--gray-50);border-radius:8px;padding:12px 14px;font-size:11px;line-height:1.9;font-family:monospace;">
-     <strong style="color:var(--gray-900);font-family:inherit;">📝 환산 예시</strong><br>
-     <span style="color:#1565c0;">▸ (예시) 탱크 6만 KL 임대 시 <span style="font-size:10px;color:#9ca3af;">— 구 고려아연 #2 검토안 기준</span></span><br>
-     &nbsp;&nbsp; 60,000 × 0.45 = <strong>27,000톤 저장</strong> → 연간 환산 시 27,000 × 12개월 = <strong>32.4만톤/년</strong><br><br>
-     <span style="color:#1565c0;">▸ SKE 연간 60만톤 사용</span><br>
-     &nbsp;&nbsp; 60만톤 ÷ 12개월 = 5만톤/월 → 50,000 ÷ 0.45 = <strong>11.11만 KL</strong><br><br>
-     <span style="color:#1565c0;">▸ SKE 연간 50만톤 사용 (기존)</span><br>
-     &nbsp;&nbsp; 50만톤 ÷ 12개월 = 4.16만톤/월 → 41,666 ÷ 0.45 = <strong>9.25만 KL</strong> → 그래서 <strong>10만 KL 계약</strong>이었음
-    </div>
+    <div style="font-size:10px;color:#6b7280;margin-top:6px;">※ 가로축: '26년 추진 경과(분기) · 세로축: 조기 사업화 가능성(계약까지 기간 단축). 각 단계는 제약(①·②·경동 Conflict)에 막혀 상위 단계로 Pivot. 단계별 상세는 아래 "'26년 Look-back(아카이브)" 표 참조.</div>
    </div>
 
    <!-- ============================================================== -->
@@ -641,7 +761,7 @@ th.curr { background: #f06400 !important; }
    <!-- ============================================================== -->
    <div class="section-label">📋 연료대체 타깃 고객 7개사 — 연간 약 15만톤 · 저장용량 3만kl <span style="font-size:11px;font-weight:400;color:#6b7280;">행캠 '27 기준 · CEC #5 근거 수요</span></div>
    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;margin-bottom:16px;overflow-x:auto;">
-    <table style="width:100%;border-collapse:collapse;font-size:11px;line-height:1.6;min-width:900px;">
+    <table style="width:100%;border-collapse:collapse;font-size:11px;line-height:1.6;min-width:760px;">
      <thead>
       <tr style="background:#f3f4f6;">
        <th style="padding:8px;border:1px solid #e5e7eb;text-align:left;min-width:100px;">고객사</th>
@@ -1504,6 +1624,43 @@ th.curr { background: #f06400 !important; }
     </div>
    </details>
 
+     </div>
+     <div class="lng-page" id="lng-page-etc">
+   <div class="section-label">📊 '26년 실적 현황 <span style="font-size:11px;font-weight:400;color:#6b7280;">출처: 26.06.05 2Q Progress 미팅(세전이익 기준)</span> <span style="display:inline-block;background:#fef3c7;border:1px solid #fcd34d;color:#92400e;border-radius:4px;padding:1px 8px;font-size:11px;font-weight:700;">⚠ 수치 확인 필요</span></div>
+   <div style="background:#fffbeb;border:1px dashed #fbbf24;border-radius:6px;padding:8px 14px;margin-bottom:12px;font-size:11px;color:#92400e;line-height:1.7;">
+    ⚠ <strong>수치 확인 필요 ('26.11 검수 메모):</strong> 상반기 실적 <strong>332억 (달성율 461%)</strong>과 연간 추정 <strong>6억 (달성율 4.2%)</strong> 간 정합성이 확인되지 않음 (상반기 실적만으로 연간 추정을 크게 상회). 원자료(2Q Progress 미팅) 재확인 전까지 <strong>수치는 수정하지 않고 보존</strong>.
+   </div>
+   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:20px;">
+  <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
+   <div style="font-size:11px;font-weight:700;color:white;background:#1a237e;display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:10px;">'26년 상반기 실적</div>
+   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">목표</span><span style="font-weight:700;color:#111827;">79억</span></div>
+   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">실적</span><span style="font-weight:700;color:#2e7d32;">332억</span></div>
+   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">vs 목표</span><span style="font-weight:700;color:#2e7d32;">+253억 초과달성</span></div>
+   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;"><span style="color:#6b7280;">달성율</span><span style="font-weight:700;color:#2e7d32;">461%</span></div>
+  </div>
+  <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
+   <div style="font-size:11px;font-weight:700;color:white;background:#e65100;display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:10px;">'26년 연간 추정</div>
+   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">목표</span><span style="font-weight:700;color:#111827;">143억</span></div>
+   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">실적(추정)</span><span style="font-weight:700;color:#c62828;">6억</span></div>
+   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">vs 목표</span><span style="font-weight:700;color:#c62828;">△137억 미달</span></div>
+   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;"><span style="color:#6b7280;">달성율</span><span style="font-weight:700;color:#c62828;">4.2%</span></div>
+  </div>
+   </div>
+   <div class="section-label">📦 LNG 조달 구조</div>
+   <div class="tbl-wrap" style="margin-bottom:20px;">
+    <table>
+     <thead><tr><th>소싱처</th><th>계약 물량</th><th>카고</th><th>계약 유형</th><th>공급 용도 · 해당 탱크</th></tr></thead>
+     <tbody>
+      <tr><td>M사 (Mitsui · 미쓰이)</td><td>70만 톤/년</td><td>Term 10카고</td><td>장기 계약</td><td>GPS(UGPS) 발전용 100% — KET #1 탱크 전용</td></tr>
+      <tr><td>W사 (Woodside Energy)</td><td>55만 톤/년</td><td>8카고</td><td>장기 계약</td><td>SKMU 4카고(≈28만톤) · 벙커링 3카고(≈21만톤) · 여분 1카고 — KET #2·#3 탱크</td></tr>
+      <tr><td colspan="5" style="background:#fffbeb;padding:6px 14px;"><span style="display:inline-block;padding:2px 8px;background:#fef3c7;border:1px solid #fcd34d;border-radius:4px;font-size:11px;font-weight:700;color:#92400e;">▶ Woodside 계약물량 '27년 하반기부터 공급 개시 예정</span></td></tr>
+      <tr><td>SPOT</td><td>10~20만 톤/년</td><td>시황 따라 조절</td><td>현물 조달</td><td>시황 최적화, 재고 탄력 운용</td></tr>
+      <tr><td colspan="5" style="background:var(--gray-50);font-size:11px;color:#6b7280;font-weight:400;">※ 1카고 = 350만 MMBtu ≈ 6.75만톤(약 7만톤) · LNG 1톤 = 51.87 MMBtu (환산 시 약 50 MMBtu 적용) · 총 130만톤/년 조달</td></tr>
+     </tbody>
+    </table>
+   </div>
+
+   <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;padding:8px 14px;margin-bottom:20px;font-size:12px;color:#6b7280;">※ Mitsui '26년 2Q·3Q 공급 불가 통보 — 해당 기간 SKMU향 LNG Spot 조달 대응. Woodside 계약('27년 하반기 개시) 전까지 Mitsui UQT 조항 활용 또는 Spot으로 보완.</div>
    <div class="section-label">📖 LNG 사업 시작 배경</div>
    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.9;">
     <p style="margin-bottom:10px;"><strong style="color:var(--gray-900);">원래 한국석유공사(KNOC)는 울산에 오일터미널 사업만 하려 했으나</strong>, 사업성이 안 나와 2000년대 중반부터 10년 넘게 사업화를 못 한 상황이었습니다.</p>
@@ -1564,37 +1721,6 @@ th.curr { background: #f06400 !important; }
     <div style="background:var(--gray-50);border-radius:8px;padding:12px 14px;font-size:11px;color:var(--gray-700);">
      <strong style="color:var(--gray-900);">수요처 설득이 어려운 이유</strong><br>
      전기료 20% 절감을 위해 300억~1조원 규모의 자가발전 설비에 투자해야 함. 본업(아연 채굴, 석화 등)에 투자하면 사업 Upside가 열리지만, 자가발전 설비투자는 단순 전기료 cost saving만 존재 — <strong>고객사 입장에서 투자 우선순위가 낮음.</strong>
-    </div>
-   </div>
-
-   <div class="section-label">🏢 SKE 직도입 계약 — '26년 사용량 상향 <span style="font-size:11px;font-weight:400;color:#6b7280;">합의서 체결 완료</span></div>
-   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.8;">
-
-    <div style="background:#ecfdf5;border-left:4px solid #16a34a;border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:14px;font-size:12px;">
-     <strong style="color:#065f46;">📌 핵심:</strong> '26년부터 SKE 연간 사용량 <strong>50만톤 → 60만톤</strong>으로 상향. 이에 따라 탱크 임대 용량도 <strong>10만 KL → 11만 KL</strong>로 1만 KL 추가 계약 체결.
-    </div>
-
-    <div style="background:var(--amber-light);border-left:4px solid var(--amber);border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:14px;font-size:12px;line-height:1.8;">
-     <strong style="color:#92400e;">⚠️ 용량(KL) vs 사용량(톤) — 개념 구분이 중요</strong><br>
-     SKE 사용량이 10만톤 늘었다고 해서 우리 수수료가 비례해서 증가하는 구조가 <strong>아님</strong>. 우리 터미널 수수료는 <strong>고객사가 임대한 탱크 저장공간(KL)</strong>을 기준으로 수취되며, 사용량(톤)↔용량(KL)의 환산 비율은 <strong>법적으로 정해진 기준</strong>이 존재함.
-    </div>
-
-    <div class="tbl-wrap" style="margin-bottom:14px;">
-     <table>
-      <thead><tr><th style="width:20%;">구분</th><th style="width:22%;">연간 사용량(톤)</th><th style="width:26%;">법정 최소 필요 용량(KL)</th><th>실제 임대 용량(KL)</th></tr></thead>
-      <tbody>
-       <tr><td><strong>기존 ('25 이전)</strong></td><td>50만 톤</td><td>9.1만 KL</td><td>10만 KL <span style="color:#6b7280;">(여유분 약 0.9만 KL)</span></td></tr>
-       <tr style="background:#fffbeb;"><td><strong>'26년부터</strong></td><td>60만 톤 <span style="color:#16a34a;font-weight:700;">(+10만 톤)</span></td><td>11만 KL</td><td>11만 KL <span style="color:#16a34a;font-weight:700;">(1만 KL 추가 임대)</span></td></tr>
-      </tbody>
-     </table>
-    </div>
-
-    <div style="background:var(--gray-50);border-radius:8px;padding:12px 14px;font-size:12px;line-height:1.8;">
-     <strong style="color:var(--gray-900);">💡 해석</strong><br>
-     · 기존엔 9.1만 KL만 확보하면 됐는데 10만 KL를 계약 → 그동안 약 <strong>0.9만 KL의 여분</strong>이 있었음<br>
-     · SKE가 10만톤(50→60만) 추가 사용 → 법적으로 <strong>11만 KL 필요</strong> → 우리 터미널에서 <strong>1만 KL 추가 임대</strong><br>
-     · 즉, <strong>"사용량 10만톤 증가 = 탱크저장공간 1만 KL 추가 + 12개월 × 10회전"</strong> 구조로 환산<br>
-     · 우리 수수료 증가분 = <strong>추가 임대 1만 KL × 임대단가</strong>로 산정, 사용량(톤) 증가분 자체와는 직접 연동되지 않음
     </div>
    </div>
 
@@ -1669,6 +1795,9 @@ th.curr { background: #f06400 !important; }
     <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>동서발전 부속합의 체결 ('25.9)</strong> — '27~'29 용량 6·7·10만 KL, 기준용량요금 30·35·50%로 조정. '27~'29 미이용분은 '30~'34 5년간 분할납부(총 950억원, 이자 4.2%). 27.1.1 가동 준비 정상 진행.</div></div>
     <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>SKE 용량 증대 ('26.10 예정)</strong> — 사용량 상향(50→60만톤)에 따라 임대 <strong>10 → 11만 KL (+1만 KL)</strong>. 합의서 체결 완료.</div></div>
     <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>LNG 벙커링(EMFS) 3.5만 KL '28.1 예정</strong> — 1st LBV(에코프런티어) 상업개시 시점 이용 개시.</div></div>
+   </div>
+     </div>
+    </div>
    </div>
   </div>
 
@@ -4614,6 +4743,19 @@ function switchMain(id, btn) {
   btn.classList.add('active');
 }
 
+function switchLng(id, btn) {
+  document.querySelectorAll('#biz-lng .lng-page').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('lng-page-'+id).classList.add('active');
+  document.querySelectorAll('#biz-lng .lng-tab').forEach(function(x){x.classList.remove('active');});
+  btn.classList.add('active');
+  var book = document.querySelector('#biz-lng .lng-book');
+  if (book && book.getBoundingClientRect().top < 0) { book.scrollIntoView({behavior:'smooth', block:'start'}); }
+}
+function lngGoLookback() {
+  switchLng('demand', document.getElementById('lng-tab-demand'));
+  var d = document.getElementById('lng-lookback-26');
+  if (d) { d.open = true; setTimeout(function(){ d.scrollIntoView({behavior:'smooth', block:'start'}); }, 50); }
+}
 function switchSub(section, id, btn) {
   var pClass = section==='biz' ? '.biz-panel' : '.div-panel';
   var prefix = section==='biz' ? 'biz-' : 'div-';
