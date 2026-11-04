@@ -480,6 +480,59 @@ th.curr { background: #f06400 !important; }
      <tr><td>GPS 기회이익 감소</td><td>연료비는 올랐는데 원전·석탄이 많이 돌아서 SMP는 안 오름 → 발전소 돌릴수록 손해 구간. 각주: 피크 시간 SMP가 170~190원 기대였는데 KOGAS 평균요금제 발전소가 끼어서 못 올라감</td></tr>
     </table>
     <div class="ez-box ez-final"><strong>제목의 뜻:</strong> "위기를 기회로 전환 중이며, 전쟁 장기화 시 역풍 요인 상존" = 지금까진 번 게 더 크지만, 더 길어지면 손해 쪽이 커질 수 있다는 경고.</div>
+
+    <h4>📎 JKM Unwind 선손실 424억, 숫자로 풀기</h4>
+    <div class="ez-sub">아팠던 것 ②가 제일 헷갈리는 항목이라 따로 풀어요. 장표에 없는 수치는 <span class="est">[추정]</span>.</div>
+
+    <p><strong>1. 애초에 왜 JKM Sell 페이퍼를 걸었나</strong><br>TSP는 FEI로 사서 도시가스 연동가(그 안에 JKM 35%)로 팔아요. JKM이 떨어지면 빵값이 떨어져 마진이 줄어요. 그걸 막으려고 <strong>"'26~'27년에 JKM을 $10에 팔게요"</strong>라는 약속(Sell 페이퍼)을 미리 걸어둠 = 빵값을 $10에 고정한 것. (Optionality 개념의 "Brent $70에 팔 권리"와 같은 개념)</p>
+
+    <p><strong>2. 전쟁이 터져서 JKM이 $15로 뜀</strong></p>
+    <table>
+     <tr><th style="width:18%;"></th><th>페이퍼 (약속)</th><th>실물 (실제 장사)</th></tr>
+     <tr><td>상황</td><td>$10에 팔기로 했는데 시장은 $15</td><td>빵값(도시가스)이 JKM 따라 올라감</td></tr>
+     <tr><td>손익</td><td><span style="color:#C62828;font-weight:700;">−$5</span> (싸게 팔아야 하니 손해)</td><td><span style="color:#337EA9;font-weight:700;">+$5</span> (판가가 올라서 이득)</td></tr>
+     <tr><td>합계</td><td colspan="2"><strong>0 → 마진 고정</strong></td></tr>
+    </table>
+    <p style="color:#8E9398;">여기까지가 정상적인 헤지. 손해도 이득도 없이 처음 계획한 마진만 먹는 구조.</p>
+
+    <p><strong>3. 그런데 "JKM 더 오른다"고 판단</strong></p>
+    <div class="quote">"전쟁 길어지면 JKM이 $20, $25까지 갈 텐데, $10에 묶여 있으면 그 상승분을 하나도 못 먹잖아. 약속을 지금 풀자."</div>
+    <p>그래서 <strong>Unwind = 페이퍼를 지금 청산.</strong> 청산하는 순간 −$5 손실이 확정돼요. 그게 424억이에요.</p>
+
+    <p><strong>4. 왜 "선(先)손실"이냐</strong></p>
+    <table>
+     <tr><th style="width:26%;">시점</th><th>페이퍼</th><th>실물</th></tr>
+     <tr><td>'26년 (지금)</td><td>청산해서 <span style="color:#C62828;font-weight:700;">−424억 확정</span></td><td>아직 공급 전이라 이익 0</td></tr>
+     <tr><td>'27년 (공급 시)</td><td>없음</td><td>JKM 높으면 빵값 높게 받아서 <span style="color:#337EA9;font-weight:700;">+415억</span> (FWD $27 기준)</td></tr>
+    </table>
+    <p>손실은 '26년에 먼저 찍히고, 이익은 '27년에 나중에 와요. 그래서 "선손실 → 만회"라고 쓴 거예요.</p>
+    <div class="quote">비유: 친구한테 "내년에 쌀 1만원에 팔게" 약속했는데 쌀값이 2만원 됐어요. 약속 깨려고 위약금 1만원을 지금 줬어요. 대신 내년에 쌀을 2만원(혹은 3만원)에 팔 수 있게 됐죠. 올해 장부엔 위약금만 보이고, 이익은 내년에 보여요.</div>
+
+    <p><strong>5. 그러면 결국 득이냐 실이냐</strong></p>
+    <table>
+     <tr><th style="width:34%;">JKM이 '27년에</th><th>결과</th></tr>
+     <tr><td>$27 유지 (FWD)</td><td>−424 + 415 ≈ 본전</td></tr>
+     <tr><td>$30 이상</td><td>빵값 더 올라서 이익 (Unwind 잘한 것)</td></tr>
+     <tr><td>$15 이하로 급락</td><td>페이퍼 없어서 못 막음 → 손실 (Unwind 후회)</td></tr>
+    </table>
+    <p>즉 Unwind는 <strong>"헤지를 풀고 JKM 상승에 베팅한 것"</strong>이에요. Optionality 개념의 "JKM은 전략적으로 노출시키는 부분도 있음", "사장님과 논의해서 의도적으로 노출"이 바로 이거예요.</p>
+    <p style="color:#8E9398;"><span class="est">[추정]</span> 행캔에서 이걸 "역풍"으로 쓴 건 손실이 '26년 장부에 먼저 찍혀서 Eco Energy 목표비 △844억의 원인 중 하나가 됐기 때문이고, 진짜 성패는 '27년 JKM이 어디 있느냐에 달려 있어요. '27년 경영환경 전망의 "급격한 시황 하향 발생 가능(미 중간선거 결과 등)"이 Risk로 적힌 이유가 이겁니다.</p>
+
+    <div class="ez-box"><strong>핵심: 손익분기점은 "Unwind 했을 때의 JKM 가격"이에요</strong> — 원래 헤지 가격 $10이 아니라.</div>
+    <table>
+     <tr><th style="width:26%;">단계</th><th style="width:20%;">가격</th><th>설명</th></tr>
+     <tr><td>원래 헤지</td><td>$10 (P₀)</td><td>"이 가격에 팔게요" 약속</td></tr>
+     <tr><td>Unwind</td><td>$23 (P₁, 예시)</td><td>약속 풀면서 −$13 손실 확정 (이게 424억)</td></tr>
+     <tr><td>'27년 실제 공급</td><td>$X</td><td>빵값이 JKM $X 따라 결정됨</td></tr>
+    </table>
+    <p>· 헤지 그대로 뒀으면: 마진은 $10 기준으로 고정<br>· Unwind 했으면: 마진은 $X 기준 + 이미 낸 손실 −$13<br>· 둘의 차이 = (X − 10) − (23 − 10) = <strong>X − 23</strong><br>그러니까 <strong>'27년 공급 시점 JKM이 Unwind 가격($23)보다 높으면 득, 낮으면 실</strong>이에요. 원래 헤지 가격 $10은 결과에 영향이 없어요.</p>
+    <div class="quote">비유: 쌀 1만원에 팔기로 약속했다가 쌀값 2.3만원일 때 위약금 1.3만원 주고 풀었어요. 나중에 쌀을 2.3만원 넘게 팔아야 위약금 낸 보람이 있는 거죠.</div>
+
+    <p><strong>그럼 EE는 몇 불 이상을 본 거냐</strong> <span class="est">[추정]</span> 장표에 Unwind 가격이 없어 역산하면:<br>· 장표: FWD $27 기준으로 선손실 만회 후 +415억<br>· TSP 장표의 민감도: 16만톤 헤지 기준 JKM $1 ≈ 109억<br>· 415 ÷ 109 ≈ $3.8 → <strong>Unwind 가격 ≈ $27 − 3.8 ≈ $23 안팎</strong><br>즉 EE는 <strong>"'27년 JKM이 $23 밑으로는 안 떨어진다"</strong>에 베팅한 셈. '27년 Index 전망의 JKM Forward가 $24~32 구간이니 현재 선도가격으로는 이기는 포지션.</p>
+
+    <p><strong>"몇 월"이 중요한 이유</strong><br>도시가스 판가는 JKM을 몇 달 늦게 반영해요(KOGAS 도입가 → 도매요금 반영 시차). 공급은 '26년 하반기~'27년 매달 일어나고, 각 달의 빵값은 그보다 몇 달 전 JKM으로 정해짐 → <strong>월별 JKM이 Unwind 가격보다 높은 달은 득, 낮은 달은 실이 쌓여서 합산</strong>돼요. Forward가 27.1Q $32 → 27.4Q $24로 하락 곡선이라, 상반기 공급분은 확실히 이기고 하반기는 아슬아슬한 구조로 보여요.</p>
+
+    <div class="ez-box ez-final"><strong>확인하면 딱 떨어지는 것 — EE본부에 물어볼 세 가지</strong><br>1. Unwind 평균 가격이 얼마였나 → 이게 곧 손익분기점<br>2. Unwind 물량과 '26~'27 월별 공급 분포<br>3. 장표의 "+415억"이 424억 만회하고 <em>남는</em> 순이익인지, 424억을 <em>만회하는</em> 금액인지<br><span style="font-size:11px;color:#8E9398;">3번은 장표 문구가 애매해요. "만회 후 +415억"이면 순 +415억이지만, 위 표처럼 "본전"으로 읽을 수도 있어서요. 행캔에서 바로 질문 나올 지점이라 미리 확인해 두면 좋겠어요.</span></div>
    </aside>
    </div>
      </div>
