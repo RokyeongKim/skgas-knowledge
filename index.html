@@ -4047,14 +4047,13 @@ th.curr { background: #f06400 !important; }
    <div class="biz-hero hero-trading"><h1>Trading 사업</h1><p>LPG·LNG Optionality 운용 핵심 엔진 — FEI·MB·Brent 기반 페이퍼 포지션<br>1분기 Trading position 수익이 전사 우수 성과의 핵심 동인 · MB 북미 물량 가격 경쟁력으로 SKA 기여</p></div>
    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#DBE6F1;border:1px solid #A9C8E8;border-radius:8px;padding:8px 14px;margin:-8px 0 20px;font-size:12px;color:#142446;">
     <span style="background:#172A55;color:white;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;">최종 업데이트: '26.11 (행캔 '27 기준)</span>
-    <span>Trading본부 핵심 이슈 <strong>FEI-CP Hedge</strong>(Discussion Agenda)와 <strong>'27년 본부 손익구조</strong>를 포스트잇으로 추가. '26.5월 기준 기존 내용은 [기타] 탭.</span>
+    <span>Trading본부 핵심 이슈 <strong>FEI-CP Hedge</strong>(Discussion Agenda)와 <strong>'27년 본부 손익구조</strong>를 포스트잇으로 정리. '26.5월 기준 구 내용(1분기 성과·실적 카드)은 제거.</span>
    </div>
 
    <div class="lng-book">
     <nav class="lng-tabs" aria-label="Trading 섹션 탭">
      <button class="lng-tab lt-0 active" id="tr-tab-hedge" onclick="switchTr('hedge',this)">① 🎯 FEI-CP Hedge<small>Discussion Agenda — 국내 공급 역마진, 왜 필요한가</small></button>
      <button class="lng-tab lt-1" id="tr-tab-pnl" onclick="switchTr('pnl',this)">② 💰 Trading본부 손익구조<small>'26 전망 3,311억 → '27 목표 1,135억 · 구조/Origination/Operation</small></button>
-     <button class="lng-tab lt-2" id="tr-tab-etc" onclick="switchTr('etc',this)">③ 📁 기타<small>'26.5 기존 내용 — 1분기 성과 · 밸류체인 · 최신 업데이트</small></button>
     </nav>
     <div class="lng-pages">
      <div class="lng-page active" id="tr-page-hedge">
@@ -4088,11 +4087,11 @@ th.curr { background: #f06400 !important; }
 
     <h4>0. 용어</h4>
     <table>
-     <tr><th style="width:26%;">용어</th><th>쉽게 말하면</th></tr>
-     <tr><td><strong>FEI</strong></td><td>극동(Far East) LPG 현물 가격. <strong>우리 원가</strong>가 여기에 연동.</td></tr>
-     <tr><td><strong>CP</strong></td><td>사우디 아람코가 매달 발표하는 계약가격(Contract Price). <strong>우리 판가</strong>가 여기에 연동.</td></tr>
-     <tr><td><strong>Rim−$2</strong></td><td><span class="est">[추정]</span> 판가에 CP 외에 추가로 붙는 항목. 그래서 이게 <strong>손익분기 상대가</strong> 역할을 함.</td></tr>
-     <tr><td><strong>상대가 (FEI−CP)</strong></td><td>차트의 "FEI/CP" 값(338, 285…). 단위가 $/ton인 <strong>차이값</strong>.</td></tr>
+     <tr><th style="width:24%;">용어</th><th style="width:14%;">구분</th><th>쉽게 말하면</th></tr>
+     <tr><td><strong>FEI</strong></td><td style="text-align:center;"><span style="display:inline-block;background:#C62828;color:white;border-radius:3px;padding:0 6px;font-size:10px;font-weight:700;">원가</span></td><td>극동(Far East) LPG 현물 가격. <strong>우리 원가</strong>가 여기에 연동.</td></tr>
+     <tr><td><strong>CP</strong></td><td style="text-align:center;"><span style="display:inline-block;background:#172A55;color:white;border-radius:3px;padding:0 6px;font-size:10px;font-weight:700;">판가</span></td><td>사우디 아람코가 매달 발표하는 계약가격(Contract Price). <strong>우리 판가</strong>가 여기에 연동.</td></tr>
+     <tr><td><strong>Rim−$2</strong></td><td style="text-align:center;"><span style="display:inline-block;background:#172A55;color:white;border-radius:3px;padding:0 6px;font-size:10px;font-weight:700;">운임</span></td><td><span class="est">[추정]</span> 판가에 CP 외에 추가로 붙는 항목. 그래서 이게 <strong>손익분기 상대가</strong> 역할을 함.</td></tr>
+     <tr><td><strong>상대가 (FEI−CP)</strong></td><td style="text-align:center;"><span style="display:inline-block;background:#385269;color:white;border-radius:3px;padding:0 6px;font-size:10px;font-weight:700;">원가−판가</span></td><td>차트의 "FEI/CP" 값(338, 285…). 단위가 $/ton인 <strong>차이값</strong>.</td></tr>
     </table>
 
     <h4>1. 구조: 판가 − 원가 = 우리 마진</h4>
@@ -4130,8 +4129,7 @@ th.curr { background: #f06400 !important; }
    </div>
    <div class="ez-wrap" id="tr-pnl-wrap">
    <div class="ez-formal" style="min-width:0;">
-   <div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:4px;box-shadow:4px 5px 12px rgba(0,0,0,0.14);padding:18px 20px 14px;margin-bottom:14px;font-size:12px;color:#142446;line-height:1.7;position:relative;">
-    <div style="position:absolute;top:-7px;left:50%;width:90px;height:18px;margin-left:-45px;background:rgba(255,255,255,0.55);border:1px solid rgba(0,0,0,0.07);transform:rotate(-2deg);border-radius:2px;"></div>
+   <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:18px 20px 14px;margin-bottom:14px;font-size:12px;color:#142446;line-height:1.7;">
     <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:12px;">
      <div style="font-size:14px;font-weight:800;color:#142446;">높은 CFR Prem. 지속으로 <span style="color:#C62828;">구조 손익 감소 예상</span>되나, 시황 변동 활용 및 선박 최적화로 Make-up</div>
      <table style="border-collapse:collapse;font-size:11px;text-align:center;background:white;">
@@ -4168,7 +4166,7 @@ th.curr { background: #f06400 !important; }
      <div style="font-size:10.5px;color:#8E9398;margin-left:18px;margin-bottom:8px;">• PDH사 MB 공급 물량 감소로 인한 손익 감소 ('26년 784KT → '27년 565KT)</div>
      <div style="border-top:1px dashed #D4D6D9;padding-top:8px;margin-bottom:6px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span><strong style="color:#C62828;">전쟁 시황 종료에 따른 Operation 수익 감소</strong>가 예상되나, <strong style="color:#172A55;">EPD MB FOB 및 선박 최적화와 시황 변동성 활용 추가 수익 창출</strong>로 Make-up</div>
      <div style="font-size:10.5px;color:#8E9398;margin-left:18px;margin-bottom:8px;">• 기존 선박 리스료 CAPEX 정산 종료로 인한 임차료 감소 등<br>• FCM/이자수익 감소 등 △67억, 판관비 △14억, 사내지급이자/기지비용 +25억</div>
-     <div style="border-top:1px dashed #D4D6D9;padding-top:8px;background:#FFF8B8;margin:0 -14px -10px;padding:8px 14px 10px;border-radius:0 0 8px 8px;">• VMS를 활용한 파나마 대기 및 Auction 비용 절감 (+60억)<br>• Handy-size 선박 일정 최적화 통한 중국 판매 기회 극대화 (+30억)</div>
+     <div style="border-top:1px dashed #D4D6D9;padding-top:8px;background:#EEF3F8;margin:0 -14px -10px;padding:8px 14px 10px;border-radius:0 0 8px 8px;">• VMS를 활용한 파나마 대기 및 Auction 비용 절감 (+60억)<br>• Handy-size 선박 일정 최적화 통한 중국 판매 기회 극대화 (+30억)</div>
     </div>
     <div style="font-size:10px;color:#8E9398;margin-top:10px;"><strong>Source: '26.11월 행캔('27) 기준 추정실적</strong></div>
    </div>
@@ -4196,52 +4194,6 @@ th.curr { background: #f06400 !important; }
     <div class="ez-box ez-final">① 구조의 역마진(−$19/MT)이 바로 <a href="javascript:void(0)" onclick="switchTr('hedge',document.getElementById('tr-tab-hedge'))" style="color:#172A55;font-weight:700;">[FEI-CP Hedge]</a> 탭의 문제예요. 원가(FEI)는 오르고 판가(CP)는 안 오르니 구조 마진이 마이너스. 그래서 판가를 FEI 기준으로 바꾸거나 헤지하자는 논의가 Trading본부의 핵심 이슈.</div>
     <p style="color:#8E9398;font-size:11px;"><span class="est">[추정]</span> 구조 행의 "Rim−2(판가) vs CFR Premium(원가)"는 FEI-CP 탭의 "CP+Rim−$2 vs FEI"와 같은 구조를 $/MT 마진 관점으로 본 것으로 이해됩니다.</p>
    </aside>
-   </div>
-     </div>
-     <div class="lng-page" id="tr-page-etc">
-   <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:8px 14px;margin-bottom:14px;font-size:11px;color:#385269;">📁 아래는 <strong>'26.5월 기준</strong> 기존 내용(1분기 성과·실적 카드·밸류체인·최신 업데이트)입니다. '26년 연간 추정(2,294억)은 행캔 '27의 '26년 전망 3,311억과 다르므로 참고용.</div>
-   <div class="card-grid">
-    <div class="card"><div class="card-title">1분기 실현익 (FEI/Brent)</div><div class="metric">+106억</div><div class="metric-sub">2월 Unwind 80% 완료</div></div>
-    <div class="card"><div class="card-title">HH Optionality 실현익</div><div class="metric">+6.6억</div><div class="metric-sub">4월 Unwind 완료</div></div>
-    <div class="card"><div class="card-title">MB 수입 경쟁력</div><div class="metric" style="font-size:16px;">CP 대비 우위</div><div class="metric-sub">LPG CP 40% 급등 시 MB 인상폭 적어 → SKA 성과개선 기여</div></div>
-    <div class="card"><div class="card-title">현재 포지션 수준</div><div class="metric" style="font-size:16px;">FEI/Brent 91.4%</div><div class="metric-sub">고변동성 시황 모니터링 중</div></div>
-   </div>
-   
-   <div class="section-label">📊 '26년 실적 현황 <span style="font-size:11px;font-weight:400;color:#6b7280;">출처: 26.06.05 2Q Progress 미팅(세전이익 기준)</span></div>
-   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:20px;">
-  <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
-   <div style="font-size:11px;font-weight:700;color:white;background:#1a237e;display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:10px;">'26년 상반기 실적</div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">목표</span><span style="font-weight:700;color:#111827;">766억</span></div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">실적</span><span style="font-weight:700;color:#2e7d32;">1,741억</span></div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">vs 목표</span><span style="font-weight:700;color:#2e7d32;">+975억 초과달성</span></div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;"><span style="color:#6b7280;">달성율</span><span style="font-weight:700;color:#2e7d32;">227%</span></div>
-  </div>
-  <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
-   <div style="font-size:11px;font-weight:700;color:white;background:#e65100;display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:10px;">'26년 연간 추정</div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">목표</span><span style="font-weight:700;color:#111827;">1,319억</span></div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">실적(추정)</span><span style="font-weight:700;color:#2e7d32;">2,294억</span></div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">vs 목표</span><span style="font-weight:700;color:#2e7d32;">+975억 초과달성</span></div>
-   <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;"><span style="color:#6b7280;">달성율</span><span style="font-weight:700;color:#2e7d32;">164%</span></div>
-  </div>
-   </div>
-   <div class="section-label">밸류체인</div>
-   <div class="value-chain">
-    <div class="vc-step"><div class="icon">🌍</div><div class="name">시황 분석</div><div class="desc">JKM·FEI·MB·Brent<br>글로벌 가격 모니터링</div></div>
-    <div class="vc-arrow">›</div>
-    <div class="vc-step"><div class="icon">📊</div><div class="name">포지션 진입</div><div class="desc">페이퍼 포지션 구성<br>물리·파이낸셜 헤지</div></div>
-    <div class="vc-arrow">›</div>
-    <div class="vc-step"><div class="icon">🔗</div><div class="name">사업 연계</div><div class="desc">LPG·LNG 사업 연계<br>Optionality 실행 지원</div></div>
-    <div class="vc-arrow">›</div>
-    <div class="vc-step"><div class="icon">💹</div><div class="name">Unwind</div><div class="desc">최적 시점 포지션 해소<br>실현익 확정</div></div>
-    <div class="vc-arrow">›</div>
-    <div class="vc-step"><div class="icon">💵</div><div class="name">수익</div><div class="desc">Trading 실현익<br>전사 수익 기여</div></div>
-   </div>
-   <div class="section-label">최신 업데이트 <span class="badge badge-blue">CEO Letter 5/7 · 주간보고 5/4</span></div>
-   <div class="update-list">
-    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>1분기 Trading position 수익으로 전사 목표 대비 우수한 성과 (CEO Letter)</strong> — 연초부터 준비한 포지션이 중동전쟁(3/6) 시황 수혜로 기여. 1분기 성과의 핵심 동인.</div></div>
-    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>MB 북미 수입 물량 가격 경쟁력 확보</strong> — LPG CP 40% 급등 시 MB 인상폭 상대적으로 작아 → SKA 원료비 절감 및 흑자전환 기여.</div></div>
-    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>2분기 포지션 전략 수립 중</strong> — 브렌트유 $110, JKM $17/MMBtu 고가 지속. 에너지 가격 변동성 구간, 최적 의사결정 시기. CEO: "우리가 선택할 수 있는 Option들이 많은 것은 큰 힘".</div></div>
-    <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>현대케미칼 LPG 소싱 계약 추진 중</strong> — '28년부터 60천톤. 직매 신규 대형 계약, 체결 임박.</div></div>
    </div>
      </div>
     </div>
