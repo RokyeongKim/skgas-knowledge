@@ -51,7 +51,7 @@ body { font-family: 'Apple SD Gothic Neo','Malgun Gothic',-apple-system,sans-ser
 .hero-ska { background: linear-gradient(135deg,#4a148c,#ab47bc); }
 .hero-energy { background: linear-gradient(135deg,#1D3958,#7C95B2); }
 .hero-hydrogen { background: linear-gradient(135deg,#0d47a1,#1976d2); }
-.hero-trading { background: linear-gradient(135deg,#b45309,#f59e0b); }
+.hero-trading { background: linear-gradient(135deg,#1D3958,#5A86B8); }
 /* CEO Letter styles */
 .ceo-date-badge { background: var(--sk-orange); color: white; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 12px; }
 .ceo-market { display: grid; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); gap: 12px; margin-bottom: 20px; }
@@ -4045,6 +4045,161 @@ th.curr { background: #f06400 !important; }
 
   <div class="biz-panel" id="biz-trading">
    <div class="biz-hero hero-trading"><h1>Trading 사업</h1><p>LPG·LNG Optionality 운용 핵심 엔진 — FEI·MB·Brent 기반 페이퍼 포지션<br>1분기 Trading position 수익이 전사 우수 성과의 핵심 동인 · MB 북미 물량 가격 경쟁력으로 SKA 기여</p></div>
+   <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#DBE6F1;border:1px solid #A9C8E8;border-radius:8px;padding:8px 14px;margin:-8px 0 20px;font-size:12px;color:#142446;">
+    <span style="background:#172A55;color:white;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;">최종 업데이트: '26.11 (행캔 '27 기준)</span>
+    <span>Trading본부 핵심 이슈 <strong>FEI-CP Hedge</strong>(Discussion Agenda)와 <strong>'27년 본부 손익구조</strong>를 포스트잇으로 추가. '26.5월 기준 기존 내용은 [기타] 탭.</span>
+   </div>
+
+   <div class="lng-book">
+    <nav class="lng-tabs" aria-label="Trading 섹션 탭">
+     <button class="lng-tab lt-0 active" id="tr-tab-hedge" onclick="switchTr('hedge',this)">① 🎯 FEI-CP Hedge<small>Discussion Agenda — 국내 공급 역마진, 왜 필요한가</small></button>
+     <button class="lng-tab lt-1" id="tr-tab-pnl" onclick="switchTr('pnl',this)">② 💰 Trading본부 손익구조<small>'26 전망 3,311억 → '27 목표 1,135억 · 구조/Origination/Operation</small></button>
+     <button class="lng-tab lt-2" id="tr-tab-etc" onclick="switchTr('etc',this)">③ 📁 기타<small>'26.5 기존 내용 — 1분기 성과 · 밸류체인 · 최신 업데이트</small></button>
+    </nav>
+    <div class="lng-pages">
+     <div class="lng-page active" id="tr-page-hedge">
+   <div class="section-label">① 🎯 Discussion Agenda — FEI-CP Hedge: 왜 필요한가 <span style="font-size:10px;font-weight:400;color:#8E9398;">Source: 행캔 '27 Discussion Agenda (p.135) · Trading본부 핵심 이슈</span>
+    <button type="button" class="ez-toggle" onclick="toggleEz('tr-hedge-wrap',this)">💬 쉽게 이해하기 숨기기</button>
+   </div>
+   <div class="ez-wrap" id="tr-hedge-wrap">
+   <div class="ez-formal" style="min-width:0;">
+    <div style="background:#DBE6F1;border-left:4px solid #172A55;border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:14px;font-size:12.5px;font-weight:700;color:#142446;">국내 공급 <strong style="color:#C62828;">역마진</strong>이 발생하는 시황으로 <strong style="color:#C62828;">도입 손실 최소화 방안</strong> 등 논의 필요</div>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:14px;align-items:start;">
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:12px 14px;">
+      <div style="text-align:center;font-weight:800;font-size:13px;color:#142446;border-bottom:2px solid #142446;padding-bottom:5px;margin-bottom:8px;">'27년 국내 공급 마진¹⁾ 추정</div>
+      <svg viewBox="0 0 640 330" style="width:100%;height:auto;display:block;font-family:inherit;"><line x1="48" y1="18.0" x2="628" y2="18.0" stroke="#D4D6D9" stroke-width="1"/><text x="44" y="21.0" text-anchor="end" font-size="10" fill="#8E9398">400</text><line x1="48" y1="58.3" x2="628" y2="58.3" stroke="#D4D6D9" stroke-width="1"/><text x="44" y="61.3" text-anchor="end" font-size="10" fill="#8E9398">300</text><line x1="48" y1="98.6" x2="628" y2="98.6" stroke="#D4D6D9" stroke-width="1"/><text x="44" y="101.6" text-anchor="end" font-size="10" fill="#8E9398">200</text><line x1="48" y1="138.9" x2="628" y2="138.9" stroke="#D4D6D9" stroke-width="1"/><text x="44" y="141.9" text-anchor="end" font-size="10" fill="#8E9398">100</text><line x1="48" y1="179.1" x2="628" y2="179.1" stroke="#385269" stroke-width="1.5"/><text x="44" y="182.1" text-anchor="end" font-size="10" fill="#8E9398">0</text><line x1="48" y1="219.4" x2="628" y2="219.4" stroke="#D4D6D9" stroke-width="1"/><text x="44" y="222.4" text-anchor="end" font-size="10" fill="#C62828">-100</text><line x1="48" y1="259.7" x2="628" y2="259.7" stroke="#D4D6D9" stroke-width="1"/><text x="44" y="262.7" text-anchor="end" font-size="10" fill="#C62828">-200</text><line x1="48" y1="300.0" x2="628" y2="300.0" stroke="#D4D6D9" stroke-width="1"/><text x="44" y="303.0" text-anchor="end" font-size="10" fill="#C62828">-300</text><rect x="62.0" y="179.1" width="20.3" height="93.9" fill="#7C95B2"/><text x="72.2" y="285.0" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">-233</text><rect x="110.3" y="179.1" width="20.3" height="77.3" fill="#7C95B2"/><text x="120.5" y="268.5" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">-192</text><rect x="158.7" y="179.1" width="20.3" height="61.6" fill="#7C95B2"/><text x="168.8" y="252.8" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">-153</text><rect x="207.0" y="179.1" width="20.3" height="50.4" fill="#7C95B2"/><text x="217.2" y="241.5" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">-125</text><rect x="255.3" y="179.1" width="20.3" height="43.9" fill="#7C95B2"/><text x="265.5" y="235.1" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">-109</text><rect x="303.7" y="179.1" width="20.3" height="33.8" fill="#7C95B2"/><text x="313.8" y="225.0" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">-84</text><rect x="352.0" y="179.1" width="20.3" height="27.8" fill="#7C95B2"/><text x="362.2" y="218.9" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">-69</text><rect x="400.4" y="179.1" width="20.3" height="25.0" fill="#7C95B2"/><text x="410.5" y="216.1" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">-62</text><rect x="448.7" y="179.1" width="20.3" height="20.9" fill="#7C95B2"/><text x="458.8" y="212.1" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">-52</text><rect x="497.0" y="179.1" width="20.3" height="19.7" fill="#7C95B2"/><text x="507.2" y="210.9" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">-49</text><rect x="545.4" y="179.1" width="20.3" height="16.9" fill="#7C95B2"/><text x="555.5" y="208.1" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">-42</text><rect x="593.7" y="179.1" width="20.3" height="18.1" fill="#7C95B2"/><text x="603.8" y="209.3" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">-45</text><polyline points="72.2,43.0 120.5,64.3 168.8,82.1 217.2,95.3 265.5,103.0 313.8,113.1 362.2,119.9 410.5,124.4 458.8,128.4 507.2,130.0 555.5,133.2 603.8,132.4" fill="none" stroke="#172A55" stroke-width="2" stroke-dasharray="3 3"/><polyline points="72.2,136.8 120.5,141.7 168.8,143.7 217.2,145.7 265.5,146.9 313.8,146.9 362.2,148.1 410.5,149.3 458.8,149.3 507.2,149.3 555.5,150.1 603.8,150.1" fill="none" stroke="#C62828" stroke-width="2" stroke-dasharray="3 3"/><circle cx="72.2" cy="43.0" r="4" fill="#172A55"/><text x="72.2" y="36.0" text-anchor="middle" font-size="10" font-weight="700" fill="#142446">338</text><circle cx="120.5" cy="64.3" r="4" fill="#172A55"/><text x="120.5" y="57.3" text-anchor="middle" font-size="10" font-weight="700" fill="#142446">285</text><circle cx="168.8" cy="82.1" r="4" fill="#172A55"/><text x="168.8" y="75.1" text-anchor="middle" font-size="10" font-weight="700" fill="#142446">241</text><circle cx="217.2" cy="95.3" r="4" fill="#172A55"/><text x="217.2" y="88.3" text-anchor="middle" font-size="10" font-weight="700" fill="#142446">208</text><circle cx="265.5" cy="103.0" r="4" fill="#172A55"/><text x="265.5" y="96.0" text-anchor="middle" font-size="10" font-weight="700" fill="#142446">189</text><circle cx="313.8" cy="113.1" r="4" fill="#172A55"/><text x="313.8" y="106.1" text-anchor="middle" font-size="10" font-weight="700" fill="#142446">164</text><circle cx="362.2" cy="119.9" r="4" fill="#172A55"/><text x="362.2" y="112.9" text-anchor="middle" font-size="10" font-weight="700" fill="#142446">147</text><circle cx="410.5" cy="124.4" r="4" fill="#172A55"/><text x="410.5" y="117.4" text-anchor="middle" font-size="10" font-weight="700" fill="#142446">136</text><circle cx="458.8" cy="128.4" r="4" fill="#172A55"/><text x="458.8" y="121.4" text-anchor="middle" font-size="10" font-weight="700" fill="#142446">126</text><circle cx="507.2" cy="130.0" r="4" fill="#172A55"/><text x="507.2" y="123.0" text-anchor="middle" font-size="10" font-weight="700" fill="#142446">122</text><circle cx="555.5" cy="133.2" r="4" fill="#172A55"/><text x="555.5" y="126.2" text-anchor="middle" font-size="10" font-weight="700" fill="#142446">114</text><circle cx="603.8" cy="132.4" r="4" fill="#172A55"/><text x="603.8" y="125.4" text-anchor="middle" font-size="10" font-weight="700" fill="#142446">116</text><rect x="68.7" y="133.3" width="7" height="7" fill="#C62828"/><text x="72.2" y="151.8" text-anchor="middle" font-size="10" fill="#385269">105</text><rect x="117.0" y="138.2" width="7" height="7" fill="#C62828"/><text x="120.5" y="156.7" text-anchor="middle" font-size="10" fill="#385269">93</text><rect x="165.3" y="140.2" width="7" height="7" fill="#C62828"/><text x="168.8" y="158.7" text-anchor="middle" font-size="10" fill="#385269">88</text><rect x="213.7" y="142.2" width="7" height="7" fill="#C62828"/><text x="217.2" y="160.7" text-anchor="middle" font-size="10" fill="#385269">83</text><rect x="262.0" y="143.4" width="7" height="7" fill="#C62828"/><text x="265.5" y="161.9" text-anchor="middle" font-size="10" fill="#385269">80</text><rect x="310.3" y="143.4" width="7" height="7" fill="#C62828"/><text x="313.8" y="161.9" text-anchor="middle" font-size="10" fill="#385269">80</text><rect x="358.7" y="144.6" width="7" height="7" fill="#C62828"/><text x="362.2" y="163.1" text-anchor="middle" font-size="10" fill="#385269">77</text><rect x="407.0" y="145.8" width="7" height="7" fill="#C62828"/><text x="410.5" y="164.3" text-anchor="middle" font-size="10" fill="#385269">74</text><rect x="455.3" y="145.8" width="7" height="7" fill="#C62828"/><text x="458.8" y="164.3" text-anchor="middle" font-size="10" fill="#385269">74</text><rect x="503.7" y="145.8" width="7" height="7" fill="#C62828"/><text x="507.2" y="164.3" text-anchor="middle" font-size="10" fill="#385269">74</text><rect x="552.0" y="146.6" width="7" height="7" fill="#C62828"/><text x="555.5" y="165.1" text-anchor="middle" font-size="10" fill="#385269">72</text><rect x="600.3" y="146.6" width="7" height="7" fill="#C62828"/><text x="603.8" y="165.1" text-anchor="middle" font-size="10" fill="#385269">72</text><text x="72.2" y="320" text-anchor="middle" font-size="10" fill="#8E9398">JAN</text><text x="120.5" y="320" text-anchor="middle" font-size="10" fill="#8E9398">Feb</text><text x="168.8" y="320" text-anchor="middle" font-size="10" fill="#8E9398">Mar</text><text x="217.2" y="320" text-anchor="middle" font-size="10" fill="#8E9398">Apr</text><text x="265.5" y="320" text-anchor="middle" font-size="10" fill="#8E9398">May</text><text x="313.8" y="320" text-anchor="middle" font-size="10" fill="#8E9398">Jun</text><text x="362.2" y="320" text-anchor="middle" font-size="10" fill="#8E9398">Jul</text><text x="410.5" y="320" text-anchor="middle" font-size="10" fill="#8E9398">Aug</text><text x="458.8" y="320" text-anchor="middle" font-size="10" fill="#8E9398">Sep</text><text x="507.2" y="320" text-anchor="middle" font-size="10" fill="#8E9398">Oct</text><text x="555.5" y="320" text-anchor="middle" font-size="10" fill="#8E9398">Nov</text><text x="603.8" y="320" text-anchor="middle" font-size="10" fill="#8E9398">Dec</text><text x="48" y="12" font-size="10" fill="#8E9398">$/ton</text></svg><div style="display:flex;gap:16px;justify-content:center;font-size:11px;color:#385269;margin-top:4px;"><span><span style="display:inline-block;width:12px;height:10px;background:#7C95B2;vertical-align:middle;margin-right:4px;"></span>차이 (Rim−$2 − 상대가)</span><span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#172A55;vertical-align:middle;margin-right:4px;"></span>FEI−CP (상대가)</span><span><span style="display:inline-block;width:8px;height:8px;background:#C62828;vertical-align:middle;margin-right:4px;"></span>Rim−$2</span></div>
+      <div style="font-size:10px;color:#8E9398;margin-top:8px;line-height:1.6;">1) 10/29 TFS, Ginga, GFI Forward, FEI/CP : C3 &amp; C4 평균 &nbsp;·&nbsp; 차트의 "FEI/CP"는 FEI−CP 차이값($/ton)</div>
+     </div>
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:12px 14px;font-size:11px;line-height:1.7;color:#385269;">
+      <div style="text-align:center;font-weight:800;font-size:13px;color:#142446;border-bottom:2px solid #142446;padding-bottom:5px;margin-bottom:8px;">의사결정 및 논의사항</div>
+      <div style="text-align:center;font-size:11.5px;color:#142446;margin-bottom:10px;">'미국 – 이란 전쟁 장기화로 인한 <strong>도입 손실 최소화 방안</strong> 검토'</div>
+      <div style="display:grid;grid-template-columns:86px 1fr;gap:8px;align-items:start;">
+       <div style="background:#385269;color:white;border-radius:4px;text-align:center;font-weight:700;padding:8px 4px;font-size:11px;">PDH<br>(SKA+효성)</div><div style="padding-top:6px;">• PDH 판가에 <strong style="color:#C62828;">FEI 반영</strong></div>
+       <div style="background:#385269;color:white;border-radius:4px;text-align:center;font-weight:700;padding:8px 4px;font-size:11px;">민수</div><div style="padding-top:6px;">• EE본부와 논의 및 의견 수렴 필요</div>
+       <div style="background:#385269;color:white;border-radius:4px;text-align:center;font-weight:700;padding:8px 4px;font-size:11px;">국내 구매</div><div style="padding-top:6px;">• SKE 이송 입하 물량 정상화<br><svg viewBox="0 0 320 150" style="width:100%;max-width:340px;height:auto;display:block;font-family:inherit;"><line x1="40" y1="25.0" x2="310" y2="25.0" stroke="#D4D6D9"/><text x="36" y="28.0" text-anchor="end" font-size="10" fill="#8E9398">300</text><line x1="40" y1="56.7" x2="310" y2="56.7" stroke="#D4D6D9"/><text x="36" y="59.7" text-anchor="end" font-size="10" fill="#8E9398">200</text><line x1="40" y1="88.3" x2="310" y2="88.3" stroke="#D4D6D9"/><text x="36" y="91.3" text-anchor="end" font-size="10" fill="#8E9398">100</text><line x1="40" y1="120.0" x2="310" y2="120.0" stroke="#D4D6D9"/><text x="36" y="123.0" text-anchor="end" font-size="10" fill="#8E9398">0</text><rect x="55" y="56.7" width="40" height="63.3" fill="#172A55"/><text x="75" y="52.7" text-anchor="middle" font-size="11" font-weight="700" fill="#142446">200</text><text x="75" y="138" text-anchor="middle" font-size="10" fill="#8E9398">2023</text><rect x="121" y="44.3" width="40" height="75.7" fill="#172A55"/><text x="141" y="40.3" text-anchor="middle" font-size="11" font-weight="700" fill="#142446">239</text><text x="141" y="138" text-anchor="middle" font-size="10" fill="#8E9398">2024</text><rect x="187" y="78.8" width="40" height="41.2" fill="#172A55"/><text x="207" y="74.8" text-anchor="middle" font-size="11" font-weight="700" fill="#142446">130</text><text x="207" y="138" text-anchor="middle" font-size="10" fill="#8E9398">2025</text><rect x="253" y="107.0" width="40" height="13.0" fill="#172A55"/><text x="273" y="103.0" text-anchor="middle" font-size="11" font-weight="700" fill="#142446">41</text><text x="273" y="138" text-anchor="middle" font-size="10" fill="#8E9398">2026.9월</text><text x="40" y="12" font-size="10" fill="#8E9398">천톤²⁾</text></svg><div style="font-size:10px;color:#8E9398;">2) SKE로부터의 C3 &amp; C4 구매량</div></div>
+       <div style="background:#385269;color:white;border-radius:4px;text-align:center;font-weight:700;padding:8px 4px;font-size:11px;">기타</div><div style="padding-top:6px;">• 정유사/석화사 판매 Scheme 변경<br><span style="color:#8E9398;">– 용산화학, S-oil 등</span></div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <aside class="ez-note">
+    <div class="ez-title">📌 FEI-CP Hedge, 쉽게 이해하기</div>
+    <div class="ez-sub"><span class="est">[추정]</span> 표시는 장표에 없는 해석, <span style="color:#8E9398;">회색 글</span>은 아직 확실치 않은 내용입니다.</div>
+
+    <h4>0. 용어</h4>
+    <table>
+     <tr><th style="width:26%;">용어</th><th>쉽게 말하면</th></tr>
+     <tr><td><strong>FEI</strong></td><td>극동(Far East) LPG 현물 가격. <strong>우리 원가</strong>가 여기에 연동.</td></tr>
+     <tr><td><strong>CP</strong></td><td>사우디 아람코가 매달 발표하는 계약가격(Contract Price). <strong>우리 판가</strong>가 여기에 연동.</td></tr>
+     <tr><td><strong>Rim−$2</strong></td><td><span class="est">[추정]</span> 판가에 CP 외에 추가로 붙는 항목. 그래서 이게 <strong>손익분기 상대가</strong> 역할을 함.</td></tr>
+     <tr><td><strong>상대가 (FEI−CP)</strong></td><td>차트의 "FEI/CP" 값(338, 285…). 단위가 $/ton인 <strong>차이값</strong>.</td></tr>
+    </table>
+
+    <h4>1. 구조: 판가 − 원가 = 우리 마진</h4>
+    <table>
+     <tr><th style="width:26%;">구분</th><th>기준</th></tr>
+     <tr><td><strong>원가</strong></td><td>FEI 연동</td></tr>
+     <tr><td><strong>판가</strong></td><td>CP 연동 (+ Rim−$2)</td></tr>
+    </table>
+    <div class="ez-box" style="font-family:monospace;font-size:11.5px;line-height:1.9;">
+     마진 = 판가 − 원가<br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (CP + Rim−$2) − FEI<br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <strong>(Rim−$2) − (FEI−CP)</strong><br>
+     <span style="color:#172A55;">상대가 &lt; Rim−$2 (약 70~100불) → 흑자</span><br>
+     <span style="color:#C62828;">상대가 &gt; Rim−$2 → 역마진</span>
+    </div>
+    <p>1월을 예로 들면 상대가 <strong>338</strong>이 기준선 <strong>105</strong>를 크게 넘어서 <strong style="color:#C62828;">−233</strong>이 나오는 거예요. <strong>연초부터 계속 이런 상황</strong>이라 역마진이 나고 있다는 뜻.</p>
+
+    <h4>2. 왜 지금 CP가 낮나 <span class="est">[추정]</span></h4>
+    <p>배들이 못 나오니까 극동 현물(FEI)은 엄청 오르는데, 중동 내부에서는 수출을 못 해 LPG가 쌓여서 가격(CP)이 많이 오르지 않아요. 그래서 <strong>FEI−CP(상대가)가 크게 벌어지는</strong> 현상이 생기는 듯합니다.</p>
+
+    <h4>3. 그래서 Trading이 주장하는 것</h4>
+    <p>지금 <strong>CP base</strong>로 PDH사·정유사·석화사에 팔고 있는 물량의 판가를 <strong>FEI에 프리미엄을 얹는 방식</strong>으로 바꿔야 한다는 것. (장표의 "PDH 판가에 FEI 반영", "정유사/석화사 판매 Scheme 변경")</p>
+    <p style="color:#8E9398;">다만 반대하는 이슈도 있다고 함 (반대 근거는 아직 미파악).</p>
+
+    <h4>4. 국내 구매 (SKE) <span style="font-weight:400;font-size:10px;color:#8E9398;">— 불확실</span></h4>
+    <p style="color:#8E9398;">SKE가 탱크 용량이 부족하면 우리 기지로 물량을 밀어넣는데, 그때 우리는 CP base로 사게 됨. 지금은 CP가 낮으니 이렇게 들어오는 물량도 적어진다는 뜻으로 보임 (2023년 200천톤 → 2026.9월 41천톤). 확실하지 않아 참고로만.</p>
+
+    <div class="ez-box ez-final"><strong>한 줄 정리:</strong> 원가는 FEI, 판가는 CP를 따르는데 둘이 벌어지면(상대가 &gt; Rim−$2) 팔수록 손해. 그래서 판가 기준을 FEI 쪽으로 옮기거나 헤지로 그 차이를 막자는 게 FEI-CP Hedge 논의.</div>
+   </aside>
+   </div>
+     </div>
+     <div class="lng-page" id="tr-page-pnl">
+   <div class="section-label">② 💰 Trading본부 손익구조 — '27년 본부 손익 <span style="font-size:10px;font-weight:400;color:#8E9398;">Source: '26.11월 행캔 기준 추정실적 (행복경영캔미팅 '27 자료 p.26)</span>
+    <button type="button" class="ez-toggle" onclick="toggleEz('tr-pnl-wrap',this)">💬 쉽게 이해하기 숨기기</button>
+   </div>
+   <div class="ez-wrap" id="tr-pnl-wrap">
+   <div class="ez-formal" style="min-width:0;">
+   <div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:4px;box-shadow:4px 5px 12px rgba(0,0,0,0.14);padding:18px 20px 14px;margin-bottom:14px;font-size:12px;color:#142446;line-height:1.7;position:relative;">
+    <div style="position:absolute;top:-7px;left:50%;width:90px;height:18px;margin-left:-45px;background:rgba(255,255,255,0.55);border:1px solid rgba(0,0,0,0.07);transform:rotate(-2deg);border-radius:2px;"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:12px;">
+     <div style="font-size:14px;font-weight:800;color:#142446;">높은 CFR Prem. 지속으로 <span style="color:#C62828;">구조 손익 감소 예상</span>되나, 시황 변동 활용 및 선박 최적화로 Make-up</div>
+     <table style="border-collapse:collapse;font-size:11px;text-align:center;background:white;">
+      <tr style="background:#DBE6F1;"><th style="padding:4px 10px;border:1px solid #D4D6D9;">Trading 사업이익</th><th style="padding:4px 10px;border:1px solid #D4D6D9;font-weight:600;">'26년 전망</th><th style="padding:4px 10px;border:1px solid #D4D6D9;font-weight:600;">'27년 목표</th><th style="padding:4px 10px;border:1px solid #D4D6D9;background:#172A55;color:white;">전년비</th></tr>
+      <tr><td style="padding:4px 10px;border:1px solid #D4D6D9;color:#8E9398;">사업이익</td><td style="padding:4px 10px;border:1px solid #D4D6D9;">3,311억</td><td style="padding:4px 10px;border:1px solid #D4D6D9;font-weight:700;">1,135억</td><td style="padding:4px 10px;border:1px solid #D4D6D9;font-weight:800;color:#C62828;background:#FFEE8A;">△2,175억</td></tr>
+     </table>
+    </div>
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:8px;overflow:hidden;margin-bottom:10px;">
+     <div style="background:#172A55;color:white;text-align:center;font-weight:700;font-size:13px;padding:7px;">사업별 Key Driver</div>
+     <div style="overflow-x:auto;">
+     <table style="width:100%;border-collapse:collapse;font-size:11px;line-height:1.5;">
+      <thead><tr style="background:#DBE6F1;">
+       <th style="padding:6px;border:1px solid #D4D6D9;text-align:center;width:15%;">주요 변동<br>요인</th><th style="padding:6px;border:1px solid #D4D6D9;text-align:left;">Driver</th><th style="padding:6px;border:1px solid #D4D6D9;text-align:center;width:14%;">'26년</th><th style="padding:6px;border:1px solid #D4D6D9;text-align:center;width:14%;">'27년</th><th style="padding:6px;border:1px solid #D4D6D9;text-align:center;width:13%;">손익영향</th>
+      </tr></thead>
+      <tbody>
+       <tr><td colspan="1" rowspan="6" style="padding:6px;border:1px solid #D4D6D9;text-align:center;vertical-align:middle;background:#EEF3F8;"><strong>매출총이익*</strong><br><span style="color:#C62828;font-weight:800;">△2,004억</span><br><span style="font-size:10px;color:#8E9398;">(3,880 → 1,876억)<br>(270 Mn USD → 140 Mn USD)<br>* 리스 효과 제외</span></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;color:#8E9398;">USD 매출총이익</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;color:#8E9398;">270 Mn USD</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;color:#8E9398;">140 Mn USD</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;color:#8E9398;">△1,993억</td></tr>
+       <tr style="background:#FFF8B8;"><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span><strong>구조</strong></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">8 Mn USD</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">-8 Mn USD</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:800;color:#C62828;border:2px dashed #C62828;">△245억</td></tr>
+       <tr style="color:#8E9398;font-size:10px;"><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;">&nbsp;&nbsp;Rim-2 (판가)<br>&nbsp;&nbsp;CFR Premium (원가)<br>&nbsp;&nbsp;<strong>CFR 공급 마진</strong></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">99$/MT<br>100$/MT<br><strong>-1$/MT</strong></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">80$/MT<br>99$/MT<br><strong style="color:#C62828;">-19$/MT</strong></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+       <tr><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;">Origination</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">10 Mn USD</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">8 Mn USD</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">△42억</td></tr>
+       <tr style="background:#FFF8B8;"><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span><strong>Operation</strong></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">252 Mn USD</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">140 Mn USD</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:800;color:#C62828;border:2px dashed #C62828;">△1,718억</td></tr>
+       <tr style="height:0;"><td colspan="4" style="padding:0;border:none;"></td></tr>
+       <tr><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;background:#EEF3F8;"><strong>리스효과</strong><br><span style="color:#C62828;font-weight:800;">△115억</span></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;">리스효과</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">64억</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">-51억</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">△115억</td></tr>
+       <tr><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;background:#EEF3F8;"><strong>판관비 등</strong><br><span style="color:#C62828;font-weight:800;">△56억</span></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;">자체/배부 비용</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">-633억</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">-689억</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">△56억</td></tr>
+       <tr style="background:#FFEE8A;"><td colspan="1" rowspan="2" style="padding:6px;border:1px solid #D4D6D9;text-align:center;vertical-align:middle;"><strong>추가 손익<br>개선 과제</strong><br><span style="color:#172A55;font-weight:800;">(+90억)</span></td><td colspan="3" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;">선복 운영 최적화</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:700;">+60억</td></tr>
+       <tr style="background:#FFEE8A;"><td colspan="3" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;">Pembina 카고 Optimization</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:700;">+30억</td></tr>
+      </tbody>
+     </table>
+     </div>
+    </div>
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:8px;padding:10px 14px;font-size:11px;line-height:1.7;color:#385269;">
+     <div style="text-align:center;font-weight:700;font-size:13px;color:#142446;border-bottom:2px solid #142446;padding-bottom:5px;margin-bottom:8px;">주요 내용</div>
+     <div style="margin-bottom:4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>시장 운임 안정화 대비, <strong style="color:#C62828;">높은 CFR Prem. 지속 전망</strong>에 따른 마진 하락</div>
+     <div style="font-size:10.5px;color:#8E9398;margin-left:18px;margin-bottom:6px;">- 판가 (시장 운임) : △$19/MT ('26년 : $99 → '27년 80/MT) 하락<br>- 구매가 (CFR Prem) : △$1/MT ('26년 : $100 → '27년 99/MT) 하락</div>
+     <div style="font-size:10.5px;color:#8E9398;margin-left:18px;margin-bottom:8px;">• PDH사 MB 공급 물량 감소로 인한 손익 감소 ('26년 784KT → '27년 565KT)</div>
+     <div style="border-top:1px dashed #D4D6D9;padding-top:8px;margin-bottom:6px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span><strong style="color:#C62828;">전쟁 시황 종료에 따른 Operation 수익 감소</strong>가 예상되나, <strong style="color:#172A55;">EPD MB FOB 및 선박 최적화와 시황 변동성 활용 추가 수익 창출</strong>로 Make-up</div>
+     <div style="font-size:10.5px;color:#8E9398;margin-left:18px;margin-bottom:8px;">• 기존 선박 리스료 CAPEX 정산 종료로 인한 임차료 감소 등<br>• FCM/이자수익 감소 등 △67억, 판관비 △14억, 사내지급이자/기지비용 +25억</div>
+     <div style="border-top:1px dashed #D4D6D9;padding-top:8px;background:#FFF8B8;margin:0 -14px -10px;padding:8px 14px 10px;border-radius:0 0 8px 8px;">• VMS를 활용한 파나마 대기 및 Auction 비용 절감 (+60억)<br>• Handy-size 선박 일정 최적화 통한 중국 판매 기회 극대화 (+30억)</div>
+    </div>
+    <div style="font-size:10px;color:#8E9398;margin-top:10px;"><strong>Source: '26.11월 행캔('27) 기준 추정실적</strong></div>
+   </div>
+   </div>
+   <aside class="ez-note">
+    <div class="ez-title">📌 Trading 손익구조, 쉽게 이해하기</div>
+    <div class="ez-sub">Origination·Operation은 장표에 정의가 없어 <span class="est">[추정]</span>로 풀었습니다. 확인되면 고쳐주세요.</div>
+
+    <h4>0. 숫자 한 줄</h4>
+    <div class="ez-box">'26년 <strong>3,311억</strong>은 전쟁 시황 특수(Operation 252 Mn USD)였고, '27년 <strong>1,135억</strong>은 시황 정상화 + <strong style="color:#C62828;">국내 공급 구조 역마진</strong>을 반영한 숫자. 전년비 △2,175억 중 <strong>△1,718억이 Operation</strong>, △245억이 구조.</div>
+
+    <h4>1. Trading본부는 3층으로 돈을 벌어요</h4>
+    <table>
+     <tr><th style="width:24%;">층</th><th>쉽게 말하면</th><th style="width:22%;">'27 변화</th></tr>
+     <tr><td><strong>① 구조</strong></td><td>국내 공급의 <strong>기본 마진</strong>. 사오는 값(CFR Premium, 원가)과 파는 값(Rim−2, 판가)의 차이. 시황과 무관하게 "장사 구조"에서 나오는 돈.</td><td>판가 $99→$80, 원가 $100→$99 → <strong style="color:#C62828;">−$19/MT 역마진, △245억</strong></td></tr>
+     <tr><td><strong>Origination</strong> <span class="est">[추정]</span></td><td>거래를 <strong>"만들어내는"</strong> 데서 나오는 마진. 장기 공급계약·신규 거래처 발굴(예: PDH사 MB 공급, 현대케미칼 소싱 계약)처럼 물량의 출발점을 잡는 것.</td><td>PDH사 MB 물량 784→565KT 감소 → △42억</td></tr>
+     <tr><td><strong>② Operation</strong> <span class="est">[추정]</span></td><td>잡은 물량을 <strong>"굴리면서"</strong> 버는 돈. 시황 변동 활용(페이퍼 포지션·스왑), 카고 행선지·타이밍 변경(EPD MB FOB), 선박 운영 최적화.</td><td>전쟁 특수 252 → 정상 140 Mn USD → <strong style="color:#C62828;">△1,718억</strong></td></tr>
+    </table>
+    <div class="quote">비유: 구조는 "가게 기본 마진", Origination은 "새 거래처 뚫어서 생긴 마진", Operation은 "재고·배송을 잘 굴려서 추가로 남긴 돈".</div>
+
+    <h4>2. 그 아래 두 줄</h4>
+    <p>· <strong>리스효과</strong>: 선박 리스 회계 효과. 기존 선박 리스료 CAPEX 정산이 끝나 '26년 +64억에서 '27년 −51억으로 (△115억).<br>· <strong>판관비 등</strong>: FCM/이자수익 감소 △67억, 판관비 △14억, 사내지급이자·기지비용 +25억 → 합계 △56억.</p>
+
+    <h4>3. FEI-CP Hedge와 연결</h4>
+    <div class="ez-box ez-final">① 구조의 역마진(−$19/MT)이 바로 <a href="javascript:void(0)" onclick="switchTr('hedge',document.getElementById('tr-tab-hedge'))" style="color:#172A55;font-weight:700;">[FEI-CP Hedge]</a> 탭의 문제예요. 원가(FEI)는 오르고 판가(CP)는 안 오르니 구조 마진이 마이너스. 그래서 판가를 FEI 기준으로 바꾸거나 헤지하자는 논의가 Trading본부의 핵심 이슈.</div>
+    <p style="color:#8E9398;font-size:11px;"><span class="est">[추정]</span> 구조 행의 "Rim−2(판가) vs CFR Premium(원가)"는 FEI-CP 탭의 "CP+Rim−$2 vs FEI"와 같은 구조를 $/MT 마진 관점으로 본 것으로 이해됩니다.</p>
+   </aside>
+   </div>
+     </div>
+     <div class="lng-page" id="tr-page-etc">
+   <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:8px 14px;margin-bottom:14px;font-size:11px;color:#385269;">📁 아래는 <strong>'26.5월 기준</strong> 기존 내용(1분기 성과·실적 카드·밸류체인·최신 업데이트)입니다. '26년 연간 추정(2,294억)은 행캔 '27의 '26년 전망 3,311억과 다르므로 참고용.</div>
    <div class="card-grid">
     <div class="card"><div class="card-title">1분기 실현익 (FEI/Brent)</div><div class="metric">+106억</div><div class="metric-sub">2월 Unwind 80% 완료</div></div>
     <div class="card"><div class="card-title">HH Optionality 실현익</div><div class="metric">+6.6억</div><div class="metric-sub">4월 Unwind 완료</div></div>
@@ -4087,6 +4242,9 @@ th.curr { background: #f06400 !important; }
     <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>MB 북미 수입 물량 가격 경쟁력 확보</strong> — LPG CP 40% 급등 시 MB 인상폭 상대적으로 작아 → SKA 원료비 절감 및 흑자전환 기여.</div></div>
     <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>2분기 포지션 전략 수립 중</strong> — 브렌트유 $110, JKM $17/MMBtu 고가 지속. 에너지 가격 변동성 구간, 최적 의사결정 시기. CEO: "우리가 선택할 수 있는 Option들이 많은 것은 큰 힘".</div></div>
     <div class="update-item"><div class="dot dot-blue"></div><div class="text"><strong>현대케미칼 LPG 소싱 계약 추진 중</strong> — '28년부터 60천톤. 직매 신규 대형 계약, 체결 임박.</div></div>
+   </div>
+     </div>
+    </div>
    </div>
   </div>
 
@@ -5307,6 +5465,12 @@ function switchEn(id, btn) {
   btn.classList.add('active');
   var book = document.querySelector('#biz-energy .lng-book');
   if (book && book.getBoundingClientRect().top < 0) { book.scrollIntoView({behavior:'smooth', block:'start'}); }
+}
+function switchTr(id, btn) {
+  document.querySelectorAll('#biz-trading .lng-page').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('tr-page-'+id).classList.add('active');
+  document.querySelectorAll('#biz-trading .lng-tab').forEach(function(x){x.classList.remove('active');});
+  btn.classList.add('active');
 }
 function toggleEz(wrapId, btn) {
   var w = document.getElementById(wrapId);
