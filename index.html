@@ -44,7 +44,7 @@ body { font-family: 'Apple SD Gothic Neo','Malgun Gothic',-apple-system,sans-ser
 .biz-hero h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
 .biz-hero p { font-size: 13px; opacity: 0.88; line-height: 1.6; }
 .hero-lng { background: linear-gradient(135deg,#172A55,#5A86B8); }
-.hero-lpg { background: linear-gradient(135deg,#2e7d32,#66bb6a); }
+.hero-lpg { background: linear-gradient(135deg,#172A55,#5A86B8); }
 .hero-gen { background: linear-gradient(135deg,#e65100,#ffb300); }
 .hero-bun { background: linear-gradient(135deg,#1a237e,#5c6bc0); }
 .hero-ess { background: linear-gradient(135deg,#004d40,#26a69a); }
@@ -120,6 +120,7 @@ th.curr { background: #f06400 !important; }
 /* 쉽게 이해하기 포스트잇 (generic) */
 .ez-toggle { margin-left:auto; border:1px solid #E0B000; background:#FFEE8A; color:#142446; font-size:11px; font-weight:700; padding:3px 10px; border-radius:9999px; cursor:pointer; font-family:inherit; white-space:nowrap; }
 .ez-wrap { display:grid; grid-template-columns:minmax(0,1fr) 400px; gap:18px; align-items:start; margin-bottom:16px; }
+.ez-wrap.ez-wide { grid-template-columns:minmax(0,1fr) 330px; }
 .ez-wrap.hide-note { grid-template-columns:minmax(0,1fr); }
 .ez-wrap.hide-note .ez-note { display:none; }
 .ez-formal { position:sticky; top:12px; }
@@ -2046,45 +2047,114 @@ th.curr { background: #f06400 !important; }
   </div>
 
   <div class="biz-panel" id="biz-lpg">
-   <div class="biz-hero hero-lpg"><h1>LPG 사업 (EcoEnergy)</h1><p>SK가스 핵심 현금 창출원 — 프로판·부탄 도입·도매 공급<br>FEI·MB·CP 3원 소싱 구조 · Trading·G&amp;P 협업 Optionality 수익 창출</p></div>
+   <div class="biz-hero hero-lpg"><h1>LPG 사업 (EcoEnergy)</h1><p>SK가스 핵심 현금 창출원 — 프로판·부탄 도입·도매 공급<br>FEI·MB·CP 3원 소싱 구조 · 도시가스 연동가 산업체 공급(TSP) · Hedge/Optionality 수익 창출</p></div>
+   <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#DBE6F1;border:1px solid #A9C8E8;border-radius:8px;padding:8px 14px;margin:-8px 0 20px;font-size:12px;color:#142446;">
+    <span style="background:#172A55;color:white;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;">최종 업데이트: '26.11 (행캔 '27 기준)</span>
+    <span>'27년 본부 손익, <strong>TSP Biz 지속성 확보 방안(Discussion Agenda)</strong>, Optionality 개념(DCC포럼 '26.07)을 포스트잇으로 추가. 기존 '26.5~8월 자료는 각 탭에 유지.</span>
+   </div>
 
-
-   <div class="section-label">📊 '26년 실적 현황 <span style="font-size:11px;font-weight:400;color:#6b7280;">출처: 26.06.05 2Q Progress 미팅(세전이익 기준)</span></div>
+   <div class="lng-book">
+    <nav class="lng-tabs" aria-label="LPG 섹션 탭">
+     <button class="lng-tab lt-0 active" id="lpg-tab-perf" onclick="switchLpg('perf',this)">① 📊 실적<small>'26 전망 795억 → '27 목표 2,115억 · Key Driver</small></button>
+     <button class="lng-tab lt-1" id="lpg-tab-basic" onclick="switchLpg('basic',this)">② 🧪 기본정보<small>제품 구성(C3/C4) · 조달~판매 구조 · 밸류체인</small></button>
+     <button class="lng-tab lt-2" id="lpg-tab-src" onclick="switchLpg('src',this)">③ 📦 조달처<small>Term 70% / Spot 30% · EPD 계약 이력</small></button>
+     <button class="lng-tab lt-3" id="lpg-tab-sale" onclick="switchLpg('sale',this)">④ 🏭 판매처<small>🔥 TSP Biz 지속성(Discussion Agenda) · 판매믹스 · 납사대체</small></button>
+     <button class="lng-tab lt-4" id="lpg-tab-opt" onclick="switchLpg('opt',this)">⑤ 🎲 Optionality 개념<small>Hedge → Unwind → R/O · 4대 요소 · 공급 기반 원칙</small></button>
+     <button class="lng-tab lt-5" id="lpg-tab-tmc" onclick="switchLpg('tmc',this)">⑥ 💰 TMC<small>충전소 수익성 관리기준 224원/kg</small></button>
+    </nav>
+    <div class="lng-pages">
+     <div class="lng-page active" id="lpg-page-perf">
+   <div class="section-label">💰 EcoEnergy본부 손익구조 — '27년 본부 손익 <span style="font-size:10px;font-weight:400;color:#8E9398;">Source: '26.11월 행캔 기준 추정실적 (행복경영캔미팅 '27 자료 p.26)</span></div>
+   <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:18px 20px 14px;margin-bottom:16px;font-size:12px;color:#142446;line-height:1.7;">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:12px;">
+     <div style="font-size:14px;font-weight:800;">SKA 공급 이익 제외 되었으나, <span style="color:#172A55;">판매량 확대 및 수익성 회복</span>으로 전년비 약 <span style="color:#172A55;">+1,300억</span> 증가한 목표 수립</div>
+     <table style="border-collapse:collapse;font-size:11px;text-align:center;background:white;">
+      <tr style="background:#DBE6F1;"><th style="padding:4px 10px;border:1px solid #D4D6D9;">Eco Energy 사업이익</th><th style="padding:4px 10px;border:1px solid #D4D6D9;font-weight:600;">'26년 전망</th><th style="padding:4px 10px;border:1px solid #D4D6D9;font-weight:600;">'27년 목표</th><th style="padding:4px 10px;border:1px solid #D4D6D9;background:#172A55;color:white;">전년비</th></tr>
+      <tr><td style="padding:4px 10px;border:1px solid #D4D6D9;color:#8E9398;">사업이익</td><td style="padding:4px 10px;border:1px solid #D4D6D9;">795억</td><td style="padding:4px 10px;border:1px solid #D4D6D9;font-weight:700;">2,115억</td><td style="padding:4px 10px;border:1px solid #D4D6D9;font-weight:800;color:#172A55;background:#FFEE8A;">+1,321억</td></tr>
+     </table>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:14px;align-items:start;">
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:8px;overflow:hidden;">
+     <div style="background:#172A55;color:white;text-align:center;font-weight:700;font-size:13px;padding:7px;">사업별 Key Driver</div>
+     <div style="overflow-x:auto;">
+     <table style="width:100%;border-collapse:collapse;font-size:11px;line-height:1.5;">
+      <thead><tr style="background:#DBE6F1;"><th style="padding:6px;border:1px solid #D4D6D9;text-align:center;width:16%;">주요 변동<br>요인</th><th style="padding:6px;border:1px solid #D4D6D9;text-align:left;">Driver</th><th style="padding:6px;border:1px solid #D4D6D9;text-align:center;width:15%;">'26년</th><th style="padding:6px;border:1px solid #D4D6D9;text-align:center;width:15%;">'27년</th><th style="padding:6px;border:1px solid #D4D6D9;text-align:center;width:13%;">손익영향</th></tr></thead>
+      <tbody>
+       <tr style="background:#FFF8B8;"><td colspan="1" rowspan="3" style="padding:6px;border:1px solid #D4D6D9;text-align:center;vertical-align:middle;background:#EEF3F8;"><strong>민수 매총</strong><br><span style="color:#172A55;font-weight:800;">+776억</span><br><span style="font-size:10px;color:#8E9398;">(1,463 → 2,239억)</span></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span><strong>민수 수익성</strong></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">-100억</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">550억</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:800;color:#172A55;border:2px dashed #C62828;">+650억</td></tr>
+       <tr><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;">C3/C4 판매 증가</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">1,477KT</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">1,515KT</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">+50억</td></tr>
+       <tr><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;">MC</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">99원/kg</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">101원/kg</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;color:#C62828;">△30억</td></tr>
+       <tr style="background:#FFF8B8;"><td colspan="1" rowspan="5" style="padding:6px;border:1px solid #D4D6D9;text-align:center;vertical-align:middle;background:#EEF3F8;"><strong>산업체/석화<br>매총</strong><br><span style="color:#172A55;font-weight:800;">+436억</span><br><span style="font-size:10px;color:#8E9398;">(635 → 1,071억)</span></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span><strong>JKM Sell Unwind 기저효과</strong></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">-424억</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">-</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:800;color:#172A55;border:2px dashed #C62828;">+424억</td></tr>
+       <tr style="background:#FFF8B8;"><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span><strong>SKA 거래 구조 변경</strong></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">971KT</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">378KT</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:800;color:#C62828;border:2px dashed #C62828;">△158억</td></tr>
+       <tr style="background:#FFF8B8;"><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">4</span><strong>JKM 상승 효과</strong></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">$12/mmbtu</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">$14/mmbtu</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:800;color:#172A55;border:2px dashed #C62828;">+150억</td></tr>
+       <tr style="background:#FFF8B8;"><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">5</span><strong>판매량 증가</strong></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">615KT</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">1,084KT</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:800;color:#172A55;border:2px dashed #C62828;">+224억</td></tr>
+       <tr><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;">LPG Optionality 손익</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">386억</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">207억</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;color:#C62828;">△179억</td></tr>
+       <tr><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;background:#EEF3F8;"><strong>판관비 등</strong><br><span style="color:#172A55;font-weight:800;">+109억</span></td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;">자체/배부 비용</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">-1,303억</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">-1,195억</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;">+109억</td></tr>
+       <tr style="background:#FFEE8A;"><td colspan="1" rowspan="2" style="padding:6px;border:1px solid #D4D6D9;text-align:center;vertical-align:middle;"><strong>추가 손익<br>개선 과제</strong><br><span style="color:#172A55;font-weight:800;">(+190억)</span></td><td colspan="3" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;">S-OIL向 추가 판매 기회 확보</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:700;">+90억</td></tr>
+       <tr style="background:#FFEE8A;"><td colspan="3" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;">Opt. 이익 극대화</td><td colspan="1" rowspan="1" style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:700;">+100억</td></tr>
+      </tbody>
+     </table>
+     </div>
+    </div>
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:8px;padding:10px 14px;font-size:11px;line-height:1.7;color:#385269;">
+     <div style="text-align:center;font-weight:700;font-size:13px;color:#142446;border-bottom:2px solid #142446;padding-bottom:5px;margin-bottom:8px;">주요 내용</div>
+     <div style="margin-bottom:4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>미국-이란 종전 후 LPG 가격 안정화로 <strong style="color:#172A55;">민수 수익성 회복 가정</strong></div>
+     <div style="font-size:10.5px;color:#8E9398;margin-left:18px;margin-bottom:8px;">• 차별화 영업 및 1톤 트럭 증가, N/W 확보 효과로 M/S 확대 (C3 +0.3%, C4 +0.5%)<br>• 구조적 증가 있으나, 수송체계 재편으로 비용 효율화/판매 증대 (C3 +2원, C4 +1.5원)</div>
+     <div style="border-top:1px dashed #D4D6D9;padding-top:8px;margin-bottom:4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span><strong style="color:#172A55;">JKM Sell Unwind 손실의 '26년 선인식</strong> 후 판가 반영에 따른 기저효과</div>
+     <div style="margin-bottom:4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span><strong style="color:#C62828;">SKA向 판매량 제외</strong> ('26년 판매량 610KT, 공급마진 $20/MT)</div>
+     <div style="margin-bottom:4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">4</span><strong style="color:#172A55;">JKM 상승에 따른 산업체 판매마진 확대</strong>, 판매多 동절기 Unwind로 Upside 확보</div>
+     <div style="margin-bottom:4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">5</span><strong style="color:#172A55;">납사대체(+330KT) 및 S-Oil向 수소제조용(+40KT) 판매</strong> 등 산업체/석화 판매 확대</div>
+     <div style="font-size:10.5px;color:#8E9398;margin-left:18px;margin-bottom:8px;">• LPG Opt. 실행 가능 물량 축소로 전년비 감소<br>• 사내지급이자 +70억, 기지비용 +90억 (배부비율 변동 영향 55.5% → 44.7%)</div>
+     <div style="border-top:1px dashed #D4D6D9;background:#EEF3F8;margin:0 -14px -10px;padding:8px 14px 10px;border-radius:0 0 8px 8px;">• 高JKM 시황 활용한 수소제조용(+72KT) 및 샤힌 가동 연계 납사대체 공급 확대(+60KT) (+90억)<br>• Y+2~3년 소싱 물량 대상 Optionality 이익 극대화 모색 (+100억)</div>
+    </div>
+    </div>
+    <div style="font-size:10px;color:#8E9398;margin-top:10px;"><strong>Source: '26.11월 행캔('27) 기준 추정실적</strong> · ※ 아래 '26년 실적 카드(2Q Progress, 연간 추정 1,012억)는 행캔 '26년 전망 795억과 기준 시점이 달라 참고용</div>
+   </div>
+   <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:8px 14px;margin-bottom:14px;font-size:11px;color:#385269;">📁 아래는 '26.06.05 2Q Progress 미팅 기준 실적 카드와 '26.5월 주간보고 기준 최신 업데이트</div>
+<div class="section-label">📊 '26년 실적 현황 <span style="font-size:11px;font-weight:400;color:#8E9398;">출처: 26.06.05 2Q Progress 미팅(세전이익 기준)</span></div>
    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:20px;">
-  <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
-   <div style="font-size:11px;font-weight:700;color:white;background:#1a237e;display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:10px;">'26년 상반기 실적</div>
-  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">목표</span><span style="font-weight:700;color:#111827;">891억</span></div>
-  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">실적</span><span style="font-weight:700;color:#c62828;">△60억</span></div>
-  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">vs 목표</span><span style="font-weight:700;color:#c62828;">△951억 미달</span></div>
-  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;"><span style="color:#6b7280;">달성율</span><span style="font-weight:700;color:#c62828;">(적자)</span></div>
+  <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;">
+   <div style="font-size:11px;font-weight:700;color:white;background:#172A55;display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:10px;">'26년 상반기 실적</div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid #EDEDED;"><span style="color:#8E9398;">목표</span><span style="font-weight:700;color:#142446;">891억</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid #EDEDED;"><span style="color:#8E9398;">실적</span><span style="font-weight:700;color:#C62828;">△60억</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid #EDEDED;"><span style="color:#8E9398;">vs 목표</span><span style="font-weight:700;color:#C62828;">△951억 미달</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;"><span style="color:#8E9398;">달성율</span><span style="font-weight:700;color:#C62828;">(적자)</span></div>
   </div>
-  <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;">
-   <div style="font-size:11px;font-weight:700;color:white;background:#e65100;display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:10px;">'26년 연간 추정</div>
-  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">목표</span><span style="font-weight:700;color:#111827;">1,639억</span></div>
-  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">실적</span><span style="font-weight:700;color:#c62828;">1,012억</span></div>
-  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--gray-100);"><span style="color:#6b7280;">vs 목표</span><span style="font-weight:700;color:#c62828;">△627억 미달</span></div>
-  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;"><span style="color:#6b7280;">달성율</span><span style="font-weight:700;color:#c62828;">61.7%</span></div>
+  <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;">
+   <div style="font-size:11px;font-weight:700;color:white;background:#385269;display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:10px;">'26년 연간 추정</div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid #EDEDED;"><span style="color:#8E9398;">목표</span><span style="font-weight:700;color:#142446;">1,639억</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid #EDEDED;"><span style="color:#8E9398;">실적</span><span style="font-weight:700;color:#C62828;">1,012억</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid #EDEDED;"><span style="color:#8E9398;">vs 목표</span><span style="font-weight:700;color:#C62828;">△627억 미달</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;"><span style="color:#8E9398;">달성율</span><span style="font-weight:700;color:#C62828;">61.7%</span></div>
   </div>
    </div>   <!-- C3/C4 제품 구성 -->
-   <div class="section-label">🧪 제품 구성 — C3 (프로판) / C4 (부탄)</div>
+   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 4일 주간보고</span></div>
+   <div class="update-list">
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>HH Optionality +6.6억 실현(4월)</strong> — Trading본부 연계 헤지 운용, Unwind 완료. 다음 시즌 구조 검토 중.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>도로공사 23개소 낙찰(2/5)</strong> — 20년 장기 고속도로 공급권, Autogas 네트워크 대폭 확대.</div></div>
+    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>T사 1공장 계약(3/3, 28천톤/년)</strong> — 납사대체 직매 신규 대형 계약 체결.</div></div>
+    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>E1 교환계약 협의 진행 중</strong> — 재고 위치 최적화 목적, 조건 최종 협의 단계.</div></div>
+   </div>
+     </div>
+     <div class="lng-page" id="lpg-page-basic">
+<div class="section-label">🧪 제품 구성 — C3 (프로판) / C4 (부탄)</div>
    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;">
-    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px;">
-     <div style="font-size:11px;font-weight:700;background:#1d4ed8;color:white;display:inline-block;padding:2px 10px;border-radius:4px;margin-bottom:10px;">C3 — 프로판 (Propane)</div>
-     <div style="font-size:12px;color:#374151;line-height:1.8;">
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:16px;">
+     <div style="font-size:11px;font-weight:700;background:#172A55;color:white;display:inline-block;padding:2px 10px;border-radius:4px;margin-bottom:10px;">C3 — 프로판 (Propane)</div>
+     <div style="font-size:12px;color:#385269;line-height:1.8;">
       <div style="margin-bottom:8px;"><strong>용처:</strong> 석화사 · 산업체 원료/연료</div>
-      <div style="background:#e8f5e9;border-radius:6px;padding:8px 10px;font-size:11px;color:#1b5e20;margin-bottom:8px;">
+      <div style="background:#EEF3F8;border-radius:6px;padding:8px 10px;font-size:11px;color:#172A55;margin-bottom:8px;">
        <strong>윈윈 구조</strong><br>
        • SK가스: 유가연동 파생상품으로 수익성 안정적 확보<br>
        • 석화사/산업체: 납사·도시가스 대비 LPG가 쌀 때 선택 → 원가 경쟁력↑
       </div>
-      <div style="font-size:11px;color:#6b7280;">도시가스 대비 싼 가격 공급 → 산업체 대체사용 유도</div>
+      <div style="font-size:11px;color:#8E9398;">도시가스 대비 싼 가격 공급 → 산업체 대체사용 유도</div>
      </div>
     </div>
-    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px;">
-     <div style="font-size:11px;font-weight:700;background:#7c3aed;color:white;display:inline-block;padding:2px 10px;border-radius:4px;margin-bottom:10px;">C4 — 부탄 (Butane)</div>
-     <div style="font-size:12px;color:#374151;line-height:1.8;">
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:16px;">
+     <div style="font-size:11px;font-weight:700;background:#172A55;color:white;display:inline-block;padding:2px 10px;border-radius:4px;margin-bottom:10px;">C4 — 부탄 (Butane)</div>
+     <div style="font-size:12px;color:#385269;line-height:1.8;">
       <div style="margin-bottom:8px;"><strong>용처:</strong> 자동차용 LPG (1톤 트럭 · 부탄 차량)</div>
-      <div style="background:#f3e5f5;border-radius:6px;padding:8px 10px;font-size:11px;color:#4a148c;">
+      <div style="background:#EEF3F8;border-radius:6px;padding:8px 10px;font-size:11px;color:#172A55;">
        1톤 트럭 수요 · 부통 자동차용<br>
        민수 충전소를 통해 공급
       </div>
@@ -2093,156 +2163,431 @@ th.curr { background: #f06400 !important; }
    </div>
 
    <!-- LPG 조달구조 -->
-   <div class="section-label">📦 LPG 조달구조</div>
+   <div class="section-label">🔄 LPG 조달~판매구조</div>
+   <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:20px;margin-bottom:20px;">
+    <div style="display:flex;align-items:stretch;gap:0;overflow-x:auto;margin-bottom:14px;">
+     <div style="flex:1;min-width:80px;text-align:center;background:#DBE6F1;border-radius:8px 0 0 8px;padding:12px 8px;">
+      <div style="font-size:18px;line-height:1;">🌎</div>
+      <div style="font-size:12px;font-weight:700;color:#172A55;margin:4px 0 2px;">MARKET</div>
+      <div style="font-size:10px;color:#8E9398;">미국 Enterprise 등</div>
+     </div>
+     <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 4px;min-width:64px;text-align:center;">
+      <div style="font-size:16px;color:#172A55;">→</div>
+      <div style="font-size:9px;color:#385269;font-weight:600;">조달가</div>
+      <div style="font-size:9px;color:#172A55;font-weight:700;">'26년초 ≈ 1,164원/kg</div>
+     </div>
+     <div style="flex:1;min-width:80px;text-align:center;background:#FFF8B8;padding:12px 8px;">
+      <div style="font-size:18px;line-height:1;">📈</div>
+      <div style="font-size:12px;font-weight:700;color:#C62828;margin:4px 0 2px;">Trading</div>
+      <div style="font-size:10px;color:#8E9398;">소싱·포지션 운용</div>
+     </div>
+     <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 4px;min-width:64px;text-align:center;">
+      <div style="font-size:16px;color:#172A55;">→</div>
+      <div style="font-size:9px;color:#385269;font-weight:600;">이체가</div>
+      <div style="font-size:9px;color:#172A55;font-weight:700;">조달가 + 30~50원/kg</div>
+      <div style="font-size:8px;color:#C62828;font-style:italic;margin-top:2px;">T본부 마진(추정)</div>
+     </div>
+     <div style="flex:1;min-width:80px;text-align:center;background:#EEF3F8;padding:12px 8px;">
+      <div style="font-size:18px;line-height:1;">🏭</div>
+      <div style="font-size:12px;font-weight:700;color:#172A55;margin:4px 0 2px;">EcoEnergy</div>
+      <div style="font-size:10px;color:#8E9398;">국내 공급·충전소 관리</div>
+     </div>
+     <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 4px;min-width:64px;text-align:center;">
+      <div style="font-size:16px;color:#172A55;">→</div>
+      <div style="font-size:9px;color:#385269;font-weight:600;">MP가격</div>
+      <div style="font-size:9px;color:#172A55;font-weight:700;">≈ 1,404원/kg</div>
+      <div style="font-size:8px;color:#8E9398;">EE마진 224원</div>
+     </div>
+     <div style="flex:1;min-width:80px;text-align:center;background:#FFF8B8;padding:12px 8px;">
+      <div style="font-size:18px;line-height:1;">⛽</div>
+      <div style="font-size:12px;font-weight:700;color:#C62828;margin:4px 0 2px;">충전소</div>
+      <div style="font-size:10px;color:#8E9398;">SK가스 폴 충전소</div>
+     </div>
+     <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 4px;min-width:64px;text-align:center;">
+      <div style="font-size:16px;color:#172A55;">→</div>
+      <div style="font-size:9px;color:#385269;font-weight:600;">DP (소비자가)</div>
+      <div style="font-size:9px;color:#C62828;font-weight:700;">MP − 150원</div>
+     </div>
+     <div style="flex:1;min-width:80px;text-align:center;background:#EEF3F8;border-radius:0 8px 8px 0;padding:12px 8px;">
+      <div style="font-size:18px;line-height:1;">🏠</div>
+      <div style="font-size:12px;font-weight:700;color:#172A55;margin:4px 0 2px;">고객</div>
+      <div style="font-size:10px;color:#8E9398;">민수·산업체</div>
+     </div>
+    </div>
+    <div style="background:#EEF3F8;border:1px solid #A9C8E8;border-radius:6px;padding:10px 14px;font-size:12px;color:#385269;">
+     <span style="font-weight:700;color:#172A55;">EE본부 수익구조:</span> MP = 이체가 + 224원/kg. EE마진(224원) − 가격·매출할인(약 150원) = 실질 마진. EE마진은 최근 10년 평균 매년 <strong>+6원/kg</strong>씩 인상.
+    </div>
+   </div>
+   <!-- TMC -->
+   <div class="section-label">밸류체인</div>
+   <div class="value-chain">
+    <div class="vc-step"><div class="icon">🚢</div><div class="name">도입</div><div class="desc">FEI·MB·CP<br>3원 소싱</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">🏭</div><div class="name">울산 기지</div><div class="desc">저장·배관 허브<br>GPS 700m 파이프</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">🚚</div><div class="name">국내 공급</div><div class="desc">민수·산업체<br>Autogas·PDH</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">📈</div><div class="name">Optionality</div><div class="desc">HH·LPG 페이퍼<br>Trading·G&amp;P 협업</div></div>
+    <div class="vc-arrow">›</div>
+    <div class="vc-step"><div class="icon">💵</div><div class="name">수익</div><div class="desc">공급마진<br>+ Optionality 이익</div></div>
+   </div>
+        </div>
+     <div class="lng-page" id="lpg-page-src">
+<div class="section-label">📦 LPG 조달구조</div>
    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:10px;">
-    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px;">
-     <div style="font-size:11px;font-weight:700;background:#1d4ed8;color:white;display:inline-block;padding:2px 10px;border-radius:4px;margin-bottom:10px;">Term 70% — 274만톤</div>
-     <div style="font-size:12px;color:#374151;">
-      <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #f3f4f6;"><span>Enterprise Products</span><span style="font-weight:700;">216만톤</span></div>
-      <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #f3f4f6;"><span>AltaGas</span><span style="font-weight:700;">10만톤</span></div>
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:16px;">
+     <div style="font-size:11px;font-weight:700;background:#172A55;color:white;display:inline-block;padding:2px 10px;border-radius:4px;margin-bottom:10px;">Term 70% — 274만톤</div>
+     <div style="font-size:12px;color:#385269;">
+      <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #A9C8E8;"><span>Enterprise Products</span><span style="font-weight:700;">216만톤</span></div>
+      <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #A9C8E8;"><span>AltaGas</span><span style="font-weight:700;">10만톤</span></div>
       <div style="display:flex;justify-content:space-between;padding:5px 0;"><span>맥쿼리</span><span style="font-weight:700;">48만톤</span></div>
      </div>
     </div>
-    <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px;">
-     <div style="font-size:11px;font-weight:700;background:#7c3aed;color:white;display:inline-block;padding:2px 10px;border-radius:4px;margin-bottom:10px;">Spot 30% — 약 120만톤</div>
-     <div style="font-size:13px;color:#6b7280;">전량 미국(MB) 조달</div>
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:16px;">
+     <div style="font-size:11px;font-weight:700;background:#172A55;color:white;display:inline-block;padding:2px 10px;border-radius:4px;margin-bottom:10px;">Spot 30% — 약 120만톤</div>
+     <div style="font-size:13px;color:#8E9398;">전량 미국(MB) 조달</div>
     </div>
    </div>
-   <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:7px 14px;text-align:center;margin-bottom:20px;display:inline-block;width:100%;box-sizing:border-box;">
-    <span style="font-size:12px;font-weight:700;color:#1d4ed8;">총 도입량 400만톤/년</span>
-    <span style="font-size:11px;color:#6b7280;margin-left:8px;">전량 미국 조달</span>
+   <div style="background:#DBE6F1;border:1px solid #A9C8E8;border-radius:8px;padding:7px 14px;text-align:center;margin-bottom:20px;display:inline-block;width:100%;box-sizing:border-box;">
+    <span style="font-size:12px;font-weight:700;color:#172A55;">총 도입량 400만톤/년</span>
+    <span style="font-size:11px;color:#8E9398;margin-left:8px;">전량 미국 조달</span>
    </div>
 
    <!-- ✨ NEW: EPD 계약 이력 (SKGI/SKGT) -->
-   <div class="section-label">📜 EPD 계약 이력 — SKGI · SKGT 도입 물량 <span style="font-size:11px;font-weight:400;color:#6b7280;">'15~'30년 시기별 계약</span></div>
-   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:16px 18px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.7;">
-    <div style="background:#eff6ff;border-left:4px solid #1d4ed8;border-radius:0 6px 6px 0;padding:8px 12px;margin-bottom:12px;font-size:11px;">
-     <strong style="color:#1e40af;">📌 참고:</strong> <strong>SKGT</strong>는 SKGU(SK Gas US) 산하 Gas Trading 회사. SKG의 미국 현지 트레이딩·소싱 담당.
+   <div class="section-label">📜 EPD 계약 이력 — SKGI · SKGT 도입 물량 <span style="font-size:11px;font-weight:400;color:#8E9398;">'15~'30년 시기별 계약</span></div>
+   <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:16px 18px;margin-bottom:20px;font-size:12px;color:#385269;line-height:1.7;">
+    <div style="background:#DBE6F1;border-left:4px solid #5A86B8;border-radius:0 6px 6px 0;padding:8px 12px;margin-bottom:12px;font-size:11px;">
+     <strong style="color:#172A55;">📌 참고:</strong> <strong>SKGT</strong>는 SKGU(SK Gas US) 산하 Gas Trading 회사. SKG의 미국 현지 트레이딩·소싱 담당.
     </div>
     <div style="overflow-x:auto;">
      <table style="width:100%;border-collapse:collapse;font-size:11px;line-height:1.5;">
       <thead>
-       <tr style="background:#f3f4f6;">
-        <th style="padding:8px;border:1px solid #e5e7eb;text-align:left;width:12%;">계약 Entity</th>
-        <th style="padding:8px;border:1px solid #e5e7eb;text-align:center;width:14%;">계약기간</th>
-        <th style="padding:8px;border:1px solid #e5e7eb;text-align:center;width:14%;">구매 물량</th>
-        <th style="padding:8px;border:1px solid #e5e7eb;text-align:center;width:16%;">구매 가격</th>
-        <th style="padding:8px;border:1px solid #e5e7eb;text-align:left;">Remark</th>
+       <tr style="background:#DBE6F1;">
+        <th style="padding:8px;border:1px solid #D4D6D9;text-align:left;width:12%;">계약 Entity</th>
+        <th style="padding:8px;border:1px solid #D4D6D9;text-align:center;width:14%;">계약기간</th>
+        <th style="padding:8px;border:1px solid #D4D6D9;text-align:center;width:14%;">구매 물량</th>
+        <th style="padding:8px;border:1px solid #D4D6D9;text-align:center;width:16%;">구매 가격</th>
+        <th style="padding:8px;border:1px solid #D4D6D9;text-align:left;">Remark</th>
        </tr>
       </thead>
       <tbody>
        <tr>
-        <td style="padding:7px;border:1px solid #e5e7eb;font-weight:700;color:#1e40af;" rowspan="2">SKGI</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">2015 ~ 2016</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">12카고/2년</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">MB + 13.5cpg</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;font-size:10px;">SKGT의 '18~'22 계약 체결에 따라 '16년은 <strong>9cpg로 할인</strong></td>
+        <td style="padding:7px;border:1px solid #D4D6D9;font-weight:700;color:#172A55;" rowspan="2">SKGI</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">2015 ~ 2016</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">12카고/2년</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">MB + 13.5cpg</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;font-size:10px;">SKGT의 '18~'22 계약 체결에 따라 '16년은 <strong>9cpg로 할인</strong></td>
        </tr>
        <tr>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">2017 ~ 2019</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">1카고/월</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">MB + 9cpg</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;font-size:10px;">SKGT의 '18~'22 계약 체결에 따라 <strong>'18년 8cpg, '19년 7cpg로 할인</strong></td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">2017 ~ 2019</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">1카고/월</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">MB + 9cpg</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;font-size:10px;">SKGT의 '18~'22 계약 체결에 따라 <strong>'18년 8cpg, '19년 7cpg로 할인</strong></td>
        </tr>
-       <tr style="background:#fef3c7;">
-        <td style="padding:7px;border:1px solid #e5e7eb;font-weight:700;color:#c2410c;" rowspan="4">SKGT</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">2017 ~ 2018</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">28카고/2년</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">MB + 9cpg</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;font-size:10px;">'18년 4월~12월 <strong>8cpg로 할인</strong></td>
+       <tr style="background:#FFF8B8;">
+        <td style="padding:7px;border:1px solid #D4D6D9;font-weight:700;color:#C62828;" rowspan="4">SKGT</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">2017 ~ 2018</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">28카고/2년</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">MB + 9cpg</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;font-size:10px;">'18년 4월~12월 <strong>8cpg로 할인</strong></td>
        </tr>
-       <tr style="background:#fef3c7;">
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">2019 ~ 2022</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">3카고/월</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">MB + 7cpg</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;font-size:10px;color:#6b7280;">-</td>
+       <tr style="background:#FFF8B8;">
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">2019 ~ 2022</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">3카고/월</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">MB + 7cpg</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;font-size:10px;color:#8E9398;">-</td>
        </tr>
-       <tr style="background:#fef3c7;">
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">2023 ~ 2026</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">3카고/월</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;">MB + 6cpg</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;font-size:10px;color:#6b7280;">-</td>
+       <tr style="background:#FFF8B8;">
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">2023 ~ 2026</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">3카고/월</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;">MB + 6cpg</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;font-size:10px;color:#8E9398;">-</td>
        </tr>
-       <tr style="background:#dcfce7;">
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#065f46;">2027 ~ 2030</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#065f46;">5카고/월 ↑</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#065f46;">MB + 6cpg</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;font-size:10px;">'27년부터 <strong>월 3→5카고로 물량 상향</strong></td>
+       <tr style="background:#EEF3F8;">
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;font-weight:700;color:#172A55;">2027 ~ 2030</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;font-weight:700;color:#172A55;">5카고/월 ↑</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;font-weight:700;color:#172A55;">MB + 6cpg</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;font-size:10px;">'27년부터 <strong>월 3→5카고로 물량 상향</strong></td>
        </tr>
       </tbody>
      </table>
     </div>
-    <div style="margin-top:8px;font-size:10px;color:#6b7280;line-height:1.7;">
+    <div style="margin-top:8px;font-size:10px;color:#8E9398;line-height:1.7;">
      ※ <strong>MB (Mont Belvieu):</strong> 미국 텍사스 LPG 벤치마크 가격. <strong>cpg = cents per gallon</strong>. 계약은 MB 지수 + 프리미엄 방식.<br>
      <strong>cpg 환산 참고:</strong> 예) MB + 13.5cpg = 갤런당 13.5센트 프리미엄 · <strong>1cpg ≈ $5.2/톤 (프로판)</strong> · <strong>프로판 1톤 = 521갤런</strong> (부탄은 약 <strong>455갤런</strong>)
     </div>
    </div>
 
    <!-- LPG 판매믹스 -->
-   <div class="section-label">📊 LPG 판매믹스 <span style="font-size:11px;font-weight:400;color:#6b7280;">('25년 300만톤 → '30년 400만톤 목표 · 중개 50만톤 별도)</span></div>
-   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;">
+        </div>
+     <div class="lng-page" id="lpg-page-sale">
+   <div class="section-label">🔥 최근 이슈 — TSP Biz 지속성 확보 방안 (Discussion Agenda) <span style="font-size:10px;font-weight:400;color:#8E9398;">Source: 행캔 '27 Discussion Agenda p.129~134 · TSP = 도시가스 연동가 산업체 공급 사업</span>
+    <button type="button" class="ez-toggle" onclick="toggleEz('lpg-tsp-wrap',this)">💬 쉽게 이해하기 숨기기</button>
+   </div>
+   <div class="ez-wrap ez-wide" id="lpg-tsp-wrap">
+   <div class="ez-formal" style="min-width:0;">
+
+    <!-- 1/4 -->
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.65;color:#385269;">
+     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">1/4 · 주요 환경 변화에 어떻게 대응해 왔는가? — <span style="color:#172A55;">TSP 사업 모델은 외부환경 변화 대응을 통해 사업 규모 및 수익성을 유지해 왔으나..</span></div>
+     <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;">
+      <div>
+       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:8px;">('21년 이후) 주요 환경 변화</div>
+       <table style="width:100%;border-collapse:collapse;">
+        <tr><td rowspan="2" style="padding:6px;border:1px solid #D4D6D9;background:#EEF3F8;text-align:center;font-weight:700;width:22%;">도시가스<br>연동판가</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;width:18%;">유가<br>WACOG</td><td style="padding:6px;border:1px solid #D4D6D9;">• <strong>KOGAS 유가연동 Term WACOG 지속 하락</strong><br><span style="color:#8E9398;">– 高 Slope 계약 종료 → 低 Slope 대체/갱신 지속: ('22) 14.0% → ('26) 13.5% → ('30) 13.2%</span></td></tr>
+        <tr><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;">LNG<br>Spot</td><td style="padding:6px;border:1px solid #D4D6D9;">• <strong>KOGAS JKM 도입 비중 확대로 변동성 확대</strong><br><span style="color:#8E9398;">: 비중 ('22) 16% → ('26) 33% → ('30) 27%</span></td></tr>
+        <tr><td colspan="2" style="padding:6px;border:1px solid #D4D6D9;background:#EEF3F8;text-align:center;font-weight:700;">소싱 및 Optionality</td><td style="padding:6px;border:1px solid #D4D6D9;">• <strong>LPG 동고하저 구조 약화 및 CV 변동폭 축소</strong><br><span style="color:#8E9398;">– 중국 석화 수요 확대로 동·하절기 차이 축소: CV 변동폭 ('22) 10% → ('26) 5%</span></td></tr>
+        <tr><td colspan="2" style="padding:6px;border:1px solid #D4D6D9;background:#EEF3F8;text-align:center;font-weight:700;">판매/계약</td><td style="padding:6px;border:1px solid #D4D6D9;">• <strong>판매마진 축소 압력 증대 및 수요 확대 정체</strong><br><span style="color:#8E9398;">– 산업 경기 악화로 고객 공장 가동률 하락 / 재계약 도래 시 가격 인하 요구 증대<br>– 울산 내 연료전환 기회 감소<br>– 미수금 정산단가 감소 ('22) 34원/kg → ('26) 12원/kg</span></td></tr>
+       </table>
+      </div>
+      <div>
+       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:4px;">대응 경과</div>
+       <div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>중장기 소싱 통한 Base 경제성 제고 및 Opt. 기회 확대</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– ('21) MB 중장기(Y+3) 및 ('23) FEI R/O(Y+2) 도입<br>– 경제성 ('21) 146원/kg → ('23) 244원/kg → ('25) 71원/kg</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span>JKM Sell 판가 Hedge 통한 수익성 개선</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– ('22) JKM Sell 실행<br>– ('22) $25.3, ('25) $14.3, ('26) $10.5, ('27) $9.4</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span>수요 다변화 및 지역 확장 노력</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– 연료전지 개발, 납사대체 수요 확보 및 지역 확장(광주/대산 등)</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">4</span>재계약 판가 방어 및 미공급 옵션 확보로 Risk 축소 노력</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– '22년 재계약 시 도시가스 연동 할인률 상향 (88% → 91.5%)<br>– 일부 미공급 옵션(36KT) 및 협의가능 조항(113KT) 확보</div>
+      </div>
+     </div>
+    </div>
+
+    <!-- 2/4 -->
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.65;color:#385269;">
+     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">2/4 · 새로운 환경 변화 및 우려사항 — <span style="color:#C62828;">$80 이상 고유가 및 JKM $10 이하 하락 전망으로 소싱 Window 축소 및 경제성 악화가 예상됨</span></div>
+     <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:12px;">
+      <div style="min-width:0;">
+       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:6px;">본원적 이슈</div>
+       <div>• WACOG 하락으로 소싱 경제성 확보 위한 <strong>유가 하향 ('21 $100 → '30 $77¹⁾)</strong><br>• <strong>JKM 수준이 경제성 확보의 핵심변수</strong> ($1/mmbtu 당, 現 20원/kg)</div>
+       <div style="background:#EEF3F8;border:1px dashed #D4D6D9;border-radius:6px;padding:6px;margin:8px 0;"><div style="font-size:10px;color:#8E9398;text-align:center;">【 연동가 판매이익: JKM $10/mmbtu 기준 】</div><svg viewBox="0 0 560 300" style="width:100%;height:auto;display:block;font-family:inherit;"><line x1="44" y1="266.0" x2="546" y2="266.0" stroke="#EDEDED"/><text x="40" y="269.0" text-anchor="end" font-size="9" fill="#8E9398">7</text><line x1="44" y1="243.1" x2="546" y2="243.1" stroke="#EDEDED"/><text x="40" y="246.1" text-anchor="end" font-size="9" fill="#8E9398">8</text><line x1="44" y1="220.2" x2="546" y2="220.2" stroke="#EDEDED"/><text x="40" y="223.2" text-anchor="end" font-size="9" fill="#8E9398">9</text><line x1="44" y1="197.3" x2="546" y2="197.3" stroke="#EDEDED"/><text x="40" y="200.3" text-anchor="end" font-size="9" fill="#8E9398">10</text><line x1="44" y1="174.4" x2="546" y2="174.4" stroke="#EDEDED"/><text x="40" y="177.4" text-anchor="end" font-size="9" fill="#8E9398">11</text><line x1="44" y1="151.5" x2="546" y2="151.5" stroke="#EDEDED"/><text x="40" y="154.5" text-anchor="end" font-size="9" fill="#8E9398">12</text><line x1="44" y1="128.5" x2="546" y2="128.5" stroke="#EDEDED"/><text x="40" y="131.5" text-anchor="end" font-size="9" fill="#8E9398">13</text><line x1="44" y1="105.6" x2="546" y2="105.6" stroke="#EDEDED"/><text x="40" y="108.6" text-anchor="end" font-size="9" fill="#8E9398">14</text><line x1="44" y1="82.7" x2="546" y2="82.7" stroke="#EDEDED"/><text x="40" y="85.7" text-anchor="end" font-size="9" fill="#8E9398">15</text><line x1="44" y1="59.8" x2="546" y2="59.8" stroke="#EDEDED"/><text x="40" y="62.8" text-anchor="end" font-size="9" fill="#8E9398">16</text><line x1="44" y1="36.9" x2="546" y2="36.9" stroke="#EDEDED"/><text x="40" y="39.9" text-anchor="end" font-size="9" fill="#8E9398">17</text><line x1="44" y1="14.0" x2="546" y2="14.0" stroke="#EDEDED"/><text x="40" y="17.0" text-anchor="end" font-size="9" fill="#8E9398">18</text><text x="44.0" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$50</text><text x="127.7" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$60</text><text x="211.3" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$70</text><text x="295.0" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$80</text><text x="378.7" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$90</text><text x="462.3" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$100</text><text x="546.0" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$110</text><polygon points="44.0,185.8 52.4,184.4 60.7,183.0 69.1,181.6 77.5,180.2 85.8,178.8 94.2,177.4 102.6,176.0 110.9,174.6 119.3,173.2 127.7,171.8 136.0,170.4 144.4,169.0 152.8,167.6 161.1,166.2 169.5,164.8 177.9,163.4 186.2,162.0 194.6,160.6 203.0,159.2 211.3,157.8 219.7,156.4 228.1,155.0 236.4,153.6 244.8,152.2 253.2,150.8 261.5,149.4 269.9,148.0 269.9,148.3 261.5,151.8 253.2,155.3 244.8,158.8 236.4,162.3 228.1,165.8 219.7,169.3 211.3,172.9 203.0,176.4 194.6,179.9 186.2,183.4 177.9,186.9 169.5,190.4 161.1,193.9 152.8,197.4 144.4,200.9 136.0,204.5 127.7,208.0 119.3,211.5 110.9,215.0 102.6,218.5 94.2,222.0 85.8,225.5 77.5,229.0 69.1,232.6 60.7,236.1 52.4,239.6 44.0,243.1" fill="#FFEE8A" fill-opacity="0.35"/><polygon points="44.0,183.5 52.4,181.2 60.7,178.9 69.1,176.6 77.5,174.2 85.8,171.9 94.2,169.6 102.6,167.3 110.9,165.0 119.3,162.6 127.7,160.3 136.0,158.0 144.4,155.7 152.8,153.4 161.1,151.0 169.5,148.7 177.9,146.4 186.2,144.1 194.6,141.8 203.0,139.4 211.3,137.1 219.7,134.8 228.1,132.5 236.4,130.2 244.8,127.8 253.2,125.5 261.5,123.2 269.9,120.9 278.3,118.5 286.6,116.2 295.0,113.9 303.4,111.6 311.7,109.3 320.1,106.9 328.5,104.6 336.8,102.3 345.2,100.0 353.6,97.7 361.9,95.3 370.3,93.0 378.7,90.7 387.0,88.4 395.4,86.1 403.8,83.7 412.1,81.4 420.5,79.1 428.9,76.8 437.2,74.5 445.6,72.1 454.0,69.8 462.3,67.5 462.3,67.5 454.0,71.0 445.6,74.5 437.2,78.0 428.9,81.5 420.5,85.1 412.1,88.6 403.8,92.1 395.4,95.6 387.0,99.1 378.7,102.6 370.3,106.1 361.9,109.6 353.6,113.1 345.2,116.7 336.8,120.2 328.5,123.7 320.1,127.2 311.7,130.7 303.4,134.2 295.0,137.7 286.6,141.2 278.3,144.8 269.9,148.3 261.5,151.8 253.2,155.3 244.8,158.8 236.4,162.3 228.1,165.8 219.7,169.3 211.3,172.9 203.0,176.4 194.6,179.9 186.2,183.4 177.9,186.9 169.5,190.4 161.1,193.9 152.8,197.4 144.4,200.9 136.0,204.5 127.7,208.0 119.3,211.5 110.9,215.0 102.6,218.5 94.2,222.0 85.8,225.5 77.5,229.0 69.1,232.6 60.7,236.1 52.4,239.6 44.0,243.1" fill="#A9C8E8" fill-opacity="0.25"/><polyline points="44.0,243.1 546.0,32.4" fill="none" stroke="#172A55" stroke-width="2.5"/><polyline points="44.0,183.5 546.0,44.3" fill="none" stroke="#5A86B8" stroke-width="2.5"/><polyline points="44.0,185.8 546.0,101.8" fill="none" stroke="#5A86B8" stroke-width="2.5" stroke-dasharray="6 4"/><line x1="462.3" y1="67.5" x2="462.3" y2="266.0" stroke="#8E9398" stroke-dasharray="3 3"/><circle cx="462.3" cy="67.5" r="4" fill="#C62828"/><text x="462.3" y="260.0" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">BEP ('21) $100</text><line x1="269.9" y1="148.3" x2="269.9" y2="266.0" stroke="#8E9398" stroke-dasharray="3 3"/><circle cx="269.9" cy="148.3" r="4" fill="#C62828"/><text x="269.9" y="260.0" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">BEP ('30) $77</text><text x="428.9" y="28.4" font-size="10" font-weight="700" fill="#172A55">LPG 소싱가 (CV 88%)</text><text x="428.9" y="56.3" font-size="10" font-weight="700" fill="#5A86B8">도시가스 판가 ('21)</text><text x="428.9" y="115.8" font-size="10" font-weight="700" fill="#5A86B8">도시가스 판가 ('30)</text><text x="69.1" y="206.4" font-size="10" font-weight="700" fill="#142446">이익 구간 ('30)</text><text x="44" y="10" font-size="9" fill="#8E9398">$/mmbtu</text><text x="546" y="296" text-anchor="end" font-size="9" fill="#8E9398">유가 ($/bl)</text></svg></div>
+       <table style="width:100%;border-collapse:collapse;text-align:center;font-size:10px;table-layout:fixed;">
+        <tr style="background:#DBE6F1;"><th style="padding:6px;border:1px solid #D4D6D9;">JKM</th><th style="padding:6px;border:1px solid #D4D6D9;">'21</th><th style="padding:6px;border:1px solid #D4D6D9;">'22~'23</th><th style="padding:6px;border:1px solid #D4D6D9;">'25</th><th style="padding:6px;border:1px solid #D4D6D9;">'26</th><th style="padding:6px;border:1px solid #D4D6D9;">'27</th><th style="padding:6px;border:1px solid #D4D6D9;">'29~'30</th></tr>
+        <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">비중</td><td style="padding:6px;border:1px solid #D4D6D9;">13%</td><td style="padding:6px;border:1px solid #D4D6D9;">17%</td><td style="padding:6px;border:1px solid #D4D6D9;">20%</td><td style="padding:6px;border:1px solid #D4D6D9;">33%</td><td style="padding:6px;border:1px solid #D4D6D9;">37%</td><td style="padding:6px;border:1px solid #D4D6D9;">27%</td></tr>
+        <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">가격*</td><td style="padding:6px;border:1px solid #D4D6D9;">$16</td><td style="padding:6px;border:1px solid #D4D6D9;">$25</td><td style="padding:6px;border:1px solid #D4D6D9;">$13</td><td style="padding:6px;border:1px solid #D4D6D9;">$18</td><td style="padding:6px;border:1px solid #D4D6D9;">$17</td><td style="padding:6px;border:1px solid #D4D6D9;color:#C62828;font-weight:700;">$9</td></tr>
+        <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">민감도</td><td style="padding:6px;border:1px solid #D4D6D9;">7원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">10원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">13원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">20원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">23원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">17원/$</td></tr>
+       </table>
+       <div style="font-size:9.5px;color:#8E9398;margin-top:4px;">*'26년 경영계획 기준 · 1) JKM $10/mmbtu 기준 · (별첨) JKM $8 기준 BEP 유가: ('21) $97 → ('30) $72 · '30년 예상 소싱 경제성 10원/kg @$70<br>(LPG 소싱 가정) CV 88% 공통, Slope '21 14.3% / '30 13.2%, JKM 비중 '21 13% / '30 27%, 정산단가 '21 20원/kg / '30 0원/kg · (민감도) Slope 0.1%당 3원/kg, 유가 $1당 5원/kg, JKM $1당 ('21) 7원/kg ~ ('30) 17원/kg</div>
+      </div>
+      <div>
+       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:4px;">우려 사항</div>
+       <div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>과거 대비 소싱 Window 축소</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– 유가 및 LPG 변화에 따른 맞춤형 소싱 필요 (소싱 Value: '25. 86% @$80, '26. 93% @$67, '27. 86% @$75)<br>– 기존 하절기 보다, 시황 급변 시 소싱 진행 ('26년물 11월 소싱 완료)</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span>'29년 이후 JKM 하락으로 소싱 경제성 악화</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– 글로벌 LNG 공급 확대에 따른 JKM 지속 하락 전망 ('29년 $9)<br>– <strong style='color:#C62828;'>JKM $8 이하 시 소싱 경제성 확보 제한 (유가 $72 이하)</strong><br>*기존 '26년 소싱 경제성 20원/kg 수준 ('26.1 JKM $9대)</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span>소싱 불확실성 및 경쟁 증가로 유연한 사업 운영 제한</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– 판매 계약 후 미소싱 / 소싱 후 판매 재계약 미체결 시의 재고 Risk<br>– Opt. 이후 공급 위한 재소싱 Risk 증가</div>
+      </div>
+     </div>
+    </div>
+
+    <!-- 3/4 -->
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.65;color:#385269;">
+     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">3/4 · 우려사항을 해결하기 위한 대응 방안 — <span style="color:#172A55;">現 LPG 판매 최적화 및 직도입 Dual 모델 병행을 통한 사업 유연성 확보</span></div>
+     <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;">
+      <div>
+       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:6px;">대응 방안</div>
+       <div style="margin-bottom:6px;">• <strong>연동 판매 모델은 유연성 있는 소싱/판매 규모로 조정</strong><br><span style="color:#8E9398;">– 소싱 Window 확보 및 JKM 하락 방어 가능한 규모로 물량/기간 축소: 2년 기간 이상 단위로 소싱 및 JKM Hedge 운영</span></div>
+       <div style="margin-bottom:6px;">• <strong>제품 확장/직도입 LNG Dual 모델 전환을 통한 경쟁력 확보</strong><br><span style="color:#8E9398;">– 기존 수요처 중 대규모/장기 계약 및 P/L 공급 가능 고객 대상<br>– 도시가스 대비 상시 경쟁력 확보 및 LNG-LPG Opt. 이익 창출 가능</span></div>
+       <div>• <strong>Risk 관리 가능한 단단한 구조 / Policy 정착</strong><br><span style="color:#8E9398;">– 연도 별 재계약 물량 분산 (~10만톤/연, 계열사 제외)<br>– 재계약 시 미공급 옵션 실질 행사 가능한 Penalty 조항 반영 (협의 시 Penalty 미제공, 미협의 시 Penalty 제공/공급중단)<br>– Risk Case에 대한 대응 프로토콜 형식지화 및 실행</span></div>
+      </div>
+      <div>
+       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:6px;">TSP Dual 모델 (안) <span style="font-weight:400;font-size:10px;color:#8E9398;">(40만톤/연 기준 · 예시)</span></div>
+       <div style="display:grid;grid-template-columns:86px 1fr;gap:8px;margin-bottom:6px;"><div style="background:#DBE6F1;border-radius:4px;text-align:center;font-weight:700;padding:10px 4px;display:flex;align-items:center;justify-content:center;">연동가<br>Compact<br>모델</div><div style="border:1px solid #D4D6D9;border-radius:4px;padding:8px 10px;">• <strong>30만톤/연</strong><br>• Y+2~3 소싱 / JKM Hedge<br>• 재계약 도래 시 미공급 옵션 반영<br><span style="color:#8E9398;">(도시가스 Gap 9% Penalty 기준 ~115억원/연¹⁾)</span><br>• <strong>예상 매총이익: 210억원/연²⁾</strong></div></div>
+       <div style="text-align:center;color:#7C95B2;font-size:16px;font-weight:800;line-height:1;">+</div>
+       <div style="display:grid;grid-template-columns:86px 1fr;gap:8px;margin-top:6px;"><div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:4px;text-align:center;font-weight:700;padding:10px 4px;display:flex;align-items:center;justify-content:center;">직도입<br>LNG Dual<br>모델 전환</div><div style="border:1px solid #D4D6D9;border-radius:4px;padding:8px 10px;">• 판매량 <strong>~10만톤/연</strong><br>• 직도입 LNG 또는 LPG Dual 공급 구조<br>• <strong>예상 매총이익: 100억원/연³⁾</strong> (SKGI 이익 포함)</div></div>
+       <div style="font-size:9.5px;color:#8E9398;margin-top:6px;">1) 850원/kg('30년 예상 소매가) x 9%(할인율) x 15만톤 (매년 재계약 도래 물량 기준 (연간 물량 ~50%)), 2) 공급 매총단가: 70원/kg 기준 (공헌이익 40원/kg), 3) 공급 매총단가: (연료 1.5% x Brent $80) + (인프라 350원/mmbtu) 기준</div>
+      </div>
+     </div>
+    </div>
+
+    <!-- 별첨: 수요처 현황 -->
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.6;color:#385269;">
+     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">(별첨) TSP 산업체 연동가 수요처 현황 &amp; 직도입 LNG Dual 모델 우선 추진 대상</div>
+     <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-items:start;">
+      <div style="overflow-x:auto;">
+       <table style="width:100%;border-collapse:collapse;font-size:10.5px;text-align:center;white-space:nowrap;">
+        <thead><tr style="background:#DBE6F1;"><th style="padding:6px;border:1px solid #D4D6D9;">수요처</th><th style="padding:6px;border:1px solid #D4D6D9;">공급방식</th><th style="padding:6px;border:1px solid #D4D6D9;">물량¹⁾<br>(KT/연)</th><th style="padding:6px;border:1px solid #D4D6D9;">직도입 Dual<br>전환 가능</th><th style="padding:6px;border:1px solid #D4D6D9;">미공급 옵션,<br>물량협의 조항</th></tr></thead>
+        <tbody>
+         <tr style="background:#FFF8B8;"><td style="padding:6px;border:1px solid #D4D6D9;">태광산업#3</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">34.5</td><td rowspan="4" style="padding:6px;border:1px solid #D4D6D9;background:#FFF8B8;vertical-align:middle;"><strong>우선 추진</strong></td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:#FFF8B8;"><td style="padding:6px;border:1px solid #D4D6D9;">한주</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">32.2</td><td style="padding:6px;border:1px solid #D4D6D9;">미공급 옵션+Penalty</td></tr>
+         <tr style="background:#FFF8B8;"><td style="padding:6px;border:1px solid #D4D6D9;">한화솔루션#1</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">16.2</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:#FFF8B8;"><td style="padding:6px;border:1px solid #D4D6D9;">한화임팩트</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">16.1</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">용산화학</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">5.0</td><td rowspan="1" style="padding:6px;border:1px solid #D4D6D9;background:white;vertical-align:middle;">대상 제외</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">이수화학</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">17.5</td><td rowspan="12" style="padding:6px;border:1px solid #D4D6D9;background:white;vertical-align:middle;">*후순위 추진<br>(원거리 고려)</td><td style="padding:6px;border:1px solid #D4D6D9;">물량협의</td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">*UAC</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">42.0</td><td style="padding:6px;border:1px solid #D4D6D9;">물량협의</td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">*SKPIC</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">54.0</td><td style="padding:6px;border:1px solid #D4D6D9;">물량협의</td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SK피유코어</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">140톤</td><td style="padding:6px;border:1px solid #D4D6D9;">물량협의</td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">고려아연</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">7.7</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">송원산업</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">5.4</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">피알테크</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">1.8</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">태광산업#1</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">14.8</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SK케미칼</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">6.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SK에코프라임</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">5.2</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">한화솔루션#3</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">9.5</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SKA</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">3.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">경남금속</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">3.8</td><td rowspan="10" style="padding:6px;border:1px solid #D4D6D9;background:white;vertical-align:middle;">대상 제외<br>(울산 외 지역)</td><td style="padding:6px;border:1px solid #D4D6D9;">미공급 옵션+Penalty</td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">대원화성</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">2.5</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">KCC 대죽#1</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">26.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SKIPC</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">20.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">해담토</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">1.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">화인베스틸</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">7.4</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">세아베스틸</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">4.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">롯데케미칼</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">9.6</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">효성티앤씨</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">7.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">효성화학</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">0.9</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:#DBE6F1;font-weight:700;"><td style="padding:6px;border:1px solid #D4D6D9;" colspan="2">합계</td><td style="padding:6px;border:1px solid #D4D6D9;">353KT</td><td style="padding:6px;border:1px solid #D4D6D9;">Dual 가능 99KT</td><td style="padding:6px;border:1px solid #D4D6D9;">미공급 옵션 36KT<br>물량협의 113KT</td></tr>
+        </tbody>
+       </table>
+       <div style="font-size:9.5px;color:#8E9398;margin-top:4px;">1) '27년 경영계획 기준, 민수 연동가 수요처 약 50KT 별도</div>
+      </div>
+      <div>
+       <img src="assets/lpg/tsp_dual_map.jpg" alt="직도입 LNG Dual 모델 우선 추진 대상 — 울산 NG 배관(From KET/CEC)·LPG 배관(From SKG) 경로와 태광·한화솔루션 1공장·한화임팩트·한주 위치" style="width:100%;max-width:640px;border:1px solid #D4D6D9;border-radius:6px;display:block;">
+       <div style="margin-top:6px;">– 당사 추진 NG 배관과 인접/연결 설치 가능 거래처 기준<br>– <strong>4개사, 99KT</strong>: 태광산업#3 (34.5KT), 한주 (32.2KT), 한화솔루션#1 (16.2KT), 한화임팩트 (16.1KT)</div>
+       <div style="font-size:10px;color:#8E9398;margin-top:4px;">※ 이 4개사는 LNG 탭 "연료대체 타깃 7개사"·신규 LNG 발전사업 탭 스팀수요처와 겹침 — 두 아젠다가 울산 NG 배관 하나로 연결됨.</div>
+      </div>
+     </div>
+    </div>
+
+    <!-- 4/4 -->
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.65;color:#385269;">
+     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">4/4 · 주요 논의 및 의사결정 사항은 무엇인가?</div>
+     <table style="width:100%;border-collapse:collapse;">
+      <thead><tr style="background:#DBE6F1;"><th style="padding:6px;border:1px solid #D4D6D9;width:30%;text-align:left;">Discussion Agenda</th><th style="padding:6px;border:1px solid #D4D6D9;text-align:left;">세부 내용</th></tr></thead>
+      <tbody>
+       <tr><td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;"><div style="font-weight:800;font-size:12px;color:#142446;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>LPG 연동가 모델의 최적 소싱 및 판매 규모는?</div><div style="color:#8E9398;font-size:10px;margin-top:4px;">(고려요소) JKM Hedge 가능 물량 (파생손 여력), 중장기 MB 및 FEI 소싱 물량, 직도입 LNG Dual 전환 가능 물량 등</div></td>
+        <td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;">• <strong>(안) 30만톤/연 x 2년</strong><br><span style="color:#8E9398;">– 파생상품 변동성: JKM Hedge 2년간 16만톤 (연간 30만톤, 비중 27% 수준)<br>– 소싱 Risk 축소 효과: MB 중장기 소싱 (4카고/연 x 4년) + FEI 소싱 (12만톤/연) 기준</span><br>• <strong>(수익력)</strong> 기존 대비 수익력 감소하나, 안정적 확보 가능. LNG Dual 전환으로 Makeup 추진<div style="background:#FFF8B8;border-left:3px solid #E0B000;padding:4px 8px;margin-top:4px;font-weight:700;color:#142446;">→ JKM 16만톤 Hedge 시 <span style="color:#C62828;">파생손 감내 가능 여부 ($5/mmbtu = 545억원¹⁾)</span></div></td></tr>
+       <tr><td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;"><div style="font-weight:800;font-size:12px;color:#142446;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span>직도입 LNG Dual 모델 전환 대상 및 Milestone은?</div><div style="color:#8E9398;font-size:10px;margin-top:4px;">(고려요소) 우선 추진 대상 및 도입 제약/소요 기간, LNG 직도입을 위한 Minimum 물량 등</div></td>
+        <td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;">• <strong>(추진 대상)</strong> 기존 수요처 중 대규모/장기 계약 및 P/L 공급 가능 고객 대상<br><span style="color:#8E9398;">– 직도입 가능 신규 설비 보유: 태광산업#3 (34.5KT), 한주 (32.2KT)<br>– 연료전환 5년 도과: 한화솔루션#1 (16.2KT), 한화임팩트 (16.1KT)</span><br>• <strong>(Milestone)</strong> JKM 하락 가능성 ($10 미만) 고려, <strong style="color:#C62828;">'29년부터 조기 전환 필요</strong><div style="background:#FFF8B8;border-left:3px solid #E0B000;padding:4px 8px;margin-top:4px;font-weight:700;color:#142446;">→ 직도입 LNG 소싱 및 공급 Process 진행 고려 시 도입 제약 및 적정 공급 시점<br>→ 경제성 확보 위한 Minimum 물량 (수요처 별 시기 조율/Bundle화, LPG 마중물 조정)</div></td></tr>
+       <tr><td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;"><div style="font-weight:800;font-size:12px;color:#142446;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span>기존 모델의 유연성 증대 방안은?</div><div style="color:#8E9398;font-size:10px;margin-top:4px;">(고려요소) JKM Hedge 가능 물량 (파생손 여력) 등</div></td>
+        <td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;">• <strong>(소싱 Period 확장)</strong> Y+3 ~50% 사전 소싱 (R/O 활용)<br><span style="color:#8E9398;">– Y+1~Y+2 100% 및 추가 Y+3 50% 기준, 총 20만톤 JKM Hedge 필요²⁾</span><div style="background:#FFF8B8;border-left:3px solid #E0B000;padding:4px 8px;margin-top:4px;font-weight:700;color:#142446;">→ JKM 추가 4만톤 (총 20만톤) Hedge시 <span style="color:#C62828;">파생손 감내 가능 여부 ($5/mmbtu = 680억원¹⁾)</span></div></td></tr>
+      </tbody>
+     </table>
+     <div style="font-size:9.5px;color:#8E9398;margin-top:6px;">1) 환율 1,400원, 환산계수 48.6 기준, 2) 2년간 JKM 2 Cargo Hedge 기준 환산 시, LPG 연동가 판매는 약 25만톤/연으로 축소</div>
+    </div>
+   </div>
+
+   <aside class="ez-note">
+    <div class="ez-title">📌 TSP Biz 지속성, 쉽게 이해하기</div>
+    <div class="ez-sub">TSP = "FEI로 LPG 사서, 도시가스 연동가로 파는 산업체 사업". 이 장표들은 <strong>"그 장사가 앞으로도 되냐"</strong>를 묻는 것. <span class="est">[추정]</span>는 장표에 없는 해석.</div>
+
+    <h4>0. 돈 버는 구조 (쌀값·빵값 비유)</h4>
+    <table>
+     <tr><th style="width:20%;"></th><th>내용</th><th style="width:34%;">비유</th></tr>
+     <tr><td><strong>원가</strong></td><td>FEI (LPG 극동 도착가)</td><td>우리가 사오는 <strong>쌀값</strong></td></tr>
+     <tr><td><strong>판가</strong></td><td>도시가스 연동가 = KOGAS LNG 도입가(Brent 55% + HH 10% + JKM 35%) + 공급비 → 그 9X%</td><td>옆집 <strong>빵값</strong>보다 조금 싸게 파는 떡값</td></tr>
+     <tr><td><strong>마진</strong></td><td>판가 − 원가</td><td>빵값 비싸고 쌀값 싸면 남음</td></tr>
+     <tr><td><strong>상대가 CV</strong></td><td>FEI ÷ Brent. 90% 밑이면 OK</td><td>쌀값 ÷ 빵값. 낮을수록 좋음</td></tr>
+     <tr><td><strong>Hedge</strong></td><td>FEI Buy + Brent/JKM/HH Sell 페이퍼</td><td>쌀값·빵값 미리 고정</td></tr>
+     <tr><td><strong>Optionality</strong></td><td>고정해둔 걸 가격 튈 때 풀어서(Unwind) 차익</td><td>고정해둔 쌀 되팔아 차익</td></tr>
+    </table>
+    <div class="ez-box"><strong>핵심 한 줄:</strong> 빵값(도시가스)이 비싸게 유지되고, 쌀값(LPG)이 그보다 충분히 싸야 되는 장사.</div>
+
+    <h4>1. (1/4) 지금까지는 잘 버텨왔다</h4>
+    <table>
+     <tr><th style="width:38%;">환경 변화</th><th>쉽게 말하면</th></tr>
+     <tr><td>KOGAS Slope 하락 (14.0 → 13.2%)</td><td>가스공사가 예전엔 비싸게 LNG 계약했는데 요즘은 싸게 갱신 → <strong>빵값이 내려감</strong></td></tr>
+     <tr><td>KOGAS JKM 비중 확대 (16 → 33%)</td><td>빵값 공식에서 JKM 비중이 커짐 → JKM 따라 빵값이 출렁임</td></tr>
+     <tr><td>동고하저 약화, CV 변동폭 10 → 5%</td><td>중국 석화 수요로 LPG 겨울·여름 가격 차이가 줄어듦 → <strong>옵셔널리티 할 재미가 없어짐</strong></td></tr>
+     <tr><td>판매마진 압박, 미수금 정산단가 34 → 12원</td><td>고객은 깎아달라 하고, 미수금 정산이 끝나가니 빵값 올릴 요인이 사라짐</td></tr>
+    </table>
+    <p><strong>대응:</strong> 원월물(MB Y+3, FEI R/O Y+2)로 더 싸게 사기 · JKM Sell로 판가 쪽 JKM 미리 고정 · 수요 다변화(연료전지·납사대체·광주/대산) · 재계약 할인율 방어(88 → 91.5%)와 미공급 옵션 조항.</p>
+
+    <h4>2. (2/4) 앞으로가 문제: BEP 유가</h4>
+    <p>그래프의 <strong>남색 선 = LPG 소싱가</strong>(CV 88% × Brent), <strong>파란 선 = 도시가스 판가</strong>(실선 '21, 점선 '30). 두 선이 만나는 점이 <strong>BEP 유가</strong>. 그보다 유가가 높으면 쌀값이 빵값을 넘어 손해.</p>
+    <table>
+     <tr><th></th><th>'21년</th><th>'30년</th></tr>
+     <tr><td>BEP 유가 (JKM $10)</td><td>$100</td><td><strong style="color:#C62828;">$77</strong></td></tr>
+     <tr><td>BEP 유가 (JKM $8)</td><td>$97</td><td><strong style="color:#C62828;">$72</strong></td></tr>
+    </table>
+    <p><strong>왜 '30년 선이 납작해지나:</strong> Slope 하락 + JKM 비중이 커진 상태에서 JKM이 장기 하락 → 빵값이 유가 따라 덜 오름 → 이익 구간이 왼쪽으로 쪼그라듦.</p>
+    <div class="quote">비유: 예전엔 유가 $100까지 장사가 됐는데, 이제 $77 넘으면 접어야 함. 지금 유가가 $80 안팎이니 문이 거의 닫힌 셈.</div>
+    <p><strong>"소싱 경제성 20원/kg, JKM $1 빠지면 마진 증발"이란?</strong><br>소싱 경제성 = 잡아둔 원가 vs 예상 판가의 차이, 즉 kg당 마진. '26년물은 kg당 약 20원 남기고 소싱해 둔 상태. 그런데 빵값 공식의 JKM 비중이 커서 JKM $1 떨어지면 빵값이 kg당 약 20원 떨어짐(민감도 표 '26 20원/$) → <strong>JKM $1만 빠지면 마진 20원이 0원</strong>. 민감도가 '21 7원 → '27 23원으로 커진 건 JKM 비중이 13 → 37%로 늘었기 때문.</p>
+    <p><strong>"재고 Risk"란?</strong> 창고의 LPG가 아니라 <strong>"팔 곳 없이 들고 있는 포지션"</strong>.</p>
+    <table>
+     <tr><th style="width:34%;">상황</th><th>쉽게 말하면</th></tr>
+     <tr><td>판매 계약 후 미소싱</td><td>고객과 "도시가스 92%에 줄게" 약속했는데 상대가가 안 떨어져 싸게 못 사옴 → 비싸게 사서 손해 보며 공급</td></tr>
+     <tr><td>소싱 후 재계약 미체결</td><td>2~3년치 미리 잡아뒀는데 고객이 재계약 안 하거나 가동률 하락 → 팔 데 없는 포지션 = 투기(speculation)</td></tr>
+     <tr><td>Unwind 후 재소싱 실패</td><td>옵셔널리티로 풀었는데 상대가가 계속 올라 다시 못 잡음 → 공급 의무는 있으니 비싸게 다시 사야 함</td></tr>
+    </table>
+    <p style="color:#8E9398;">원월물 소싱 기간을 늘릴수록(Y+3) 두 번째 리스크가 커짐. 3년 뒤 고객이 그대로 있을지 모르니까.</p>
+
+    <h4>3. (3/4) 그래서 사업을 둘로 쪼개자: Dual 모델</h4>
+    <table>
+     <tr><th style="width:26%;">모델</th><th style="width:14%;">물량</th><th>뭘 하나</th><th style="width:18%;">매총이익</th></tr>
+     <tr><td><strong>① 연동가 Compact</strong></td><td>30만톤</td><td>지금 방식 그대로, 단 규모 줄이고 Y+2~3 소싱 + JKM Hedge로 방어. 재계약 때 미공급 옵션</td><td>210억/연</td></tr>
+     <tr><td><strong>② 직도입 LNG Dual</strong></td><td>10만톤</td><td>KET/CEC에서 LNG 배관으로 직접 공급, LPG와 둘 다 가능하게</td><td>100억/연</td></tr>
+    </table>
+    <p><strong>"요금제만 바꾸면 마진 확보"는 단편적 — 맞는 지적.</strong> 직도입 LNG도 결국 KOGAS보다 싸야 고객이 받음. 그 조건은 안 없어짐. Dual이 <em>실제로</em> 바꾸는 것은:</p>
+    <p>① <strong>인덱스 미스매치가 사라짐</strong> — 지금은 FEI(LPG)로 사서 Brent+JKM+HH(LNG)로 파니 JKM 헤지 16만톤·파생손 545억 문제가 생김. 직도입은 LNG로 사서 LNG 연동으로 팔아 큰 헤지가 필요 없음. 즉 <strong>"마진이 커진다"가 아니라 "마진을 지키는 비용(헤지·파생손)이 줄어든다"</strong>.<br>② <strong>쌀을 두 종류</strong> — LNG·LPG 중 그때 싼 걸 공급하고 비싼 쪽은 되팔기(옵셔널리티). 지금은 LPG만 있어 LPG가 비싸지면 꼼짝 못 함.<br>③ <strong>배관 통행료</strong> — 판가에 인프라 350원/mmbtu가 따로 있어 LNG 가격과 무관하게 받음. <span class="est">[추정]</span> 100억 중 상당 부분이 이 인프라 수익일 가능성.<br>④ <strong>고객 Lock-in</strong> — 직도입 전환엔 고객의 설비·인허가(조건부 등록) 투자가 필요 → 한번 넘어오면 KOGAS로 돌아가기 어렵고 "깎아줘" 압력도 약해짐.</p>
+    <div class="ez-box"><strong>그래도 남는 문제:</strong> KOGAS가 싸지는 추세는 직도입에도 똑같이 역풍. KOGAS Slope가 13.2%까지 내려오면 우리 직도입 LNG는 그보다 싸게 사와야 하는데, 그게 100억의 전제. 장표에 빠진 질문 → <strong>"직도입 LNG 소싱 Slope를 몇 %로 가정했고, '30년 KOGAS 13.2%보다 얼마나 싼가?"</strong> 이게 없으면 Dual은 리스크를 JKM 파생손에서 LNG 소싱 경쟁력으로 옮긴 것이지 없앤 게 아님.</div>
+    <p style="color:#8E9398;">[확인 필요] 각주 3)의 "연료 1.5% × Brent"는 오타로 보임(보통 Slope는 11~13%). 이 숫자가 Dual 경제성의 핵심 가정이라 EE본부 확인 필요.</p>
+
+    <h4>4. (4/4) 임원이 결정할 것 3가지</h4>
+    <p><strong>① 연동가 모델을 얼마나? → (안) 30만톤 × 2년.</strong> 2년치 미리 소싱하면 JKM Hedge 16만톤 필요. <strong>JKM $5 튀면 파생손 545억.</strong></p>
+    <div class="quote">JKM Sell 페이퍼는 "나중에 JKM $10에 팔게요"라는 약속. 전쟁으로 JKM이 $15가 되면 장부상 $5 × 16만톤 = 545억 손실이 찍힘. 실제로는 빵값(도시가스)도 같이 올라 공급 때 되돌려받으니 마진은 고정인데, <strong>손실은 지금 찍히고 이익은 나중에 와서</strong> 회계·현금흐름이 출렁임. 그래서 질문은 "545억 평가손이 한 번에 찍혀도 감내할 수 있나?". 미·이란 전쟁 때 JKM을 일부러 노출시킨 것도 이 고민과 연결.</div>
+    <p><strong>② 직도입 Dual, 누구부터 언제?</strong> 1순위 태광#3·한주(신규 설비 보유), 한화솔루션#1·한화임팩트(연료전환 5년 도과). JKM $10 밑으로 떨어지기 전인 <strong>'29년부터</strong> 전환 필요. 질문: 직도입 소싱·배관 일정상 언제 가능한가, 경제성 나오는 최소 물량은(고객별 시기 맞추기, LPG 마중물).</p>
+    <p><strong>③ Y+3까지 소싱 늘릴 거냐?</strong> Y+1·Y+2 100%에 Y+3 50% 추가 → 옵셔널리티 기회↑(원월물일수록 싸고 여유). 대신 JKM Hedge 20만톤, <strong>$5 튀면 680억</strong>. 이것도 감내 가능한가.</p>
+
+    <h4>5. 한 줄 정리</h4>
+    <div class="ez-box ez-final">"도시가스가 싸지고 있어서 LPG 연동 장사 문이 닫히고 있다. 그래서 ① 연동가 장사는 30만톤으로 줄이고 2년치 미리 잡되, ② 10만톤은 직도입 LNG로 갈아타자. 단 미리 잡으려면 JKM 헤지를 크게 걸어야 하는데, 그게 튀면 545~680억 평가손이 찍히니 그걸 받아들일 수 있는지 정해달라."</div>
+    <p><strong>임원회의 관점에서 짚을 것 <span class="est">[추정]</span></strong><br>· 파생손 감내 질문은 재무 답이 필요 → EE본부 혼자 못 정하는 아젠다, 재무본부 동석 필요.<br>· 연동가 30만톤 + Dual 10만톤 = 310억인데, <strong>현재 40만톤 매총이익이 장표에 없음</strong>. "지금 대비 얼마나 줄어드는지"가 있어야 판단 가능.<br>· Dual 10만톤은 신규 LNG 발전사업 탭의 울산 NG 배관·인허가가 전제 → 그쪽이 늦어지면 같이 밀림. 두 아젠다를 묶어서 봐야 함.</p>
+   </aside>
+   </div>
+   <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:8px 14px;margin-bottom:14px;font-size:11px;color:#385269;">📁 아래는 기존 판매처 자료 — 판매믹스('25→'30), 구매·판매 방식 상세(EE본부 Notion '26.8), 소싱-판매-옵셔널리티 대응('26.7.2 EE본부 Action Plan)</div>
+<div class="section-label">📊 LPG 판매믹스 <span style="font-size:11px;font-weight:400;color:#8E9398;">('25년 300만톤 → '30년 400만톤 목표 · 중개 50만톤 별도)</span></div>
+   <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:18px 20px;margin-bottom:20px;">
     <div style="display:flex;align-items:flex-start;gap:8px;margin:6px 0;">
-     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;">민수<br><span style="font-weight:400;color:#6b7280;">140만톤</span></div>
-     <div style="flex:1;background:#e5e7eb;border-radius:3px;overflow:hidden;"><div style="width:35%;background:#1b5e20;height:16px;"></div></div>
-     <div style="border:1px dashed #9ca3af;border-radius:5px;padding:4px 8px;background:#f9fafb;font-size:10px;color:#374151;width:260px;flex-shrink:0;"><strong style="color:#111827;">C3/C4 충전소 (연료용)</strong> · C4 67만톤(가스 446개 충전소) + C3 74만톤<br><span style="color:#1d4ed8;">이체가 = [CP+보험료(0.0094%)+운임+관세]×1.0043 + $8/ton</span></div>
+     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;">민수<br><span style="font-weight:400;color:#8E9398;">140만톤</span></div>
+     <div style="flex:1;background:#D4D6D9;border-radius:3px;overflow:hidden;"><div style="width:35%;background:#172A55;height:16px;"></div></div>
+     <div style="border:1px dashed #D4D6D9;border-radius:5px;padding:4px 8px;background:#EEF3F8;font-size:10px;color:#385269;width:260px;flex-shrink:0;"><strong style="color:#142446;">C3/C4 충전소 (연료용)</strong> · C4 67만톤(가스 446개 충전소) + C3 74만톤<br><span style="color:#172A55;">이체가 = [CP+보험료(0.0094%)+운임+관세]×1.0043 + $8/ton</span></div>
     </div>
     <div style="display:flex;align-items:flex-start;gap:8px;margin:6px 0;">
-     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;">석화 PDH<br><span style="font-weight:400;color:#6b7280;">100만톤</span></div>
-     <div style="flex:1;background:#e5e7eb;border-radius:3px;overflow:hidden;"><div style="width:25%;background:#2e7d32;height:16px;"></div></div>
-     <div style="border:1px dashed #9ca3af;border-radius:5px;padding:4px 8px;background:#f9fafb;font-size:10px;color:#374151;width:260px;flex-shrink:0;"><strong style="color:#111827;">효성·SKA 등 (원료용)</strong><br><span style="color:#1d4ed8;">MB+보험료+운임+관세 (M-2 MB 기준 월물 산정)</span></div>
+     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;">석화 PDH<br><span style="font-weight:400;color:#8E9398;">100만톤</span></div>
+     <div style="flex:1;background:#D4D6D9;border-radius:3px;overflow:hidden;"><div style="width:25%;background:#1D3958;height:16px;"></div></div>
+     <div style="border:1px dashed #D4D6D9;border-radius:5px;padding:4px 8px;background:#EEF3F8;font-size:10px;color:#385269;width:260px;flex-shrink:0;"><strong style="color:#142446;">효성·SKA 등 (원료용)</strong><br><span style="color:#172A55;">MB+보험료+운임+관세 (M-2 MB 기준 월물 산정)</span></div>
     </div>
     <div style="display:flex;align-items:flex-start;gap:8px;margin:6px 0;">
-     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;">산업체<br><span style="font-weight:400;color:#6b7280;">40만톤</span></div>
-     <div style="flex:1;background:#e5e7eb;border-radius:3px;overflow:hidden;"><div style="width:10%;background:#388e3c;height:16px;"></div></div>
-     <div style="border:1px dashed #9ca3af;border-radius:5px;padding:4px 8px;background:#f9fafb;font-size:10px;color:#374151;width:260px;flex-shrink:0;"><strong style="color:#111827;">도시가스 → LPG 대체 (연료용)</strong> · 어프로티움 등<br><span style="color:#1d4ed8;">Trading Margin $6/ton · 도시가스 연동가</span></div>
+     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;">산업체<br><span style="font-weight:400;color:#8E9398;">40만톤</span></div>
+     <div style="flex:1;background:#D4D6D9;border-radius:3px;overflow:hidden;"><div style="width:10%;background:#1D3958;height:16px;"></div></div>
+     <div style="border:1px dashed #D4D6D9;border-radius:5px;padding:4px 8px;background:#EEF3F8;font-size:10px;color:#385269;width:260px;flex-shrink:0;"><strong style="color:#142446;">도시가스 → LPG 대체 (연료용)</strong> · 어프로티움 등<br><span style="color:#172A55;">Trading Margin $6/ton · 도시가스 연동가</span></div>
     </div>
     <div style="display:flex;align-items:flex-start;gap:8px;margin:6px 0;">
-     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;">NCC<br>납사대체<br><span style="font-weight:400;color:#6b7280;">20만톤</span></div>
-     <div style="flex:1;background:#e5e7eb;border-radius:3px;overflow:hidden;"><div style="width:5%;background:#43a047;height:16px;min-width:6px;"></div></div>
-     <div style="border:1px dashed #9ca3af;border-radius:5px;padding:4px 8px;background:#f9fafb;font-size:10px;color:#374151;width:260px;flex-shrink:0;"><strong style="color:#111827;">현대케미칼·SKGC·대한유화·LG화학(추진) (원료용)</strong><br><span style="color:#1d4ed8;">FEI/MOPJ 상대가 90% 초반</span> · 구매 MB+Freight<br><span style="color:#6b7280;font-size:9px;">'25 확인치 20만톤 (기존 40만톤 → 정정)</span></div>
+     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;">NCC<br>납사대체<br><span style="font-weight:400;color:#8E9398;">20만톤</span></div>
+     <div style="flex:1;background:#D4D6D9;border-radius:3px;overflow:hidden;"><div style="width:5%;background:#172A55;height:16px;min-width:6px;"></div></div>
+     <div style="border:1px dashed #D4D6D9;border-radius:5px;padding:4px 8px;background:#EEF3F8;font-size:10px;color:#385269;width:260px;flex-shrink:0;"><strong style="color:#142446;">현대케미칼·SKGC·대한유화·LG화학(추진) (원료용)</strong><br><span style="color:#172A55;">FEI/MOPJ 상대가 90% 초반</span> · 구매 MB+Freight<br><span style="color:#8E9398;font-size:9px;">'25 확인치 20만톤 (기존 40만톤 → 정정)</span></div>
     </div>
     <div style="display:flex;align-items:flex-start;gap:8px;margin:6px 0;">
-     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;">열조<br><span style="font-weight:400;color:#6b7280;">5만톤</span></div>
-     <div style="flex:1;background:#e5e7eb;border-radius:3px;overflow:hidden;"><div style="width:1.25%;background:#66bb6a;height:16px;min-width:6px;"></div></div>
-     <div style="border:1px dashed #9ca3af;border-radius:5px;padding:4px 8px;background:#f9fafb;font-size:10px;color:#374151;width:260px;flex-shrink:0;">열 조달용</div>
+     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;">열조<br><span style="font-weight:400;color:#8E9398;">5만톤</span></div>
+     <div style="flex:1;background:#D4D6D9;border-radius:3px;overflow:hidden;"><div style="width:1.25%;background:#66bb6a;height:16px;min-width:6px;"></div></div>
+     <div style="border:1px dashed #D4D6D9;border-radius:5px;padding:4px 8px;background:#EEF3F8;font-size:10px;color:#385269;width:260px;flex-shrink:0;">열 조달용</div>
     </div>
     <div style="display:flex;align-items:flex-start;gap:8px;margin:6px 0;">
-     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;">직매<br><span style="font-weight:400;color:#6b7280;">4만톤</span></div>
-     <div style="flex:1;background:#e5e7eb;border-radius:3px;overflow:hidden;"><div style="width:1%;background:#81c784;height:16px;min-width:6px;"></div></div>
-     <div style="border:1px dashed #9ca3af;border-radius:5px;padding:4px 8px;background:#f9fafb;font-size:10px;color:#374151;width:260px;flex-shrink:0;">직접 판매</div>
+     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;">직매<br><span style="font-weight:400;color:#8E9398;">4만톤</span></div>
+     <div style="flex:1;background:#D4D6D9;border-radius:3px;overflow:hidden;"><div style="width:1%;background:#A9C8E8;height:16px;min-width:6px;"></div></div>
+     <div style="border:1px dashed #D4D6D9;border-radius:5px;padding:4px 8px;background:#EEF3F8;font-size:10px;color:#385269;width:260px;flex-shrink:0;">직접 판매</div>
     </div>
     <div style="display:flex;align-items:flex-start;gap:8px;margin:6px 0;">
-     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;color:#e65100;">중개<br><span style="font-weight:400;color:#6b7280;">50만톤</span></div>
-     <div style="flex:1;background:#e5e7eb;border-radius:3px;overflow:hidden;"><div style="width:12.5%;background:#e65100;height:16px;opacity:0.75;"></div></div>
-     <div style="border:1px dashed #f97316;border-radius:5px;padding:4px 8px;background:#fff7ed;font-size:10px;color:#374151;width:260px;flex-shrink:0;"><span style="color:#e65100;font-weight:700;">EE본부 외 제3자 판매</span> — 이 물량 제외 약 350만톤 전량 EE본부 물량</div>
+     <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;color:#C62828;">중개<br><span style="font-weight:400;color:#8E9398;">50만톤</span></div>
+     <div style="flex:1;background:#D4D6D9;border-radius:3px;overflow:hidden;"><div style="width:12.5%;background:#385269;height:16px;opacity:0.75;"></div></div>
+     <div style="border:1px dashed #f97316;border-radius:5px;padding:4px 8px;background:#FFF8B8;font-size:10px;color:#385269;width:260px;flex-shrink:0;"><span style="color:#C62828;font-weight:700;">EE본부 외 제3자 판매</span> — 이 물량 제외 약 350만톤 전량 EE본부 물량</div>
     </div>
     <!-- 용도별 각주 -->
-    <div style="margin-top:12px;padding:10px 14px;background:#f9fafb;border-left:3px solid var(--sk-blue);border-radius:0 6px 6px 0;font-size:11px;color:#374151;line-height:1.7;">
-     <div style="font-weight:700;color:var(--sk-blue);margin-bottom:4px;">* 용도별 정의</div>
-     <div><strong style="color:#111827;">연료용:</strong> LPG를 태워서 열에너지를 얻는 용도. <span style="color:#6b7280;">대체재는 LNG, 벙커C 등</span></div>
-     <div><strong style="color:#111827;">원료용:</strong> LPG를 분해해서 화학 제품의 재료로 쓰는 용도. <span style="color:#6b7280;">대체재는 납사, 가치는 납사 대비 스프레드로 매겨짐 (예: 납사대비 92% 가격 판매 등)</span></div>
+    <div style="margin-top:12px;padding:10px 14px;background:#EEF3F8;border-left:3px solid #172A55;border-radius:0 6px 6px 0;font-size:11px;color:#385269;line-height:1.7;">
+     <div style="font-weight:700;color:#172A55;margin-bottom:4px;">* 용도별 정의</div>
+     <div><strong style="color:#142446;">연료용:</strong> LPG를 태워서 열에너지를 얻는 용도. <span style="color:#8E9398;">대체재는 LNG, 벙커C 등</span></div>
+     <div><strong style="color:#142446;">원료용:</strong> LPG를 분해해서 화학 제품의 재료로 쓰는 용도. <span style="color:#8E9398;">대체재는 납사, 가치는 납사 대비 스프레드로 매겨짐 (예: 납사대비 92% 가격 판매 등)</span></div>
     </div>
    </div>
 
    <!-- ✨ NEW: SK가스 LPG 판매 볼륨 & 구매·판매방식 상세 -->
-   <div class="section-label">💰 LPG 구매·판매 방식 상세 <span style="font-size:11px;font-weight:400;color:#6b7280;">출처: EE본부 · Notion '석유화학 대체 원료용 LPG 판매 현황 및 향후 전략' (26.8월)</span></div>
-   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:var(--gray-700);line-height:1.7;">
+   <div class="section-label">💰 LPG 구매·판매 방식 상세 <span style="font-size:11px;font-weight:400;color:#8E9398;">출처: EE본부 · Notion '석유화학 대체 원료용 LPG 판매 현황 및 향후 전략' (26.8월)</span></div>
+   <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:18px 20px;margin-bottom:20px;font-size:12px;color:#385269;line-height:1.7;">
 
     <!-- 시장규모 vs SK가스 판매 볼륨 -->
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:14px;">
-     <div style="background:#eff6ff;border-left:4px solid #1d4ed8;border-radius:0 6px 6px 0;padding:10px 14px;">
-      <div style="font-weight:700;color:#1e40af;font-size:12px;margin-bottom:6px;">📊 국내 LPG 시장규모 <strong>980만톤</strong></div>
+     <div style="background:#DBE6F1;border-left:4px solid #5A86B8;border-radius:0 6px 6px 0;padding:10px 14px;">
+      <div style="font-weight:700;color:#172A55;font-size:12px;margin-bottom:6px;">📊 국내 LPG 시장규모 <strong>980만톤</strong></div>
       <div style="font-size:11px;line-height:1.8;">
        · <strong>민수 460만톤</strong> — C4 240만톤(전국 1,800개 충전소, LPG 차량 190만대), C3 220만톤(전국 260개 충전소)<br>
        · <strong>직매 520만톤</strong> — 석화사 430만톤, 산업체 80만톤, 열조용 10만톤
       </div>
      </div>
-     <div style="background:#ecfdf5;border-left:4px solid #16a34a;border-radius:0 6px 6px 0;padding:10px 14px;">
-      <div style="font-weight:700;color:#065f46;font-size:12px;margin-bottom:6px;">🎯 SK가스 판매 볼륨 <strong>'25년 300만톤 → '30년 400만톤 목표</strong></div>
+     <div style="background:#EEF3F8;border-left:4px solid #5A86B8;border-radius:0 6px 6px 0;padding:10px 14px;">
+      <div style="font-weight:700;color:#172A55;font-size:12px;margin-bottom:6px;">🎯 SK가스 판매 볼륨 <strong>'25년 300만톤 → '30년 400만톤 목표</strong></div>
       <div style="font-size:11px;line-height:1.8;">
        · <strong>민수 140만톤</strong> — C4 67만톤 (가스충전소 446개), C3 74만톤<br>
        · <strong>직매 160만톤</strong> — 석화용 120만톤 (PDH 100 + 납사대체 20) + 산업체 40만톤<br>
-       <span style="color:#6b7280;font-size:10px;">※ 참고: PDH는 '20년 180만톤 → '25년 100만톤으로 축소 (카프로·태광 중단, SKA·효성 감량)</span>
+       <span style="color:#8E9398;font-size:10px;">※ 참고: PDH는 '20년 180만톤 → '25년 100만톤으로 축소 (카프로·태광 중단, SKA·효성 감량)</span>
       </div>
      </div>
     </div>
@@ -2251,53 +2596,53 @@ th.curr { background: #f06400 !important; }
     <div style="overflow-x:auto;">
      <table style="width:100%;border-collapse:collapse;font-size:11px;line-height:1.6;">
       <thead>
-       <tr style="background:#f3f4f6;">
-        <th style="padding:8px;border:1px solid #e5e7eb;text-align:left;width:14%;">구분</th>
-        <th style="padding:8px;border:1px solid #e5e7eb;text-align:center;width:12%;">물량</th>
-        <th style="padding:8px;border:1px solid #e5e7eb;text-align:left;width:37%;">구매 방식</th>
-        <th style="padding:8px;border:1px solid #e5e7eb;text-align:left;width:37%;">판매 방식</th>
+       <tr style="background:#DBE6F1;">
+        <th style="padding:8px;border:1px solid #D4D6D9;text-align:left;width:14%;">구분</th>
+        <th style="padding:8px;border:1px solid #D4D6D9;text-align:center;width:12%;">물량</th>
+        <th style="padding:8px;border:1px solid #D4D6D9;text-align:left;width:37%;">구매 방식</th>
+        <th style="padding:8px;border:1px solid #D4D6D9;text-align:left;width:37%;">판매 방식</th>
        </tr>
       </thead>
       <tbody>
        <tr>
-        <td style="padding:7px;border:1px solid #e5e7eb;font-weight:700;color:#1b5e20;">민수</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">140만톤</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;">
+        <td style="padding:7px;border:1px solid #D4D6D9;font-weight:700;color:#172A55;">민수</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;font-weight:700;">140만톤</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;">
          · <strong>CP+RIM-$2</strong> · 110만톤 (Term)<br>
          · <strong>MB+운임</strong> · 35만톤 (Term)
         </td>
-        <td style="padding:7px;border:1px solid #e5e7eb;">
+        <td style="padding:7px;border:1px solid #D4D6D9;">
          · <strong>MP (Market Price)</strong> — 국내 시장가 연동
         </td>
        </tr>
-       <tr style="background:#f9fafb;">
-        <td style="padding:7px;border:1px solid #e5e7eb;font-weight:700;color:#1b5e20;">직매 (산업체)</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">40만톤</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;">
+       <tr style="background:#EEF3F8;">
+        <td style="padding:7px;border:1px solid #D4D6D9;font-weight:700;color:#172A55;">직매 (산업체)</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;font-weight:700;">40만톤</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;">
          · <strong>FEI</strong> · 20~30만톤 (Term)<br>
          · <strong>MB 4카고</strong> · 맥쿼리로부터 MB/Brent로 구매
         </td>
-        <td style="padding:7px;border:1px solid #e5e7eb;">
+        <td style="padding:7px;border:1px solid #D4D6D9;">
          · <strong>WACOG (Weighted Average Cost of Gas)</strong> — 매입 원가 가중평균
         </td>
        </tr>
        <tr>
-        <td style="padding:7px;border:1px solid #e5e7eb;font-weight:700;color:#1b5e20;">석화사 - PDH</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">100만톤</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;" rowspan="2">
+        <td style="padding:7px;border:1px solid #D4D6D9;font-weight:700;color:#172A55;">석화사 - PDH</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;font-weight:700;">100만톤</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;" rowspan="2">
          · <strong>MB+Freight</strong> · 100만톤 (Term)
         </td>
-        <td style="padding:7px;border:1px solid #e5e7eb;">
+        <td style="padding:7px;border:1px solid #D4D6D9;">
          · <strong>CP+RIM-$2</strong> · 50%±<br>
          · <strong>MB+Freight</strong> · 50%±
         </td>
        </tr>
-       <tr style="background:#f9fafb;">
-        <td style="padding:7px;border:1px solid #e5e7eb;font-weight:700;color:#1b5e20;">석화사 - NCC (납사대체)</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">20만톤</td>
-        <td style="padding:7px;border:1px solid #e5e7eb;">
+       <tr style="background:#EEF3F8;">
+        <td style="padding:7px;border:1px solid #D4D6D9;font-weight:700;color:#172A55;">석화사 - NCC (납사대체)</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;text-align:center;font-weight:700;">20만톤</td>
+        <td style="padding:7px;border:1px solid #D4D6D9;">
          · <strong>FEI/MOPJ 상대가 90% 초반</strong><br>
-         <span style="color:#6b7280;font-size:10px;">공급처: 대산 현대케미칼(24만톤 탱크로리), SKGC, 대한유화, LG화학(추진)</span>
+         <span style="color:#8E9398;font-size:10px;">공급처: 대산 현대케미칼(24만톤 탱크로리), SKGC, 대한유화, LG화학(추진)</span>
         </td>
        </tr>
       </tbody>
@@ -2305,9 +2650,9 @@ th.curr { background: #f06400 !important; }
     </div>
 
     <!-- Notion 대조 결과: Discrepancies -->
-    <div style="background:#fef3c7;border:1px solid #fbbf24;border-left:4px solid var(--amber);border-radius:0 6px 6px 0;padding:12px 14px;margin-top:12px;font-size:11px;line-height:1.7;">
-     <div style="font-weight:700;color:#92400e;margin-bottom:6px;">⚠️ Notion 자료와 대조 시 확인 필요 사항</div>
-     <ul style="margin:0 0 0 18px;padding:0;color:#78350f;">
+    <div style="background:#FFF8B8;border:1px solid #E0B000;border-left:4px solid #E0B000;border-radius:0 6px 6px 0;padding:12px 14px;margin-top:12px;font-size:11px;line-height:1.7;">
+     <div style="font-weight:700;color:#C62828;margin-bottom:6px;">⚠️ Notion 자료와 대조 시 확인 필요 사항</div>
+     <ul style="margin:0 0 0 18px;padding:0;color:#142446;">
       <li>Notion(이학철 실장님): 산업용 <strong>36만톤</strong> (EE기준), TSP <strong>40만톤</strong> (도시가스 연동가), 열조용 <strong>7만톤</strong> (KOGAS JKM 대체 최근 판매) 등이 별도로 언급됨</li>
       <li>사용자 텍스트: 산업체 <strong>40만톤</strong> (직매) → 간이 분류 상 산업체+TSP+열조를 합쳐 표기한 것으로 추정</li>
       <li>Notion PDH <strong>98만톤</strong> vs 사용자 <strong>100만톤</strong> — 소수점 반올림 차이로 100만톤 표기</li>
@@ -2316,42 +2661,42 @@ th.curr { background: #f06400 !important; }
     </div>
 
     <!-- 납사대체 판매 방식 진화 (23년 이후) -->
-    <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;margin-top:12px;">
-     <div style="font-weight:700;color:#1e40af;font-size:12px;margin-bottom:6px;">🔀 납사대체 판매방식 진화 — '23년 이전 vs 이후</div>
+    <div style="background:#DBE6F1;border:1px solid #A9C8E8;border-radius:8px;padding:12px 14px;margin-top:12px;">
+     <div style="font-weight:700;color:#172A55;font-size:12px;margin-bottom:6px;">🔀 납사대체 판매방식 진화 — '23년 이전 vs 이후</div>
      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;font-size:11px;line-height:1.7;">
-      <div style="background:white;border-radius:6px;padding:8px 12px;border-left:3px solid #6b7280;">
-       <div style="font-weight:700;color:#374151;">'23년 이전 — Spot 공급</div>
-       <div style="color:#6b7280;">하절기 LPG 가격 하락 시점에 납사대체 Spot 제안. NCC 정기보수·시황 악화 시 계약 체결 불가.</div>
+      <div style="background:white;border-radius:6px;padding:8px 12px;border-left:3px solid #8E9398;">
+       <div style="font-weight:700;color:#385269;">'23년 이전 — Spot 공급</div>
+       <div style="color:#8E9398;">하절기 LPG 가격 하락 시점에 납사대체 Spot 제안. NCC 정기보수·시황 악화 시 계약 체결 불가.</div>
       </div>
-      <div style="background:white;border-radius:6px;padding:8px 12px;border-left:3px solid #16a34a;">
-       <div style="font-weight:700;color:#065f46;">'23년 이후 — 3대 전략</div>
-       <div style="color:#374151;">
+      <div style="background:white;border-radius:6px;padding:8px 12px;border-left:3px solid #5A86B8;">
+       <div style="font-weight:700;color:#172A55;">'23년 이후 — 3대 전략</div>
+       <div style="color:#385269;">
         ① <strong>원월물 거래</strong> (Y+1 상대가 85% 확보 후 만기 접근 시 5~10% 상승분 언와인드)<br>
         ② <strong>옵셔널리티 (Tolerance ±10%)</strong> — 40만톤 미공급 옵션 확보 (연 5~6% 이익)<br>
         ③ <strong>오퍼레이션 극한</strong> — 대산 현대케미칼 탱크로리 24만톤/년 (평택→대산 매일 15대)
        </div>
       </div>
      </div>
-     <div style="margin-top:8px;padding:8px 12px;background:#f0fdf4;border-radius:6px;font-size:10px;color:#065f46;line-height:1.7;">
+     <div style="margin-top:8px;padding:8px 12px;background:#EEF3F8;border-radius:6px;font-size:10px;color:#172A55;line-height:1.7;">
       <strong>💡 SKGC 26만톤 신규 계약 ('27~'28) — 옵셔널리티 수익 50:50 Share 계약 (공격적 소싱 가능한 신형 계약)</strong>
      </div>
     </div>
 
     <!-- 석유화학 구조개편 리스크 -->
-    <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:12px 14px;margin-top:12px;">
-     <div style="font-weight:700;color:#991b1b;font-size:12px;margin-bottom:6px;">⚠️ 석유화학 구조개편 리스크 — 3개 단지별 시나리오</div>
+    <div style="background:#FFF8B8;border:1px solid #A9C8E8;border-radius:8px;padding:12px 14px;margin-top:12px;">
+     <div style="font-weight:700;color:#C62828;font-size:12px;margin-bottom:6px;">⚠️ 석유화학 구조개편 리스크 — 3개 단지별 시나리오</div>
      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;font-size:11px;line-height:1.6;">
       <div style="background:white;border-radius:6px;padding:8px 12px;">
-       <div style="font-weight:700;color:#374151;">🏭 여수</div>
-       <div style="color:#6b7280;font-size:10px;">LG화학 가동 중단 · 우리 접근 어려움. 여수 진출이 향후 꿈</div>
+       <div style="font-weight:700;color:#385269;">🏭 여수</div>
+       <div style="color:#8E9398;font-size:10px;">LG화학 가동 중단 · 우리 접근 어려움. 여수 진출이 향후 꿈</div>
       </div>
       <div style="background:white;border-radius:6px;padding:8px 12px;">
-       <div style="font-weight:700;color:#c62828;">🏭 대산 (24만톤/년 리스크)</div>
-       <div style="color:#6b7280;font-size:10px;">롯데-현대케미칼 합병 → 롯데(E1 파이프라인 공급) 확대 시 <strong>당사 24만톤/년 대체될 리스크</strong>. 현대케미칼과 '27~'31 장기계약으로 방어. LG화학 입하설비 신설로 신규 공급 추진</div>
+       <div style="font-weight:700;color:#C62828;">🏭 대산 (24만톤/년 리스크)</div>
+       <div style="color:#8E9398;font-size:10px;">롯데-현대케미칼 합병 → 롯데(E1 파이프라인 공급) 확대 시 <strong>당사 24만톤/년 대체될 리스크</strong>. 현대케미칼과 '27~'31 장기계약으로 방어. LG화학 입하설비 신설로 신규 공급 추진</div>
       </div>
       <div style="background:white;border-radius:6px;padding:8px 12px;">
-       <div style="font-weight:700;color:#0d47a1;">🏭 울산 (기회 vs 위기)</div>
-       <div style="color:#6b7280;font-size:10px;"><strong>샤힌 프로젝트</strong> 가동 시 SKGC·대한유화 셧다운 리스크 有. 반대로 샤힌 TC2C에 납사 흡수 → S-OIL·대한유화 <strong>납사 숏 → LPG 대체 기회 (2만톤/월)</strong>. S-OIL 직공급 파이프라인 이미 확보(연 100만톤 capa)</div>
+       <div style="font-weight:700;color:#172A55;">🏭 울산 (기회 vs 위기)</div>
+       <div style="color:#8E9398;font-size:10px;"><strong>샤힌 프로젝트</strong> 가동 시 SKGC·대한유화 셧다운 리스크 有. 반대로 샤힌 TC2C에 납사 흡수 → S-OIL·대한유화 <strong>납사 숏 → LPG 대체 기회 (2만톤/월)</strong>. S-OIL 직공급 파이프라인 이미 확보(연 100만톤 capa)</div>
       </div>
      </div>
     </div>
@@ -2359,23 +2704,23 @@ th.curr { background: #f06400 !important; }
    </div>
 
    <!-- 미-이란 종전 대응: 소싱-판매-옵셔널리티 -->
-   <div class="section-label">🎯 소싱-판매-옵셔널리티 대응 <span style="font-size:11px;font-weight:400;color:#6b7280;">(미-이란 전쟁 종전 대응 · 26.7.2 EE본부 Action Plan 기준)</span></div>
-   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:20px;margin-bottom:20px;">
+   <div class="section-label">🎯 소싱-판매-옵셔널리티 대응 <span style="font-size:11px;font-weight:400;color:#8E9398;">(미-이란 전쟁 종전 대응 · 26.7.2 EE본부 Action Plan 기준)</span></div>
+   <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:20px;margin-bottom:20px;">
 
     <!-- 배경 / 대응 요약 배너 -->
-    <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:12px 16px;margin-bottom:14px;">
+    <div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:8px;padding:12px 16px;margin-bottom:14px;">
      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start;">
       <div style="flex:1;min-width:240px;">
-       <div style="font-size:11px;font-weight:700;color:#c2410c;margin-bottom:4px;">배경 · 유가 하락 → FEI 경제성 회복</div>
-       <div style="font-size:12px;color:#374151;line-height:1.6;">종전에 따른 유가 하락으로 <strong>FEI 경제성 회복 (~40원/kg)</strong>. R/O 롤오버 목표 486KT 중 228KT 확보, 잔여 258KT 모니터링, 중장기 MB 소싱 준비 중.</div>
+       <div style="font-size:11px;font-weight:700;color:#C62828;margin-bottom:4px;">배경 · 유가 하락 → FEI 경제성 회복</div>
+       <div style="font-size:12px;color:#385269;line-height:1.6;">종전에 따른 유가 하락으로 <strong>FEI 경제성 회복 (~40원/kg)</strong>. R/O 롤오버 목표 486KT 중 228KT 확보, 잔여 258KT 모니터링, 중장기 MB 소싱 준비 중.</div>
       </div>
       <div style="flex:1;min-width:240px;">
-       <div style="font-size:11px;font-weight:700;color:#c2410c;margin-bottom:4px;">판매 전략 · 수급 안정성 / 대체 경제성 강조</div>
-       <div style="font-size:12px;color:#374151;line-height:1.6;"><strong>납사대체 Term 계약·소싱</strong> 추진, <strong>HP Plant 도시가스 대체</strong> 및 <strong>KOGAS LNG Spot 판매</strong> 협의 중.</div>
+       <div style="font-size:11px;font-weight:700;color:#C62828;margin-bottom:4px;">판매 전략 · 수급 안정성 / 대체 경제성 강조</div>
+       <div style="font-size:12px;color:#385269;line-height:1.6;"><strong>납사대체 Term 계약·소싱</strong> 추진, <strong>HP Plant 도시가스 대체</strong> 및 <strong>KOGAS LNG Spot 판매</strong> 협의 중.</div>
       </div>
       <div style="flex:1;min-width:240px;">
-       <div style="font-size:11px;font-weight:700;color:#c2410c;margin-bottom:4px;">Optionality · 동절기 강세 대비</div>
-       <div style="font-size:12px;color:#374151;line-height:1.6;">동절기 FEI 상승 시 기소싱 <strong>산업용 '28 Cal · '27 R/O · '27~'28 납사대체</strong> 물량 Optionality 실행. <strong style="color:#c2410c;">實 확보 462KT</strong>.</div>
+       <div style="font-size:11px;font-weight:700;color:#C62828;margin-bottom:4px;">Optionality · 동절기 강세 대비</div>
+       <div style="font-size:12px;color:#385269;line-height:1.6;">동절기 FEI 상승 시 기소싱 <strong>산업용 '28 Cal · '27 R/O · '27~'28 납사대체</strong> 물량 Optionality 실행. <strong style="color:#C62828;">實 확보 462KT</strong>.</div>
       </div>
      </div>
     </div>
@@ -2383,62 +2728,62 @@ th.curr { background: #f06400 !important; }
     <!-- 요약 카드: R/O 롤오버 & 판매 논의 현황 -->
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin-bottom:14px;">
      <!-- R/O 롤오버 목표 -->
-     <div style="background:#f0f9ff;border:1px solid #7dd3fc;border-left:4px solid #0284c7;border-radius:6px;padding:10px 12px;">
+     <div style="background:#EEF3F8;border:1px solid #7dd3fc;border-left:4px solid #5A86B8;border-radius:6px;padding:10px 12px;">
       <div style="font-size:10px;color:#0369a1;font-weight:700;">📥 소싱 · R/O 롤오버 목표</div>
-      <div style="font-size:16px;font-weight:800;color:#0c4a6e;margin:3px 0;">486<span style="font-size:11px;font-weight:600;color:#0369a1;"> KT</span></div>
-      <div style="font-size:10px;color:#075985;line-height:1.5;">'27.4Q 246KT + '28년 240KT<br>완료 <strong style="color:#059669;">228KT</strong> · 모니터링 <strong style="color:#c2410c;">258KT</strong></div>
+      <div style="font-size:16px;font-weight:800;color:#172A55;margin:3px 0;">486<span style="font-size:11px;font-weight:600;color:#0369a1;"> KT</span></div>
+      <div style="font-size:10px;color:#075985;line-height:1.5;">'27.4Q 246KT + '28년 240KT<br>완료 <strong style="color:#172A55;">228KT</strong> · 모니터링 <strong style="color:#C62828;">258KT</strong></div>
      </div>
      <!-- 산업체 연동 소싱 -->
-     <div style="background:#f0f9ff;border:1px solid #7dd3fc;border-left:4px solid #0284c7;border-radius:6px;padding:10px 12px;">
+     <div style="background:#EEF3F8;border:1px solid #7dd3fc;border-left:4px solid #5A86B8;border-radius:6px;padding:10px 12px;">
       <div style="font-size:10px;color:#0369a1;font-weight:700;">📥 소싱 · 산업체 연동가 ('27)</div>
-      <div style="font-size:16px;font-weight:800;color:#0c4a6e;margin:3px 0;">162<span style="font-size:11px;font-weight:600;color:#0369a1;"> KT</span></div>
+      <div style="font-size:16px;font-weight:800;color:#172A55;margin:3px 0;">162<span style="font-size:11px;font-weight:600;color:#0369a1;"> KT</span></div>
       <div style="font-size:10px;color:#075985;line-height:1.5;">'27년 전체 완료 ✓<br>CV 86.5% · +43원/kg</div>
      </div>
      <!-- HDC 납사대체 소싱 -->
-     <div style="background:#faf5ff;border:1px solid #d8b4fe;border-left:4px solid #7c3aed;border-radius:6px;padding:10px 12px;">
-      <div style="font-size:10px;color:#7c3aed;font-weight:700;">📥 소싱 · 납사대체 (HDC)</div>
-      <div style="font-size:16px;font-weight:800;color:#581c87;margin:3px 0;">180<span style="font-size:11px;font-weight:600;color:#7c3aed;"> KT</span></div>
-      <div style="font-size:10px;color:#6b21a8;line-height:1.5;">R/O @89% · '29~'31 delivery<br>완료 <strong style="color:#059669;">60KT</strong> · 모니터링 <strong style="color:#c2410c;">120KT</strong></div>
+     <div style="background:#EEF3F8;border:1px solid #d8b4fe;border-left:4px solid #5A86B8;border-radius:6px;padding:10px 12px;">
+      <div style="font-size:10px;color:#172A55;font-weight:700;">📥 소싱 · 납사대체 (HDC)</div>
+      <div style="font-size:16px;font-weight:800;color:#581c87;margin:3px 0;">180<span style="font-size:11px;font-weight:600;color:#172A55;"> KT</span></div>
+      <div style="font-size:10px;color:#6b21a8;line-height:1.5;">R/O @89% · '29~'31 delivery<br>완료 <strong style="color:#172A55;">60KT</strong> · 모니터링 <strong style="color:#C62828;">120KT</strong></div>
      </div>
      <!-- 납사대체 판매 -->
      <div style="background:#fdf4ff;border:1px solid #d8b4fe;border-left:4px solid #9333ea;border-radius:6px;padding:10px 12px;">
       <div style="font-size:10px;color:#9333ea;font-weight:700;">📤 판매 · 납사대체 (원료용)</div>
       <div style="font-size:16px;font-weight:800;color:#581c87;margin:3px 0;">548<span style="font-size:11px;font-weight:600;color:#9333ea;"> KT</span></div>
-      <div style="font-size:10px;color:#6b21a8;line-height:1.5;">HDC 240KT + SKGC 200KT +<br>대한유화 66KT + S-OIL 42KT<br>확정 <strong style="color:#059669;">60KT</strong> · 협의중 <strong style="color:#c2410c;">488KT</strong></div>
+      <div style="font-size:10px;color:#6b21a8;line-height:1.5;">HDC 240KT + SKGC 200KT +<br>대한유화 66KT + S-OIL 42KT<br>확정 <strong style="color:#172A55;">60KT</strong> · 협의중 <strong style="color:#C62828;">488KT</strong></div>
      </div>
      <!-- 도시가스 대체판매 -->
-     <div style="background:#fef2f2;border:1px solid #fca5a5;border-left:4px solid #dc2626;border-radius:6px;padding:10px 12px;">
-      <div style="font-size:10px;color:#b91c1c;font-weight:700;">📤 판매 · 도시가스 대체 (연료용)</div>
-      <div style="font-size:16px;font-weight:800;color:#7f1d1d;margin:3px 0;">78.4<span style="font-size:11px;font-weight:600;color:#b91c1c;"> KT</span></div>
-      <div style="font-size:10px;color:#991b1b;line-height:1.5;">KOGAS 70KT + APTM 8.4KT<br>확정 <strong style="color:#059669;">8.4KT</strong> · 협의중 <strong style="color:#c2410c;">70KT</strong></div>
+     <div style="background:#FFF8B8;border:1px solid #A9C8E8;border-left:4px solid #E0B000;border-radius:6px;padding:10px 12px;">
+      <div style="font-size:10px;color:#C62828;font-weight:700;">📤 판매 · 도시가스 대체 (연료용)</div>
+      <div style="font-size:16px;font-weight:800;color:#7f1d1d;margin:3px 0;">78.4<span style="font-size:11px;font-weight:600;color:#C62828;"> KT</span></div>
+      <div style="font-size:10px;color:#C62828;line-height:1.5;">KOGAS 70KT + APTM 8.4KT<br>확정 <strong style="color:#172A55;">8.4KT</strong> · 협의중 <strong style="color:#C62828;">70KT</strong></div>
      </div>
     </div>
 
     <!-- Timeline 헤더 (연도 + 분기) -->
     <div style="padding-left:260px;margin-bottom:2px;">
      <div style="display:grid;grid-template-columns:1fr 4fr 4fr 1fr;gap:0;font-size:11px;font-weight:700;color:white;">
-      <div style="background:#6b7280;text-align:center;padding:4px 0;border-radius:4px 0 0 0;">'26년</div>
+      <div style="background:#8E9398;text-align:center;padding:4px 0;border-radius:4px 0 0 0;">'26년</div>
       <div style="background:#3b82f6;text-align:center;padding:4px 0;">'27년</div>
       <div style="background:#0d9488;text-align:center;padding:4px 0;">'28년</div>
       <div style="background:#a16207;text-align:center;padding:4px 0;border-radius:0 4px 0 0;">'29~'31</div>
      </div>
-     <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;gap:0;font-size:9px;color:#374151;font-weight:600;background:#f3f4f6;border-bottom:1px solid #d1d5db;">
-      <div style="text-align:center;padding:3px 0;border-right:1px solid #d1d5db;">4Q</div>
-      <div style="text-align:center;padding:3px 0;border-right:1px solid #d1d5db;">1Q</div>
-      <div style="text-align:center;padding:3px 0;border-right:1px solid #d1d5db;">2Q</div>
-      <div style="text-align:center;padding:3px 0;border-right:1px solid #d1d5db;">3Q</div>
-      <div style="text-align:center;padding:3px 0;border-right:2px solid #6b7280;">4Q</div>
-      <div style="text-align:center;padding:3px 0;border-right:1px solid #d1d5db;">1Q</div>
-      <div style="text-align:center;padding:3px 0;border-right:1px solid #d1d5db;">2Q</div>
-      <div style="text-align:center;padding:3px 0;border-right:1px solid #d1d5db;">3Q</div>
-      <div style="text-align:center;padding:3px 0;border-right:2px solid #6b7280;">4Q</div>
+     <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;gap:0;font-size:9px;color:#385269;font-weight:600;background:#DBE6F1;border-bottom:1px solid #D4D6D9;">
+      <div style="text-align:center;padding:3px 0;border-right:1px solid #D4D6D9;">4Q</div>
+      <div style="text-align:center;padding:3px 0;border-right:1px solid #D4D6D9;">1Q</div>
+      <div style="text-align:center;padding:3px 0;border-right:1px solid #D4D6D9;">2Q</div>
+      <div style="text-align:center;padding:3px 0;border-right:1px solid #D4D6D9;">3Q</div>
+      <div style="text-align:center;padding:3px 0;border-right:2px solid #8E9398;">4Q</div>
+      <div style="text-align:center;padding:3px 0;border-right:1px solid #D4D6D9;">1Q</div>
+      <div style="text-align:center;padding:3px 0;border-right:1px solid #D4D6D9;">2Q</div>
+      <div style="text-align:center;padding:3px 0;border-right:1px solid #D4D6D9;">3Q</div>
+      <div style="text-align:center;padding:3px 0;border-right:2px solid #8E9398;">4Q</div>
       <div style="text-align:center;padding:3px 0;">delivery</div>
      </div>
     </div>
 
     <!-- ═══ 소싱 그룹 ═══ -->
     <div style="display:flex;margin-bottom:12px;gap:6px;">
-     <div style="width:44px;flex-shrink:0;background:linear-gradient(180deg,#1e40af 0%,#0369a1 100%);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;padding:14px 0;gap:2px;">
+     <div style="width:44px;flex-shrink:0;background:linear-gradient(180deg,#172A55 0%,#0369a1 100%);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;padding:14px 0;gap:2px;">
       <div style="font-size:16px;">📥</div>
       <div style="font-size:15px;font-weight:800;line-height:1.2;">소</div>
       <div style="font-size:15px;font-weight:800;line-height:1.2;">싱</div>
@@ -2446,14 +2791,14 @@ th.curr { background: #f06400 !important; }
      <div style="flex:1;min-width:0;">
 
     <!-- ① 산업체 연동 (소싱) -->
-    <div style="display:flex;align-items:stretch;background:#f0f9ff;border:1px solid #bae6fd;border-radius:8px;margin-bottom:8px;">
-     <div style="width:210px;flex-shrink:0;padding:10px 12px;border-right:1px solid #bae6fd;background:#e0f2fe;border-radius:8px 0 0 8px;">
+    <div style="display:flex;align-items:stretch;background:#EEF3F8;border:1px solid #A9C8E8;border-radius:8px;margin-bottom:8px;">
+     <div style="width:210px;flex-shrink:0;padding:10px 12px;border-right:1px solid #A9C8E8;background:#e0f2fe;border-radius:8px 0 0 8px;">
       <div style="font-size:11px;font-weight:700;color:#0369a1;">📥 산업체 연동가 소싱</div>
       <div style="font-size:10px;color:#075985;margin-top:3px;line-height:1.4;">MB 40% + 상대가 FEI 60%<br>('27년 MB 26.4KT, 6개 카고)<br>R/O 롤오버 486KT ('27.4Q 246 + '28 240)</div>
      </div>
      <div style="flex:1;position:relative;padding:10px 8px;min-height:110px;">
       <!-- 162KT: '27년 전체 (slots 2-5) → left 10%, right 50% -->
-      <div style="position:absolute;left:10%;right:50%;top:8px;background:#0284c7;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
+      <div style="position:absolute;left:10%;right:50%;top:8px;background:#172A55;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
        <strong>'27년 전체 · 162KT</strong><br><span style="opacity:0.9;">산업체 연동 · CV 86.5% · 유가 $73.6/bl · +43원/kg ✓</span>
       </div>
       <!-- 84KT: '27.4Q (slot 5) → left 40%, right 50% -->
@@ -2468,28 +2813,28 @@ th.curr { background: #f06400 !important; }
     </div>
 
     <!-- ② 동절기 JKM Hedge -->
-    <div style="display:flex;align-items:stretch;background:#fef3c7;border:1px solid #fde68a;border-radius:8px;margin-bottom:8px;">
-     <div style="width:210px;flex-shrink:0;padding:10px 12px;border-right:1px solid #fde68a;background:#fef9c3;border-radius:8px 0 0 8px;">
+    <div style="display:flex;align-items:stretch;background:#FFF8B8;border:1px solid #E0B000;border-radius:8px;margin-bottom:8px;">
+     <div style="width:210px;flex-shrink:0;padding:10px 12px;border-right:1px solid #E0B000;background:#FFF8B8;border-radius:8px 0 0 8px;">
       <div style="font-size:11px;font-weight:700;color:#a16207;">🌡️ 동절기 JKM Hedge</div>
-      <div style="font-size:10px;color:#854d0e;margin-top:3px;line-height:1.4;">종전 기반 Position 조정<br>JKM 급락($12~) 시 잔여 open 검토</div>
+      <div style="font-size:10px;color:#142446;margin-top:3px;line-height:1.4;">종전 기반 Position 조정<br>JKM 급락($12~) 시 잔여 open 검토</div>
      </div>
      <div style="flex:1;position:relative;padding:10px 8px;min-height:56px;">
       <!-- '26.4Q (slot 1) → left 0%, right 90% -->
-      <div style="position:absolute;left:0%;right:80%;top:8px;background:#ca8a04;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
+      <div style="position:absolute;left:0%;right:80%;top:8px;background:#1D3958;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
        <strong>'26.4Q · Position 55% Open/unwind ✓</strong><br><span style="opacity:0.9;">JKM $15.09/mmbtu · 잔여 18KT 검토</span>
       </div>
      </div>
     </div>
 
     <!-- ③ 납사대체 소싱 (HDC 매칭 · 보라) -->
-    <div style="display:flex;align-items:stretch;background:#faf5ff;border:1px solid #d8b4fe;border-radius:8px;margin-bottom:8px;">
+    <div style="display:flex;align-items:stretch;background:#EEF3F8;border:1px solid #d8b4fe;border-radius:8px;margin-bottom:8px;">
      <div style="width:210px;flex-shrink:0;padding:10px 12px;border-right:1px solid #d8b4fe;background:#f3e8ff;border-radius:8px 0 0 8px;">
-      <div style="font-size:11px;font-weight:700;color:#7c3aed;">📥 납사대체 소싱 <span style="background:#7c3aed;color:white;padding:1px 6px;border-radius:3px;font-size:9px;">HDC</span></div>
+      <div style="font-size:11px;font-weight:700;color:#172A55;">📥 납사대체 소싱 <span style="background:#172A55;color:white;padding:1px 6px;border-radius:3px;font-size:9px;">HDC</span></div>
       <div style="font-size:10px;color:#6b21a8;margin-top:3px;line-height:1.4;">HDC 기본계약 '29~'31년<br>전사 예상 ~20원/kg 수준</div>
      </div>
      <div style="flex:1;position:relative;padding:10px 8px;min-height:56px;">
       <!-- HDC 소싱 180KT: '28.4Q 계약 → '29~'31 delivery -->
-      <div style="position:absolute;left:80%;right:0%;top:8px;background:#7c3aed;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
+      <div style="position:absolute;left:80%;right:0%;top:8px;background:#172A55;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
        <strong>[HDC] 180KT R/O @89%</strong><br><span style="opacity:0.9;">'28.4Q 계약 → '29~'31 delivery · 60KT (NV 89.2% · +20원/kg) ✓ · 잔여 120KT 모니터링</span>
       </div>
      </div>
@@ -2501,7 +2846,7 @@ th.curr { background: #f06400 !important; }
 
     <!-- ═══ 판매 그룹 ═══ -->
     <div style="display:flex;margin-bottom:16px;gap:6px;">
-     <div style="width:44px;flex-shrink:0;background:linear-gradient(180deg,#9333ea 0%,#c2185b 100%);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;padding:14px 0;gap:2px;">
+     <div style="width:44px;flex-shrink:0;background:linear-gradient(180deg,#9333ea 0%,#C62828 100%);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;padding:14px 0;gap:2px;">
       <div style="font-size:16px;">📤</div>
       <div style="font-size:15px;font-weight:800;line-height:1.2;">판</div>
       <div style="font-size:15px;font-weight:800;line-height:1.2;">매</div>
@@ -2509,22 +2854,22 @@ th.curr { background: #f06400 !important; }
      <div style="flex:1;min-width:0;">
 
     <!-- ④ 납사대체 판매 (Term/Spot) — 원료용 -->
-    <div style="display:flex;align-items:stretch;background:#fafafa;border:1px solid #e5e7eb;border-radius:8px;margin-bottom:8px;">
-     <div style="width:210px;flex-shrink:0;padding:10px 12px;border-right:1px solid #e5e7eb;background:#f3f4f6;border-radius:8px 0 0 8px;">
-      <div style="font-size:11px;font-weight:700;color:#374151;">📤 납사대체 판매 (원료용*)</div>
-      <div style="font-size:10px;color:#4b5563;margin-top:3px;line-height:1.4;">HDC Term(매칭)·SKGC·대한유화·S-OIL<br>총 548KT (확정 60 · 협의 488)</div>
+    <div style="display:flex;align-items:stretch;background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;margin-bottom:8px;">
+     <div style="width:210px;flex-shrink:0;padding:10px 12px;border-right:1px solid #D4D6D9;background:#DBE6F1;border-radius:8px 0 0 8px;">
+      <div style="font-size:11px;font-weight:700;color:#385269;">📤 납사대체 판매 (원료용*)</div>
+      <div style="font-size:10px;color:#8E9398;margin-top:3px;line-height:1.4;">HDC Term(매칭)·SKGC·대한유화·S-OIL<br>총 548KT (확정 60 · 협의 488)</div>
      </div>
      <div style="flex:1;position:relative;padding:10px 8px;min-height:135px;">
       <!-- SKGC 200KT: '27년 전체 (slots 2-5) → left 10%, right 50% -->
-      <div style="position:absolute;left:10%;right:50%;top:8px;background:#6b7280;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
+      <div style="position:absolute;left:10%;right:50%;top:8px;background:#8E9398;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
        <strong>(SKGC)</strong> 200KT · 협의중<br><span style="opacity:0.9;">'27년 전체</span>
       </div>
       <!-- 대한유화 66KT: '27.4-9월 ≈ '27.2Q-3Q (slots 3-4) → left 20%, right 60% -->
-      <div style="position:absolute;left:20%;right:60%;top:52px;background:#9ca3af;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
+      <div style="position:absolute;left:20%;right:60%;top:52px;background:#8E9398;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
        <strong>(대한유화)</strong> 66KT · 협의중<br><span style="opacity:0.9;">'27.4~9월</span>
       </div>
       <!-- S-OIL 42KT: '27.9-10월 ≈ '27.4Q (slots 5) → left 40%, right 50% -->
-      <div style="position:absolute;left:40%;right:50%;top:96px;background:#9ca3af;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
+      <div style="position:absolute;left:40%;right:50%;top:96px;background:#8E9398;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
        <strong>(S-OIL)</strong> 42KT · Spot · NV 94~95%<br><span style="opacity:0.9;">~30원/kg 협의중 · '27.9~10월</span>
       </div>
       <!-- HDC 240KT: '28년 전체 (slots 6-9) → left 50%, right 10% -->
@@ -2535,14 +2880,14 @@ th.curr { background: #f06400 !important; }
     </div>
 
     <!-- ⑤ 도시가스 & LNG Spot 대체판매 — 연료용 -->
-    <div style="display:flex;align-items:stretch;background:#fef2f2;border:1px solid #fecaca;border-radius:8px;margin-bottom:16px;">
-     <div style="width:210px;flex-shrink:0;padding:10px 12px;border-right:1px solid #fecaca;background:#fee2e2;border-radius:8px 0 0 8px;">
-      <div style="font-size:11px;font-weight:700;color:#b91c1c;">📤 도시가스 · LNG Spot 대체판매 (연료용*)</div>
-      <div style="font-size:10px;color:#991b1b;margin-top:3px;line-height:1.4;">에너지원별 가격 역전 (LPG&lt;LNG) 활용<br>KOGAS·HP Plant·SKE·APTM (총 78.4KT)</div>
+    <div style="display:flex;align-items:stretch;background:#FFF8B8;border:1px solid #A9C8E8;border-radius:8px;margin-bottom:16px;">
+     <div style="width:210px;flex-shrink:0;padding:10px 12px;border-right:1px solid #A9C8E8;background:#fee2e2;border-radius:8px 0 0 8px;">
+      <div style="font-size:11px;font-weight:700;color:#C62828;">📤 도시가스 · LNG Spot 대체판매 (연료용*)</div>
+      <div style="font-size:10px;color:#C62828;margin-top:3px;line-height:1.4;">에너지원별 가격 역전 (LPG&lt;LNG) 활용<br>KOGAS·HP Plant·SKE·APTM (총 78.4KT)</div>
      </div>
      <div style="flex:1;position:relative;padding:10px 8px;min-height:70px;">
       <!-- KOGAS 70KT: '26.4Q~'27.1Q (slots 1-2) → left 0%, right 80% -->
-      <div style="position:absolute;left:0%;right:80%;top:8px;background:#dc2626;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
+      <div style="position:absolute;left:0%;right:80%;top:8px;background:#1D3958;color:white;font-size:10px;padding:5px 8px;border-radius:4px;line-height:1.3;">
        <strong>(KOGAS)</strong> 70KT · 협의중<br><span style="opacity:0.9;">+10원/kg · '26.4Q~'27.1Q</span>
       </div>
       <!-- SKE/APTM 8.4KT: '26.3Q~4Q → left 0%, right 90% (only '26.4Q slot) -->
@@ -2557,45 +2902,45 @@ th.curr { background: #f06400 !important; }
     <!-- ═══ 판매 그룹 끝 ═══ -->
 
     <!-- 색상 범례 · 각주 -->
-    <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;padding:8px 12px;margin-bottom:14px;font-size:10px;color:#4b5563;line-height:1.6;">
-     <strong style="color:#374151;">🎨 색상 범례:</strong>
-     <span style="display:inline-block;width:10px;height:10px;background:#7c3aed;border-radius:2px;margin:0 3px 0 6px;vertical-align:middle;"></span>HDC 매칭 (소싱 ↔ 판매) ·
-     <span style="display:inline-block;width:10px;height:10px;background:#0284c7;border-radius:2px;margin:0 3px 0 6px;vertical-align:middle;"></span>산업체 연동 (R/O 롤오버) ·
-     <span style="display:inline-block;width:10px;height:10px;background:#9ca3af;border-radius:2px;margin:0 3px 0 6px;vertical-align:middle;"></span>1:1 매칭 없음 (개별 판매/소싱) ·
-     <span style="display:inline-block;width:10px;height:10px;background:#dc2626;border-radius:2px;margin:0 3px 0 6px;vertical-align:middle;"></span>도시가스 대체판매
-     <span style="margin-left:12px;color:#6b7280;">* 원료용 vs 연료용 정의는 위 판매믹스 섹션 참조</span>
+    <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:6px;padding:8px 12px;margin-bottom:14px;font-size:10px;color:#8E9398;line-height:1.6;">
+     <strong style="color:#385269;">🎨 색상 범례:</strong>
+     <span style="display:inline-block;width:10px;height:10px;background:#172A55;border-radius:2px;margin:0 3px 0 6px;vertical-align:middle;"></span>HDC 매칭 (소싱 ↔ 판매) ·
+     <span style="display:inline-block;width:10px;height:10px;background:#172A55;border-radius:2px;margin:0 3px 0 6px;vertical-align:middle;"></span>산업체 연동 (R/O 롤오버) ·
+     <span style="display:inline-block;width:10px;height:10px;background:#8E9398;border-radius:2px;margin:0 3px 0 6px;vertical-align:middle;"></span>1:1 매칭 없음 (개별 판매/소싱) ·
+     <span style="display:inline-block;width:10px;height:10px;background:#1D3958;border-radius:2px;margin:0 3px 0 6px;vertical-align:middle;"></span>도시가스 대체판매
+     <span style="margin-left:12px;color:#8E9398;">* 원료용 vs 연료용 정의는 위 판매믹스 섹션 참조</span>
     </div>
 
     <!-- Optionality 하단 -->
-    <div style="background:#fffbeb;border:2px solid #f59e0b;border-radius:10px;padding:14px 18px;">
+    <div style="background:#FFF8B8;border:2px solid #E0B000;border-radius:10px;padding:14px 18px;">
      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
-      <div style="font-size:13px;font-weight:700;color:#b45309;">🎯 Optionality — F.up 대상 물량 & 예상 이익</div>
-      <div style="background:#f59e0b;color:white;font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;">實 확보 462KT · Unwind 실행 예정</div>
+      <div style="font-size:13px;font-weight:700;color:#C62828;">🎯 Optionality — F.up 대상 물량 & 예상 이익</div>
+      <div style="background:#1D3958;color:white;font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;">實 확보 462KT · Unwind 실행 예정</div>
      </div>
      <div style="display:flex;gap:12px;flex-wrap:wrap;">
       <!-- 산업체 R/O -->
-      <div style="flex:1;min-width:280px;background:white;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;">
-       <div style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:6px;">① 산업체 R/O ('28 Cal · '27.4Q)</div>
-       <table style="width:100%;font-size:11px;color:#374151;">
-        <tr><td style="padding:3px 0;color:#6b7280;">확보 물량</td><td style="padding:3px 0;text-align:right;font-weight:700;">228KT <span style="color:#6b7280;font-weight:400;">/ 목표 486KT</span></td></tr>
-        <tr><td style="padding:3px 0;color:#6b7280;">기준</td><td style="padding:3px 0;text-align:right;">CV +5% 기준</td></tr>
-        <tr><td style="padding:3px 0;color:#6b7280;">예상 이익 (現)</td><td style="padding:3px 0;text-align:right;font-weight:700;color:#b45309;">105억원 (45원/kg)</td></tr>
-        <tr><td style="padding:3px 0;color:#6b7280;">목표 달성 시</td><td style="padding:3px 0;text-align:right;font-weight:700;color:#c2410c;">220억원 (486KT 기준)</td></tr>
+      <div style="flex:1;min-width:280px;background:white;border:1px solid #E0B000;border-radius:8px;padding:12px 14px;">
+       <div style="font-size:12px;font-weight:700;color:#C62828;margin-bottom:6px;">① 산업체 R/O ('28 Cal · '27.4Q)</div>
+       <table style="width:100%;font-size:11px;color:#385269;">
+        <tr><td style="padding:3px 0;color:#8E9398;">확보 물량</td><td style="padding:3px 0;text-align:right;font-weight:700;">228KT <span style="color:#8E9398;font-weight:400;">/ 목표 486KT</span></td></tr>
+        <tr><td style="padding:3px 0;color:#8E9398;">기준</td><td style="padding:3px 0;text-align:right;">CV +5% 기준</td></tr>
+        <tr><td style="padding:3px 0;color:#8E9398;">예상 이익 (現)</td><td style="padding:3px 0;text-align:right;font-weight:700;color:#C62828;">105억원 (45원/kg)</td></tr>
+        <tr><td style="padding:3px 0;color:#8E9398;">목표 달성 시</td><td style="padding:3px 0;text-align:right;font-weight:700;color:#C62828;">220억원 (486KT 기준)</td></tr>
        </table>
       </div>
       <!-- 납사대체 -->
-      <div style="flex:1;min-width:280px;background:white;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;">
-       <div style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:6px;">② 납사대체</div>
-       <table style="width:100%;font-size:11px;color:#374151;">
-        <tr><td style="padding:3px 0;color:#6b7280;">확보 물량</td><td style="padding:3px 0;text-align:right;font-weight:700;">234KT <span style="color:#6b7280;font-weight:400;">/ 목표 354KT</span></td></tr>
-        <tr><td style="padding:3px 0;color:#6b7280;">내역</td><td style="padding:3px 0;text-align:right;font-size:10px;">SKGC 72KT + HDC 42KT@89% + 잔여 60KT@86% + '27.2Q R/O @86%</td></tr>
-        <tr><td style="padding:3px 0;color:#6b7280;">기준</td><td style="padding:3px 0;text-align:right;">NV +5% 기준</td></tr>
-        <tr><td style="padding:3px 0;color:#6b7280;">예상 이익 (現)</td><td style="padding:3px 0;text-align:right;font-weight:700;color:#b45309;">90억원 (38원/kg)</td></tr>
-        <tr><td style="padding:3px 0;color:#6b7280;">목표 달성 시</td><td style="padding:3px 0;text-align:right;font-weight:700;color:#c2410c;">210억원 (354KT 기준)</td></tr>
+      <div style="flex:1;min-width:280px;background:white;border:1px solid #E0B000;border-radius:8px;padding:12px 14px;">
+       <div style="font-size:12px;font-weight:700;color:#C62828;margin-bottom:6px;">② 납사대체</div>
+       <table style="width:100%;font-size:11px;color:#385269;">
+        <tr><td style="padding:3px 0;color:#8E9398;">확보 물량</td><td style="padding:3px 0;text-align:right;font-weight:700;">234KT <span style="color:#8E9398;font-weight:400;">/ 목표 354KT</span></td></tr>
+        <tr><td style="padding:3px 0;color:#8E9398;">내역</td><td style="padding:3px 0;text-align:right;font-size:10px;">SKGC 72KT + HDC 42KT@89% + 잔여 60KT@86% + '27.2Q R/O @86%</td></tr>
+        <tr><td style="padding:3px 0;color:#8E9398;">기준</td><td style="padding:3px 0;text-align:right;">NV +5% 기준</td></tr>
+        <tr><td style="padding:3px 0;color:#8E9398;">예상 이익 (現)</td><td style="padding:3px 0;text-align:right;font-weight:700;color:#C62828;">90억원 (38원/kg)</td></tr>
+        <tr><td style="padding:3px 0;color:#8E9398;">목표 달성 시</td><td style="padding:3px 0;text-align:right;font-weight:700;color:#C62828;">210억원 (354KT 기준)</td></tr>
        </table>
       </div>
      </div>
-     <div style="margin-top:10px;font-size:11px;color:#78350f;background:#fef3c7;border-radius:6px;padding:8px 12px;line-height:1.5;">
+     <div style="margin-top:10px;font-size:11px;color:#142446;background:#FFF8B8;border-radius:6px;padding:8px 12px;line-height:1.5;">
       <strong>F.up 포인트:</strong> ① 산업체 잔여 258KT 모니터링 · ② 납사대체 소싱 잔여 120KT 모니터링 · ③ HDC 추가 Term 잔여 180KT 협상 · ④ 대한유화 66KT & SKGC 200KT 계약 클로징 · ⑤ 동절기 JKM 상승 시 잔여 18KT open 재검토
      </div>
     </div>
@@ -2603,132 +2948,149 @@ th.curr { background: #f06400 !important; }
    </div>
 
    <!-- LPG 조달~판매구조 -->
-   <div class="section-label">🔄 LPG 조달~판매구조</div>
-   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:20px;margin-bottom:20px;">
-    <div style="display:flex;align-items:stretch;gap:0;overflow-x:auto;margin-bottom:14px;">
-     <div style="flex:1;min-width:80px;text-align:center;background:#e3f2fd;border-radius:8px 0 0 8px;padding:12px 8px;">
-      <div style="font-size:18px;line-height:1;">🌎</div>
-      <div style="font-size:12px;font-weight:700;color:#1565c0;margin:4px 0 2px;">MARKET</div>
-      <div style="font-size:10px;color:#555;">미국 Enterprise 등</div>
+        </div>
+     <div class="lng-page" id="lpg-page-opt">
+   <div class="section-label">🎲 Optionality 개념 — Hedge에서 Optionality까지 <span style="font-size:10px;font-weight:400;color:#8E9398;">Source: Small DCC포럼('26.07.09) "Optionality 개념 이해" 박재범 팀장 강의 정리</span>
+    <button type="button" class="ez-toggle" onclick="toggleEz('lpg-opt-wrap',this)">💬 쉽게 이해하기 숨기기</button>
+   </div>
+   <div class="ez-wrap" id="lpg-opt-wrap">
+   <div class="ez-formal" style="min-width:0;">
+
+    <div style="background:#DBE6F1;border-left:4px solid #172A55;border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:12px;font-size:12px;color:#142446;"><strong>한 줄 정의</strong> — Optionality는 <strong>공급 기반으로 Hedge해 둔 포지션</strong>을 상대가가 튈 때 풀어(Unwind) 차익을 얻고, 다시 잡아 공급까지 하는 <strong>'제품·가격·물량·기간' 옵션 활용 최적 이익 창출 모델</strong>. Hedge는 '14년부터, Optionality는 '20년(미공급 옵션 계약 반영)부터 본격화, '24~'25년 성숙(연 300억+).</div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:12px;">
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">① 왜 Hedge가 필요한가 — Index 미스매치</div>셰일 혁명으로 LPG가 도시가스보다 싸지자, SK가스가 산업체에 "도시가스 대신 LPG 쓰자, 더 싸게 줄게"로 시작 → <strong>판가는 도시가스 연동(9X%)</strong>인데 <strong>원가는 FEI</strong>인 Index 미스매치 발생 → 도입가와 판매가 Index가 다르면 Hedge 필수.<br><span style="color:#8E9398;">· 원가: FEI (LPG 극동 도착가) · 판가: 도시가스 연동가 = KOGAS LNG 도입가(<strong>Brent 55% + HH 10% + JKM 35%</strong>) + 공급비</span></div>
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">② Paper = 파생상품</div>실물 가격이 움직이는 것을 같은 Index의 파생상품(paper)으로 헤지. "얼마에 살 수 있고 물량은 얼마"라는 권리·의무가 적힌 종이라서 paper. Floating하는 실물과 미리 거래한 paper가 <strong>반대 포지션</strong>을 형성해 변동성을 상쇄 → <strong>마진 fix</strong>.<br><span style="color:#8E9398;">· FEI를 쓰는 이유: MB·CP는 Freight·터미널비가 열려 있어 완벽 헤지 불가, 도착도 가격인 FEI면 완벽 헤지 가능<br>· LPG paper는 유동성이 낮아 장외 broker 거래 · 원할 때 늘 거래되진 않음(마지노선 제시 후 공치는 날도 있음)</span></div>
+    </div>
+
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;">
+     <div style="font-weight:800;font-size:12.5px;color:#142446;margin-bottom:8px;">③ Hedge 구조 — 실물은 LPG, Paper는 양쪽 다</div>
+     <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;font-size:11px;">
+      <div style="border:2px solid #172A55;border-radius:8px;padding:10px;"><div style="font-weight:800;color:#172A55;text-align:center;margin-bottom:4px;">🚢 실물 (Physical)</div>LPG를 배로 수입(원가 <strong>FEI</strong>) → 배관으로 산업체에 공급(판가 <strong>도시가스 연동가</strong>)<br><span style="color:#8E9398;">LNG·Brent는 실물 미동반 — 도시가스 가격은 "가격일 뿐", 실제 물건은 LPG</span></div>
+      <div style="text-align:center;color:#7C95B2;font-size:20px;">⇄</div>
+      <div style="border:2px dashed #172A55;border-radius:8px;padding:10px;"><div style="font-weight:800;color:#172A55;text-align:center;margin-bottom:4px;">📄 Paper (파생상품)</div><span style="color:#172A55;font-weight:700;">[Buy] FEI</span> + <span style="color:#C62828;font-weight:700;">[Sell] Brent · JKM · HH</span><br>KOGAS Index 비중·가격에 맞춰 똑같이 잡음 (예전엔 Brent 위주, LNG 비중↑로 지금은 KOGAS 전 포트폴리오 Hedge)</div>
      </div>
-     <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 4px;min-width:64px;text-align:center;">
-      <div style="font-size:16px;color:#2e7d32;">→</div>
-      <div style="font-size:9px;color:#374151;font-weight:600;">조달가</div>
-      <div style="font-size:9px;color:#1d4ed8;font-weight:700;">'26년초 ≈ 1,164원/kg</div>
-     </div>
-     <div style="flex:1;min-width:80px;text-align:center;background:#fff8e1;padding:12px 8px;">
-      <div style="font-size:18px;line-height:1;">📈</div>
-      <div style="font-size:12px;font-weight:700;color:#e65100;margin:4px 0 2px;">Trading</div>
-      <div style="font-size:10px;color:#555;">소싱·포지션 운용</div>
-     </div>
-     <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 4px;min-width:64px;text-align:center;">
-      <div style="font-size:16px;color:#2e7d32;">→</div>
-      <div style="font-size:9px;color:#374151;font-weight:600;">이체가</div>
-      <div style="font-size:9px;color:#1d4ed8;font-weight:700;">조달가 + 30~50원/kg</div>
-      <div style="font-size:8px;color:#e65100;font-style:italic;margin-top:2px;">T본부 마진(추정)</div>
-     </div>
-     <div style="flex:1;min-width:80px;text-align:center;background:#e8f5e9;padding:12px 8px;">
-      <div style="font-size:18px;line-height:1;">🏭</div>
-      <div style="font-size:12px;font-weight:700;color:#2e7d32;margin:4px 0 2px;">EcoEnergy</div>
-      <div style="font-size:10px;color:#555;">국내 공급·충전소 관리</div>
-     </div>
-     <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 4px;min-width:64px;text-align:center;">
-      <div style="font-size:16px;color:#2e7d32;">→</div>
-      <div style="font-size:9px;color:#374151;font-weight:600;">MP가격</div>
-      <div style="font-size:9px;color:#1d4ed8;font-weight:700;">≈ 1,404원/kg</div>
-      <div style="font-size:8px;color:#888;">EE마진 224원</div>
-     </div>
-     <div style="flex:1;min-width:80px;text-align:center;background:#fce4ec;padding:12px 8px;">
-      <div style="font-size:18px;line-height:1;">⛽</div>
-      <div style="font-size:12px;font-weight:700;color:#c2185b;margin:4px 0 2px;">충전소</div>
-      <div style="font-size:10px;color:#555;">SK가스 폴 충전소</div>
-     </div>
-     <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 4px;min-width:64px;text-align:center;">
-      <div style="font-size:16px;color:#2e7d32;">→</div>
-      <div style="font-size:9px;color:#374151;font-weight:600;">DP (소비자가)</div>
-      <div style="font-size:9px;color:#c2185b;font-weight:700;">MP − 150원</div>
-     </div>
-     <div style="flex:1;min-width:80px;text-align:center;background:#f3e5f5;border-radius:0 8px 8px 0;padding:12px 8px;">
-      <div style="font-size:18px;line-height:1;">🏠</div>
-      <div style="font-size:12px;font-weight:700;color:#6a1b9a;margin:4px 0 2px;">고객</div>
-      <div style="font-size:10px;color:#555;">민수·산업체</div>
+     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px;margin-top:10px;font-size:11px;line-height:1.6;">
+      <div style="background:#EEF3F8;border-radius:6px;padding:8px 10px;"><strong style="color:#142446;">Buy·Sell은 동시에</strong> — FEI와 Brent는 "이 정도 상대가면 좋다" 하고 동시에 고정. 시차가 생기면 그 기간은 speculation.</div>
+      <div style="background:#EEF3F8;border-radius:6px;padding:8px 10px;"><strong style="color:#142446;">JKM·HH Sell은 따로</strong> — LPG(원가)는 여름에 싸게 Buy, LNG(판가 Sell)는 겨울에 비싸게 Sell이 유리해 시점이 엇박자. 동시에 잡으면 Hedge value 훼손. 이제 JKM 비중이 커져 안 잡으면 오히려 노출.</div>
+      <div style="background:#EEF3F8;border-radius:6px;padding:8px 10px;"><strong style="color:#142446;">평가이익 / 평가손실</strong> — Buy paper $550 FEI인데 시장 $700이면 평가이익, $400이면 평가손실. 실물이 비싸진 달에 paper 이익이 그 손해를 상쇄 → 마진 fix.</div>
+      <div style="background:#EEF3F8;border-radius:6px;padding:8px 10px;"><strong style="color:#142446;">Paper 먼저, 실물 나중</strong> — 파생상품은 미리 잡고, 실물은 Trading본부가 연말 프로그램 짤 때 한꺼번에 잡아 매칭.</div>
      </div>
     </div>
-    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;padding:10px 14px;font-size:12px;color:#374151;">
-     <span style="font-weight:700;color:#15803d;">EE본부 수익구조:</span> MP = 이체가 + 224원/kg. EE마진(224원) − 가격·매출할인(약 150원) = 실질 마진. EE마진은 최근 10년 평균 매년 <strong>+6원/kg</strong>씩 인상.
+
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;">
+     <div style="font-weight:800;font-size:12.5px;color:#142446;margin-bottom:8px;">④ Hedge를 잘하기 위한 2대 핵심 조건</div>
+     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;">
+      <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">1) 도시가스 판가 정밀 추정</div>도시가스 가격 = KOGAS 도매요금 + 권역별 소매공급비. 그중 <strong>KOGAS LNG 도입가</strong>가 비중·가변성 모두 압도적.<br>· KOGAS 장기 Term 계약 15~20개의 조건을 리서치·글로벌 기관으로 대부분 파악 → 도입가 추정<br>· 미수금 정산단가, 도입부대비, 공급비도 자체 로직으로 추정<br>· KOGAS 월 도매요금 발표 전에 3~4년 뒤, 현재 <strong>2030년 가격까지</strong> 추정 중<br><span style="color:#8E9398;">· Formula gap: KOGAS 내부 정책 때문에 추정과 실제가 어긋나지만, 보수적 추정이라 손익상 양수로 많이 나옴</span></div>
+      <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">2) 상대가 소싱 (KOGAS 판가보다 싸게 사오기)</div>절대가격보다 <strong>상대가</strong>가 중요. FEI로 사서 유가 연동 도시가스로 팔기 때문.<br>· <strong>CV = FEI/Brent</strong>(산업체), <strong>FEI/MOPJ</strong>(납사대체 원료용) — 매일 아침 모니터링<br>· 상대가가 약세(낮음)일 때 소싱, 강세일 때 Optionality<br>· 적정 소싱 Range: 보통 <strong>90% 언더</strong>. 유가가 낮으면 양보 가능, 높으면 더 타이트하게<br>· 지금은 동고하저 완화로 "재미없는 시장" → 잡은 상대가 대비 +5% 추가 이익 타겟</div>
+     </div>
+    </div>
+
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;">
+     <div style="font-weight:800;font-size:12.5px;color:#142446;margin-bottom:8px;">⑤ Optionality Workflow — 6단계</div>
+     <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;margin-bottom:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#172A55;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">1</div><div style="border:1px solid #D4D6D9;border-radius:6px;padding:6px 10px;font-size:11px;line-height:1.6;color:#385269;"><strong style="color:#142446;">도시가스 판가 추정</strong><br>KOGAS Formula·정산단가·공급비를 정밀 추정 (2030년까지)</div></div><div style="display:grid;grid-template-columns:30px 1fr;gap:10px;margin-bottom:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#172A55;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">2</div><div style="border:1px solid #D4D6D9;border-radius:6px;padding:6px 10px;font-size:11px;line-height:1.6;color:#385269;"><strong style="color:#142446;">수요 확보 (연동 판매)</strong><br>"도시가스보다 5~8% 싸게 드릴게요" → 고객사와 연동 판매 계약. 일부는 <strong>미공급 옵션</strong>(못 주면 보상) 포함</div></div><div style="display:grid;grid-template-columns:30px 1fr;gap:10px;margin-bottom:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#172A55;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">3</div><div style="border:1px solid #D4D6D9;border-radius:6px;padding:6px 10px;font-size:11px;line-height:1.6;color:#385269;"><strong style="color:#142446;">LPG 사전 소싱 (Paper)</strong><br>계약 판가보다 싼 상대가에 paper 소싱. 실물은 floating, paper와 만나 <strong>마진 fix</strong></div></div><div style="display:grid;grid-template-columns:30px 1fr;gap:10px;margin-bottom:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#C62828;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">4</div><div style="border:1px solid #D4D6D9;border-radius:6px;padding:6px 10px;font-size:11px;line-height:1.6;color:#385269;"><strong style="color:#142446;">공급 옵션 vs Unwind 비교 → 의사결정</strong><br>상대가 85%에 잡아뒀는데 시장이 95%로 뛰면 주식처럼 비싸게 팔아 차익 = <strong>Optionality 이익</strong>. 포지션을 풀어 확정 = <strong>Unwind</strong>. "공급마진 먹을래 vs Unwind 이익 먹을래"</div></div><div style="display:grid;grid-template-columns:30px 1fr;gap:10px;margin-bottom:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#172A55;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">5</div><div style="border:1px solid #D4D6D9;border-radius:6px;padding:6px 10px;font-size:11px;line-height:1.6;color:#385269;"><strong style="color:#142446;">재소싱 (R/O, 롤오버)</strong><br>공급까지 기간이 남았으면 다시 기회를 보다 공급옵션보다 싼 가격(예: 91.6%)에 재진입</div></div><div style="display:grid;grid-template-columns:30px 1fr;gap:10px;margin-bottom:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#172A55;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">6</div><div style="border:1px solid #D4D6D9;border-radius:6px;padding:6px 10px;font-size:11px;line-height:1.6;color:#385269;"><strong style="color:#142446;">공급 → 공급이익까지</strong><br>재소싱 후 공급하면 <strong>공급이익(계약 판가 − 91.6% 원가)</strong>을 한 번 더. 사서 바로 공급하는 것보다 "풀고 → 다시 잡고 → 공급"이 더 남음</div></div>
+     <div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:6px;padding:8px 12px;font-size:11px;color:#142446;margin-top:4px;"><strong>'22년 원월물 R/O 예시:</strong> 85.6% 상대가로 Hedge → 동절기 95.6%에 Unwind(이익) → 91.6%에 재소싱 → 이듬해 공급. 공급마진은 조금 줄지만 Unwind 이익이 훨씬 커 추가 재원 확보. 근월물은 다시 잡기 어려워 <strong>원월물이 적합</strong>.</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:12px;">
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">⑥ 4대 요소 — 제품 / 가격 / 물량 / 기간</div><table style="width:100%;border-collapse:collapse;font-size:10.5px;"><tr><th style="padding:6px;border:1px solid #D4D6D9;background:#DBE6F1;width:16%;">요소</th><th style="padding:6px;border:1px solid #D4D6D9;background:#DBE6F1;">의미</th><th style="padding:6px;border:1px solid #D4D6D9;background:#DBE6F1;width:40%;">확장 (As-was → As-is)</th></tr><tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">① 제품</td><td style="padding:6px;border:1px solid #D4D6D9;">LPG·원유·LNG·납사로 저글링</td><td style="padding:6px;border:1px solid #D4D6D9;">연료용 LPG만 → 석화 원료용·LNG까지</td></tr><tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">② 가격</td><td style="padding:6px;border:1px solid #D4D6D9;">싸게 잘 잡아야 튈 때 크게 먹음</td><td style="padding:6px;border:1px solid #D4D6D9;">원월물 Backwardation 활용해 더 낮은 상대가</td></tr><tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">③ 물량</td><td style="padding:6px;border:1px solid #D4D6D9;">커야 수익도 큼</td><td style="padding:6px;border:1px solid #D4D6D9;">산업체 1개 → TSP 30여 개 1년치 묶음 + 석화 Term 전량</td></tr><tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">④ 기간</td><td style="padding:6px;border:1px solid #D4D6D9;">길수록 샀다 팔았다 기회↑</td><td style="padding:6px;border:1px solid #D4D6D9;">당년·Y+1 → Y+1·Y+2·Y+3 원월물</td></tr></table></div>
+     <div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">⑦ 대원칙 — 공급 기반이어야 Optionality (아니면 Speculation)</div>· <strong>공급옵션 = 하방 방어</strong>: kg당 +20원, +38원 등 마진이 fix돼 있어 시장이 80~85%에서 애매하게 머물러도 그냥 공급하면 약정 마진 확보<br>· <strong>Optionality = Upside</strong>: 공급마진보다 더 크게 먹을 확신이 있을 때만 쓰는 카드 (공급마진 &lt; 파생 처분이익일 때 실행)<br>· 공급 없이 paper만 있으면 하방이 뚫림 → speculation<br>· 원월물도 "판매량이 이 정도 될 것"이라는 가정 물량만큼만 (울산 앞마당 해자, '27~'29 장기계약으로 예측 가능)<br>· <strong>고객에 대체재가 있어야</strong> 가능 → 미공급 옵션('20~, "못 드리면 보상") · 민수·PDH(back-to-back)는 대체재가 없어 대상 아님 · 연료 전환 비용은 보상 없이 협의, 기술 부담으로 못 하는 경우도 있음</div>
+    </div>
+
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;">
+     <div style="font-weight:800;font-size:12.5px;color:#142446;margin-bottom:8px;">⑧ 실행 범위 &amp; 상대가 Index</div>
+     <table style="width:100%;border-collapse:collapse;font-size:10.5px;">
+      <tr style="background:#DBE6F1;"><th style="padding:6px;border:1px solid #D4D6D9;width:18%;">대상</th><th style="padding:6px;border:1px solid #D4D6D9;width:20%;">상대가 Index</th><th style="padding:6px;border:1px solid #D4D6D9;">특징</th><th style="padding:6px;border:1px solid #D4D6D9;width:14%;">Optionality</th></tr>
+      <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">산업체 (TSP, 연료용)</td><td style="padding:6px;border:1px solid #D4D6D9;"><strong>FEI/Brent</strong><br><span style="color:#8E9398;">+ MB/Brent, JKM, HH</span></td><td style="padding:6px;border:1px solid #D4D6D9;">LPG 사서 유가 연동 도시가스가로 판매. MB는 shipping cost 때문에 완벽 헤지 어렵지만 중장기 안정성 때문에 소싱(지금까지 Opt. 대상 아님, 안정적 깔아두는 물량)</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;color:#172A55;font-weight:700;">○</td></tr>
+      <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">석화 납사대체 (원료용)</td><td style="padding:6px;border:1px solid #D4D6D9;"><strong>FEI/MOPJ</strong></td><td style="padding:6px;border:1px solid #D4D6D9;">NCC에 납사 대신 LPG 투입. 월 Spot → 작년부터 1년 이상 Term 위주. 납사는 유가 상관이 높아 계절성 약함, LPG 동고하저로 플레이. Fuel vs Feedstock 차이만 있을 뿐 산업체와 동일 컨셉</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;color:#172A55;font-weight:700;">○</td></tr>
+      <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">Dual Fuel 소형 발전 (연료전지·자가발전)</td><td style="padding:6px;border:1px solid #D4D6D9;">FEI/Brent</td><td style="padding:6px;border:1px solid #D4D6D9;">LPG·도시가스 둘 다 투입. 못 주면 도시가스사가 대체 공급하는 스위칭 모델</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;color:#172A55;font-weight:700;">○</td></tr>
+      <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">LNG Paper (JKM·HH Sell)</td><td style="padding:6px;border:1px solid #D4D6D9;">JKM, HH</td><td style="padding:6px;border:1px solid #D4D6D9;">실물 미동반. $15 Sell 잡았는데 시장 $12면 Sell 풀어 $3 차익. 더 오르면 기회이익 상실. JKM은 펀더멘털상 상승 확률 높다고 보면 전략적으로 노출시키기도(러-우 전쟁, 미-이란 전쟁 사례)</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;color:#172A55;font-weight:700;">○</td></tr>
+      <tr style="color:#8E9398;"><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">PDH (SKA 등)</td><td style="padding:6px;border:1px solid #D4D6D9;">Back-to-back</td><td style="padding:6px;border:1px solid #D4D6D9;">구매·판매 Index 동일 + 일정 마진. 대체재 없어 공급 중단 불가</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:700;">×</td></tr>
+      <tr style="color:#8E9398;"><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">민수</td><td style="padding:6px;border:1px solid #D4D6D9;">–</td><td style="padding:6px;border:1px solid #D4D6D9;">물량은 크지만 대체재 없음</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:700;">×</td></tr>
+     </table>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:12px;">
+     <div style="background:white;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">⑨ 최근 사례</div>· <strong>'26 Unwind:</strong> '27년 물량을 '26년 1월 전량 Unwind(이익) → 포지션 open 상태에서 미-이란 전쟁 발발("다시 잡기 힘들겠네") → 미-이란 MOU 화해 모드 때 재소싱 거의 완료<br>· <strong>LNG paper:</strong> $14 Sell 진입 → 하락 시 Unwind 차익<br>· <strong>러-우 전쟁('22):</strong> JKM Hedge 후 Unwind해 포지션 open → 실물 급등 이익까지 확보 (재Hedge 상태였다면 정해진 이익만)<br>· <strong>미-이란 전쟁('26):</strong> JKM Hedge 돼 있었으나 사장·관련 팀 논의로 <strong>의도적 노출</strong> → 상승분 확보</div>
+     <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">⑩ 한계·리스크 (Q&amp;A)</div>· Unwind하면 Index 미스매치 리스크가 다시 살아남 → 재소싱 필수. 상대가가 계속 오르면(97%) 공급손실 감수하고 잡아야 함 (지금까지 그런 사례는 없음, MI 뷰 기반)<br>· Unwind한 95.9%보다 더 오르면 기회이익 상실 — "정수리에서 팔기"는 불가<br>· <strong>동고하저 약화</strong>: 중국 PDH·석화 증설, 원료용 수요가 연중 평탄화, NCC 스위칭으로 박스권 → 자구책은 원월물로 더 일찍 더 싸게 + Opt. 횟수 늘리기<br>· <strong>KOGAS 판가 하락 리스크</strong>: 가격 중시 Term 갱신, 산업용 미수금 소진 → 도시가스 가격 하락세. 그래도 도입부대비 같은 상수 절편 덕에 LPG 우위 가능<br>· '27~'29 공급이익은 양호, '30 KOGAS 구조 큰 변화 없을 전망, 그 이후는 분석 필요</div>
     </div>
    </div>
-   <!-- TMC -->
-   <div class="section-label">&#128176; TMC (Total Marketing Cost) — 충전소 수익성 관리기준</div>
-   <div style="background:white;border:1px solid var(--gray-200);border-radius:10px;padding:20px;margin-bottom:20px;">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;">
-     <div style="background:#fef3c7;border:1px solid #fcd34d;border-radius:8px;padding:10px 18px;text-align:center;">
-      <div style="font-size:11px;color:#92400e;font-weight:700;">관리 목표</div>
-      <div style="font-size:20px;font-weight:700;color:#92400e;">224원/kg 이하</div>
+
+   <aside class="ez-note">
+    <div class="ez-title">📌 Optionality, 쉽게 이해하기</div>
+    <div class="ez-sub">강의 내용을 비유로 압축한 메모예요.</div>
+    <h4>1. 왜 헤지하나</h4>
+    <p>우리는 <strong>쌀(LPG, FEI)</strong>을 사서 <strong>옆집 빵값(도시가스) 기준</strong>으로 떡을 팔아요. 쌀값과 빵값이 따로 움직이니, 둘 다 미리 고정해 두지 않으면 마진이 매일 출렁여요. 그래서 "이 값에 사겠다/팔겠다"는 <strong>약속(paper)</strong>을 미리 잡아 마진을 고정 = Hedge.</p>
+    <h4>2. Paper는 "가격 약속 쪽지"</h4>
+    <p>FEI $550에 사기로 한 쪽지가 있으면 나중에 $900이 되든 $200이 되든 $550에 사요. 시장이 $700이면 쪽지가 이익(평가이익), $400이면 손해(평가손실). 실물이 비싸진 달엔 쪽지가 벌어서 메워주니 <strong>합치면 마진은 그대로</strong>.</p>
+    <h4>3. Optionality는 "약속 쪽지 되팔기"</h4>
+    <p>쌀값÷빵값(상대가) 85%에 쪽지를 잡아뒀는데 시장이 95%로 튀면, 그 쪽지를 비싸게 팔아 차익(Unwind). 그리고 다시 쌀 때 잡아 공급까지 하면 <strong>차익 + 공급마진 두 번</strong>.</p>
+    <div class="quote">비유: 추석 전에 쌀 선물을 싸게 예약해 뒀는데 쌀값이 폭등 → 예약권을 되팔아 이익 → 나중에 다시 싼 예약 잡아 떡까지 팜.</div>
+    <h4>4. 바닥은 "공급옵션"이 막아준다</h4>
+    <p>되팔 기회가 안 와도 그냥 고객에게 공급하면 약정 마진(+20~38원/kg)은 남아요. 그래서 <strong>공급처가 있어야</strong> 하방이 막힌 Optionality고, 없으면 그냥 투기. 단 고객이 도시가스로 대체할 수 있어야 "못 드려요, 보상할게요"(미공급 옵션)가 가능해서 민수·PDH는 안 돼요.</p>
+    <h4>5. 왜 원월물(2~3년 뒤 물량)인가</h4>
+    <p>멀수록 보통 더 싸고(Backwardation), 공급 마감까지 시간이 있어 <strong>샀다 팔았다를 여러 번</strong> 할 수 있어요. 겨울·여름 가격차(동고하저)가 줄어 "재미없는 시장"이 된 지금의 자구책.</p>
+    <h4>6. JKM Sell은 왜 따로 잡나</h4>
+    <p>쌀(LPG)은 <strong>여름에 싸게 사고</strong>, 빵값 중 LNG(JKM)는 <strong>겨울에 비싸게 팔기로</strong> 해야 유리해서 시점이 어긋나요. 그리고 빵값 공식에서 JKM 비중이 커져 이젠 안 잡으면 그게 오히려 노출. 다만 잡아둔 JKM이 전쟁으로 튀면 장부상 평가손이 먼저 찍혀요 → TSP 장표의 "545억 감내 가능?" 질문이 이것.</p>
+    <div class="ez-box ez-final"><strong>한 줄:</strong> 공급처를 먼저 확보하고(바닥), 쌀값·빵값 쪽지를 싸게 잡아두고(Hedge), 가격이 튈 때 쪽지를 되팔고 다시 잡는(Optionality) 장사. 전제는 "빵값(KOGAS)을 정밀하게 맞추기"와 "쌀을 상대가 90% 밑에서 사기".</div>
+   </aside>
+   </div>
      </div>
-     <div style="font-size:12px;color:#6b7280;flex:1;min-width:200px;line-height:1.7;">충전소가 SK가스에 <strong>+ 충전소인지 − 충전소인지</strong> 판단하기 위한 내부관리기준 (P&amp;L 산출과 무관).<br>EE마진(224원) − TMC &gt; 0 → + 충전소 / 초과 시 → − 충전소</div>
+     <div class="lng-page" id="lpg-page-tmc">
+<div class="section-label">&#128176; TMC (Total Marketing Cost) — 충전소 수익성 관리기준</div>
+   <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:20px;margin-bottom:20px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;">
+     <div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:8px;padding:10px 18px;text-align:center;">
+      <div style="font-size:11px;color:#C62828;font-weight:700;">관리 목표</div>
+      <div style="font-size:20px;font-weight:700;color:#C62828;">224원/kg 이하</div>
+     </div>
+     <div style="font-size:12px;color:#8E9398;flex:1;min-width:200px;line-height:1.7;">충전소가 SK가스에 <strong>+ 충전소인지 − 충전소인지</strong> 판단하기 위한 내부관리기준 (P&amp;L 산출과 무관).<br>EE마진(224원) − TMC &gt; 0 → + 충전소 / 초과 시 → − 충전소</div>
     </div>
     <table style="width:100%;border-collapse:collapse;font-size:12px;">
      <thead>
-      <tr style="background:#f8fafc;">
-       <th style="text-align:left;padding:8px 10px;border-bottom:2px solid #e5e7eb;color:#374151;">항목</th>
-       <th style="text-align:left;padding:8px 10px;border-bottom:2px solid #e5e7eb;color:#374151;">내용</th>
+      <tr style="background:#EEF3F8;">
+       <th style="text-align:left;padding:8px 10px;border-bottom:2px solid #D4D6D9;color:#385269;">항목</th>
+       <th style="text-align:left;padding:8px 10px;border-bottom:2px solid #D4D6D9;color:#385269;">내용</th>
       </tr>
      </thead>
      <tbody>
-      <tr style="border-bottom:1px solid #f3f4f6;">
+      <tr style="border-bottom:1px solid #A9C8E8;">
        <td style="padding:7px 10px;font-weight:600;">가격할인</td>
-       <td style="padding:7px 10px;color:#374151;">충전소마다 각자 다르게 고정적으로 kg당 할인해주는 금액</td>
+       <td style="padding:7px 10px;color:#385269;">충전소마다 각자 다르게 고정적으로 kg당 할인해주는 금액</td>
       </tr>
-      <tr style="border-bottom:1px solid #f3f4f6;background:#fafafa;">
+      <tr style="border-bottom:1px solid #A9C8E8;background:#EEF3F8;">
        <td style="padding:7px 10px;font-weight:600;">매출할인</td>
-       <td style="padding:7px 10px;color:#374151;">총 매출대금 정산 마지막 단계에서 정액을 빼주는 금액 — 대형 충전소가 타 폴 이동 압박 시 추가 할인</td>
+       <td style="padding:7px 10px;color:#385269;">총 매출대금 정산 마지막 단계에서 정액을 빼주는 금액 — 대형 충전소가 타 폴 이동 압박 시 추가 할인</td>
       </tr>
-      <tr style="border-bottom:1px solid #f3f4f6;">
+      <tr style="border-bottom:1px solid #A9C8E8;">
        <td style="padding:7px 10px;font-weight:600;">대여금</td>
-       <td style="padding:7px 10px;color:#374151;">무이자로 대출해주는 금액</td>
+       <td style="padding:7px 10px;color:#385269;">무이자로 대출해주는 금액</td>
       </tr>
-      <tr style="border-bottom:1px solid #f3f4f6;background:#fafafa;">
+      <tr style="border-bottom:1px solid #A9C8E8;background:#EEF3F8;">
        <td style="padding:7px 10px;font-weight:600;">외상채권</td>
-       <td style="padding:7px 10px;color:#374151;">매출채권</td>
+       <td style="padding:7px 10px;color:#385269;">매출채권</td>
       </tr>
-      <tr style="border-bottom:1px solid #f3f4f6;">
+      <tr style="border-bottom:1px solid #A9C8E8;">
        <td style="padding:7px 10px;font-weight:600;">시설지원잔액</td>
-       <td style="padding:7px 10px;color:#374151;">충전소 시설지원해주고 남은 장부가</td>
+       <td style="padding:7px 10px;color:#385269;">충전소 시설지원해주고 남은 장부가</td>
       </tr>
-      <tr style="border-bottom:1px solid #f3f4f6;background:#fafafa;">
+      <tr style="border-bottom:1px solid #A9C8E8;background:#EEF3F8;">
        <td style="padding:7px 10px;font-weight:600;">임대차보증금기회비용</td>
-       <td style="padding:7px 10px;color:#374151;">위 4개 항목 + 임대차보증금 — 해당 금액을 지원하지 않았더라면 은행 예치 시 받을 수 있는 이자비용만큼의 기회비용</td>
+       <td style="padding:7px 10px;color:#385269;">위 4개 항목 + 임대차보증금 — 해당 금액을 지원하지 않았더라면 은행 예치 시 받을 수 있는 이자비용만큼의 기회비용</td>
       </tr>
-      <tr style="border-bottom:1px solid #f3f4f6;">
+      <tr style="border-bottom:1px solid #A9C8E8;">
        <td style="padding:7px 10px;font-weight:600;">임대료</td>
-       <td style="padding:7px 10px;color:#374151;">우리 충전소에서 임차인이 사업 → SK가스가 수취 → TMC 비용에서 <strong>마이너스</strong></td>
+       <td style="padding:7px 10px;color:#385269;">우리 충전소에서 임차인이 사업 → SK가스가 수취 → TMC 비용에서 <strong>마이너스</strong></td>
       </tr>
       <tr>
        <td style="padding:7px 10px;font-weight:600;">임차료</td>
-       <td style="padding:7px 10px;color:#374151;">사장님 충전소에 SK가스가 임차료 지급 → TMC 비용에 <strong>더함</strong></td>
+       <td style="padding:7px 10px;color:#385269;">사장님 충전소에 SK가스가 임차료 지급 → TMC 비용에 <strong>더함</strong></td>
       </tr>
      </tbody>
     </table>
    </div>
-   <div class="section-label">밸류체인</div>
-   <div class="value-chain">
-    <div class="vc-step"><div class="icon">🚢</div><div class="name">도입</div><div class="desc">FEI·MB·CP<br>3원 소싱</div></div>
-    <div class="vc-arrow">›</div>
-    <div class="vc-step"><div class="icon">🏭</div><div class="name">울산 기지</div><div class="desc">저장·배관 허브<br>GPS 700m 파이프</div></div>
-    <div class="vc-arrow">›</div>
-    <div class="vc-step"><div class="icon">🚚</div><div class="name">국내 공급</div><div class="desc">민수·산업체<br>Autogas·PDH</div></div>
-    <div class="vc-arrow">›</div>
-    <div class="vc-step"><div class="icon">📈</div><div class="name">Optionality</div><div class="desc">HH·LPG 페이퍼<br>Trading·G&amp;P 협업</div></div>
-    <div class="vc-arrow">›</div>
-    <div class="vc-step"><div class="icon">💵</div><div class="name">수익</div><div class="desc">공급마진<br>+ Optionality 이익</div></div>
-   </div>
-   <div class="section-label">최신 업데이트 <span class="badge badge-blue">5월 4일 주간보고</span></div>
-   <div class="update-list">
-    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>HH Optionality +6.6억 실현(4월)</strong> — Trading본부 연계 헤지 운용, Unwind 완료. 다음 시즌 구조 검토 중.</div></div>
-    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>도로공사 23개소 낙찰(2/5)</strong> — 20년 장기 고속도로 공급권, Autogas 네트워크 대폭 확대.</div></div>
-    <div class="update-item"><div class="dot dot-green"></div><div class="text"><strong>T사 1공장 계약(3/3, 28천톤/년)</strong> — 납사대체 직매 신규 대형 계약 체결.</div></div>
-    <div class="update-item"><div class="dot dot-amber"></div><div class="text"><strong>E1 교환계약 협의 진행 중</strong> — 재고 위치 최적화 목적, 조건 최종 협의 단계.</div></div>
+        </div>
+    </div>
    </div>
   </div>
 
@@ -5416,6 +5778,14 @@ function switchEn(id, btn) {
   document.querySelectorAll('#biz-energy .lng-tab').forEach(function(x){x.classList.remove('active');});
   btn.classList.add('active');
   var book = document.querySelector('#biz-energy .lng-book');
+  if (book && book.getBoundingClientRect().top < 0) { book.scrollIntoView({behavior:'smooth', block:'start'}); }
+}
+function switchLpg(id, btn) {
+  document.querySelectorAll('#biz-lpg .lng-page').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('lpg-page-'+id).classList.add('active');
+  document.querySelectorAll('#biz-lpg .lng-tab').forEach(function(x){x.classList.remove('active');});
+  btn.classList.add('active');
+  var book = document.querySelector('#biz-lpg .lng-book');
   if (book && book.getBoundingClientRect().top < 0) { book.scrollIntoView({behavior:'smooth', block:'start'}); }
 }
 function switchTr(id, btn) {
