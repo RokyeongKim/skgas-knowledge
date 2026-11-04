@@ -117,6 +117,14 @@ th.curr { background: #f06400 !important; }
 .issue-card .issue-title { font-size: 12px; font-weight: 700; color: var(--sk-blue); margin-bottom: 6px; }
 .issue-card .issue-body { font-size: 12px; color: var(--gray-700); line-height: 1.5; }
 .dot-red { background: var(--red); }
+/* Notion 원문 그대로 */
+.notion-raw p.nt { margin:0 0 6px; }
+.notion-raw p.nt-h { margin:16px 0 6px; font-size:13px; }
+.notion-raw ul.nt, .notion-raw ol.nt { margin:0 0 8px 20px; padding:0; }
+.notion-raw li { margin:0 0 4px; }
+.notion-raw ul.nt li { list-style:disc; }
+.notion-raw ol.nt li { list-style:decimal; }
+.notion-raw u { text-decoration:underline; text-underline-offset:2px; }
 /* 쉽게 이해하기 포스트잇 (generic) */
 .ez-toggle { margin-left:auto; border:1px solid #E0B000; background:#FFEE8A; color:#142446; font-size:11px; font-weight:700; padding:3px 10px; border-radius:9999px; cursor:pointer; font-family:inherit; white-space:nowrap; }
 .ez-wrap { display:grid; grid-template-columns:minmax(0,1fr) 400px; gap:18px; align-items:start; margin-bottom:16px; }
@@ -174,6 +182,9 @@ th.curr { background: #f06400 !important; }
 .lng-tab.active::after { content:''; position:absolute; right:-3px; top:0; bottom:0; width:6px; background:inherit; }
 .lt-0, .lt-1, .lt-2, .lt-3, .lt-4, .lt-5 { background:#DBE6F1; }
 .lng-tab.active { background:#FFEE8A; }
+.lng-tab.lng-subtab { margin-left:22px; margin-top:-4px; padding:7px 8px 7px 12px; font-size:11.5px; transform:translateX(8px) rotate(0.8deg); box-shadow:-2px 2px 5px rgba(0,0,0,0.1); }
+.lng-tab.lng-subtab small { font-size:9.5px; }
+.lng-tab.lng-subtab.active { transform:translateX(1px) rotate(0deg); }
 .lng-pages { flex:1; min-width:0; background:white; border:1px solid #D4D6D9; border-radius:0 12px 12px 12px; padding:22px 24px 8px; box-shadow:0 2px 10px rgba(0,0,0,0.06); }
 .lng-page { display:none; } .lng-page.active { display:block; }
 @media (max-width: 800px) {
@@ -2058,7 +2069,8 @@ th.curr { background: #f06400 !important; }
      <button class="lng-tab lt-0 active" id="lpg-tab-perf" onclick="switchLpg('perf',this)">① 📊 실적<small>'26 전망 795억 → '27 목표 2,115억 · Key Driver</small></button>
      <button class="lng-tab lt-1" id="lpg-tab-basic" onclick="switchLpg('basic',this)">② 🧪 기본정보<small>제품 구성(C3/C4) · 조달~판매 구조 · 밸류체인</small></button>
      <button class="lng-tab lt-2" id="lpg-tab-src" onclick="switchLpg('src',this)">③ 📦 조달처<small>Term 70% / Spot 30% · EPD 계약 이력</small></button>
-     <button class="lng-tab lt-3" id="lpg-tab-sale" onclick="switchLpg('sale',this)">④ 🏭 판매처<small>🔥 TSP Biz 지속성(Discussion Agenda) · 판매믹스 · 납사대체</small></button>
+     <button class="lng-tab lt-3" id="lpg-tab-sale" onclick="switchLpg('sale',this)">④ 🏭 판매처<small>판매믹스 · 구매·판매 방식 · 납사대체 · 소싱-Opt. 대응</small></button>
+     <button class="lng-tab lt-3 lng-subtab" id="lpg-tab-tsp" onclick="switchLpg('tsp',this)">└ 🔥 TSP Biz, 계속 경쟁력 있나?<small>Discussion Agenda · BEP 유가 · Dual 모델 · 파생손 감내</small></button>
      <button class="lng-tab lt-4" id="lpg-tab-opt" onclick="switchLpg('opt',this)">⑤ 🎲 Optionality 개념<small>Hedge → Unwind → R/O · 4대 요소 · 공급 기반 원칙</small></button>
      <button class="lng-tab lt-5" id="lpg-tab-tmc" onclick="switchLpg('tmc',this)">⑥ 💰 TMC<small>충전소 수익성 관리기준 224원/kg</small></button>
     </nav>
@@ -2321,210 +2333,7 @@ th.curr { background: #f06400 !important; }
    <!-- LPG 판매믹스 -->
         </div>
      <div class="lng-page" id="lpg-page-sale">
-   <div class="section-label">🔥 최근 이슈 — TSP Biz 지속성 확보 방안 (Discussion Agenda) <span style="font-size:10px;font-weight:400;color:#8E9398;">Source: 행캔 '27 Discussion Agenda p.129~134 · TSP = 도시가스 연동가 산업체 공급 사업</span>
-    <button type="button" class="ez-toggle" onclick="toggleEz('lpg-tsp-wrap',this)">💬 쉽게 이해하기 숨기기</button>
-   </div>
-   <div class="ez-wrap ez-wide" id="lpg-tsp-wrap">
-   <div class="ez-formal" style="min-width:0;">
-
-    <!-- 1/4 -->
-    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.65;color:#385269;">
-     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">1/4 · 주요 환경 변화에 어떻게 대응해 왔는가? — <span style="color:#172A55;">TSP 사업 모델은 외부환경 변화 대응을 통해 사업 규모 및 수익성을 유지해 왔으나..</span></div>
-     <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;">
-      <div>
-       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:8px;">('21년 이후) 주요 환경 변화</div>
-       <table style="width:100%;border-collapse:collapse;">
-        <tr><td rowspan="2" style="padding:6px;border:1px solid #D4D6D9;background:#EEF3F8;text-align:center;font-weight:700;width:22%;">도시가스<br>연동판가</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;width:18%;">유가<br>WACOG</td><td style="padding:6px;border:1px solid #D4D6D9;">• <strong>KOGAS 유가연동 Term WACOG 지속 하락</strong><br><span style="color:#8E9398;">– 高 Slope 계약 종료 → 低 Slope 대체/갱신 지속: ('22) 14.0% → ('26) 13.5% → ('30) 13.2%</span></td></tr>
-        <tr><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;">LNG<br>Spot</td><td style="padding:6px;border:1px solid #D4D6D9;">• <strong>KOGAS JKM 도입 비중 확대로 변동성 확대</strong><br><span style="color:#8E9398;">: 비중 ('22) 16% → ('26) 33% → ('30) 27%</span></td></tr>
-        <tr><td colspan="2" style="padding:6px;border:1px solid #D4D6D9;background:#EEF3F8;text-align:center;font-weight:700;">소싱 및 Optionality</td><td style="padding:6px;border:1px solid #D4D6D9;">• <strong>LPG 동고하저 구조 약화 및 CV 변동폭 축소</strong><br><span style="color:#8E9398;">– 중국 석화 수요 확대로 동·하절기 차이 축소: CV 변동폭 ('22) 10% → ('26) 5%</span></td></tr>
-        <tr><td colspan="2" style="padding:6px;border:1px solid #D4D6D9;background:#EEF3F8;text-align:center;font-weight:700;">판매/계약</td><td style="padding:6px;border:1px solid #D4D6D9;">• <strong>판매마진 축소 압력 증대 및 수요 확대 정체</strong><br><span style="color:#8E9398;">– 산업 경기 악화로 고객 공장 가동률 하락 / 재계약 도래 시 가격 인하 요구 증대<br>– 울산 내 연료전환 기회 감소<br>– 미수금 정산단가 감소 ('22) 34원/kg → ('26) 12원/kg</span></td></tr>
-       </table>
-      </div>
-      <div>
-       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:4px;">대응 경과</div>
-       <div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>중장기 소싱 통한 Base 경제성 제고 및 Opt. 기회 확대</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– ('21) MB 중장기(Y+3) 및 ('23) FEI R/O(Y+2) 도입<br>– 경제성 ('21) 146원/kg → ('23) 244원/kg → ('25) 71원/kg</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span>JKM Sell 판가 Hedge 통한 수익성 개선</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– ('22) JKM Sell 실행<br>– ('22) $25.3, ('25) $14.3, ('26) $10.5, ('27) $9.4</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span>수요 다변화 및 지역 확장 노력</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– 연료전지 개발, 납사대체 수요 확보 및 지역 확장(광주/대산 등)</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">4</span>재계약 판가 방어 및 미공급 옵션 확보로 Risk 축소 노력</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– '22년 재계약 시 도시가스 연동 할인률 상향 (88% → 91.5%)<br>– 일부 미공급 옵션(36KT) 및 협의가능 조항(113KT) 확보</div>
-      </div>
-     </div>
-    </div>
-
-    <!-- 2/4 -->
-    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.65;color:#385269;">
-     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">2/4 · 새로운 환경 변화 및 우려사항 — <span style="color:#C62828;">$80 이상 고유가 및 JKM $10 이하 하락 전망으로 소싱 Window 축소 및 경제성 악화가 예상됨</span></div>
-     <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:12px;">
-      <div style="min-width:0;">
-       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:6px;">본원적 이슈</div>
-       <div>• WACOG 하락으로 소싱 경제성 확보 위한 <strong>유가 하향 ('21 $100 → '30 $77¹⁾)</strong><br>• <strong>JKM 수준이 경제성 확보의 핵심변수</strong> ($1/mmbtu 당, 現 20원/kg)</div>
-       <div style="background:#EEF3F8;border:1px dashed #D4D6D9;border-radius:6px;padding:6px;margin:8px 0;"><div style="font-size:10px;color:#8E9398;text-align:center;">【 연동가 판매이익: JKM $10/mmbtu 기준 】</div><svg viewBox="0 0 560 300" style="width:100%;height:auto;display:block;font-family:inherit;"><line x1="44" y1="266.0" x2="546" y2="266.0" stroke="#EDEDED"/><text x="40" y="269.0" text-anchor="end" font-size="9" fill="#8E9398">7</text><line x1="44" y1="243.1" x2="546" y2="243.1" stroke="#EDEDED"/><text x="40" y="246.1" text-anchor="end" font-size="9" fill="#8E9398">8</text><line x1="44" y1="220.2" x2="546" y2="220.2" stroke="#EDEDED"/><text x="40" y="223.2" text-anchor="end" font-size="9" fill="#8E9398">9</text><line x1="44" y1="197.3" x2="546" y2="197.3" stroke="#EDEDED"/><text x="40" y="200.3" text-anchor="end" font-size="9" fill="#8E9398">10</text><line x1="44" y1="174.4" x2="546" y2="174.4" stroke="#EDEDED"/><text x="40" y="177.4" text-anchor="end" font-size="9" fill="#8E9398">11</text><line x1="44" y1="151.5" x2="546" y2="151.5" stroke="#EDEDED"/><text x="40" y="154.5" text-anchor="end" font-size="9" fill="#8E9398">12</text><line x1="44" y1="128.5" x2="546" y2="128.5" stroke="#EDEDED"/><text x="40" y="131.5" text-anchor="end" font-size="9" fill="#8E9398">13</text><line x1="44" y1="105.6" x2="546" y2="105.6" stroke="#EDEDED"/><text x="40" y="108.6" text-anchor="end" font-size="9" fill="#8E9398">14</text><line x1="44" y1="82.7" x2="546" y2="82.7" stroke="#EDEDED"/><text x="40" y="85.7" text-anchor="end" font-size="9" fill="#8E9398">15</text><line x1="44" y1="59.8" x2="546" y2="59.8" stroke="#EDEDED"/><text x="40" y="62.8" text-anchor="end" font-size="9" fill="#8E9398">16</text><line x1="44" y1="36.9" x2="546" y2="36.9" stroke="#EDEDED"/><text x="40" y="39.9" text-anchor="end" font-size="9" fill="#8E9398">17</text><line x1="44" y1="14.0" x2="546" y2="14.0" stroke="#EDEDED"/><text x="40" y="17.0" text-anchor="end" font-size="9" fill="#8E9398">18</text><text x="44.0" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$50</text><text x="127.7" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$60</text><text x="211.3" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$70</text><text x="295.0" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$80</text><text x="378.7" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$90</text><text x="462.3" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$100</text><text x="546.0" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$110</text><polygon points="44.0,185.8 52.4,184.4 60.7,183.0 69.1,181.6 77.5,180.2 85.8,178.8 94.2,177.4 102.6,176.0 110.9,174.6 119.3,173.2 127.7,171.8 136.0,170.4 144.4,169.0 152.8,167.6 161.1,166.2 169.5,164.8 177.9,163.4 186.2,162.0 194.6,160.6 203.0,159.2 211.3,157.8 219.7,156.4 228.1,155.0 236.4,153.6 244.8,152.2 253.2,150.8 261.5,149.4 269.9,148.0 269.9,148.3 261.5,151.8 253.2,155.3 244.8,158.8 236.4,162.3 228.1,165.8 219.7,169.3 211.3,172.9 203.0,176.4 194.6,179.9 186.2,183.4 177.9,186.9 169.5,190.4 161.1,193.9 152.8,197.4 144.4,200.9 136.0,204.5 127.7,208.0 119.3,211.5 110.9,215.0 102.6,218.5 94.2,222.0 85.8,225.5 77.5,229.0 69.1,232.6 60.7,236.1 52.4,239.6 44.0,243.1" fill="#FFEE8A" fill-opacity="0.35"/><polygon points="44.0,183.5 52.4,181.2 60.7,178.9 69.1,176.6 77.5,174.2 85.8,171.9 94.2,169.6 102.6,167.3 110.9,165.0 119.3,162.6 127.7,160.3 136.0,158.0 144.4,155.7 152.8,153.4 161.1,151.0 169.5,148.7 177.9,146.4 186.2,144.1 194.6,141.8 203.0,139.4 211.3,137.1 219.7,134.8 228.1,132.5 236.4,130.2 244.8,127.8 253.2,125.5 261.5,123.2 269.9,120.9 278.3,118.5 286.6,116.2 295.0,113.9 303.4,111.6 311.7,109.3 320.1,106.9 328.5,104.6 336.8,102.3 345.2,100.0 353.6,97.7 361.9,95.3 370.3,93.0 378.7,90.7 387.0,88.4 395.4,86.1 403.8,83.7 412.1,81.4 420.5,79.1 428.9,76.8 437.2,74.5 445.6,72.1 454.0,69.8 462.3,67.5 462.3,67.5 454.0,71.0 445.6,74.5 437.2,78.0 428.9,81.5 420.5,85.1 412.1,88.6 403.8,92.1 395.4,95.6 387.0,99.1 378.7,102.6 370.3,106.1 361.9,109.6 353.6,113.1 345.2,116.7 336.8,120.2 328.5,123.7 320.1,127.2 311.7,130.7 303.4,134.2 295.0,137.7 286.6,141.2 278.3,144.8 269.9,148.3 261.5,151.8 253.2,155.3 244.8,158.8 236.4,162.3 228.1,165.8 219.7,169.3 211.3,172.9 203.0,176.4 194.6,179.9 186.2,183.4 177.9,186.9 169.5,190.4 161.1,193.9 152.8,197.4 144.4,200.9 136.0,204.5 127.7,208.0 119.3,211.5 110.9,215.0 102.6,218.5 94.2,222.0 85.8,225.5 77.5,229.0 69.1,232.6 60.7,236.1 52.4,239.6 44.0,243.1" fill="#A9C8E8" fill-opacity="0.25"/><polyline points="44.0,243.1 546.0,32.4" fill="none" stroke="#172A55" stroke-width="2.5"/><polyline points="44.0,183.5 546.0,44.3" fill="none" stroke="#5A86B8" stroke-width="2.5"/><polyline points="44.0,185.8 546.0,101.8" fill="none" stroke="#5A86B8" stroke-width="2.5" stroke-dasharray="6 4"/><line x1="462.3" y1="67.5" x2="462.3" y2="266.0" stroke="#8E9398" stroke-dasharray="3 3"/><circle cx="462.3" cy="67.5" r="4" fill="#C62828"/><text x="462.3" y="260.0" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">BEP ('21) $100</text><line x1="269.9" y1="148.3" x2="269.9" y2="266.0" stroke="#8E9398" stroke-dasharray="3 3"/><circle cx="269.9" cy="148.3" r="4" fill="#C62828"/><text x="269.9" y="260.0" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">BEP ('30) $77</text><text x="428.9" y="28.4" font-size="10" font-weight="700" fill="#172A55">LPG 소싱가 (CV 88%)</text><text x="428.9" y="56.3" font-size="10" font-weight="700" fill="#5A86B8">도시가스 판가 ('21)</text><text x="428.9" y="115.8" font-size="10" font-weight="700" fill="#5A86B8">도시가스 판가 ('30)</text><text x="69.1" y="206.4" font-size="10" font-weight="700" fill="#142446">이익 구간 ('30)</text><text x="44" y="10" font-size="9" fill="#8E9398">$/mmbtu</text><text x="546" y="296" text-anchor="end" font-size="9" fill="#8E9398">유가 ($/bl)</text></svg></div>
-       <table style="width:100%;border-collapse:collapse;text-align:center;font-size:10px;table-layout:fixed;">
-        <tr style="background:#DBE6F1;"><th style="padding:6px;border:1px solid #D4D6D9;">JKM</th><th style="padding:6px;border:1px solid #D4D6D9;">'21</th><th style="padding:6px;border:1px solid #D4D6D9;">'22~'23</th><th style="padding:6px;border:1px solid #D4D6D9;">'25</th><th style="padding:6px;border:1px solid #D4D6D9;">'26</th><th style="padding:6px;border:1px solid #D4D6D9;">'27</th><th style="padding:6px;border:1px solid #D4D6D9;">'29~'30</th></tr>
-        <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">비중</td><td style="padding:6px;border:1px solid #D4D6D9;">13%</td><td style="padding:6px;border:1px solid #D4D6D9;">17%</td><td style="padding:6px;border:1px solid #D4D6D9;">20%</td><td style="padding:6px;border:1px solid #D4D6D9;">33%</td><td style="padding:6px;border:1px solid #D4D6D9;">37%</td><td style="padding:6px;border:1px solid #D4D6D9;">27%</td></tr>
-        <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">가격*</td><td style="padding:6px;border:1px solid #D4D6D9;">$16</td><td style="padding:6px;border:1px solid #D4D6D9;">$25</td><td style="padding:6px;border:1px solid #D4D6D9;">$13</td><td style="padding:6px;border:1px solid #D4D6D9;">$18</td><td style="padding:6px;border:1px solid #D4D6D9;">$17</td><td style="padding:6px;border:1px solid #D4D6D9;color:#C62828;font-weight:700;">$9</td></tr>
-        <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">민감도</td><td style="padding:6px;border:1px solid #D4D6D9;">7원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">10원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">13원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">20원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">23원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">17원/$</td></tr>
-       </table>
-       <div style="font-size:9.5px;color:#8E9398;margin-top:4px;">*'26년 경영계획 기준 · 1) JKM $10/mmbtu 기준 · (별첨) JKM $8 기준 BEP 유가: ('21) $97 → ('30) $72 · '30년 예상 소싱 경제성 10원/kg @$70<br>(LPG 소싱 가정) CV 88% 공통, Slope '21 14.3% / '30 13.2%, JKM 비중 '21 13% / '30 27%, 정산단가 '21 20원/kg / '30 0원/kg · (민감도) Slope 0.1%당 3원/kg, 유가 $1당 5원/kg, JKM $1당 ('21) 7원/kg ~ ('30) 17원/kg</div>
-      </div>
-      <div>
-       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:4px;">우려 사항</div>
-       <div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>과거 대비 소싱 Window 축소</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– 유가 및 LPG 변화에 따른 맞춤형 소싱 필요 (소싱 Value: '25. 86% @$80, '26. 93% @$67, '27. 86% @$75)<br>– 기존 하절기 보다, 시황 급변 시 소싱 진행 ('26년물 11월 소싱 완료)</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span>'29년 이후 JKM 하락으로 소싱 경제성 악화</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– 글로벌 LNG 공급 확대에 따른 JKM 지속 하락 전망 ('29년 $9)<br>– <strong style='color:#C62828;'>JKM $8 이하 시 소싱 경제성 확보 제한 (유가 $72 이하)</strong><br>*기존 '26년 소싱 경제성 20원/kg 수준 ('26.1 JKM $9대)</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span>소싱 불확실성 및 경쟁 증가로 유연한 사업 운영 제한</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– 판매 계약 후 미소싱 / 소싱 후 판매 재계약 미체결 시의 재고 Risk<br>– Opt. 이후 공급 위한 재소싱 Risk 증가</div>
-      </div>
-     </div>
-    </div>
-
-    <!-- 3/4 -->
-    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.65;color:#385269;">
-     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">3/4 · 우려사항을 해결하기 위한 대응 방안 — <span style="color:#172A55;">現 LPG 판매 최적화 및 직도입 Dual 모델 병행을 통한 사업 유연성 확보</span></div>
-     <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;">
-      <div>
-       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:6px;">대응 방안</div>
-       <div style="margin-bottom:6px;">• <strong>연동 판매 모델은 유연성 있는 소싱/판매 규모로 조정</strong><br><span style="color:#8E9398;">– 소싱 Window 확보 및 JKM 하락 방어 가능한 규모로 물량/기간 축소: 2년 기간 이상 단위로 소싱 및 JKM Hedge 운영</span></div>
-       <div style="margin-bottom:6px;">• <strong>제품 확장/직도입 LNG Dual 모델 전환을 통한 경쟁력 확보</strong><br><span style="color:#8E9398;">– 기존 수요처 중 대규모/장기 계약 및 P/L 공급 가능 고객 대상<br>– 도시가스 대비 상시 경쟁력 확보 및 LNG-LPG Opt. 이익 창출 가능</span></div>
-       <div>• <strong>Risk 관리 가능한 단단한 구조 / Policy 정착</strong><br><span style="color:#8E9398;">– 연도 별 재계약 물량 분산 (~10만톤/연, 계열사 제외)<br>– 재계약 시 미공급 옵션 실질 행사 가능한 Penalty 조항 반영 (협의 시 Penalty 미제공, 미협의 시 Penalty 제공/공급중단)<br>– Risk Case에 대한 대응 프로토콜 형식지화 및 실행</span></div>
-      </div>
-      <div>
-       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:6px;">TSP Dual 모델 (안) <span style="font-weight:400;font-size:10px;color:#8E9398;">(40만톤/연 기준 · 예시)</span></div>
-       <div style="display:grid;grid-template-columns:86px 1fr;gap:8px;margin-bottom:6px;"><div style="background:#DBE6F1;border-radius:4px;text-align:center;font-weight:700;padding:10px 4px;display:flex;align-items:center;justify-content:center;">연동가<br>Compact<br>모델</div><div style="border:1px solid #D4D6D9;border-radius:4px;padding:8px 10px;">• <strong>30만톤/연</strong><br>• Y+2~3 소싱 / JKM Hedge<br>• 재계약 도래 시 미공급 옵션 반영<br><span style="color:#8E9398;">(도시가스 Gap 9% Penalty 기준 ~115억원/연¹⁾)</span><br>• <strong>예상 매총이익: 210억원/연²⁾</strong></div></div>
-       <div style="text-align:center;color:#7C95B2;font-size:16px;font-weight:800;line-height:1;">+</div>
-       <div style="display:grid;grid-template-columns:86px 1fr;gap:8px;margin-top:6px;"><div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:4px;text-align:center;font-weight:700;padding:10px 4px;display:flex;align-items:center;justify-content:center;">직도입<br>LNG Dual<br>모델 전환</div><div style="border:1px solid #D4D6D9;border-radius:4px;padding:8px 10px;">• 판매량 <strong>~10만톤/연</strong><br>• 직도입 LNG 또는 LPG Dual 공급 구조<br>• <strong>예상 매총이익: 100억원/연³⁾</strong> (SKGI 이익 포함)</div></div>
-       <div style="font-size:9.5px;color:#8E9398;margin-top:6px;">1) 850원/kg('30년 예상 소매가) x 9%(할인율) x 15만톤 (매년 재계약 도래 물량 기준 (연간 물량 ~50%)), 2) 공급 매총단가: 70원/kg 기준 (공헌이익 40원/kg), 3) 공급 매총단가: (연료 1.5% x Brent $80) + (인프라 350원/mmbtu) 기준</div>
-      </div>
-     </div>
-    </div>
-
-    <!-- 별첨: 수요처 현황 -->
-    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.6;color:#385269;">
-     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">(별첨) TSP 산업체 연동가 수요처 현황 &amp; 직도입 LNG Dual 모델 우선 추진 대상</div>
-     <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-items:start;">
-      <div style="overflow-x:auto;">
-       <table style="width:100%;border-collapse:collapse;font-size:10.5px;text-align:center;white-space:nowrap;">
-        <thead><tr style="background:#DBE6F1;"><th style="padding:6px;border:1px solid #D4D6D9;">수요처</th><th style="padding:6px;border:1px solid #D4D6D9;">공급방식</th><th style="padding:6px;border:1px solid #D4D6D9;">물량¹⁾<br>(KT/연)</th><th style="padding:6px;border:1px solid #D4D6D9;">직도입 Dual<br>전환 가능</th><th style="padding:6px;border:1px solid #D4D6D9;">미공급 옵션,<br>물량협의 조항</th></tr></thead>
-        <tbody>
-         <tr style="background:#FFF8B8;"><td style="padding:6px;border:1px solid #D4D6D9;">태광산업#3</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">34.5</td><td rowspan="4" style="padding:6px;border:1px solid #D4D6D9;background:#FFF8B8;vertical-align:middle;"><strong>우선 추진</strong></td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:#FFF8B8;"><td style="padding:6px;border:1px solid #D4D6D9;">한주</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">32.2</td><td style="padding:6px;border:1px solid #D4D6D9;">미공급 옵션+Penalty</td></tr>
-         <tr style="background:#FFF8B8;"><td style="padding:6px;border:1px solid #D4D6D9;">한화솔루션#1</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">16.2</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:#FFF8B8;"><td style="padding:6px;border:1px solid #D4D6D9;">한화임팩트</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">16.1</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">용산화학</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">5.0</td><td rowspan="1" style="padding:6px;border:1px solid #D4D6D9;background:white;vertical-align:middle;">대상 제외</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">이수화학</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">17.5</td><td rowspan="12" style="padding:6px;border:1px solid #D4D6D9;background:white;vertical-align:middle;">*후순위 추진<br>(원거리 고려)</td><td style="padding:6px;border:1px solid #D4D6D9;">물량협의</td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">*UAC</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">42.0</td><td style="padding:6px;border:1px solid #D4D6D9;">물량협의</td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">*SKPIC</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">54.0</td><td style="padding:6px;border:1px solid #D4D6D9;">물량협의</td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SK피유코어</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">140톤</td><td style="padding:6px;border:1px solid #D4D6D9;">물량협의</td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">고려아연</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">7.7</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">송원산업</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">5.4</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">피알테크</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">1.8</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">태광산업#1</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">14.8</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SK케미칼</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">6.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SK에코프라임</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">5.2</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">한화솔루션#3</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">9.5</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SKA</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">3.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">경남금속</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">3.8</td><td rowspan="10" style="padding:6px;border:1px solid #D4D6D9;background:white;vertical-align:middle;">대상 제외<br>(울산 외 지역)</td><td style="padding:6px;border:1px solid #D4D6D9;">미공급 옵션+Penalty</td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">대원화성</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">2.5</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">KCC 대죽#1</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">26.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SKIPC</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">20.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">해담토</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">1.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">화인베스틸</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">7.4</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">세아베스틸</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">4.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">롯데케미칼</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">9.6</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">효성티앤씨</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">7.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">효성화학</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">0.9</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
-         <tr style="background:#DBE6F1;font-weight:700;"><td style="padding:6px;border:1px solid #D4D6D9;" colspan="2">합계</td><td style="padding:6px;border:1px solid #D4D6D9;">353KT</td><td style="padding:6px;border:1px solid #D4D6D9;">Dual 가능 99KT</td><td style="padding:6px;border:1px solid #D4D6D9;">미공급 옵션 36KT<br>물량협의 113KT</td></tr>
-        </tbody>
-       </table>
-       <div style="font-size:9.5px;color:#8E9398;margin-top:4px;">1) '27년 경영계획 기준, 민수 연동가 수요처 약 50KT 별도</div>
-      </div>
-      <div>
-       <img src="assets/lpg/tsp_dual_map.jpg" alt="직도입 LNG Dual 모델 우선 추진 대상 — 울산 NG 배관(From KET/CEC)·LPG 배관(From SKG) 경로와 태광·한화솔루션 1공장·한화임팩트·한주 위치" style="width:100%;max-width:640px;border:1px solid #D4D6D9;border-radius:6px;display:block;">
-       <div style="margin-top:6px;">– 당사 추진 NG 배관과 인접/연결 설치 가능 거래처 기준<br>– <strong>4개사, 99KT</strong>: 태광산업#3 (34.5KT), 한주 (32.2KT), 한화솔루션#1 (16.2KT), 한화임팩트 (16.1KT)</div>
-       <div style="font-size:10px;color:#8E9398;margin-top:4px;">※ 이 4개사는 LNG 탭 "연료대체 타깃 7개사"·신규 LNG 발전사업 탭 스팀수요처와 겹침 — 두 아젠다가 울산 NG 배관 하나로 연결됨.</div>
-      </div>
-     </div>
-    </div>
-
-    <!-- 4/4 -->
-    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.65;color:#385269;">
-     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">4/4 · 주요 논의 및 의사결정 사항은 무엇인가?</div>
-     <table style="width:100%;border-collapse:collapse;">
-      <thead><tr style="background:#DBE6F1;"><th style="padding:6px;border:1px solid #D4D6D9;width:30%;text-align:left;">Discussion Agenda</th><th style="padding:6px;border:1px solid #D4D6D9;text-align:left;">세부 내용</th></tr></thead>
-      <tbody>
-       <tr><td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;"><div style="font-weight:800;font-size:12px;color:#142446;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>LPG 연동가 모델의 최적 소싱 및 판매 규모는?</div><div style="color:#8E9398;font-size:10px;margin-top:4px;">(고려요소) JKM Hedge 가능 물량 (파생손 여력), 중장기 MB 및 FEI 소싱 물량, 직도입 LNG Dual 전환 가능 물량 등</div></td>
-        <td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;">• <strong>(안) 30만톤/연 x 2년</strong><br><span style="color:#8E9398;">– 파생상품 변동성: JKM Hedge 2년간 16만톤 (연간 30만톤, 비중 27% 수준)<br>– 소싱 Risk 축소 효과: MB 중장기 소싱 (4카고/연 x 4년) + FEI 소싱 (12만톤/연) 기준</span><br>• <strong>(수익력)</strong> 기존 대비 수익력 감소하나, 안정적 확보 가능. LNG Dual 전환으로 Makeup 추진<div style="background:#FFF8B8;border-left:3px solid #E0B000;padding:4px 8px;margin-top:4px;font-weight:700;color:#142446;">→ JKM 16만톤 Hedge 시 <span style="color:#C62828;">파생손 감내 가능 여부 ($5/mmbtu = 545억원¹⁾)</span></div></td></tr>
-       <tr><td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;"><div style="font-weight:800;font-size:12px;color:#142446;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span>직도입 LNG Dual 모델 전환 대상 및 Milestone은?</div><div style="color:#8E9398;font-size:10px;margin-top:4px;">(고려요소) 우선 추진 대상 및 도입 제약/소요 기간, LNG 직도입을 위한 Minimum 물량 등</div></td>
-        <td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;">• <strong>(추진 대상)</strong> 기존 수요처 중 대규모/장기 계약 및 P/L 공급 가능 고객 대상<br><span style="color:#8E9398;">– 직도입 가능 신규 설비 보유: 태광산업#3 (34.5KT), 한주 (32.2KT)<br>– 연료전환 5년 도과: 한화솔루션#1 (16.2KT), 한화임팩트 (16.1KT)</span><br>• <strong>(Milestone)</strong> JKM 하락 가능성 ($10 미만) 고려, <strong style="color:#C62828;">'29년부터 조기 전환 필요</strong><div style="background:#FFF8B8;border-left:3px solid #E0B000;padding:4px 8px;margin-top:4px;font-weight:700;color:#142446;">→ 직도입 LNG 소싱 및 공급 Process 진행 고려 시 도입 제약 및 적정 공급 시점<br>→ 경제성 확보 위한 Minimum 물량 (수요처 별 시기 조율/Bundle화, LPG 마중물 조정)</div></td></tr>
-       <tr><td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;"><div style="font-weight:800;font-size:12px;color:#142446;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span>기존 모델의 유연성 증대 방안은?</div><div style="color:#8E9398;font-size:10px;margin-top:4px;">(고려요소) JKM Hedge 가능 물량 (파생손 여력) 등</div></td>
-        <td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;">• <strong>(소싱 Period 확장)</strong> Y+3 ~50% 사전 소싱 (R/O 활용)<br><span style="color:#8E9398;">– Y+1~Y+2 100% 및 추가 Y+3 50% 기준, 총 20만톤 JKM Hedge 필요²⁾</span><div style="background:#FFF8B8;border-left:3px solid #E0B000;padding:4px 8px;margin-top:4px;font-weight:700;color:#142446;">→ JKM 추가 4만톤 (총 20만톤) Hedge시 <span style="color:#C62828;">파생손 감내 가능 여부 ($5/mmbtu = 680억원¹⁾)</span></div></td></tr>
-      </tbody>
-     </table>
-     <div style="font-size:9.5px;color:#8E9398;margin-top:6px;">1) 환율 1,400원, 환산계수 48.6 기준, 2) 2년간 JKM 2 Cargo Hedge 기준 환산 시, LPG 연동가 판매는 약 25만톤/연으로 축소</div>
-    </div>
-   </div>
-
-   <aside class="ez-note">
-    <div class="ez-title">📌 TSP Biz 지속성, 쉽게 이해하기</div>
-    <div class="ez-sub">TSP = "FEI로 LPG 사서, 도시가스 연동가로 파는 산업체 사업". 이 장표들은 <strong>"그 장사가 앞으로도 되냐"</strong>를 묻는 것. <span class="est">[추정]</span>는 장표에 없는 해석.</div>
-
-    <h4>0. 돈 버는 구조 (쌀값·빵값 비유)</h4>
-    <table>
-     <tr><th style="width:20%;"></th><th>내용</th><th style="width:34%;">비유</th></tr>
-     <tr><td><strong>원가</strong></td><td>FEI (LPG 극동 도착가)</td><td>우리가 사오는 <strong>쌀값</strong></td></tr>
-     <tr><td><strong>판가</strong></td><td>도시가스 연동가 = KOGAS LNG 도입가(Brent 55% + HH 10% + JKM 35%) + 공급비 → 그 9X%</td><td>옆집 <strong>빵값</strong>보다 조금 싸게 파는 떡값</td></tr>
-     <tr><td><strong>마진</strong></td><td>판가 − 원가</td><td>빵값 비싸고 쌀값 싸면 남음</td></tr>
-     <tr><td><strong>상대가 CV</strong></td><td>FEI ÷ Brent. 90% 밑이면 OK</td><td>쌀값 ÷ 빵값. 낮을수록 좋음</td></tr>
-     <tr><td><strong>Hedge</strong></td><td>FEI Buy + Brent/JKM/HH Sell 페이퍼</td><td>쌀값·빵값 미리 고정</td></tr>
-     <tr><td><strong>Optionality</strong></td><td>고정해둔 걸 가격 튈 때 풀어서(Unwind) 차익</td><td>고정해둔 쌀 되팔아 차익</td></tr>
-    </table>
-    <div class="ez-box"><strong>핵심 한 줄:</strong> 빵값(도시가스)이 비싸게 유지되고, 쌀값(LPG)이 그보다 충분히 싸야 되는 장사.</div>
-
-    <h4>1. (1/4) 지금까지는 잘 버텨왔다</h4>
-    <table>
-     <tr><th style="width:38%;">환경 변화</th><th>쉽게 말하면</th></tr>
-     <tr><td>KOGAS Slope 하락 (14.0 → 13.2%)</td><td>가스공사가 예전엔 비싸게 LNG 계약했는데 요즘은 싸게 갱신 → <strong>빵값이 내려감</strong></td></tr>
-     <tr><td>KOGAS JKM 비중 확대 (16 → 33%)</td><td>빵값 공식에서 JKM 비중이 커짐 → JKM 따라 빵값이 출렁임</td></tr>
-     <tr><td>동고하저 약화, CV 변동폭 10 → 5%</td><td>중국 석화 수요로 LPG 겨울·여름 가격 차이가 줄어듦 → <strong>옵셔널리티 할 재미가 없어짐</strong></td></tr>
-     <tr><td>판매마진 압박, 미수금 정산단가 34 → 12원</td><td>고객은 깎아달라 하고, 미수금 정산이 끝나가니 빵값 올릴 요인이 사라짐</td></tr>
-    </table>
-    <p><strong>대응:</strong> 원월물(MB Y+3, FEI R/O Y+2)로 더 싸게 사기 · JKM Sell로 판가 쪽 JKM 미리 고정 · 수요 다변화(연료전지·납사대체·광주/대산) · 재계약 할인율 방어(88 → 91.5%)와 미공급 옵션 조항.</p>
-
-    <h4>2. (2/4) 앞으로가 문제: BEP 유가</h4>
-    <p>그래프의 <strong>남색 선 = LPG 소싱가</strong>(CV 88% × Brent), <strong>파란 선 = 도시가스 판가</strong>(실선 '21, 점선 '30). 두 선이 만나는 점이 <strong>BEP 유가</strong>. 그보다 유가가 높으면 쌀값이 빵값을 넘어 손해.</p>
-    <table>
-     <tr><th></th><th>'21년</th><th>'30년</th></tr>
-     <tr><td>BEP 유가 (JKM $10)</td><td>$100</td><td><strong style="color:#C62828;">$77</strong></td></tr>
-     <tr><td>BEP 유가 (JKM $8)</td><td>$97</td><td><strong style="color:#C62828;">$72</strong></td></tr>
-    </table>
-    <p><strong>왜 '30년 선이 납작해지나:</strong> Slope 하락 + JKM 비중이 커진 상태에서 JKM이 장기 하락 → 빵값이 유가 따라 덜 오름 → 이익 구간이 왼쪽으로 쪼그라듦.</p>
-    <div class="quote">비유: 예전엔 유가 $100까지 장사가 됐는데, 이제 $77 넘으면 접어야 함. 지금 유가가 $80 안팎이니 문이 거의 닫힌 셈.</div>
-    <p><strong>"소싱 경제성 20원/kg, JKM $1 빠지면 마진 증발"이란?</strong><br>소싱 경제성 = 잡아둔 원가 vs 예상 판가의 차이, 즉 kg당 마진. '26년물은 kg당 약 20원 남기고 소싱해 둔 상태. 그런데 빵값 공식의 JKM 비중이 커서 JKM $1 떨어지면 빵값이 kg당 약 20원 떨어짐(민감도 표 '26 20원/$) → <strong>JKM $1만 빠지면 마진 20원이 0원</strong>. 민감도가 '21 7원 → '27 23원으로 커진 건 JKM 비중이 13 → 37%로 늘었기 때문.</p>
-    <p><strong>"재고 Risk"란?</strong> 창고의 LPG가 아니라 <strong>"팔 곳 없이 들고 있는 포지션"</strong>.</p>
-    <table>
-     <tr><th style="width:34%;">상황</th><th>쉽게 말하면</th></tr>
-     <tr><td>판매 계약 후 미소싱</td><td>고객과 "도시가스 92%에 줄게" 약속했는데 상대가가 안 떨어져 싸게 못 사옴 → 비싸게 사서 손해 보며 공급</td></tr>
-     <tr><td>소싱 후 재계약 미체결</td><td>2~3년치 미리 잡아뒀는데 고객이 재계약 안 하거나 가동률 하락 → 팔 데 없는 포지션 = 투기(speculation)</td></tr>
-     <tr><td>Unwind 후 재소싱 실패</td><td>옵셔널리티로 풀었는데 상대가가 계속 올라 다시 못 잡음 → 공급 의무는 있으니 비싸게 다시 사야 함</td></tr>
-    </table>
-    <p style="color:#8E9398;">원월물 소싱 기간을 늘릴수록(Y+3) 두 번째 리스크가 커짐. 3년 뒤 고객이 그대로 있을지 모르니까.</p>
-
-    <h4>3. (3/4) 그래서 사업을 둘로 쪼개자: Dual 모델</h4>
-    <table>
-     <tr><th style="width:26%;">모델</th><th style="width:14%;">물량</th><th>뭘 하나</th><th style="width:18%;">매총이익</th></tr>
-     <tr><td><strong>① 연동가 Compact</strong></td><td>30만톤</td><td>지금 방식 그대로, 단 규모 줄이고 Y+2~3 소싱 + JKM Hedge로 방어. 재계약 때 미공급 옵션</td><td>210억/연</td></tr>
-     <tr><td><strong>② 직도입 LNG Dual</strong></td><td>10만톤</td><td>KET/CEC에서 LNG 배관으로 직접 공급, LPG와 둘 다 가능하게</td><td>100억/연</td></tr>
-    </table>
-    <p><strong>"요금제만 바꾸면 마진 확보"는 단편적 — 맞는 지적.</strong> 직도입 LNG도 결국 KOGAS보다 싸야 고객이 받음. 그 조건은 안 없어짐. Dual이 <em>실제로</em> 바꾸는 것은:</p>
-    <p>① <strong>인덱스 미스매치가 사라짐</strong> — 지금은 FEI(LPG)로 사서 Brent+JKM+HH(LNG)로 파니 JKM 헤지 16만톤·파생손 545억 문제가 생김. 직도입은 LNG로 사서 LNG 연동으로 팔아 큰 헤지가 필요 없음. 즉 <strong>"마진이 커진다"가 아니라 "마진을 지키는 비용(헤지·파생손)이 줄어든다"</strong>.<br>② <strong>쌀을 두 종류</strong> — LNG·LPG 중 그때 싼 걸 공급하고 비싼 쪽은 되팔기(옵셔널리티). 지금은 LPG만 있어 LPG가 비싸지면 꼼짝 못 함.<br>③ <strong>배관 통행료</strong> — 판가에 인프라 350원/mmbtu가 따로 있어 LNG 가격과 무관하게 받음. <span class="est">[추정]</span> 100억 중 상당 부분이 이 인프라 수익일 가능성.<br>④ <strong>고객 Lock-in</strong> — 직도입 전환엔 고객의 설비·인허가(조건부 등록) 투자가 필요 → 한번 넘어오면 KOGAS로 돌아가기 어렵고 "깎아줘" 압력도 약해짐.</p>
-    <div class="ez-box"><strong>그래도 남는 문제:</strong> KOGAS가 싸지는 추세는 직도입에도 똑같이 역풍. KOGAS Slope가 13.2%까지 내려오면 우리 직도입 LNG는 그보다 싸게 사와야 하는데, 그게 100억의 전제. 장표에 빠진 질문 → <strong>"직도입 LNG 소싱 Slope를 몇 %로 가정했고, '30년 KOGAS 13.2%보다 얼마나 싼가?"</strong> 이게 없으면 Dual은 리스크를 JKM 파생손에서 LNG 소싱 경쟁력으로 옮긴 것이지 없앤 게 아님.</div>
-    <p style="color:#8E9398;">[확인 필요] 각주 3)의 "연료 1.5% × Brent"는 오타로 보임(보통 Slope는 11~13%). 이 숫자가 Dual 경제성의 핵심 가정이라 EE본부 확인 필요.</p>
-
-    <h4>4. (4/4) 임원이 결정할 것 3가지</h4>
-    <p><strong>① 연동가 모델을 얼마나? → (안) 30만톤 × 2년.</strong> 2년치 미리 소싱하면 JKM Hedge 16만톤 필요. <strong>JKM $5 튀면 파생손 545억.</strong></p>
-    <div class="quote">JKM Sell 페이퍼는 "나중에 JKM $10에 팔게요"라는 약속. 전쟁으로 JKM이 $15가 되면 장부상 $5 × 16만톤 = 545억 손실이 찍힘. 실제로는 빵값(도시가스)도 같이 올라 공급 때 되돌려받으니 마진은 고정인데, <strong>손실은 지금 찍히고 이익은 나중에 와서</strong> 회계·현금흐름이 출렁임. 그래서 질문은 "545억 평가손이 한 번에 찍혀도 감내할 수 있나?". 미·이란 전쟁 때 JKM을 일부러 노출시킨 것도 이 고민과 연결.</div>
-    <p><strong>② 직도입 Dual, 누구부터 언제?</strong> 1순위 태광#3·한주(신규 설비 보유), 한화솔루션#1·한화임팩트(연료전환 5년 도과). JKM $10 밑으로 떨어지기 전인 <strong>'29년부터</strong> 전환 필요. 질문: 직도입 소싱·배관 일정상 언제 가능한가, 경제성 나오는 최소 물량은(고객별 시기 맞추기, LPG 마중물).</p>
-    <p><strong>③ Y+3까지 소싱 늘릴 거냐?</strong> Y+1·Y+2 100%에 Y+3 50% 추가 → 옵셔널리티 기회↑(원월물일수록 싸고 여유). 대신 JKM Hedge 20만톤, <strong>$5 튀면 680억</strong>. 이것도 감내 가능한가.</p>
-
-    <h4>5. 한 줄 정리</h4>
-    <div class="ez-box ez-final">"도시가스가 싸지고 있어서 LPG 연동 장사 문이 닫히고 있다. 그래서 ① 연동가 장사는 30만톤으로 줄이고 2년치 미리 잡되, ② 10만톤은 직도입 LNG로 갈아타자. 단 미리 잡으려면 JKM 헤지를 크게 걸어야 하는데, 그게 튀면 545~680억 평가손이 찍히니 그걸 받아들일 수 있는지 정해달라."</div>
-    <p><strong>임원회의 관점에서 짚을 것 <span class="est">[추정]</span></strong><br>· 파생손 감내 질문은 재무 답이 필요 → EE본부 혼자 못 정하는 아젠다, 재무본부 동석 필요.<br>· 연동가 30만톤 + Dual 10만톤 = 310억인데, <strong>현재 40만톤 매총이익이 장표에 없음</strong>. "지금 대비 얼마나 줄어드는지"가 있어야 판단 가능.<br>· Dual 10만톤은 신규 LNG 발전사업 탭의 울산 NG 배관·인허가가 전제 → 그쪽이 늦어지면 같이 밀림. 두 아젠다를 묶어서 봐야 함.</p>
-   </aside>
-   </div>
-   <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:8px 14px;margin-bottom:14px;font-size:11px;color:#385269;">📁 아래는 기존 판매처 자료 — 판매믹스('25→'30), 구매·판매 방식 상세(EE본부 Notion '26.8), 소싱-판매-옵셔널리티 대응('26.7.2 EE본부 Action Plan)</div>
-<div class="section-label">📊 LPG 판매믹스 <span style="font-size:11px;font-weight:400;color:#8E9398;">('25년 300만톤 → '30년 400만톤 목표 · 중개 50만톤 별도)</span></div>
+   <div class="section-label">📊 LPG 판매믹스 <span style="font-size:11px;font-weight:400;color:#8E9398;">('25년 300만톤 → '30년 400만톤 목표 · 중개 50만톤 별도)</span></div>
    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:18px 20px;margin-bottom:20px;">
     <div style="display:flex;align-items:flex-start;gap:8px;margin:6px 0;">
      <div style="width:70px;font-size:11px;text-align:right;padding-right:6px;padding-top:2px;flex-shrink:0;font-weight:700;">민수<br><span style="font-weight:400;color:#8E9398;">140만톤</span></div>
@@ -2704,6 +2513,13 @@ th.curr { background: #f06400 !important; }
    </div>
 
    <!-- 미-이란 종전 대응: 소싱-판매-옵셔널리티 -->
+   <details style="background:white;border:1px solid #D4D6D9;border-radius:10px;margin-bottom:20px;">
+    <summary style="cursor:pointer;padding:12px 18px;font-size:13px;font-weight:700;color:#385269;display:flex;align-items:center;gap:8px;flex-wrap:wrap;list-style:none;">
+     <span>🎯 소싱-판매-옵셔널리티 대응 — 미-이란 전쟁 종전 대응 ('26.7.2 EE본부 Action Plan)</span>
+     <span style="display:inline-block;background:#8E9398;color:white;border-radius:9999px;padding:1px 8px;font-size:10px;font-weight:700;">소싱·판매·Opt. 타임라인 표</span>
+     <span style="font-size:11px;font-weight:400;color:#8E9398;margin-left:auto;">▼ 클릭하여 펼치기</span>
+    </summary>
+    <div style="padding:8px 18px 14px;border-top:1px solid #EDEDED;">
    <div class="section-label">🎯 소싱-판매-옵셔널리티 대응 <span style="font-size:11px;font-weight:400;color:#8E9398;">(미-이란 전쟁 종전 대응 · 26.7.2 EE본부 Action Plan 기준)</span></div>
    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:20px;margin-bottom:20px;">
 
@@ -2948,6 +2764,213 @@ th.curr { background: #f06400 !important; }
    </div>
 
    <!-- LPG 조달~판매구조 -->
+       </div>
+   </details>
+     </div>
+     <div class="lng-page" id="lpg-page-tsp">
+   <div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:8px;padding:8px 14px;margin-bottom:14px;font-size:11px;color:#142446;">🔥 <strong>판매처 하위 Discussion Point</strong> — "TSP(도시가스 연동가 산업체 공급) 비즈니스가 앞으로도 경쟁력을 유지할 수 있는가?" · 행캔 '27 Discussion Agenda p.129~134</div>
+   <div class="section-label">🔥 최근 이슈 — TSP Biz 지속성 확보 방안 (Discussion Agenda) <span style="font-size:10px;font-weight:400;color:#8E9398;">Source: 행캔 '27 Discussion Agenda p.129~134 · TSP = 도시가스 연동가 산업체 공급 사업</span>
+    <button type="button" class="ez-toggle" onclick="toggleEz('lpg-tsp-wrap',this)">💬 쉽게 이해하기 숨기기</button>
+   </div>
+   <div class="ez-wrap ez-wide" id="lpg-tsp-wrap">
+   <div class="ez-formal" style="min-width:0;">
+
+    <!-- 1/4 -->
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.65;color:#385269;">
+     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">1/4 · 주요 환경 변화에 어떻게 대응해 왔는가? — <span style="color:#172A55;">TSP 사업 모델은 외부환경 변화 대응을 통해 사업 규모 및 수익성을 유지해 왔으나..</span></div>
+     <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;">
+      <div>
+       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:8px;">('21년 이후) 주요 환경 변화</div>
+       <table style="width:100%;border-collapse:collapse;">
+        <tr><td rowspan="2" style="padding:6px;border:1px solid #D4D6D9;background:#EEF3F8;text-align:center;font-weight:700;width:22%;">도시가스<br>연동판가</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;width:18%;">유가<br>WACOG</td><td style="padding:6px;border:1px solid #D4D6D9;">• <strong>KOGAS 유가연동 Term WACOG 지속 하락</strong><br><span style="color:#8E9398;">– 高 Slope 계약 종료 → 低 Slope 대체/갱신 지속: ('22) 14.0% → ('26) 13.5% → ('30) 13.2%</span></td></tr>
+        <tr><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;">LNG<br>Spot</td><td style="padding:6px;border:1px solid #D4D6D9;">• <strong>KOGAS JKM 도입 비중 확대로 변동성 확대</strong><br><span style="color:#8E9398;">: 비중 ('22) 16% → ('26) 33% → ('30) 27%</span></td></tr>
+        <tr><td colspan="2" style="padding:6px;border:1px solid #D4D6D9;background:#EEF3F8;text-align:center;font-weight:700;">소싱 및 Optionality</td><td style="padding:6px;border:1px solid #D4D6D9;">• <strong>LPG 동고하저 구조 약화 및 CV 변동폭 축소</strong><br><span style="color:#8E9398;">– 중국 석화 수요 확대로 동·하절기 차이 축소: CV 변동폭 ('22) 10% → ('26) 5%</span></td></tr>
+        <tr><td colspan="2" style="padding:6px;border:1px solid #D4D6D9;background:#EEF3F8;text-align:center;font-weight:700;">판매/계약</td><td style="padding:6px;border:1px solid #D4D6D9;">• <strong>판매마진 축소 압력 증대 및 수요 확대 정체</strong><br><span style="color:#8E9398;">– 산업 경기 악화로 고객 공장 가동률 하락 / 재계약 도래 시 가격 인하 요구 증대<br>– 울산 내 연료전환 기회 감소<br>– 미수금 정산단가 감소 ('22) 34원/kg → ('26) 12원/kg</span></td></tr>
+       </table>
+      </div>
+      <div>
+       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:4px;">대응 경과</div>
+       <div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>중장기 소싱 통한 Base 경제성 제고 및 Opt. 기회 확대</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– ('21) MB 중장기(Y+3) 및 ('23) FEI R/O(Y+2) 도입<br>– 경제성 ('21) 146원/kg → ('23) 244원/kg → ('25) 71원/kg</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span>JKM Sell 판가 Hedge 통한 수익성 개선</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– ('22) JKM Sell 실행<br>– ('22) $25.3, ('25) $14.3, ('26) $10.5, ('27) $9.4</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span>수요 다변화 및 지역 확장 노력</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– 연료전지 개발, 납사대체 수요 확보 및 지역 확장(광주/대산 등)</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">4</span>재계약 판가 방어 및 미공급 옵션 확보로 Risk 축소 노력</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– '22년 재계약 시 도시가스 연동 할인률 상향 (88% → 91.5%)<br>– 일부 미공급 옵션(36KT) 및 협의가능 조항(113KT) 확보</div>
+      </div>
+     </div>
+    </div>
+
+    <!-- 2/4 -->
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.65;color:#385269;">
+     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">2/4 · 새로운 환경 변화 및 우려사항 — <span style="color:#C62828;">$80 이상 고유가 및 JKM $10 이하 하락 전망으로 소싱 Window 축소 및 경제성 악화가 예상됨</span></div>
+     <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:12px;">
+      <div style="min-width:0;">
+       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:6px;">본원적 이슈</div>
+       <div>• WACOG 하락으로 소싱 경제성 확보 위한 <strong>유가 하향 ('21 $100 → '30 $77¹⁾)</strong><br>• <strong>JKM 수준이 경제성 확보의 핵심변수</strong> ($1/mmbtu 당, 現 20원/kg)</div>
+       <div style="background:#EEF3F8;border:1px dashed #D4D6D9;border-radius:6px;padding:6px;margin:8px 0;"><div style="font-size:10px;color:#8E9398;text-align:center;">【 연동가 판매이익: JKM $10/mmbtu 기준 】</div><svg viewBox="0 0 560 300" style="width:100%;height:auto;display:block;font-family:inherit;"><line x1="44" y1="266.0" x2="546" y2="266.0" stroke="#EDEDED"/><text x="40" y="269.0" text-anchor="end" font-size="9" fill="#8E9398">7</text><line x1="44" y1="243.1" x2="546" y2="243.1" stroke="#EDEDED"/><text x="40" y="246.1" text-anchor="end" font-size="9" fill="#8E9398">8</text><line x1="44" y1="220.2" x2="546" y2="220.2" stroke="#EDEDED"/><text x="40" y="223.2" text-anchor="end" font-size="9" fill="#8E9398">9</text><line x1="44" y1="197.3" x2="546" y2="197.3" stroke="#EDEDED"/><text x="40" y="200.3" text-anchor="end" font-size="9" fill="#8E9398">10</text><line x1="44" y1="174.4" x2="546" y2="174.4" stroke="#EDEDED"/><text x="40" y="177.4" text-anchor="end" font-size="9" fill="#8E9398">11</text><line x1="44" y1="151.5" x2="546" y2="151.5" stroke="#EDEDED"/><text x="40" y="154.5" text-anchor="end" font-size="9" fill="#8E9398">12</text><line x1="44" y1="128.5" x2="546" y2="128.5" stroke="#EDEDED"/><text x="40" y="131.5" text-anchor="end" font-size="9" fill="#8E9398">13</text><line x1="44" y1="105.6" x2="546" y2="105.6" stroke="#EDEDED"/><text x="40" y="108.6" text-anchor="end" font-size="9" fill="#8E9398">14</text><line x1="44" y1="82.7" x2="546" y2="82.7" stroke="#EDEDED"/><text x="40" y="85.7" text-anchor="end" font-size="9" fill="#8E9398">15</text><line x1="44" y1="59.8" x2="546" y2="59.8" stroke="#EDEDED"/><text x="40" y="62.8" text-anchor="end" font-size="9" fill="#8E9398">16</text><line x1="44" y1="36.9" x2="546" y2="36.9" stroke="#EDEDED"/><text x="40" y="39.9" text-anchor="end" font-size="9" fill="#8E9398">17</text><line x1="44" y1="14.0" x2="546" y2="14.0" stroke="#EDEDED"/><text x="40" y="17.0" text-anchor="end" font-size="9" fill="#8E9398">18</text><text x="44.0" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$50</text><text x="127.7" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$60</text><text x="211.3" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$70</text><text x="295.0" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$80</text><text x="378.7" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$90</text><text x="462.3" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$100</text><text x="546.0" y="282" text-anchor="middle" font-size="9" fill="#8E9398">$110</text><polygon points="44.0,185.8 52.4,184.4 60.7,183.0 69.1,181.6 77.5,180.2 85.8,178.8 94.2,177.4 102.6,176.0 110.9,174.6 119.3,173.2 127.7,171.8 136.0,170.4 144.4,169.0 152.8,167.6 161.1,166.2 169.5,164.8 177.9,163.4 186.2,162.0 194.6,160.6 203.0,159.2 211.3,157.8 219.7,156.4 228.1,155.0 236.4,153.6 244.8,152.2 253.2,150.8 261.5,149.4 269.9,148.0 269.9,148.3 261.5,151.8 253.2,155.3 244.8,158.8 236.4,162.3 228.1,165.8 219.7,169.3 211.3,172.9 203.0,176.4 194.6,179.9 186.2,183.4 177.9,186.9 169.5,190.4 161.1,193.9 152.8,197.4 144.4,200.9 136.0,204.5 127.7,208.0 119.3,211.5 110.9,215.0 102.6,218.5 94.2,222.0 85.8,225.5 77.5,229.0 69.1,232.6 60.7,236.1 52.4,239.6 44.0,243.1" fill="#FFEE8A" fill-opacity="0.35"/><polygon points="44.0,183.5 52.4,181.2 60.7,178.9 69.1,176.6 77.5,174.2 85.8,171.9 94.2,169.6 102.6,167.3 110.9,165.0 119.3,162.6 127.7,160.3 136.0,158.0 144.4,155.7 152.8,153.4 161.1,151.0 169.5,148.7 177.9,146.4 186.2,144.1 194.6,141.8 203.0,139.4 211.3,137.1 219.7,134.8 228.1,132.5 236.4,130.2 244.8,127.8 253.2,125.5 261.5,123.2 269.9,120.9 278.3,118.5 286.6,116.2 295.0,113.9 303.4,111.6 311.7,109.3 320.1,106.9 328.5,104.6 336.8,102.3 345.2,100.0 353.6,97.7 361.9,95.3 370.3,93.0 378.7,90.7 387.0,88.4 395.4,86.1 403.8,83.7 412.1,81.4 420.5,79.1 428.9,76.8 437.2,74.5 445.6,72.1 454.0,69.8 462.3,67.5 462.3,67.5 454.0,71.0 445.6,74.5 437.2,78.0 428.9,81.5 420.5,85.1 412.1,88.6 403.8,92.1 395.4,95.6 387.0,99.1 378.7,102.6 370.3,106.1 361.9,109.6 353.6,113.1 345.2,116.7 336.8,120.2 328.5,123.7 320.1,127.2 311.7,130.7 303.4,134.2 295.0,137.7 286.6,141.2 278.3,144.8 269.9,148.3 261.5,151.8 253.2,155.3 244.8,158.8 236.4,162.3 228.1,165.8 219.7,169.3 211.3,172.9 203.0,176.4 194.6,179.9 186.2,183.4 177.9,186.9 169.5,190.4 161.1,193.9 152.8,197.4 144.4,200.9 136.0,204.5 127.7,208.0 119.3,211.5 110.9,215.0 102.6,218.5 94.2,222.0 85.8,225.5 77.5,229.0 69.1,232.6 60.7,236.1 52.4,239.6 44.0,243.1" fill="#A9C8E8" fill-opacity="0.25"/><polyline points="44.0,243.1 546.0,32.4" fill="none" stroke="#172A55" stroke-width="2.5"/><polyline points="44.0,183.5 546.0,44.3" fill="none" stroke="#5A86B8" stroke-width="2.5"/><polyline points="44.0,185.8 546.0,101.8" fill="none" stroke="#5A86B8" stroke-width="2.5" stroke-dasharray="6 4"/><line x1="462.3" y1="67.5" x2="462.3" y2="266.0" stroke="#8E9398" stroke-dasharray="3 3"/><circle cx="462.3" cy="67.5" r="4" fill="#C62828"/><text x="462.3" y="260.0" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">BEP ('21) $100</text><line x1="269.9" y1="148.3" x2="269.9" y2="266.0" stroke="#8E9398" stroke-dasharray="3 3"/><circle cx="269.9" cy="148.3" r="4" fill="#C62828"/><text x="269.9" y="260.0" text-anchor="middle" font-size="10" font-weight="700" fill="#C62828">BEP ('30) $77</text><text x="428.9" y="28.4" font-size="10" font-weight="700" fill="#172A55">LPG 소싱가 (CV 88%)</text><text x="428.9" y="56.3" font-size="10" font-weight="700" fill="#5A86B8">도시가스 판가 ('21)</text><text x="428.9" y="115.8" font-size="10" font-weight="700" fill="#5A86B8">도시가스 판가 ('30)</text><text x="69.1" y="206.4" font-size="10" font-weight="700" fill="#142446">이익 구간 ('30)</text><text x="44" y="10" font-size="9" fill="#8E9398">$/mmbtu</text><text x="546" y="296" text-anchor="end" font-size="9" fill="#8E9398">유가 ($/bl)</text></svg></div>
+       <table style="width:100%;border-collapse:collapse;text-align:center;font-size:10px;table-layout:fixed;">
+        <tr style="background:#DBE6F1;"><th style="padding:6px;border:1px solid #D4D6D9;">JKM</th><th style="padding:6px;border:1px solid #D4D6D9;">'21</th><th style="padding:6px;border:1px solid #D4D6D9;">'22~'23</th><th style="padding:6px;border:1px solid #D4D6D9;">'25</th><th style="padding:6px;border:1px solid #D4D6D9;">'26</th><th style="padding:6px;border:1px solid #D4D6D9;">'27</th><th style="padding:6px;border:1px solid #D4D6D9;">'29~'30</th></tr>
+        <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">비중</td><td style="padding:6px;border:1px solid #D4D6D9;">13%</td><td style="padding:6px;border:1px solid #D4D6D9;">17%</td><td style="padding:6px;border:1px solid #D4D6D9;">20%</td><td style="padding:6px;border:1px solid #D4D6D9;">33%</td><td style="padding:6px;border:1px solid #D4D6D9;">37%</td><td style="padding:6px;border:1px solid #D4D6D9;">27%</td></tr>
+        <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">가격*</td><td style="padding:6px;border:1px solid #D4D6D9;">$16</td><td style="padding:6px;border:1px solid #D4D6D9;">$25</td><td style="padding:6px;border:1px solid #D4D6D9;">$13</td><td style="padding:6px;border:1px solid #D4D6D9;">$18</td><td style="padding:6px;border:1px solid #D4D6D9;">$17</td><td style="padding:6px;border:1px solid #D4D6D9;color:#C62828;font-weight:700;">$9</td></tr>
+        <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">민감도</td><td style="padding:6px;border:1px solid #D4D6D9;">7원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">10원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">13원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">20원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">23원/$</td><td style="padding:6px;border:1px solid #D4D6D9;">17원/$</td></tr>
+       </table>
+       <div style="font-size:9.5px;color:#8E9398;margin-top:4px;">*'26년 경영계획 기준 · 1) JKM $10/mmbtu 기준 · (별첨) JKM $8 기준 BEP 유가: ('21) $97 → ('30) $72 · '30년 예상 소싱 경제성 10원/kg @$70<br>(LPG 소싱 가정) CV 88% 공통, Slope '21 14.3% / '30 13.2%, JKM 비중 '21 13% / '30 27%, 정산단가 '21 20원/kg / '30 0원/kg · (민감도) Slope 0.1%당 3원/kg, 유가 $1당 5원/kg, JKM $1당 ('21) 7원/kg ~ ('30) 17원/kg</div>
+      </div>
+      <div>
+       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:4px;">우려 사항</div>
+       <div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>과거 대비 소싱 Window 축소</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– 유가 및 LPG 변화에 따른 맞춤형 소싱 필요 (소싱 Value: '25. 86% @$80, '26. 93% @$67, '27. 86% @$75)<br>– 기존 하절기 보다, 시황 급변 시 소싱 진행 ('26년물 11월 소싱 완료)</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span>'29년 이후 JKM 하락으로 소싱 경제성 악화</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– 글로벌 LNG 공급 확대에 따른 JKM 지속 하락 전망 ('29년 $9)<br>– <strong style='color:#C62828;'>JKM $8 이하 시 소싱 경제성 확보 제한 (유가 $72 이하)</strong><br>*기존 '26년 소싱 경제성 20원/kg 수준 ('26.1 JKM $9대)</div><div style="background:#DBE6F1;border-radius:6px;padding:7px 10px;font-weight:800;font-size:12px;color:#142446;margin:10px 0 4px;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span>소싱 불확실성 및 경쟁 증가로 유연한 사업 운영 제한</div><div style="font-size:11px;color:#8E9398;margin-left:14px;line-height:1.6;">– 판매 계약 후 미소싱 / 소싱 후 판매 재계약 미체결 시의 재고 Risk<br>– Opt. 이후 공급 위한 재소싱 Risk 증가</div>
+      </div>
+     </div>
+    </div>
+
+    <!-- 3/4 -->
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.65;color:#385269;">
+     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">3/4 · 우려사항을 해결하기 위한 대응 방안 — <span style="color:#172A55;">現 LPG 판매 최적화 및 직도입 Dual 모델 병행을 통한 사업 유연성 확보</span></div>
+     <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;">
+      <div>
+       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:6px;">대응 방안</div>
+       <div style="margin-bottom:6px;">• <strong>연동 판매 모델은 유연성 있는 소싱/판매 규모로 조정</strong><br><span style="color:#8E9398;">– 소싱 Window 확보 및 JKM 하락 방어 가능한 규모로 물량/기간 축소: 2년 기간 이상 단위로 소싱 및 JKM Hedge 운영</span></div>
+       <div style="margin-bottom:6px;">• <strong>제품 확장/직도입 LNG Dual 모델 전환을 통한 경쟁력 확보</strong><br><span style="color:#8E9398;">– 기존 수요처 중 대규모/장기 계약 및 P/L 공급 가능 고객 대상<br>– 도시가스 대비 상시 경쟁력 확보 및 LNG-LPG Opt. 이익 창출 가능</span></div>
+       <div>• <strong>Risk 관리 가능한 단단한 구조 / Policy 정착</strong><br><span style="color:#8E9398;">– 연도 별 재계약 물량 분산 (~10만톤/연, 계열사 제외)<br>– 재계약 시 미공급 옵션 실질 행사 가능한 Penalty 조항 반영 (협의 시 Penalty 미제공, 미협의 시 Penalty 제공/공급중단)<br>– Risk Case에 대한 대응 프로토콜 형식지화 및 실행</span></div>
+      </div>
+      <div>
+       <div style="text-align:center;font-weight:800;font-size:12px;color:#142446;border-bottom:2px solid #142446;padding-bottom:4px;margin-bottom:6px;">TSP Dual 모델 (안) <span style="font-weight:400;font-size:10px;color:#8E9398;">(40만톤/연 기준 · 예시)</span></div>
+       <div style="display:grid;grid-template-columns:86px 1fr;gap:8px;margin-bottom:6px;"><div style="background:#DBE6F1;border-radius:4px;text-align:center;font-weight:700;padding:10px 4px;display:flex;align-items:center;justify-content:center;">연동가<br>Compact<br>모델</div><div style="border:1px solid #D4D6D9;border-radius:4px;padding:8px 10px;">• <strong>30만톤/연</strong><br>• Y+2~3 소싱 / JKM Hedge<br>• 재계약 도래 시 미공급 옵션 반영<br><span style="color:#8E9398;">(도시가스 Gap 9% Penalty 기준 ~115억원/연¹⁾)</span><br>• <strong>예상 매총이익: 210억원/연²⁾</strong></div></div>
+       <div style="text-align:center;color:#7C95B2;font-size:16px;font-weight:800;line-height:1;">+</div>
+       <div style="display:grid;grid-template-columns:86px 1fr;gap:8px;margin-top:6px;"><div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:4px;text-align:center;font-weight:700;padding:10px 4px;display:flex;align-items:center;justify-content:center;">직도입<br>LNG Dual<br>모델 전환</div><div style="border:1px solid #D4D6D9;border-radius:4px;padding:8px 10px;">• 판매량 <strong>~10만톤/연</strong><br>• 직도입 LNG 또는 LPG Dual 공급 구조<br>• <strong>예상 매총이익: 100억원/연³⁾</strong> (SKGI 이익 포함)</div></div>
+       <div style="font-size:9.5px;color:#8E9398;margin-top:6px;">1) 850원/kg('30년 예상 소매가) x 9%(할인율) x 15만톤 (매년 재계약 도래 물량 기준 (연간 물량 ~50%)), 2) 공급 매총단가: 70원/kg 기준 (공헌이익 40원/kg), 3) 공급 매총단가: (연료 1.5% x Brent $80) + (인프라 350원/mmbtu) 기준</div>
+      </div>
+     </div>
+    </div>
+
+    <!-- 별첨: 수요처 현황 -->
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.6;color:#385269;">
+     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">(별첨) TSP 산업체 연동가 수요처 현황 &amp; 직도입 LNG Dual 모델 우선 추진 대상</div>
+     <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-items:start;">
+      <div style="overflow-x:auto;">
+       <table style="width:100%;border-collapse:collapse;font-size:10.5px;text-align:center;white-space:nowrap;">
+        <thead><tr style="background:#DBE6F1;"><th style="padding:6px;border:1px solid #D4D6D9;">수요처</th><th style="padding:6px;border:1px solid #D4D6D9;">공급방식</th><th style="padding:6px;border:1px solid #D4D6D9;">물량¹⁾<br>(KT/연)</th><th style="padding:6px;border:1px solid #D4D6D9;">직도입 Dual<br>전환 가능</th><th style="padding:6px;border:1px solid #D4D6D9;">미공급 옵션,<br>물량협의 조항</th></tr></thead>
+        <tbody>
+         <tr style="background:#FFF8B8;"><td style="padding:6px;border:1px solid #D4D6D9;">태광산업#3</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">34.5</td><td rowspan="4" style="padding:6px;border:1px solid #D4D6D9;background:#FFF8B8;vertical-align:middle;"><strong>우선 추진</strong></td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:#FFF8B8;"><td style="padding:6px;border:1px solid #D4D6D9;">한주</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">32.2</td><td style="padding:6px;border:1px solid #D4D6D9;">미공급 옵션+Penalty</td></tr>
+         <tr style="background:#FFF8B8;"><td style="padding:6px;border:1px solid #D4D6D9;">한화솔루션#1</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">16.2</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:#FFF8B8;"><td style="padding:6px;border:1px solid #D4D6D9;">한화임팩트</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">16.1</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">용산화학</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">5.0</td><td rowspan="1" style="padding:6px;border:1px solid #D4D6D9;background:white;vertical-align:middle;">대상 제외</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">이수화학</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">17.5</td><td rowspan="12" style="padding:6px;border:1px solid #D4D6D9;background:white;vertical-align:middle;">*후순위 추진<br>(원거리 고려)</td><td style="padding:6px;border:1px solid #D4D6D9;">물량협의</td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">*UAC</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">42.0</td><td style="padding:6px;border:1px solid #D4D6D9;">물량협의</td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">*SKPIC</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">54.0</td><td style="padding:6px;border:1px solid #D4D6D9;">물량협의</td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SK피유코어</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">140톤</td><td style="padding:6px;border:1px solid #D4D6D9;">물량협의</td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">고려아연</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">7.7</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">송원산업</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">5.4</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">피알테크</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">1.8</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">태광산업#1</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">14.8</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SK케미칼</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">6.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SK에코프라임</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">5.2</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">한화솔루션#3</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">9.5</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SKA</td><td style="padding:6px;border:1px solid #D4D6D9;">P/L</td><td style="padding:6px;border:1px solid #D4D6D9;">3.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">경남금속</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">3.8</td><td rowspan="10" style="padding:6px;border:1px solid #D4D6D9;background:white;vertical-align:middle;">대상 제외<br>(울산 외 지역)</td><td style="padding:6px;border:1px solid #D4D6D9;">미공급 옵션+Penalty</td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">대원화성</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">2.5</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">KCC 대죽#1</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">26.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">SKIPC</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">20.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">해담토</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">1.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">화인베스틸</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">7.4</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">세아베스틸</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">4.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">롯데케미칼</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">9.6</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">효성티앤씨</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">7.0</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:white;"><td style="padding:6px;border:1px solid #D4D6D9;">효성화학</td><td style="padding:6px;border:1px solid #D4D6D9;">T/L</td><td style="padding:6px;border:1px solid #D4D6D9;">0.9</td><td style="padding:6px;border:1px solid #D4D6D9;"></td></tr>
+         <tr style="background:#DBE6F1;font-weight:700;"><td style="padding:6px;border:1px solid #D4D6D9;" colspan="2">합계</td><td style="padding:6px;border:1px solid #D4D6D9;">353KT</td><td style="padding:6px;border:1px solid #D4D6D9;">Dual 가능 99KT</td><td style="padding:6px;border:1px solid #D4D6D9;">미공급 옵션 36KT<br>물량협의 113KT</td></tr>
+        </tbody>
+       </table>
+       <div style="font-size:9.5px;color:#8E9398;margin-top:4px;">1) '27년 경영계획 기준, 민수 연동가 수요처 약 50KT 별도</div>
+      </div>
+      <div>
+       <img src="assets/lpg/tsp_dual_map.jpg" alt="직도입 LNG Dual 모델 우선 추진 대상 — 울산 NG 배관(From KET/CEC)·LPG 배관(From SKG) 경로와 태광·한화솔루션 1공장·한화임팩트·한주 위치" style="width:100%;max-width:640px;border:1px solid #D4D6D9;border-radius:6px;display:block;">
+       <div style="margin-top:6px;">– 당사 추진 NG 배관과 인접/연결 설치 가능 거래처 기준<br>– <strong>4개사, 99KT</strong>: 태광산업#3 (34.5KT), 한주 (32.2KT), 한화솔루션#1 (16.2KT), 한화임팩트 (16.1KT)</div>
+       <div style="font-size:10px;color:#8E9398;margin-top:4px;">※ 이 4개사는 LNG 탭 "연료대체 타깃 7개사"·신규 LNG 발전사업 탭 스팀수요처와 겹침 — 두 아젠다가 울산 NG 배관 하나로 연결됨.</div>
+      </div>
+     </div>
+    </div>
+
+    <!-- 4/4 -->
+    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:11px;line-height:1.65;color:#385269;">
+     <div style="font-size:12.5px;font-weight:800;color:#142446;margin-bottom:8px;">4/4 · 주요 논의 및 의사결정 사항은 무엇인가?</div>
+     <table style="width:100%;border-collapse:collapse;">
+      <thead><tr style="background:#DBE6F1;"><th style="padding:6px;border:1px solid #D4D6D9;width:30%;text-align:left;">Discussion Agenda</th><th style="padding:6px;border:1px solid #D4D6D9;text-align:left;">세부 내용</th></tr></thead>
+      <tbody>
+       <tr><td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;"><div style="font-weight:800;font-size:12px;color:#142446;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">1</span>LPG 연동가 모델의 최적 소싱 및 판매 규모는?</div><div style="color:#8E9398;font-size:10px;margin-top:4px;">(고려요소) JKM Hedge 가능 물량 (파생손 여력), 중장기 MB 및 FEI 소싱 물량, 직도입 LNG Dual 전환 가능 물량 등</div></td>
+        <td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;">• <strong>(안) 30만톤/연 x 2년</strong><br><span style="color:#8E9398;">– 파생상품 변동성: JKM Hedge 2년간 16만톤 (연간 30만톤, 비중 27% 수준)<br>– 소싱 Risk 축소 효과: MB 중장기 소싱 (4카고/연 x 4년) + FEI 소싱 (12만톤/연) 기준</span><br>• <strong>(수익력)</strong> 기존 대비 수익력 감소하나, 안정적 확보 가능. LNG Dual 전환으로 Makeup 추진<div style="background:#FFF8B8;border-left:3px solid #E0B000;padding:4px 8px;margin-top:4px;font-weight:700;color:#142446;">→ JKM 16만톤 Hedge 시 <span style="color:#C62828;">파생손 감내 가능 여부 ($5/mmbtu = 545억원¹⁾)</span></div></td></tr>
+       <tr><td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;"><div style="font-weight:800;font-size:12px;color:#142446;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">2</span>직도입 LNG Dual 모델 전환 대상 및 Milestone은?</div><div style="color:#8E9398;font-size:10px;margin-top:4px;">(고려요소) 우선 추진 대상 및 도입 제약/소요 기간, LNG 직도입을 위한 Minimum 물량 등</div></td>
+        <td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;">• <strong>(추진 대상)</strong> 기존 수요처 중 대규모/장기 계약 및 P/L 공급 가능 고객 대상<br><span style="color:#8E9398;">– 직도입 가능 신규 설비 보유: 태광산업#3 (34.5KT), 한주 (32.2KT)<br>– 연료전환 5년 도과: 한화솔루션#1 (16.2KT), 한화임팩트 (16.1KT)</span><br>• <strong>(Milestone)</strong> JKM 하락 가능성 ($10 미만) 고려, <strong style="color:#C62828;">'29년부터 조기 전환 필요</strong><div style="background:#FFF8B8;border-left:3px solid #E0B000;padding:4px 8px;margin-top:4px;font-weight:700;color:#142446;">→ 직도입 LNG 소싱 및 공급 Process 진행 고려 시 도입 제약 및 적정 공급 시점<br>→ 경제성 확보 위한 Minimum 물량 (수요처 별 시기 조율/Bundle화, LPG 마중물 조정)</div></td></tr>
+       <tr><td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;"><div style="font-weight:800;font-size:12px;color:#142446;"><span style="display:inline-block;background:#142446;color:white;font-size:10px;font-weight:800;padding:0 5px;border-radius:2px;margin-right:4px;">3</span>기존 모델의 유연성 증대 방안은?</div><div style="color:#8E9398;font-size:10px;margin-top:4px;">(고려요소) JKM Hedge 가능 물량 (파생손 여력) 등</div></td>
+        <td style="padding:6px;border:1px solid #D4D6D9;vertical-align:top;">• <strong>(소싱 Period 확장)</strong> Y+3 ~50% 사전 소싱 (R/O 활용)<br><span style="color:#8E9398;">– Y+1~Y+2 100% 및 추가 Y+3 50% 기준, 총 20만톤 JKM Hedge 필요²⁾</span><div style="background:#FFF8B8;border-left:3px solid #E0B000;padding:4px 8px;margin-top:4px;font-weight:700;color:#142446;">→ JKM 추가 4만톤 (총 20만톤) Hedge시 <span style="color:#C62828;">파생손 감내 가능 여부 ($5/mmbtu = 680억원¹⁾)</span></div></td></tr>
+      </tbody>
+     </table>
+     <div style="font-size:9.5px;color:#8E9398;margin-top:6px;">1) 환율 1,400원, 환산계수 48.6 기준, 2) 2년간 JKM 2 Cargo Hedge 기준 환산 시, LPG 연동가 판매는 약 25만톤/연으로 축소</div>
+    </div>
+   </div>
+
+   <aside class="ez-note">
+    <div class="ez-title">📌 TSP Biz 지속성, 쉽게 이해하기</div>
+    <div class="ez-sub">TSP = "FEI로 LPG 사서, 도시가스 연동가로 파는 산업체 사업". 이 장표들은 <strong>"그 장사가 앞으로도 되냐"</strong>를 묻는 것. <span class="est">[추정]</span>는 장표에 없는 해석.</div>
+
+    <h4>0. 돈 버는 구조 (쌀값·빵값 비유)</h4>
+    <table>
+     <tr><th style="width:20%;"></th><th>내용</th><th style="width:34%;">비유</th></tr>
+     <tr><td><strong>원가</strong></td><td>FEI (LPG 극동 도착가)</td><td>우리가 사오는 <strong>쌀값</strong></td></tr>
+     <tr><td><strong>판가</strong></td><td>도시가스 연동가 = KOGAS LNG 도입가(Brent 55% + HH 10% + JKM 35%) + 공급비 → 그 9X%</td><td>옆집 <strong>빵값</strong>보다 조금 싸게 파는 떡값</td></tr>
+     <tr><td><strong>마진</strong></td><td>판가 − 원가</td><td>빵값 비싸고 쌀값 싸면 남음</td></tr>
+     <tr><td><strong>상대가 CV</strong></td><td>FEI ÷ Brent. 90% 밑이면 OK</td><td>쌀값 ÷ 빵값. 낮을수록 좋음</td></tr>
+     <tr><td><strong>Hedge</strong></td><td>FEI Buy + Brent/JKM/HH Sell 페이퍼</td><td>쌀값·빵값 미리 고정</td></tr>
+     <tr><td><strong>Optionality</strong></td><td>고정해둔 걸 가격 튈 때 풀어서(Unwind) 차익</td><td>고정해둔 쌀 되팔아 차익</td></tr>
+    </table>
+    <div class="ez-box"><strong>핵심 한 줄:</strong> 빵값(도시가스)이 비싸게 유지되고, 쌀값(LPG)이 그보다 충분히 싸야 되는 장사.</div>
+
+    <h4>1. (1/4) 지금까지는 잘 버텨왔다</h4>
+    <table>
+     <tr><th style="width:38%;">환경 변화</th><th>쉽게 말하면</th></tr>
+     <tr><td>KOGAS Slope 하락 (14.0 → 13.2%)</td><td>가스공사가 예전엔 비싸게 LNG 계약했는데 요즘은 싸게 갱신 → <strong>빵값이 내려감</strong></td></tr>
+     <tr><td>KOGAS JKM 비중 확대 (16 → 33%)</td><td>빵값 공식에서 JKM 비중이 커짐 → JKM 따라 빵값이 출렁임</td></tr>
+     <tr><td>동고하저 약화, CV 변동폭 10 → 5%</td><td>중국 석화 수요로 LPG 겨울·여름 가격 차이가 줄어듦 → <strong>옵셔널리티 할 재미가 없어짐</strong></td></tr>
+     <tr><td>판매마진 압박, 미수금 정산단가 34 → 12원</td><td>고객은 깎아달라 하고, 미수금 정산이 끝나가니 빵값 올릴 요인이 사라짐</td></tr>
+    </table>
+    <p><strong>대응:</strong> 원월물(MB Y+3, FEI R/O Y+2)로 더 싸게 사기 · JKM Sell로 판가 쪽 JKM 미리 고정 · 수요 다변화(연료전지·납사대체·광주/대산) · 재계약 할인율 방어(88 → 91.5%)와 미공급 옵션 조항.</p>
+
+    <h4>2. (2/4) 앞으로가 문제: BEP 유가</h4>
+    <p>그래프의 <strong>남색 선 = LPG 소싱가</strong>(CV 88% × Brent), <strong>파란 선 = 도시가스 판가</strong>(실선 '21, 점선 '30). 두 선이 만나는 점이 <strong>BEP 유가</strong>. 그보다 유가가 높으면 쌀값이 빵값을 넘어 손해.</p>
+    <table>
+     <tr><th></th><th>'21년</th><th>'30년</th></tr>
+     <tr><td>BEP 유가 (JKM $10)</td><td>$100</td><td><strong style="color:#C62828;">$77</strong></td></tr>
+     <tr><td>BEP 유가 (JKM $8)</td><td>$97</td><td><strong style="color:#C62828;">$72</strong></td></tr>
+    </table>
+    <p><strong>왜 '30년 선이 납작해지나:</strong> Slope 하락 + JKM 비중이 커진 상태에서 JKM이 장기 하락 → 빵값이 유가 따라 덜 오름 → 이익 구간이 왼쪽으로 쪼그라듦.</p>
+    <div class="quote">비유: 예전엔 유가 $100까지 장사가 됐는데, 이제 $77 넘으면 접어야 함. 지금 유가가 $80 안팎이니 문이 거의 닫힌 셈.</div>
+    <p><strong>"소싱 경제성 20원/kg, JKM $1 빠지면 마진 증발"이란?</strong><br>소싱 경제성 = 잡아둔 원가 vs 예상 판가의 차이, 즉 kg당 마진. '26년물은 kg당 약 20원 남기고 소싱해 둔 상태. 그런데 빵값 공식의 JKM 비중이 커서 JKM $1 떨어지면 빵값이 kg당 약 20원 떨어짐(민감도 표 '26 20원/$) → <strong>JKM $1만 빠지면 마진 20원이 0원</strong>. 민감도가 '21 7원 → '27 23원으로 커진 건 JKM 비중이 13 → 37%로 늘었기 때문.</p>
+    <p><strong>"재고 Risk"란?</strong> 창고의 LPG가 아니라 <strong>"팔 곳 없이 들고 있는 포지션"</strong>.</p>
+    <table>
+     <tr><th style="width:34%;">상황</th><th>쉽게 말하면</th></tr>
+     <tr><td>판매 계약 후 미소싱</td><td>고객과 "도시가스 92%에 줄게" 약속했는데 상대가가 안 떨어져 싸게 못 사옴 → 비싸게 사서 손해 보며 공급</td></tr>
+     <tr><td>소싱 후 재계약 미체결</td><td>2~3년치 미리 잡아뒀는데 고객이 재계약 안 하거나 가동률 하락 → 팔 데 없는 포지션 = 투기(speculation)</td></tr>
+     <tr><td>Unwind 후 재소싱 실패</td><td>옵셔널리티로 풀었는데 상대가가 계속 올라 다시 못 잡음 → 공급 의무는 있으니 비싸게 다시 사야 함</td></tr>
+    </table>
+    <p style="color:#8E9398;">원월물 소싱 기간을 늘릴수록(Y+3) 두 번째 리스크가 커짐. 3년 뒤 고객이 그대로 있을지 모르니까.</p>
+
+    <h4>3. (3/4) 그래서 사업을 둘로 쪼개자: Dual 모델</h4>
+    <table>
+     <tr><th style="width:26%;">모델</th><th style="width:14%;">물량</th><th>뭘 하나</th><th style="width:18%;">매총이익</th></tr>
+     <tr><td><strong>① 연동가 Compact</strong></td><td>30만톤</td><td>지금 방식 그대로, 단 규모 줄이고 Y+2~3 소싱 + JKM Hedge로 방어. 재계약 때 미공급 옵션</td><td>210억/연</td></tr>
+     <tr><td><strong>② 직도입 LNG Dual</strong></td><td>10만톤</td><td>KET/CEC에서 LNG 배관으로 직접 공급, LPG와 둘 다 가능하게</td><td>100억/연</td></tr>
+    </table>
+    <p><strong>"요금제만 바꾸면 마진 확보"는 단편적 — 맞는 지적.</strong> 직도입 LNG도 결국 KOGAS보다 싸야 고객이 받음. 그 조건은 안 없어짐. Dual이 <em>실제로</em> 바꾸는 것은:</p>
+    <p>① <strong>인덱스 미스매치가 사라짐</strong> — 지금은 FEI(LPG)로 사서 Brent+JKM+HH(LNG)로 파니 JKM 헤지 16만톤·파생손 545억 문제가 생김. 직도입은 LNG로 사서 LNG 연동으로 팔아 큰 헤지가 필요 없음. 즉 <strong>"마진이 커진다"가 아니라 "마진을 지키는 비용(헤지·파생손)이 줄어든다"</strong>.<br>② <strong>쌀을 두 종류</strong> — LNG·LPG 중 그때 싼 걸 공급하고 비싼 쪽은 되팔기(옵셔널리티). 지금은 LPG만 있어 LPG가 비싸지면 꼼짝 못 함.<br>③ <strong>배관 통행료</strong> — 판가에 인프라 350원/mmbtu가 따로 있어 LNG 가격과 무관하게 받음. <span class="est">[추정]</span> 100억 중 상당 부분이 이 인프라 수익일 가능성.<br>④ <strong>고객 Lock-in</strong> — 직도입 전환엔 고객의 설비·인허가(조건부 등록) 투자가 필요 → 한번 넘어오면 KOGAS로 돌아가기 어렵고 "깎아줘" 압력도 약해짐.</p>
+    <div class="ez-box"><strong>그래도 남는 문제:</strong> KOGAS가 싸지는 추세는 직도입에도 똑같이 역풍. KOGAS Slope가 13.2%까지 내려오면 우리 직도입 LNG는 그보다 싸게 사와야 하는데, 그게 100억의 전제. 장표에 빠진 질문 → <strong>"직도입 LNG 소싱 Slope를 몇 %로 가정했고, '30년 KOGAS 13.2%보다 얼마나 싼가?"</strong> 이게 없으면 Dual은 리스크를 JKM 파생손에서 LNG 소싱 경쟁력으로 옮긴 것이지 없앤 게 아님.</div>
+    <p style="color:#8E9398;">[확인 필요] 각주 3)의 "연료 1.5% × Brent"는 오타로 보임(보통 Slope는 11~13%). 이 숫자가 Dual 경제성의 핵심 가정이라 EE본부 확인 필요.</p>
+
+    <h4>4. (4/4) 임원이 결정할 것 3가지</h4>
+    <p><strong>① 연동가 모델을 얼마나? → (안) 30만톤 × 2년.</strong> 2년치 미리 소싱하면 JKM Hedge 16만톤 필요. <strong>JKM $5 튀면 파생손 545억.</strong></p>
+    <div class="quote">JKM Sell 페이퍼는 "나중에 JKM $10에 팔게요"라는 약속. 전쟁으로 JKM이 $15가 되면 장부상 $5 × 16만톤 = 545억 손실이 찍힘. 실제로는 빵값(도시가스)도 같이 올라 공급 때 되돌려받으니 마진은 고정인데, <strong>손실은 지금 찍히고 이익은 나중에 와서</strong> 회계·현금흐름이 출렁임. 그래서 질문은 "545억 평가손이 한 번에 찍혀도 감내할 수 있나?". 미·이란 전쟁 때 JKM을 일부러 노출시킨 것도 이 고민과 연결.</div>
+    <p><strong>② 직도입 Dual, 누구부터 언제?</strong> 1순위 태광#3·한주(신규 설비 보유), 한화솔루션#1·한화임팩트(연료전환 5년 도과). JKM $10 밑으로 떨어지기 전인 <strong>'29년부터</strong> 전환 필요. 질문: 직도입 소싱·배관 일정상 언제 가능한가, 경제성 나오는 최소 물량은(고객별 시기 맞추기, LPG 마중물).</p>
+    <p><strong>③ Y+3까지 소싱 늘릴 거냐?</strong> Y+1·Y+2 100%에 Y+3 50% 추가 → 옵셔널리티 기회↑(원월물일수록 싸고 여유). 대신 JKM Hedge 20만톤, <strong>$5 튀면 680억</strong>. 이것도 감내 가능한가.</p>
+
+    <h4>5. 한 줄 정리</h4>
+    <div class="ez-box ez-final">"도시가스가 싸지고 있어서 LPG 연동 장사 문이 닫히고 있다. 그래서 ① 연동가 장사는 30만톤으로 줄이고 2년치 미리 잡되, ② 10만톤은 직도입 LNG로 갈아타자. 단 미리 잡으려면 JKM 헤지를 크게 걸어야 하는데, 그게 튀면 545~680억 평가손이 찍히니 그걸 받아들일 수 있는지 정해달라."</div>
+    <p><strong>임원회의 관점에서 짚을 것 <span class="est">[추정]</span></strong><br>· 파생손 감내 질문은 재무 답이 필요 → EE본부 혼자 못 정하는 아젠다, 재무본부 동석 필요.<br>· 연동가 30만톤 + Dual 10만톤 = 310억인데, <strong>현재 40만톤 매총이익이 장표에 없음</strong>. "지금 대비 얼마나 줄어드는지"가 있어야 판단 가능.<br>· Dual 10만톤은 신규 LNG 발전사업 탭의 울산 NG 배관·인허가가 전제 → 그쪽이 늦어지면 같이 밀림. 두 아젠다를 묶어서 봐야 함.</p>
+   </aside>
+   </div>
         </div>
      <div class="lng-page" id="lpg-page-opt">
    <div class="section-label">🎲 Optionality 개념 — Hedge에서 Optionality까지 <span style="font-size:10px;font-weight:400;color:#8E9398;">Source: Small DCC포럼('26.07.09) "Optionality 개념 이해" 박재범 팀장 강의 정리</span>
@@ -2955,67 +2978,559 @@ th.curr { background: #f06400 !important; }
    </div>
    <div class="ez-wrap" id="lpg-opt-wrap">
    <div class="ez-formal" style="min-width:0;">
+    <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:8px 14px;margin-bottom:12px;font-size:11px;color:#385269;">📝 Notion 「🧐 옵셔널리티」(용어 정리, 기본 개념) 페이지의 <strong>[Small DCC포럼(26.07.09)]</strong> 섹션을 서식(볼드·밑줄·색상) 그대로 옮김 · 출처: 2026 Small DCC 박재범 팀장님</div>
+    <div class="notion-raw" style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:16px 20px;font-size:12px;line-height:1.75;color:#142446;">
+<p class="nt nt-h"><b>[Small DCC포럼(26.07.09)_Optionality 개념 이해,  박재범 팀장님]</b></p>
 
-    <div style="background:#DBE6F1;border-left:4px solid #172A55;border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:12px;font-size:12px;color:#142446;"><strong>한 줄 정의</strong> — Optionality는 <strong>공급 기반으로 Hedge해 둔 포지션</strong>을 상대가가 튈 때 풀어(Unwind) 차익을 얻고, 다시 잡아 공급까지 하는 <strong>'제품·가격·물량·기간' 옵션 활용 최적 이익 창출 모델</strong>. Hedge는 '14년부터, Optionality는 '20년(미공급 옵션 계약 반영)부터 본격화, '24~'25년 성숙(연 300억+).</div>
+<ul class="nt">
+<li>
+<p class="nt">Hedge는 도입가격과 판매가격 Index가 상이한 경우에는 헷지가 필수적임.</p>
+</li>
+<li>
+<p class="nt">실물가격이 움직이는 것을 파생상품으로 헷지하게 됨. 실물가격과 같은 index의 파생상품으로 헷지를 진행하고,  파생상품을 그냥 paper라고 부름. 파생상품 거래하는 사람들이 얼마에 살수있고, 물량은 어느 정도 조달 가능한지 권리와 의무가 기재된 paper라고 해서 이렇게 부르게 된 것임</p>
+</li>
+<li>
+<p class="nt">Floating 하는 실물 가격과 우리가 미리 거래한 페이퍼 간에 서로 반대 포지션이 형성되면서 변동성을 상쇄 시켜버림 → 마진 fix</p>
+</li>
+<li>
+<p class="nt"><b>Q. 여러가지 LPG 인덱스가 존재하는데(MB, CP, FEI 등) Hedge할 때 FEI(동아시아 도착도가격)를 주로 쓰는 이유는?</b> <br />FEI는 앞에 MB나 CP 같은 LPG 가격에 뒤에 Freight나 터미널 fee 등 부대비용을 더한 비용임. 무슨말이냐면  MB나 CP는 파생상품을 헷지하기 어려운 요소들이 존재함.  CP나 MB를 헷지하더라도 Freight라던지, 각종 부대비가 열려있다는 이야기임.</p>
+</li>
+<li>
+<p class="nt">그런데 만약 <u>도착도인 FEI를 기준으로 파생상품을 활용하게 되면 완벽하게 Hedge를 할 수 있어서</u> 통상적으로 FEI를 기준으로 파생상품 플레이를 하게 됨</p>
+</li>
+</ul>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:12px;">
-     <div style="background:white;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">① 왜 Hedge가 필요한가 — Index 미스매치</div>셰일 혁명으로 LPG가 도시가스보다 싸지자, SK가스가 산업체에 "도시가스 대신 LPG 쓰자, 더 싸게 줄게"로 시작 → <strong>판가는 도시가스 연동(9X%)</strong>인데 <strong>원가는 FEI</strong>인 Index 미스매치 발생 → 도입가와 판매가 Index가 다르면 Hedge 필수.<br><span style="color:#8E9398;">· 원가: FEI (LPG 극동 도착가) · 판가: 도시가스 연동가 = KOGAS LNG 도입가(<strong>Brent 55% + HH 10% + JKM 35%</strong>) + 공급비</span></div>
-     <div style="background:white;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">② Paper = 파생상품</div>실물 가격이 움직이는 것을 같은 Index의 파생상품(paper)으로 헤지. "얼마에 살 수 있고 물량은 얼마"라는 권리·의무가 적힌 종이라서 paper. Floating하는 실물과 미리 거래한 paper가 <strong>반대 포지션</strong>을 형성해 변동성을 상쇄 → <strong>마진 fix</strong>.<br><span style="color:#8E9398;">· FEI를 쓰는 이유: MB·CP는 Freight·터미널비가 열려 있어 완벽 헤지 불가, 도착도 가격인 FEI면 완벽 헤지 가능<br>· LPG paper는 유동성이 낮아 장외 broker 거래 · 원할 때 늘 거래되진 않음(마지노선 제시 후 공치는 날도 있음)</span></div>
-    </div>
+<p class="nt"><b>Q. LPG의 파생상품, 페이퍼는 어디서 어떻게 거래가 될까?</b></p>
 
-    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;">
-     <div style="font-weight:800;font-size:12.5px;color:#142446;margin-bottom:8px;">③ Hedge 구조 — 실물은 LPG, Paper는 양쪽 다</div>
-     <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;font-size:11px;">
-      <div style="border:2px solid #172A55;border-radius:8px;padding:10px;"><div style="font-weight:800;color:#172A55;text-align:center;margin-bottom:4px;">🚢 실물 (Physical)</div>LPG를 배로 수입(원가 <strong>FEI</strong>) → 배관으로 산업체에 공급(판가 <strong>도시가스 연동가</strong>)<br><span style="color:#8E9398;">LNG·Brent는 실물 미동반 — 도시가스 가격은 "가격일 뿐", 실제 물건은 LPG</span></div>
-      <div style="text-align:center;color:#7C95B2;font-size:20px;">⇄</div>
-      <div style="border:2px dashed #172A55;border-radius:8px;padding:10px;"><div style="font-weight:800;color:#172A55;text-align:center;margin-bottom:4px;">📄 Paper (파생상품)</div><span style="color:#172A55;font-weight:700;">[Buy] FEI</span> + <span style="color:#C62828;font-weight:700;">[Sell] Brent · JKM · HH</span><br>KOGAS Index 비중·가격에 맞춰 똑같이 잡음 (예전엔 Brent 위주, LNG 비중↑로 지금은 KOGAS 전 포트폴리오 Hedge)</div>
-     </div>
-     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px;margin-top:10px;font-size:11px;line-height:1.6;">
-      <div style="background:#EEF3F8;border-radius:6px;padding:8px 10px;"><strong style="color:#142446;">Buy·Sell은 동시에</strong> — FEI와 Brent는 "이 정도 상대가면 좋다" 하고 동시에 고정. 시차가 생기면 그 기간은 speculation.</div>
-      <div style="background:#EEF3F8;border-radius:6px;padding:8px 10px;"><strong style="color:#142446;">JKM·HH Sell은 따로</strong> — LPG(원가)는 여름에 싸게 Buy, LNG(판가 Sell)는 겨울에 비싸게 Sell이 유리해 시점이 엇박자. 동시에 잡으면 Hedge value 훼손. 이제 JKM 비중이 커져 안 잡으면 오히려 노출.</div>
-      <div style="background:#EEF3F8;border-radius:6px;padding:8px 10px;"><strong style="color:#142446;">평가이익 / 평가손실</strong> — Buy paper $550 FEI인데 시장 $700이면 평가이익, $400이면 평가손실. 실물이 비싸진 달에 paper 이익이 그 손해를 상쇄 → 마진 fix.</div>
-      <div style="background:#EEF3F8;border-radius:6px;padding:8px 10px;"><strong style="color:#142446;">Paper 먼저, 실물 나중</strong> — 파생상품은 미리 잡고, 실물은 Trading본부가 연말 프로그램 짤 때 한꺼번에 잡아 매칭.</div>
-     </div>
-    </div>
+<ul class="nt">
+<li>원유나 LNG는 시장이 크게 형성된 Commodity임. 그런데 LPG는 유동성이 높지 않아서 장외에서 broker를 통한 거래를 진행하게 됨</li>
+</ul>
 
-    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;">
-     <div style="font-weight:800;font-size:12.5px;color:#142446;margin-bottom:8px;">④ Hedge를 잘하기 위한 2대 핵심 조건</div>
-     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;">
-      <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">1) 도시가스 판가 정밀 추정</div>도시가스 가격 = KOGAS 도매요금 + 권역별 소매공급비. 그중 <strong>KOGAS LNG 도입가</strong>가 비중·가변성 모두 압도적.<br>· KOGAS 장기 Term 계약 15~20개의 조건을 리서치·글로벌 기관으로 대부분 파악 → 도입가 추정<br>· 미수금 정산단가, 도입부대비, 공급비도 자체 로직으로 추정<br>· KOGAS 월 도매요금 발표 전에 3~4년 뒤, 현재 <strong>2030년 가격까지</strong> 추정 중<br><span style="color:#8E9398;">· Formula gap: KOGAS 내부 정책 때문에 추정과 실제가 어긋나지만, 보수적 추정이라 손익상 양수로 많이 나옴</span></div>
-      <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">2) 상대가 소싱 (KOGAS 판가보다 싸게 사오기)</div>절대가격보다 <strong>상대가</strong>가 중요. FEI로 사서 유가 연동 도시가스로 팔기 때문.<br>· <strong>CV = FEI/Brent</strong>(산업체), <strong>FEI/MOPJ</strong>(납사대체 원료용) — 매일 아침 모니터링<br>· 상대가가 약세(낮음)일 때 소싱, 강세일 때 Optionality<br>· 적정 소싱 Range: 보통 <strong>90% 언더</strong>. 유가가 낮으면 양보 가능, 높으면 더 타이트하게<br>· 지금은 동고하저 완화로 "재미없는 시장" → 잡은 상대가 대비 +5% 추가 이익 타겟</div>
-     </div>
-    </div>
+<ul class="nt">
+<li><b>Q. 에코에너지 사업에서 Hege라는 개념이 언제 왜 시작되었는가?</b></li>
+<li>기존에 도시가스를 쓰는 산업체 수요들이 있음. 셰일 혁명으로 인해서 LPG의 가격경쟁력이 생기게 되었고, sk가스가 도시가스 쓰는 산업체에가서  “도시가스 대신 LPG 쓰자. LPG 더 저렴하게 줄테니까 이거 써봐봐” 라면서 시작이됨. 도시가스보다 가격경쟁력 가진 lpg를 제공해주는거.<br />→ (Index 미스매치의 발생) 이러다 보니까 판가는 도시가스 연동해서 팔게 됨 ‘도시가스가격대비 9X% 판매,  그런데 원가는 FEI가 되는 Index 미스매치 상황이 발생하게 된 것</li>
+<li>이러면서 hedge에 대한 필요성이 생겨남</li>
+</ul>
 
-    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;">
-     <div style="font-weight:800;font-size:12.5px;color:#142446;margin-bottom:8px;">⑤ Optionality Workflow — 6단계</div>
-     <div style="display:grid;grid-template-columns:30px 1fr;gap:10px;margin-bottom:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#172A55;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">1</div><div style="border:1px solid #D4D6D9;border-radius:6px;padding:6px 10px;font-size:11px;line-height:1.6;color:#385269;"><strong style="color:#142446;">도시가스 판가 추정</strong><br>KOGAS Formula·정산단가·공급비를 정밀 추정 (2030년까지)</div></div><div style="display:grid;grid-template-columns:30px 1fr;gap:10px;margin-bottom:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#172A55;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">2</div><div style="border:1px solid #D4D6D9;border-radius:6px;padding:6px 10px;font-size:11px;line-height:1.6;color:#385269;"><strong style="color:#142446;">수요 확보 (연동 판매)</strong><br>"도시가스보다 5~8% 싸게 드릴게요" → 고객사와 연동 판매 계약. 일부는 <strong>미공급 옵션</strong>(못 주면 보상) 포함</div></div><div style="display:grid;grid-template-columns:30px 1fr;gap:10px;margin-bottom:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#172A55;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">3</div><div style="border:1px solid #D4D6D9;border-radius:6px;padding:6px 10px;font-size:11px;line-height:1.6;color:#385269;"><strong style="color:#142446;">LPG 사전 소싱 (Paper)</strong><br>계약 판가보다 싼 상대가에 paper 소싱. 실물은 floating, paper와 만나 <strong>마진 fix</strong></div></div><div style="display:grid;grid-template-columns:30px 1fr;gap:10px;margin-bottom:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#C62828;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">4</div><div style="border:1px solid #D4D6D9;border-radius:6px;padding:6px 10px;font-size:11px;line-height:1.6;color:#385269;"><strong style="color:#142446;">공급 옵션 vs Unwind 비교 → 의사결정</strong><br>상대가 85%에 잡아뒀는데 시장이 95%로 뛰면 주식처럼 비싸게 팔아 차익 = <strong>Optionality 이익</strong>. 포지션을 풀어 확정 = <strong>Unwind</strong>. "공급마진 먹을래 vs Unwind 이익 먹을래"</div></div><div style="display:grid;grid-template-columns:30px 1fr;gap:10px;margin-bottom:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#172A55;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">5</div><div style="border:1px solid #D4D6D9;border-radius:6px;padding:6px 10px;font-size:11px;line-height:1.6;color:#385269;"><strong style="color:#142446;">재소싱 (R/O, 롤오버)</strong><br>공급까지 기간이 남았으면 다시 기회를 보다 공급옵션보다 싼 가격(예: 91.6%)에 재진입</div></div><div style="display:grid;grid-template-columns:30px 1fr;gap:10px;margin-bottom:8px;"><div style="width:28px;height:28px;border-radius:50%;background:#172A55;color:white;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;">6</div><div style="border:1px solid #D4D6D9;border-radius:6px;padding:6px 10px;font-size:11px;line-height:1.6;color:#385269;"><strong style="color:#142446;">공급 → 공급이익까지</strong><br>재소싱 후 공급하면 <strong>공급이익(계약 판가 − 91.6% 원가)</strong>을 한 번 더. 사서 바로 공급하는 것보다 "풀고 → 다시 잡고 → 공급"이 더 남음</div></div>
-     <div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:6px;padding:8px 12px;font-size:11px;color:#142446;margin-top:4px;"><strong>'22년 원월물 R/O 예시:</strong> 85.6% 상대가로 Hedge → 동절기 95.6%에 Unwind(이익) → 91.6%에 재소싱 → 이듬해 공급. 공급마진은 조금 줄지만 Unwind 이익이 훨씬 커 추가 재원 확보. 근월물은 다시 잡기 어려워 <strong>원월물이 적합</strong>.</div>
-    </div>
+<p class="nt nt-h"><b><span style="color:#448361;">[도시가스 연동가 판매]</span></b></p>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:12px;">
-     <div style="background:white;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">⑥ 4대 요소 — 제품 / 가격 / 물량 / 기간</div><table style="width:100%;border-collapse:collapse;font-size:10.5px;"><tr><th style="padding:6px;border:1px solid #D4D6D9;background:#DBE6F1;width:16%;">요소</th><th style="padding:6px;border:1px solid #D4D6D9;background:#DBE6F1;">의미</th><th style="padding:6px;border:1px solid #D4D6D9;background:#DBE6F1;width:40%;">확장 (As-was → As-is)</th></tr><tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">① 제품</td><td style="padding:6px;border:1px solid #D4D6D9;">LPG·원유·LNG·납사로 저글링</td><td style="padding:6px;border:1px solid #D4D6D9;">연료용 LPG만 → 석화 원료용·LNG까지</td></tr><tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">② 가격</td><td style="padding:6px;border:1px solid #D4D6D9;">싸게 잘 잡아야 튈 때 크게 먹음</td><td style="padding:6px;border:1px solid #D4D6D9;">원월물 Backwardation 활용해 더 낮은 상대가</td></tr><tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">③ 물량</td><td style="padding:6px;border:1px solid #D4D6D9;">커야 수익도 큼</td><td style="padding:6px;border:1px solid #D4D6D9;">산업체 1개 → TSP 30여 개 1년치 묶음 + 석화 Term 전량</td></tr><tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">④ 기간</td><td style="padding:6px;border:1px solid #D4D6D9;">길수록 샀다 팔았다 기회↑</td><td style="padding:6px;border:1px solid #D4D6D9;">당년·Y+1 → Y+1·Y+2·Y+3 원월물</td></tr></table></div>
-     <div style="background:#FFF8B8;border:1px solid #E0B000;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">⑦ 대원칙 — 공급 기반이어야 Optionality (아니면 Speculation)</div>· <strong>공급옵션 = 하방 방어</strong>: kg당 +20원, +38원 등 마진이 fix돼 있어 시장이 80~85%에서 애매하게 머물러도 그냥 공급하면 약정 마진 확보<br>· <strong>Optionality = Upside</strong>: 공급마진보다 더 크게 먹을 확신이 있을 때만 쓰는 카드 (공급마진 &lt; 파생 처분이익일 때 실행)<br>· 공급 없이 paper만 있으면 하방이 뚫림 → speculation<br>· 원월물도 "판매량이 이 정도 될 것"이라는 가정 물량만큼만 (울산 앞마당 해자, '27~'29 장기계약으로 예측 가능)<br>· <strong>고객에 대체재가 있어야</strong> 가능 → 미공급 옵션('20~, "못 드리면 보상") · 민수·PDH(back-to-back)는 대체재가 없어 대상 아님 · 연료 전환 비용은 보상 없이 협의, 기술 부담으로 못 하는 경우도 있음</div>
-    </div>
+<ul class="nt">
+<li>
+<p class="nt"><b>원가:</b> FEI</p>
+</li>
+<li>
+<p class="nt"><b>판가: </b>도시가스연동가(=한국가스공사가 도입한 LNG 가격 + 공급가격)<br />*LNG가격 Formula = Brent(원유) 55% + HH(미국LNG) 10% + JKM(동아시아LNG) 35%</p>
+</li>
+<li>
+<p class="nt">헷지를 잘하기 위해서 필요한 2가지는 아래와 같음<br />① 도시가스 가격 추정이 정말 중요함. <u>KOGAS 판가 포뮬러를 알아야</u> 제대로 hedge를 할 수 있음<br />② 판가를 알게되면 <u>KOGAS 판가 대비해서 경쟁력 있게 LPG를 시장에서 소싱</u>해 오는 것이 매우 중요</p>
+</li>
+<li>
+<p class="nt">도시가스 가격은 ‘KOGAS 도매요금+ 각 권역별 소매공급비’ 더해서 결정<br />그 중 KOGAS<u>의 LNG 도입가격이 압도적으로 중요한 factor</u>임. 비중도 높고 가변성도 높기 때문임. 그래서 EE본부는 KOGAS의 도매요금(=즉, LNG도입가)을 추정하기 위한 여러가지 방법을 활용하고 있음.</p>
+</li>
+<li>
+<p class="nt">보통 가스공사는 장기 term 계약(10~20년간)이 15~20개 정도 있음. 나머지는 그때 그때 시장에서 사는 LNG로 구성되어 있음</p>
+</li>
+<li>
+<p class="nt">그래서 우리는 Term 가격에 대한 조건을 대부분 파악하고 있음. 리서치도 하고 글로벌에 유명 에너지 기관 통해서 정보들을 얻게 됨. 가스공사 대부분의 계약을 알고 있음.  계약 당시에 예상되는 LNG, 원유 가격을 알아서 이것들을 조합하면 어느 정도 <b><u>가스공사의</u></b><u> </u><b><u>LNG 도입가</u></b><u>를 추정할 수 있게 됨</u>.  그래서 판가를 정밀하게 추정할 수 있게 됨</p>
+</li>
+<li>
+<p class="nt"><b>정산 단가</b>와 <b>공급비</b>도 추정하고 있음</p>
+</li>
+<li>
+<p class="nt">가스공사는 공사여서 그들의 원가를 그대로 국민에게 전가할 수 없음. 그래서 판가에 다 전가하지 못하고 <b>미수금</b>이 발생하게 됨.  그래서 미수금에 따른 향후 정산단가를 나중에 어떻게 반영할지도 중요한 부분인데 이런 부분도 우리 회사가 로직을 개발해서 정밀하게 추정하고 있음</p>
+</li>
+<li>
+<p class="nt"><b>도입부대비</b>와 <b>공급비</b>도 나름의 로직을 가지고 추정하고 있음</p>
+</li>
+<li>
+<p class="nt">가스공사의 매월 도매요금을 발표해주는데, 우리는 이 발표가 나기 전에 3, 4년뒤까지 가격까지 추정하고 있음. 현재는 2030년가격까지 추정을 하고 있음</p>
+</li>
+</ul>
 
-    <div style="background:white;border:1px solid #D4D6D9;border-radius:10px;padding:14px 16px;margin-bottom:12px;">
-     <div style="font-weight:800;font-size:12.5px;color:#142446;margin-bottom:8px;">⑧ 실행 범위 &amp; 상대가 Index</div>
-     <table style="width:100%;border-collapse:collapse;font-size:10.5px;">
-      <tr style="background:#DBE6F1;"><th style="padding:6px;border:1px solid #D4D6D9;width:18%;">대상</th><th style="padding:6px;border:1px solid #D4D6D9;width:20%;">상대가 Index</th><th style="padding:6px;border:1px solid #D4D6D9;">특징</th><th style="padding:6px;border:1px solid #D4D6D9;width:14%;">Optionality</th></tr>
-      <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">산업체 (TSP, 연료용)</td><td style="padding:6px;border:1px solid #D4D6D9;"><strong>FEI/Brent</strong><br><span style="color:#8E9398;">+ MB/Brent, JKM, HH</span></td><td style="padding:6px;border:1px solid #D4D6D9;">LPG 사서 유가 연동 도시가스가로 판매. MB는 shipping cost 때문에 완벽 헤지 어렵지만 중장기 안정성 때문에 소싱(지금까지 Opt. 대상 아님, 안정적 깔아두는 물량)</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;color:#172A55;font-weight:700;">○</td></tr>
-      <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">석화 납사대체 (원료용)</td><td style="padding:6px;border:1px solid #D4D6D9;"><strong>FEI/MOPJ</strong></td><td style="padding:6px;border:1px solid #D4D6D9;">NCC에 납사 대신 LPG 투입. 월 Spot → 작년부터 1년 이상 Term 위주. 납사는 유가 상관이 높아 계절성 약함, LPG 동고하저로 플레이. Fuel vs Feedstock 차이만 있을 뿐 산업체와 동일 컨셉</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;color:#172A55;font-weight:700;">○</td></tr>
-      <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">Dual Fuel 소형 발전 (연료전지·자가발전)</td><td style="padding:6px;border:1px solid #D4D6D9;">FEI/Brent</td><td style="padding:6px;border:1px solid #D4D6D9;">LPG·도시가스 둘 다 투입. 못 주면 도시가스사가 대체 공급하는 스위칭 모델</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;color:#172A55;font-weight:700;">○</td></tr>
-      <tr><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">LNG Paper (JKM·HH Sell)</td><td style="padding:6px;border:1px solid #D4D6D9;">JKM, HH</td><td style="padding:6px;border:1px solid #D4D6D9;">실물 미동반. $15 Sell 잡았는데 시장 $12면 Sell 풀어 $3 차익. 더 오르면 기회이익 상실. JKM은 펀더멘털상 상승 확률 높다고 보면 전략적으로 노출시키기도(러-우 전쟁, 미-이란 전쟁 사례)</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;color:#172A55;font-weight:700;">○</td></tr>
-      <tr style="color:#8E9398;"><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">PDH (SKA 등)</td><td style="padding:6px;border:1px solid #D4D6D9;">Back-to-back</td><td style="padding:6px;border:1px solid #D4D6D9;">구매·판매 Index 동일 + 일정 마진. 대체재 없어 공급 중단 불가</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:700;">×</td></tr>
-      <tr style="color:#8E9398;"><td style="padding:6px;border:1px solid #D4D6D9;font-weight:700;">민수</td><td style="padding:6px;border:1px solid #D4D6D9;">–</td><td style="padding:6px;border:1px solid #D4D6D9;">물량은 크지만 대체재 없음</td><td style="padding:6px;border:1px solid #D4D6D9;text-align:center;font-weight:700;">×</td></tr>
-     </table>
-    </div>
+<ul class="nt">
+<li>
+<p class="nt"><b>Q. 판가는 이렇게 추정하면 그럼 원가는 어떻게 소싱할까?</b></p>
+</li>
+<li>
+<p class="nt">우리한테는 <b><span style="color:#337EA9;">상대가</span></b>가 중요함. LPG가격과 원유의 오늘의 가격도 중요하지만</p>
+</li>
+<li>
+<p class="nt">결국 <b><span style="color:#337EA9;"><u>LPG가격이 유가 대비해서 상대적으로 얼마나 경쟁력이 있는가가 중요</u></span></b>함!!!!(FEI로사서 유가 연동된 도시가스 가격으로 팔기 때문)</p>
+</li>
+<li>
+<p class="nt">lng 대비 lpg의 상대가, 납사대비 lpg의 상대가 경쟁력이 중요함.</p>
+</li>
+<li>
+<p class="nt">데일리로 인덱스가 바뀜에 따라 우리의 소싱 경제성이 어떻게 달라지는 지 아침마다 보고 있음</p>
+</li>
+</ul>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-bottom:12px;">
-     <div style="background:white;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">⑨ 최근 사례</div>· <strong>'26 Unwind:</strong> '27년 물량을 '26년 1월 전량 Unwind(이익) → 포지션 open 상태에서 미-이란 전쟁 발발("다시 잡기 힘들겠네") → 미-이란 MOU 화해 모드 때 재소싱 거의 완료<br>· <strong>LNG paper:</strong> $14 Sell 진입 → 하락 시 Unwind 차익<br>· <strong>러-우 전쟁('22):</strong> JKM Hedge 후 Unwind해 포지션 open → 실물 급등 이익까지 확보 (재Hedge 상태였다면 정해진 이익만)<br>· <strong>미-이란 전쟁('26):</strong> JKM Hedge 돼 있었으나 사장·관련 팀 논의로 <strong>의도적 노출</strong> → 상승분 확보</div>
-     <div style="background:#EEF3F8;border:1px solid #D4D6D9;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.65;color:#385269;"><div style="font-weight:800;font-size:12px;color:#142446;margin-bottom:4px;">⑩ 한계·리스크 (Q&amp;A)</div>· Unwind하면 Index 미스매치 리스크가 다시 살아남 → 재소싱 필수. 상대가가 계속 오르면(97%) 공급손실 감수하고 잡아야 함 (지금까지 그런 사례는 없음, MI 뷰 기반)<br>· Unwind한 95.9%보다 더 오르면 기회이익 상실 — "정수리에서 팔기"는 불가<br>· <strong>동고하저 약화</strong>: 중국 PDH·석화 증설, 원료용 수요가 연중 평탄화, NCC 스위칭으로 박스권 → 자구책은 원월물로 더 일찍 더 싸게 + Opt. 횟수 늘리기<br>· <strong>KOGAS 판가 하락 리스크</strong>: 가격 중시 Term 갱신, 산업용 미수금 소진 → 도시가스 가격 하락세. 그래도 도입부대비 같은 상수 절편 덕에 LPG 우위 가능<br>· '27~'29 공급이익은 양호, '30 KOGAS 구조 큰 변화 없을 전망, 그 이후는 분석 필요</div>
+<p class="nt"><b><span style="color:#448361;">Q. 그럼 실제로 소싱은 언제, 어떻게 진행할까?(상대가의 Range를 보면서 결정)</span></b></p>
+
+<ul class="nt">
+<li><b>CV상대가(=FEI/Brent)가 낮아지면 우리한테 유리한거임</b><br />→ <u>Brent(도시가스 연동 판가)가 높아지고 FEI(원가)가 낮아진다는 뜻이니까</u> <br />    그래서 <b>상대가가 약세를 보일 때마다 소싱을 진행하게 됨</b></li>
+<li>그래서 그래프가 훅 떨어졌을때 소싱을 하고, 반대로 이게 오르면 옵셔널리티를 하게됨</li>
+<li>MOPJ는 석유화학용 원료임. 우리는 석유화학 원료로도 LPG를 공급함.  그래서 납사대비 LPG가 얼마나 싸고 비싼지도 매일 모니터링함. 이것 역시 상대가 그래프가  약세일 때 소싱하고 높을 때 옵셔널리티를 진행함</li>
+<li>→ Hedge를 하기 위한 기반 핵심 조건. 1) 도시가스에 대한 정밀한 추정,  2) 미리 소싱을 잘하는 것</li>
+</ul>
+
+<p class="nt nt-h"><b><span style="color:#448361;">[Hedge에 대한 본격 컨셉]</span></b></p>
+
+<ul class="nt">
+<li>
+<p class="nt"><b>원가:</b> FEI(LPG가격)</p>
+</li>
+<li>
+<p class="nt"><b>판가: </b>도시가스연동가(=한국가스공사가 도입한 LNG 가격 + 공급가격)<br />*LNG가격 Formula = Brent(원유) 55% + HH(미국LNG) 10% + JKM(동아시아LNG) 35%</p>
+</li>
+<li>
+<p class="nt">실물 LPG를 배로 수입시켜서, 배관 통해서 도시가스로 파는구조임. Paper도 마찬가지로 진행됨</p>
+</li>
+<li>
+<p class="nt"><b>Paper: FEI Buy</b>(LPG페이퍼를 사고)/  <b>brent, HH, JKM Sell</b>(원유, LNG 페이퍼 Sell을 걸게됨)</p>
+</li>
+<li>
+<p class="nt">KOGAS의 Index별 비중, 가격에 맞게 페이퍼를 똑같이 사게 됨</p>
+</li>
+<li>
+<p class="nt">과거에는 KOGAS 포트폴리오 중에 원유와 연결된 포지션이 많아서 우리가 Brent위주로 paper hedge를 많이했는데, 최근에는 LNG 비중이 높아지면서 KOGAS 포트폴리오도 변화하면서 JKM이나 HH의 Paper Hedge도 적극적으로 진행하고 있음 <br />→ 지금은 KOGAS 모든 포트폴리오에 대한 Hedge를 진행중임</p>
+</li>
+<li>
+<p class="nt">실물은 매일매일 가격이 달라짐.  Brent(=도시가스가격이라고 치환해서 보면됨) LPG가격도 맨날 바뀜. 가격이 날마다 변동하는 사업 리스크가 존재함.</p>
+</li>
+<li>
+<p class="nt">만약에 우리가 LPG Buy $550 페이퍼를 사면, 나중에 LPG 가격이 $200으로 떨어지든 $900으로 오르던간에 우리는 무조건 550불에 살 수 있게 된 것임</p>
+</li>
+<li>
+<p class="nt">판매도 마찬가지임. Brent를 $70에 팔수 있는 권리를 사면, 나중에 brent가격이 10불이되던 100불이되던 70불에 팔 수 있는 권한이 생기게 되는 것임. 실물은 여전히 춤을 추겠지만 이렇게 되면 buy와 sell paper는 헷지가 되는 것임</p>
+</li>
+</ul>
+
+<p class="nt"><b><span style="color:#337EA9;">Q. Buy, Sell Paper를 잡는 시점은?</span></b><span style="color:#337EA9;"> </span></p>
+
+<ul class="nt">
+<li>fei, brent 고정하는 시점은 <b><u>동시에 함</u></b>. 왜냐하면 하루하루의 상대가가 중요하기 때문임.  <u>우리가 보통 페이퍼를 잡을 때는 이 정도 상대가면 좋겠다 하고 들어가는건데 시점 차이가 발생하면 우리가 생각했던 상대가가 변할 수 있기 때문에 동시에 buy, sell을 고정하게 됨</u></li>
+<li>그리고 시차가 발생하면 그 시차 동안은 speculation이 되는 거임</li>
+</ul>
+
+<p class="nt nt-h"><b>[파생상품 평가손실, 평가이익]</b></p>
+
+<ul class="nt">
+<li>
+<p class="nt"><b>평가이익:</b> 우리가 가진 Sell paper가격 > 현재 시장거래가격  //  Buy paper 가격 &lt;  현재시장조달원가</p>
+</li>
+<li>
+<p class="nt"><b>평가손실:</b>  우리가 가진 Sell paper가격 &lt; 현재 시장거래가격// Buy paper 가격 >  현재시장조달원가</p>
+</li>
+<li>
+<p class="nt">ex) $550 FEI Buy로 사뒀는데 현재 FEI 시장가격 $700불일 경우, 우리는 시가보다 싸게 살 수 있으니까 <u>평가이익</u>이 발생하는구조<br />ex) $550 FEI Buy로 사뒀는데 현재 시장가가 $400일 경우, 우리는 시장에서는 400만 주면 살 수 있는데 울며겨자먹기로 550불에 사야하니까 <u>평가손실</u>이 발생하게 됨</p>
+</li>
+<li>
+<p class="nt">즉 정리해서 이야기하면,  우리가 공급해야 하는 월에 실물 LPG가격이 굉장히 올랐을 때 hedge를 해놓지 않았다면 굉장히 비싸게 사야하는 경우가 발생함. 그래서 실물은 비싸게 사야함. 하지만 우리가 paper를 가지고 있다면 paper가 이익이 발생하면서 그 손해를 상쇄해주는 효과가 발생하는 것임.  마진은 fix되는 구조라는 뜻</p>
+</li>
+</ul>
+
+<p class="nt nt-h"><b><span style="color:#448361;">[Optionality Workflow]</span></b></p>
+
+<ol class="nt">
+<li><b>(도시가스 판매가 추정)</b>먼저 도시가스 가격을 정밀하게 추정하고</li>
+<li><b>(수요확보)</b>추정된 가격가지고 영업 진행 “저희가 도시가스 가격보다 5%정도 싼 가격에 싸게 드릴게요” 하고 고객사에 연동 판매</li>
+<li><b>(LPG 사전 도입)</b> 연동 판매 계약가보다 더 싼가격에 상대가 소싱을 하는 것이 중요함.  <br />페이퍼를 소싱해두고, 실물은 floating하니까 두 개가 만나서 마진은 fix되는 것임.<br />→ 만일 우리가 paper만 가지고 있었거나, 실물만 가지고 있었다면 요동칠텐데 우리는 2개를 다 보유하고 있기 때문에 2개의 손익이 상쇄되면서 우리가 계획한 margin으로 fix되는 구조인 것임.</li>
+<li><b>(공급옵션 vs 미공급+Unwind 옵셔널리티 옵션 비교해서 의사결정)</b>우리가 잡아둔 상대가 value를 가지고 있다가 기회를 보게됨<br />ex) 상대가 85%에 잡아뒀는데, 갑자기 시장에서 상대가가 95%로 뛰면 주식처럼 비싸게 팔아서 이익을 먹게됨. 이걸 옵셔널리티 이익이라고 함. 그리고 가지고 있던 포지션을 풀어서 확정해버리는 것을 unwind라고 하는거임.  <br />→ 그래서 <b>‘공급option(공급마진먹는 구조)’ VS ‘Hedge한걸 옵셔널리티해서 unwind 이익을 먹을래’</b>를 결정하게 되는 거임</li>
+<li><b>(Unwind했기 때문에 다시 Paper 잡기)</b>그리고 만약에 공급까지 잔여 기간이 더 남았다면 Unwind한 물량을 시장에서 다시 기회보다가 공급옵션 대비 싼 가격에 다시 들어가는 구조</li>
+<li><b>(다시 Paper 잡았다가 공급해서 공급이익까지 챙기는 경우도 존재함)</b><br /><br />Hedge 해둔 것을 비싸게 팔아서 unwind해서 옵셔널리티 이익을 얻는다고 보면됨</li>
+</ol>
+
+<p class="nt nt-h"><b><span style="color:#448361;">[Optionality의 4대 요소(제품/가격/기간/물량)]</span></b></p>
+
+<ul class="nt">
+<li>
+<p class="nt">옵셔널리티는 ‘제품/가격/물량/기간’의 옵션을 활용한 최적 이익 창출 모델</p>
+</li>
+<li>
+<p class="nt"><b>①제품:</b> 옵셔널리티를 하기 위해서는 LPG/ 원유/ LNG, 납사의 제품을 가지고 저글링을 할 수 있음</p>
+</li>
+<li>
+<p class="nt"><b>②가격:</b> 옵셔널리티에서는 가격을 싸게 잘 잡는게 엄청 중요함 그래야 가격 튈 때 마진 크게 먹을 수 있어서</p>
+</li>
+<li>
+<p class="nt"><b>③물량:</b> 물량이 커야 또 옵셔널리티 수익 많이 창출할 수 있고</p>
+</li>
+<li>
+<p class="nt"><b>④기간:</b> 기존에는 근월물, Spot 위주로만 하다가 이제는 2~3년 이후 물량까지 하면서 더 많은 옵셔널리티 기회를 노리고 있음<br />→ 위 4가지 요소를 잘 활용해서 이익 창출 최적화를 진행하고 있음</p>
+</li>
+<li>
+<p class="nt"><b>공급 기반으로 옵셔널리티를 진행해야 함</b>!!!(매우 중요함)  왜냐면 아래와 같은 사례가 발생할 수 있기 때문임<br />ex) 우리가 상대가를 85%로 잡아뒀는데, 옵셔널리티 하고 싶은데 시장이 계속 80~85%에서 왔다갔다하는 <u>옵셔널리티를 실행하기 애매한 시장이 지속</u>됨. 그럼 손실 입을 수 밖에 없는데 <u>이 때 bottom을 막아주는 옵션이 바로 </u><b><span style="color:#337EA9;"><u>‘공급 옵션’</u></span></b> 임.</p>
+</li>
+<li>
+<p class="nt">공급옵션은 kg당 +20원, +38원 등으로 마진을 fix해두었기 때문임</p>
+</li>
+<li>
+<p class="nt">가만히 두고 옵셔널리티를 하지 않고 있다가 고객사에 공급을 하면 위에 약정한 마진을 먹는 구조가 되는 것임</p>
+</li>
+<li>
+<p class="nt">즉, 옵셔널리티는 공급옵션보다 더 크게 먹을 수 있겠다는 확신이 들 때 사용하는 카드인 것</p>
+</li>
+<li>
+<p class="nt">그러니까 <b><u>공급기반이 되어야 하방은 막으면서, 옵셔널리티 수익이라는 upside 수익도 창출할 수 있게 되는 것임</u></b></p>
+</li>
+<li>
+<p class="nt">공급기반의 Hedge가 중요함. 공급이 없으면 speculation임</p>
+</li>
+</ul>
+
+<ul class="nt">
+<li>
+<p class="nt"><b>그런데 고객사 입장에서는 괜찮을까?</b></p>
+</li>
+<li>
+<p class="nt">고객사랑 계약을 했는데 SK가스가 물건을 못 준대요. 그때는 도시가스 다른 연료로 대체해서 써야함. 그래야 Plant가 계속 돌아가기 때문.  대체재 공급이 용이한 것을 활용해야 함. 만약 고객사가 대체재가 없는 상황이면 공급을 해줘야하니까 옵셔널리티가 어려움</p>
+</li>
+<li>
+<p class="nt"><b>(미공급 옵션) </b>산업체 대상으로 “저희가 LPG를 도시가스대비 92%정도에 싸게 드릴게요.  근데 나중에 우리가 어 죄송한데 저희가 파생상품거래를 해야해서 못 드릴거같아요. 도시가스 쓰세요. 대신에 손해보는 부분은 보상해드릴게요”라는 Concept으로 시작했음.</p>
+</li>
+<li>
+<p class="nt">‘20년도부터 이런 컨셉으로 시작함</p>
+</li>
+<li>
+<p class="nt">공급마진 &lt; 파생상품 처분을 통한 이익  일 경우에 옵셔널리티 실행</p>
+</li>
+<li>
+<p class="nt">그리고 현재는 미공급 옵션 뿐만 아니라 옵셔널리티 범위가 넓어져서 어떻게 옵션이 진화하고 있음</p>
+</li>
+<li>
+<p class="nt"><b><span style="color:#C14C8A;">지금은 제품/가격/물량/기간이라는 Optionality 요소들을 어떻게 극대화 하고 있을까?</span></b><br /><b>① 제품의 다각화:</b> 원래 lpg 연료용 공급 물량만 하다가, 연료용 뿐만 아니라 석화사의 원료용 물량도하고, LNG도 하고 있음<br /><b>② 물량의 Size 증대:</b> 과거에는 산업체 1개의 물량만 가지고 옵셔널리티를 진행했지만, 지금은 산업체 전체의 1년짜리 물량을 가지고 옵셔널리티를 진행함. TSP산업체가 지금 약 30여개 되는데 이 물량을 묶은 전체 물량 대상으로 옵셔널리티 진행함. 그리고 석화사 물량도 그냥 1년짜리 Term 물량을 다 옵셔널리티 진행해서 물량이 굉장히 많이 늘었음<b><br />③ 기간의 확대:</b> (As-was) 당년, y+1년 물량 대상 옵셔널리티  →  (As-Is) 당년, y+1, y+2, y+3년 물량으로 확대<br />→<u>보통은 원원물(y+2, y+3년짜리 물량)로 갈수록 backwardation이여서 더 가격이 싸짐.</u> 그래서 <b>상대가를 더 낮은 value를 미리 사두니까 옵셔널리티 수익이 더 극대화</b> 될 수 있게 됨</p>
+</li>
+<li>
+<p class="nt">그래서 원월물을 활용한 기간과 가격측면에서의 옵셔널리티 확대도 진행되고 있음</p>
+</li>
+</ul>
+
+<p class="nt nt-h"><b>[옵셔널리티의 실행 범위]</b></p>
+
+<ul class="nt">
+<li>EE의 밸류체인을 간단하게 그린거.  민수용, 정유사도 있지만 지금 옵셔널리티 대상 물량은 <b><span style="color:#337EA9;">석유화학사(납사대체 물량만)와 산업체 용 물량만 옵셔널리티 대상</span></b>임.  석화사 중에서도 PDH(ex. SKA 등)는 back to back 거래(구매와 판매 Index가 똑같아서 일정 마진을 붙혀서 파는구조라는 뜻)라 옵셔널리티 대상은 아니고,  납사대체 물량만 옵셔널리티 대상물량임.   <br /><i><b>Q. 왜 민수용은 옵셔널리티 대상이 아닐까? 물량도 큰데,</b></i><i> </i><i><span style="color:#787774;"> Back to Back 거래여서 리스크가 존재하는 건 아니지만, 그래도 동일 Index로 Sell 잡아뒀다가 공급하기 전에 더 비싸게 팔 수 있는 기회가 오면 옵셔널리티 하면 안되나?????? → 어 생각해보니까 </span></i><i><span style="color:#787774;"><u>안될 거 같음. 왜냐면 옵셔널리티 할 때 대체재가 존재하는게 결국 중요하다고 했잖아…</u></span></i><i><span style="color:#787774;"> 근데 갑자기 SKA에 LPG공급 못하겠다 우리 파생상품 Play해야되서… 라고 하면 안되니까 PDH물량은 옵셔널리티를 할 수 없나보다.<br />민수용도 마찬가지겠지? 민수용도 대체재가 없으니까</span></i></li>
+</ul>
+
+<p class="nt nt-h"><b><span style="color:#448361;">[상대가 Index]</span></b></p>
+
+<ul class="nt">
+<li>
+<p class="nt"><b>산업체:  FEI/Brent</b>(LPG를 사서, 원유 연동 도시가스가로 파는 것을 가정한 것)를 <b>제일 많이 사용</b><br />             <b>MB/Brent</b>  → MB는 shipping cost때문에 완벽한 헷지가 어렵지만 그래도 <u>중장기 공급안정성 때문에 MB를 소싱하기도함</u>. MB는 <u>FEI랑 다른 성질, 다른 기대감 때문에 우리가 소싱을 진행</u>함.<br />             <b>JKM, HH</b>도 도시가스 구성요소 중 하나로 최근 옵셔널리티 대상으로 활발하게 진행하고 있음</p>
+</li>
+<li>
+<p class="nt"><b>FEI/MOPJ(납사대체 원료 공급용 LPG)</b>도 상대가로 샀다가 옵셔널리티로 많이 하고 있음</p>
+</li>
+<li>
+<p class="nt">우리가 <b>연료전지나, 자가발전 같은 작은 발전사를 대상으로 Dual Fuel 연료공급을 진행</b>하고 있음.<br />LPG도 넣고 도시가스도 넣음. 도시가스사와 협업해서 내가 만약에 공급을 못하는 상황이면 도시가스사 너희가 대신 공급을 해줘라는 컨셉으로 받는 것임. <br />이 때 만약 <u>LPG 가격 파생상품이 많이 올라가서 옵셔널리티 이익을 많이 먹을 수 있겠다하면 이때는 옵셔널리티를 하고 도시가스를 대체공급</u>하는게 있음.</p>
+</li>
+</ul>
+
+<p class="nt nt-h"><b>[Optionality 전형적인 Concept]</b></p>
+
+<ul class="nt">
+<li>옵셔널리티 초기에는 특정 산업체를 대상으로 옵셔널리티를 진행했음<br />- 특정 산업체에게 “SK가스가 LPG 실물 공급해드릴게요” 하면서 기반 수요 확보<br />- 그 뒤, LPG 페이퍼로 마진 픽스 해두고<br />- 그러다가 <b><span style="color:#337EA9;">LPG 상대가격이 상승하면</span></b><b> Unwind 이익을 취하고</b>, <u>도시가스사한테 산업체에게 연료 대신 공급해 달라고 함</u>.  <br />- 만일, <b><span style="color:#337EA9;">상대가가 하락하면</span></b> <b>옵셔널리티하면 손해를 보는 상황</b>이기 때문에, <u>미리 fix한 마진으로 산업체에게  공급</u>함</li>
+</ul>
+
+<p class="nt nt-h"><b>[Optionality Concept의 확장]</b></p>
+
+<ul class="nt">
+<li>
+<p class="nt">산업체는 특정 산업체 물량을 가지고도 하지만, 내년 물량을 가지고 옵셔널리티를 진행하는 형태로 변함</p>
+</li>
+<li>
+<p class="nt"><u>내년에 공급할 30개업체 물량</u> 미리사서 옵셔널리티하고, 다시사서 공급하게됨.  <u>내년 물량 미리샀다가 상대가 높을 때 풀어서 옵셔널리티차익먹고, 다시 잡아서 또 공급이익을 또 먹는 형태</u></p>
+</li>
+<li>
+<p class="nt">y+1 물량만 진행하다 보니, ‘이럴 거면 그냥<b> y+2, y+3년치 물량까지</b> 진행해보자’라고해서 원월물을 대상으로 동일 컨셉으로 진행중임</p>
+</li>
+<li>
+<p class="nt"><b>원월물은 소싱할 수 있는 상대가 value를 더 낮게 가져갈 수 있음</b>(기본적으로 Backwardation 시장을 가정하므로)</p>
+</li>
+<li>
+<p class="nt">원월물은 optionality play하기 훨씬 용이함. 왜냐면 시간적인 여유가 있기 때문에 상대가 낮을때 잡았다가 상대가 올라가면 unwind하고, 다시 또 기회가오면 잡고 하면됨.  공급 Deadline이 2년, 3년 뒤니까 훨씬 여유가 있어서 옵셔널리티에 활용하기 더 좋음</p>
+</li>
+<li>
+<p class="nt"><b>LNG 판가 Paper</b>도 미리 사뒀다가 팔고 다시 Hedge 하는 play도 하고 있음</p>
+</li>
+<li>
+<p class="nt">그리고<b> lpg-도시가스를 dual fuel로 공급하는 소형발전소 스위칭 모델</b>도 있음</p>
+</li>
+<li>
+<p class="nt"><b>산업체도 FEI/Brent냐 FEI/MOPJ만 다르고 똑같은 컨셉으로 진행</b>하고 있음</p>
+</li>
+<li>
+<p class="nt"><b>언제부터 Hedge와 옵셔널리티를 진행했냐?</b></p>
+</li>
+<li>
+<p class="nt">Hedge는 14년도부터 진행했고, Optionality를 본격적으로 시작한 것은 ‘20년도 부터임</p>
+</li>
+<li>
+<p class="nt">그 때부터 산업체 미공급 옵션을 계약서에 반영해서 옵셔널리티 시작했음.</p>
+</li>
+<li>
+<p class="nt">그 이후에는 물량, 상품, 기간 다각화를 꾀했고  24년도 25년도가 거의 옵셔널리티 성숙도가 높아진 해임.  상품의 종류도 많아지고 물량도 많아지고 수익도 많이 냄. 연간 옵셔널리티로 300억 이상씩 냈음</p>
+</li>
+</ul>
+
+<p class="nt nt-h"><b>[최근 옵셔널리티 예시들]</b></p>
+
+<ul class="nt">
+<li>(22년도 예시)<br />당시 일정 base 마진을 먹을 수 있게 소싱을 해놓고나서  미공급옵션 실행을 3회 정도함</li>
+<li>시가가 우리 소싱가보다 훨씬 튀면 옵셔널리티를 실행했음</li>
+</ul>
+
+<ul class="nt">
+<li><b><span style="color:#337EA9;">원월물 R/O롤오버라는 것이 무엇인가? </span></b> 훨씬 <b>미리 85.6%라는 상대가 벨류로 페이퍼 잡아서 Hedge</b>를 해두고,  그리고 LPG는 <b>동절기에 비싸지게 되면</b>  <b>95.6% 상대가가 오는 시점에 unwind해서 이익을 먹음.</b><br />그리고 이 물량을 <b>다시 91.6% 상대가에 사서 이듬해에 공급</b>을 하게 됨.  <br />이런 플레이를 반복하다보면 85.6% 공급벨류, 그리고 <u>91.6%으로 다시 잡더라도 공급벨류는 조금 높아져서 공급마진은 줄어들 수 있지만,  Unwind를 한번 거치면서 먹은 이익이 훨씬 크기 때문에 추가적인 이익을 확보할 수 있는 재원으로 활용</u>할 수 있음.</li>
+<li>왜냐하면 91.6%로 잡았다고 하더라도 어차피 판매가 보다는 싸게 잡으니까  <br /><b>*공급이익= 계약된 판매가- 91.6%로 조달한 원가</b>   한번 더 먹는 구조가 되는 것임</li>
+<li>사서 바로 공급하는 것 보다  사서한번 풀어서 가격 좋을 때 옵셔널리티 실현하고, 다시 잡아서 공급해서 또 먹는 형태인거임.</li>
+<li>만약에 너무 근월물 거면 다시 잡기 어려울 수 있음. 왜냐하면 팔았는데 당장 다음달까지 물량 다시 우리 판매가 대비 경쟁력있는 가격에 못잡으면 손해를 볼 수도 있으니까   근데 원월물은 상대적으로 기간 여유가 있어서 이런 플레이를 하기에 더 적절함</li>
+</ul>
+
+<p class="nt"><b>Q. 소싱 적정 상대가 Range, Optionality 적정 상대가 Range는?</b></p>
+
+<ul class="nt">
+<li>
+<p class="nt">소싱 적정 레인지는 매년 다르긴 함. 보통은 90% 언더면 적정하다고 보고 있음. 도시가스 판가가 매년 바뀌기 때문에 소싱 상대가가 달라짐. 당시 유가수준에 따라서 상대가도 달라짐.</p>
+</li>
+<li>
+<p class="nt"><span style="color:#D44C47;">유가가 낮게 형성되면 상대가를 조금 양보해도 되고, 유가가 높으면 상대가를 더 타이트하게 잡아야함<br /></span><i><span style="color:#787774;">→ 아마도 유가 Brent가 낮으면 구조적으로 판가를 많이 못받을 수 밖에 없는 상황. CV=FEI/Brent인데  분모자체가 작으니까 CV가 평소대비 더 높을 수 밖에 없는 구조라서 양보를 한다는 의미 같음<br />→ 반대로 유가 Brent가 높으면 구조적으로 판가를 많이 받을 수 있는 상황이여서,  분모가 커지면 CV자체도 내려가니까 더 타이트하게 더 낮은 Value로 잡아야 확실하게 이익을 먹을 수 있게 되는 구조 같음</span></i></p>
+</li>
+<li>
+<p class="nt">근데 90% 언더면 괜찮다고 봄</p>
+</li>
+<li>
+<p class="nt">지금 시장은 동고하저 구조 완화되어 있음. 옵셔널리티를 실행하기 재미없어진 시장이라고 보면 되는 건데, <b>현재는 옵셔널리티 잡은 상대가 대비 5% 추가 더 먹는거를 타겟하고 있음</b>.</p>
+</li>
+</ul>
+
+<ul class="nt">
+<li><b>미공급옵션이 있는 것은 TSP산업체 30개 중에 아주 일부에만 해당됨. </b>대부분은 공급의무가 존재함</li>
+<li>그래서 바로 다음해의 물량을 가지고 옵셔널리티 하는 것은 위험부담이 있음. 그래서 공급년도나 공급월 임박해서는 옵셔널리티 실행하지 않음</li>
+<li>그래서 원월물 R/O를 개발하게 된 것임</li>
+<li>MB물량도 별도로 소싱한다고 했는데, 지금까지는 <span style="color:#D44C47;">MB물량을 옵셔널리티 대상으로 생각하지 않았고, 그냥 안정적으로 깔아두고 가는 물량이라고 생각했음. 포트폴리오 다각화를 통해서도 공급의 안정성을 도모하고 있음</span></li>
+</ul>
+
+<p class="nt"><b>Q. 금융시장에서 R/O는 만기가 도래했을 때 포지션 청산하면서 다시 잡는 형태인데, 우리회사에서 말하는 R/O는 어떤 의미인지?</b></p>
+
+<ul class="nt">
+<li>옵셔널리티는 만기가 도래하기 전에 실행하는거임.   만기 도래하면 모두 price out 되어서 이런 플레이를 하기 어려움. 만기가되면 모두 실물 페이퍼 손익 다 픽스되고, 공급을 하게 됨</li>
+</ul>
+
+<p class="nt"><b>Q. 95.9%에 실현을 했는데 만약에 거기서 더 상대가가 올라가면 어떻게 되는건지?</b></p>
+
+<ul class="nt">
+<li>
+<p class="nt">이건 그냥 기회이익 상실이라고 봄. 근데 주식시장에서도 그렇지만 정수리에서 팔고 발바닥에서 잡기는 어려움. 물론 우리가 Unwind한 95.9%보다 상대가가 더 올라갈 수 있으나,  그건 어쩔 수 없음</p>
+</li>
+<li>
+<p class="nt">(예시. 미-이란 전쟁 위기 모면 사례) 27년도 물량 전체를 ‘26년 올해 초에 다 Unwind를 했었음. 그래서 일시적으로 포지션이 다 열려있는 상태였는데,  갑자기 미-이란 전쟁이 터짐. “엇 다시 잡기 힘들겠네….” 하면서 위기감을 느꼈는데 최근에 미-이란 MOU체결하면서 화해모드 돌입했을 때 그때 다시 다 주워담았음</p>
+</li>
+</ul>
+
+<p class="nt"><b>Q. 그리고 unwind를 하게 되면, 페이퍼가 사라진 거니까 인덱스 미스매치가 다시 살아나게 되는거 아닌지?</b></p>
+
+<ul class="nt">
+<li>Risk가 살아나는게 맞음. 그렇기 때문에 <u>재소싱을 해야함</u>. 다시 잡음. 91.6%로 다시 잡게 됨.  <u>재소싱을 해야되는데 상대가가 다시 안떨어지고 계속 올라가면 계속계속올라가면 공급손실이 발생할 수도 있음</u>.</li>
+<li>97%로 올라가더라도 공급은 해야하니까 공급손실을 감수하고 다시 잡아서 공급을 해야하는 구조임</li>
+<li>그런데 다행히 지금까지는 Unwind 하고 나서  다시 진입하려고 할 때 너무 올라가서 잡기 어려웠거나 손실이 발생했던 사례는 없음.  왜냐하면 우리도 어느정도 MI 뷰를 가지고 플레이 하기 때문임</li>
+</ul>
+
+<p class="nt"><b>Q. LPG랑 LNG, 유가 가격 관계는?</b></p>
+
+<ul class="nt">
+<li>
+<p class="nt">유가나 LNG가격 대비해서 LPG가 무조건 싸지는 않음. 하지만 도시가스 가격에는 ‘유가+LNG+도입부대비’ 처럼  상수로 도입부대비가 붙어버리게 됨.</p>
+</li>
+<li>
+<p class="nt">그래서 단순하게 LNG, LPG를 비교했을 때 LPG가 항상 싸지는 않을 수 있지만, 다행히 저런 도입부대비 같은 상수 절편 때문에 LPG가 조금 더 유리할 수 있음</p>
+</li>
+<li>
+<p class="nt">그런데 최근에 도시가스 가격이 계속 내려오고 있음(사장님이 계속 말씀하시는 부분)</p>
+</li>
+<li>
+<p class="nt"><b>왜 도시가스 가격이 계속 떨어지고 있는지? </b>예전에는 <u>kogas</u>가 10~20년짜리 term계약할 때는 가격경쟁력보다는 공급안정성을 중요시했음.  그래서 비싸도 그냥 계약 체결함. 글로벌 호구라는 이야기도 많이 들을 정도였음. 그런데 요즘에는 <u>가격에도 되게 방점을 둠. 그래서 더 좋은 계약으로 많이 갱신되고 있음</u>.</p>
+</li>
+<li>
+<p class="nt">그리고 두 번째 이유는 <u>미수금</u>이 여전히 민수용은 13조원이 쌓여있는데 <u>산업용은 많이 소진되었음</u>. 그러다보니 <u>KOGAS 가격이 점점 더 낮아질 수 있따는 것이 우리에게는 위험요소</u>임<br />- 그럼에도 불구하고 아직까지는 우리가 경쟁력을 가질 수 있음</p>
+</li>
+</ul>
+
+<p class="nt"><b>Q. 페이퍼 잡을 때 Sell/Buy 동시에 잡는다고 했는데 원월물 페이퍼 잡을 때도 동시에 잡는 것인지?</b></p>
+
+<ul class="nt">
+<li>근월물, 원월물 똑같이 시차에 의한 risk를 없애기 위해서 동시에 진행함</li>
+</ul>
+
+<p class="nt"><b>Q. 옵셔널리티는 실물 기반으로 하는 거라고 하셨는데, 원월물도 꼭 실물 기반으로 해야되는건지?</b></p>
+
+<ul class="nt">
+<li>원월물도 “판매량이 이 정도 될거야” 라는 가정하에 그 물량 만큼만 잡음</li>
+<li>산업체 중에서는 계약기간이 긴 것들이 있음. ‘27, ‘28, ‘29년 계약이 완료된 경우도 존재함. 그래서 어느정도 물량 예측이 가능함</li>
+<li>지금 ‘29년까지 물량을 잡고 있는데 이게 다행히 도시가스 가격대비 경쟁력 있게 소싱이 됨. 그 말은 결국 계약 갱신기간까지 물량을 들고 가더라도 우리가 Sales 할 수 있다는 뜻임(왜냐면 여전히 ‘29년에도 도시가스 대비 경쟁력 있는 소싱이 가능하니까)<br />도시가스 가격대비 더 싸게 제공해 주면 업체에서는 우리랑 거래를 안할 이유가 없기 때문임</li>
+<li>그리고 우리 산업체 대부분이 울산에 있음. 우리 울산 앞마당에서 사업할 수 있는 해자도 있어서 그런 점 감안해서 산업체 우리 물량이 어느정도 유지가 될 것이다라는 가정하에  물량을 만들고 옵셔널리티를 실행함</li>
+<li>그리고 만약에 판매량 기반이 아니면,  우리가 시장에서 잡은 상대가 Value가 85%였는데 계속 시장가가 떨어져서 80% 미만이 되면 손실이 날 수 있잖아요???? 그런데 공급옵션이 있으면 그냥 미리 계약한 공급 마진 얹어서 팔면 손실이 나지 않으니까(하방이 막힌 구조가 형성되니까) 그게 hedge인 것임.<br />판매 공급옵션이 없는 상태에서 옵셔널리티를 하면 하방이 뚫려있으니까 그건 손실을 감안하고 가는 speculation이 되는거임</li>
+</ul>
+
+<p class="nt"><b>Q. 우리가 최대한 정밀하게 KOGAS 판가를 추정해서 Hedge를 잡더라도, 만약에 옵셔널리티 안하고 그냥 공급만 하게되었을 경우에 페이퍼랑 어느정도 괴리는 발생하는 것 아닌지?</b></p>
+
+<ul class="nt">
+<li>우리가 KOGAS 판가를 정밀하게 추정한다고 해도 우리는 KOGAS가 아니기 때문에 차이가 발생할 수 밖에 없음. 왜냐면 KOGAS는 우리가 가지고 있는 Formula에 따라서만 움직이는게 아니고 그들이 가지고 있는 내부적인 정책도 반영하기 때문임.  포뮬러를 넘어서는 정책을 필 때도 있음</li>
+<li>이 때  판가에 Gap이 발생함. 우리는 이걸 Formula gap이라고 표현함. 우리가  추정했던 값과 실제 가격간의 차이가 발생함. 근데 다행히도 우리가 보수적으로 추정하고 있는 것인지 포뮬러갭이 손익상으로는 양수로 많이 나옴</li>
+<li>이건 어쩔 수 없이 가져가야 되는 부분임</li>
+<li>우리가 굉장히 리얼하게 KOGAS Formula를 추정하고 있지만 보수적으로 추정하는 부분이 있는거 같음. 그래서 이익은 예상했던 것 보다는 많이 나오는 편임</li>
+</ul>
+
+<p class="nt"><b>Q. 옵셔널리티 할 때 산업체 고객사들이 연료 전환할 때 애로사항이 있지는 않은지? 우리 UGPS도 연료전환 비용이 든다고 들었던거 같은데</b></p>
+
+<ul class="nt">
+<li>고객사도 부담이 존재함. 그렇다고 해서 우리가 연료 스위칭 코스트를 보존해주지는 않고 있음. 그래서 내가 공급을 못한다고 일방적으로  통보하는 게 아니라 협의를 하는 거임. 그 협의 과정에서 경제성은 나오는데 고객사의 기술적 부담 때문에 옵셔널리티 못하는 경우도 생기게 됨</li>
+</ul>
+
+<p class="nt nt-h"><b>[LNG Optionality]</b></p>
+
+<ul class="nt">
+<li>
+<p class="nt">KOGAS 연동가로 판다고 했을 때<br /><b>[Buy]</b> FEI Buy<br /><b>[Sell] </b>Brent Sell + JKM Sell + HH Sell    이렇게 짝궁으로 잡음</p>
+</li>
+<li>
+<p class="nt">근데 실제로 우리가 플레이를 할때는 <b><u>FEI, Brent는 짝궁으로 동시에 잡고</u></b>, <b><u>LNG는 따로 잡게 됨</u></b></p>
+</li>
+<li>
+<p class="nt">그 이유는 LNG, LPG 둘 다 겨울에 비쌈. 동고하저 패턴이 비교적 뚜렷한데</p>
+</li>
+<li>
+<p class="nt"><b>LPG는 원가니까 비쌀때 사면 안되고</b>, <b>LNG는 우리가 판가 Sell Paper니까 더 비쌀 때 사야함</b>.  그래야 높은 가격에 나중에 고정해서 팔 수가 있게 되니까 Sell Paper는 비싸게 잡아두는 것이 유리함</p>
+</li>
+<li>
+<p class="nt">그래서 시점을 꼭 맞춰서 잡기가 어려움.</p>
+</li>
+<li>
+<p class="nt">그래서 LNG Sell만 따로 페이퍼가 관리가 됨.</p>
+</li>
+<li>
+<p class="nt">그러다 보니 우리가 LNG를 15불로 딱 잡아두었는데 만약에 LNG 페이퍼가격이 더 올라가게 되면 기회이익 상실구간이 됨( 18불 19불로 나중에 팔 수 있는 권리를 잡아둘 수 있었는데 15불에 잡은거니까)</p>
+</li>
+<li>
+<p class="nt">근데 15불 언더로 내려가면 그 차익은 우리가 먹는 구간이 됨.  왜냐면 시장에서는 12불에 팔리는데 우리는 15불에 팔기로 약속된 권리를 가지고 있는거니까</p>
+</li>
+<li>
+<p class="nt">근데 어차피 이것도 마무리까지 가져가면 이익이나 손실은 없음. 근데 우리가 이걸 옵셔널리티 하려고하면  시가가 내려가는 구간에 Sell Position을 풀면 이익을 먹게됨.<br />ex) 우리는 15불에 팔 수 있는 권리가 있는데 시장가격이 $12로 내려가게 되면 시장가격보다 $3 더 비싸게 팔 수 있으니까 그 차익을 먹는 구조인거임 → 이런 구조를 가지고 LNG 페이퍼를 하고 있음</p>
+</li>
+<li>
+<p class="nt">이건 HH도 마찬가지로 적용됨</p>
+</li>
+<li>
+<p class="nt">석화용은 산업용이랑 스킴은 비슷함. 현대케미칼이나 SKGC 같은  석화사에서는 납사플렌트에 납사가 원료로 들어가서 올레핀 같은 화학제품을 생산함.</p>
+</li>
+<li>
+<p class="nt">납사 뿐만 아니라 우리가 LPG도 똑같이 넣을 수 있음. 납사대신 LPG를 넣어서 스위칭을 할 수 있음. 그래서 가격논리에 따라서 석화사들이 LPG를 사는 경우가 있는데 이 기회를 활용하는 것임.</p>
+</li>
+<li>
+<p class="nt">그래서 예전에는 월마다 Spot 공급만 진행했었는데, 작년부터 공격적으로 1년짜리 물량, 더 긴 기간의 물량을 계약하기 시작했음. 왜냐면 우리가 1년짜리 물량을 미리 사두면 그 만큼 매번 spot으로 가격 조달하는 것 보다 미리 훨씬 좋은 Value로 1년짜리 물량을 깔 수 있어서 그럼</p>
+</li>
+<li>
+<p class="nt">이게 이제 설득이 잘 되어서 지금은 거의 Term계약 위주로 가고 있고. 이건 FEI/MOPJ 상대가가 쌀 때 미리 잡았다가  상대가가 높아지면 파는 플레이를 하고 있음</p>
+</li>
+<li>
+<p class="nt">사실 납사는 유가랑 상관관계가 매우 높아서 계절성이 있다고 보기는 어렵고, 거의 LPG으 ㅣ동고하저에 따라서 플레이를 한다고 보면 됨</p>
+</li>
+<li>
+<p class="nt">그래서 결론적으로 FEI/Brent,  FEI/MOPJ는 상당히 유사하게 우리가 플레이를 할 수 있음</p>
+</li>
+<li>
+<p class="nt">다만 대상과 Fuel냐 Feed Stock이냐의 차이가 있을 뿐임</p>
+</li>
+</ul>
+
+<p class="nt nt-h"><b>[26년 옵셔널리티 사례]</b></p>
+
+<ul class="nt">
+<li>27년 물량 가지고 있던거 올해 1월에 다 언와인드 했음. 미리 싸게 샀다가 비싸게 팔아서 unwind 이익을 작지 않게 먹었음. 그 이후에 재소싱 거의 다 완료했음</li>
+<li><b>LNG paper도 14불에 들어갔다가 그것보다 가격 떨어졌을 때 unwind 옵셔널리티 해서 차익을 먹었다<br />→ 이건 실물을 동반하지 않음. lng랑 brent는 실물 동반하지 않음.  실제로 연료보면 lpg로 사서 lpg로 파는거라서 그냥 도시가스 가격은 가격일 뿐이여서 paper만 사게 됨.<br /></b></li>
+</ul>
+
+<p class="nt"><b>Q. JKM Sell만 본다고하는데  jkm이 높다고생각해서 걸어뒀는데 안내려가면 스펙이 되는거같은데<br />→ brent 가지고는 상방ㅇ ㅣ뚫린 구조임. 예전에는 jkm이 비중이 작아서 무시해도되쓴데 이제 무시하면안되는 구조  그래서 이걸하는게 hedge가 되는구조임<br />fei하고 jkm 플레이하는 시점이 다름 fei는 여름철에 쌀때 사야되고 jkm은 비싼 동절기에 잡는게 유리해짐.   그래서 <br /></b>- 파생상품 거래가 실제로 안될 때도있음<br />- 파생상품은 미리잡고 실물은 나중에 이후에 잡아서 매칭되게 됨.</p>
+
+<ul class="nt">
+<li>옵셔널리티라는 플레이는 만기 전까지 계속 샀다팔았다 샀다팔았다하면서 돈을 벌 수 있음(그래서 원월뮬이 유리함. 더 많이 샀다 팔았다를 할 수 있어서)</li>
+</ul>
+
+<p class="nt nt-h"><b>[기타사항]</b></p>
+
+<p class="nt"><b>(옵셔널리티 실행 환경 악화- 동고하저 패턴 약화)</b></p>
+
+<ul class="nt">
+<li>
+<p class="nt">중국 pdh, 석화사 증설이 많아지고 있음. 그래서 ska도 과다경쟁 공급과잉으로 어려움  그러다보니 동고하저 구조가 약화되고 있음.  예전보다는 약화되었음. 옵셔널리티 하기 좋은 환경이 아니게 되었음.</p>
+</li>
+<li>
+<p class="nt">과거 중국은 민수용 수요가 많았음. 민수용은 추울 때 더 많이 씀. 동고하저 패턴이 강했음. 하지만 석화사에서는 쓰는 원료용 수요는 연간 내내 들어가면서 수요 패턴을 평탄하게 만들어버렸음</p>
+</li>
+<li>
+<p class="nt">납사크래커는 납사 쓰다가 LPG가 싸면 LPG 쓰고, 납사가 싸면 LPG를 안사고 하다보니까 LPG가격이 어느정도 박스권에 갇히는 모습을 만들어냄.</p>
+</li>
+</ul>
+
+<p class="nt"><b>(SKG의 해결책)</b></p>
+
+<ul class="nt">
+<li>동고하저 패턴은 약화되었지만 원월물을 활용해서, 먼 미래의 물량을 훨씬 일찍 사서 더 낮은 가격으로 상대가 소싱(소싱가를 낮추는 것) + 원월물을 활용해서 Optionality 횟수를 더 늘리는 것.  이런 방식으로 자구책, 고육책을 마련하고 있음</li>
+<li>물량, 기간, 상품 확대를 통해서 계속해서 우리의 주요 수익원으로 개발할 계획임</li>
+</ul>
+
+<p class="nt nt-h"><b>[Q&A]</b></p>
+
+<p class="nt"><b>Q. LNG Optionality는 G&P, UGPS의 옵셔널리티와는 다른것인지? 실물을 동반하는 것인지? </b><br />A. ㅇㅇ 다름. 실물을 동반하지 않음. LNG, Brent모두 실물을 동반하지 않음<br />    왜 그러냐면 우리가 도시가스 연동가로 판매를 한다고는 하지만, 실제로는 LPG를 사서 LPG를 공급하는 거임. 그렇기 때문에 도시가스 가격이라는 것은 그냥 가격일 뿐이고, LPG라는 실물이 존재함.<br />결국 LPG로서 판매되는 물량이 있고, LPG가 공급이 되기 때문에 가격구조만 LNG인거임<br /></p>
+
+<p class="nt"><b>Q. 파생상품 거래가 안되면 어떻게 하는지?</b><br />A. 실제로 파생상품 거래 안될 때도 있음. 우리가 얼마에 사고 싶다고 우리 마지노선은 있음. 그 마지노선을 양보하면 우리 Margin이 훼손되니까.   근데 마지노선을 제시했을 때 파는 사람이 없을 때도 있음. 그래서 우리가 원할 때마다 거래되지 않음.  만약에 gap이 크지 않으면 가서 부탁도하고 협의도하고 해서 사기도 하고, 차이가 크면 그날은 공치는 날도 있음.<br />그리고 우리는 파생상품 거래만 미리해뒀다가 실물은 어떻게 잡냐면, 트레이딩 본부에서 연말이라던지 실물 프로그램을 짜는 시기에 그 때 한꺼번에 잡게됨<br />→ 즉 파생상품은 미리 잡고, 실물은 이후에 Trading에서 잡아서 매칭이 되는 구조인거임<br /></p>
+
+<p class="nt"><b>Q. </b>FEI/Brent는 Buy, Sell을 같이 거는데  JKM은 Sell만 건다고 하셨죠? 그럼 Spec이 맞는거 같은데, 그 말인 즉슨 JKM이 꽤 높다고 생각해서 걸어두었는데 우리 예상만큼 JKM이 내려가지 않으면 스펙이되는거 아닌가?  <b>그래서 그냥 JKM Sell 걸때도  FEI/ JKM 따로따로 Buy, Sell을 걸면 안되는건지?</b></p>
+
+<ul class="nt">
+<li>
+<p class="nt">이제는 JKM, HH Paper를 잡지 않으면 오히려 리스크에 노출되는 구조임</p>
+</li>
+<li>
+<p class="nt">FEI/Brent만 가지고는 상당히 뚫려있는 구조임. 예전에는 JKM 비중이 작았고, 가격도 편차가 거의 없어서 무시해도 되는 시장이었는데  이제는 중요도가 너무 높아짐.</p>
+</li>
+<li>
+<p class="nt">그렇기 때문에 JKM을 하는게 더 Hedge에 적합함</p>
+</li>
+<li>
+<p class="nt">FEI/JKM 형태로 잡아도 되지만, 왜 이렇게 안하냐면 FEI하고 JKM을 플레이하는 시점이 엇박자가 나서 그럼.</p>
+</li>
+<li>
+<p class="nt">아까 잠깐 언급한것처럼  FEI Buy를 할때는 우리가 최대한 싸게 원가를 소싱해야하니까 LPG가격이 낮은 여름철에 Buy를 하면 유리하고,  JKM Sell은 최대한 비싸게 해야하니까  LNG가 가장 비싼 동절기에 거는게 유리함.  근데 이걸 동시에 잡아버리면 Hedge value가 많이 훼손되기 때문에 우리가 시차를 두고 따로 진행하는 부분이 있음</p>
+</li>
+</ul>
+
+<p class="nt"><b>Q. 트렌드를 보면 cv변동성이 축소되고 있고, 절대가격도 많이 올라가는 추세 같아서 산업체 비즈모델이 지속적으로 유효할것인지 궁금함. 옵셔널리티 기회와는 별도로 여기서 short를 계속만들어낼수있을까? EE본부의 View가 궁금함</b></p>
+
+<ul class="nt">
+<li>일단은 지금 실제로 ‘27~’29년 물량 사전 소싱하고 있는데 ‘29년까지 공급이익은 괜찮게 나오고 있음. 그래서 TSP 사업 유지는 가능하다고 판단할 수 있고</li>
+<li>‘30년도 KOGAS 도시가스 판가구조가 크게 바뀌지 않을거라 보고 있음. ‘29년도 가능하다면 ‘30년도 가능할거라고 보고 있음. 그 이후는 어떻게 될 것인지에 대해서는 더 분석이 필요함</li>
+</ul>
+
+<p class="nt"><b>Q. 22년 러우전쟁 있었을 때 JKM이 크게 올라서 TSP사업이 돈을 많이 번 것으로 알고 있는데, 어떻게 그것이 가능했는지 궁금함. 왜냐면 우리는 이미 Paper Hedge를 걸어두어서 마진은 fix되어있었을 텐데… <br />그리고  미이란 전쟁 때에도 JKM이 많이 튀었는데 올해 손익도 좋을지 궁금함</b></p>
+
+<ul class="nt">
+<li>
+<p class="nt">러우전쟁 때도  jkm 헷지를 했음. 사실은 헷지하고 나서 언와인드해서 다 포지션이 open 되어있었음. 근데 갑자기 실물가격이 엄청나게 오르면서 그 때 실물 이익도 먹었음. 그래서 그 때 노출이 되어있었어서 많이 먹을 수 있었음.  만약에 우리가 재Hedge를 해둔 상태라면 말씀하신 대로 정해진 것만 먹었을 것임.</p>
+</li>
+<li>
+<p class="nt">그리고 jkm은 전략적으로 노출 시키는 부분도 있음. JKM이 펀데멘털리 올라갈 수 밖에 없는 구조다, 올라갈 확률이 훨씬 높다고 보여지면, 하면 일부러 노출시켜서 먹는게 전략이 될 수 있음</p>
+</li>
+<li>
+<p class="nt">지금 미-이란 전쟁 때 같은 경우는 우리가 JKM을 미리 헷지를 해뒀었음. 그래서 원래는 실물이 오르는 만큼의 이익을 먹기 어렵고 Hedge로 정해진 이익만 먹을 수 있는 상황이었음.</p>
+</li>
+<li>
+<p class="nt">그런데 사장님, 관련 팀하고 논의해서 JKM을 의도적으로 노출시켰음 왜냐면 말씀드린것처럼 노출시키고 나서 나중에 올라가는 것을 먹을 수 있으니까 그렇게 진행했었음</p>
+</li>
+</ul>
+
     </div>
    </div>
-
    <aside class="ez-note">
     <div class="ez-title">📌 Optionality, 쉽게 이해하기</div>
     <div class="ez-sub">강의 내용을 비유로 압축한 메모예요.</div>
